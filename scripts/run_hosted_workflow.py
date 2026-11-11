@@ -880,8 +880,14 @@ def authoring_issues(questions, answers, *, root):
                 elif asset.get('sha256') != digest(path):
                     found.append(f'item {qid} {owner} {where}: sha256 missing or different from the file')
                 else:
+                    # An option that is only an image (圖形選項: four maps, charts or pyramids, as 115
+                    # 會考社會 27/29/41 print) is a figure in its option cell, not a glyph in a line of text.
+                    name = where[len('inline asset '):] if where.startswith('inline asset ') else None
+                    option_image = name is not None and any(
+                        re.fullmatch(r'\s*\{\{asset:' + re.escape(name) + r'\}\}\s*', str(o.get('text') or ''))
+                        for o in question.get('options') or [] if isinstance(o, dict))
                     found += [f'item {qid} {owner} {where}: {issue}'
-                              for issue in asset_issues(path, asset, inline=where.startswith('inline'))]
+                              for issue in asset_issues(path, asset, inline=where.startswith('inline') and not option_image)]
     return found
 
 
@@ -942,9 +948,26 @@ def option_label(label):
     return label if re.fullmatch(r'[(（].*[)）]', label) else f'({label})'
 
 
+CAP_BODY_PT, GSAT_BODY_PT = 13, 11
+
+
 def option_columns(question, subject):
     """Explicit option_layout first; otherwise the maintained renderer heuristic."""
     options = question.get('options') or []
+    if str(subject).startswith('會考'):
+        # 會考 honours option_layout for every subject (a hosted 會考社會 run found it ignored) and
+        # scales the measured 學測 character limits to its 13 pt body: options of 15-16 characters
+        # wrapped two abreast. Options that are only an image (圖形選項) print two abreast.
+        if question.get('option_layout') in OPTION_LAYOUT_COLUMNS:
+            return OPTION_LAYOUT_COLUMNS[question['option_layout']]
+        texts = [str(o.get('text', '')) for o in options]
+        if texts and all(re.fullmatch(r'\s*\{\{asset:[^{}]+\}\}\s*', t) for t in texts):
+            return 2
+        if len(options) == 4 and not subject.endswith('英語'):
+            longest = max(len(re.sub(r'\s|<[^>]+>|\{\{asset:[^{}]+\}\}', '', t)) for t in texts)
+            scale = GSAT_BODY_PT / CAP_BODY_PT
+            return 4 if longest <= int(7 * scale) else 2 if longest <= int(16 * scale) else 1
+        subject = style_subject(subject)
     if subject == '社會' and len(options) == 4:
         # 111-115 measured: options of up to 7 characters print four abreast (tab 112.6 pt),
         # up to 16 two abreast (225 pt), longer ones one per line. The earlier rule forced
@@ -1208,7 +1231,7 @@ def project_specs(exam, hints, body_width):
             block['options'] = [{'label': option_label(o['label']),
                                  'text': printed(o['text'], where + ' option ' + str(o['label']), english=english)}
                                 for o in q.get('options') or []]
-            block['columns'] = hint.get('columns', option_columns(q, subject))
+            block['columns'] = hint.get('columns', option_columns(q, spec_subject))
         if kind == 'fill':
             rows = hint.get('rows') or fill_rows(q.get('answer_format'))
             if not rows:

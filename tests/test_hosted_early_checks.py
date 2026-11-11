@@ -170,7 +170,9 @@ def test_without_fonttools_duplicate_fonts_are_still_merged(monkeypatch):
     monkeypatch.setitem(sys.modules, 'fontTools', None)  # any fontTools import now fails
     data = two_copies_of_a_whole_font()
     merged, report = composer.compact_fonts(data)
-    assert report['status'] == 'duplicates-merged' and 'fontTools unavailable' in report['note']
+    # Without fontTools, MuPDF's own subsetter now also drops unused glyphs (a hosted 會考 booklet
+    # stayed at 40 MB); the pages must still render identically.
+    assert report['status'] in {'duplicates-merged', 'unused-glyphs-dropped'} and 'fontTools unavailable' in report['note']
     assert len(merged) < len(data) * 0.7 and rasters(merged) == rasters(data)
 
 

@@ -73,7 +73,7 @@ analyze_current_chinese_natural_form.py analyze_gsat_official_patterns.py
 analyze_historical_content.py analyze_mock_bundle.py analyze_mock_exam_dataset.py
 analyze_pdf_visuals.py analyze_recent_math_form.py analyze_stimulus_ecology.py
 ensure_pymupdf.py
-validate_cap_form.py validate_cap_quality.py cap_plan.py hosted_auto_review.py web_image.py cap_115_templates.py render_cap_template_assets.py build_cap_pack.py
+validate_cap_form.py validate_cap_quality.py cap_plan.py hosted_auto_review.py web_image.py cap_figure.py build_cap_fingerprints.py cap_115_templates.py render_cap_template_assets.py build_cap_pack.py
 analyze_writing_source_corpus.py audit_corpus_overlap.py audit_item_originality.py
 audit_source_novelty.py audit_exam_pack.py audit_generated_suite.py
 bootstrap_exam_sources.py writer_calibration.py

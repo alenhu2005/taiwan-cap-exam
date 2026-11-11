@@ -73,6 +73,20 @@ def compact_fonts(data: bytes) -> tuple[bytes, dict]:
         from fontTools import subset
         from fontTools.ttLib import TTFont
     except ImportError:
+        # Hosted runtimes often lack fontTools: a 會考 booklet stayed at 40 MB. MuPDF's own subsetter
+        # needs no extra package; keep its result only if every page renders and extracts identically.
+        try:
+            with pymupdf.open(stream=merged, filetype='pdf') as doc:
+                before = [(p.get_pixmap(matrix=pymupdf.Matrix(2, 2), alpha=False).samples, p.get_text()) for p in doc]
+                doc.subset_fonts()
+                compact = doc.tobytes(garbage=4, deflate=True, no_new_id=True)
+            with pymupdf.open(stream=compact, filetype='pdf') as check:
+                same = [(p.get_pixmap(matrix=pymupdf.Matrix(2, 2), alpha=False).samples, p.get_text()) for p in check] == before
+            if same and len(compact) < len(merged):
+                return compact, {**report, 'bytes_after': len(compact), 'status': 'unused-glyphs-dropped',
+                                 'note': 'MuPDF subsetter (fontTools unavailable)'}
+        except Exception:  # noqa: BLE001 - any subsetter failure keeps the verified merged bytes
+            pass
         return merged, {**report, 'note': 'fontTools unavailable; unused glyphs kept'}
     with pymupdf.open(stream=merged, filetype='pdf') as doc:
         programs = font_programs(doc)

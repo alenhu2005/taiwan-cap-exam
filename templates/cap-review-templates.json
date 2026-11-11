@@ -1,0 +1,42 @@
+{
+  "purpose": "format-only",
+  "notice": "審查報告的欄位格式範本，內容全是佔位文字。不要照抄觀察內容；每個欄位都要依實際題目重新寫。四份機械性報告（structure_scope、difficulty_balance、template_composition、answer_separation）由 run_hosted_workflow.py auto-review 產生，不用手寫。",
+  "common": {"exam_sha256": "<exam.json 的 SHA-256；refresh-evidence 的草稿已填好>", "status": "pass", "observations": "<全卷層級的實際觀察>"},
+  "answers.json": {
+    "items": [{"id": "<題目 id>", "status": "pass", "observations": "<重新解題的過程與結果，和存檔答案一致；每個誘答確定錯的理由>"}]
+  },
+  "originality.json": {
+    "comparison_scope": "no-history-available",
+    "history": [],
+    "items": [{"id": "<題目 id>", "status": "pass", "observations": "<與官方題目、本卷其他題目的差異；情境與解題路徑是否新>"}]
+  },
+  "visuals.json": {
+    "items": [
+      {"id": "<有圖的題目 id>", "status": "pass", "observations": "<圖中可見的證據、灰階可讀性、與題幹一致>"},
+      {"id": "<沒有圖的題目 id>", "status": "not_applicable", "observations": "<此題無圖>"}
+    ]
+  },
+  "source_grounding.json": {"observations": "<每份材料與數據的來源（data_sources）與核對方式>"},
+  "difficulty.json": {
+    "review_mode": "single-context",
+    "independent_review": false,
+    "review_reason": "<為何沒有獨立審查者，例如平台不提供第二個模型>",
+    "author_context": "<本對話的識別>",
+    "reviewer_context": "<單一脈絡時與 author_context 相同>",
+    "blind_packet": {"path": "<blind-packet.json 的路徑>", "sha256": "<雜湊>"},
+    "items": [{
+      "id": "<題目 id>",
+      "estimated_p": 0.0,
+      "estimated_d": 0.0,
+      "difficulty_band": "<very_easy | easy | medium | hard | very_hard>",
+      "expected_minutes": 0.0,
+      "shortest_route": "<最短解法>",
+      "decisive_steps": ["<關鍵判斷一>", "<關鍵判斷二>"],
+      "shortcut_search": "<試過哪些捷徑，是否能跳過概念直接作答>",
+      "anchor_comparison": {"kind": "embedded-calibration", "key": "objective", "note": "<與官方同題位通過率的比較>"},
+      "anchor": {"kind": "embedded-calibration", "key": "objective"},
+      "answer_recheck": "<蓋掉答案後重新作答的過程，與存檔答案比對>",
+      "unresolved": []
+    }]
+  }
+}

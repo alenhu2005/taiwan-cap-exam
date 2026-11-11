@@ -123,6 +123,7 @@ def source_paths(root: Path = ROOT) -> list[Path]:
     paths.append(root / "scripts" / "cap_plan.py")
     paths.append(root / "scripts" / "hosted_auto_review.py")
     paths.append(root / "scripts" / "web_image.py")
+    paths.append(root / "scripts" / "cap_figure.py")
 
     for pack in ("學測", "會考"):
         pack_root = root / "exam_packs" / pack
@@ -135,6 +136,7 @@ def source_paths(root: Path = ROOT) -> list[Path]:
             paths.append(pack_root / "templates" / "115" / "hosted-web-template-assets.json")
         else:
             paths.append(pack_root / "metadata" / "hosted-page-metrics.json")
+            paths.append(pack_root / "metadata" / "official-item-fingerprints.json")
         paths.extend(sorted((pack_root / "shared-data").glob("*.json")))
         paths.extend(sorted((pack_root / "templates").rglob("*.json")))
         paths.extend(sorted((pack_root / "subjects").glob("*/subject.json")))

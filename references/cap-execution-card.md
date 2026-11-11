@@ -9,7 +9,12 @@
 1  python scripts/prepare_hosted_run.py --subject 會考社會 --run-dir RUN --paper-id ID
 2  python scripts/cap_plan.py plan --subject 會考社會 --paper-id ID --level 會考 --output RUN/plan.json
    填 metadata.difficulty_balance_plan.target_counts → python scripts/cap_plan.py check RUN/plan.json
-3  每題：python scripts/cap_plan.py item --subject 會考社會 --number N --level 會考   （骨架，填空）
+3  每題：python scripts/cap_plan.py item --subject 會考社會 --number N --level 會考   （骨架＋field_guide 欄位格式）
+   更快：用 field_guide 的精簡欄位寫一批，python scripts/cap_plan.py expand --plan RUN/plan.json
+   --compact items.json --run-dir RUN --output BATCH.json 自動補齊 id、分節、標籤、雜湊與題組繼承
+   寫題時就填 est_p（預估通過率）：存檔會回報目前平均是否落在所選難度區間，偏了立刻調整
+   印出的數據一律上網查證並填 data_sources（url、retrieved_at），不要憑記憶寫數字
+   圖檔：python scripts/cap_figure.py subset 圖.pdf --output 圖-小.pdf（只留用到的字形）
    題材照藍圖的 suggested_focus 走：每次 plan 都抽新的 variety_seed，續做同一份卷時用 --seed 沿用
    範例只示範手法：不要沿用說明文件或過去卷子的情境、地點、材料
    照片：python scripts/web_image.py search "關鍵字"（中英文都試，--offset 換一批）→ web_image.py use
@@ -47,6 +52,11 @@
 | `extreme wording`、`absolute words` | 誘答改用學生真的會混淆的相鄰概念，不要「一律、只能、連…也」 |
 | `run in blocks` | 社會單題照 `cap_plan.py plan` 排的題序穿插三科 |
 | `photographs are newly found` | 用 `web_image.py` 換成新找的照片，不要用內附圖片庫 |
+| `甲乙丙丁 combinations` | 組合題太多：改成單一答案的推理題，難度放在材料判讀，不靠格式 |
+| `figures as options` | 加入以圖為選項的題目：四個選項各是一張圖（compact 的 `images`） |
+| `options run long` | 選項縮短（官方中位數 11–13 字），難度放在題幹與材料 |
+| `shares … wording runs with official` | 和某題官方試題的情境太像：換成新的情境與材料 |
+| `running mean of estimated_p` | 目前題目整體太易或太難，下一批調整 |
 | `painted content exceeds the body by N pt` | 訊息已指出題號：縮短最寬那行、縮小該題圖表，或把選項改成一行一個 |
 | `rare CJK Extension character` | 改用教科書通用字形 |
 | 題組引導語印了兩三次 | 材料裡不要自己寫「閱讀下列選文，回答…」 |
@@ -58,3 +68,4 @@
 - 工具輸出很長時導到檔案，只讀狀態與錯誤；不要把整份 JSON 印進對話。
 - 審查報告先用 `refresh-evidence` 產生草稿，只改被標記的題目，不要逐題重寫一遍 item_spec。
 - 純文字頁由工具檢查；看圖只看有圖表的頁與被標記的題目。
+- 五份需人工判斷的審查報告格式見 `templates/cap-review-templates.json`（只有格式，內容自己寫）。

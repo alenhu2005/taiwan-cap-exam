@@ -4,6 +4,7 @@
   plan   --subject 會考社會 --paper-id 20261111-01 [--year 116] [--level 高]  → plan.json for append_items.py --plan
   item   --subject 會考社會 --number 12 [--level 高]                          → one pending item and answer
   check  plan.json                                                           → plan problems before authoring
+  expand --plan plan.json --compact items.json --run-dir RUN --output batch.json → full batch for append_items.py
 
 Targets come from exam_packs/會考 (official 通過率 and 鑑別度 by position, 115 sections and 題組).
 A level above 會考 lowers the target pass rate; it never widens the curriculum.
@@ -204,7 +205,7 @@ def item(subject: str, number: int, level: str = "會考", kind: str = "single_c
                                           "expected_minutes": None, "content_sha256": None}}}
     answer = {"question_id": question["id"], "final_answer": None, "difficulty_label": None,
               "reasoning": [None] * steps, **({} if choice else {"rubric": {"3": None, "2": None, "1": None, "0": None}})}
-    return {"status": "pending-authoring", "subject": subject, "level": level, "slot": slot,
+    return {"status": "pending-authoring", "subject": subject, "level": level, "slot": slot, "field_guide": FIELD_GUIDE,
             "question": question, "answer": answer,
             "rules": ["references/current-cap-form.md 品質標準 and 難度等級",
                       "cap_distractors: delete the key's row; each wrong option names its misconception and the real "
@@ -216,8 +217,96 @@ def item(subject: str, number: int, level: str = "會考", kind: str = "single_c
                       f"reasoning: at least {steps} steps from learned 國中 knowledge, then name every option (A)-(D) and why "
                       "each distractor fails; at least two linked_decisions",
                       "cap_distractors.*.expected_pick_rate: predicted share choosing each wrong option, at least 0.05",
+                      "faster: write compact records (field_guide) and run `cap_plan.py expand`",
                       "textbook_volumes: the 國中 volume(s) the concepts are taught in, e.g. [\"第三冊\"] (第一冊=七上 … 第六冊=九下); "
                       "數學 may leave it empty, the code's grade is printed; the solution prints 課綱 and 可能出處"]}
+
+
+FIELD_GUIDE = {
+    "options": "four strings; or four image paths in compact `images` (options become {{asset:NAME}}, figures as options)",
+    "key": "A | B | C | D",
+    "steps": "list of strings: the derivation from learned 國中 knowledge, then why each other option is wrong, naming (A)-(D)",
+    "codes": "108 課綱 第四學習階段 codes, e.g. a code ending -IV-n or 數學 N-8-1",
+    "volumes": "list like [\"第三冊\"] (第一冊=七上 … 第六冊=九下); 數學 may omit",
+    "context_type": "生活情境 | 社會議題 | 科學探究 | 跨領域 | 學科知識 | 文本閱讀",
+    "process": "擷取訊息 | 統整解釋 | 推論 | 應用 | 評鑑",
+    "anchor": "the real situation the item rests on", "evidence": "how the answer depends on the material's evidence",
+    "prerequisites": "list of learned concepts the derivation uses", "hidden_concept": "the term the student must infer",
+    "domains": "社會: list of 歷史/地理/公民, primary first", "bridge": "why the answer needs both concepts (混合考點)",
+    "distractors": "{label: {misconception, peer_concept, pick (0-1, at least 0.05), ruled_out_by}} for each wrong option",
+    "band": "簡單 | 中 | 中偏難 | 難", "est_p": "predicted 通過率 0-1", "est_d": "predicted 鑑別度 0-1",
+    "decisions": "list of at least two linked decisions", "short_route": "the shortest correct route",
+    "misconception": "the main trap", "bottleneck": "list of the hard points", "minutes": "expected solving minutes",
+    "data_sources": "list of {url, retrieved_at} for every printed statistic",
+    "figure": "{path, width_percent, visual_spec} for the item's own figure (web_image.py use prints visual_spec)",
+    "material": "shared 題組 material (identical text for every item of the group)",
+}
+
+
+def expand(plan_data: dict, compact: list[dict], run_dir: Path) -> dict:
+    """Compact authoring records → the full batch append_items.py saves (ids, sections, labels, hashes)."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from validate_paper_difficulty_balance import content_hash
+    subject = plan_data["metadata"]["subject"]
+    slots = {(s["number"], s["type"]): s for s in plan_data.get("planning_slots") or []}
+    sha = lambda p: hashlib.sha256((run_dir / p).read_bytes()).hexdigest()
+    questions, answers, leaders = [], [], {}
+    for row in compact:
+        kind = "constructed_response" if row.get("constructed") else "single_choice"
+        slot = slots.get((row["number"], kind), {})
+        qid = row.get("id") or (f"q{row['number']}" if kind == "single_choice" else f"c{row['number']}")
+        q = {"id": qid, "number": row["number"], "type": kind,
+             "section_id": row.get("section") or slot.get("section_id") or "s1", "prompt": row["stem"]}
+        if row.get("material"):
+            q["group_stimulus"] = row["material"]
+        if kind == "constructed_response":
+            q["number_display"] = f"{row['number']}."
+        elif row.get("images"):
+            q["inline_assets"] = {f"{qid}{c}": {"path": p, "width_pt": row.get("image_width_pt", 120), "sha256": sha(p)}
+                                  for c, p in zip("ABCD", row["images"])}
+            q["options"] = [{"label": c, "text": "{{asset:" + f"{qid}{c}" + "}}"} for c in "ABCD"]
+        else:
+            q["options"] = [{"label": c, "text": t} for c, t in zip("ABCD", row["options"])]
+        if row.get("figure"):
+            figure = dict(row["figure"])
+            figure["sha256"] = sha(figure["path"])
+            q["visual_asset"] = figure
+        competency = {"context_type": row.get("context_type"), "process": row.get("process"),
+                      "real_world_anchor": row.get("anchor"), "evidence_link": row.get("evidence"),
+                      "prerequisite_knowledge": row.get("prerequisites") or [], "hidden_concept": row.get("hidden_concept"),
+                      "bridge": row.get("bridge")}
+        domains = row.get("domains") or ([slot["domain"]] if slot.get("domain") else [])
+        if domains:
+            competency.update(domain=domains[0], domains=domains)
+        band = row.get("band")
+        spec = {"curriculum_codes": row.get("codes") or [], "textbook_volumes": row.get("volumes") or [],
+                "cap_competency": competency, "difficulty": {"label": band},
+                "difficulty_design": {"band": band, "basis": row.get("basis") or "113-115 官方同題位通過率",
+                                      "confidence": row.get("confidence") or "中", "short_route": row.get("short_route"),
+                                      "misconception": row.get("misconception"), "linked_decisions": row.get("decisions") or [],
+                                      "bottleneck": row.get("bottleneck") or [], "expected_minutes": row.get("minutes"),
+                                      "estimated_p": row.get("est_p"), "estimated_d": row.get("est_d"),
+                                      **({"shortcut_status": "reviewed-no-direct-collapse"} if band in ("中偏難", "難") else {})}}
+        if row.get("data_sources"):
+            spec["data_sources"] = row["data_sources"]
+        if kind == "single_choice":
+            spec["cap_distractors"] = {c: {"misconception": d.get("misconception"), "peer_concept": d.get("peer_concept"),
+                                           "expected_pick_rate": d.get("pick"), "ruled_out_by": d.get("ruled_out_by")}
+                                       for c, d in (row.get("distractors") or {}).items() if c != row.get("key")}
+        if row.get("material"):
+            leader = leaders.setdefault(row["material"], qid)
+            if leader != qid:
+                spec["inherits_audit_from"] = leader
+        spec.update(row.get("item_spec_extra") or {})
+        q["item_spec"] = spec
+        spec["difficulty_design"]["content_sha256"] = content_hash(q)
+        questions.append(q)
+        answer = {"question_id": qid, "final_answer": row.get("key") or row.get("answer"), "difficulty_label": band,
+                  "reasoning": row.get("steps") or []}
+        if kind == "constructed_response":
+            answer["rubric"] = row.get("rubric")
+        answers.append(answer)
+    return {"questions": questions, "answers": answers}
 
 
 def check(plan_data: dict) -> list[str]:
@@ -257,6 +346,9 @@ def main() -> int:
     i.add_argument("--number", type=int, required=True); i.add_argument("--level", default="會考", choices=LEVELS)
     i.add_argument("--constructed", action="store_true", help="數學 非選擇題 slot")
     c = sub.add_parser("check"); c.add_argument("plan", type=Path)
+    e = sub.add_parser("expand", help="compact authoring records → full append_items batch")
+    e.add_argument("--plan", type=Path, required=True); e.add_argument("--compact", type=Path, required=True)
+    e.add_argument("--run-dir", type=Path, required=True); e.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "plan":
         result = plan(args.subject, args.paper_id, args.year, args.level, args.seed)
@@ -265,6 +357,12 @@ def main() -> int:
             result = {"status": "plan-written", "output": str(args.output), "check": check(result)}
     elif args.command == "item":
         result = item(args.subject, args.number, args.level, "constructed_response" if args.constructed else "single_choice")
+    elif args.command == "expand":
+        batch = expand(json.loads(args.plan.read_text(encoding="utf-8")),
+                       json.loads(args.compact.read_text(encoding="utf-8")), args.run_dir.resolve())
+        args.output.write_text(json.dumps(batch, ensure_ascii=False, indent=2), encoding="utf-8")
+        result = {"status": "batch-written", "output": str(args.output), "items": len(batch["questions"]),
+                  "next": f"python scripts/append_items.py --run-dir {args.run_dir} --batch {args.output}"}
     else:
         errors = check(json.loads(args.plan.read_text(encoding="utf-8")))
         result = {"status": "pass" if not errors else "fix-before-authoring", "errors": errors}

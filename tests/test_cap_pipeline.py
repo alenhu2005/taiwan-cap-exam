@@ -21,6 +21,7 @@ from hosted_calibration import CAP_SUBJECTS, snapshot
 from hosted_density import page_role
 from hosted_subject_gates import subject_gate_errors
 from validate_cap_form import OFFICIAL_RANGES, validate_exam
+from hosted_blind_review import cap_p_band
 from verify_fixed_template_pdf import verify_pdf
 
 CAP_MAP_DATA = json.loads(CAP_MAP.read_text(encoding='utf-8'))
@@ -150,11 +151,24 @@ def cap_paper(key, root):
                            'cap_distractors': {c: {'misconception': '合成迷思', 'peer_concept': '合成相鄰概念',
                                                    'expected_pick_rate': 0.12, 'ruled_out_by': '合成：課本定義排除'}
                                                for c in 'ABCD' if c != key_label},
-                           'difficulty_design': {'linked_decisions': ['合成判斷一', '合成判斷二']}}}
+                           'difficulty_design': {'linked_decisions': ['合成判斷一', '合成判斷二'],
+                                                 'estimated_p': round(sum(cap_p_band(key, '會考')) / 2, 2)}}}
+        if key in ('會考社會', '會考自然') and n in (5, 9, 13):
+            # 圖形選項: four figures as the options (official 社會 1-3, 自然 4 a year).
+            q['inline_assets'] = {}
+            for c in 'ABCD':
+                path = Path(root) / f'opt-{n}-{c}.svg'
+                path.write_text('<svg xmlns="http://www.w3.org/2000/svg" width="160" height="110"><path d="M10 100 L150 '
+                                f'{10 + "ABCD".index(c) * 20}" stroke="black"/></svg>', encoding='utf-8')
+                q['inline_assets'][f'opt{n}{c}'] = {'path': path.name, 'width_pt': 120,
+                                                    'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+                q['options']['ABCD'.index(c)]['text'] = '{{asset:opt' + f'{n}{c}' + '}}'
         if n in (count - 1, count):
             q['group_stimulus'] = PLACEHOLDER * 5
         questions.append(q)
         option = q['options']['ABCD'.index(order[n - 1])]['text']
+        if option.startswith('{{asset:'):
+            option = f'圖形選項({order[n - 1]})'
         answers.append({'question_id': q['id'], 'final_answer': order[n - 1],
                         'reasoning': ['合成步驟一：由材料讀出關鍵證據。',
                                       f'合成步驟二：因為{option}符合題意，故選({key_label})。',
@@ -442,3 +456,62 @@ def test_advance_stops_where_the_author_must_act(tmp_path):
     result = workflow.advance(tmp_path / 'run-state.json')
     assert result['status'] == 'pending' and result['stopped_at'] == 'authoring'
     assert '10 of 54' in result['todo'] and (tmp_path / 'NEXT.md').is_file()
+
+
+def test_cap_gates_from_the_115_comparison(tmp_path):
+    """Combination items, figure options, long options, unsourced statistics, running difficulty, overlap."""
+    from validate_cap_quality import official_overlaps, validate_items
+    exam = cap_paper('會考社會', tmp_path)
+    for q in exam['questions'][:6]:
+        for i, c in enumerate('ABCD'):
+            q['options'][i]['text'] = ['甲乙', '甲丙', '乙丁', '丙丁'][i]
+    for q in exam['questions'][20:40]:
+        for o in q['options']:
+            o['text'] = o['text'] + '這是一個刻意寫得很長很長的選項敘述內容'
+    exam['questions'][30]['prompt'] = '2024年該地出生數為13萬4,856人，較前一年減少約1萬人，下列推論何者正確？'
+    for x in exam['questions'][:40]:
+        x['item_spec']['difficulty_design']['estimated_p'] = 0.92
+    for q in exam['questions']:
+        if q['options'][0]['text'].startswith('{{asset:'):
+            for i, o in enumerate(q['options']):
+                o['text'] = f'圖形選項改回文字{i}'
+    errors = validate_items(exam, asset_root=tmp_path)
+    for needle in ('甲乙丙丁 combinations', 'figures as options', 'options run long', 'prints statistics', 'running mean'):
+        assert any(needle in e for e in errors), (needle, [e for e in errors if 'Q' not in e[:3]])
+    # A shared curriculum term is not a rewrite; several shared phrases of one official item are.
+    assert official_overlaps('日本統治時期的水庫蓄水量與法定代理人') == []
+    assert official_overlaps('日治時期，臺灣製糖會社在原料採取區域內收購甘蔗，蔗農只能把甘蔗賣給區域內的製糖會社，價格由會社決定。')
+
+
+def test_cap_option_columns_fit_the_13pt_body():
+    q = lambda texts, **extra: {'options': [{'label': c, 'text': t} for c, t in zip('ABCD', texts)], **extra}
+    assert workflow.option_columns(q(['十三個字的選項文字剛好十三'] * 4), '會考社會') == 2
+    assert workflow.option_columns(q(['十五個字的選項文字會折行放不下'] * 4), '會考社會') == 1
+    assert workflow.option_columns(q(['短'] * 4), '會考社會') == 4
+    assert workflow.option_columns(q(['十五個字的選項文字會折行放不下'] * 4, option_layout='grid-2'), '會考社會') == 2
+    assert workflow.option_columns(q(['{{asset:a}}', '{{asset:b}}', '{{asset:c}}', '{{asset:d}}']), '會考自然') == 2
+
+
+def test_compact_records_expand_to_a_savable_batch(tmp_path):
+    from cap_plan import expand, plan
+    from hosted_subject_gates import answer_explanation_errors
+    for c in 'ABCD':
+        (tmp_path / f'm{c}.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="160" height="110"/>', encoding='utf-8')
+    base = dict(codes=['地Ab-IV-1'], volumes=['第一冊'], context_type='生活情境', process='推論', anchor='佔位', evidence='佔位',
+                prerequisites=['佔位'], hidden_concept='佔位目標', band='中', est_p=0.62, est_d=0.5, decisions=['一', '二'],
+                short_route='佔位', misconception='佔位', bottleneck=['佔位'], minutes=1.2)
+    dis = {c: {'misconception': '佔位', 'peer_concept': '佔位', 'pick': 0.12, 'ruled_out_by': '佔位'} for c in 'ACD'}
+    rows = [dict(base, number=1, stem='佔位？', images=[f'm{c}.svg' for c in 'ABCD'], key='B', distractors=dis,
+                 steps=['一。', '故選(B)；(A)(C)(D)不符。']),
+            dict(base, number=44, material='題組材料。', stem='佔位？', options=['佔位甲', '佔位乙', '佔位丙', '佔位丁'], key='B',
+                 distractors=dis, steps=['一。', '佔位乙符合，故選(B)；(A)(C)(D)不符。']),
+            dict(base, number=45, material='題組材料。', stem='佔位？', options=['佔位甲', '佔位乙', '佔位丙', '佔位丁'], key='B',
+                 distractors=dis, steps=['一。', '佔位乙符合，故選(B)；(A)(C)(D)不符。'])]
+    batch = expand(plan('會考社會', 'x', seed='s'), rows, tmp_path)
+    q1, q44, q45 = batch['questions']
+    assert q1['options'][1]['text'] == '{{asset:q1B}}' and q1['inline_assets']['q1B']['sha256']
+    assert q44['section_id'] == 's2' and q45['item_spec']['inherits_audit_from'] == 'q44'
+    assert q1['item_spec']['difficulty_design']['content_sha256'] and batch['answers'][0]['final_answer'] == 'B'
+    assert set(q1['item_spec']['cap_distractors']) == {'A', 'C', 'D'}
+    exam = {'metadata': {'subject': '會考社會'}, **batch}
+    assert answer_explanation_errors(exam) == []

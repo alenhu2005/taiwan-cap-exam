@@ -59,7 +59,10 @@ def _reachable(url, timeout):
             response.read(1024)
             return 'reachable'
     except urllib.error.HTTPError as error:
-        return f'HTTP {error.code}'
+        # Any HTTP reply means the host answered: Wikimedia refuses generic clients with 403, a GitHub
+        # download redirect can refuse the range request with 403/416, and 429 is rate limiting. A
+        # hosted 會考 run was told the library was unreachable while it downloaded it fine.
+        return f'HTTP {error.code}' if error.code in (404, 410) else 'reachable'
     except (urllib.error.URLError, OSError, ValueError) as error:
         return str(getattr(error, 'reason', error))[:80]
 

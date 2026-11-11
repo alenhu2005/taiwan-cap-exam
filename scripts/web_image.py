@@ -20,6 +20,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -28,12 +29,22 @@ API = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "taiwan-cap-exam/1.0 (https://github.com/alenhu2005/taiwan-cap-exam)"
 MANIFEST = Path(__file__).resolve().parents[1] / "references" / "photo-library-manifest.json"
 RASTER = {"image/jpeg", "image/png", "image/tiff", "image/webp"}
+THUMB_WIDTH = 1280   # a standard Commons thumbnail step (non-standard widths are rate limited)
 
 
 def _get(url: str, timeout: int = 20) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return response.read()
+    """GET with Wikimedia's rate limiting in mind: back off and retry on 429/503."""
+    import time
+    for attempt in range(4):
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return response.read()
+        except urllib.error.HTTPError as error:
+            if error.code not in (429, 503) or attempt == 3:
+                raise
+            time.sleep(float(error.headers.get("Retry-After") or 2 ** (attempt + 1)))
+    raise OSError("unreachable")
 
 
 def _text(value) -> str:
@@ -75,7 +86,7 @@ def candidates(payload: dict) -> list[dict]:
 def search(query: str, limit: int = 8, offset: int = 0) -> list[dict]:
     params = {"action": "query", "generator": "search", "gsrnamespace": 6, "gsrsearch": query, "gsrlimit": limit,
               "gsroffset": offset,
-              "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata", "iiurlwidth": 1600, "format": "json"}
+              "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata", "iiurlwidth": THUMB_WIDTH, "format": "json"}
     return candidates(json.loads(_get(API + "?" + urllib.parse.urlencode(params))))
 
 
@@ -83,7 +94,7 @@ def use(title: str, run_dir: Path, output: str, crop: str | None = None, kind: s
         print_width_cm: float = 12.0) -> dict:
     import pymupdf
     params = {"action": "query", "titles": title, "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata",
-              "iiurlwidth": 1600, "format": "json"}
+              "iiurlwidth": THUMB_WIDTH, "format": "json"}
     rows = candidates(json.loads(_get(API + "?" + urllib.parse.urlencode(params))))
     if not rows:
         raise SystemExit(f"{title}: not a raster image on Wikimedia Commons")
@@ -128,7 +139,7 @@ def use(title: str, run_dir: Path, output: str, crop: str | None = None, kind: s
             "license_or_authorization": row["license"] or "see source page",
             "source_asset_path": relative(source), "source_asset_sha256": digest,
             "crop_description": "full frame" if not crop else f"crop x {box[0]:g}-{box[2]:g}, y {box[1]:g}-{box[3]:g}",
-            "processing_steps": ["downloaded 1600 px rendition", *(["cropped"] if crop else []), "grayscale", "JPEG quality 85"],
+            "processing_steps": [f"downloaded {THUMB_WIDTH} px rendition", *(["cropped"] if crop else []), "grayscale", "JPEG quality 85"],
             "tonal_transform": "grayscale", "min_raster_dpi": dpi,
         },
         "notes": [f"Printed {print_width_cm:g} cm wide it gives {dpi} dpi" + ("" if dpi >= 200 else "; print it narrower"),

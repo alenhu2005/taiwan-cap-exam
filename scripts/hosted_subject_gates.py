@@ -72,6 +72,9 @@ def answer_explanation_errors(exam):
                 errors.append(f'Q{number}: single-choice key {key!r} is not a printed option label')
             elif joined:
                 chosen = next((_option_text(o) for o in options if str(o.get('label')) == str(key)), None)
+                # A figure option ({{asset:NAME}}) has no words to quote; the label check above still applies.
+                if isinstance(chosen, str) and re.fullmatch(r'\s*\{\{asset:[^{}]+\}\}\s*', chosen):
+                    chosen = None
                 if isinstance(chosen, str) and chosen.strip():
                     words = [w for w in re.findall(r"[A-Za-z][A-Za-z'’-]+", chosen) if len(w) > 3]
                     cjk = re.findall(r'[㐀-鿿]{2,}', chosen)

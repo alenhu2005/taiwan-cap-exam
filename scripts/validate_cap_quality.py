@@ -48,6 +48,16 @@ EXAMPLE_SETTINGS = re.compile(r"坑頭|坑尾|咖啡(?:果|農場)|剝除果皮|
 # cap116a took all 11 photographs from the bundled 59-photo library although the preflight found
 # web images reachable; every paper then repeats the same pictures. With the web reachable,
 # most photographs must be newly found (scripts/web_image.py); the library is the fallback.
+# Official 113-115 booklets (scripts/build_cap_pack.py measurements, 2026-11): 甲乙丙丁 combination
+# items per paper, items whose four options are figures (lower bounds: options printed as images
+# only), and option length in characters (median, share over 20).
+COMBO = re.compile(r"[甲乙丙丁戊己].*[甲乙丙丁戊己]")
+COMBO_MAX = {"會考社會": 3, "會考自然": 5, "會考數學": 3, "會考國文": 1, "會考英語": 1}
+IMAGE_OPTION_MIN = {"會考社會": 2, "會考自然": 3}
+OPTION_LENGTH = {"會考社會": (15, 0.12), "會考自然": (14, 0.27), "會考國文": (19, 0.25)}   # median cap, share >20
+STATISTIC = re.compile(r"\d[\d,.]*\s*(?:%|％|萬|億|人|公噸|噸|元|美元|度|公里|公頃|戶|件|次|倍|毫米|mm|℃)")
+OVERLAP_MIN, OVERLAP_PHRASES = 6, 2   # shared distinctive runs, in at least two separate phrases
+FINGERPRINTS = Path(__file__).resolve().parents[1] / "exam_packs" / "會考" / "metadata" / "official-item-fingerprints.json"
 FRESH_PHOTO_SHARE = 1.0   # maintainer: every photograph newly found when the web is reachable
 PHOTO_KINDS = {"photo", "archival_image", "satellite_image", "aerial_photo", "artifact_photo"}
 
@@ -91,13 +101,51 @@ def leak(key_text: str, others: list[str], source: str) -> int:
     return run if run >= LEAK_RUN and run - rival >= LEAK_MARGIN else 0
 
 
+def official_overlaps(text: str) -> list[tuple[str, int, int, int]]:
+    """(subject, year, number, shared) for official items sharing OVERLAP_MIN distinctive wording runs."""
+    if not FINGERPRINTS.is_file():
+        return []
+    import hashlib
+    import json
+    index = getattr(official_overlaps, "_index", None)
+    if index is None:
+        index = {}
+        for item in json.loads(FINGERPRINTS.read_text(encoding="utf-8"))["items"]:
+            for g in item["grams"]:
+                index[g] = (item["subject"], item["year"], item["number"])
+        official_overlaps._index = index
+    # A single shared term (「日本統治時期」, 「法定代理人」) is curriculum vocabulary, not a rewrite: count
+    # shared runs AND the separate phrases they form; a rewrite shares several phrases.
+    plain_text = re.sub(r"\s", "", text)
+    positions: dict[tuple, list[int]] = {}
+    for i, g in enumerate(re.findall(r"(?=([\u4e00-\u9fff]{4}))", plain_text)):
+        h = int(hashlib.sha1(g.encode("utf-8")).hexdigest()[:8], 16)
+        if h in index:
+            positions.setdefault(index[h], []).append(i)
+    out = []
+    for key, where in positions.items():
+        where = sorted(set(where))
+        phrases = 1 + sum(1 for a, b in zip(where, where[1:]) if b - a > 1)
+        if len(where) >= OVERLAP_MIN and phrases >= OVERLAP_PHRASES:
+            out.append((*key, len(where)))
+    return out
+
+
+def spec_sources(question: dict) -> list[dict]:
+    spec = question.get("item_spec") or {}
+    rows = spec.get("data_sources") or []
+    return [r for r in rows if isinstance(r, dict)]
+
+
 def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = None) -> list[str]:
     errors: list[str] = []
     metadata = exam.get("metadata") or {}
     subject = metadata.get("subject")
     answers = {a.get("question_id"): a for a in exam.get("answers") or [] if isinstance(a, dict)}
     choice = [q for q in exam.get("questions") or [] if isinstance(q, dict) and q.get("type") == "single_choice"]
-    spread_items = absolute_items = translation = single_step = integrated = 0
+    spread_items = absolute_items = translation = single_step = integrated = combos = image_options = 0
+    option_lengths: list[int] = []
+    estimates: list[float] = []
     sequence: list[str] = []
     for q in choice:
         n = q.get("number")
@@ -113,6 +161,27 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
         if run:
             errors.append(f"Q{n}: the figure or its caption prints the answer ({run} characters of option ({key})): "
                           "a figure carries evidence to interpret, never the conclusion")
+        raw_texts = [str(o.get("text") or "") for o in q.get("options") or [] if isinstance(o, dict)]
+        if raw_texts and all(re.fullmatch(r"\s*\{\{asset:[^{}]+\}\}\s*", t) for t in raw_texts):
+            image_options += 1
+        elif all(COMBO.search(t) for t in options.values()):
+            combos += 1
+        option_lengths += [len(t) for t in options.values() if t]
+        printed_all = str(q.get("group_stimulus") or "") + str(q.get("prompt") or "") + " ".join(raw_texts)
+        for official in official_overlaps(printed_all + figure):
+            errors.append(f"Q{n}: shares {official[3]} distinctive wording runs with official {official[1]} "
+                          f"{official[0][2:]} item {official[2]}: compare the two: if yours retells that item's situation, write a new one")
+        if STATISTIC.search(printed_all + figure):
+            sources = [s for s in spec_sources(q) if str(s.get("url") or "").startswith("http") and s.get("retrieved_at")]
+            if full and not sources:
+                errors.append(f"Q{n}: prints statistics; item_spec.data_sources must list each figure's source "
+                              "{url, retrieved_at}: look the numbers up, never write them from memory")
+        estimate = ((q.get("item_spec") or {}).get("difficulty_design") or {}).get("estimated_p")
+        if type(estimate) in (int, float):
+            estimates.append(float(estimate))
+        elif full:
+            errors.append(f"Q{n}: item_spec.difficulty_design.estimated_p (predicted 通過率) is required while writing, "
+                          "so the paper's difficulty is steered before review")
         if subject == "會考社會" and leak(options[key], others, material):
             errors.append(f"Q{n}: the stem or material repeats the key's wording; official 會考社會 113-115 never do: "
                           "make the student infer it")
@@ -199,8 +268,32 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
                     errors.append(f"Q{n}: cap_competency.domain must be one of {'、'.join(DOMAINS[subject])}")
             else:
                 sequence.append(domain)
+    if len(estimates) >= 5:
+        from hosted_blind_review import CAP_MEAN_P, cap_p_band
+        if subject in CAP_MEAN_P:
+            level = (exam.get("metadata") or {}).get("cap_difficulty_level", "會考")
+            low, high = cap_p_band(subject, level if level in ("會考", "中", "高", "極難") else "會考")
+            mean = sum(estimates) / len(estimates)
+            if not low <= mean <= high:
+                errors.append(f"running mean of estimated_p over {len(estimates)} saved items is {mean:.2f}, outside the "
+                              f"{level} band {low:.2f}-{high:.2f}: adjust the next items now, not after the paper is written")
     if not full or not choice:
         return errors
+    if combos > COMBO_MAX.get(subject, 1):
+        errors.append(f"{combos} items are 甲乙丙丁 combinations (official 113-115 at most {COMBO_MAX.get(subject, 1)} a paper): "
+                      "the format, not the thinking, makes them hard; write single-answer reasoning items")
+    if image_options < IMAGE_OPTION_MIN.get(subject, 0):
+        errors.append(f"{image_options} items use figures as options (official every year at least "
+                      f"{IMAGE_OPTION_MIN[subject]}): add items whose four options are maps, charts or diagrams "
+                      "({{asset:NAME}} as the whole option text)")
+    if subject in OPTION_LENGTH and option_lengths:
+        import statistics
+        cap, share = OPTION_LENGTH[subject]
+        median = statistics.median(option_lengths)
+        long_share = sum(n > 20 for n in option_lengths) / len(option_lengths)
+        if median > cap or long_share > share:
+            errors.append(f"options run long (median {median:g} characters, {long_share:.0%} over 20; official at most "
+                          f"{cap - 2} and {share:.0%}): put the difficulty in the material and stem, keep options short")
     if asset_root is not None and (Path(asset_root) / "preflight.json").is_file():
         import json
         try:

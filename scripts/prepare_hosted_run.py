@@ -277,6 +277,10 @@ def cap_requirements(subject):
                      'start from `python scripts/cap_plan.py plan --subject ' + subject + ' --paper-id <id> --level <level> '
                      '--output plan.json` (official sections, 題組 positions, per-position targets, a per-paper suggested_focus) '
                      'and `cap_plan.py item` skeletons',
+                     'difficulty from one real insight, not format: 甲乙丙丁 combinations at most 3 (社會) / 5 (自然) a paper; '
+                     'short options (official median 11-13 characters); figures as options in at least 2 (社會) / 3 (自然) '
+                     'items; contexts a 15-year-old lives in; every printed statistic looked up and listed in '
+                     'item_spec.data_sources; record difficulty_design.estimated_p while writing (the running mean is checked)',
                      'every photograph newly found with `python scripts/web_image.py search/use` while the web is reachable '
                      '(the bundled photo library is the offline fallback only); find the image first or after writing, but the '
                      'item must rest on evidence the real image shows',
