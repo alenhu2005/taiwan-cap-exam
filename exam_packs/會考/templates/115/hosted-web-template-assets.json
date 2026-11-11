@@ -1,0 +1,647 @@
+{
+  "schema_version": 1,
+  "exam": "會考",
+  "template_pack_id": "cap-115-layout-assets-v1",
+  "repository": "https://github.com/alenhu2005/taiwan-cap-exam",
+  "github_template_folder": "https://github.com/alenhu2005/taiwan-cap-exam/tree/main/exam_packs/%E6%9C%83%E8%80%83/templates/115",
+  "asset_policy": "Formal output must use the verified component PDF bytes as immutable background layers; never OCR, retype, reflow, rasterize, or visually imitate their locked content. blank-template is a review packet, not a fixed-page exam skeleton.",
+  "page_size_note": "115 會考 booklets print on 595.28 x 822.05 pt; these templates print on A4 with the official top/side positions and the page number's official distance from the bottom edge.",
+  "installation_contract": {
+    "required_subject_count": 6,
+    "required_download_url_count": 30,
+    "store_all_download_url_records": true,
+    "download_pdf_binaries_during_installation": false,
+    "download_timing": "after installation, when generation starts for the requested subject"
+  },
+  "formal_composition": {
+    "exact_binary_base_required": true,
+    "template_retypesetting_allowed": false,
+    "template_rasterization_allowed": false,
+    "runtime_fetch_scope": "requested_subject_production_components_only",
+    "allowed_overlays": [
+      "academic_year",
+      "exam_name",
+      "cover_page_count",
+      "cover_item_count",
+      "page_number",
+      "newly_authored_body_within_the_inner_body_box"
+    ],
+    "turn_cue_rule": "Even inner pages before the last question page use inner-even-turn-blank (「請翻頁繼續作答」, as 115 prints it); solution booklets never print the cue."
+  },
+  "dynamic_fields": [
+    "academic_year",
+    "exam_name",
+    "cover_page_count",
+    "cover_item_count",
+    "page_number"
+  ],
+  "locked_fields": [
+    "subject_title",
+    "duration",
+    "clock_times",
+    "answer_mode_instructions",
+    "answer_sheet_kind",
+    "math_formula_sheet"
+  ],
+  "asset_count": 30,
+  "subjects": [
+    {
+      "subject": "會考國文",
+      "exam": "會考",
+      "exam_subject": "國文",
+      "slug": "cap-chinese",
+      "github_folder_url": "https://github.com/alenhu2005/taiwan-cap-exam/tree/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese",
+      "layout_profile": "cap-chinese-115-measured-v1",
+      "formula_variant": null,
+      "production_components": [
+        "cover-blank",
+        "inner-odd-blank",
+        "inner-even-blank",
+        "inner-even-turn-blank"
+      ],
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-chinese/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/blank-template.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/blank-template.pdf",
+          "bytes": 884603,
+          "sha256": "f518845e4ba6c77c8c924d2b118816e028640d17dcaaeddf44f7905766b7bf38",
+          "pages": 4
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-chinese/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/cover-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/cover-blank.pdf",
+          "bytes": 869415,
+          "sha256": "8bee0a8f522394ec6a1c8b6345c8e694c35ab3b8464f75c2fb026b91a07f64bd",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-chinese/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/inner-odd-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/inner-odd-blank.pdf",
+          "bytes": 853,
+          "sha256": "95d7a7ce1dc3ccb5391551808487bdb40562291bc2474a2028ba84d0bd9d41db",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-chinese/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/inner-even-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/inner-even-blank.pdf",
+          "bytes": 853,
+          "sha256": "95d7a7ce1dc3ccb5391551808487bdb40562291bc2474a2028ba84d0bd9d41db",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-turn-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-chinese/inner-even-turn-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/inner-even-turn-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-chinese/inner-even-turn-blank.pdf",
+          "bytes": 131422,
+          "sha256": "3e3bdc2592808f4fa5e19a2a3ea12c56eaacb4161ecf16423da9fc6cf86c1e1b",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          65.2,
+          53.0,
+          533.4,
+          776.0
+        ],
+        "cover_title": [
+          70.0,
+          48.75,
+          525.28,
+          88.75
+        ],
+        "cover_pages": [
+          421.15850830078125,
+          304.7421875,
+          442.57421875,
+          318.7421875
+        ],
+        "cover_items": [
+          482.10919189453125,
+          304.7421875,
+          509.55767822265625,
+          318.7421875
+        ],
+        "odd": {
+          "footer": [
+            277.64,
+            781.34,
+            317.64,
+            799.14
+          ]
+        },
+        "even": {
+          "footer": [
+            277.64,
+            781.34,
+            317.64,
+            799.14
+          ]
+        }
+      }
+    },
+    {
+      "subject": "會考英語",
+      "exam": "會考",
+      "exam_subject": "英語",
+      "slug": "cap-english",
+      "github_folder_url": "https://github.com/alenhu2005/taiwan-cap-exam/tree/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english",
+      "layout_profile": "cap-english-115-measured-v1",
+      "formula_variant": null,
+      "production_components": [
+        "cover-blank",
+        "inner-odd-blank",
+        "inner-even-blank",
+        "inner-even-turn-blank"
+      ],
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-english/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/blank-template.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/blank-template.pdf",
+          "bytes": 894238,
+          "sha256": "101b29d2a3aeb125a69f11805dd684517232e96f5b00c7c8e6e70c7885e91691",
+          "pages": 4
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-english/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/cover-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/cover-blank.pdf",
+          "bytes": 879308,
+          "sha256": "561db77bcad52a70d6e7163dab5c6fc3a832eace681bdff54b2af057803937e8",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-english/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/inner-odd-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/inner-odd-blank.pdf",
+          "bytes": 853,
+          "sha256": "79a376b78e4297d8c59a008cda20debb4131bb857950c6dcc131aeda9e7501a6",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-english/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/inner-even-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/inner-even-blank.pdf",
+          "bytes": 853,
+          "sha256": "79a376b78e4297d8c59a008cda20debb4131bb857950c6dcc131aeda9e7501a6",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-turn-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-english/inner-even-turn-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/inner-even-turn-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-english/inner-even-turn-blank.pdf",
+          "bytes": 121200,
+          "sha256": "adb9927fbda6bcf7ca11d2fe91b24429edcfd6a07621759c076b107cc120f67a",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          65.2,
+          53.0,
+          533.4,
+          776.0
+        ],
+        "cover_title": [
+          70.0,
+          48.75,
+          525.28,
+          88.75
+        ],
+        "cover_pages": [
+          451.1282958984375,
+          304.7421875,
+          472.9140625,
+          318.7421875
+        ],
+        "cover_items": [
+          102.42578125,
+          324.5,
+          120.42578125,
+          338.5
+        ],
+        "odd": {
+          "footer": [
+            277.64,
+            785.84,
+            317.64,
+            803.64
+          ]
+        },
+        "even": {
+          "footer": [
+            277.64,
+            785.84,
+            317.64,
+            803.64
+          ]
+        }
+      }
+    },
+    {
+      "subject": "會考數學",
+      "exam": "會考",
+      "exam_subject": "數學",
+      "slug": "cap-math",
+      "github_folder_url": "https://github.com/alenhu2005/taiwan-cap-exam/tree/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math",
+      "layout_profile": "cap-math-115-measured-v1",
+      "formula_variant": "cap-math",
+      "production_components": [
+        "cover-blank",
+        "inner-odd-blank",
+        "inner-even-blank",
+        "inner-even-turn-blank",
+        "formula-blank"
+      ],
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-math/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/blank-template.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/blank-template.pdf",
+          "bytes": 979362,
+          "sha256": "f0600b75fd46eb090ac0bb2db4eae9b909a3e579256eef7156255d945bd6d838",
+          "pages": 5
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-math/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/cover-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/cover-blank.pdf",
+          "bytes": 900486,
+          "sha256": "94deac2f231b1f89cdc3535936c073b7c47db7221d8a259f1dc69589ada447d8",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-math/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-odd-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-odd-blank.pdf",
+          "bytes": 853,
+          "sha256": "0c0494a8d4bbdd53fa71814dc92fc7602c3d0b1bcd9c7c2dda44c9102e6c28e8",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-math/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-even-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-even-blank.pdf",
+          "bytes": 853,
+          "sha256": "0c0494a8d4bbdd53fa71814dc92fc7602c3d0b1bcd9c7c2dda44c9102e6c28e8",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-turn-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-math/inner-even-turn-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-even-turn-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-even-turn-blank.pdf",
+          "bytes": 161734,
+          "sha256": "c79cccac66cffb2af5c5a15bc80efdc8f58ada04dcb5f3b3753deebe730d33c7",
+          "pages": 1
+        },
+        {
+          "component": "formula-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-math/formula-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/formula-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/formula-blank.pdf",
+          "bytes": 190446,
+          "sha256": "3a8f624cf00b29b2939be3d5606a1317e64720fd69650c4a3af9e371784fa04b",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          65.2,
+          53.0,
+          533.4,
+          776.0
+        ],
+        "cover_title": [
+          70.0,
+          48.75,
+          525.28,
+          88.75
+        ],
+        "cover_pages": [
+          416.171142578125,
+          287.99609375,
+          437.5703125,
+          301.99609375
+        ],
+        "cover_items": [
+          102.42578125,
+          305.24609375,
+          120.42578125,
+          319.24609375
+        ],
+        "odd": {
+          "footer": [
+            277.64,
+            781.14,
+            317.64,
+            800.34
+          ]
+        },
+        "even": {
+          "footer": [
+            277.64,
+            781.14,
+            317.64,
+            800.34
+          ]
+        }
+      }
+    },
+    {
+      "subject": "會考社會",
+      "exam": "會考",
+      "exam_subject": "社會",
+      "slug": "cap-social",
+      "github_folder_url": "https://github.com/alenhu2005/taiwan-cap-exam/tree/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social",
+      "layout_profile": "cap-social-115-measured-v1",
+      "formula_variant": null,
+      "production_components": [
+        "cover-blank",
+        "inner-odd-blank",
+        "inner-even-blank",
+        "inner-even-turn-blank"
+      ],
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-social/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/blank-template.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/blank-template.pdf",
+          "bytes": 881686,
+          "sha256": "466794c1b8861c502cfaee906d8a351daeacf61e50412c71ab3a895259992fab",
+          "pages": 4
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-social/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/cover-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/cover-blank.pdf",
+          "bytes": 866509,
+          "sha256": "2ffe3b0d69c90104ea71df6435095627013d3f096ec18678dca3c1039dcbb79c",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-social/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/inner-odd-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/inner-odd-blank.pdf",
+          "bytes": 853,
+          "sha256": "9ad94e9e6e36cc3a529ea944b99e3cf6455bb250a2dafa16617ea903fa432e91",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-social/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/inner-even-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/inner-even-blank.pdf",
+          "bytes": 853,
+          "sha256": "9ad94e9e6e36cc3a529ea944b99e3cf6455bb250a2dafa16617ea903fa432e91",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-turn-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-social/inner-even-turn-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/inner-even-turn-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-social/inner-even-turn-blank.pdf",
+          "bytes": 128482,
+          "sha256": "ec1d450882da6f610cf6169f2ad3f98a5a1258437953905fa557a678e5326f88",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          65.2,
+          53.0,
+          533.4,
+          776.0
+        ],
+        "cover_title": [
+          70.0,
+          48.75,
+          525.28,
+          88.75
+        ],
+        "cover_pages": [
+          425.47833251953125,
+          304.7421875,
+          447.26171875,
+          318.7421875
+        ],
+        "cover_items": [
+          487.15667724609375,
+          304.7421875,
+          515.1400146484375,
+          318.7421875
+        ],
+        "odd": {
+          "footer": [
+            277.64,
+            788.0400000000001,
+            317.64,
+            805.84
+          ]
+        },
+        "even": {
+          "footer": [
+            277.64,
+            788.0400000000001,
+            317.64,
+            805.84
+          ]
+        }
+      }
+    },
+    {
+      "subject": "會考自然",
+      "exam": "會考",
+      "exam_subject": "自然",
+      "slug": "cap-science",
+      "github_folder_url": "https://github.com/alenhu2005/taiwan-cap-exam/tree/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science",
+      "layout_profile": "cap-science-115-measured-v1",
+      "formula_variant": null,
+      "production_components": [
+        "cover-blank",
+        "inner-odd-blank",
+        "inner-even-blank",
+        "inner-even-turn-blank"
+      ],
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-science/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/blank-template.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/blank-template.pdf",
+          "bytes": 882189,
+          "sha256": "7c65c6f1d1c2e707f10c54362505cecf33b713c2c756b4dba7068c9310518a5e",
+          "pages": 4
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-science/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/cover-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/cover-blank.pdf",
+          "bytes": 867012,
+          "sha256": "7e43a31320f4b34402bdc2a825a3a8dc6a9ac4ee1fc4f2bd99b1f14cc801a353",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-science/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/inner-odd-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/inner-odd-blank.pdf",
+          "bytes": 853,
+          "sha256": "344d434dd1bc3b7212f35c82bfd268be09337567ec71bde62262d55623d2d067",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-science/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/inner-even-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/inner-even-blank.pdf",
+          "bytes": 853,
+          "sha256": "344d434dd1bc3b7212f35c82bfd268be09337567ec71bde62262d55623d2d067",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-turn-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-science/inner-even-turn-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/inner-even-turn-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-science/inner-even-turn-blank.pdf",
+          "bytes": 128771,
+          "sha256": "f9f852e9894282f2fe8e0ad50d6573230205a5c4614ae9a607b637a91f39c56b",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          65.2,
+          53.0,
+          533.4,
+          776.0
+        ],
+        "cover_title": [
+          70.0,
+          48.75,
+          525.28,
+          88.75
+        ],
+        "cover_pages": [
+          425.47833251953125,
+          304.7421875,
+          447.26171875,
+          318.7421875
+        ],
+        "cover_items": [
+          487.15667724609375,
+          304.7421875,
+          515.1400146484375,
+          318.7421875
+        ],
+        "odd": {
+          "footer": [
+            277.64,
+            781.34,
+            317.64,
+            799.14
+          ]
+        },
+        "even": {
+          "footer": [
+            277.64,
+            781.34,
+            317.64,
+            799.14
+          ]
+        }
+      }
+    },
+    {
+      "subject": "會考寫作測驗",
+      "exam": "會考",
+      "exam_subject": "寫作測驗",
+      "slug": "cap-writing",
+      "github_folder_url": "https://github.com/alenhu2005/taiwan-cap-exam/tree/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-writing",
+      "layout_profile": "cap-writing-115-measured-v1",
+      "formula_variant": null,
+      "production_components": [
+        "cover-blank",
+        "inner-odd-blank",
+        "inner-even-blank"
+      ],
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-writing/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-writing/blank-template.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-writing/blank-template.pdf",
+          "bytes": 1045434,
+          "sha256": "8779b242477be15db27bdd68752d3d3f6a8bd230ef7d4d65c525e04c7e22d4e8",
+          "pages": 3
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-writing/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-writing/cover-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-writing/cover-blank.pdf",
+          "bytes": 1033060,
+          "sha256": "6f29275b6df3dafa567601ccc4ec6de64054a16250d401a1dbef46d4afdabe8d",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-writing/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-writing/inner-odd-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-writing/inner-odd-blank.pdf",
+          "bytes": 853,
+          "sha256": "4901c706eb3be05ecef56cbe5b5f5e47a01a5e1d2dbf6b871bedd0b53b378e02",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/會考/templates/115/assets/cap-writing/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-writing/inner-even-blank.pdf",
+          "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-writing/inner-even-blank.pdf",
+          "bytes": 853,
+          "sha256": "4901c706eb3be05ecef56cbe5b5f5e47a01a5e1d2dbf6b871bedd0b53b378e02",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          65.2,
+          53.0,
+          533.4,
+          800.0
+        ],
+        "cover_title": [
+          70.0,
+          48.75,
+          525.28,
+          88.75
+        ],
+        "odd": {},
+        "even": {}
+      }
+    }
+  ]
+}

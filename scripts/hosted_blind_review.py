@@ -1,0 +1,358 @@
+#!/usr/bin/env python3
+"""Build a label-free difficulty packet; never synthesize a review or identity."""
+import argparse
+import json
+import math
+from pathlib import Path
+
+REVIEW_MODES = ('independent-context', 'single-context')
+# Math A/B reviewers estimate each item's 答對率 and the band follows from it (maintainer
+# decision 2026-09-24): 難 below 0.30 and 中偏難 below 0.50, the cutoffs at which the
+# official 115 數學B scores exactly 70 and 30 points, the project's floors. Without them
+# hosted reviewers placed the same item on either side of 0.50 in successive rounds.
+CHINESE_MEAN_P_MAX = 0.62
+# 社會 111-115 objective items average 0.60, 0.51, 0.55, 0.52, 0.57 (official statistics); two
+# hosted 116 papers had keys that were the longest option in 40 and 42 of 54 items.
+SOCIAL_MEAN_P_MAX = 0.65
+# 自然 111-115 choice items average 0.57, 0.53, 0.57, 0.56, 0.55; two hosted 116 papers keyed the
+# longest option in 22% and 52% of single-choice items (official 7-14%).
+CHOICE_MEAN_P_MAX = {'社會': (SOCIAL_MEAN_P_MAX, '0.51-0.60'), '自然': (0.65, '0.53-0.57')}
+MATH_P_BANDS = ((0.30, 'very_hard'), (0.50, 'hard'), (0.70, 'medium'), (0.85, 'easy'), (1.01, 'very_easy'))
+# 數A/數B targets and the range a paper may pass in (maintainer decision 2026-09-24). A hosted
+# 數B run went seven review rounds at 難 28 points and 93 minutes: every redesign that made one
+# item harder lengthened another. Aim at the targets; the gates accept the ranges.
+MATH_CHALLENGE_TARGET, MATH_HARD_TARGET, MATH_POINT_TOLERANCE = 70, 30, 3
+MATH_MINUTES_TARGET, MATH_MINUTE_TOLERANCE = (80, 92), 5
+MATH_CHALLENGE_MIN = MATH_CHALLENGE_TARGET - MATH_POINT_TOLERANCE   # 67
+MATH_HARD_MIN = MATH_HARD_TARGET - MATH_POINT_TOLERANCE             # 27
+MATH_MINUTES_RANGE = (MATH_MINUTES_TARGET[0] - MATH_MINUTE_TOLERANCE, MATH_MINUTES_TARGET[1] + MATH_MINUTE_TOLERANCE)  # 75-97
+
+
+# 國綜/社會/自然 choice items: the mean predicted 答對率 may exceed its ceiling by this much, as the
+# math gates accept a range (maintainer decision 2026-09-25).
+MEAN_P_TOLERANCE = 0.03
+# 會考 selected-response items: official 各題通過率 yearly means, 113-115 (exam_packs/會考/.../difficulty-
+# profile.json). A 會考 paper's reviewed mean must sit in that band ± CAP_MEAN_P_TOLERANCE on both
+# sides: 會考 is easier than 學測, and hosted papers drifted easy with the key the longest option.
+CAP_MEAN_P = {'會考國文': (0.671, 0.698), '會考英語': (0.604, 0.614), '會考數學': (0.602, 0.618),
+              '會考社會': (0.647, 0.673), '會考自然': (0.588, 0.599)}
+CAP_MEAN_P_TOLERANCE = 0.05
+# The user chooses a 會考 paper's level (metadata.cap_difficulty_level); 會考 is the floor. Higher
+# levels move the mean 通過率 band below the official one; every level stays inside the 國中
+# curriculum (validate_cap_form.py) and keeps the official 鑑別度.
+CAP_LEVELS = ('會考', '中', '高', '極難')
+CAP_LEVEL_OFFSETS = {'中': (-0.15, -0.05), '高': (-0.25, -0.15), '極難': (-0.38, -0.25)}
+
+
+def cap_p_band(subject, level):
+    """(low, high) accepted mean 通過率 for a 會考 subject at the chosen level."""
+    low, high = CAP_MEAN_P[subject]
+    if level in (None, '會考'):
+        return round(low - CAP_MEAN_P_TOLERANCE, 3), round(high + CAP_MEAN_P_TOLERANCE, 3)
+    below, above = CAP_LEVEL_OFFSETS[level]
+    return round(low + below, 3), round(low + above, 3)
+# Official 各題鑑別度 (D), 113-115: the BEST yearly mean per subject; official papers keep 0-8% of
+# items below D 0.30. The maintainer's goal is quality above the official paper, so a 會考
+# paper's reviewed D estimates must reach the strongest official year with almost no weak items.
+CAP_MEAN_D = {'會考國文': 0.49, '會考英語': 0.60, '會考數學': 0.50, '會考社會': 0.50, '會考自然': 0.51}
+CAP_D_TOLERANCE = 0.0
+CAP_LOW_D_SHARE = 0.03
+# A user may ask for a different difficulty in the request (「數A 難題 40%」「自然平均答對率 0.5」);
+# the run records it in metadata.user_difficulty_request with the user's words and the gates
+# use it in place of the 學測 defaults. Without one the defaults apply unchanged.
+USER_HARD_SHARE_TOLERANCE = 5   # percentage points of the choice items, 國綜/社會/自然
+
+
+def difficulty_request(metadata):
+    """(request dict or None, errors) from metadata.user_difficulty_request."""
+    request = (metadata or {}).get('user_difficulty_request')
+    if request is None:
+        return None, []
+    errors = []
+    if not isinstance(request, dict) or not str(request.get('request') or '').strip():
+        return None, ['difficulty: user_difficulty_request must quote the user\'s own words in "request"']
+    for key, high in (('hard_percent', 100), ('challenge_percent', 100), ('easy_percent', 100), ('mean_p', 1)):
+        value = request.get(key)
+        if value is not None and (type(value) not in (int, float) or not 0 <= value <= high):
+            errors.append(f'difficulty: user_difficulty_request.{key} must be a number from 0 to {high}')
+    return request, errors
+
+
+def math_floor_errors(challenge, hard, prefix='difficulty: reviewed', request=None):
+    """中偏難＋難 and 難 points against the 70/30 targets, passing within MATH_POINT_TOLERANCE;
+    a user's requested percentage replaces a target and is met within the same tolerance."""
+    errors = []
+    request = request or {}
+    for name, value, key, target, minimum in (
+            ('medium-hard/hard', challenge, 'challenge_percent', MATH_CHALLENGE_TARGET, MATH_CHALLENGE_MIN),
+            ('hard', hard, 'hard_percent', MATH_HARD_TARGET, MATH_HARD_MIN)):
+        wanted = request.get(key)
+        if type(wanted) in (int, float):
+            if abs(value - wanted) > MATH_POINT_TOLERANCE:
+                errors.append(f'{prefix} {name} score {value:g} is not within ±{MATH_POINT_TOLERANCE} of the '
+                              f'{wanted:g} points the user asked for')
+        elif value < minimum:
+            errors.append(f'{prefix} {name} score {value:g} is below {minimum} points '
+                          f'(target {target}, ±{MATH_POINT_TOLERANCE} accepted)')
+    return errors
+
+
+def math_easy_error(easy, prefix='difficulty: reviewed easy score', request=None):
+    request = request or {}
+    wanted = request.get('easy_percent')
+    if type(wanted) in (int, float):
+        if abs(easy - wanted) > MATH_POINT_TOLERANCE:
+            return f'{prefix} {easy:g} is not within ±{MATH_POINT_TOLERANCE} of the {wanted:g} points the user asked for'
+        return None
+    if type(request.get('challenge_percent')) in (int, float):
+        return None  # the requested 中偏難＋難 share already fixes how much is easy
+    if easy >= 10:
+        return f'{prefix} must be below 10 points (found {easy:g})'
+    return None
+
+
+def math_minutes_error(total, prefix='difficulty: reviewed hand-solving total', request=None):
+    low, high = MATH_MINUTES_RANGE
+    if request and any(type(request.get(k)) in (int, float) for k in ('hard_percent', 'challenge_percent', 'easy_percent')):
+        low = 0  # a paper the user asked to change may take less time; the ceiling still holds
+    if low <= total <= high:
+        return None
+    return (f'{prefix} {total:g} minutes is outside {low}-{high} (target {MATH_MINUTES_TARGET[0]}-'
+            f'{MATH_MINUTES_TARGET[1]}, ±{MATH_MINUTE_TOLERANCE} accepted)')
+
+
+def choice_difficulty_errors(subject, estimates, ceiling, official, request=None):
+    """Mean predicted 答對率 and, when asked for, the share of 難 items of a 國綜/社會/自然 paper."""
+    if not estimates:
+        return []
+    mean = sum(estimates) / len(estimates)
+    request = request or {}
+    errors = []
+    wanted = request.get('mean_p')
+    if type(wanted) in (int, float):
+        if abs(mean - wanted) > MEAN_P_TOLERANCE:
+            errors.append(f'difficulty: reviewed mean 答對率 {mean:.2f} is not within ±{MEAN_P_TOLERANCE} of the {wanted:g} '
+                          'the user asked for')
+    elif mean > ceiling + MEAN_P_TOLERANCE:
+        errors.append(f'difficulty: reviewed mean 答對率 {mean:.2f} is easier than any official {subject} paper '
+                      f'(111-115: {official}; target at most {ceiling}, {ceiling + MEAN_P_TOLERANCE:.2f} accepted): make '
+                      'distractors as long and plausible as the key, each failing on one specific concept')
+    hard = request.get('hard_percent')
+    if type(hard) in (int, float):
+        share = 100 * sum(1 for p in estimates if p < 0.30) / len(estimates)
+        if abs(share - hard) > USER_HARD_SHARE_TOLERANCE:
+            errors.append(f'difficulty: {share:.0f}% of the reviewed items are 難 (答對率 < 0.30); the user asked for '
+                          f'{hard:g}% (±{USER_HARD_SHARE_TOLERANCE} accepted)')
+    return errors
+
+
+def band_for_p(p):
+    return next(band for edge, band in MATH_P_BANDS if p < edge)
+
+
+def packet(exam, review_mode='independent-context'):
+    if review_mode not in REVIEW_MODES:
+        raise ValueError('Unknown difficulty review mode')
+    questions = []
+    for q in exam['questions']:
+        row = {k: q[k] for k in ('id','number','section_id','type','prompt','group_stimulus',
+               'continuation_pages','group_stimulus_page_splits','response_format_table') if k in q}
+        if q.get('options'):
+            row['options'] = [{k: option[k] for k in ('label','text')} for option in q['options']]
+        if q.get('visual_asset'):
+            row['visual_asset'] = {k: q['visual_asset'][k] for k in ('path','sha256','alt','caption')
+                                   if k in q['visual_asset']}
+        questions.append(row)
+    # Author's difficulty labels/reviews and item_spec never enter the packet.
+    answers = [{k: a[k] for k in ('question_id','final_answer','reasoning','explanation_blocks') if k in a}
+               for a in exam.get('answers', [])]
+    result = {'subject': exam['metadata']['subject'], 'questions': questions}
+    # Removing answers from the artifact reduces direct answer copying. It does
+    # NOT erase the same model's history or make its second pass independent.
+    if review_mode == 'independent-context':
+        result['answers'] = answers
+    return result
+
+
+def review_errors(exam, review):
+    errors = []
+    bands = ['very_easy','easy','medium','hard','very_hard']
+    rows = {r.get('id'):r for r in review.get('items', [])}
+    is_math = exam.get('metadata', {}).get('subject') in {'數學A', '數學B'}
+    preceding = set()
+    mode = review.get('review_mode', 'independent-context')  # Preserve legacy evidence semantics.
+    if mode not in REVIEW_MODES:
+        errors.append('difficulty: unknown review mode')
+    elif mode == 'independent-context':
+        if not review.get('reviewer_context') or review.get('author_context') == review.get('reviewer_context'):
+            errors.append('difficulty: a separate blind reviewer context is required for independent-context mode')
+        if review.get('independent_review') is False:
+            errors.append('difficulty: contradictory independent review claim')
+    else:
+        if (not review.get('author_context') or
+                review.get('reviewer_context') != review.get('author_context')):
+            errors.append('difficulty: single-context review must retain the actual author context')
+        if review.get('independent_review') is not False or not review.get('review_reason'):
+            errors.append('difficulty: single-context review must disclose non-independence and capability reason')
+    for question in exam['questions']:
+        row = rows.get(question['id'], {})
+        prefix = f'difficulty/{question["id"]}'
+        if mode == 'single-context' and not (isinstance(row.get('answer_recheck'), str) and row['answer_recheck'].strip()):
+            errors.append(f'{prefix}: record the fresh solving route and comparison with the saved answer')
+        for field in ('shortest_route','decisive_steps','shortcut_search','anchor_comparison'):
+            if not row.get(field):
+                errors.append(f'{prefix}: missing {field}')
+        steps = row.get('decisive_steps')
+        if not isinstance(steps, list) or not steps or not all(isinstance(s,str) and s.strip() for s in steps):
+            errors.append(f'{prefix}: decisive_steps must list actual decisions')
+        elif len(set(s.strip().casefold() for s in steps)) != len(steps):
+            errors.append(f'{prefix}: repeated arithmetic lines are not distinct decisions')
+        if is_math:
+            prior = row.get('uses_prior_results')
+            if not isinstance(prior, list) or not all(isinstance(i,str) and i in preceding for i in prior):
+                errors.append(f'{prefix}: identify only earlier items that scaffold this solution')
+            if not row.get('scaffolding_audit') or type(row.get('routine_only')) is not bool:
+                errors.append(f'{prefix}: classify the shortest route after option/prior-item hints')
+            if row.get('routine_only') is True and row.get('difficulty_band') in {'hard','very_hard'}:
+                errors.append(f'{prefix}: routine substitution cannot receive a hard label')
+        preceding.add(question['id'])
+        if (question.get('item_spec') or {}).get('current_event') and (not isinstance(steps,list) or len(steps) < 3):
+            errors.append(f'{prefix}: topical arithmetic alone is not literacy; verify three linked decisions')
+        minutes = row.get('expected_minutes')
+        if type(minutes) not in (int,float) or not math.isfinite(minutes) or not 0 < minutes <= 100:
+            errors.append(f'{prefix}: invalid reviewed time estimate')
+            continue
+        if row.get('difficulty_band') not in bands or row.get('unresolved') != []:
+            errors.append(f'{prefix}: unresolved or missing reviewed judgment')
+        if is_math:
+            p = row.get('estimated_p')
+            if type(p) not in (int, float) or not 0 <= p <= 1:
+                errors.append(f'{prefix}: record estimated_p, the reviewer estimate of the 答對率 (0-1); the band follows from it')
+            elif row.get('difficulty_band') in bands and band_for_p(p) != row['difficulty_band']:
+                errors.append(f'{prefix}: estimated_p {p:g} is band {band_for_p(p)} (難 <0.30, 中偏難 0.30-0.50, '
+                              f'中 0.50-0.70, 簡單 >=0.70), not {row["difficulty_band"]}')
+        declared = question.get('expected_minutes')
+        if type(declared) in (int,float) and declared > minutes * 1.5:
+            errors.append(f'{prefix}: author time exceeds reviewed estimate by over 50%; revise and rebalance')
+        design = (question.get('item_spec') or {}).get('difficulty_design') or {}
+        independent_band = {'very_easy':'簡單', 'easy':'簡單', 'medium':'中',
+                            'hard':'中偏難', 'very_hard':'難'}.get(row.get('difficulty_band'))
+        if design.get('band') and independent_band and design['band'] != independent_band:
+            errors.append(f'{prefix}: adopt the reviewed band and rebalance the paper before rendering')
+        estimated = design.get('expert_estimate', {}).get('difficulty_band')
+        if estimated in bands and row.get('difficulty_band') in bands:
+            if bands.index(estimated) - bands.index(row['difficulty_band']) >= 2:
+                errors.append(f'{prefix}: author difficulty exceeds reviewed estimate by two bands')
+    request, request_errors = difficulty_request(exam.get('metadata'))
+    errors.extend(request_errors)
+    if exam.get('metadata', {}).get('subject') == '國綜':
+        # Official 國綜 papers average 0.48-0.58 (111-115); two hosted 116 papers were
+        # estimated at 0.70 and 0.80, with keys that were usually the longest option.
+        estimates = [rows.get(q['id'], {}).get('estimated_p') for q in exam['questions']]
+        if not all(type(p) in (int, float) and 0 <= p <= 1 for p in estimates):
+            errors.append('difficulty: record estimated_p (the predicted 答對率, 0-1) for every 國綜 item')
+        else:
+            errors.extend(choice_difficulty_errors('國綜', estimates, CHINESE_MEAN_P_MAX, '0.48-0.58', request))
+    subject_name = exam.get('metadata', {}).get('subject')
+    if subject_name in CAP_MEAN_P:
+        low, high = CAP_MEAN_P[subject_name]
+        chosen = [q for q in exam['questions'] if q.get('options')]
+        estimates = [rows.get(q['id'], {}).get('estimated_p') for q in chosen]
+        if not all(type(p) in (int, float) and 0 <= p <= 1 for p in estimates):
+            errors.append(f'difficulty: record estimated_p (the predicted 通過率, 0-1) for every {subject_name} choice item')
+        elif estimates:
+            mean = sum(estimates) / len(estimates)
+            wanted = (request or {}).get('mean_p')
+            level = exam.get('metadata', {}).get('cap_difficulty_level', '會考')
+            if level not in CAP_LEVELS:
+                errors.append(f'difficulty: metadata.cap_difficulty_level must be one of {"、".join(CAP_LEVELS)}')
+                level = '會考'
+            if type(wanted) in (int, float):
+                if abs(mean - wanted) > MEAN_P_TOLERANCE:
+                    errors.append(f'difficulty: reviewed mean 通過率 {mean:.2f} is not within ±{MEAN_P_TOLERANCE} of the '
+                                  f'{wanted:g} the user asked for')
+            discrimination = [rows.get(q['id'], {}).get('estimated_d') for q in chosen]
+            if not all(type(d) in (int, float) and -1 <= d <= 1 for d in discrimination):
+                errors.append(f'difficulty: record estimated_d (the predicted 鑑別度, high minus low group 通過率) for every '
+                              f'{subject_name} choice item: name the misconception each distractor catches')
+            else:
+                mean_d = sum(discrimination) / len(discrimination)
+                if mean_d < CAP_MEAN_D[subject_name] - CAP_D_TOLERANCE:
+                    errors.append(f'difficulty: reviewed mean 鑑別度 {mean_d:.2f} is below the best official {subject_name[2:]} year '
+                                  f'(113-115 best mean {CAP_MEAN_D[subject_name]:.2f}; the target is above 會考): rewrite items '
+                                  'whose distractors no prepared student would pick or whose key a weak student can guess')
+                low_d = sum(d < 0.30 for d in discrimination)
+                if low_d > CAP_LOW_D_SHARE * len(discrimination):
+                    errors.append(f'difficulty: {low_d} items have a reviewed 鑑別度 below 0.30 (official 113-115: 0-8%, '
+                                  'target better than official); '
+                                  f'at most {CAP_LOW_D_SHARE:.0%} accepted')
+            band_low, band_high = cap_p_band(subject_name, level)
+            if type(wanted) in (int, float):
+                pass
+            elif not band_low <= mean <= band_high:
+                errors.append(f'difficulty: reviewed mean 通過率 {mean:.2f} is outside the {level} band for {subject_name[2:]} '
+                              f'({band_low:.2f}-{band_high:.2f}; official 113-115 mean {low:.2f}-{high:.2f}): '
+                              + ('make distractors as plausible as the key and add linked reasoning steps, never '
+                                 'off-curriculum content' if mean > band_high else
+                                 'remove off-scope or multi-trap difficulty; every step must follow from learned 國中 knowledge'))
+    if subject_name in CHOICE_MEAN_P_MAX:
+        ceiling, official = CHOICE_MEAN_P_MAX[subject_name]
+        chosen = [q for q in exam['questions'] if q.get('options')]
+        estimates = [rows.get(q['id'], {}).get('estimated_p') for q in chosen]
+        if not all(type(p) in (int, float) and 0 <= p <= 1 for p in estimates):
+            errors.append(f'difficulty: record estimated_p (the predicted 答對率, 0-1) for every {subject_name} choice item')
+        else:
+            errors.extend(choice_difficulty_errors(subject_name, estimates, ceiling, official, request))
+    duration = exam.get('metadata', {}).get('duration_minutes')
+    independent_total = sum(r.get('expected_minutes', 0) for r in rows.values()
+                            if type(r.get('expected_minutes')) in (int,float))
+    shared = (exam.get('metadata', {}).get('difficulty_balance_plan') or exam.get('metadata', {}).get('paper_difficulty_plan') or {}).get('shared_reading_minutes', 0)
+    if type(duration) in (int,float) and type(shared) in (int,float) and independent_total + shared > duration:
+        errors.append('difficulty: reviewed solving plus shared reading exceeds paper duration')
+    if is_math and len(exam['questions']) == 20:
+        reviewed_points = {b: sum(q.get('score', 0) or 0 for q in exam['questions']
+                                  if rows.get(q['id'], {}).get('difficulty_band') == b) for b in bands}
+        easy_error = math_easy_error(reviewed_points['easy'] + reviewed_points['very_easy'], request=request)
+        if easy_error:
+            errors.append(easy_error)
+        errors.extend(math_floor_errors(reviewed_points['hard'] + reviewed_points['very_hard'], reviewed_points['very_hard'],
+                                        request=request))
+        # Official 111-115 close 選填 and the 題組 with their hardest items (115 16-17 and
+        # 20, 114 16-17 and 20, 113 17 and 20); two hosted 116 數A papers ended 選填 on a
+        # textbook maximum and the 題組 on completing a square.
+        for number in (17, 20):
+            closing = next((q for q in exam['questions'] if q.get('number') == number), None)
+            if closing and rows.get(closing['id'], {}).get('difficulty_band') not in {'hard', 'very_hard'}:
+                errors.append(f'difficulty/{closing["id"]}: item {number} closes its part and must review hard or very_hard, '
+                              'as every official 111-115 paper does; redesign it before rendering')
+        total = sum(r.get('expected_minutes', 0) for r in rows.values()
+                    if type(r.get('expected_minutes')) in (int,float))
+        if math_minutes_error(total, request=request):
+            errors.append(math_minutes_error(total, request=request))
+        decision_score = sum(q.get('score', 0) or 0 for q in exam['questions']
+                             if isinstance(rows.get(q['id'], {}).get('decisive_steps'), list)
+                             and len(rows[q['id']]['decisive_steps']) >= 3
+                             and rows[q['id']].get('routine_only') is False)
+        if decision_score < 50:
+            errors.append('difficulty: reviewed three-decision coverage below existing 50-point floor')
+        routine_points = sum(q.get('score', 0) or 0 for q in exam['questions']
+                             if rows.get(q['id'], {}).get('routine_only') is True)
+        if routine_points > 25:
+            errors.append(f'difficulty: routine-only routes cover {routine_points:g} points; maximum 25 under project policy')
+    return errors
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('exam', type=Path, nargs='?')
+    parser.add_argument('output', type=Path, nargs='?')
+    parser.add_argument('--exam', dest='exam_option', type=Path, help='Same as the first positional argument')
+    parser.add_argument('--output', dest='output_option', type=Path, help='Same as the second positional argument')
+    parser.add_argument('--review-mode', choices=REVIEW_MODES, default='independent-context')
+    args = parser.parse_args()
+    args.exam = args.exam or args.exam_option
+    args.output = args.output or args.output_option
+    if not args.exam or not args.output:
+        parser.error('Give the exam and the output path (positionally or with --exam/--output)')
+    args.output.write_text(json.dumps(packet(json.loads(args.exam.read_text(encoding='utf-8')), args.review_mode),
+                                     ensure_ascii=False, indent=2), encoding='utf-8')

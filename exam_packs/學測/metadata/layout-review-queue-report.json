@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "candidate_count": 1,
+  "reference_years": [
+    2026
+  ],
+  "subjects": [
+    "數學A"
+  ],
+  "status": "pending-review",
+  "gate": "No candidate becomes verified until instructions are transcribed and every rendered page passes visual review."
+}

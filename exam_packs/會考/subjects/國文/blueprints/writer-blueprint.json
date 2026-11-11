@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "exam": "會考",
+  "subject": "國文",
+  "purpose": "aggregate-only writer envelope",
+  "forbidden_uses": [
+    "copying or paraphrasing official items, passages, figures or option sets",
+    "reusing an official item's solution path with new names or numbers"
+  ],
+  "form_contract": {
+    "choice_items": {
+      "min": 42,
+      "max": 42,
+      "reference_115": 42
+    },
+    "constructed_items": 0,
+    "options_per_choice_item": 4,
+    "option_labels": [
+      "(A)",
+      "(B)",
+      "(C)",
+      "(D)"
+    ],
+    "answer_mode": "單選題（四選一），答錯不倒扣",
+    "duration_minutes": 70,
+    "inner_pages_115": 14,
+    "sections_115": [
+      {
+        "title": "單題",
+        "first": 1,
+        "last": 23
+      },
+      {
+        "title": "題組",
+        "first": 24,
+        "last": 42
+      }
+    ],
+    "groups_115": [
+      [
+        24,
+        25
+      ],
+      [
+        26,
+        29
+      ],
+      [
+        30,
+        32
+      ],
+      [
+        33,
+        34
+      ],
+      [
+        35,
+        36
+      ],
+      [
+        37,
+        38
+      ],
+      [
+        39,
+        40
+      ],
+      [
+        41,
+        42
+      ]
+    ],
+    "group_items_by_year": {
+      "113": 18,
+      "114": 18,
+      "115": 19
+    },
+    "group_size_counts": {
+      "2": 18,
+      "3": 5,
+      "4": 1
+    }
+  },
+  "difficulty_targets": {
+    "mean_p": [
+      0.63,
+      0.73
+    ],
+    "band_shares_113_115": {
+      "易": 0.524,
+      "中": 0.444,
+      "難": 0.032
+    },
+    "position_thirds_mean_p": [
+      0.698,
+      0.684,
+      0.671
+    ],
+    "rule": "易題在前、難題在後的大致趨勢；題組可回到中等難度。"
+  },
+  "calibration_by_curriculum": {
+    "108": {
+      "status": "ready",
+      "basis": "official-113-115-structure-and-item-pass-rates",
+      "limitations": [
+        "Pass rates describe official items; they are targets, not measured difficulty of new items."
+      ]
+    }
+  }
+}

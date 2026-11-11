@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "exam": "會考",
+  "subject": "英語",
+  "purpose": "aggregate-only writer envelope",
+  "forbidden_uses": [
+    "copying or paraphrasing official items, passages, figures or option sets",
+    "reusing an official item's solution path with new names or numbers"
+  ],
+  "form_contract": {
+    "choice_items": {
+      "min": 43,
+      "max": 43,
+      "reference_115": 43
+    },
+    "constructed_items": 0,
+    "options_per_choice_item": 4,
+    "option_labels": [
+      "(A)",
+      "(B)",
+      "(C)",
+      "(D)"
+    ],
+    "answer_mode": "單選題（四選一），答錯不倒扣",
+    "duration_minutes": 60,
+    "inner_pages_115": 14,
+    "sections_115": [
+      {
+        "title": "單題",
+        "first": 1,
+        "last": 19
+      },
+      {
+        "title": "題組",
+        "first": 20,
+        "last": 43
+      }
+    ],
+    "groups_115": [
+      [
+        20,
+        21
+      ],
+      [
+        22,
+        23
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        27,
+        28
+      ],
+      [
+        29,
+        31
+      ],
+      [
+        32,
+        34
+      ],
+      [
+        35,
+        39
+      ],
+      [
+        40,
+        43
+      ]
+    ],
+    "group_items_by_year": {
+      "113": 22,
+      "114": 24,
+      "115": 24
+    },
+    "group_size_counts": {
+      "2": 10,
+      "3": 9,
+      "4": 3,
+      "5": 1,
+      "6": 1
+    }
+  },
+  "difficulty_targets": {
+    "mean_p": [
+      0.56,
+      0.66
+    ],
+    "band_shares_113_115": {
+      "易": 0.264,
+      "中": 0.713,
+      "難": 0.023
+    },
+    "position_thirds_mean_p": [
+      0.604,
+      0.614,
+      0.606
+    ],
+    "rule": "易題在前、難題在後的大致趨勢；題組可回到中等難度。"
+  },
+  "calibration_by_curriculum": {
+    "108": {
+      "status": "ready",
+      "basis": "official-113-115-structure-and-item-pass-rates",
+      "limitations": [
+        "Pass rates describe official items; they are targets, not measured difficulty of new items."
+      ]
+    }
+  }
+}

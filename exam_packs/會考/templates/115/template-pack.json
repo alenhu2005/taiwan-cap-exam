@@ -1,0 +1,60 @@
+{
+  "template_pack_id": "cap-115-layout-assets-v1",
+  "template_kind": "layout-only",
+  "exam": "會考",
+  "reference_academic_year": 115,
+  "curriculum": "108",
+  "canonical_renderer": "scripts/render_cap_template_assets.py",
+  "branding_policy": "保留115會考題本的封面階層與作答說明，生成卷固定標示 Taiwan Exam 模擬試題，不冒充國中教育會考正式試題。",
+  "pagination_policy": "正文先依實際內容分頁，再填入頁碼、封面頁數與題數；不得用固定頁數空殼逼迫正文縮放。",
+  "subjects": {
+    "國文": {
+      "template_key": "會考國文",
+      "slug": "cap-chinese",
+      "asset_dir": "assets/cap-chinese",
+      "official_items": 42,
+      "official_inner_pages": 14,
+      "duration_minutes": 70
+    },
+    "英語": {
+      "template_key": "會考英語",
+      "slug": "cap-english",
+      "asset_dir": "assets/cap-english",
+      "official_items": 43,
+      "official_inner_pages": 14,
+      "duration_minutes": 60
+    },
+    "數學": {
+      "template_key": "會考數學",
+      "slug": "cap-math",
+      "asset_dir": "assets/cap-math",
+      "official_items": 25,
+      "official_inner_pages": 13,
+      "duration_minutes": 80
+    },
+    "社會": {
+      "template_key": "會考社會",
+      "slug": "cap-social",
+      "asset_dir": "assets/cap-social",
+      "official_items": 54,
+      "official_inner_pages": 14,
+      "duration_minutes": 70
+    },
+    "自然": {
+      "template_key": "會考自然",
+      "slug": "cap-science",
+      "asset_dir": "assets/cap-science",
+      "official_items": 50,
+      "official_inner_pages": 14,
+      "duration_minutes": 70
+    },
+    "寫作測驗": {
+      "template_key": "會考寫作測驗",
+      "slug": "cap-writing",
+      "asset_dir": "assets/cap-writing",
+      "official_items": 1,
+      "official_inner_pages": 2,
+      "duration_minutes": 50
+    }
+  }
+}

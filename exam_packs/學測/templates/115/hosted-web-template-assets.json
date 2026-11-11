@@ -1,0 +1,853 @@
+{
+  "schema_version": 1,
+  "template_pack_id": "gsat-115-layout-assets-v1",
+  "repository": "https://github.com/niansia/taiwan-exam",
+  "github_template_folder": "https://github.com/niansia/taiwan-exam/tree/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115",
+  "asset_policy": "Formal output must use the verified component PDF bytes as immutable background layers; never OCR, retype, reflow, rasterize, or visually imitate their locked content. blank-template is a review packet, not a fixed-page exam skeleton.",
+  "installation_contract": {
+    "required_subject_count": 7,
+    "required_download_url_count": 30,
+    "store_all_download_url_records": true,
+    "download_pdf_binaries_during_installation": false,
+    "download_timing": "after installation, when generation starts for the requested subject"
+  },
+  "formal_composition": {
+    "exact_binary_base_required": true,
+    "template_retypesetting_allowed": false,
+    "template_rasterization_allowed": false,
+    "persistent_cache_required_for_skill_installation": false,
+    "runtime_fetch_scope": "requested_subject_production_components_only",
+    "runtime_asset_count": {
+      "non_mathematics_subject": 3,
+      "mathematics_a_or_b": 4
+    },
+    "allowed_overlays": [
+      "academic_year",
+      "exam_name",
+      "current_page",
+      "total_pages",
+      "newly_authored_body_within_the_inner_body_box"
+    ],
+    "missing_binary_behavior": "Before drafting, try bounded download or the uploaded data-only template resource PDF. If exact assets remain unavailable, request that one resource upload. Do not produce any generic-layout draft without explicit user consent; a disclaimer is not consent."
+  },
+  "offline_resource": {
+    "download_page": "https://niansia.github.io/taiwan-exam/download-web-knowledge.html#templates",
+    "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/web/taiwan-exam-template-resources.pdf",
+    "filename": "taiwan-exam-template-resources.pdf",
+    "attachment_name_pattern": "{slug}--{component}.pdf",
+    "trust_anchor": "Verify extracted attachment bytes against the per-file records below, not carrier metadata.",
+    "usage": "Optional generation-time offline upload, not an installation prerequisite. Extract requested production components only. No code or ZIP attachments."
+  },
+  "dynamic_fields": [
+    "academic_year",
+    "exam_name",
+    "current_page",
+    "total_pages"
+  ],
+  "locked_fields": [
+    "subject_label",
+    "duration",
+    "signature_banner",
+    "answer_mode_instructions",
+    "scoring_rules",
+    "math_formula_variant"
+  ],
+  "asset_count": 30,
+  "subjects": [
+    {
+      "subject": "國綜",
+      "slug": "chinese-comprehensive",
+      "github_folder_url": "https://github.com/niansia/taiwan-exam/tree/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-comprehensive",
+      "layout_profile": "gsat-chinese-comprehensive-115-measured-v1",
+      "formula_variant": null,
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/學測/templates/115/assets/chinese-comprehensive/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-comprehensive/blank-template.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-comprehensive/blank-template.pdf",
+          "bytes": 258066,
+          "sha256": "ab967f3b56ccc555ba20b36b067c1717729c01c9ba35401a11e72ba7a9cc2dcc",
+          "pages": 3
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/chinese-comprehensive/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-comprehensive/cover-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-comprehensive/cover-blank.pdf",
+          "bytes": 236717,
+          "sha256": "a04be058053a317b373e91981ee2c7d945ebd459eba9fee1dcaeb8bc07259e92",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/chinese-comprehensive/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-comprehensive/inner-even-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-comprehensive/inner-even-blank.pdf",
+          "bytes": 68865,
+          "sha256": "4c5432cd79189073d820dc44b9bb57f2f234186a5e221ed2fb3b442f1e256dd9",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/chinese-comprehensive/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-comprehensive/inner-odd-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-comprehensive/inner-odd-blank.pdf",
+          "bytes": 68854,
+          "sha256": "b75fa298971d805ba3b8e3436b1515ef6e759b4e8942e1db9cd821e2baef0a7f",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          63.86,
+          85.03937007874016,
+          534.31,
+          786.0
+        ],
+        "cover_title": [
+          63.86,
+          115.1435546875,
+          534.31,
+          151.25
+        ],
+        "odd": {
+          "current_page": [
+            75.89546966552734,
+            40.98488029479981,
+            97.203125,
+            57.71223987102509
+          ],
+          "total_pages": [
+            75.89546966552734,
+            55.23488029479981,
+            97.203125,
+            71.96223987102509
+          ],
+          "footer": [
+            67.41211242675782,
+            785.6357602691651,
+            77.09217529296875,
+            801.0824798822404
+          ],
+          "year_name": [
+            479.546875,
+            40.98488029479981,
+            497.946875,
+            57.71223987102509
+          ]
+        },
+        "even": {
+          "current_page": [
+            499.4462585449219,
+            40.98488029479981,
+            519.546875,
+            57.71223987102509
+          ],
+          "total_pages": [
+            499.4462585449219,
+            55.23488029479981,
+            519.546875,
+            71.96223987102509
+          ],
+          "footer": [
+            518.5488159179688,
+            785.6357602691651,
+            528.2288940429687,
+            801.0824798822404
+          ],
+          "year_name": [
+            61.9140625,
+            40.98488029479981,
+            80.3140625,
+            57.71223987102509
+          ]
+        }
+      }
+    },
+    {
+      "subject": "國寫",
+      "slug": "chinese-writing",
+      "github_folder_url": "https://github.com/niansia/taiwan-exam/tree/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-writing",
+      "layout_profile": "gsat-chinese-writing-115-measured-v1",
+      "formula_variant": null,
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/學測/templates/115/assets/chinese-writing/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-writing/blank-template.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-writing/blank-template.pdf",
+          "bytes": 248726,
+          "sha256": "6f98ac225d44a675829707616c8d1f01287ab876432c0c5211e06be68cac5fe9",
+          "pages": 3
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/chinese-writing/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-writing/cover-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-writing/cover-blank.pdf",
+          "bytes": 228551,
+          "sha256": "86d6fad86b8606b762cf81041befd439551b2303e3cb4cff552a750d5647d0ec",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/chinese-writing/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-writing/inner-even-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-writing/inner-even-blank.pdf",
+          "bytes": 66956,
+          "sha256": "2a1d07efcae8dbd1b6cf1bd418e2cffc92f37e2dee5b1d99192c565f70687979",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/chinese-writing/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-writing/inner-odd-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/chinese-writing/inner-odd-blank.pdf",
+          "bytes": 66944,
+          "sha256": "856b089fe85e63d6b647d9f1ffcee4682e2b765e2c862f372d1dec90bc3031c4",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          63.86,
+          85.03937007874016,
+          538.13,
+          786.0
+        ],
+        "cover_title": [
+          63.86,
+          115.1435546875,
+          538.13,
+          150.875
+        ],
+        "odd": {
+          "current_page": [
+            75.89546966552734,
+            40.98488029479981,
+            94.14453125,
+            57.71223987102509
+          ],
+          "total_pages": [
+            75.89546966552734,
+            55.23488029479981,
+            94.14453125,
+            71.96223987102509
+          ],
+          "footer": [
+            67.73179168701172,
+            784.6248802947998,
+            78.37186126708984,
+            801.3522398710251
+          ],
+          "year_name": [
+            479.546875,
+            40.98488029479981,
+            497.946875,
+            57.71223987102509
+          ]
+        },
+        "even": {
+          "current_page": [
+            502.5048522949219,
+            40.98488029479981,
+            519.546875,
+            57.71223987102509
+          ],
+          "total_pages": [
+            502.5048522949219,
+            55.23488029479981,
+            519.546875,
+            71.96223987102509
+          ],
+          "footer": [
+            517.2747680664063,
+            784.6248802947998,
+            527.9148071289062,
+            801.3522398710251
+          ],
+          "year_name": [
+            61.9140625,
+            40.98488029479981,
+            80.3140625,
+            57.71223987102509
+          ]
+        }
+      }
+    },
+    {
+      "subject": "英文",
+      "slug": "english",
+      "github_folder_url": "https://github.com/niansia/taiwan-exam/tree/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/english",
+      "layout_profile": "gsat-english-115-measured-v1",
+      "formula_variant": null,
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/學測/templates/115/assets/english/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/english/blank-template.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/english/blank-template.pdf",
+          "bytes": 141183,
+          "sha256": "0b4b9a35c485efcf293cff12373a185f6ca217944ac90a80ddcbc0b7dc9f17b9",
+          "pages": 3
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/english/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/english/cover-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/english/cover-blank.pdf",
+          "bytes": 123284,
+          "sha256": "c82bfcc35d543006043d3c08bf26046e42b9f3ffe326157906650b744613e3e1",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/english/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/english/inner-even-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/english/inner-even-blank.pdf",
+          "bytes": 66761,
+          "sha256": "2aebecde37f3cc89629d404b2479c7461d33b313f440382f89724002a3873cae",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/english/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/english/inner-odd-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/english/inner-odd-blank.pdf",
+          "bytes": 66755,
+          "sha256": "ee7b697d25e77b49650d2b611ca434cae3eaef03bfd49242622223735649f55f",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          63.82,
+          85.03937007874016,
+          539.63,
+          786.0
+        ],
+        "cover_title": [
+          63.82,
+          115.1435546875,
+          539.63,
+          151.75
+        ],
+        "odd": {
+          "current_page": [
+            75.84859466552734,
+            40.98488029479981,
+            94.09765625,
+            57.71223987102509
+          ],
+          "total_pages": [
+            75.84859466552734,
+            55.23488029479981,
+            94.09765625,
+            71.96223987102509
+          ],
+          "footer": [
+            67.32527465820313,
+            785.7621202659607,
+            76.88534240722656,
+            801.0487598836422
+          ],
+          "year_name": [
+            479.546875,
+            40.98488029479981,
+            497.946875,
+            57.71223987102509
+          ]
+        },
+        "even": {
+          "current_page": [
+            502.5048522949219,
+            40.98488029479981,
+            519.546875,
+            57.71223987102509
+          ],
+          "total_pages": [
+            502.5048522949219,
+            55.23488029479981,
+            519.546875,
+            71.96223987102509
+          ],
+          "footer": [
+            518.719775390625,
+            785.7621202659607,
+            528.2798583984375,
+            801.0487598836422
+          ],
+          "year_name": [
+            61.8671875,
+            40.98488029479981,
+            80.2671875,
+            57.71223987102509
+          ]
+        }
+      }
+    },
+    {
+      "subject": "數學A",
+      "slug": "math-a",
+      "github_folder_url": "https://github.com/niansia/taiwan-exam/tree/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a",
+      "layout_profile": "gsat-math-a-115-measured-v1",
+      "formula_variant": "math-a",
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-a/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/blank-template.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/blank-template.pdf",
+          "bytes": 322470,
+          "sha256": "06ce3c0ccff2ddfad4812807de8ef0e2f7c5f94be90b611ee0a5e7ffaf6cdd3c",
+          "pages": 4
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-a/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/cover-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/cover-blank.pdf",
+          "bytes": 178116,
+          "sha256": "275e6aa1e0d59da80fafba0827c4858f345a125ba88689af44793b3a19edd378",
+          "pages": 1
+        },
+        {
+          "component": "formula-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-a/formula-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/formula-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/formula-blank.pdf",
+          "bytes": 159762,
+          "sha256": "3482dc94cc687604e8707f52295792cf8218cb4df5e70bc578a5c82890d6d563",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-a/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/inner-even-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/inner-even-blank.pdf",
+          "bytes": 90859,
+          "sha256": "ebb363a260f8d0a5ea8c0afd075a4803cbc938c19b2e02fcb326bb01cd12e6ff",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-a/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/inner-odd-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-a/inner-odd-blank.pdf",
+          "bytes": 90848,
+          "sha256": "66f67f1b81d32b6350028e8bd1e444be7d0ab5a5dfdfac0305d299c1742506e0",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          63.78,
+          87,
+          531.48,
+          770.1496062992127
+        ],
+        "cover_title": [
+          63.78,
+          101.32184600830078,
+          531.48,
+          141.3340606689453
+        ],
+        "odd": {
+          "current_page": [
+            75.81343841552734,
+            40.98488029479981,
+            94.0625,
+            57.71223987102509
+          ],
+          "total_pages": [
+            75.81343841552734,
+            55.23488029479981,
+            94.0625,
+            71.96223987102509
+          ],
+          "footer": [
+            67.31009979248047,
+            785.6989402675629,
+            76.93015747070312,
+            801.0656198829413
+          ],
+          "year_name": [
+            479.546875,
+            40.98488029479981,
+            497.946875,
+            57.71223987102509
+          ]
+        },
+        "even": {
+          "current_page": [
+            502.5048522949219,
+            40.98488029479981,
+            519.546875,
+            57.71223987102509
+          ],
+          "total_pages": [
+            502.5048522949219,
+            55.23488029479981,
+            519.546875,
+            71.96223987102509
+          ],
+          "footer": [
+            518.634326171875,
+            785.6989402675629,
+            528.254345703125,
+            801.0656198829413
+          ],
+          "year_name": [
+            61.83203125,
+            40.98488029479981,
+            80.23203125,
+            57.71223987102509
+          ]
+        }
+      }
+    },
+    {
+      "subject": "數學B",
+      "slug": "math-b",
+      "github_folder_url": "https://github.com/niansia/taiwan-exam/tree/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b",
+      "layout_profile": "gsat-math-b-115-measured-v1",
+      "formula_variant": "math-b-no-angle-addition",
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-b/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/blank-template.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/blank-template.pdf",
+          "bytes": 314545,
+          "sha256": "31166f28c4d84ba42af5ddaf787b19b14e15829a9dde89bbdd9d917f436f25c3",
+          "pages": 4
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-b/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/cover-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/cover-blank.pdf",
+          "bytes": 177756,
+          "sha256": "4ac87090b98de044061df0b4debca6cc5ce17e1d2c6d4b1c4e5fbf4ecf8f7a1d",
+          "pages": 1
+        },
+        {
+          "component": "formula-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-b/formula-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/formula-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/formula-blank.pdf",
+          "bytes": 157318,
+          "sha256": "1fb2f5ccf9674f6c64f85a9432b1b537462b9e957b880b9641888afcfde61791",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-b/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/inner-even-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/inner-even-blank.pdf",
+          "bytes": 90271,
+          "sha256": "38b849725854f3c90b64a2133fa7c1d807b2457f14345aff669e8d637412b311",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/math-b/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/inner-odd-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/math-b/inner-odd-blank.pdf",
+          "bytes": 90260,
+          "sha256": "6a185cef1573c40bf5cdb41a15f72019d312cb68637e81cc056d4317951cba6b",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          63.78,
+          85.03937007874016,
+          542.15,
+          786.0
+        ],
+        "cover_title": [
+          63.78,
+          101.32184600830078,
+          542.15,
+          141.36630249023438
+        ],
+        "odd": {
+          "current_page": [
+            75.81343841552734,
+            40.98488029479981,
+            94.0625,
+            57.71223987102509
+          ],
+          "total_pages": [
+            75.81343841552734,
+            55.23488029479981,
+            94.0625,
+            71.96223987102509
+          ],
+          "footer": [
+            67.31009979248047,
+            785.6989402675629,
+            76.93015747070312,
+            801.0656198829413
+          ],
+          "year_name": [
+            479.546875,
+            40.98488029479981,
+            497.946875,
+            57.71223987102509
+          ]
+        },
+        "even": {
+          "current_page": [
+            502.5048522949219,
+            40.98488029479981,
+            519.546875,
+            57.71223987102509
+          ],
+          "total_pages": [
+            502.5048522949219,
+            55.23488029479981,
+            519.546875,
+            71.96223987102509
+          ],
+          "footer": [
+            518.634326171875,
+            785.6989402675629,
+            528.254345703125,
+            801.0656198829413
+          ],
+          "year_name": [
+            61.83203125,
+            40.98488029479981,
+            80.23203125,
+            57.71223987102509
+          ]
+        }
+      }
+    },
+    {
+      "subject": "社會",
+      "slug": "social",
+      "github_folder_url": "https://github.com/niansia/taiwan-exam/tree/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/social",
+      "layout_profile": "gsat-social-115-measured-v1",
+      "formula_variant": null,
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/學測/templates/115/assets/social/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/social/blank-template.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/social/blank-template.pdf",
+          "bytes": 148231,
+          "sha256": "53013c189f2e728b631f1c2081b32f4b6288dbd8e786788e404bb3517cb14257",
+          "pages": 3
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/social/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/social/cover-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/social/cover-blank.pdf",
+          "bytes": 131081,
+          "sha256": "2662f26caa14d6a268d90dac47002fe55fb056d7c925536f3a79407516ba85be",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/social/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/social/inner-even-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/social/inner-even-blank.pdf",
+          "bytes": 63089,
+          "sha256": "42dd0897eb6edfe10a957eb0d8c840244bcacf5e1697c9e090753fe80fa62089",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/social/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/social/inner-odd-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/social/inner-odd-blank.pdf",
+          "bytes": 63083,
+          "sha256": "42862dd61eb7bc48938aed7f58efe8d31d995a71eb6ac0f65346a78ada7e40e3",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          62.52,
+          85.03937007874016,
+          536.74,
+          786.0
+        ],
+        "cover_title": [
+          62.52,
+          115.1435546875,
+          536.74,
+          151.8898162841797
+        ],
+        "odd": {
+          "current_page": [
+            74.55953216552734,
+            40.98488029479981,
+            96.265625,
+            57.71223987102509
+          ],
+          "total_pages": [
+            74.55953216552734,
+            55.23488029479981,
+            96.265625,
+            71.96223987102509
+          ],
+          "footer": [
+            66.03621215820313,
+            785.7621202659607,
+            75.59627990722656,
+            801.0487598836422
+          ],
+          "year_name": [
+            479.546875,
+            40.98488029479981,
+            497.946875,
+            57.71223987102509
+          ]
+        },
+        "even": {
+          "current_page": [
+            499.0478210449219,
+            40.98488029479981,
+            519.546875,
+            57.71223987102509
+          ],
+          "total_pages": [
+            499.0478210449219,
+            55.23488029479981,
+            519.546875,
+            71.96223987102509
+          ],
+          "footer": [
+            518.719775390625,
+            785.7621202659607,
+            528.2798583984375,
+            801.0487598836422
+          ],
+          "year_name": [
+            60.578125,
+            40.98488029479981,
+            78.978125,
+            57.71223987102509
+          ]
+        }
+      }
+    },
+    {
+      "subject": "自然",
+      "slug": "science",
+      "github_folder_url": "https://github.com/niansia/taiwan-exam/tree/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/science",
+      "layout_profile": "gsat-science-115-measured-v1",
+      "formula_variant": null,
+      "assets": [
+        {
+          "component": "blank-template",
+          "repository_path": "exam_packs/學測/templates/115/assets/science/blank-template.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/science/blank-template.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/science/blank-template.pdf",
+          "bytes": 145924,
+          "sha256": "0e5c09af1d1e882e9a5a912d5e266ee163214c1ad1b043bfa46e91aee2eda1d3",
+          "pages": 3
+        },
+        {
+          "component": "cover-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/science/cover-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/science/cover-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/science/cover-blank.pdf",
+          "bytes": 127964,
+          "sha256": "48b3d8fcf06edfa308f9929029d8e74733e09f2a49735dd3e66abbd1c99f73cc",
+          "pages": 1
+        },
+        {
+          "component": "inner-even-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/science/inner-even-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/science/inner-even-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/science/inner-even-blank.pdf",
+          "bytes": 66862,
+          "sha256": "7678e1fd0dcd93c0d3900f02bf78d9187f359ba396392906c679bfa688ab28ef",
+          "pages": 1
+        },
+        {
+          "component": "inner-odd-blank",
+          "repository_path": "exam_packs/學測/templates/115/assets/science/inner-odd-blank.pdf",
+          "download_url": "https://raw.githubusercontent.com/niansia/taiwan-exam/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/science/inner-odd-blank.pdf",
+          "view_url": "https://github.com/niansia/taiwan-exam/blob/main/exam_packs/%E5%AD%B8%E6%B8%AC/templates/115/assets/science/inner-odd-blank.pdf",
+          "bytes": 66857,
+          "sha256": "542afb59c1ae4cdf408212bf943bfedaa133fb0761dc6b8bcce8de5fdb61cde1",
+          "pages": 1
+        }
+      ],
+      "overlay_geometry_pt": {
+        "body": [
+          63.77,
+          85.03937007874016,
+          538.18,
+          786.0
+        ],
+        "cover_title": [
+          63.77,
+          115.1435546875,
+          538.18,
+          151.5833282470703
+        ],
+        "odd": {
+          "current_page": [
+            75.80171966552734,
+            40.98488029479981,
+            94.05078125,
+            57.71223987102509
+          ],
+          "total_pages": [
+            75.80171966552734,
+            55.23488029479981,
+            94.05078125,
+            71.96223987102509
+          ],
+          "footer": [
+            67.61806030273438,
+            784.6880602931976,
+            78.19813995361328,
+            801.335379871726
+          ],
+          "year_name": [
+            479.546875,
+            40.98488029479981,
+            497.946875,
+            57.71223987102509
+          ]
+        },
+        "even": {
+          "current_page": [
+            502.5048522949219,
+            40.98488029479981,
+            519.546875,
+            57.71223987102509
+          ],
+          "total_pages": [
+            502.5048522949219,
+            55.23488029479981,
+            519.546875,
+            71.96223987102509
+          ],
+          "footer": [
+            517.3602172851563,
+            784.6880602931976,
+            527.940380859375,
+            801.335379871726
+          ],
+          "year_name": [
+            61.8203125,
+            40.98488029479981,
+            80.2203125,
+            57.71223987102509
+          ]
+        }
+      }
+    }
+  ]
+}

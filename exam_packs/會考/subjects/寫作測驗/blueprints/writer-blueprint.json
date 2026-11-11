@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "exam": "會考",
+  "subject": "寫作測驗",
+  "purpose": "aggregate-only writer envelope",
+  "forbidden_uses": [
+    "copying or paraphrasing official items, passages, figures or option sets",
+    "reusing an official item's solution path with new names or numbers"
+  ],
+  "form_contract": {
+    "tasks": 1,
+    "duration_minutes": 50,
+    "question_types": [
+      "guided_writing"
+    ],
+    "rules": [
+      "一題引導寫作，題目提供文字或圖文材料與明確的寫作任務",
+      "不必訂題；不得使用詩歌體；不可在文中洩漏私人身分",
+      "評分為一至六級分（官方寫作測驗評分規準），不另列題目分數"
+    ]
+  },
+  "difficulty_targets": {
+    "rule": "寫作以六級分規準評閱；命題時確保題旨清楚、各級分都有可區辨的表現空間。"
+  },
+  "calibration_by_curriculum": {
+    "108": {
+      "status": "ready",
+      "basis": "official-113-115-structure",
+      "limitations": [
+        "Pass rates describe official items; they are targets, not measured difficulty of new items."
+      ]
+    }
+  }
+}

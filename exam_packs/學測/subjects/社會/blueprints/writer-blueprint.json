@@ -1,0 +1,1088 @@
+{
+  "schema_version": 1,
+  "exam": "學測",
+  "subject": "社會",
+  "curricula": [
+    "108"
+  ],
+  "record_count": 30,
+  "years": {
+    "minimum": 2022,
+    "maximum": 2026,
+    "counts": {
+      "2022": 6,
+      "2023": 6,
+      "2024": 6,
+      "2025": 6,
+      "2026": 6
+    }
+  },
+  "metadata_fingerprint": "06e4a570d18105c312ef5d4ac7541cfbf5267fae76ab32e26ff8ac70fcf38f95",
+  "built_at": "2026-09-09T16:52:21.737920+00:00",
+  "calibration_status": "ready",
+  "calibration_by_curriculum": {
+    "108": {
+      "record_count": 30,
+      "year_count": 5,
+      "official_record_count": 30,
+      "official_year_count": 5,
+      "mock_record_count": 0,
+      "dimensions": {
+        "semantic_sample": {
+          "status": "ready",
+          "record_count": 30,
+          "year_count": 5
+        },
+        "official_semantic_anchor": {
+          "status": "ready",
+          "record_count": 30,
+          "year_count": 5
+        },
+        "official_objective_difficulty": {
+          "status": "ready",
+          "measured_item_count": 275,
+          "year_count": 5,
+          "source_fingerprint": "4a5b78c47d1e9c9ccaa9b90177c14a651cf889433a9ca23b5bc8f91fded67ea5"
+        },
+        "difficulty_vector": {
+          "status": "ready",
+          "complete_count": 30,
+          "coverage": 1.0
+        },
+        "literacy_annotation": {
+          "status": "ready",
+          "complete_count": 30,
+          "coverage": 1.0
+        },
+        "stimulus_provenance": {
+          "status": "ready",
+          "competence_item_count": 30,
+          "complete_count": 30,
+          "coverage": 1.0
+        },
+        "constructed_response_calibration": {
+          "status": "ready",
+          "required_by_official_structure": true,
+          "official_record_count": 10,
+          "complete_count": 10,
+          "year_count": 5
+        },
+        "formal_layout": {
+          "status": "ready",
+          "verified_profile_count": 1,
+          "profile_ids": [
+            "gsat-social-115-measured-v1"
+          ]
+        }
+      },
+      "status": "ready"
+    }
+  },
+  "calibration_notes": [],
+  "source_visibility": "aggregate-only",
+  "individual_source_question_ids_included": false,
+  "individual_question_numbers_included": false,
+  "distribution_policy": "multi-year probability envelope; never copy one historical paper's unit sequence",
+  "distributions": {
+    "unit": {
+      "公民與社會": {
+        "count": 11,
+        "proportion": 0.366667
+      },
+      "歷史": {
+        "count": 11,
+        "proportion": 0.366667
+      },
+      "地理": {
+        "count": 8,
+        "proportion": 0.266667
+      }
+    },
+    "subunit": {
+      "世界都市規模結構比較": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "以電話簿探究都市機能變遷": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "全民健保、健康權與基因資料交換": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "冷戰時期金門與柏林": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "勞保退休制度與實質平等": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "北美原住民族主權與戰爭規則": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "印太區域與多國聯合軍演": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "原住民族健康報導與污名化": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "原住民族歲時祭儀與文化權": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "咖啡店區位、商閾與商品圈": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "女性保障席次與選舉制度判讀": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "媒體再現、倡議與自我實現": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "岡瓦納大陸與有袋類遷移": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "市場行為與社會不平等的證據": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "憲法中的行政院位階": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "日治土地林野調查與東部製糖": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "日治土地調查與土地權屬": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "暢銷小冊與法國王室權威": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "歐盟區域經濟差異探究": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "殖民地蔗糖生產與大西洋交流": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "民主政府的分權制衡原理": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "江南市鎮發展與城隍信仰": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "清代臺灣族群分類與語言習俗": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "清末臺灣傳教與樟腦產業": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "移民母語課與少數文化保障": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "等高線地形與觀景視野": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "網格地形、視線與射程判讀": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "臺灣政治體制與農民抗議": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "身心障礙就業與實質平等": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "邱吉爾演說與美國參戰期待": {
+        "count": 1,
+        "proportion": 0.033333
+      }
+    },
+    "question_type": {
+      "single_choice": {
+        "count": 20,
+        "proportion": 0.666667
+      },
+      "constructed_response": {
+        "count": 10,
+        "proportion": 0.333333
+      }
+    },
+    "section": {
+      "section-1": {
+        "count": 21,
+        "proportion": 0.7
+      },
+      "section-2": {
+        "count": 9,
+        "proportion": 0.3
+      }
+    },
+    "domain": {
+      "公民與社會": {
+        "count": 11,
+        "proportion": 0.366667
+      },
+      "歷史": {
+        "count": 11,
+        "proportion": 0.366667
+      },
+      "地理": {
+        "count": 8,
+        "proportion": 0.266667
+      }
+    },
+    "score": {
+      "2": {
+        "count": 20,
+        "proportion": 0.666667
+      },
+      "3": {
+        "count": 9,
+        "proportion": 0.3
+      },
+      "4": {
+        "count": 1,
+        "proportion": 0.033333
+      }
+    },
+    "difficulty_band": {
+      "medium_hard": {
+        "count": 13,
+        "proportion": 0.433333
+      },
+      "easy": {
+        "count": 8,
+        "proportion": 0.266667
+      },
+      "medium": {
+        "count": 8,
+        "proportion": 0.266667
+      },
+      "hard": {
+        "count": 1,
+        "proportion": 0.033333
+      }
+    },
+    "difficulty_basis": {
+      "empirical": {
+        "count": 20,
+        "proportion": 0.666667
+      },
+      "expert_review": {
+        "count": 10,
+        "proportion": 0.333333
+      }
+    },
+    "source_kind": {
+      "official_past_exam": {
+        "count": 30,
+        "proportion": 1.0
+      }
+    }
+  },
+  "aggregate_pattern_clusters": [
+    {
+      "cluster_id": "aggregate-024f44037167",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "公民與社會",
+        "question_type": "constructed_response",
+        "score": 3,
+        "unit": "公民與社會",
+        "subunit": "媒體再現、倡議與自我實現",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-062b8973b121",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "公民與社會",
+        "question_type": "constructed_response",
+        "score": 3,
+        "unit": "公民與社會",
+        "subunit": "憲法中的行政院位階",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-0e4de7e97f4a",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "公民與社會",
+        "question_type": "constructed_response",
+        "score": 3,
+        "unit": "公民與社會",
+        "subunit": "勞保退休制度與實質平等",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-2b0229704d1c",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "歷史",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "歷史",
+        "subunit": "殖民地蔗糖生產與大西洋交流",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-30dbbb180bc9",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "公民與社會",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "公民與社會",
+        "subunit": "全民健保、健康權與基因資料交換",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-33d94f584721",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "歷史",
+        "question_type": "constructed_response",
+        "score": 3,
+        "unit": "歷史",
+        "subunit": "臺灣政治體制與農民抗議",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-4515a4d73da4",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "歷史",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "歷史",
+        "subunit": "冷戰時期金門與柏林",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-58b0992d5f10",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "歷史",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "歷史",
+        "subunit": "日治土地林野調查與東部製糖",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-76d3e17d85aa",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "公民與社會",
+        "question_type": "constructed_response",
+        "score": 3,
+        "unit": "公民與社會",
+        "subunit": "民主政府的分權制衡原理",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-79d88fe6a823",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "地理",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "地理",
+        "subunit": "世界都市規模結構比較",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-8188491c6569",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "地理",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "地理",
+        "subunit": "歐盟區域經濟差異探究",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-81e3c2d694e0",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "公民與社會",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "公民與社會",
+        "subunit": "原住民族歲時祭儀與文化權",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-89626a5ef12c",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "歷史",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "歷史",
+        "subunit": "日治土地調查與土地權屬",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-8d6fb5fef492",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "地理",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "地理",
+        "subunit": "等高線地形與觀景視野",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-906791df5ec6",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "歷史",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "歷史",
+        "subunit": "清代臺灣族群分類與語言習俗",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 5,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-97fede1346ef",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "公民與社會",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "公民與社會",
+        "subunit": "移民母語課與少數文化保障",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-9b460f8987f1",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "歷史",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "歷史",
+        "subunit": "清末臺灣傳教與樟腦產業",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-a1b702394b20",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "歷史",
+        "question_type": "constructed_response",
+        "score": 3,
+        "unit": "歷史",
+        "subunit": "北美原住民族主權與戰爭規則",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-a3b86ee426bf",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "地理",
+        "question_type": "constructed_response",
+        "score": 4,
+        "unit": "地理",
+        "subunit": "咖啡店區位、商閾與商品圈",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-a69897d1d819",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "地理",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "地理",
+        "subunit": "網格地形、視線與射程判讀",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-aea6206d9140",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "地理",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "地理",
+        "subunit": "岡瓦納大陸與有袋類遷移",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-b04ba18496e2",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "公民與社會",
+        "question_type": "constructed_response",
+        "score": 3,
+        "unit": "公民與社會",
+        "subunit": "女性保障席次與選舉制度判讀",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-bf24aa521e32",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "公民與社會",
+        "question_type": "constructed_response",
+        "score": 3,
+        "unit": "公民與社會",
+        "subunit": "市場行為與社會不平等的證據",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-caa38d486d09",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "歷史",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "歷史",
+        "subunit": "暢銷小冊與法國王室權威",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-cff8b06b3fc6",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "公民與社會",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "公民與社會",
+        "subunit": "身心障礙就業與實質平等",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-d8ab41f63392",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "公民與社會",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "公民與社會",
+        "subunit": "原住民族健康報導與污名化",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 1,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-e2083d1b05d9",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "地理",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "地理",
+        "subunit": "印太區域與多國聯合軍演",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-f3b63e18b2a6",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "地理",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "地理",
+        "subunit": "以電話簿探究都市機能變遷",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-fa03e34d1256",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "歷史",
+        "question_type": "constructed_response",
+        "score": 3,
+        "unit": "歷史",
+        "subunit": "江南市鎮發展與城隍信仰",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-fe71809b2cec",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "歷史",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "歷史",
+        "subunit": "邱吉爾演說與美國參戰期待",
+        "stimulus_type": "social_document_or_scenario",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    }
+  ]
+}

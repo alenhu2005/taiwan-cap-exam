@@ -1,0 +1,2031 @@
+#!/usr/bin/env python3
+"""Batch mechanical hosted work. Never author questions or approve reviews.
+
+checkpoint registers saved work; specs projects saved items into body layout
+specs; proof renders selected items for early crop review; build renders,
+composes and prepares BOTH booklets; record-review writes the reviewer's actual
+findings; finalize registers review files, closes the clock and runs the gate.
+All paths in state remain relative to the run, not the shell working directory.
+"""
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+import hashlib
+import html
+import json
+from pathlib import Path
+import re
+import time
+import unicodedata
+
+import pymupdf
+from hosted_run_timing import PHASES, transition
+from hosted_body_templates import guarded_render as render
+from hosted_item_layout import crop_bytes, geometry_errors
+from compose_hosted_pdf import compact_fonts, compose
+from hosted_subject_gates import subject_gate_errors
+from hosted_evidence_refresh import AUTHOR_ONLY_QUESTION_FIELDS, AUTHOR_ONLY_ANSWER_FIELDS
+from prepare_hosted_review import (prepare, item_hashes, annotate_parts, projected, REVIEW_BATCH_IMAGES,
+                                   refresh_review_hashes, canonical_sha, crop_keys, pending_note,
+                                   propagate_page_reviews, retain_parts, review_sources, Renderings)
+from check_hosted_run import check, ITEM_GATES, PAPER_GATES
+from hosted_evidence_refresh import record_history, evidence_gaps, refresh as refresh_drafts, figure_selfcheck
+from fetch_hosted_template_assets import DEFAULT_MAP, map_for, style_subject
+
+# 115 會考 group lead-ins (the booklets print one plain line above the material).
+CAP_GROUP_LABELS = {'會考國文': '請閱讀以下資料，並回答{first}～{last}題：',
+                    '會考社會': '閱讀下列選文，回答第 {first} 至 {last} 題：',
+                    '會考自然': '閱讀下列敘述後，回答{first}～{last}題',
+                    '會考數學': '請閱讀下列選文後，回答{first}～{last}題',
+                    '會考英語': '第 {first} 至 {last} 題為題組'}
+CAP_DEFAULT_TITLE = '國中教育會考模擬試題'
+from hosted_density import page_void_limit
+from validate_english_layout_contract import placement_errors as english_placement
+
+SPEC_GENERATOR = 'run_hosted_workflow.py specs'
+
+
+def read(path):
+    return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+
+
+def digest(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def save(path, value):
+    path = Path(path)
+    temporary = path.with_suffix(path.suffix + '.tmp')
+    temporary.write_bytes((json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode('utf-8'))
+    temporary.replace(path)
+
+
+def inside(root, path):
+    path = Path(path).resolve()
+    if not path.is_relative_to(root.resolve()):
+        raise ValueError('Artifact must stay inside this run: ' + str(path))
+    return path
+
+
+def record(root, path):
+    path = inside(root, path)
+    return {'path': path.relative_to(root.resolve()).as_posix(), 'sha256': digest(path)}
+
+
+def event(root, action, started, **details):
+    with (root / 'workflow-events.jsonl').open('a', encoding='utf-8', newline='\n') as stream:
+        stream.write(json.dumps({'action': action, 'started_at': started,
+                                'elapsed_seconds': round(time.time() - started, 4), **details}) + '\n')
+
+
+def register_reviews(root, state):
+    """Register real supplied reports; never fill status/observations or rebind exam hashes."""
+    checks = state.setdefault('checks', {})
+    for gate in ITEM_GATES + PAPER_GATES:
+        path = root / checks.get(gate, {}).get('path', gate + '.json')
+        inside(root, path)
+        if path.is_file():
+            review = read(path)
+            if review.get('exam_sha256') != state['exam']['sha256']:
+                continue  # Retain stale/missing evidence; the checker must reject it.
+            checks[gate] = record(root, path)
+    for bundle in state.get('pdfs', {}).values():
+        for key in ('inspection', 'visual_review', 'item_review'):
+            saved = bundle.get(key)
+            if not saved:
+                continue
+            path = inside(root, root / saved['path'])
+            if read(path).get('pdf_sha256') != bundle['file']['sha256']:
+                raise ValueError('Review belongs to another PDF: ' + key)
+            bundle[key] = record(root, path)
+
+
+def checkpoint(run_dir, phase=None, review_bundle=None, state=None):
+    started = time.time()
+    root = Path(run_dir).resolve()
+    preflight = read(root / 'preflight.json')
+    if preflight.get('status') != 'ready-for-authoring':
+        raise ValueError('Resolve preflight before creating a run checkpoint')
+    state_path = inside(root, state) if state else root / 'run-state.json'
+    if state_path.parent != root:
+        raise ValueError('State must be directly inside the run')
+    state = read(state_path) if state_path.exists() else {
+        'schema_version': 1, 'paper_id': preflight['paper_id'],
+        'subject': preflight['subject'], 'checks': {}, 'pdfs': {},
+        'review_mode': preflight['review_mode'],
+        'require_independent_review': preflight['require_independent_review'],
+        'calibration': preflight['calibration'],
+        'template_asset_dir': preflight['template_asset_dir'],
+    }
+    if state['paper_id'] != preflight['paper_id'] or state.get('subject') != preflight['subject']:
+        raise ValueError('Checkpoint belongs to another paper or subject')
+    if preflight['require_independent_review']:
+        state['require_independent_review'] = True
+    exam = root / 'exam.json'
+    if exam.exists():
+        metadata = read(exam).get('metadata', {})
+        if metadata.get('paper_id') != state['paper_id'] or metadata.get('subject') != state['subject']:
+            raise ValueError('Saved exam belongs to another paper or subject')
+        state['exam'] = record(root, exam)
+    if phase:
+        if phase not in PHASES:
+            raise ValueError('Unknown phase')
+        transition(root / 'generation-timing.json', state['paper_id'], phase)
+        state['current_phase'] = phase
+    state['timing'] = record(root, root / 'generation-timing.json')
+    if review_bundle:
+        # One actual review session may write a bundle of complete gate records.
+        # This is a lossless fan-out, not auto-generated review text or a pass.
+        supplied = read(review_bundle)
+        if not supplied or set(supplied) - set(ITEM_GATES + PAPER_GATES):
+            raise ValueError('Review bundle must map existing gate names to their real reports')
+        for gate, report in supplied.items():
+            if report.get('exam_sha256') != state.get('exam', {}).get('sha256'):
+                raise ValueError('Review bundle has a stale exam hash: ' + gate)
+        for gate, report in supplied.items():
+            destination = root / (gate + '.json')
+            if destination.exists() and read(destination) != report:
+                raise ValueError('Preserve earlier review; update its recorded file explicitly: ' + gate)
+        for gate, report in supplied.items():
+            save(root / (gate + '.json'), report)
+    evidence = None
+    if state.get('exam'):
+        register_reviews(root, state)
+        # Say now, not at finalize, which gate reports are missing, stale or incomplete.
+        saved_exam = read(exam)
+        record_history(root, state['exam']['sha256'], saved_exam)
+        evidence = evidence_gaps(root, state, saved_exam)
+    save(state_path, state)
+    event(root, 'checkpoint', started, phase=phase)
+    return {'status': 'checkpoint-saved', 'state': str(state_path),
+            'exam_saved': bool(state.get('exam')), 'registered_reviews': sorted(state['checks']),
+            'evidence_ready': None if evidence is None else evidence['ready'],
+            'evidence_attention': None if evidence is None else {g: evidence['gates'][g] for g in evidence['attention']},
+            'reviews_approved_by_tool': False}
+
+
+def refresh_evidence(state_path):
+    """After a content change: re-register mechanical records and draft every stale gate report.
+
+    Drafts keep the rows of unchanged items from the earlier actual review and
+    leave changed items and the paper-level status pending; the reviewer
+    completes them and saves `<gate>.json`. Nothing here writes a pass.
+    """
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    if not state.get('exam'):
+        raise ValueError('Checkpoint the exam before refreshing evidence')
+    exam_path = inside(root, root / state['exam']['path'])
+    if record(root, exam_path) != state['exam']:
+        raise ValueError('Save a checkpoint for the current exam before refreshing evidence')
+    exam = read(exam_path)
+    problems = []
+    lock = root / 'content-lock.json'
+    if lock.exists():
+        try:
+            lock_status = 'matches' if read(lock)['identity'] == content_identity(root, state) else 'changed'
+        except ValueError as exc:
+            lock_status = 'broken'
+            problems.append(str(exc))
+    else:
+        lock_status = 'absent'
+    timing = root / 'generation-timing.json'
+    if timing.exists():
+        state['timing'] = record(root, timing)
+    register_reviews(root, state)
+    save(state_path, state)
+    result = refresh_drafts(root, state, exam)
+    result.update(state=str(state_path), content_lock=lock_status, problems=problems,
+                  next_action=('finalize' if result['status'] == 'evidence-current' and lock_status == 'matches'
+                               else 'complete the pending rows of each draft, save it as <gate>.json, checkpoint, '
+                                    'then lock-content --reason and build once'))
+    event(root, 'refresh-evidence', started, drafts=sorted(result['drafts']))
+    return result
+
+
+def check_figures(state_path):
+    """Open every figure the saved exam references and report machine-visible defects before any build."""
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    if not state.get('exam'):
+        raise ValueError('Checkpoint the exam before checking figures')
+    exam = read(inside(root, root / state['exam']['path']))
+    result = figure_selfcheck(root, exam, asset_issues=asset_issues)
+    result['state'] = str(state_path)
+    event(root, 'check-figures', started, errors=result['errors'], warnings=result['warnings'])
+    return result
+
+
+def clock(state_path, operation, *, phase=None, question_ids=None, page_numbers=None, revision_id=None):
+    """Close conversation work before a reply, preserving the latest review state."""
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    timing = root / 'generation-timing.json'
+    transition(timing, state['paper_id'], phase, action=operation, question_ids=question_ids,
+               page_numbers=page_numbers, revision_id=revision_id)
+    state['timing'] = record(root, timing)
+    save(state_path, state)
+    return {'status': 'clock-' + operation, 'state': str(state_path)}
+
+
+AUTHOR_ONLY_METADATA_FIELDS = frozenset({'difficulty_balance_plan', 'paper_difficulty_plan', 'score_plan',
+                                         'subject_innovation_review', 'run_contract'})
+
+
+def content_identity(root, state):
+    exam_path = inside(root, root / state['exam']['path'])
+    if record(root, exam_path) != state['exam']:
+        raise ValueError('Checkpoint the current exam before locking content')
+    assets = {}
+    def visit(value):
+        if isinstance(value, dict):
+            if isinstance(value.get('path'), str) and value.get('sha256'):
+                asset = inside(root, root / value['path'])
+                if not asset.is_file():
+                    raise ValueError('Content asset missing: ' + value['path'])
+                assets[value['path']] = digest(asset)
+                if assets[value['path']] != value['sha256']:
+                    raise ValueError('Content asset hash changed: ' + value['path'])
+            for child in value.values():
+                visit(child)
+        elif isinstance(value, list):
+            for child in value:
+                visit(child)
+    exam = read(exam_path)
+    visit(exam)
+    # The lock guards what is printed and answered. Difficulty labels, item_spec plans and
+    # review metadata are author-only: a hosted 數B run synced them after review, had to
+    # re-lock with a reason and rebuilt an identical booklet.
+    locked = {**exam, 'questions': [{k: v for k, v in q.items() if k not in AUTHOR_ONLY_QUESTION_FIELDS}
+                                    for q in exam.get('questions') or [] if isinstance(q, dict)],
+              'answers': [{k: v for k, v in a.items() if k not in AUTHOR_ONLY_ANSWER_FIELDS}
+                          for a in exam.get('answers') or [] if isinstance(a, dict)]}
+    locked['metadata'] = {k: v for k, v in (exam.get('metadata') or {}).items()
+                          if k not in AUTHOR_ONLY_METADATA_FIELDS}
+    return {'paper_id': state['paper_id'], 'exam_content_sha256': canonical_sha(locked), 'assets': assets}
+
+
+def asset_path_problems(root, exam):
+    """Figure records the final check rejects, reported before the first build.
+
+    A hosted 社會 run recorded 14 figures by absolute path; the final check refused them
+    after the first complete build, and making them relative then invalidated 14 items'
+    content fingerprints, costing two more builds.
+    """
+    problems = []
+    records = [(q.get('id'), 'visual_asset', q.get('visual_asset')) for q in exam.get('questions') or [] if isinstance(q, dict)]
+    records += [(a.get('question_id'), 'solution visual', a.get('visual_asset')) for a in exam.get('answers') or [] if isinstance(a, dict)]
+    for qid, label, asset in records:
+        if not isinstance(asset, dict):
+            continue
+        spec = asset.get('visual_spec') if isinstance(asset.get('visual_spec'), dict) else {}
+        for field, value in (('path', asset.get('path')), ('visual_spec.source_asset_path', spec.get('source_asset_path'))):
+            if not value:
+                continue
+            path = Path(str(value))
+            resolved = (root / path).resolve()
+            if path.is_absolute() or not resolved.is_relative_to(root):
+                problems.append(f'{qid}: {label} {field} {value!r} must be a path relative to the run directory')
+            elif not resolved.is_file():
+                problems.append(f'{qid}: {label} {field} {value!r} does not exist')
+            elif field == 'path' and asset.get('sha256') != hashlib.sha256(resolved.read_bytes()).hexdigest():
+                problems.append(f'{qid}: {label} sha256 is stale; record the hash of the file as saved')
+    return problems
+
+
+def content_lock(state_path, *, reason=None):
+    state_path = Path(state_path).resolve()
+    root, state = state_path.parent, read(state_path)
+    identity = content_identity(root, state)
+    # The subject contract the final check applies, before the first booklet exists: a
+    # hosted 國綜 run learned from its whole-paper source check only after two builds.
+    exam = read(inside(root, root / state['exam']['path']))
+    from validate_current_context import validate as current_context_errors
+    # Source dates and facts are settled here too: a hosted 自然 run printed a NASA release date
+    # as the image's capture date and found it in the final source check, after three builds.
+    problems = asset_path_problems(root, exam) + subject_gate_errors(exam, root=root) + current_context_errors(exam)
+    path = root / 'content-lock.json'
+    previous = read(path) if path.exists() else None
+    if previous and previous['identity'] != identity and not (reason or '').strip():
+        raise ValueError('Content changed: re-solve/review it, then lock with --reason describing the correction')
+    if not previous or previous['identity'] != identity:
+        save(path, {'identity': identity, 'reason': reason or 'Content frozen before complete booklet layout',
+                    'previous': previous, 'scope': 'Change control only; never editorial approval'})
+    result = {'status': 'content-locked', 'path': str(path), 'identity': identity}
+    if problems:
+        result.update(contract_problems=problems,
+                      contract_note=('The final check rejects every one of these. Fix them now, re-solve what changed '
+                                     'and lock again, before building: a booklet built on them is discarded.'))
+    return result
+
+
+def check_content_lock(root, state):
+    path = root / 'content-lock.json'
+    if path.exists() and read(path)['identity'] != content_identity(root, state):
+        raise ValueError('Locked content changed; restore it or review the correction and explicitly re-lock with --reason')
+
+
+def build(state_path, question_spec, solution_spec, font, output, *, year,
+          title='學科能力測驗模擬試題', running_name='學測', reading_font=None, kai_font=None):
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    kai_font = Path(kai_font) if kai_font else recorded_kai_font(state_path)
+    state = read(state_path)
+    if not (root / 'content-lock.json').exists():
+        raise ValueError('Lock content first (run_hosted_workflow.py lock-content --state <latest-state>): a booklet '
+                         'built before solving and content review is discarded as soon as an item changes. Use '
+                         '`plan` to check pagination before the lock.')
+    check_content_lock(root, state)
+    exam_path = inside(root, root / state['exam']['path'])
+    if record(root, exam_path) != state['exam']:
+        raise ValueError('Save a checkpoint for the current exam before building')
+    exam = read(exam_path)
+    subject = exam['metadata']['subject']
+    if exam['metadata']['paper_id'] != state['paper_id']:
+        raise ValueError('Wrong paper')
+    output = inside(root, output)
+    if output.parent != root:
+        raise ValueError('Build output must be a direct child directory of the run')
+    review_output = root / (output.name + '-review')
+    candidate = root / (review_output.name + '-run-state.json')
+    assets = inside(root, root / state['template_asset_dir'])
+    specs = {'question': Path(question_spec).resolve(), 'solution': Path(solution_spec).resolve()}
+    asset_inputs = {}
+    for path in specs.values():
+        inside(root, path)
+        spec = read(path)
+        if spec.get('subject') != subject:
+            raise ValueError('Body spec must match the actual exam subject')
+        current_generated_spec(spec, state)
+        for block in spec.get('blocks', []):
+            for asset in block.get('assets', {}).values():
+                asset_path = inside(root, path.parent / asset['path'])
+                if digest(asset_path) != asset['sha256']:
+                    raise ValueError('Body asset hash changed: ' + asset['path'])
+                asset_inputs[asset_path.relative_to(root).as_posix()] = asset['sha256']
+    # Same-byte cache includes every portable helper: renderer fixes invalidate it.
+    scripts = Path(__file__).resolve().parent
+    identity = {'exam': state['exam'], 'paper_id': state['paper_id'], 'subject': subject,
+                'review_mode': state.get('review_mode'),
+                'require_independent_review': state.get('require_independent_review', False),
+                'specs': {role: record(root, path) for role, path in specs.items()},
+                'font': digest(font), 'reading_font': digest(reading_font) if reading_font else None,
+                'year': str(year), 'title': title, 'running_name': running_name,
+                'assets': {p.name: digest(p) for p in sorted(assets.glob('*.pdf'))},
+                'body_assets': asset_inputs, 'template_map': digest(map_for(subject)),
+                'helpers': {p.name: digest(p) for p in sorted(scripts.glob('*.py'))}}
+    manifest_path = output / 'workflow-build.json'
+    if output.exists():
+        if not manifest_path.exists():
+            raise ValueError('Partial build exists; preserve it and use a new output name')
+        manifest = read(manifest_path)
+        if manifest['inputs'] != identity:
+            raise ValueError('Build inputs changed; use a new output name for the repair')
+        for artifact in manifest['artifacts']:
+            if record(root, root / artifact['path']) != artifact:
+                raise ValueError('Cached build artifact changed: ' + artifact['path'])
+        if not candidate.is_file():
+            raise ValueError('Cached review state missing; recover it before continuing')
+        cached_state = read(candidate)
+        for name in ('exam', 'paper_id', 'review_mode'):
+            if cached_state.get(name) != state.get(name):
+                raise ValueError('Cached review state changed: ' + name)
+        if cached_state.get('require_independent_review', False) != state.get('require_independent_review', False):
+            raise ValueError('Cached review state changed: require_independent_review')
+        if set(cached_state.get('pdfs', {})) != {'question', 'solution'}:
+            raise ValueError('Cached review state is missing a booklet')
+        for role, bundle in cached_state['pdfs'].items():
+            if (bundle.get('exam_sha256') != state['exam']['sha256'] or
+                    bundle.get('file') != record(root, output / (role + '.pdf'))):
+                raise ValueError('Cached review state belongs to different PDF bytes')
+            for name in ('inspection', 'visual_review', 'item_review'):
+                path = inside(root, root / bundle[name]['path'])
+                if read(path).get('pdf_sha256') != bundle['file']['sha256']:
+                    raise ValueError('Cached review belongs to a different PDF: ' + name)
+        event(root, 'build', started, cache_hit=True)
+        return {**manifest['result'], 'cache_hit': True}
+    if review_output.exists() or candidate.exists():
+        raise ValueError('Review output already exists; choose a new build name')
+    transition(root / 'generation-timing.json', state['paper_id'], 'render_repair')
+    output.mkdir()
+    pairs = {}
+    for role, spec_path in specs.items():
+        body = output / (role + '-body.pdf')
+        layout = output / (role + '-layout.json')
+        pdf = output / (role + '.pdf')
+        render(read(spec_path), body, layout, Path(font), asset_root=spec_path.parent,
+               reading_font=Path(reading_font) if reading_font else None, kai_font=kai_font)
+        cap = subject.startswith('會考')
+        compose(subject, body, assets, pdf, year=str(year),
+                title=CAP_DEFAULT_TITLE if cap and title == '學科能力測驗模擬試題' else title,
+                running_name=running_name, font_path=Path(font), kai_path=kai_font,
+                kind='questions' if role == 'question' else 'answers',
+                # The 會考 cover prints how many selected-response items the booklet holds.
+                item_count=sum(1 for q in exam.get('questions', []) if q.get('type') == 'single_choice') if cap else None)
+        pairs[role] = (pdf, body, layout)
+    save(output / 'page-plan.json', {
+        'exam': state['exam'], 'specs': identity['specs'], 'printed_sha256': printed_digest(specs),
+        'scope': 'Measured pagination and risk queue; not a density or visual approval',
+        'booklets': {role: {'plan': read(layout)['page_plan'], 'blocks': read(layout)['blocks']}
+                     for role, (_, _, layout) in pairs.items()}})
+    result = prepare(state_path, pairs, review_output,
+                     render_identity=render_identity(Path(font), Path(reading_font) if reading_font else None, kai_font))
+    transition(root / 'generation-timing.json', state['paper_id'], 'visual_qa')
+    reviewed = read(candidate)
+    reviewed['timing'] = record(root, root / 'generation-timing.json')
+    reviewed['current_phase'] = 'visual_qa'
+    save(candidate, reviewed)
+    # Human observations may change; immutable PDFs, layouts and images may not.
+    immutable = [p for p in output.iterdir() if p.is_file()]
+    immutable += list(review_output.rglob('*.png'))
+    result.update(cache_hit=False, reviews_approved_by_tool=False,
+                  page_plan=str(output / 'page-plan.json'),
+                  continue_from_state=str(candidate), clock_reminder=CLOCK_REMINDER,
+                  iteration_budget=iteration_budget(root, 'build', output))
+    save(manifest_path, {'inputs': identity, 'artifacts': [record(root, p) for p in immutable], 'result': result})
+    event(root, 'build', started, cache_hit=False)
+    return result
+
+
+CLOCK_REMINDER = ('Before yielding this turn run `clock --state <latest-state> --operation pause`; '
+                  'while writing or reading run `--operation touch` after each group or passage (at least every '
+                  'five minutes): a gap beyond the idle threshold is reported as unobserved, neither work nor waiting.')
+
+
+ITERATION_BUDGET = {'plan': 3, 'proof': 4, 'build': 2}
+# Body pages of the official question booklets (cover and formula page excluded),
+# measured on ROC 111-115: a plan far above these is verbosity or figure size,
+# not extra content. A hosted 數A paper ran 7 body pages against the official 6.
+OFFICIAL_BODY_PAGES = {'數學A': 6, '數學B': 6, '國綜': 11, '英文': 11, '社會': 18, '自然': 18}
+
+
+def page_budget(subject, booklets):
+    official = OFFICIAL_BODY_PAGES.get(subject)
+    planned = (booklets.get('question') or {}).get('page_count')
+    if official is None or planned is None:
+        return None
+    over = planned > official + 1
+    return {'subject': subject, 'official_body_pages': official, 'planned_question_body_pages': planned,
+            'over_budget': over,
+            'note': (f'{planned} body pages against the official {official}: shorten stems that explain instead of ask, '
+                     'and size figures to the column before redrawing anything') if over else 'within the official range'}
+
+
+def iteration_budget(root, kind, output):
+    """How many runs of this kind exist and whether the budget is spent.
+
+    Measured runs spent 9-24 plans, 6-20 proofs and 3-8 builds on one paper, most
+    of them re-reading unchanged content. The budget is a warning, not a lock:
+    exceeding it means stop iterating layout by eye and fix the cause once.
+    """
+    marker = {'plan': 'page-plan.json', 'proof': 'proof-manifest.json', 'build': 'workflow-build.json'}[kind]
+    runs = sorted(p.name for p in root.iterdir() if p.is_dir() and (p / marker).is_file())
+    if Path(output).name not in runs:
+        runs.append(Path(output).name)
+    if kind == 'proof':
+        return proof_budget(root, runs)
+    return printed_budget(root, kind, runs)
+
+
+def printed_digest(specs):
+    """The printed blocks of both booklets: what a plan or build actually lays out."""
+    return canonical_sha({role: read(Path(path)).get('blocks') for role, path in sorted(specs.items())})
+
+
+def printed_budget(root, kind, runs):
+    """Builds count distinct printed content; plans count only repeats of unchanged content.
+
+    A hosted 數B run spent a third build on a change to difficulty labels (identical pages)
+    and twelve plans, most after real item edits; neither is the waste the budget targets.
+    """
+    seen, repeats, distinct = set(), [], []
+    stamped = []
+    for name in runs:
+        path = root / name / 'page-plan.json'
+        stamped.append(((path.stat().st_mtime if path.is_file() else float('inf')), name,
+                        read(path).get('printed_sha256') if path.is_file() else None))
+    for _, name, printed in sorted(stamped):
+        if printed and printed in seen:
+            repeats.append(name)
+        else:
+            distinct.append(name)
+            if printed:
+                seen.add(printed)
+    counted = len(distinct) if kind == 'build' else len(repeats)
+    limit = ITERATION_BUDGET[kind] if kind == 'build' else 1
+    over = counted > limit
+    return {'kind': kind, 'count': len(runs), 'distinct_printed': len(distinct), 'repeats_of_unchanged': repeats,
+            'budget': (f'{limit} builds of distinct printed content' if kind == 'build'
+                       else 'at most one plan of unchanged printed content'),
+            'over_budget': over,
+            'note': ((f'{counted} builds with different printed content exceed {limit}: fix every reviewed defect '
+                      'before the next build' if kind == 'build' else
+                      f'{counted} plans repeated unchanged content: change the item or its hint before planning again')
+                     if over else 'within budget')}
+
+
+def proof_budget(root, runs):
+    """Proofs are item batches: a 50-item paper normally needs many. What wastes time is a
+    proof whose every item is unchanged since an earlier proof (a hosted 英文 run counted 31
+    such re-appearances among 82 and read the 4-proof budget as spent). Passed unchanged
+    crops are retained anyway; a repeat proof only re-reads failures that were not fixed."""
+    manifests = []
+    for name in runs:
+        path = root / name / 'proof-manifest.json'
+        if path.is_file():
+            manifests.append((path.stat().st_mtime, name, read(path)))
+    seen, repeats, unchanged = set(), [], 0
+    for _, name, manifest in sorted(manifests):
+        bound = manifest.get('item_sha256') or {}
+        pairs = {(qid, bound.get(qid)) for qid in manifest.get('items') or []}
+        known = {pair for pair in pairs if pair[1] and pair in seen}
+        unchanged += len(known)
+        if pairs and known == pairs:
+            repeats.append(name)
+        seen |= pairs
+    over = len(repeats) > 1
+    return {'kind': 'proof', 'count': len(runs), 'repeat_proofs': repeats, 'unchanged_item_appearances': unchanged,
+            'budget': 'at most one proof of only unchanged items', 'over_budget': over,
+            'note': (f'{len(repeats)} proofs contained no new or changed item: change the item or its layout hint '
+                     'before proofing it again; passed unchanged crops stay passed') if over else 'within budget'}
+
+
+def plan(state_path, question_spec, solution_spec, font, output, *, reading_font=None, compare=None, kai_font=None):
+    """Paginate both bodies without composing, rasterizing or preparing review.
+
+    A build spends most of its time on fixed-template composition, page rasters
+    and crop preparation, yet a pagination repair only needs the measured page
+    plan. This runs the same renderer on the same specs and reports each page's
+    remaining bottom space; it produces no deliverable, no review state and no
+    density or visual approval. Use it before the content lock to learn the
+    paper's pagination rhythm, and between layout-hint repairs; run one full
+    build once the plan is acceptable.
+    """
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    exam_path = inside(root, root / state['exam']['path'])
+    if record(root, exam_path) != state['exam']:
+        raise ValueError('Save a checkpoint for the current exam before planning pages')
+    exam = read(exam_path)
+    subject = exam['metadata']['subject']
+    output = inside(root, output)
+    if output.parent != root:
+        raise ValueError('Plan output must be a direct child directory of the run')
+    if output.exists():
+        raise ValueError('Plan output exists; preserve it and use a new name')
+    specs = {'question': inside(root, Path(question_spec).resolve()),
+             'solution': inside(root, Path(solution_spec).resolve())}
+    for path in specs.values():
+        spec = read(path)
+        if spec.get('subject') != subject:
+            raise ValueError('Body spec must match the actual exam subject')
+        current_generated_spec(spec, state)
+    lock_path = root / 'content-lock.json'
+    lock_status = 'none'
+    if lock_path.exists():
+        try:
+            lock_status = 'matches' if read(lock_path)['identity'] == content_identity(root, state) else 'changed'
+        except ValueError:
+            lock_status = 'changed'
+    output.mkdir()
+    booklets, attention, form_attention = {}, [], []
+    for role, spec_path in specs.items():
+        layout = render(read(spec_path), output / (role + '-body.pdf'), output / (role + '-layout.json'),
+                        Path(font), asset_root=spec_path.parent,
+                        reading_font=Path(reading_font) if reading_font else None,
+                        kai_font=Path(kai_font) if kai_font else recorded_kai_font(state_path))
+        page_plan = layout['page_plan']
+        body_height = page_plan['body_bbox'][3] - page_plan['body_bbox'][1]
+        pages = []
+        plan_subject = read(spec_path).get('subject')
+        for row in page_plan['pages']:
+            void = round(row['bottom_safety_pt'] / body_height, 3)
+            last = row['page'] == page_plan['page_count']
+            # The same fixed limit the inspector and the final checker apply, last page included.
+            void_limit = page_void_limit(plan_subject, 'solutions' if role == 'solution' else 'body', last)
+            pages.append({**row, 'bottom_void_ratio': void, 'bottom_void_limit': void_limit})
+            if void_limit is not None and void > void_limit:
+                attention.append({'role': role, 'page': row['page'], 'bottom_void_ratio': void, 'limit': void_limit,
+                                  'question_ids': row['question_ids']})
+        if role == 'question':
+            # Body page n prints as booklet page n + 1, after the cover.
+            with pymupdf.open(output / (role + '-body.pdf')) as body_pdf:
+                texts = {n + 1: page.get_text() for n, page in enumerate(body_pdf, 1)}
+            parts = [{**part, 'page': part['page'] + 1} for part in layout['parts']]
+            form_attention.extend({'role': role, 'error': error} for error in english_placement(exam, parts, texts))
+        booklets[role] = {'page_count': page_plan['page_count'], 'gap_scale': layout.get('gap_scale'),
+                          'scaled_assets': layout.get('scaled_assets', []), 'pages': pages,
+                          'blocks': layout['blocks'], 'render_seconds': layout.get('elapsed_seconds')}
+    plan_path = output / 'page-plan.json'
+    comparison = None
+    if compare:
+        target = inside(root, Path(compare))
+        previous = read(target / 'page-plan.json' if target.is_dir() else target)
+        comparison = {}
+        for role, booklet in booklets.items():
+            earlier = previous.get('booklets', {}).get(role, {})
+            before = {row['page']: row['bottom_void_ratio'] for row in earlier.get('pages', []) if 'bottom_void_ratio' in row}
+            comparison[role] = {'page_count_before': earlier.get('page_count'), 'page_count_after': booklet['page_count'],
+                                'bottom_void_delta': {row['page']: round(row['bottom_void_ratio'] - before[row['page']], 3)
+                                                      for row in booklet['pages'] if row['page'] in before}}
+    save(plan_path, {'kind': 'hosted-page-plan', 'exam': state['exam'], 'paper_id': state['paper_id'],
+                     'specs': {role: record(root, path) for role, path in specs.items()},
+                     'printed_sha256': printed_digest(specs),
+                     'content_lock': lock_status, 'booklets': booklets,
+                     'scope': 'Measured pagination only: no composed booklet, raster, review state, density or visual approval'})
+    event(root, 'plan', started, pages={role: b['page_count'] for role, b in booklets.items()})
+    return {'status': 'page-plan-only', 'plan': output.name, 'page_plan': str(plan_path),
+            'page_counts': {role: b['page_count'] for role, b in booklets.items()},
+            'bottom_void_attention': attention, 'form_attention': form_attention, 'content_lock': lock_status,
+            'page_budget': page_budget(read(specs['question']).get('subject'), booklets),
+            'compared_with_previous': comparison, 'iteration_budget': iteration_budget(root, 'plan', output),
+            'reviews_approved_by_tool': False, 'deliverable': False,
+            'next': ('Adjust layout hints and plan again while pages need attention; then lock content '
+                     'and run one full build for actual page and crop review.'),
+            'clock_reminder': CLOCK_REMINDER}
+
+
+# The final inspector flags a body page whose bottom void exceeds 0.32 of the
+# body; the plan names such pages (with a small margin) before any raster.
+
+
+def render_identity(font, reading_font=None, kai_font=None):
+    """Fonts and painting code behind a crop; a changed identity never inherits a review."""
+    scripts = Path(__file__).resolve().parent
+    return {'font': digest(font), 'reading_font': digest(reading_font) if reading_font else None,
+            'kai_font': digest(Path(kai_font)) if kai_font else None,
+            'pymupdf': pymupdf.VersionBind,
+            'helpers': {name: digest(scripts / name) for name in
+                        ('hosted_body_templates.py', 'compose_hosted_pdf.py', 'hosted_item_layout.py')}}
+
+
+def current_generated_spec(spec, state):
+    """A projected spec must describe the saved exam; hand-written specs stay supported."""
+    if spec.get('generated_by') != SPEC_GENERATOR:
+        return
+    if canonical_sha(spec.get('blocks')) != spec.get('blocks_sha256'):
+        raise ValueError('Generated body spec was edited; put layout decisions in hints and regenerate specs')
+    if spec.get('exam_sha256') != state['exam']['sha256']:
+        raise ValueError('Body spec predates the saved exam; rerun specs before rendering')
+
+
+OPTION_LAYOUT_COLUMNS = {'row-5': 5, 'row-4': 4, 'grid-3-2': 3, 'grid-2': 2, 'stack': 1}
+RICH_TAG = re.compile(r'</?(?:sup|sub|i|em|b|strong|u)>|<br>')
+SUBSCRIPT = '₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎'
+SUPERSCRIPT = '⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿⁱ'
+SCRIPT_RUN = re.compile(f'([{SUBSCRIPT}]+)|([{SUPERSCRIPT}]+)')
+SCRIPT_TEXT = (str.maketrans(SUBSCRIPT, '0123456789+−=()'), str.maketrans(SUPERSCRIPT, '0123456789+−=()ni'))
+# Long text may continue on the next page at paragraph boundaries; short
+# evidence packets stay whole, as in the maintained official-form renderers.
+SPLIT_MIN_CHARACTERS = 260
+LATEX_COMMAND = re.compile(r'\\(?:[A-Za-z]+|[()\[\]{}])')
+# A currency amount is the only printed dollar sign: $ directly before a digit.
+TEX_DOLLAR = re.compile(r'\$(?![  ]?\d)')
+MARKUP_TAG = re.compile(r'<(/?)(sup|sub|i|em|b|strong|u)>')
+LATEX_SCRIPT = re.compile(r'[A-Za-z0-9)\]]_\{|\^\{|(?<![A-Za-z])[A-Za-z]_[A-Za-z0-9]')
+INVISIBLE_CHARS = re.compile('[⁠﻿​­‌‍]')
+# A leading U+3000 is the customary paragraph indent; one inside a sentence is not.
+FULL_WIDTH_SPACE_INSIDE = re.compile('(?<=[^\s　])　(?=[^\s　])')
+ASSET_TOKEN = re.compile(r'\{\{asset:([^{}]+)\}\}')
+# The body prints 11pt text on a 1.65 line box: a taller inline image overlaps
+# the line above it. Vector art prints at three times its size, so a raster
+# below twice the printed width prints visibly soft.
+INLINE_ASSET_LINE_PT = 18
+RASTER_PIXELS_PER_PT = 2
+BODY_WIDTH_PT = 460
+
+
+def asset_issues(path, asset, *, inline):
+    """Printed-size defects that page review would otherwise find after rendering."""
+    if inline:
+        width = asset.get('width_pt')
+        if type(width) not in (int, float) or not 1 <= width <= BODY_WIDTH_PT:
+            return ['width_pt must be a number of points between 1 and 460']
+    else:
+        percent = asset.get('width_percent', 62)  # the projection's own default
+        if type(percent) not in (int, float) or not 1 <= percent <= 100:
+            return ['width_percent must be a number between 1 and 100']
+        width = BODY_WIDTH_PT * percent / 100
+    try:
+        with pymupdf.open(path) as source:
+            box, raster = source[0].rect, not source.is_pdf and path.suffix.lower() != '.svg'
+    except Exception as exc:  # MuPDF raises its own error types for unreadable artwork
+        return [f'cannot be opened as a figure: {exc}']
+    if not box.width or not box.height:
+        return ['figure has no size']
+    found = []
+    height = width * box.height / box.width
+    if inline and height > INLINE_ASSET_LINE_PT:
+        found.append(f'prints {height:.0f} pt tall and overlaps the line above; use width_pt '
+                     f'{INLINE_ASSET_LINE_PT * box.width / box.height:.0f} or less for one line, '
+                     'or print it as the item\'s own figure')
+    if raster and box.width < RASTER_PIXELS_PER_PT * width:
+        found.append(f'is {box.width:.0f} px for {width:.0f} printed pt and prints blurred; export it at '
+                     'three times the printed width, or save the figure as SVG or a one-page PDF')
+    return found
+
+
+# A below-figure taller than this share of the body cannot share its page with
+# much text: it forces a page break that later shows up as a bottom void.
+TALL_FIGURE_BODY_SHARE = 0.4
+
+
+def figure_pagination_risks(questions, answers, *, root, subject):
+    """Printed figure heights that will drive pagination, reported when saved.
+
+    Figure size is content: deciding it at authoring time avoids redrawing a
+    figure after the whole booklet has been paginated around it.
+    """
+    try:
+        geometry = next(s for s in read(map_for(subject))['subjects'] if s['subject'] == subject)['overlay_geometry_pt']['body']
+    except (StopIteration, OSError, KeyError, ValueError):
+        return []
+    body_width, body_height = geometry[2] - geometry[0] - 8, geometry[3] - geometry[1]
+    by_answer = {a.get('question_id'): a for a in answers}
+    found = []
+    for question in questions:
+        for owner, record_ in (('question', question), ('answer', by_answer.get(question.get('id'), {}))):
+            visual = record_.get('visual_asset')
+            if not isinstance(visual, dict) or not visual.get('path') or record_.get('visual_layout') == 'side-right':
+                continue
+            path = (root / str(visual['path'])).resolve()
+            if not path.is_file():
+                continue
+            try:
+                with pymupdf.open(path) as source:
+                    box = source[0].rect
+            except Exception:  # unreadable artwork is already reported as an authoring issue
+                continue
+            if not box.width or not box.height:
+                continue
+            width = body_width * (visual.get('width_percent') or 62) / 100
+            height = width * box.height / box.width
+            if height > TALL_FIGURE_BODY_SHARE * body_height:
+                found.append(f'item {question.get("id")} {owner} figure prints {height:.0f} pt tall '
+                             f'({height / body_height:.0%} of the body): it will force a page break; lower '
+                             f'width_percent (at most {TALL_FIGURE_BODY_SHARE * body_height * box.width / box.height / body_width * 100:.0f}), '
+                             'redraw with a wider aspect ratio, or place it side-right, before pagination')
+    return found
+
+
+def text_issues(value):
+    """What the body renderer would print literally; checked when items are saved."""
+    raw = value['rich'] if isinstance(value, dict) and set(value) == {'rich'} else value
+    if not isinstance(raw, str):
+        return []
+    issues = []
+    command = LATEX_COMMAND.search(raw)
+    if command:
+        issues.append(f'LaTeX {command.group()} prints literally: write the symbol, <sup>/<sub>, '
+                      'or a declared {{asset:NAME}} formula image')
+    if TEX_DOLLAR.search(raw):
+        issues.append('"$" prints literally: TeX math delimiters are not rendered')
+    if LATEX_SCRIPT.search(raw):
+        issues.append('LaTeX subscript/superscript (x_{i+1}, a^{2}, y_1) prints literally: write <sub>i+1</sub> / <sup>2</sup>')
+    invisible = INVISIBLE_CHARS.findall(raw)
+    if invisible:
+        issues.append('contains ' + ', '.join(sorted({f'U+{ord(c):04X}' for c in invisible})) +
+                      ': MuPDF prints word joiners, BOMs and zero-width spaces as visible gaps; delete them')
+    rare = sorted({c for c in raw if 0x20000 <= ord(c) <= 0x3FFFF})
+    if rare:
+        # A hosted 會考社會 paper wrote 「琅𤩝」 (U+24A5D); the body font has no Extension-B glyphs, so the
+        # booklet printed a null glyph found only at the final build. Textbooks write 「琅嶠」.
+        issues.append('rare CJK Extension character(s) ' + ', '.join(f'{c} U+{ord(c):05X}' for c in rare) +
+                      ' print as blank boxes in the body font; use the standard textbook form')
+    if re.search('[❶-➓]', raw):
+        issues.append('➀➁-style dingbat circles print in a fallback face; write ①② (U+2460…) as the booklets do')
+    if FULL_WIDTH_SPACE_INSIDE.search(raw):
+        issues.append('a full-width space (U+3000) inside prose is stretched by justification into a wide gap '
+                      'and breaks lines inside the number column; use punctuation or a plain space')
+    depth = Counter()
+    for closing, tag in MARKUP_TAG.findall(raw):
+        depth[tag] += -1 if closing else 1
+        if depth[tag] < 0:
+            break
+    if any(depth.values()):
+        issues.append('unbalanced <sup>/<sub>/<i>/<b> markup')
+    return issues
+
+
+def printed_fields(question, answer):
+    """(where, text) for every saved field the specs projection prints."""
+    for key in ('prompt', 'number_display', 'answer_label', 'group_stimulus'):
+        if isinstance(question.get(key), str):
+            yield key, question[key]
+    for option in question.get('options') or []:
+        if isinstance(option, dict):
+            yield f'option {option.get("label")}', option.get('text')
+    for key in ('continuation_pages', 'group_stimulus_page_splits'):
+        for page, value in sorted((question.get(key) or {}).items()):
+            yield f'{key} {page}', value
+    if isinstance(question.get('visual_asset'), dict) and isinstance(question['visual_asset'].get('caption'), str):
+        yield 'figure caption', question['visual_asset']['caption']
+    table = question.get('response_format_table')
+    if isinstance(table, dict):
+        for key in ('caption', 'heading'):
+            if isinstance(table.get(key), str):
+                yield 'response table ' + key, table[key]
+        for index, row in enumerate(table.get('rows') or [], 1):
+            if isinstance(row, dict):
+                for key in ('label', 'instruction'):
+                    if isinstance(row.get(key), str):
+                        yield f'response row {index} {key}', row[key]
+    final = answer.get('final_answer')
+    for value in final if isinstance(final, list) else [final]:
+        if isinstance(value, str):
+            yield 'final_answer', value
+    for index, step in enumerate(answer.get('reasoning') or [], 1):
+        yield f'reasoning {index}', step
+    for index, block in enumerate(answer.get('explanation_blocks') or [], 1):
+        if isinstance(block, dict):
+            for key in ('title', 'content'):
+                if isinstance(block.get(key), str):
+                    yield f'explanation {index} {key}', block[key]
+
+
+def authoring_issues(questions, answers, *, root):
+    """Print defects in saved items, found before any rendering or visual review."""
+    by_answer = {a.get('question_id'): a for a in answers}
+    found = []
+    for question in questions:
+        qid = question.get('id')
+        answer = by_answer.get(qid, {})
+        tokens = {'question': set(), 'answer': set()}
+        for where, value in printed_fields(question, answer):
+            owner = 'answer' if where.startswith(('final_answer', 'reasoning', 'explanation')) else 'question'
+            raw = value['rich'] if isinstance(value, dict) and set(value) == {'rich'} else value
+            if isinstance(raw, str):
+                tokens[owner].update(ASSET_TOKEN.findall(raw))
+            found += [f'item {qid} {where}: {issue}' for issue in text_issues(value)]
+        for owner, record_ in (('question', question), ('answer', answer)):
+            declared = record_.get('inline_assets') or {}
+            for name in sorted(tokens[owner] - set(declared)):
+                found.append(f'item {qid} {owner}: {{{{asset:{name}}}}} is not declared in its inline_assets')
+            files = [(f'inline asset {name}', asset) for name, asset in declared.items()]
+            if isinstance(record_.get('visual_asset'), dict):
+                files.append(('visual_asset', record_['visual_asset']))
+            for where, asset in files:
+                path = (root / str((asset or {}).get('path') or '')).resolve() if isinstance(asset, dict) else root
+                if not isinstance(asset, dict) or not asset.get('path') or not path.is_relative_to(root) or not path.is_file():
+                    found.append(f'item {qid} {owner} {where}: file not found in this run')
+                elif asset.get('sha256') != digest(path):
+                    found.append(f'item {qid} {owner} {where}: sha256 missing or different from the file')
+                else:
+                    found += [f'item {qid} {owner} {where}: {issue}'
+                              for issue in asset_issues(path, asset, inline=where.startswith('inline'))]
+    return found
+
+
+def printed(value, where, *, english=False, gaps=False):
+    """Printed exam text with typography normalised for the body renderer.
+
+    Unicode sub/superscript characters become <sub>/<sup>: common CJK fonts lack
+    most of them and MuPDF otherwise mixes fallback serif glyphs into formulas.
+    English keeps the maintained *italic* and [[n]] gap conventions.
+    """
+    rich = isinstance(value, dict) and set(value) == {'rich'}
+    raw = value['rich'] if rich else value
+    if not isinstance(raw, str) or not raw.strip():
+        raise ValueError(where + ': printed text must be a nonempty string')
+    issues = text_issues(raw)
+    if issues:
+        raise ValueError(where + ': ' + '; '.join(issues))
+    converted = raw
+    if not rich and not RICH_TAG.search(raw):
+        converted = html.escape(raw, quote=False)
+    converted = SCRIPT_RUN.sub(lambda m: (f'<sub>{m.group(1).translate(SCRIPT_TEXT[0])}</sub>' if m.group(1)
+                                          else f'<sup>{m.group(2).translate(SCRIPT_TEXT[1])}</sup>'), converted)
+    if english:
+        converted = re.sub(r'\*([^*\n]+)\*', r'<i>\1</i>', converted)
+    if gaps:
+        converted = re.sub(r'\[\[(\d{1,2})\]\]', r'{{gap:\1}}', converted)
+    if not rich and not RICH_TAG.search(converted):
+        return raw if converted == html.escape(raw, quote=False) else html.unescape(converted)
+    if not rich and not RICH_TAG.search(raw):
+        converted = converted.replace('\n', '<br>')
+    elif not rich:
+        converted = re.sub(r'<(?!/?(?:sup|sub|i|em|b|strong|u)>|br>)', '&lt;', converted).replace('\n', '<br>')
+    return {'rich': converted}
+
+
+def plain_length(value):
+    raw = value['rich'] if isinstance(value, dict) else str(value)
+    return len(re.sub(r'<[^>]+>', '', raw))
+
+
+# The renderer's paragraph units (hosted_body_templates.PARAGRAPH_BREAK).
+PARAGRAPH_BREAK = re.compile(r'\n\s*\n|(?:<br>\s*){2,}')
+
+
+def paragraphs_of(value):
+    return [part for part in re.split(r'\n\s*\n', value) if part.strip()]
+
+
+def latin_text(*values):
+    """Mostly-Latin printed text (English stems/options), not Chinese directions."""
+    raw = ' '.join(v['rich'] if isinstance(v, dict) else str(v) for v in values)
+    latin = len(re.findall(r'[A-Za-z]', raw))
+    return latin > 0 and len(re.findall(r'[㐀-鿿]', raw)) * 4 < latin
+
+
+def option_label(label):
+    label = str(label).strip()
+    return label if re.fullmatch(r'[(（].*[)）]', label) else f'({label})'
+
+
+def option_columns(question, subject):
+    """Explicit option_layout first; otherwise the maintained renderer heuristic."""
+    options = question.get('options') or []
+    if subject == '社會' and len(options) == 4:
+        # 111-115 measured: options of up to 7 characters print four abreast (tab 112.6 pt),
+        # up to 16 two abreast (225 pt), longer ones one per line. The earlier rule forced
+        # every 社會 option onto its own line and hosted papers ran 3-4 pages over.
+        longest = max(len(re.sub(r'\s|<[^>]+>', '', str(o.get('text', '')))) for o in options)
+        return 4 if longest <= 7 else 2 if longest <= 16 else 1
+    if subject == '自然' and len(options) == 5:
+        # 111-115 measured: options of up to 7 characters print five abreast (20 items), a
+        # few three abreast; longer ones one per line (76 items, 2 to 42 characters). The
+        # old default put 8-52-character options two abreast.
+        longest = max(len(re.sub(r'\s|<[^>]+>', '', str(o.get('text', '')))) for o in options)
+        return 5 if longest <= 7 else 1
+    if question.get('option_layout') in OPTION_LAYOUT_COLUMNS:
+        return OPTION_LAYOUT_COLUMNS[question['option_layout']]
+    options = question.get('options') or []
+    longest = max((len(str(o.get('text', ''))) for o in options), default=0)
+    if subject == '國綜':
+        # Measured on 111-115: four short options (up to 16 characters each, 19 with
+        # the label) share rows two abreast; longer options and five-option items
+        # print one per line.
+        return 2 if len(options) == 4 and longest <= 16 else 1
+    if longest > 52:
+        return 1
+    if longest > 23:
+        return 2
+    if subject in {'數學A', '數學B'} and len(options) == 5:
+        return 5
+    if subject == '英文' and len(options) == 4:
+        return 4
+    return 2
+
+
+def answer_text(value):
+    if isinstance(value, list):
+        return '、'.join(answer_text(v) for v in value)
+    if isinstance(value, dict):
+        return '；'.join(f'{k}：{answer_text(v)}' for k, v in value.items())
+    return str(value)
+
+
+def fill_rows(answer_format):
+    if not isinstance(answer_format, dict):
+        return None
+    if answer_format.get('kind') == 'fraction':
+        if answer_format.get('fixed_denominator') is not None:
+            return None  # Needs its own verified response asset.
+        return [int(answer_format.get('numerator_slots') or 1), int(answer_format.get('denominator_slots') or 1)]
+    return [int(answer_format.get('slots') or 1)]
+
+
+def attach_assets(block, record_, where, body_width, hint, *, figure_key, position=None, shown=None):
+    assets = dict(hint.get('assets') or {})
+    assets.update(record_.get('inline_assets') or {})
+    visual = record_.get('visual_asset')
+    # A shared figure prints once, where its first item appears.
+    if visual and (shown is None or visual.get('path') not in shown):
+        if not visual.get('sha256'):
+            raise ValueError(where + ': visual_asset needs its sha256 before layout')
+        if shown is not None:
+            shown.add(visual.get('path'))
+        width = hint.get('figure_width_pt') or round(body_width * (visual.get('width_percent') or 62) / 100, 1)
+        assets[figure_key] = {'path': visual['path'], 'sha256': visual['sha256'], 'width_pt': width}
+        block['figure'] = figure_key
+        block['figure_position'] = position or hint.get('figure_position') or (
+            'right' if record_.get('visual_layout') == 'side-right' else 'below')
+        if str(visual.get('caption') or '').strip():
+            # 「圖3」 centred under the figure, as 自然 and 社會 111-115 print every figure; two
+            # hosted 自然 papers could only write 「如圖」 because no caption was printed.
+            block['figure_caption'] = printed(visual['caption'], where + ' figure caption')
+    if assets:
+        block['assets'] = assets
+
+
+def english_segment(owner, segment, members, where, layout):
+    """A passage with gaps, its option bank, and cloze rows as aligned choices."""
+    by_number = {m.get('number'): m for m in members}
+    blocks, paragraphs, emitted = [], [], set()
+
+    def flush():
+        if paragraphs:
+            blocks.append({'kind': 'passage', 'id': owner, 'language': 'en', 'paragraphs': list(paragraphs),
+                           **({'indent': True} if layout == 'prose' else {})})
+            paragraphs.clear()
+
+    for index, text_ in enumerate(paragraphs_of(segment)):
+        row = re.match(r'\s*(\d{1,2})\.\s*(\(A\).*)', text_, re.S)
+        member = by_number.get(int(row.group(1))) if row else None
+        options = (member or {}).get('options') or []
+        expected = ' '.join(f'{option_label(o["label"])} {o["text"]}' for o in options)
+        if row and options and re.sub(r'\s+', ' ', row.group(2)).strip() == re.sub(r'\s+', ' ', expected).strip():
+            flush()
+            if blocks and blocks[-1]['kind'] in {'choice', 'passage'}:
+                # A cloze group prints whole: its passage never parts from its rows, nor 16's
+                # options from 17-20's (115 prints 11-15 and 16-20 each on one page). A hosted
+                # paper ran the 16-20 passage over the page foot, away from its options.
+                blocks[-1]['keep_with_next'] = True
+                blocks[-1]['row_follows'] = True
+            # The rows belong to the passage's crop, so they can sit at the official 17 pt
+            # row pitch (115 measured) instead of each being a separate 20 pt crop; at
+            # 24 pt a row the two 115-length cloze groups no longer fitted one page.
+            blocks.append({'kind': 'choice', 'id': owner, 'number': member['number'], 'text': '', 'language': 'en',
+                           'options': [{'label': option_label(o['label']),
+                                        'text': printed(o['text'], where + ' option', english=True)} for o in options],
+                           'columns': option_columns(member, '英文'), 'option_row': True})
+            emitted.add(member['id'])
+            continue
+        entries = re.findall(r'\(([A-Z])\)\s*(.*?)(?=\s*\([A-Z]\)|\s*$)', text_, re.S)
+        if (paragraphs and re.match(r'\s*\(A\)', text_) and len(entries) >= 3 and
+                [label for label, _ in entries] == [chr(65 + n) for n in range(len(entries))]):
+            # One lettered bank printed once after its passage, never per gap.
+            flush()
+            blocks[-1].update(bank=[{'label': f'({label})', 'text': printed(entry.strip(), where + ' option bank', english=True)}
+                                    for label, entry in entries],
+                              columns=5 if len(entries) >= 5 and all(len(entry.strip()) <= 20 for _, entry in entries) else 1)
+            continue
+        paragraphs.append(printed(text_, where + ' passage', english=True, gaps=True))
+    flush()
+    return blocks, emitted
+
+
+HYPHEN_GROUP_SUBJECTS = {'數學A', '數學B', '自然'}
+SUBPART_PREFIX = re.compile(r'\s*([（(](?:[1-9]|[a-e])[)）])\s*')
+
+
+def subpart_of(q):
+    """(label, prompt) of a written subpart: subpart_label, or a leading （1） in its prompt."""
+    prompt = str(q.get('prompt') or '')
+    if q.get('subpart_label'):
+        return str(q['subpart_label']), prompt
+    match = SUBPART_PREFIX.match(prompt)
+    if match and q.get('type') not in {'single_choice', 'multiple_choice'}:
+        inner = match.group(1)[1:-1]
+        # 自然 112-115 print (a)(b) in half-width brackets; 國綜 prints （1）（2）.
+        return ('(' + inner + ')' if inner.isalpha() else '（' + inner + '）'), prompt[match.end():]
+    return None
+# Shared material that points at its own table or figure (「下表為…」); the figure then
+# belongs to the material, not to the group's first question.
+MATERIAL_VISUAL = re.compile(r'下表|下圖|附表|附圖|如表|如圖|右表|右圖|左表|左圖')
+RANGE_DISPLAY = re.compile(r'(\d{1,2})\s*[-–]\s*(\d{1,2})')
+
+
+def project_specs(exam, hints, body_width):
+    """Deterministic layout projection of saved items. It adds no printed content.
+
+    Printed text comes only from exam.json, following the conventions of the
+    maintained official-form renderers for every subject. Hints hold layout
+    choices and explicit blocks for structures the item fields cannot express.
+    """
+    spec_subject = exam['metadata']['subject']
+    # 會考 keys (會考社會) lay out with their closest 學測 component style; labels stay 會考's.
+    subject = style_subject(spec_subject)
+    english = subject == '英文'
+    questions = exam.get('questions', [])
+    sections = {s['id']: s for s in exam.get('sections', [])}
+    answers = {}
+    for answer in exam.get('answers', []):
+        answers.setdefault(answer.get('question_id'), []).append(answer)
+    item_hints = hints.get('items', {})
+    unknown = set(item_hints) - {q.get('id') for q in questions}
+    if unknown:
+        raise ValueError('Layout hints name unsaved items: ' + ', '.join(sorted(unknown)))
+    blocks, solutions = [], []
+    if hints.get('solution_heading'):
+        heading = hints['solution_heading']
+        solutions.append({'kind': 'section', 'title': printed(heading.get('title'), 'solution_heading'),
+                          **({'directions': printed(heading['directions'], 'solution_heading')}
+                             if heading.get('directions') else {})})
+    owner_blocks = {}
+    number_owner = {}
+    totals = {}
+    for question in questions:
+        if type(question.get('number')) is int and type(question.get('score')) in (int, float):
+            totals[question['number']] = totals.get(question['number'], 0) + question['score']
+    suppressed = []
+    row_owners, cloze_tail = [], {}
+    previews = exam['metadata'].get('section_header_previews')
+    header_previews = set(map(str, previews.values())) if isinstance(previews, dict) else set()
+    shown = set()
+    current_section = None
+    item_material = {}
+    # 國寫: the questions of one 大題 (問題（一）、問題（二）) print on one page, as 111-115 do; a
+    # hosted W116A booklet left 問題（一） at the foot of page 2 and 問題（二） on page 3. Only a
+    # 大題 with a single task (the 第二大題 essay) may run on to the next page.
+    writing_siblings = {}
+    if subject == '國寫':
+        for question in questions:
+            if question.get('type') in {'constructed_response', 'guided_writing'} and question.get('number') is not None:
+                writing_siblings.setdefault(str(question['number']), []).append(question['id'])
+
+    def add(block):
+        blocks.append(block)
+        if block['kind'] != 'section':
+            owner_blocks.setdefault(block['id'], []).append(block)
+        return block
+
+    def cover(owner, covered):
+        for block in owner_blocks.get(owner, []):
+            block['covers'] = sorted(set(block.get('covers', [])) | set(covered))
+
+    def emit_question(q):
+        hint = item_hints.get(q['id'], {})
+        where = 'item ' + q['id']
+        if 'question_blocks' in hint:
+            for block in hint['question_blocks']:
+                add(block)
+            number_owner[q.get('number')] = q['id']
+            return
+        kind = hint.get('kind') or {'single_choice': 'choice', 'multiple_choice': 'multiple',
+                                    'fill_in': 'constructed' if english else 'fill',
+                                    'constructed_response': 'constructed', 'guided_writing': 'constructed',
+                                    'short_answer': 'constructed', 'essay': 'constructed'}.get(q.get('type'))
+        if kind is None:
+            raise ValueError(where + f': no standard layout for type {q.get("type")}; supply question_blocks hints')
+        number = hint.get('number', q.get('number'))
+        prompt = str(q.get('prompt') or '')
+        continuations = [text_ for _, text_ in sorted((q.get('continuation_pages') or {}).items(), key=lambda item: int(item[0]))]
+        if kind == 'constructed' and continuations:
+            # Continued material stays in the item's text column; page turns
+            # happen at paragraph boundaries instead of fixed page numbers.
+            prompt = '\n\n'.join([prompt, *continuations])
+            continuations = []
+        if kind == 'multiple' and subject == '自然':
+            count = q.get('required_selection_count')
+            if '應選' in prompt:
+                raise ValueError(where + ': 應選項數 comes from required_selection_count, not the prompt')
+            if type(count) is not int or not 2 <= count < len(q.get('options') or []):
+                raise ValueError(where + ': Natural Science multiple choice needs a valid required_selection_count')
+            prompt += f'（應選{count}項）'
+        if kind == 'fill' and '{{answer}}' not in prompt:
+            prompt = prompt.replace('______', '{{answer}}', 1) if '______' in prompt else prompt + '{{answer}}'
+        block = {'kind': kind, 'id': q['id'], 'text': printed(prompt, where + ' prompt', english=english, gaps=english)}
+        if q['id'] in item_material:
+            block['material'] = item_material[q['id']]
+        if type(number) is int:
+            block['number'] = number
+        title = str((sections.get(q.get('section_id')) or {}).get('title') or '')
+        if english and kind == 'constructed':
+            # 英文 111-115 print 中譯英 as 「1.」 plus a 楷體 sentence and 作文 as 「提示︰」,
+            # neither with a score; a hosted paper printed 「（4分）」 and 「（20分）」.
+            if q.get('section_id') == 'translation' or '中譯英' in title:
+                block['english_task'] = 'translation'
+            elif q.get('section_id') == 'composition' or q.get('type') == 'guided_writing' or '作文' in title:
+                block['english_task'] = 'composition'
+            elif q.get('type') == 'short_answer' and '混合' in title:
+                block['answer_line'] = True  # 簡答 50 (113-115) prints one ruled answer line
+        label = hint.get('label', q.get('number_display', None if type(number) is int else q.get('answer_label')))
+        subpart = subpart_of(q)
+        if subpart:
+            # 111-115 print a written item once: 「32. …請回答下列問題：」 and its （1）（2）
+            # beneath, each ending with its own （占N分，作答字數：…）; ①② stay inline in a
+            # subpart's text. Hosted papers printed 「32.（1）」「（2）①」「（2）②」 as separate items.
+            block['subpart'] = printed(subpart[0], where + ' subpart label')
+            block['text'] = printed(subpart[1], where + ' prompt', english=english)
+            if type(number) is int and number in number_owner:
+                label = ''
+            elif q.get('number_stem'):
+                block['lead'] = printed(q['number_stem'], where + ' number stem')
+        if label is not None:
+            block['label'] = printed(label, where + ' label') if str(label).strip() else ''
+        if kind in {'choice', 'multiple'}:
+            block['options'] = [{'label': option_label(o['label']),
+                                 'text': printed(o['text'], where + ' option ' + str(o['label']), english=english)}
+                                for o in q.get('options') or []]
+            block['columns'] = hint.get('columns', option_columns(q, subject))
+        if kind == 'fill':
+            rows = hint.get('rows') or fill_rows(q.get('answer_format'))
+            if not rows:
+                raise ValueError(where + ': declare answer_format slots or hints rows; fixed denominators need a verified response asset')
+            block['rows'] = rows
+        if kind == 'constructed':
+            block['score'] = q.get('score')
+            pair = RANGE_DISPLAY.fullmatch(str(q.get('number_display') or '').strip())
+            pair_total = (sum(totals.get(n, 0) for n in range(int(pair.group(1)), int(pair.group(2)) + 1))
+                          if pair else None)
+            for printed_score in dict.fromkeys([q.get('score'), totals.get(q.get('number')), pair_total]):
+                if type(printed_score) in (int, float) and re.search(rf'(?<![0-9.]){printed_score:g}\s*分', prompt):
+                    block['score_in_text'] = True
+                    if printed_score != q.get('score'):
+                        block['printed_score'] = printed_score
+                    break
+        if english and latin_text(block['text'], *[o['text'] for o in block.get('options', [])]):
+            block['language'] = 'en'
+        attach_assets(block, q, where, body_width, hint, figure_key='figure',
+                      position='below' if kind == 'fill' else None, shown=shown)
+        split = hint.get('split')
+        if split is None:
+            split = (q.get('allow_page_split') or (kind == 'constructed' and len(paragraphs_of(prompt)) > 1 and
+                                                   plain_length(block['text']) >= SPLIT_MIN_CHARACTERS))
+        siblings = writing_siblings.get(str(q.get('number')), [])
+        keep_tail = 0
+        if len(siblings) > 1:
+            # The reading material before 「請分項回答下列問題：」 may continue on the next page;
+            # from that line on, the questions stay together with the next 問題.
+            raw = block['text']['rich'] if isinstance(block['text'], dict) else str(block['text'])
+            pieces = [p for p in PARAGRAPH_BREAK.split(raw) if p.strip()]
+            start = next((n for n, p in enumerate(pieces)
+                          if re.match(r'\s*(?:<[^>]+>\s*)*(?:請.{0,14}問題[：:]|問題[（(])', p)), 0)
+            keep_tail = len(pieces) - start
+            split = split and start > 0
+        if split and kind in {'choice', 'multiple', 'constructed'}:
+            block['split'] = 'paragraphs'
+            if keep_tail:
+                block['split_keep_tail'] = keep_tail
+        table = q.get('response_format_table')
+        if isinstance(table, dict) and table.get('rows'):
+            block['keep_with_next'] = True
+        elif hint.get('keep_with_next') or (len(siblings) > 1 and q['id'] != siblings[-1]):
+            block['keep_with_next'] = True
+        add(block)
+        if isinstance(table, dict) and table.get('rows'):
+            add({'kind': 'table', 'id': q['id'],
+                 **({'text': printed(table['caption'], where + ' response table caption')} if table.get('caption') else {}),
+                 'headers': [printed(table.get('heading') or '作答格式', where + ' response table heading')],
+                 # Lint the authored label and instruction separately: the U+3000 between
+                 # them is the renderer's own column gap, not authored prose.
+                 'rows': [['　'.join(part for part in (printed(str(row.get('label') or ''), where + ' response row label'),
+                                                          printed(str(row.get('instruction') or ''), where + ' response row'))
+                                          if part)]
+                          for row in table['rows']]})
+        for continuation in continuations:
+            text_ = printed(continuation, where + ' continuation', english=english)
+            add({'kind': 'stimulus', 'id': q['id'], 'text': text_,
+                 **({'split': 'paragraphs'} if plain_length(text_) >= SPLIT_MIN_CHARACTERS else {})})
+        number_owner[q.get('number')] = q['id']
+
+    used_sections = {q.get('section_id') for q in questions}
+    printed_headings = set()
+    i = 0
+    while i < len(questions):
+        q = questions[i]
+        if q.get('section_id') != current_section:
+            section = sections.get(q.get('section_id'))
+            if section is None:
+                raise ValueError(f'item {q["id"]}: unknown section_id')
+            # A part heading owns no items (數學 「第壹部分、選擇（填）題（占85分）」): print
+            # it before the first section that follows it. A hosted 數A paper listed it and
+            # printed only 「一、單選題」 because headings used to print only with their items.
+            order = list(sections)
+            for earlier in order[:order.index(section['id'])]:
+                if earlier not in used_sections and earlier not in printed_headings:
+                    printed_headings.add(earlier)
+                    add({'kind': 'section', 'title': printed(sections[earlier]['title'], 'section ' + earlier)})
+            printed_headings.add(section['id'])
+            notes = ' '.join(section.get('instructions') or [])
+            # 會考 寫作測驗 prints its task with no section heading (113-115 measured).
+            headless = spec_subject.startswith('會考') and not str(section.get('title') or '').strip() and not notes.strip()
+            if not headless:
+              add({'kind': 'section', 'title': printed(section['title'], 'section ' + section['id']),
+                 **({'directions': printed(notes, 'section ' + section['id'] + ' instructions')} if notes.strip() else {}),
+                 # 「二、綜合測驗」 and its 說明 close the 詞彙題 page and the passages start the
+                 # next page (112 and 115 measured); a hosted paper moved the heading onto
+                 # the cloze page because a heading always travelled with its first item.
+                 **({'break_after': True} if section['id'] in header_previews else {})})
+            current_section = q.get('section_id')
+        group = q.get('group_stimulus')
+        j = i + 1
+        while group and j < len(questions) and questions[j].get('group_stimulus') == group:
+            j += 1
+        members = questions[i:j]
+        hint = item_hints.get(q['id'], {})
+        for block in hint.get('blocks_before', []):
+            add(block)
+        emitted, carriers = set(), []
+        if group:
+            everyone = [x for x in questions if x.get('group_stimulus') == group]
+            label = hint.get('group_label')
+            if (label is None and len(everyone) > 1 and everyone[0].get('number') is not None and
+                    everyone[-1].get('number') is not None and everyone[0]['number'] != everyone[-1]['number']):
+                # 數學 and 自然 print the underlined 「18-20 題為題組」 (111-115 measured);
+                # 英文 prints 「第 11 至 15 題為題組」.
+                first, last = everyone[0]["number"], everyone[-1]["number"]
+                label = (CAP_GROUP_LABELS[spec_subject].format(first=first, last=last) if spec_subject in CAP_GROUP_LABELS
+                         else f'{first}-{last} 題為題組' if subject in HYPHEN_GROUP_SUBJECTS
+                         # 國綜 111-115: 「6-8為題組。閱讀下文，回答6-8題。」 on one plain line.
+                         else f'{first}-{last}為題組。閱讀下文，回答{first}-{last}題。' if subject == '國綜'
+                         # 社會 111-115: 「26-27 為題組」 underlined at the margin.
+                         else f'{first}-{last} 為題組' if subject == '社會'
+                         else f'第 {first} 至 {last} 題為題組')
+            splits = q.get('group_stimulus_page_splits') or {}
+            segments = ([(int(page), text_) for page, text_ in sorted(splits.items(), key=lambda item: int(item[0]))]
+                        if splits else [(None, group)])
+            # A single 國綜 item's material prints after its stem, indented in 楷體, then the
+            # options (115 Q27); hosted papers printed it above the item number at the margin.
+            single_material = (subject == '國綜' and len(everyone) == 1 and not splits and 'group_blocks' not in hint)
+            if single_material:
+                item_material[q['id']] = printed(group, f'group of {q["id"]} stimulus')
+            placed = set()
+            if 'group_blocks' in hint:
+                for block in hint['group_blocks']:
+                    add(block)
+                    carriers.append(block)
+            else:
+                for position, (page, segment) in enumerate(segments):
+                    where = f'group of {q["id"]}'
+                    if english:
+                        segment_blocks, rows = english_segment(q['id'], segment, members, where,
+                                                               q.get('stimulus_layout') or 'prose')
+                        emitted |= rows
+                        row_owners.append((q['id'], rows))
+                        if any(b.get('option_row') for b in segment_blocks):
+                            previous = cloze_tail.get(q.get('section_id'))
+                            if previous is not None and blocks and blocks[-1] is previous:
+                                # Both cloze groups share one page, as 112 and 115 print them.
+                                previous['keep_with_next'] = True
+                                previous['keep_note'] = ('英文綜合測驗兩組題組依 115 版型同頁；請縮短兩篇文章，'
+                                                         '使兩組文章與選項同印一頁')
+                            cloze_tail[q.get('section_id')] = segment_blocks[-1]
+                    elif single_material:
+                        segment_blocks = []  # printed inside its item, after the stem (國綜 3, 27)
+                    else:
+                        text_ = printed(segment, where + ' stimulus')
+                        segment_blocks = [{'kind': 'stimulus', 'id': q['id'], 'text': text_,
+                                           **({'material': True} if subject == '國綜' else {})}]
+                    whole_group = any(b.get('option_row') for b in segment_blocks)
+                    for block in segment_blocks:
+                        if block['kind'] in {'passage', 'stimulus'}:
+                            carriers.append(block)
+                            if not whole_group and plain_length(block.get('text') or ' '.join(
+                                    p['rich'] if isinstance(p, dict) else p for p in block.get('paragraphs', []))) >= SPLIT_MIN_CHARACTERS:
+                                block['split'] = 'paragraphs'
+                    if position == 0 and label and segment_blocks:
+                        segment_blocks[0]['group_label'] = printed(label, where + ' label')
+                        if spec_subject in CAP_GROUP_LABELS and spec_subject != '會考英語':
+                            segment_blocks[0]['group_label_style'] = 'plain'
+                        elif english or subject in HYPHEN_GROUP_SUBJECTS or subject == '社會':
+                            segment_blocks[0]['group_label_style'] = 'underline'
+                        elif subject == '國綜':
+                            segment_blocks[0]['group_label_style'] = 'plain'
+                    last_text = next((b for b in reversed(segment_blocks) if b['kind'] in {'passage', 'stimulus'}), None)
+                    if last_text is not None and hint.get('group_keep_with_next', True) and last_text is segment_blocks[-1]:
+                        last_text['keep_with_next'] = True
+                    for block in segment_blocks:
+                        add(block)
+                    # With explicit page segments, the questions printed on a
+                    # segment's page follow that segment. English never interleaves:
+                    # every 111-115 group prints its whole material first (a hosted
+                    # paper printed 47-48 between the third and fourth paragraphs).
+                    if page is not None and position < len(segments) - 1 and not english:
+                        for member in members:
+                            if member.get('page') == page and not member.get('suppress_question_display'):
+                                emit_question(member)
+                                placed.add(member['id'])
+        material_visual = english or q.get('visual_placement') == 'stimulus' or bool(
+            group and MATERIAL_VISUAL.search(str(group)))
+        if material_visual and group and q.get('visual_asset') and 'group_blocks' not in hint:
+            # The group's chart, table or map closes its material, above the questions;
+            # printed with item 47 it split 47 from 48 in a hosted 英文 paper, and two hosted
+            # 數B papers printed the 題組 table under item 18 instead of in the 題組 text.
+            figure = {'kind': 'stimulus', 'id': q['id'], 'text': ''}
+            attach_assets(figure, q, f'group of {q["id"]}', body_width, hint, figure_key='figure',
+                          position='below', shown=shown)
+            if figure.get('figure'):
+                if blocks and blocks[-1]['kind'] in {'passage', 'stimulus'}:
+                    blocks[-1]['keep_with_next'] = True
+                add(figure)
+        for member in members:
+            if member['id'] in emitted or (group and member['id'] in placed):
+                continue
+            if member.get('suppress_question_display'):
+                suppressed.append((member, carriers[0]['id'] if carriers else None))
+                continue
+            emit_question(member)
+        if blocks and blocks[-1].get('keep_with_next') and blocks[-1]['kind'] in {'passage', 'stimulus'}:
+            # Nothing of this group follows its material: do not keep it with the next group.
+            blocks[-1].pop('keep_with_next')
+        i = j
+    # Items printed inside shared material or a same-number item are covered by
+    # that block's reviewed crop; resolved once every printed block exists.
+    for member, carrier in suppressed:
+        owner = carrier or number_owner.get(member.get('number'))
+        if owner is None:
+            raise ValueError(f'item {member["id"]}: suppressed display needs printed shared material or a same-number item')
+        if owner != member['id']:
+            cover(owner, [member['id']])
+    for owner, rows in row_owners:
+        # English cloze rows print in their passage's crop.
+        cover(owner, [row for row in rows if row != owner])
+
+    solution_section = None
+    for q in questions:
+        hint = item_hints.get(q['id'], {})
+        where = 'item ' + q['id']
+        if (q.get('section_id') != solution_section and hints.get('solution_section_headings', True)
+                and str(sections[q['section_id']].get('title') or '').strip()):
+            solutions.append({'kind': 'section',
+                              'title': printed(sections[q['section_id']]['title'], 'section ' + q['section_id'])})
+        solution_section = q.get('section_id')
+        if 'solution_blocks' in hint:
+            solutions.extend(hint['solution_blocks'])
+            continue
+        saved = answers.get(q['id']) or []
+        if len(saved) != 1:
+            raise ValueError(where + ': exactly one saved answer is required for its solution')
+        answer = saved[0]
+        steps = [printed(step, where + ' reasoning', english=english) for step in answer.get('reasoning') or []]
+        for part in answer.get('explanation_blocks') or []:
+            steps.append(printed(f'{part.get("title") or "說明"}：{part.get("content")}', where + ' explanation', english=english))
+        if not steps:
+            raise ValueError(where + ': saved answer has no printable solution steps')
+        if spec_subject.startswith('會考'):
+            # 會考 solutions open with the item's 108 課綱 codes and the likely 國中 volume(s).
+            from cap_plan import solution_note
+            note = solution_note(q.get('item_spec') or {})
+            if note:
+                steps = [note, *steps]
+        solution = {'kind': 'solution', 'id': q['id'],
+                    'text': printed(hint.get('solution_text') or '答案：' + answer_text(answer.get('final_answer')),
+                                    where + ' final_answer', english=english),
+                    'steps': steps}
+        number = hint.get('number', q.get('number'))
+        if type(number) is int:
+            solution['number'] = number
+        label = hint.get('solution_label') or q.get('answer_label') or (None if type(number) is int else q.get('number_display'))
+        if not label and subpart_of(q) and type(number) is int:
+            label = f'第{number}題{subpart_of(q)[0]}'
+        if label:
+            solution['label'] = printed(label, where + ' label')
+        if len(steps) >= 4 or sum(plain_length(step) for step in steps) >= 2 * SPLIT_MIN_CHARACTERS:
+            solution['split'] = 'paragraphs'
+        attach_assets(solution, answer, where, body_width, hint.get('solution', {}), figure_key='solution-figure',
+                      position='below')
+        solutions.append(solution)
+    return [{'subject': spec_subject, 'blocks': blocks}, {'subject': spec_subject, 'blocks': solutions}]
+
+
+def specs(state_path, question_output=None, solution_output=None, hints=None):
+    """Write both body specs from the saved exam; never author or alter content."""
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    question_output = question_output or root / 'questions-blocks.json'
+    solution_output = solution_output or root / 'solutions-blocks.json'
+    state = read(state_path)
+    exam_path = inside(root, root / state['exam']['path'])
+    if record(root, exam_path) != state['exam']:
+        raise ValueError('Save a checkpoint for the current exam before projecting specs')
+    exam = read(exam_path)
+    hint_record = None
+    hint_data = {}
+    if hints:
+        hints = inside(root, hints)
+        hint_data = read(hints)
+        hint_record = record(root, hints)
+        if not isinstance(hint_data, dict) or set(hint_data) - {'items', 'solution_heading', 'solution_section_headings'}:
+            raise ValueError('Hints allow items, solution_heading and solution_section_headings only')
+    manifest = read(map_for(exam['metadata']['subject']))
+    body = next(s for s in manifest['subjects'] if s['subject'] == exam['metadata']['subject'])['overlay_geometry_pt']['body']
+    projections = project_specs(exam, hint_data, body[2] - body[0] - 8)
+    for role, spec in zip(('question', 'solution'), projections):
+        printed = [str(b.get('label')).strip() for b in spec['blocks'] if b.get('kind') != 'section' and b.get('label')]
+        duplicates = sorted({label for label in printed if printed.count(label) > 1})
+        if duplicates:
+            raise ValueError(f'{role} spec prints the same subpart label more than once: {", ".join(duplicates)}; '
+                             'give each subpart its own number_display/answer_label before layout')
+    outputs = []
+    for path, spec in zip((question_output, solution_output), projections):
+        path = inside(root, path)
+        if path.parent != root:
+            raise ValueError('Write specs directly inside the run so asset paths resolve from exam.json')
+        if path.exists():
+            existing = read(path)
+            if (existing.get('generated_by') != SPEC_GENERATOR or
+                    canonical_sha(existing.get('blocks')) != existing.get('blocks_sha256')):
+                raise ValueError(f'{path.name} contains hand-written layout; preserve it or move decisions into hints')
+        spec.update(generated_by=SPEC_GENERATOR, exam_sha256=state['exam']['sha256'], hints=hint_record,
+                    blocks_sha256=canonical_sha(spec['blocks']))
+        save(path, spec)
+        outputs.append(path.relative_to(root).as_posix())
+    event(root, 'specs', started)
+    return {'status': 'specs-written', 'question_spec': outputs[0], 'solution_spec': outputs[1],
+            'block_counts': [len(p['blocks']) for p in projections], 'content_authored_by_tool': False,
+            'next': 'Render new items with proof (or both booklets with build) and review the actual images.'}
+
+
+def proof(state_path, question_spec, solution_spec, items, font, output, *, reading_font=None, kai_font=None):
+    """Render selected saved items alone for early crop review; never a deliverable.
+
+    Uses the production renderer and the fixed-page transform, so an unchanged
+    item's later final crop can retain this actual review.
+    """
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    exam_path = inside(root, root / state['exam']['path'])
+    if record(root, exam_path) != state['exam']:
+        raise ValueError('Save a checkpoint for the current exam before an item proof')
+    exam = read(exam_path)
+    subject = exam['metadata']['subject']
+    wanted = [i.strip() for i in (items.split(',') if isinstance(items, str) else items) if str(i).strip()]
+    missing = set(wanted) - {q.get('id') for q in exam.get('questions', [])}
+    if not wanted or missing:
+        raise ValueError('Proof items must be saved question ids: ' + ', '.join(sorted(missing)))
+    output = inside(root, output)
+    if output.parent != root:
+        raise ValueError('Proof output must be a direct child directory of the run')
+    if output.exists():
+        raise ValueError('Proof output exists; preserve it and use a new name')
+    assets = inside(root, root / state['template_asset_dir'])
+    with pymupdf.open(assets / 'inner-odd-blank.pdf') as template:
+        page_size = [template[0].rect.width, template[0].rect.height]
+    hashes = {role: item_hashes(exam, role) for role in ('question', 'solution')}
+    kai_font = Path(kai_font) if kai_font else recorded_kai_font(state_path)
+    identity = render_identity(Path(font), Path(reading_font) if reading_font else None, kai_font)
+    loaded = []
+    for role, spec_path in (('question', question_spec), ('solution', solution_spec)):
+        spec_path = inside(root, spec_path)
+        spec = read(spec_path)
+        if spec.get('subject') != subject:
+            raise ValueError('Body spec must match the actual exam subject')
+        current_generated_spec(spec, state)
+        blocks = [{k: v for k, v in block.items() if k != 'keep_with_next'}
+                  for block in spec.get('blocks', []) if block.get('kind') != 'section' and
+                  (block.get('id') in wanted or set(block.get('covers', [])) & set(wanted))]
+        absent = set(wanted) - {item for block in blocks for item in [block.get('id'), *block.get('covers', [])]}
+        if absent:
+            raise ValueError(f'{role} spec has no blocks for: ' + ', '.join(sorted(absent)))
+        loaded.append((role, spec_path, {**spec, 'blocks': blocks}))
+    output.mkdir()
+    queue, template, retained = [], {}, {}
+    by_item = {qid: [] for qid in wanted}
+    for role, spec_path, spec in loaded:
+        body = output / (role + '-body.pdf')
+        # Item proofs review crops, not page count: skip the last-page spacing retry.
+        layout = render(spec, body, output / (role + '-layout.json'), Path(font), asset_root=spec_path.parent,
+                        reading_font=Path(reading_font) if reading_font else None, balance_last_page=False,
+                        kai_font=kai_font)
+        crops = output / role / 'items'
+        crops.mkdir(parents=True)
+        parts = []
+        with pymupdf.open(body) as source:
+            errors = geometry_errors(source, layout['parts'])
+            if errors:
+                raise ValueError('; '.join(errors))
+        with projected(body, tuple(page_size)) as painted:
+            for number, part in enumerate(layout['parts'], 1):
+                data = crop_bytes(painted[part['page'] - 1], part['bbox'])
+                path = crops / f'item-part-{number:03}.png'
+                path.write_bytes(data)
+                parts.append({**part, 'raster_path': path.relative_to(root).as_posix(),
+                              'raster_sha256': hashlib.sha256(data).hexdigest(), 'status': 'pending', 'observations': ''})
+        annotate_parts(parts, hashes[role])
+        source = {**record(root, body), 'projected': True, 'page_size': page_size}
+        # A crop that already passed in an earlier proof or build, for the same authored
+        # item and the same printed pixels or primitives, keeps that pass: it is locked,
+        # not queued again. Hosted runs re-viewed unchanged items in every later proof.
+        renderings = Renderings(root)
+        try:
+            counts = retain_parts(root, role, parts, source, identity, review_sources(root, state), renderings, {})
+        finally:
+            renderings.close()
+        retained[role] = counts
+        save(output / (role + '-items.json'), {
+            'kind': 'pre-pagination-item-proof', 'role': role, 'paper_id': state['paper_id'],
+            'exam_sha256': state['exam']['sha256'], 'pdf_sha256': layout['pdf_sha256'],
+            'render_identity': identity,
+            'source': source,
+            'parts': parts,
+            'scope': 'Early crop review only; final booklets still need every page reviewed and fresh final crops.'})
+        # Absolute paths: the helper's working directory is not the run.
+        notes = template.setdefault(role, {'items': {}})
+        for part, key in zip(parts, crop_keys(parts)):
+            if part.get('status') == 'pass':
+                continue
+            image = str((root / part['raster_path']).resolve())
+            queue.append(image)
+            by_item.setdefault(part['id'], []).append((image, {'role': role, 'items': key}))
+            notes['items'][key] = pending_note()
+    save(output / 'proof-manifest.json', {'kind': 'hosted-item-proof', 'paper_id': state['paper_id'], 'items': wanted,
+                                          'item_sha256': {qid: canonical_sha([hashes['question'].get(qid),
+                                                                              hashes['solution'].get(qid)])
+                                                          for qid in wanted}})
+    save(output / 'observations-template.json', template)
+    transition(root / 'generation-timing.json', state['paper_id'], 'visual_qa')
+    event(root, 'proof', started, items=wanted)
+    # Up to six crops per viewing call, with each item's question and solution
+    # together: separate native images, never stitched or downscaled.
+    batches, current = [], {'items': [], 'images': [], 'record_as': []}
+    for qid, rows in by_item.items():
+        if not rows:
+            continue  # every crop of this item kept its earlier pass
+        if current['images'] and len(current['images']) + len(rows) > REVIEW_BATCH_IMAGES:
+            batches.append(current)
+            current = {'items': [], 'images': [], 'record_as': []}
+        current['items'].append(qid)
+        current['images'] += [image for image, _ in rows]
+        current['record_as'] += [target for _, target in rows]
+    if current['images']:
+        batches.append(current)
+    return {'status': 'proof-review-pending' if queue else 'proof-retained', 'proof': output.name, 'proof_dir': str(output),
+            'retained_reviews': retained,
+            'iteration_budget': iteration_budget(root, 'proof', output),
+            'review_queue': queue,
+            'review_batches': batches,
+            'observations_template': str(output / 'observations-template.json'),
+            'reviews_approved_by_tool': False,
+            'next': ('Open each crop at readable scale, fill status and observations in a copy of observations_template, '
+                     'and record them with one record-review --proof ' + str(output) + ' call'),
+            'clock_reminder': CLOCK_REMINDER}
+
+
+REVIEW_STATUSES = {'pass', 'fail', 'pending'}
+
+
+def apply_review(row, note, where, issues=None):
+    if not isinstance(note, dict) or set(note) - {'status', 'observations', 'issue_dispositions'}:
+        raise ValueError(where + ': use status, observations and optional issue_dispositions')
+    status, observations = note.get('status'), note.get('observations', '')
+    if status not in REVIEW_STATUSES:
+        raise ValueError(where + ': status must be pass, fail or pending; the tool never assumes pass')
+    if isinstance(observations, list) and all(isinstance(line, str) for line in observations):
+        # Reviewers naturally list what they saw; joining the lines keeps every word.
+        observations = '; '.join(line.strip() for line in observations if line.strip())
+    if not isinstance(observations, str) or (status != 'pending' and not observations.strip()):
+        raise ValueError(where + ': record the actual observation behind this status as text')
+    row.update(status=status, observations=observations.strip())
+    row.pop('review_basis', None)
+    for issue, finding in (note.get('issue_dispositions') or {}).items():
+        if issues is None or issue not in issues:
+            raise ValueError(where + f': no mechanical issue {issue} on this page')
+        finding = dict(finding)
+        choice = finding.pop('embedded_reference', None)
+        if choice is not None:
+            references = (row.get('density_evidence') or {}).get('embedded_references', [])
+            if issue != 'large-bottom-void-review' or type(choice) is not int or not 0 <= choice < len(references):
+                raise ValueError(where + ': no qualifying embedded page measurement at that index; reflow this page')
+            finding.update({k: references[choice][k] for k in ('kind', 'source_sha256', 'reference_page', 'page_role')})
+        if finding.get('decision') != 'justified' or not str(finding.get('reason', '')).strip():
+            raise ValueError(where + f': {issue} needs decision justified and the actual reason, or a repaired PDF')
+        row.setdefault('issue_dispositions', {})[issue] = finding
+
+
+def record_review(observations, *, state=None, proof=None):
+    """Write the reviewer's actual findings into pending reports; never supplies a pass.
+
+    observations: {"question": {"pages": {"3": {...}}, "items": {"q7": {...}, "q9#2": {...}}}, ...}
+    Final booklets use --state and refresh registered review hashes; item proofs use --proof.
+    """
+    if (state is None) == (proof is None):
+        raise ValueError('Use --state for final booklets or --proof for an item proof')
+    notes = read(observations)
+    if state:
+        state_path = Path(state).resolve()
+        root = state_path.parent
+        bundles = read(state_path).get('pdfs', {})
+        targets = {role: {'items': root / b['item_review']['path'], 'pages': root / b['visual_review']['path'],
+                          'inspection': root / b['inspection']['path']} for role, b in bundles.items()}
+    else:
+        folder = Path(proof).resolve()
+        root = folder.parent
+        targets = {role: {'items': folder / (role + '-items.json')} for role in ('question', 'solution')
+                   if (folder / (role + '-items.json')).is_file()}
+    for paths in targets.values():
+        for path in paths.values():
+            inside(root, path)
+    if not isinstance(notes, dict) or not notes or set(notes) - set(targets):
+        raise ValueError('Observations must map existing booklet roles: ' + ', '.join(sorted(targets)))
+
+    def intact(row):
+        path = inside(root, root / row['raster_path'])
+        if digest(path) != row['raster_sha256']:
+            raise ValueError('Reviewed image changed: ' + row['raster_path'])
+
+    summary = {}
+    for role, sections in notes.items():
+        if not isinstance(sections, dict) or set(sections) - {'pages', 'items'}:
+            raise ValueError(role + ': use pages and/or items')
+        if sections.get('pages'):
+            if 'pages' not in targets[role]:
+                raise ValueError('Item proofs have crops only; review pages on the final booklets')
+            report = read(targets[role]['pages'])
+            scan = {p['page']: p for p in read(targets[role]['inspection'])['pages']}
+            rows = {str(row['page']): row for row in report['pages']}
+            for key, note in sections['pages'].items():
+                row = rows.get(str(key))
+                if row is None:
+                    raise ValueError(f'{role}: no page {key}')
+                intact(scan[row['page']])
+                apply_review(row, note, f'{role} page {key}', scan[row['page']]['issues'])
+            save(targets[role]['pages'], report)
+            # Text-only crops are read on their page: a passed page settles them.
+            items_report = read(targets[role]['items'])
+            if propagate_page_reviews(items_report['parts'], report['pages']):
+                save(targets[role]['items'], items_report)
+        if sections.get('items'):
+            report = read(targets[role]['items'])
+            keyed = dict(zip(crop_keys(report['parts']), report['parts']))
+            for key, note in sections['items'].items():
+                part = keyed.get(key)
+                if part is None:
+                    raise ValueError(f'{role}: unknown crop {key}; multi-part items use id#n: ' + ', '.join(keyed))
+                intact(part)
+                apply_review(part, note, f'{role} item {key}')
+            save(targets[role]['items'], report)
+    if state:
+        refresh_review_hashes(state_path)
+    for role, paths in targets.items():
+        items = read(paths['items'])['parts']
+        remaining = {'items_pending': [p['raster_path'] for p in items
+                                       if p.get('status') != 'pass' and p.get('review_via') != 'page'],
+                     'items_settled_by_page_review_pending': [p['id'] for p in items
+                                                              if p.get('status') != 'pass' and p.get('review_via') == 'page']}
+        if 'pages' in paths:
+            report = read(paths['pages'])
+            scan = {p['page']: p for p in read(paths['inspection'])['pages']}
+            remaining['pages_pending'] = [scan[r['page']]['raster_path'] for r in report['pages'] if r.get('status') != 'pass']
+            remaining['unresolved_issues'] = [f"page {r['page']}: {issue}" for r in report['pages']
+                                              for issue in scan[r['page']]['issues']
+                                              if issue not in r.get('issue_dispositions', {})]
+        summary[role] = remaining
+    return {'status': 'observations-recorded', 'remaining': summary, 'reviews_approved_by_tool': False}
+
+
+def finalize(state_path, output):
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    output = inside(root, output)
+    protected = {state_path, root / 'exam.json', root / 'generation-timing.json', root / 'preflight.json'}
+    # Gate files may exist before their first registration. Never replace their
+    # real observations with the final result, even when absent from old state.
+    protected.update(root / (gate + '.json') for gate in ITEM_GATES + PAPER_GATES)
+    def collect(value):
+        if isinstance(value, dict):
+            if isinstance(value.get('path'), str):
+                protected.add((root / value['path']).resolve())
+            for nested in value.values(): collect(nested)
+        elif isinstance(value, list):
+            for nested in value: collect(nested)
+    collect(state)
+    if output in protected or output.suffix.lower() != '.json':
+        raise ValueError('Final report must not overwrite input or evidence artifacts')
+    if output.exists():
+        previous = read(output)
+        if (not isinstance(previous, dict) or
+                previous.get('scope') != 'Evidence completeness and freshness only; recorded judgments need real review.' or
+                previous.get('status') not in {'pending', 'evidence-complete'} or
+                previous.get('formal_acceptance') is not False or not isinstance(previous.get('errors'), list)):
+            raise ValueError('Final report must not overwrite unrelated existing work')
+    exam_path = inside(root, root / state['exam']['path'])
+    if record(root, exam_path) != state['exam']:
+        raise ValueError('Exam changed; recheck affected content and rebuild before finalizing')
+    register_reviews(root, state)
+    timing = root / 'generation-timing.json'
+    if read(timing).get('active') is not None or read(timing).get('paused'):
+        transition(timing, state['paper_id'])
+    state['timing'] = record(root, timing)
+    save(state_path, state)
+    result = check(state_path)
+    if result.get('status') == 'evidence-complete':
+        result['delivery'] = deliver(root, state)
+    save(output, result)
+    event(root, 'finalize', started, status=result['status'])
+    return result
+
+
+def recorded_kai_font(state_path):
+    """The kai face the preflight downloaded for 說明 boxes and 國寫 materials, if any."""
+    root = Path(state_path).resolve().parent
+    preflight = root / 'preflight.json'
+    if not preflight.is_file():
+        return None
+    recorded = (read(preflight).get('kai_font') or {}).get('path')
+    if not recorded:
+        return None
+    path = Path(recorded) if Path(recorded).is_absolute() else root / recorded
+    return path if path.is_file() else None
+
+
+def recorded_font(state_path):
+    """The body font prepare_hosted_run.py chose for this run."""
+    root = Path(state_path).resolve().parent
+    recorded = (read(root / 'preflight.json').get('body_font') or {}).get('path')
+    if not recorded:
+        raise ValueError('The preflight recorded no body font; rerun prepare_hosted_run.py or pass --font')
+    return Path(recorded) if Path(recorded).is_absolute() else inside(root, root / recorded)
+
+
+def delivery_filename(metadata, paper_id, role):
+    """Stable cross-subject download names; internal evidence paths stay unchanged."""
+    labels = {'question': '題本', 'solution': '詳解'}
+    subject = metadata['subject']
+    subject = {'數A': '數學A', '數B': '數學B', '國語文綜合能力測驗': '國綜',
+               '國語文寫作能力測驗': '國寫'}.get(subject, subject)
+    # 會考 runs use the template key (會考社會) internally; the file names the subject once.
+    if metadata.get('exam') == '會考' and subject.startswith('會考'):
+        subject = subject[len('會考'):]
+
+    def component(value):
+        original = str(value).strip()
+        if not original:
+            raise ValueError('Delivery filename requires a nonempty exam, subject and paper_id')
+        normalized = unicodedata.normalize('NFKC', original)
+        safe = re.sub(r'[^\w\-]+', '-', normalized, flags=re.UNICODE).strip('-_')
+        # Hash transformed/truncated IDs so different papers do not collapse to
+        # one filename after removing path separators or Windows-invalid chars.
+        if safe != original or len(safe) > 64:
+            safe = safe[:48] + '-' + hashlib.sha256(original.encode('utf-8')).hexdigest()[:10]
+        return safe
+
+    # The hosted template workflow supports GSAT; older saved runs omit exam.
+    return '_'.join(component(v) for v in
+                    (metadata.get('exam', '學測'), subject, paper_id)) + '_' + labels[role] + '.pdf'
+
+
+def deliver(root, state):
+    """Copies of the checked booklets to hand over: same pixels and text, no unused font data."""
+    folder = root / 'delivery'
+    folder.mkdir(exist_ok=True)
+    exam_path = inside(root, root / state['exam']['path'])
+    metadata = read(exam_path)['metadata']
+    copies = {}
+    for role, bundle in sorted(state.get('pdfs', {}).items()):
+        source = inside(root, root / bundle['file']['path'])
+        if digest(source) != bundle['file']['sha256']:
+            raise ValueError('Checked booklet changed before delivery: ' + bundle['file']['path'])
+        compact, report = compact_fonts(source.read_bytes())
+        target = folder / delivery_filename(metadata, state['paper_id'], role)
+        target.write_bytes(compact)
+        copies[role] = {'path': str(target), 'bytes': len(compact), 'sha256': hashlib.sha256(compact).hexdigest(),
+                        'checked_pdf': bundle['file'], 'font_compaction': report}
+    return copies
+
+
+def status(state_path):
+    """A few lines a fresh context can resume from; also written to NEXT.md in the run directory.
+
+    A hosted 會考社會 run kept every reference, tool report and review in one context (average
+    440k tokens re-read per call). Start a new context every two or three batches and read only
+    this file, the execution card and the subject reference.
+    """
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    preflight = read(root / 'preflight.json') if (root / 'preflight.json').is_file() else {}
+    exam = read(root / 'exam.json') if (root / 'exam.json').is_file() else {}
+    meta = exam.get('metadata') or {}
+    questions = exam.get('questions') or []
+    subject = state.get('subject') or preflight.get('subject')
+    target = None
+    if isinstance(subject, str) and subject.startswith('會考'):
+        try:
+            from validate_cap_form import OFFICIAL_RANGES
+            from cap_plan import form
+            current = form(subject)['current_form']
+            target = (current.get('choice_items') or {}).get('reference_115', current.get('tasks'))
+            if target and current.get('constructed_items'):
+                target += current['constructed_items']
+        except (OSError, KeyError, ValueError, ImportError):
+            target = None
+    from check_hosted_run import ITEM_GATES, PAPER_GATES
+    registered = sorted(state.get('checks') or {})
+    missing = [g for g in (*ITEM_GATES, *PAPER_GATES) if g not in registered]
+    gate = []
+    if questions:
+        from hosted_subject_gates import subject_gate_errors
+        gate = subject_gate_errors(exam, root=root, authoring=True)
+    builds = sorted((p for p in root.glob('build-v*') if p.is_dir()), key=lambda p: p.stat().st_mtime)
+    if not questions:
+        step = 'write the first batch (append_items.py --plan); 會考: start from cap_plan.py plan'
+    elif target and len(questions) < target:
+        step = f'write the next batch: {len(questions)} of {target} items saved'
+    elif gate:
+        step = 'fix the saved items the subject gate lists, then checkpoint'
+    elif not (root / 'content-lock.json').is_file():
+        step = 'finish the reviews, then lock-content'
+    elif missing:
+        step = 'complete the missing reviews (refresh-evidence drafts them): ' + ', '.join(missing)
+    else:
+        step = 'plan, build, record-review, finalize'
+    report = {'status': 'ok', 'paper_id': state.get('paper_id'), 'subject': subject,
+              'level': meta.get('cap_difficulty_level'), 'items_saved': len(questions), 'items_target': target,
+              'content_status': state.get('content_status'), 'phase': state.get('current_phase'),
+              'reviews_registered': registered, 'reviews_missing': missing,
+              'subject_gate_open': len(gate), 'subject_gate_sample': gate[:5],
+              'latest_build': builds[-1].name if builds else None, 'next_step': step}
+    lines = [f"# {report['paper_id']} · {subject} · level {report['level'] or '會考'}",
+             f"- items: {report['items_saved']} / {report['items_target'] or '?'} · content: {report['content_status']}",
+             f"- reviews missing: {', '.join(missing) or 'none'}",
+             f"- subject gate: {len(gate)} open" + (''.join(f'\n  - {g}' for g in gate[:5]) if gate else ''),
+             f"- latest build: {report['latest_build'] or 'none'}",
+             f"- NEXT: {step}",
+             '', 'Resume in a new context: read this file, references/cap-execution-card.md (會考) or the subject',
+             'reference, then run the step above. Do not re-read references already applied to saved items.']
+    (root / 'NEXT.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    report['next_file'] = str(root / 'NEXT.md')
+    return report
+
+
+def run_auto_review(state_path, gates=None):
+    from hosted_auto_review import GATES, auto_review
+    return auto_review(state_path, tuple(gates) if gates else GATES)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest='action', required=True)
+    start = commands.add_parser('checkpoint')
+    start.add_argument('--run-dir', type=Path, required=True)
+    start.add_argument('--phase', choices=sorted(PHASES))
+    start.add_argument('--review-bundle', type=Path)
+    start.add_argument('--state', type=Path, help='On repair, continue the latest review state')
+    clock_parser = commands.add_parser('clock', help='Pause before yielding; resume or touch during work')
+    clock_parser.add_argument('--state', type=Path, required=True)
+    clock_parser.add_argument('--operation', choices=('pause', 'idle', 'resume', 'touch', 'finish'), required=True)
+    clock_parser.add_argument('--phase', choices=sorted(PHASES))
+    clock_parser.add_argument('--question-ids', nargs='*')
+    clock_parser.add_argument('--page-numbers', nargs='*', type=int)
+    clock_parser.add_argument('--revision-id')
+    lock_parser = commands.add_parser('lock-content', help='Freeze content before full-booklet pagination')
+    lock_parser.add_argument('--state', type=Path, required=True)
+    lock_parser.add_argument('--reason', help='Required when explicitly replacing an existing content lock')
+    build_parser = commands.add_parser('build')
+    for name in ('state', 'question-spec', 'solution-spec', 'output'):
+        build_parser.add_argument('--' + name, type=Path, required=True)
+    build_parser.add_argument('--font', type=Path, help='Defaults to the body font recorded by the preflight')
+    build_parser.add_argument('--year', required=True)
+    build_parser.add_argument('--title', default='學科能力測驗模擬試題')
+    # Ignored: the locked 115 header prints 「年學測」 for every subject (a hosted 英文 run
+    # passed 英文 and printed 「116年英文」).
+    build_parser.add_argument('--running-name', default='學測', help=argparse.SUPPRESS)
+    build_parser.add_argument('--reading-font', type=Path)
+    build_parser.add_argument('--kai-font', type=Path, help='Defaults to the kai face recorded by the preflight')
+    plan_parser = commands.add_parser('plan', help='Paginate both bodies in seconds; no PDFs, rasters or review state')
+    for name in ('state', 'question-spec', 'solution-spec', 'output'):
+        plan_parser.add_argument('--' + name, type=Path, required=True)
+    plan_parser.add_argument('--font', type=Path, help='Defaults to the body font recorded by the preflight')
+    plan_parser.add_argument('--reading-font', type=Path)
+    plan_parser.add_argument('--kai-font', type=Path, help='Defaults to the kai face recorded by the preflight')
+    plan_parser.add_argument('--compare', type=Path, help='A previous plan directory: report per-page bottom-void deltas')
+    spec_parser = commands.add_parser('specs', help='Project saved items into both body layout specs')
+    spec_parser.add_argument('--state', type=Path, required=True)
+    spec_parser.add_argument('--question-output', type=Path, help='Default: questions-blocks.json beside the state')
+    spec_parser.add_argument('--solution-output', type=Path, help='Default: solutions-blocks.json beside the state')
+    spec_parser.add_argument('--hints', type=Path, help='Layout-only choices and special-structure blocks')
+    proof_parser = commands.add_parser('proof', help='Render selected saved items for early crop review')
+    for name in ('state', 'question-spec', 'solution-spec', 'output'):
+        proof_parser.add_argument('--' + name, type=Path, required=True)
+    proof_parser.add_argument('--font', type=Path, help='Defaults to the body font recorded by the preflight')
+    proof_parser.add_argument('--items', required=True, help='Comma-separated saved question ids')
+    proof_parser.add_argument('--reading-font', type=Path)
+    proof_parser.add_argument('--kai-font', type=Path, help='Defaults to the kai face recorded by the preflight')
+    notes = commands.add_parser('record-review', help="Write the reviewer's actual page/crop findings")
+    notes.add_argument('--observations', type=Path, required=True)
+    target = notes.add_mutually_exclusive_group(required=True)
+    target.add_argument('--state', type=Path, help='Review state returned by build')
+    target.add_argument('--proof', type=Path, help='Item proof directory')
+    finish = commands.add_parser('finalize')
+    finish.add_argument('--state', type=Path, required=True)
+    finish.add_argument('--output', type=Path, required=True)
+    refresh_parser = commands.add_parser('refresh-evidence',
+                                         help='After a content change: draft stale gate reports with unchanged rows retained')
+    refresh_parser.add_argument('--state', type=Path, required=True)
+    figures_parser = commands.add_parser('check-figures', help='Open every referenced figure and report defects before a build')
+    figures_parser.add_argument('--state', type=Path, required=True)
+    auto_parser = commands.add_parser('auto-review', help='Write the four mechanical paper reviews from executed checks')
+    auto_parser.add_argument('--state', type=Path, required=True)
+    auto_parser.add_argument('--gates', nargs='*', default=None)
+    status_parser = commands.add_parser('status', help='Short resume summary; writes NEXT.md')
+    status_parser.add_argument('--state', type=Path, required=True)
+    args = vars(parser.parse_args())
+    action = args.pop('action')
+    try:
+        if action == 'checkpoint':
+            result = checkpoint(**args)
+        elif action == 'record-review':
+            result = record_review(args.pop('observations'), **args)
+        else:
+            args['state_path'] = args.pop('state')
+            if action in {'build', 'proof', 'plan'} and args['font'] is None:
+                args['font'] = recorded_font(args['state_path'])
+            result = {'build': build, 'specs': specs, 'proof': proof, 'plan': plan, 'finalize': finalize,
+                      'clock': clock, 'lock-content': content_lock, 'refresh-evidence': refresh_evidence,
+                      'check-figures': check_figures, 'status': status, 'auto-review': run_auto_review}[action](**args)
+    except (OSError, ValueError, KeyError, RuntimeError) as exc:
+        print(json.dumps({'status': 'pending', 'errors': [str(exc)]}, ensure_ascii=False))
+        return 2
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 2 if result.get('status') == 'pending' else 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

@@ -1,0 +1,1276 @@
+{
+  "verified_on": "2026-11-10",
+  "calibration_level": "official-113-115-structure-and-item-pass-rates",
+  "curriculum": "108",
+  "scope": "十二年國民基本教育課程綱要第四學習階段學習表現及學習內容",
+  "structure_status": "verified",
+  "structure_basis": "Counts, sections, groups, durations and pages parsed from the official 113-115 booklets (scripts/build_cap_pack.py); every document is bound by SHA-256 below.",
+  "subjects": {
+    "國文": {
+      "sections": [
+        "單題",
+        "題組"
+      ],
+      "allowed_question_types": [
+        "single_choice"
+      ],
+      "current_form": {
+        "choice_items": {
+          "min": 42,
+          "max": 42,
+          "reference_115": 42
+        },
+        "constructed_items": 0,
+        "options_per_choice_item": 4,
+        "option_labels": [
+          "(A)",
+          "(B)",
+          "(C)",
+          "(D)"
+        ],
+        "answer_mode": "單選題（四選一），答錯不倒扣",
+        "duration_minutes": 70,
+        "inner_pages_115": 14,
+        "sections_115": [
+          {
+            "title": "單題",
+            "first": 1,
+            "last": 23
+          },
+          {
+            "title": "題組",
+            "first": 24,
+            "last": 42
+          }
+        ],
+        "groups_115": [
+          [
+            24,
+            25
+          ],
+          [
+            26,
+            29
+          ],
+          [
+            30,
+            32
+          ],
+          [
+            33,
+            34
+          ],
+          [
+            35,
+            36
+          ],
+          [
+            37,
+            38
+          ],
+          [
+            39,
+            40
+          ],
+          [
+            41,
+            42
+          ]
+        ],
+        "group_items_by_year": {
+          "113": 18,
+          "114": 18,
+          "115": 19
+        },
+        "group_size_counts": {
+          "2": 18,
+          "3": 5,
+          "4": 1
+        }
+      },
+      "years": {
+        "113": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 70,
+          "choice_items": 42,
+          "constructed_items": 0,
+          "sections": [
+            {
+              "title": "單題",
+              "first": 1,
+              "last": 24
+            },
+            {
+              "title": "題組",
+              "first": 25,
+              "last": 42
+            }
+          ],
+          "figures": 0,
+          "tables": 0,
+          "groups": [
+            [
+              25,
+              26
+            ],
+            [
+              27,
+              28
+            ],
+            [
+              29,
+              30
+            ],
+            [
+              31,
+              32
+            ],
+            [
+              33,
+              35
+            ],
+            [
+              36,
+              37
+            ],
+            [
+              38,
+              39
+            ],
+            [
+              40,
+              42
+            ]
+          ],
+          "group_items": 18
+        },
+        "114": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 70,
+          "choice_items": 42,
+          "constructed_items": 0,
+          "sections": [
+            {
+              "title": "單題",
+              "first": 1,
+              "last": 24
+            },
+            {
+              "title": "題組",
+              "first": 25,
+              "last": 42
+            }
+          ],
+          "figures": 2,
+          "tables": 0,
+          "groups": [
+            [
+              25,
+              26
+            ],
+            [
+              27,
+              28
+            ],
+            [
+              29,
+              31
+            ],
+            [
+              32,
+              33
+            ],
+            [
+              34,
+              35
+            ],
+            [
+              36,
+              37
+            ],
+            [
+              38,
+              39
+            ],
+            [
+              40,
+              42
+            ]
+          ],
+          "group_items": 18
+        },
+        "115": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 70,
+          "choice_items": 42,
+          "constructed_items": 0,
+          "sections": [
+            {
+              "title": "單題",
+              "first": 1,
+              "last": 23
+            },
+            {
+              "title": "題組",
+              "first": 24,
+              "last": 42
+            }
+          ],
+          "figures": 0,
+          "tables": 0,
+          "groups": [
+            [
+              24,
+              25
+            ],
+            [
+              26,
+              29
+            ],
+            [
+              30,
+              32
+            ],
+            [
+              33,
+              34
+            ],
+            [
+              35,
+              36
+            ],
+            [
+              37,
+              38
+            ],
+            [
+              39,
+              40
+            ],
+            [
+              41,
+              42
+            ]
+          ],
+          "group_items": 19
+        }
+      }
+    },
+    "英語": {
+      "sections": [
+        "閱讀"
+      ],
+      "allowed_question_types": [
+        "single_choice"
+      ],
+      "excluded_sections": [
+        "聽力"
+      ],
+      "excluded_reason": "本 Skill 只製作英語閱讀題本；聽力需要音檔，不在範圍內。",
+      "current_form": {
+        "choice_items": {
+          "min": 43,
+          "max": 43,
+          "reference_115": 43
+        },
+        "constructed_items": 0,
+        "options_per_choice_item": 4,
+        "option_labels": [
+          "(A)",
+          "(B)",
+          "(C)",
+          "(D)"
+        ],
+        "answer_mode": "單選題（四選一），答錯不倒扣",
+        "duration_minutes": 60,
+        "inner_pages_115": 14,
+        "sections_115": [
+          {
+            "title": "單題",
+            "first": 1,
+            "last": 19
+          },
+          {
+            "title": "題組",
+            "first": 20,
+            "last": 43
+          }
+        ],
+        "groups_115": [
+          [
+            20,
+            21
+          ],
+          [
+            22,
+            23
+          ],
+          [
+            24,
+            26
+          ],
+          [
+            27,
+            28
+          ],
+          [
+            29,
+            31
+          ],
+          [
+            32,
+            34
+          ],
+          [
+            35,
+            39
+          ],
+          [
+            40,
+            43
+          ]
+        ],
+        "group_items_by_year": {
+          "113": 22,
+          "114": 24,
+          "115": 24
+        },
+        "group_size_counts": {
+          "2": 10,
+          "3": 9,
+          "4": 3,
+          "5": 1,
+          "6": 1
+        }
+      },
+      "years": {
+        "113": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": null,
+          "cover_text": "not-extractable; counts taken from the booklet and the official pass-rate table",
+          "choice_items": 43,
+          "constructed_items": 0,
+          "sections": [
+            {
+              "title": "單題",
+              "first": 1,
+              "last": 21
+            },
+            {
+              "title": "題組",
+              "first": 22,
+              "last": 43
+            }
+          ],
+          "figures": 0,
+          "tables": 0,
+          "groups": [
+            [
+              22,
+              23
+            ],
+            [
+              24,
+              25
+            ],
+            [
+              26,
+              27
+            ],
+            [
+              28,
+              29
+            ],
+            [
+              30,
+              32
+            ],
+            [
+              33,
+              35
+            ],
+            [
+              36,
+              39
+            ],
+            [
+              40,
+              43
+            ]
+          ],
+          "group_items": 22
+        },
+        "114": {
+          "booklet_pages": 14,
+          "inner_pages": 13,
+          "duration_minutes": 60,
+          "choice_items": 43,
+          "constructed_items": 0,
+          "sections": [
+            {
+              "title": "單題",
+              "first": 1,
+              "last": 19
+            },
+            {
+              "title": "題組",
+              "first": 20,
+              "last": 43
+            }
+          ],
+          "figures": 0,
+          "tables": 0,
+          "groups": [
+            [
+              20,
+              21
+            ],
+            [
+              22,
+              23
+            ],
+            [
+              24,
+              25
+            ],
+            [
+              26,
+              28
+            ],
+            [
+              29,
+              31
+            ],
+            [
+              32,
+              34
+            ],
+            [
+              35,
+              37
+            ],
+            [
+              38,
+              43
+            ]
+          ],
+          "group_items": 24
+        },
+        "115": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 60,
+          "choice_items": 43,
+          "constructed_items": 0,
+          "sections": [
+            {
+              "title": "單題",
+              "first": 1,
+              "last": 19
+            },
+            {
+              "title": "題組",
+              "first": 20,
+              "last": 43
+            }
+          ],
+          "figures": 0,
+          "tables": 0,
+          "groups": [
+            [
+              20,
+              21
+            ],
+            [
+              22,
+              23
+            ],
+            [
+              24,
+              26
+            ],
+            [
+              27,
+              28
+            ],
+            [
+              29,
+              31
+            ],
+            [
+              32,
+              34
+            ],
+            [
+              35,
+              39
+            ],
+            [
+              40,
+              43
+            ]
+          ],
+          "group_items": 24
+        }
+      }
+    },
+    "數學": {
+      "sections": [
+        "選擇題",
+        "非選擇題"
+      ],
+      "allowed_question_types": [
+        "single_choice",
+        "constructed_response"
+      ],
+      "current_form": {
+        "choice_items": {
+          "min": 25,
+          "max": 25,
+          "reference_115": 25
+        },
+        "constructed_items": 2,
+        "options_per_choice_item": 4,
+        "option_labels": [
+          "(A)",
+          "(B)",
+          "(C)",
+          "(D)"
+        ],
+        "answer_mode": "單選題（四選一），答錯不倒扣",
+        "duration_minutes": 80,
+        "inner_pages_115": 13,
+        "sections_115": [
+          {
+            "title": "選擇題",
+            "first": 1,
+            "last": 25
+          },
+          {
+            "title": "非選擇題",
+            "first": 1,
+            "last": 2
+          }
+        ],
+        "groups_115": [
+          [
+            23,
+            25
+          ]
+        ],
+        "group_items_by_year": {
+          "113": 2,
+          "114": 2,
+          "115": 3
+        },
+        "group_size_counts": {
+          "2": 2,
+          "3": 1
+        }
+      },
+      "years": {
+        "113": {
+          "booklet_pages": 13,
+          "inner_pages": 12,
+          "duration_minutes": 80,
+          "choice_items": 25,
+          "constructed_items": 2,
+          "sections": [
+            {
+              "title": "選擇題",
+              "first": 1,
+              "last": 25
+            },
+            {
+              "title": "非選擇題",
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "figures": 22,
+          "tables": 2,
+          "groups": [
+            [
+              24,
+              25
+            ]
+          ],
+          "group_items": 2
+        },
+        "114": {
+          "booklet_pages": 13,
+          "inner_pages": 12,
+          "duration_minutes": 80,
+          "choice_items": 25,
+          "constructed_items": 2,
+          "sections": [
+            {
+              "title": "選擇題",
+              "first": 1,
+              "last": 25
+            },
+            {
+              "title": "非選擇題",
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "figures": 18,
+          "tables": 2,
+          "groups": [
+            [
+              24,
+              25
+            ]
+          ],
+          "group_items": 2
+        },
+        "115": {
+          "booklet_pages": 14,
+          "inner_pages": 13,
+          "duration_minutes": 80,
+          "choice_items": 25,
+          "constructed_items": 2,
+          "sections": [
+            {
+              "title": "選擇題",
+              "first": 1,
+              "last": 25
+            },
+            {
+              "title": "非選擇題",
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "figures": 15,
+          "tables": 1,
+          "groups": [
+            [
+              23,
+              25
+            ]
+          ],
+          "group_items": 3
+        }
+      }
+    },
+    "社會": {
+      "sections": [
+        "單題",
+        "題組"
+      ],
+      "allowed_question_types": [
+        "single_choice"
+      ],
+      "domains": [
+        "歷史",
+        "地理",
+        "公民"
+      ],
+      "current_form": {
+        "choice_items": {
+          "min": 54,
+          "max": 54,
+          "reference_115": 54
+        },
+        "constructed_items": 0,
+        "options_per_choice_item": 4,
+        "option_labels": [
+          "(A)",
+          "(B)",
+          "(C)",
+          "(D)"
+        ],
+        "answer_mode": "單選題（四選一），答錯不倒扣",
+        "duration_minutes": 70,
+        "inner_pages_115": 14,
+        "sections_115": [
+          {
+            "title": "單題",
+            "first": 1,
+            "last": 43
+          },
+          {
+            "title": "題組",
+            "first": 44,
+            "last": 54
+          }
+        ],
+        "groups_115": [
+          [
+            44,
+            45
+          ],
+          [
+            46,
+            48
+          ],
+          [
+            49,
+            51
+          ],
+          [
+            52,
+            54
+          ]
+        ],
+        "group_items_by_year": {
+          "113": 11,
+          "114": 12,
+          "115": 11
+        },
+        "group_size_counts": {
+          "2": 2,
+          "3": 10
+        }
+      },
+      "years": {
+        "113": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 70,
+          "choice_items": 54,
+          "constructed_items": 0,
+          "sections": [
+            {
+              "title": "單題",
+              "first": 1,
+              "last": 43
+            },
+            {
+              "title": "題組",
+              "first": 44,
+              "last": 54
+            }
+          ],
+          "figures": 24,
+          "tables": 6,
+          "groups": [
+            [
+              44,
+              45
+            ],
+            [
+              46,
+              48
+            ],
+            [
+              49,
+              51
+            ],
+            [
+              52,
+              54
+            ]
+          ],
+          "group_items": 11
+        },
+        "114": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 70,
+          "choice_items": 54,
+          "constructed_items": 0,
+          "sections": [
+            {
+              "title": "單題",
+              "first": 1,
+              "last": 42
+            },
+            {
+              "title": "題組",
+              "first": 43,
+              "last": 54
+            }
+          ],
+          "figures": 21,
+          "tables": 6,
+          "groups": [
+            [
+              43,
+              45
+            ],
+            [
+              46,
+              48
+            ],
+            [
+              49,
+              51
+            ],
+            [
+              52,
+              54
+            ]
+          ],
+          "group_items": 12
+        },
+        "115": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 70,
+          "choice_items": 54,
+          "constructed_items": 0,
+          "sections": [
+            {
+              "title": "單題",
+              "first": 1,
+              "last": 43
+            },
+            {
+              "title": "題組",
+              "first": 44,
+              "last": 54
+            }
+          ],
+          "figures": 16,
+          "tables": 9,
+          "groups": [
+            [
+              44,
+              45
+            ],
+            [
+              46,
+              48
+            ],
+            [
+              49,
+              51
+            ],
+            [
+              52,
+              54
+            ]
+          ],
+          "group_items": 11
+        }
+      }
+    },
+    "自然": {
+      "sections": [
+        "自然"
+      ],
+      "allowed_question_types": [
+        "single_choice"
+      ],
+      "domains": [
+        "生物",
+        "理化",
+        "地球科學"
+      ],
+      "current_form": {
+        "choice_items": {
+          "min": 50,
+          "max": 50,
+          "reference_115": 50
+        },
+        "constructed_items": 0,
+        "options_per_choice_item": 4,
+        "option_labels": [
+          "(A)",
+          "(B)",
+          "(C)",
+          "(D)"
+        ],
+        "answer_mode": "單選題（四選一），答錯不倒扣",
+        "duration_minutes": 70,
+        "inner_pages_115": 14,
+        "sections_115": [],
+        "groups_115": [
+          [
+            42,
+            43
+          ],
+          [
+            44,
+            45
+          ],
+          [
+            46,
+            47
+          ],
+          [
+            48,
+            50
+          ]
+        ],
+        "group_items_by_year": {
+          "113": 9,
+          "114": 8,
+          "115": 9
+        },
+        "group_size_counts": {
+          "2": 10,
+          "3": 2
+        }
+      },
+      "years": {
+        "113": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 70,
+          "choice_items": 50,
+          "constructed_items": 0,
+          "sections": [],
+          "figures": 25,
+          "tables": 12,
+          "groups": [
+            [
+              42,
+              43
+            ],
+            [
+              44,
+              45
+            ],
+            [
+              46,
+              48
+            ],
+            [
+              49,
+              50
+            ]
+          ],
+          "group_items": 9
+        },
+        "114": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 70,
+          "choice_items": 50,
+          "constructed_items": 0,
+          "sections": [],
+          "figures": 31,
+          "tables": 12,
+          "groups": [
+            [
+              43,
+              44
+            ],
+            [
+              45,
+              46
+            ],
+            [
+              47,
+              48
+            ],
+            [
+              49,
+              50
+            ]
+          ],
+          "group_items": 8
+        },
+        "115": {
+          "booklet_pages": 15,
+          "inner_pages": 14,
+          "duration_minutes": 70,
+          "choice_items": 50,
+          "constructed_items": 0,
+          "sections": [],
+          "figures": 32,
+          "tables": 5,
+          "groups": [
+            [
+              42,
+              43
+            ],
+            [
+              44,
+              45
+            ],
+            [
+              46,
+              47
+            ],
+            [
+              48,
+              50
+            ]
+          ],
+          "group_items": 9
+        }
+      }
+    },
+    "寫作測驗": {
+      "sections": [
+        "引導寫作"
+      ],
+      "allowed_question_types": [
+        "guided_writing"
+      ],
+      "current_form": {
+        "tasks": 1,
+        "duration_minutes": 50,
+        "question_types": [
+          "guided_writing"
+        ],
+        "rules": [
+          "一題引導寫作，題目提供文字或圖文材料與明確的寫作任務",
+          "不必訂題；不得使用詩歌體；不可在文中洩漏私人身分",
+          "評分為一至六級分（官方寫作測驗評分規準），不另列題目分數"
+        ]
+      },
+      "years": {
+        "113": {
+          "booklet_pages": 4,
+          "inner_pages": 2,
+          "duration_minutes": 50,
+          "tasks": 1,
+          "question_types": [
+            "guided_writing"
+          ]
+        },
+        "114": {
+          "booklet_pages": 4,
+          "inner_pages": 2,
+          "duration_minutes": 50,
+          "tasks": 1,
+          "question_types": [
+            "guided_writing"
+          ]
+        },
+        "115": {
+          "booklet_pages": 4,
+          "inner_pages": 2,
+          "duration_minutes": 50,
+          "tasks": 1,
+          "question_types": [
+            "guided_writing"
+          ]
+        }
+      }
+    }
+  },
+  "sources": [
+    {
+      "roc_year": 113,
+      "subject": "國文",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1Xr5AwMNQipYZblCEbZadyBvLVcT_8XSv/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/113/113exam.html",
+      "bytes": 1830851,
+      "sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7"
+    },
+    {
+      "roc_year": 113,
+      "subject": "英語",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1ZU8SG-4jdV1DGvPzpgzoi_hhRiD4NT3S/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/113/113exam.html",
+      "bytes": 4502220,
+      "sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd"
+    },
+    {
+      "roc_year": 113,
+      "subject": "數學",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1MXfrOI_4KyxF6A-2NNd_J_eIuo3Epa46/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/113/113exam.html",
+      "bytes": 2293606,
+      "sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46"
+    },
+    {
+      "roc_year": 113,
+      "subject": "社會",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1NJYibw-N2mHZP5lL8-rOhirWv_ZFQNiz/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/113/113exam.html",
+      "bytes": 6880700,
+      "sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397"
+    },
+    {
+      "roc_year": 113,
+      "subject": "自然",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/113/113exam.html",
+      "bytes": 5831478,
+      "sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f"
+    },
+    {
+      "roc_year": 113,
+      "subject": "寫作測驗",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1fhW7ywN8LoIGGroAMQS5JzqCStKlY2Ux/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/113/113exam.html",
+      "bytes": 788687,
+      "sha256": "cf32b70b01ca6cf0431821e5bf73cb94ed116dbf3bb1810f7aeefd5ac9367623"
+    },
+    {
+      "roc_year": 113,
+      "subject": "全科",
+      "document": "各題通過率",
+      "url": "https://drive.google.com/file/d/1NpFiGL8A6KVR-Hyn_M7u1JhvXNOTqPOr/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/113/113exam.html",
+      "bytes": 84983,
+      "sha256": "3507de3c0f89a36e07943d666a67d664b1abab55c8c966b861b9902d947ca3c4"
+    },
+    {
+      "roc_year": 113,
+      "subject": "全科",
+      "document": "各題鑑別度",
+      "url": "https://drive.google.com/file/d/1YOdEP_E1_m2AdpsFk5RnPhDndDrGJ--r/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/113/113exam.html",
+      "bytes": 85621,
+      "sha256": "f457009fff8e60f4fe7508e1546e31dbd34ef5f646a9f8f4242de993478d173b"
+    },
+    {
+      "roc_year": 114,
+      "subject": "國文",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/102j8F3hoCvGgMCVP6x6oHN9cCd0R6_Ii/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/114/114exam.html",
+      "bytes": 3059092,
+      "sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4"
+    },
+    {
+      "roc_year": 114,
+      "subject": "英語",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1Or0bC16Jn2hA0uAF2zrryHoY46ywIQjK/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/114/114exam.html",
+      "bytes": 3470481,
+      "sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f"
+    },
+    {
+      "roc_year": 114,
+      "subject": "數學",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1c2AGC67Bq344EdGSZkO9SZhrY50hHTJx/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/114/114exam.html",
+      "bytes": 2436465,
+      "sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4"
+    },
+    {
+      "roc_year": 114,
+      "subject": "社會",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1vFl3qctoBXYcCtWbAqKUqhekIMgV6q-m/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/114/114exam.html",
+      "bytes": 6588218,
+      "sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44"
+    },
+    {
+      "roc_year": 114,
+      "subject": "自然",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/114/114exam.html",
+      "bytes": 4908034,
+      "sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9"
+    },
+    {
+      "roc_year": 114,
+      "subject": "寫作測驗",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/15yGt7NgV0OsYTP8LdYF7BCntfTjZwQ7q/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/114/114exam.html",
+      "bytes": 1133124,
+      "sha256": "3e910b263444e7aa4baac4ebdc9e0c156c12592fdb24430782c30da9fe1593fa"
+    },
+    {
+      "roc_year": 114,
+      "subject": "全科",
+      "document": "各題通過率",
+      "url": "https://drive.google.com/file/d/1hwzaBmzmD0sYPw4q1KVCBW6Vq5OviriH/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/114/114exam.html",
+      "bytes": 86056,
+      "sha256": "c4399be97bd127d4d4a1ee2d7b55750fc757ea347a32bc5a615cc931bbcea898"
+    },
+    {
+      "roc_year": 114,
+      "subject": "全科",
+      "document": "各題鑑別度",
+      "url": "https://drive.google.com/file/d/1deYp06C-xErJpmPGVHJ6T7hptfEkkJ70/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/114/114exam.html",
+      "bytes": 86711,
+      "sha256": "28472a1fffb3e79da6e59aa78415b8f1b3cf84fa1428e4fdd31ae0394e969b86"
+    },
+    {
+      "roc_year": 115,
+      "subject": "國文",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1FQtq4_a4GTsTKURdzPhDkKmONKRXtTJ9/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/115/115exam.html",
+      "bytes": 3526692,
+      "sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959"
+    },
+    {
+      "roc_year": 115,
+      "subject": "英語",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1pzRZpkZEBg4x7GNTAIrdfGJCxNSKgok-/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/115/115exam.html",
+      "bytes": 5287251,
+      "sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8"
+    },
+    {
+      "roc_year": 115,
+      "subject": "數學",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1G-grfVw1NldMD3TRG-7Lco-yOuaoTKoK/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/115/115exam.html",
+      "bytes": 1563817,
+      "sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861"
+    },
+    {
+      "roc_year": 115,
+      "subject": "社會",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1ITxBlFhNSIbg1u1C7FrU2ODk951wt-RT/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/115/115exam.html",
+      "bytes": 3471306,
+      "sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755"
+    },
+    {
+      "roc_year": 115,
+      "subject": "自然",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/115/115exam.html",
+      "bytes": 4516167,
+      "sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6"
+    },
+    {
+      "roc_year": 115,
+      "subject": "寫作測驗",
+      "document": "試題本",
+      "url": "https://drive.google.com/file/d/1NceEHPUXT0fZo6UgdCuSdGApQ4embM0t/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/115/115exam.html",
+      "bytes": 1335458,
+      "sha256": "f8353b6674072815c3c9868d82666eca9f041e54c465f0c78f245ad1fe2b72e1"
+    },
+    {
+      "roc_year": 115,
+      "subject": "全科",
+      "document": "各題通過率",
+      "url": "https://drive.google.com/file/d/18wrAaXAakCwra1WXdS1HPxLDvPBlyp_S/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/115/115exam.html",
+      "bytes": 84577,
+      "sha256": "2e730d6425aa17ee24c1dd81a521346e9e5678e32980ccb183b0433c26c39234"
+    },
+    {
+      "roc_year": 115,
+      "subject": "全科",
+      "document": "各題鑑別度",
+      "url": "https://drive.google.com/file/d/1460OoCkq7sKCUc1UqyQY01kJR3agO2eA/view",
+      "listing": "https://cap.rcpet.edu.tw/exam/115/115exam.html",
+      "bytes": 85218,
+      "sha256": "f087036d47d8e5b211538c8a6558b234137705ed4ba971c51e250802ebc0f7b0"
+    }
+  ],
+  "official_sites": [
+    "https://cap.rcpet.edu.tw/",
+    "https://cap.rcpet.edu.tw/examination.html"
+  ],
+  "warning": "各年度題數會在官方範圍內變動；以 113-115 範圍為現行卷型，115 題本為版型與題數參考。"
+}

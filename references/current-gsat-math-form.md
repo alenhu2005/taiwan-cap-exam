@@ -1,0 +1,311 @@
+# Current-regime GSAT mathematics profile (calibration corpus: 111–115)
+
+Use this profile for Math A and Math B whenever the requested form is a current GSAT or a current commercial mock. It records evidence from the official 111–115 corpus, with 114–115 PDFs used for direct typography inspection. Older papers may contribute content domains and item archetypes, but must not override current surface form.
+
+The corpus years are not an applicability deadline. For 116 and later mocks,
+use the compatible current regime and maintained 115 measured assets under
+`official-gsat-specifications.md#academic-year-regime-and-reference-year`.
+Changing the printed mock year alone does not require a new template.
+
+Keep a separate **context-texture** audit from the curriculum-unit audit. A paper can contain enough pure-math records yet still read like a physics or engineering paper if astronomy, energy, waves, motion, sensing, or similar settings cluster together. Unless requested otherwise, science/engineering external settings should occupy no more than one quarter of the scored items, must not dominate consecutive sections, and must be balanced by pure mathematics, everyday/civic contexts, data, arts/humanities, and neutral diagrams. Spatial geometry is not automatically a physics context; judge the printed wording, not only the syllabus code.
+
+## Typography and formula contract
+
+- Main Chinese item text: `PMingLiU` / `MingLiU` (新細明體), nominal 11 pt.
+- On a hosted web surface where those proprietary families are unavailable,
+  follow `web-platform-use.md`: keep the original template PDF for locked text
+  and use a metric-compatible Traditional-Chinese serif/Kai substitute for new
+  body text, validated by final-size rasters. Do not fail solely on the internal
+  font name.
+- Latin letters, numerals, and mathematical text: Times New Roman, nominal 11 pt.
+- Instruction rules: `DFKai-SB` / 標楷體, commonly 12 pt. Do not collapse these
+  with all section headings: the page-measured 115 Math A controlling profile
+  uses approximately 13.02 pt bold PMingLiU for section headings. Use the selected
+  profile's role measurements, not a universal 12 pt heading assumption.
+- In the 115 cover specimen, the organization and year lines are approximately 19.98 pt DFKai, the subject title approximately 25.98 pt DFKai/Times, the signature warning 18 pt DFKai, and the notice heading approximately 16.02 pt. Treat these as profile measurements rather than visual guesses.
+- The hosted preflight prints 新細明體／標楷體 wherever they are installed and substitutes 全字庫正宋體／正楷體 only where they are not; never Noto Serif TC, whose glyph width, punctuation position and apparent density are visibly different.
+- Never use Unicode presentation glyphs such as `₂` or `ⁿ` as the final formula representation. They carry font-specific miniature metrics and often look much smaller than the official notation. Store formula structure semantically and render subscripts/superscripts at the measured script ratio and baseline offset.
+- A renderer must check body text, inline formulas, display formulas, fractions, radicals, matrices, subscripts, superscripts, vectors, and cases separately. Matching the Chinese font does not imply that mathematical composition is correct.
+- The target is not merely the same nominal point size. Match apparent density, full-width Chinese punctuation, line spacing, formula axis, script baseline, and spacing around operators.
+- For the measured v4 Math A implementation, use the existing
+  `render_gsat_internal_review.py` components and PDF wrapper after the content
+  gate. Store math between `\(…\)` or `\[…\]`; the pinned `latex2mathml`
+  dependency produces static, screened MathML. It does not execute a TeX engine.
+  Check full-size fraction numerators/denominators as well as deliberately smaller
+  scripts. Times New Roman is the primary Latin face; MathML may need Cambria Math
+  for mathematical glyphs. Report and inspect that fallback, not byte-identical
+  font fidelity. Never switch to the generic 9.4 pt renderer to make content fit.
+- In `gsat-math-a-115-measured-v1`, body pitch is 20 pt, the content frame is
+  241 mm high, and the footer baseline is approximately 797.22 pt from page top.
+  Budget section rules, stimulus blocks, actual formula heights and item margins
+  within this frame. The final formula page is supplied by the maintained v4
+  component; it is not a blank extra-content page.
+- Cover examples must remain completely inside the bordered instruction box at final print metrics. Allow explanatory prose to wrap inside its remaining column; do not force a long sentence into one unbreakable flex row or visually shrink the entire example to hide overflow.
+
+### Hosted body renderer: how official mathematics notation is produced
+
+The hosted renderer (`hosted_body_templates.py` with `hosted_math_typeset.py`)
+prints mathematics as the ROC 111–115 booklets do, under the pinned PyMuPDF 1.26.0
+and newer engines alike. Authors write plain text; nothing here is optional styling.
+
+- **Fractions stack.** Write `2/3`, `−13/21`, `2√2/3`, `π/3`, `(√3+1)/2`, `x/2`; a
+  slash between two operands (a number, a coefficient radical, a π multiple, a single
+  letter or one parenthesised group) prints as a stacked fraction with its bar on the
+  math axis, operands at 0.86 of the text size, the minus sign outside. Inside
+  `<sup>`/`<sub>` the fraction is set at the script size. Units such as km/h, whose
+  operands are words, stay slashed.
+- **Radicals carry a vinculum.** `√6`, `2√5`, `√(x+1)` draw the radical sign with
+  its bar over the whole radicand; the parentheses of a grouped radicand are dropped.
+- **Vectors and segments.** Write `{{vec:AB}}` for an arrow over the letters and
+  `{{seg:BC}}` for a segment bar; the contract rejects 「向量AB」 and combining marks.
+- **Variables are italic.** Single Latin letters (x, f, a, P, n), lower-case Greek
+  variables (α, β, θ) and capital point names that the stem introduces as points
+  (A、B、C then ABC, △ABC, ∠BAC) print in Times Italic; function names (sin, cos,
+  log), words, units and acronyms (CPI, AI, Google) stay upright. Instructions and
+  說明 boxes never italicise (「2B鉛筆」).
+- Each construct is reserved in the line as a transparent placeholder of its exact
+  size and then painted as real, searchable Times glyphs and rules; the placeholder
+  is removed before any check reads the page.
+- **Item geometry.** The item number sits on the body margin; stem and options start
+  18 pt later (自然 19.5); option columns tab at 90/120/150/180 pt for 5/4/3/2 abreast
+  (自然 2 pt narrower) and fall back to equal columns only when an option is wider.
+- **Headings and 說明.** Part headings print at 13 pt, letter-spaced (數 2.0 pt,
+  國綜 2.15, 自然 2.4, 國寫／英文／社會 4.56) and stroke-bold; the 說明 box hangs its
+  continuation lines under the text after 「說明：」 and starts a new line before
+  「選擇（填）題與」「作答使用筆尖」 and the other sentences the booklets break before.
+
+## Avoid repeat mathematics proof repairs
+
+For timed runs also follow [fast-full-paper-workflow.md](fast-full-paper-workflow.md).
+The following rules concern the maintained mathematics renderer, not a faster
+question-writing substitute:
+
+- Keep reproducible formula/line-breaking fixes in the mathematics component,
+  not only in one paper's exported HTML. Measured v4 inline MathML reserves 4px
+  of vertical glyph clearance on each side; prompts/stimuli use strict Chinese
+  line breaking with normal word wrapping. This clearance prevents formula
+  ink from exceeding its inline box; it is not extra response space or a way
+  to satisfy page-density checks. Main type size and measured line pitch stay
+  unchanged. Display formulas retain block behavior.
+- Measured teacher explanations bind each inline formula only to its immediate
+  closing punctuation. Do not wrap a whole sentence, several formulas, a display
+  equation or an entire solution in `nowrap`. Overwide mathematics must still
+  fail containment; split the expression at a mathematically valid boundary
+  without changing the stated conditions or shrinking the type.
+- Use explicit delimiters and braced fractions/binomials when first authoring
+  both questions and explanations. Check component behavior once when renderer,
+  browser or fonts change, before spending time on a new full-paper layout.
+  `python -m pytest tests/test_measured_math_renderer.py -q` exercises these
+  components when working in the source checkout; it is not paper acceptance
+  and is not an installation prerequisite for end users.
+- Set the actual student page assignments, option geometry, marking rails and
+  teacher `answer_page_groups` before the first PDF. Diagnose all failed blocks
+  from the same DOM report together instead of changing one margin and printing
+  the entire paper after every small adjustment. Repair within the selected
+  profile, then rerun containment; density and full-page inspection still apply.
+- Write candidate decisions and second-solve notes once, then serialize those
+  actual findings into the required schema. Do not ask the model to rewrite
+  identical evidence at each handoff, and never auto-invent review verdicts.
+  Freeze the content after scope, answer and originality reconciliation, before
+  final PDF/page-review hashes are bound. Later content edits invalidate the
+  relevant reviews and require whole-paper rechecking.
+- Keep diagnostics in files and return a compact list of failed page/question
+  ids, measurements and causes to the model. Do not repeatedly echo a complete
+  MathML document or the entire successful DOM tree into the conversation.
+  Full evidence must remain available; a short display is not a reduced check.
+- Do not remove the shared content handoff or final delivery rerun to save a
+  small amount of runtime. Measure first: distinguish machine validation/export
+  seconds from model writing, review, tool round trips and repair time. An
+  unchanged-paper rendering regression does not establish a 20-minute newly
+  authored-paper result. After renderer changes regenerate affected proofs;
+  preserve prior delivered files, withdraw stale candidate review claims, and
+  compare every page before making a new acceptance claim.
+
+## Printed-form contract (enforced by `validate_math_layout_contract.py`)
+
+Measured on the ten 111–115 booklets and checked on every hosted save and at the
+final check:
+
+- Headings, printed verbatim as `sections[].title`: 第壹部分、選擇（填）題（占85分）；
+  一、單選題（占30分；數B 35分）；二、多選題（占30分；數B 25分）；三、選填題（占25分）；
+  第貳部分、混合題或非選擇題（占15分）.
+- Every choice item prints five options labelled (1)–(5); the batch saver refuses a
+  mathematics choice item saved without exactly five.
+- Selected-response stems (items 1–17) run 83–123 compact characters at the median
+  and never above 340; a paper whose median exceeds 150 is rejected. Two hosted 116
+  papers show the failure modes: one over-explained every setting (「某班在討論…老師
+  指出…」, 9 pages against the official 8), the other wrote the method into the stem
+  (「先利用對數律合併左式，再依 x 的正負限制選取可行值」). Official stems never name
+  the formula or step; the contract rejects 先利用／再依／判斷時應／可先 and similar.
+- No student-facing disclaimer (模擬資料、本題情境、並非…實際、自擬).
+- No real-world context shared by three or more items after generic exam wording
+  is removed (a 題組 counts once). Official repeats are only 坐標平面上、試選出正確的
+  選項 and the like; a hosted paper used 物價指數年增率 in three separate items.
+- Digits, Latin letters and the radical sign print in the Latin face (Times-like),
+  as in the official booklets; the CJK body font drew √ one em wide. The renderer
+  wraps those runs automatically for 數學A／數學B, so authors write 「√5」 plainly.
+- `plan` reports `page_budget`: the official question booklet has 6 body pages;
+  a plan above 7 is verbosity or figure size, not content.
+- Wording and score marks, identical in all ten booklets: every 多選題 asks
+  「試選出正確的選項。」 and no stem asks 「下列敘述哪些正確」 or 「以下何者正確」; a
+  fraction 選填 ends 「為 ___。（化為最簡分數）」 (not 「化為最簡分數後為」); the 題組
+  label is the underlined 「18-20 題為題組」 (the spec builder prints it); item 18
+  ends 「（單選題，3分）」 and items 19–20 「（非選擇題，N分）」, never a bare
+  「（4分）」. A score group never breaks across lines.
+- 選填 formats: every official 數A and 數B paper has at least one 「（化為最簡分數）」 item
+  among 13–17 (數A 1–4, 數B 1–3; 113 數B also a sign cell); five two-digit integer
+  選填 are rejected.
+- 數B unit envelope additions (measured 111–115): data analysis 1–2 items (a data 題組
+  is never set; a hosted paper had four data items), polynomial exactly 2 every year
+  (floor 2), and an item classed as 矩陣 prints a matrix (「矩陣」「方陣」 or entries);
+  a linear map described in words left the unit nominally present.
+- Solutions stay inside the subject: a 數B solution does not use space vectors, plane
+  equations, sum formulas or general log laws (數A-only); use the plane or 11B route.
+- Figures are 示意圖 (the cover says so): an answer never depends on reading a drawn
+  length, angle or side; print the condition in the text. A table is printed with
+  Chinese headers in the language of the stem, never an English-labelled raster image;
+  a 題組 table or chart belongs to the 題組 text (write 「下表為…」 there and the builder
+  prints it after the text, before 18).
+- Typography: 「＝＋－＜＞」 print as half-width Times operators (the renderer converts
+  full-width input), a formula such as 「|x − 2| < 3」 or 「30p₁ + 60q₁ = 2700」 never
+  breaks across lines, a 選填 grid keeps the word before it and the 「。」 after it, a
+  stem never ends on a line of one or two characters, products of variables (「ab」)
+  are italic, and question pages share their leftover space between items as working
+  room (official median gap about 52 pt) instead of piling it at the page foot.
+- A part heading that owns no items (第壹部分) still prints: the spec builder emits
+  it before its first section, and the final checker reads the booklet text for
+  every heading. A hosted 116 數A listed 第壹部分 in `sections` and printed only
+  「一、單選題」.
+- 數A unit envelope (hand-classified on 111–115, checked on the full saved paper by
+  each item's first recognised scope code): every paper has at least one item of
+  指數與對數、多項式函數、直線與圓、三角（含正餘弦定理）、排列組合、機率、數據分析、
+  矩陣與線性變換、平面向量 and 空間向量／平面／直線; 機率 at most 3, 數據分析、排列
+  組合、數列 and 數與式 at most 2 each, any family at most 5; 6–14 items carry an
+  11A-only code (official 8–13). Two hosted 116 papers had no matrix, plane-vector
+  or 正餘弦定理 item and six probability/statistics items.
+- Items 17 and 20 close 選填 and the 題組 and must review hard or very_hard, as in
+  every official 111–115 paper (`hosted_blind_review.review_errors`); both hosted
+  116 papers ended them on textbook routines.
+
+## Stem rhetoric contract
+
+A current-form literacy item normally has three functional moves:
+
+1. **Material setup** — introduce a phenomenon, procedure, record, diagram, or short source passage and establish why the information exists.
+2. **Operational definitions and constraints** — define symbols, measurement rules, assumptions, exceptional cases, or the relation among representations.
+3. **Task** — ask for an inference, model judgement, computation, or selection that can only be made after integrating the material and constraints.
+
+Length alone is not literacy. Add a sentence only when it supplies information that the solver must interpret, translate, compare, or test. Delete any context that can be removed without changing the solution path.
+
+For the current primary corpus, the compact detected character distribution of selected-response items is roughly P25 164, median 205, P75 269. The detector includes options and may occasionally capture adjacent print, so this is a calibration band, not a per-item quota. Nevertheless, a full paper whose selected-response median is far below 160 compact characters is presumptively too terse and must be reviewed.
+
+Avoid these weak forms:
+
+- a one-sentence textbook exercise with a decorative proper noun;
+- a paragraph that merely delays stating the same equation;
+- explicit instructions that reveal the intended formula or algorithm;
+- every item using the same “某公司／某同學” narrative shell;
+- all givens compressed into symbol-heavy engineering prose.
+
+## Difficulty contract
+
+Apply the full record and release thresholds in [math-difficulty-design.md](math-difficulty-design.md). The points below describe the visible paper behavior; they do not replace the anti-collapse audit.
+
+- Early single-choice items may be accessible, but must still contain a plausible misconception or representation change; “read one value and substitute once” is not an adequate default.
+- Difficulty should generally rise through the single-choice block, then reset locally at the start of a new response type. It need not be perfectly monotone.
+- Medium items should normally require at least two linked decisions, such as identifying a model and then checking a constraint.
+- Hard items should require three or more linked operations, a non-obvious representation change, case separation, global consistency, or rejection of a tempting shortcut.
+- Treat operations as linked only when they require distinct choices or inferences. Several algebra lines, repeated matrix multiplication, or applying one area/ratio rule multiple times still count as one routine if no new decision is made.
+- Multiple-choice distractors must correspond to distinct mathematical claims. Do not create options by superficial sign or arithmetic changes.
+- At least two printed distractors must be the exact `predicted_outcome` of a listed misconception path (`validate_math_difficulty_design.py` checks the printed option text); a distractor no error produces is dismissed at a glance, which is why two hosted 數A papers read as easy despite passing the linked-decision minimums.
+- For Math A, apply [the answer-count and close-option rules](math-difficulty-design.md#math-a-unpredictable-answer-counts-and-occasional-close-options): randomize the planned correct-option count across 1–5 without a fixed pattern; occasionally use one or two justified close-numerical-option items. Mathematical truth determines the final key, and closeness alone does not establish difficulty.
+- A diagram is part of the reasoning when scale, incidence, trend, partition, ordering, or correspondence must be extracted from it. It must not be decorative clip art.
+
+## Visual and placement contract
+
+- Do not print production labels such as `第15題圖：`, `第14題附圖：`, asset IDs or filenames above a mathematics diagram. Attach the actual diagram to its owning item; refer to it naturally as 如圖／下圖／右圖 in the stem. Keep labels such as 圖一／圖二 only when comparing multiple figures requires them. Retain necessary axes, units, legends and concise factual captions; do not apply this mathematics rule to remove necessary scientific or social-source captions.
+- Current-form visual questions must occur outside the final mixed section as well as inside it. For an internal pre-calibration gate, require at least four required visuals across at least three sections of a paper.
+- Include more than one visual role across a paper: for example, geometry/partition, statistical chart, process/timeline, coordinate model, or tabular record.
+- Each required visual needs a legibility check at final print size and a stimulus-removal check. If removing the visual leaves the same solution path, the item fails.
+- Visuals must be deterministic and vector-first. Labels, ticks, angles, and line weights must remain readable in grayscale.
+
+## Option geometry contract
+
+- Five short options: one horizontal row when they fit at final print size.
+- Five medium options: use the formal 3+2 grid.
+- Four short options: one horizontal row when they fit.
+- Long propositions or independent statements: stack vertically.
+- The renderer must receive an explicit `option_layout`; automatic browser wrapping is not an accepted layout decision.
+- Columns sit on a fixed pitch like the official tab stops (five abreast at 90 pt,
+  three at 150 pt). The pinned hosted PyMuPDF 1.26.0 ignores every table and cell
+  width, so the renderer measures each option in the running engine and pads it to
+  the pitch; two hosted 116 數A booklets printed 「(1) 6 (2) 8 (3) 9」 run together.
+
+## Machine-marked answer rail contract
+
+Selection/fill items are printed for optical-card response, not as open blank-answer exercises.
+
+- Position the answer rail at the semantic blank inside the sentence. Do not center every rail as a separate block. It may remain at line end, wrap with the sentence, or sit in the left text column beside a right-hand figure.
+- Keep the final expression (for example `λ＝`) adjacent to its numbered circles. The stem, rail and following punctuation are one reading flow, not three table columns. Do not put the rail in an isolated right-hand answer column or split `（化為最簡分數）` into a narrow column after it. Prefer stating that instruction in the prose before the final expression; a tall fraction rail may occupy a continuous answer expression at the end of the item, with its complete height reserved. Inspect the actual line break and spacing at print scale.
+- Integer: print the exact number of circled positions over a continuous answer line.
+- Fraction: print numerator positions above a fraction bar and denominator positions below it, with a second answer line below the denominator row when the selected profile shows it.
+- Sign, decimal, or special-symbol positions, when allowed, must be separately specified and printed.
+- Position IDs are sequential in reading order: `(q-1)`, `(q-2)`, and so on. Do not invent numerator/denominator suffixes.
+- The expected answer must fit exactly. Too many or too few positions is a release-blocking defect.
+- In the 115 Math A selection/fill specimen, a position circle is the DFKai `○` glyph at approximately 25.98 pt (about 9.16 mm em-square) with a Times New Roman row identifier at approximately 10.02 pt. Use these measured values before substituting a generic CSS border circle.
+
+## Section continuity contract
+
+- Print a major section heading and its instruction rule only where that section begins.
+- When the first objective section begins, print the overall part heading and the single-choice subsection heading on separate lines. Do not compress `第壹部分、選擇（填）題（占85分）` and `一、單選題（占35分）` into one run-in heading.
+- When a section continues on the next page, continue directly with the next item. Do not repeat “一、單選題”, “二、多選題”, “三、選填題”, or their instruction box.
+- When a section instruction already states a shared score such as “每題5分”, do not repeat “（5分）” beside every question. Keep item scores in the data for validation, but make per-item score labels opt-in and require direct evidence from the selected official form before enabling one.
+- Count each major section heading in the rendered content pages. A count other than exactly one is a release-blocking error.
+
+## Page-density and breathing-room contract
+
+- Passing the overflow gate is necessary but not sufficient. Compare the occupied vertical band with a compatible current official page; a page with questions crowded at the top and a large unmotivated blank field below fails visual review even when no element is clipped.
+- Give each question a deliberate lower breathing interval. Use fixed page assignment plus item-level minimum-height targets, or rebalance questions across pages, so the intervals are distributed among questions instead of accumulating only above the footer.
+- Do not fill a page by enlarging one diagram or by changing item wording. Adjust page assignment, question minimum heights, and within-profile spacing. Preserve the footer clearance and keep answer-bearing figures at their validated print size.
+- The final reference-formula heading is bold. Consecutive formula lines use the measured line rhythm without empty spacer paragraphs unless the selected official profile directly shows a group break.
+
+## Mixed-section answer-space contract
+
+- Current GSAT mathematics booklets send written mixed-response work to the separate answer sheet. Do not add workbook-style ruled answer lines beneath constructed-response prompts in the question booklet.
+- Keep the question text, shared stimulus, figures, and any booklet response geometry evidenced by the selected official Layout Profile. Treat a generic `answer_space_lines` field on a Math A or Math B mixed-response item as a release-blocking defect unless the controlling official paper explicitly prints such lines.
+- Removing ruled lines must not be compensated by enlarging a figure until it collides with the footer. Preserve the measured page density and leave deliberate white space when the official form does.
+
+## Release checks
+
+Reject the paper if any of the following is true:
+
+- the current-form mathematics font stack is not used;
+- any scored item lacks a passing `difficulty_design` record or the paper fails `scripts/validate_math_difficulty_design.py`;
+- Unicode presentation subscripts/superscripts remain in the rendered paper;
+- the selected-response text is globally terse or telegraphic;
+- the visual placement floor is missed;
+- a required visual is decorative or illegible;
+- an option block wraps accidentally;
+- a machine-marked response rail does not encode exact answer geometry;
+- a response rail is globally centered instead of occupying the answer blank's semantic position;
+- any major section heading is missing or repeated on a continuation page;
+- the first-part and single-choice headings are collapsed onto one line;
+- a shared score is redundantly printed beside individual questions without form evidence;
+- a mathematics mixed-response prompt contains invented workbook-style answer lines;
+- a question, stimulus, option block, answer rail, figure, or figure label crosses the printable content boundary or is clipped by a page footer;
+- page whitespace is visibly accumulated as one large unmotivated field instead of distributed as question breathing room;
+- the reference-formula heading is not bold or the formula list contains accidental empty spacer rows;
+- cover instructions, marking examples, or table content cross their own border even if they remain inside the physical page;
+- section counts, scoring, or total score differ from the selected official blueprint.
+
+## Originality is orthogonal to form fidelity
+
+The current-form corpus controls aggregate form: unit coverage, item-type behavior, reasoning load, stem/option length, diagram function, response geometry, and page density. It must not supply a single-item skeleton to the writer.
+
+- Give the writer only aggregate slot specifications and abstract cognitive operations.
+- Do not expose a source stem, numeric tuple, equation order, diagram topology, or answer/distractor set during construction.
+- Invent and solve a new mathematical object before applying current-form rhetoric and layout.
+- Compare the candidate's ordered givens, solution graph, distractor paths, and visual topology with its nearest official and mock neighbors.
+- If number substitution, variable renaming, noun replacement, rotation, or cosmetic redrawing recovers a source item, reject it regardless of lexical similarity.
+
+Follow [originality-firewall.md](originality-firewall.md) for the required audit record.

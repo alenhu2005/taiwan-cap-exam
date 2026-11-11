@@ -1,0 +1,1717 @@
+{
+  "schema_version": 1,
+  "exam": "會考",
+  "algorithm": "inspect_hosted_pdf.bottom_void",
+  "body_box_pt": [
+    64,
+    50,
+    "page width - 60",
+    760
+  ],
+  "pages": [
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.015
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.025
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.118
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.179
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.023
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.273
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.056
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.285
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.285
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.231
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.049
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.051
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.332
+    },
+    {
+      "subject": "國文",
+      "roc_year": 113,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "ad10d9e62b116651f59cbc43ba96f83e596cbd401e9eaf75e7e50c66425be5b7",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.072
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.061
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.145
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.035
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.011
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.07
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.132
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.577
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.12
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.725
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.256
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.43
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "英語",
+      "roc_year": 113,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "624781df6ffe7fec5c4cd57f6238e53c65ddedfdadd9b491190074dd0c7fa0cd",
+      "bottom_void": 0.151
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.089
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.09
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.031
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.076
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.042
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.135
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.127
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.11
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.028
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.231
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "數學",
+      "roc_year": 113,
+      "page": 13,
+      "page_role": "formula",
+      "source_sha256": "ab137300d681acf11f55e1c806207f009f373354f65a7c31be25acec2b80ac46",
+      "bottom_void": null
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.041
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.034
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.025
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.015
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.07
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.027
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.01
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.031
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.008
+    },
+    {
+      "subject": "社會",
+      "roc_year": 113,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "9e5054c37d3013a884d7810bb3c7032ae6cc50c7997769f85f01dba8ad5e2397",
+      "bottom_void": 0.172
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.001
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.037
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.058
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.051
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.032
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.018
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.015
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.027
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.017
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.02
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.049
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.042
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.035
+    },
+    {
+      "subject": "自然",
+      "roc_year": 113,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "ba16d7042b7c509044b007bf17ac9de860a89ed2ce897587bf8467400a099d5f",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "寫作測驗",
+      "roc_year": 113,
+      "page": 2,
+      "page_role": "blank",
+      "source_sha256": "cf32b70b01ca6cf0431821e5bf73cb94ed116dbf3bb1810f7aeefd5ac9367623",
+      "bottom_void": null
+    },
+    {
+      "subject": "寫作測驗",
+      "roc_year": 113,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "cf32b70b01ca6cf0431821e5bf73cb94ed116dbf3bb1810f7aeefd5ac9367623",
+      "bottom_void": 0.155
+    },
+    {
+      "subject": "寫作測驗",
+      "roc_year": 113,
+      "page": 4,
+      "page_role": "blank",
+      "source_sha256": "cf32b70b01ca6cf0431821e5bf73cb94ed116dbf3bb1810f7aeefd5ac9367623",
+      "bottom_void": null
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.027
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.044
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.013
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.011
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.006
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.179
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.018
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.013
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.094
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.104
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.252
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.09
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.354
+    },
+    {
+      "subject": "國文",
+      "roc_year": 114,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "c576e7899a8c55cfa0cb4c6953b966e75938264496ae9fc7ddee3b7a6a9f01d4",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.025
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.11
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.294
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.014
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.1
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.063
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.032
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.824
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.027
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.725
+    },
+    {
+      "subject": "英語",
+      "roc_year": 114,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "4a6c3d1d6e3ee6a92e6e720a2b722bbb6d3e53d67e64018dd90df63b2711996f",
+      "bottom_void": 0.045
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.138
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.099
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.194
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.055
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.077
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.042
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.02
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.061
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.155
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.2
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "數學",
+      "roc_year": 114,
+      "page": 13,
+      "page_role": "formula",
+      "source_sha256": "c9c2f6953fb35effb7b06df2198ffb00d779fbdfed22b5a124d105ad1122c0d4",
+      "bottom_void": null
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.006
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.021
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.052
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.027
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.027
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.041
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.004
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.168
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.114
+    },
+    {
+      "subject": "社會",
+      "roc_year": 114,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "c7497b467a4183ac67dda0379c66839360da87e80fbb94be2db35646edaded44",
+      "bottom_void": 0.089
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.02
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.014
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.035
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.025
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.018
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.013
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.063
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.037
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.001
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.011
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.058
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.041
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "自然",
+      "roc_year": 114,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "beb483b619deed702ffd8cd3320bd3a32e9921a168315ff6e14583790eb7bdb9",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "寫作測驗",
+      "roc_year": 114,
+      "page": 2,
+      "page_role": "blank",
+      "source_sha256": "3e910b263444e7aa4baac4ebdc9e0c156c12592fdb24430782c30da9fe1593fa",
+      "bottom_void": null
+    },
+    {
+      "subject": "寫作測驗",
+      "roc_year": 114,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "3e910b263444e7aa4baac4ebdc9e0c156c12592fdb24430782c30da9fe1593fa",
+      "bottom_void": 0.107
+    },
+    {
+      "subject": "寫作測驗",
+      "roc_year": 114,
+      "page": 4,
+      "page_role": "blank",
+      "source_sha256": "3e910b263444e7aa4baac4ebdc9e0c156c12592fdb24430782c30da9fe1593fa",
+      "bottom_void": null
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.001
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.032
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.025
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.008
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.021
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.358
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.001
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.3
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.01
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.182
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.435
+    },
+    {
+      "subject": "國文",
+      "roc_year": 115,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "35135cc2e3ed5f8dbf25760790217aa19a9e6eec8434753290a8de7e588c7959",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.049
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.159
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.027
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.032
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.096
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.482
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.27
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.024
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.577
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.258
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.134
+    },
+    {
+      "subject": "英語",
+      "roc_year": 115,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "ea42dfe799b2838fdb72ed6c3c539bea3ebc9732271ef7fe7df6221d92e6ebc8",
+      "bottom_void": 0.528
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.18
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.07
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.127
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.079
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.082
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.075
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.296
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.211
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.163
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.465
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.715
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "數學",
+      "roc_year": 115,
+      "page": 14,
+      "page_role": "formula",
+      "source_sha256": "6f3735e54d1a2057a33856119dfed335d041d1b80e84ad8341a49f5531511861",
+      "bottom_void": null
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.089
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.021
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.062
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.004
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.011
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.104
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.062
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.03
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.023
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.034
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.089
+    },
+    {
+      "subject": "社會",
+      "roc_year": 115,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "da47c86bab2e2c18eecbba29556901fbfb4f0cf79e9efad73c8385b48dbf5755",
+      "bottom_void": 0.214
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 2,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.01
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 4,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.015
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 5,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.008
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 6,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.018
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 7,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.013
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 8,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.042
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 9,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.007
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 10,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.037
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 11,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.028
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 12,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.007
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 13,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.286
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 14,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.255
+    },
+    {
+      "subject": "自然",
+      "roc_year": 115,
+      "page": 15,
+      "page_role": "body",
+      "source_sha256": "d6a4d8ad98fb7dd5bafd8a69741d0c9d8b80a80a240becf96300bcdfc4dd96f6",
+      "bottom_void": 0.0
+    },
+    {
+      "subject": "寫作測驗",
+      "roc_year": 115,
+      "page": 2,
+      "page_role": "blank",
+      "source_sha256": "f8353b6674072815c3c9868d82666eca9f041e54c465f0c78f245ad1fe2b72e1",
+      "bottom_void": null
+    },
+    {
+      "subject": "寫作測驗",
+      "roc_year": 115,
+      "page": 3,
+      "page_role": "body",
+      "source_sha256": "f8353b6674072815c3c9868d82666eca9f041e54c465f0c78f245ad1fe2b72e1",
+      "bottom_void": 0.155
+    },
+    {
+      "subject": "寫作測驗",
+      "roc_year": 115,
+      "page": 4,
+      "page_role": "blank",
+      "source_sha256": "f8353b6674072815c3c9868d82666eca9f041e54c465f0c78f245ad1fe2b72e1",
+      "bottom_void": null
+    }
+  ]
+}

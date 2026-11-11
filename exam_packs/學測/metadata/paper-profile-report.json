@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-11T09:32:29.597125+00:00",
+  "paper_profile_count": 663,
+  "by_status": {
+    "pending_ocr": 447,
+    "needs_review": 59,
+    "auto_parsed": 157
+  },
+  "by_subject": {
+    "國文": 191,
+    "數學A": 25,
+    "數學B": 27,
+    "數學（共同範圍模考）": 78,
+    "數學（舊制）": 11,
+    "社會": 105,
+    "自然": 106,
+    "英文": 120
+  },
+  "full_paper_ready_count": 0,
+  "full_paper_ready_by_subject": {},
+  "gate": "Only hash-bound page/slot-reviewed profiles may claim full-paper readiness; parser confidence and reference recipes never establish verification."
+}

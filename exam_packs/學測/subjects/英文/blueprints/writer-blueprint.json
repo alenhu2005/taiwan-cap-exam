@@ -1,0 +1,1136 @@
+{
+  "schema_version": 1,
+  "exam": "學測",
+  "subject": "英文",
+  "curricula": [
+    "108"
+  ],
+  "record_count": 30,
+  "years": {
+    "minimum": 2022,
+    "maximum": 2026,
+    "counts": {
+      "2022": 6,
+      "2023": 6,
+      "2024": 6,
+      "2025": 6,
+      "2026": 6
+    }
+  },
+  "metadata_fingerprint": "4f86f5e75c9fc7334622d1e1b74ae2c4ba71e18b206a26cf8a88fa80b99474f3",
+  "built_at": "2026-09-09T16:49:10.694684+00:00",
+  "calibration_status": "ready",
+  "calibration_by_curriculum": {
+    "108": {
+      "record_count": 30,
+      "year_count": 5,
+      "official_record_count": 30,
+      "official_year_count": 5,
+      "mock_record_count": 0,
+      "dimensions": {
+        "semantic_sample": {
+          "status": "ready",
+          "record_count": 30,
+          "year_count": 5
+        },
+        "official_semantic_anchor": {
+          "status": "ready",
+          "record_count": 30,
+          "year_count": 5
+        },
+        "official_objective_difficulty": {
+          "status": "ready",
+          "measured_item_count": 235,
+          "year_count": 5,
+          "source_fingerprint": "fe66846ebad8c69a181d258b68fd938e7265cb06393e272813ae0820e81b48a6"
+        },
+        "difficulty_vector": {
+          "status": "ready",
+          "complete_count": 30,
+          "coverage": 1.0
+        },
+        "literacy_annotation": {
+          "status": "ready",
+          "complete_count": 30,
+          "coverage": 1.0
+        },
+        "stimulus_provenance": {
+          "status": "ready",
+          "competence_item_count": 25,
+          "complete_count": 25,
+          "coverage": 1.0
+        },
+        "constructed_response_calibration": {
+          "status": "ready",
+          "required_by_official_structure": true,
+          "official_record_count": 10,
+          "complete_count": 10,
+          "year_count": 5
+        },
+        "formal_layout": {
+          "status": "ready",
+          "verified_profile_count": 1,
+          "profile_ids": [
+            "gsat-english-115-measured-v1"
+          ]
+        }
+      },
+      "status": "ready"
+    }
+  },
+  "calibration_notes": [],
+  "source_visibility": "aggregate-only",
+  "individual_source_question_ids_included": false,
+  "individual_question_numbers_included": false,
+  "distribution_policy": "multi-year probability envelope; never copy one historical paper's unit sequence",
+  "distributions": {
+    "unit": {
+      "中譯英": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "文意選填": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "綜合測驗": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "英文作文": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "詞彙": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "閱讀測驗": {
+        "count": 5,
+        "proportion": 0.166667
+      }
+    },
+    "subunit": {
+      "交通號誌的歷史發展": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "人工鬧鐘職業的篇章選詞": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "依語境選擇 container": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "依語境選擇 delivered": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "依語境選擇 slender": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "依語境選擇 sticky": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "依語境選擇 tight": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "動暈症成因與預防的篇章選詞": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "午睡效益與方法的篇章選詞": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "南極探險航程與沉船發現": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "呼拉圈名稱與流行史": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "圖書館轉型篇章的語意銜接": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "巴黎聖母院鐘聲與修復的篇章選詞": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "想像創意與科技進步": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "戰爭災難與追求世界和平": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "椰子水與補充水分的篇章選詞": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "機器人協助青少年面對困擾": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "比較公園特色並說明理想公園": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "特技演員演進的篇章選詞": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "篇章連接詞與語意銜接": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "臺灣養寵風氣與寵物角色": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "英文課分組與聽說活動": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "表情符號的溝通功能與誤解": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "選舉期間參訪廟宇與尊重地方文化": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "風之電話與悲傷療癒的篇章選詞": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "颱風假不同情景、看法與經驗": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "飲茶與廣式點心歷史的篇章選詞": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "飼養寵物的終生承諾與照顧責任": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "馬賽文化與戰士形象": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "魔鬼氈發明與仿生觀察": {
+        "count": 1,
+        "proportion": 0.033333
+      }
+    },
+    "question_type": {
+      "single_choice": {
+        "count": 15,
+        "proportion": 0.5
+      },
+      "constructed_response": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "fill_in": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "guided_writing": {
+        "count": 5,
+        "proportion": 0.166667
+      }
+    },
+    "section": {
+      "section-1": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "section-2": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "section-3": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "section-5": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "section-7": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "section-8": {
+        "count": 5,
+        "proportion": 0.166667
+      }
+    },
+    "domain": {
+      "中譯英": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "文意選填": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "綜合測驗": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "英文作文": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "詞彙": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "閱讀測驗": {
+        "count": 5,
+        "proportion": 0.166667
+      }
+    },
+    "score": {
+      "1": {
+        "count": 15,
+        "proportion": 0.5
+      },
+      "2": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "20": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "8": {
+        "count": 5,
+        "proportion": 0.166667
+      }
+    },
+    "difficulty_band": {
+      "medium": {
+        "count": 18,
+        "proportion": 0.6
+      },
+      "easy": {
+        "count": 6,
+        "proportion": 0.2
+      },
+      "medium_hard": {
+        "count": 6,
+        "proportion": 0.2
+      }
+    },
+    "difficulty_basis": {
+      "empirical": {
+        "count": 20,
+        "proportion": 0.666667
+      },
+      "expert_review": {
+        "count": 10,
+        "proportion": 0.333333
+      }
+    },
+    "source_kind": {
+      "official_past_exam": {
+        "count": 30,
+        "proportion": 1.0
+      }
+    }
+  },
+  "aggregate_pattern_clusters": [
+    {
+      "cluster_id": "aggregate-051cd8d929e4",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-7",
+        "domain": "中譯英",
+        "question_type": "constructed_response",
+        "score": 8,
+        "unit": "中譯英",
+        "subunit": "飼養寵物的終生承諾與照顧責任",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-150b56663329",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-3",
+        "domain": "文意選填",
+        "question_type": "fill_in",
+        "score": 1,
+        "unit": "文意選填",
+        "subunit": "風之電話與悲傷療癒的篇章選詞",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-1c73951a841c",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-3",
+        "domain": "文意選填",
+        "question_type": "fill_in",
+        "score": 1,
+        "unit": "文意選填",
+        "subunit": "午睡效益與方法的篇章選詞",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-2a3a2aa0747d",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-5",
+        "domain": "閱讀測驗",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "閱讀測驗",
+        "subunit": "魔鬼氈發明與仿生觀察",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 1,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-372a6f10c562",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "綜合測驗",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "綜合測驗",
+        "subunit": "人工鬧鐘職業的篇章選詞",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-40125b47131f",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "綜合測驗",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "綜合測驗",
+        "subunit": "圖書館轉型篇章的語意銜接",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-40c67137bf5e",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-5",
+        "domain": "閱讀測驗",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "閱讀測驗",
+        "subunit": "馬賽文化與戰士形象",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-498f02034601",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "詞彙",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "詞彙",
+        "subunit": "依語境選擇 container",
+        "stimulus_type": "sentence_context",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-498f52d8a614",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "綜合測驗",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "綜合測驗",
+        "subunit": "飲茶與廣式點心歷史的篇章選詞",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-8bec337feb67",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-5",
+        "domain": "閱讀測驗",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "閱讀測驗",
+        "subunit": "交通號誌的歷史發展",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-a7768f9668c4",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-8",
+        "domain": "英文作文",
+        "question_type": "guided_writing",
+        "score": 20,
+        "unit": "英文作文",
+        "subunit": "臺灣養寵風氣與寵物角色",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-ac03db094692",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-3",
+        "domain": "文意選填",
+        "question_type": "fill_in",
+        "score": 1,
+        "unit": "文意選填",
+        "subunit": "巴黎聖母院鐘聲與修復的篇章選詞",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-adff3aa6e7b9",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "詞彙",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "詞彙",
+        "subunit": "依語境選擇 slender",
+        "stimulus_type": "sentence_context",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-ae305aad1095",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-3",
+        "domain": "文意選填",
+        "question_type": "fill_in",
+        "score": 1,
+        "unit": "文意選填",
+        "subunit": "特技演員演進的篇章選詞",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-ae846ae2ce89",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-3",
+        "domain": "文意選填",
+        "question_type": "fill_in",
+        "score": 1,
+        "unit": "文意選填",
+        "subunit": "椰子水與補充水分的篇章選詞",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-b38a791664b2",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-8",
+        "domain": "英文作文",
+        "question_type": "guided_writing",
+        "score": 20,
+        "unit": "英文作文",
+        "subunit": "表情符號的溝通功能與誤解",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-b6d3f237a781",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "詞彙",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "詞彙",
+        "subunit": "依語境選擇 delivered",
+        "stimulus_type": "sentence_context",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 1,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-bd14987c85ae",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-7",
+        "domain": "中譯英",
+        "question_type": "constructed_response",
+        "score": 8,
+        "unit": "中譯英",
+        "subunit": "想像創意與科技進步",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-be241ba67294",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-5",
+        "domain": "閱讀測驗",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "閱讀測驗",
+        "subunit": "南極探險航程與沉船發現",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-d2fda4834fad",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-8",
+        "domain": "英文作文",
+        "question_type": "guided_writing",
+        "score": 20,
+        "unit": "英文作文",
+        "subunit": "機器人協助青少年面對困擾",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-d7693ba44d2f",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-7",
+        "domain": "中譯英",
+        "question_type": "constructed_response",
+        "score": 8,
+        "unit": "中譯英",
+        "subunit": "選舉期間參訪廟宇與尊重地方文化",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-df5bc4c2f102",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "詞彙",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "詞彙",
+        "subunit": "依語境選擇 sticky",
+        "stimulus_type": "sentence_context",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-df95773575b2",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-5",
+        "domain": "閱讀測驗",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "閱讀測驗",
+        "subunit": "呼拉圈名稱與流行史",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-e20c5d85725c",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "綜合測驗",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "綜合測驗",
+        "subunit": "動暈症成因與預防的篇章選詞",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-e2883bb37d1e",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-7",
+        "domain": "中譯英",
+        "question_type": "constructed_response",
+        "score": 8,
+        "unit": "中譯英",
+        "subunit": "戰爭災難與追求世界和平",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-e2a63ad02c31",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-8",
+        "domain": "英文作文",
+        "question_type": "guided_writing",
+        "score": 20,
+        "unit": "英文作文",
+        "subunit": "颱風假不同情景、看法與經驗",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-e665e824b938",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-2",
+        "domain": "綜合測驗",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "綜合測驗",
+        "subunit": "篇章連接詞與語意銜接",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-ec22ba052acd",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-8",
+        "domain": "英文作文",
+        "question_type": "guided_writing",
+        "score": 20,
+        "unit": "英文作文",
+        "subunit": "比較公園特色並說明理想公園",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-f2e63bd02220",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-7",
+        "domain": "中譯英",
+        "question_type": "constructed_response",
+        "score": 8,
+        "unit": "中譯英",
+        "subunit": "英文課分組與聽說活動",
+        "stimulus_type": "authentic_text_or_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-f336bf9eb124",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "section-1",
+        "domain": "詞彙",
+        "question_type": "single_choice",
+        "score": 1,
+        "unit": "詞彙",
+        "subunit": "依語境選擇 tight",
+        "stimulus_type": "sentence_context",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    }
+  ]
+}

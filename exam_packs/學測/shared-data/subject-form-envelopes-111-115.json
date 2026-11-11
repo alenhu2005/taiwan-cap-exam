@@ -1,0 +1,775 @@
+{
+ "measured_at": "2026-09-22",
+ "basis": "Text extracted from the official ROC 111-115 question booklets on disk (exam_packs/學測/subjects/*/歷屆試題); 數學B units hand-classified item by item; the 第貳部分 題組 counted as three items.",
+ "自然": {
+  "first_part_multiple_choice": {
+   "111": 18,
+   "112": 15,
+   "113": 19,
+   "114": 18,
+   "115": 12,
+   "band": [
+    12,
+    19
+   ]
+  },
+  "first_part_groups": {
+   "111": 6,
+   "112": 3,
+   "113": 5,
+   "114": 5,
+   "115": 4
+  },
+  "mixed_last_item": {
+   "111": 60,
+   "112": 60,
+   "113": 56,
+   "114": 57,
+   "115": 56,
+   "band": [
+    56,
+    60
+   ]
+  },
+  "mixed_single_choice": {
+   "111": 6,
+   "112": 9,
+   "113": 5,
+   "114": 3,
+   "115": 6,
+   "band": [
+    3,
+    9
+   ]
+  },
+  "mixed_multiple_choice": {
+   "111": 10,
+   "112": 5,
+   "113": 7,
+   "114": 9,
+   "115": 6,
+   "band": [
+    5,
+    10
+   ]
+  },
+  "mixed_constructed": {
+   "111": 8,
+   "112": 8,
+   "113": 8,
+   "114": 9,
+   "115": 8,
+   "band": [
+    8,
+    9
+   ]
+  },
+  "mixed_groups": 6,
+  "mixed_group_size": [
+   3,
+   6
+  ],
+  "every_mixed_group_has_constructed": true,
+  "required_selection_count": [
+   2,
+   3
+  ],
+  "discipline_blocks": "four uninterrupted nine-item blocks in Q1-36 every year; order varies (111 物化生地, 112 地生化物, 113 生化物地, 114 生地物化, 115 地物化生)",
+  "rule": "validate_chinese_natural_scope.py: bands above replace the 115-only 24/12 and 6/6/8 counts; metadata.natural_choice_form_contract records the paper's actual counts.",
+  "chapters_first_part": {
+   "basis": "Maintainer's chapter reading of every Q1-36 item in the official 111-115 booklets (2026-09-22); items per chapter 111/112/113/114/115",
+   "物理": {
+    "運動與力、能量": [
+     4,
+     2,
+     2,
+     2,
+     3
+    ],
+    "電與磁": [
+     1,
+     0,
+     0,
+     1,
+     2
+    ],
+    "波與光": [
+     0,
+     4,
+     1,
+     2,
+     0
+    ],
+    "熱學": [
+     2,
+     2,
+     2,
+     1,
+     1
+    ],
+    "近代物理（原子、核、量子）": [
+     0,
+     0,
+     3,
+     2,
+     2
+    ],
+    "基本交互作用與科學史": [
+     2,
+     1,
+     1,
+     1,
+     0
+    ],
+    "天體物理": [
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "化學": {
+    "原子與週期表": [
+     2,
+     1,
+     1,
+     0,
+     1
+    ],
+    "化學鍵與結構": [
+     2,
+     2,
+     1,
+     1,
+     1
+    ],
+    "溶液、物質狀態與分離": [
+     2,
+     1,
+     1,
+     2,
+     1
+    ],
+    "酸鹼": [
+     1,
+     1,
+     0,
+     0,
+     2
+    ],
+    "反應與計量": [
+     1,
+     3,
+     2,
+     2,
+     1
+    ],
+    "有機、材料與生活化學": [
+     1,
+     1,
+     3,
+     3,
+     0
+    ],
+    "實驗與分析": [
+     0,
+     0,
+     1,
+     1,
+     3
+    ]
+   },
+   "生物": {
+    "細胞與能量": [
+     3,
+     2,
+     2,
+     2,
+     3
+    ],
+    "遺傳與分子生物": [
+     3,
+     2,
+     3,
+     3,
+     2
+    ],
+    "演化與分類": [
+     2,
+     2,
+     3,
+     2,
+     3
+    ],
+    "生理、免疫與生態": [
+     1,
+     3,
+     1,
+     2,
+     1
+    ]
+   },
+   "地科": {
+    "天文": [
+     5,
+     1,
+     0,
+     4,
+     3
+    ],
+    "大氣": [
+     2,
+     4,
+     3,
+     0,
+     2
+    ],
+    "海洋": [
+     2,
+     3,
+     2,
+     1,
+     0
+    ],
+    "固體地球": [
+     0,
+     1,
+     2,
+     3,
+     2
+    ],
+    "地球歷史與環境變遷": [
+     0,
+     0,
+     2,
+     1,
+     2
+    ]
+   },
+   "distinct_chapters_per_discipline": {
+    "物理": [
+     4,
+     4,
+     5,
+     7,
+     6
+    ],
+    "化學": [
+     6,
+     6,
+     6,
+     4,
+     6
+    ],
+    "生物": [
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "地科": [
+     3,
+     4,
+     4,
+     4,
+     4
+    ]
+   },
+   "max_items_in_one_chapter": 5,
+   "rule": "validate_chinese_natural_scope.py: each discipline's items span >= 3 distinct 108 主題 letters (second character of the content code) and no 主題 carries more than 6 items."
+  }
+ },
+ "數學B": {
+  "families_per_paper": {
+   "matrix": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "sphere_space": [
+    1,
+    1,
+    3,
+    2,
+    1
+   ],
+   "perspective": [
+    1,
+    3,
+    0,
+    1,
+    1
+   ],
+   "conic": [
+    0,
+    1,
+    0,
+    1,
+    1
+   ],
+   "polynomial": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "line_circle": [
+    1,
+    1,
+    1,
+    1,
+    5
+   ],
+   "trigonometry": [
+    3,
+    2,
+    1,
+    2,
+    2
+   ],
+   "exp_log": [
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "sequence": [
+    0,
+    2,
+    1,
+    1,
+    2
+   ],
+   "counting": [
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "probability": [
+    2,
+    1,
+    2,
+    2,
+    2
+   ],
+   "data": [
+    1,
+    1,
+    2,
+    1,
+    1
+   ],
+   "vector": [
+    2,
+    1,
+    2,
+    1,
+    0
+   ],
+   "number": [
+    2,
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  "items_with_11B_codes": [
+   7,
+   8,
+   6,
+   8,
+   8
+  ],
+  "mixed_group_topics": {
+   "111": "斜塔傾斜度（三角比）",
+   "112": "電線桿畫布（單點透視）",
+   "113": "截角石塊（空間幾何）",
+   "114": "UVI 指數與正弦模型",
+   "115": "星軌照片（圓方程式）"
+  },
+  "mixed_group_scores": {
+   "111": "5+4+6",
+   "112": "3+6+6",
+   "113": "3+4+8",
+   "114": "3+6+6",
+   "115": "3+6+6"
+  },
+  "rule": "validate_math_layout_contract.math_b_scope_errors: every paper has matrix, sphere/space, polynomial, line-circle, trigonometry, exp-log, counting, probability and data; sequence<=2, counting<=2, probability<=3, matrix<=2, sphere/space<=3, any family<=5, 3-10 items with 11B codes."
+ },
+ "英文": {
+  "vocabulary_stem_words": {
+   "min": 13,
+   "max": 24,
+   "band": [
+    12,
+    26
+   ]
+  },
+  "translation_sentence_cjk": {
+   "111": [
+    27,
+    28
+   ],
+   "112": [
+    18,
+    22
+   ],
+   "113": [
+    22,
+    28
+   ],
+   "114": [
+    19,
+    22
+   ],
+   "115": [
+    28,
+    25
+   ],
+   "band": [
+    16,
+    32
+   ]
+  },
+  "composition_prompt_cjk": {
+   "111": 108,
+   "112": 156,
+   "113": 174,
+   "114": 120,
+   "115": 123,
+   "max": 220,
+   "picture_based_every_year": true
+  },
+  "discourse_candidates": {
+   "111": 4,
+   "112": 4,
+   "113": 4,
+   "114": 4,
+   "115": 5
+  },
+  "reading_stems_35_46": {
+   "reference_or_meaning": [
+    2,
+    2,
+    2,
+    2,
+    4
+   ],
+   "true_or_not_detail": [
+    4,
+    3,
+    3,
+    2,
+    3
+   ],
+   "global_present_every_year": true
+  },
+  "mixed_47_50": "填充／簡答 4分 (47-48) + 多選 4分 + 簡答 2分 every year; never a 單選",
+  "rule": "validate_english_layout_contract.py: vocabulary stem 12-26 words, 中譯英 16-32 字, composition prompt <=220 字 with a picture, reading mix (>=2 reference, >=1 global, <=4 detail checks), mixed section shape.",
+  "vocabulary_list": {
+   "source": "https://www.ceec.edu.tw/SourceUse/ce37/4.pdf (高中英文參考詞彙表, sha256 8bcfc733…, 6,474 headwords, levels 1-6 ≈ 1,080 each), shipped as shared-data/ceec-english-vocabulary-list.json",
+   "vocabulary_answer_levels_111_115": {
+    "1": 1,
+    "2": 7,
+    "3": 11,
+    "4": 20,
+    "5": 6,
+    "6": 2,
+    "unresolved": 2
+   },
+   "vocabulary_answers_level_1_4_per_year": [
+    8,
+    9,
+    8,
+    8,
+    7
+   ],
+   "vocabulary_answers_level_5_6_per_year": [
+    2,
+    1,
+    1,
+    2,
+    3
+   ],
+   "level_6_answers": {
+    "113": "randomly",
+    "115": "consumption"
+   },
+   "unresolved_answers": {
+    "112": "supposedly",
+    "113": "compulsory"
+   },
+   "distractor_level_6_per_year": [
+    3,
+    5,
+    1,
+    6,
+    4
+   ],
+   "completion_bank_level_4_plus_per_year": [
+    4,
+    4,
+    2,
+    4,
+    3
+   ],
+   "completion_bank_unresolved_per_year": [
+    1,
+    1,
+    2,
+    0,
+    0
+   ],
+   "items_1_34_off_list_rate": [
+    0.031,
+    0.029,
+    0.022,
+    0.019,
+    0.023
+   ],
+   "items_1_34_level_6_rate": [
+    0.038,
+    0.039,
+    0.022,
+    0.054,
+    0.032
+   ],
+   "reading_35_50_off_list_rate": [
+    0.062,
+    0.073,
+    0.053,
+    0.045,
+    0.056
+   ],
+   "reading_35_50_level_6_rate": [
+    0.026,
+    0.021,
+    0.025,
+    0.045,
+    0.038
+   ],
+   "exclusions": "proper nouns (capitalised), contractions, hyphenated compounds, tokens of one or two letters; irregular and derived forms mapped to their headword",
+   "rule": "validate_english_vocabulary_scope.py at hosted save time: targets >=6 of 10 at levels 1-4 and >=1 at 5-6, at most one level-6 and one unresolved target; 文意選填 bank <=1 unresolved and >=2 at level 4+; items 1-34 off-list <=5% and level-6 <=7%; reading off-list >10% warns."
+  }
+ },
+ "國寫": {
+  "task_one_material_cjk": {
+   "111": 331,
+   "112": 531,
+   "113": 507,
+   "114": 606,
+   "115": 575,
+   "band": [
+    280,
+    700
+   ]
+  },
+  "task_two_material_cjk": {
+   "111": 277,
+   "112": 249,
+   "113": 443,
+   "114": 226,
+   "115": 233,
+   "band": [
+    180,
+    520
+   ]
+  },
+  "task_one_form": "問題（一）文長限80字以內（至多4行）（占4分）; 問題（二）文長限400字以內（至多19行）（占21分); 問題（一） cites 上文／甲、乙二文 every year",
+  "task_two_form": "請以「題目」為題（占25分）; 114 文長不限; asks for 書寫／抒發／敘述／描述 experience, feeling or imagination every year",
+  "attributed_materials": {
+   "111": "二 節錄自薛憶婷〈我們的課本〉",
+   "112": "一 改寫自《數字的陷阱》; 二 改寫自蔣勳《給青年藝術家的信》",
+   "113": "二 改寫自《樹木教我的人生課》",
+   "114": "一 改寫自泛科學〈擬社會互動〉",
+   "115": "一 改寫自《就算牠沒有臉》; 二 圖文改寫自幾米"
+  },
+  "classical_material": false,
+  "rule": "validate_writing_layout_contract.py (hosted save time and finalize)."
+ },
+ "社會": {
+  "first_part_single_choice": {
+   "111": 46,
+   "112": 45,
+   "113": 35,
+   "114": 42,
+   "115": 38,
+   "band": [
+    35,
+    46
+   ],
+   "score_each": 2
+  },
+  "first_part_groups": {
+   "111": 10,
+   "112": 10,
+   "113": 6,
+   "114": 6,
+   "115": 5
+  },
+  "second_part_items": {
+   "111": 21,
+   "112": 21,
+   "113": 29,
+   "114": 22,
+   "115": 27,
+   "band": [
+    21,
+    29
+   ]
+  },
+  "second_part_single_choice": {
+   "111": 11,
+   "112": 11,
+   "113": 19,
+   "114": 12,
+   "115": 16,
+   "band": [
+    11,
+    19
+   ]
+  },
+  "second_part_constructed": {
+   "111": 10,
+   "112": 10,
+   "113": 10,
+   "114": 10,
+   "115": 11,
+   "band": [
+    9,
+    11
+   ]
+  },
+  "second_part_groups": {
+   "111": 9,
+   "112": 8,
+   "113": 9,
+   "114": 8,
+   "115": 11,
+   "band": [
+    8,
+    11
+   ]
+  },
+  "total_items": {
+   "111": 67,
+   "112": 66,
+   "113": 64,
+   "114": 64,
+   "115": 65
+  },
+  "total_score": 144,
+  "options": "four, (A)-(D), single_choice only; no 多選 in any year",
+  "subdomains_per_year": {
+   "basis": "Maintainer's reading of every item head in the official 111-115 booklets (2026-09-22); counts 111/112/113/114/115",
+   "歷史": {
+    "臺灣史": [
+     8,
+     9,
+     8,
+     7,
+     10
+    ],
+    "中國與東亞史": [
+     5,
+     7,
+     7,
+     6,
+     8
+    ],
+    "世界史": [
+     7,
+     6,
+     10,
+     9,
+     5
+    ],
+    "史料判讀題": ">=1 every year"
+   },
+   "地理": {
+    "地理技能（地圖、GIS、遙測、等高線）": [
+     6,
+     3,
+     1,
+     3,
+     5
+    ],
+    "自然地理": [
+     3,
+     4,
+     4,
+     1,
+     3
+    ],
+    "人口與都市": [
+     1,
+     4,
+     1,
+     2,
+     1
+    ],
+    "產業與經濟地理": [
+     3,
+     3,
+     4,
+     5,
+     5
+    ],
+    "區域互賴與地緣": [
+     2,
+     1,
+     3,
+     4,
+     4
+    ],
+    "文化地理": [
+     1,
+     2,
+     1,
+     1,
+     1
+    ]
+   },
+   "公民與社會": {
+    "政治": [
+     5,
+     4,
+     3,
+     4,
+     3
+    ],
+    "法律": [
+     4,
+     5,
+     5,
+     5,
+     7
+    ],
+    "經濟": [
+     7,
+     6,
+     5,
+     6,
+     6
+    ],
+    "社會與文化": [
+     4,
+     4,
+     5,
+     5,
+     4
+    ]
+   }
+  },
+  "rule": "validate_social_item_design.form_band_errors (part sizes, types, (A)-(D)) and curriculum_breadth_errors (歷A-F／G-J／K-O >= 2 each, 地A >= 1, 地B >= 3, 地C >= 2, 公B >= 4 and >= 3 公民 主題)."
+ }
+}

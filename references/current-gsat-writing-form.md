@@ -1,0 +1,159 @@
+# Current GSAT Chinese writing gate
+
+The controlling source is the CEEC Chinese examination specification for academic year 111 onward, Part II:
+
+https://www.ceec.edu.tw/files/file_pool/1/0J270523673716106563/111%E5%AD%B8%E5%B9%B4%E5%BA%A6%E8%B5%B7%E9%81%A9%E7%94%A8%E5%AD%B8%E6%B8%AC%E5%9C%8B%E6%96%87%E8%80%83%E7%A7%91%E8%80%83%E8%A9%A6%E8%AA%AA%E6%98%8E%28%E5%AE%9A%E7%A8%BF%29.pdf
+
+## Hard constraints
+
+- The selected current paper profile is 90 minutes and 50 points, with two major tasks written on separate answer surfaces.
+- For the verified 115 layout, print the common heading `非選擇題（共二大題，占50分）` once, then begin the tasks with `一、` and `二、`. Do not invent printed category headings such as `知性題` or `情意題` merely because those are useful internal assessment labels.
+- The cover must state the two-task count, Chinese-only response rule and its exception, first-task/front and second-task/back answer-surface rule, black-ink pen guidance including the approximately 0.5–0.7 mm recommendation, correction rule, and the one-answer-sheet limit. Treat these as layout content, not optional editorial prose.
+- Preserve the two assessment roles: intellectual integration/judgement and affective perception/expression. Do not turn both tasks into argumentative current-affairs essays.
+- Preserve a corresponding source ecology. The first task may draw from research, reportage, public records, social analysis or mixed evidence. For the second task, search first in contemporary Chinese essays, new poetry, picture-book prose, literary nonfiction, cultural criticism, interviews, field notes, nature writing and other authored Chinese prose with sensory or reflective movement. The verified 111–115 official cluster is Chinese-facing: Chinese-authored literary works dominate the second task, with translated literature as an occasional exception. Do not default both tasks to government explainers or newly found English-language web essays merely because they are easy to verify.
+- Materials may come from humanities, society, or natural sciences, but must not require difficult or professional subject knowledge. All outside facts needed for writing must be readable from the material.
+- The intellectual task assesses accurate reading, analysis/synthesis, reasoned judgement, and organized expression.
+- The affective task elicits concrete lived experience or imaginatively realized scenes, genuine feeling/insight, and organized expression.
+- Reading-to-write is central. A source passage, chart, picture, photograph, or mixed material may be used; material is a thinking trigger and must remain connected to the writing task.
+- The official specification says current material should be no more than about 800 Chinese characters so candidates retain time to plan and write.
+- In the verified 111–115 papers, the first major task consistently contains a short reading/integration response of at most 80 Chinese characters worth 4 points and a longer response of at most 400 Chinese characters worth 21 points. A generated paper claiming this current-form cluster must not silently collapse the first task into one 25-point essay.
+- Subpart count is not universally fixed. If the selected 111–115 paper profile uses a 25-point first task and 25-point second task, follow that annual form, but do not teach the Skill that every future task must always split into the same number of subquestions.
+- Cross-domain material must be transformed into a new reading-and-writing task. Do not copy source phrasing, and do not require candidates to reproduce technical background.
+- Source eligibility is publisher-neutral. Do not maintain a whitelist, preferred outlet, or search shortcut that defaults to United Daily News or any other publisher, newspaper, magazine, platform, archive, or institution. A source wins because its transformed material fits the official length envelope, rhetorical role and evidence needs—not because its site is easy to search.
+- Meeting the material-length envelope is necessary, not sufficient. Traceability, rights and attribution safety, a concrete carrier, a semantic hinge, broad access, material dependence and task-role fit remain release gates.
+
+## Printed form measured on 111–115 (enforced by `validate_writing_layout_contract.py`)
+
+Text extracted from the five official 國寫 booklets on disk:
+
+| ROC | 一、material (CJK) | 問題（一） | 問題（二） | 二、material (CJK) | 二、task | attributed material |
+|---|---:|---|---|---:|---|---|
+| 111 | 331 (不老騎士／樂齡卡打車 reportage) | 80字/4行/4分 | 400字/19行/21分 | 277 (薛憶婷 poem + prose) | 「當我打開課本」25分 | 二 節錄自 |
+| 112 | 531 (福爾摩斯 dialogue) | same | same | 249 (蔣勳) | 「花草樹木的氣味記憶」25分 | 一、二 改寫自 |
+| 113 | 507 (甲、乙 two texts) | same, cites 甲、乙二文 | same | 443 (禹鐘榮) | 「縫隙的聯想」25分 | 二 改寫自 |
+| 114 | 606 (泛科學 擬社會互動) | same | same | 226 (52 赫茲鯨魚) | 「關於52赫茲，我想說的是……」文長不限 | 一 改寫自 |
+| 115 | 575 (黃宗慧、黃宗潔) | same | same | 233 + 幾米 圖文 | 「隔在我們之間的種種」25分 | 一 改寫自、二 圖文改寫自 |
+
+Fonts and geometry measured on the same booklets: body 12 pt on a 20 pt line; the
+說明 box and the reading materials in 標楷體 (DFKai-SB) with Times digits, materials
+indented two characters (x 87.9 pt against the 63.9 pt margin) and a lone 甲／乙
+label on its own line inside an 18 pt box (113 and 115, the two years that label
+their texts); 「一、」「二、」 in 明體 12.96 pt on their own line; 「請分項回答
+下列問題：」 and 問題（一）／（二） in 明體 12 pt at the margin, continuation lines
+hanging at 135.9 pt (six characters); the 第二大題 task paragraph indented two
+characters. The renderer reproduces this (`hosted_body_templates._writing_stem`)
+with the pinned 楷體 download; a hosted paper printed the materials in 明體 11 pt,
+merged 「一、」 with the first line, indented 問題（一） and 問題（二） differently,
+dropped both ask lines and printed half of the 說明.
+
+Materials print this way whichever block carries them: a constructed stem or a
+`passage` block (`_writing_paragraph`). A ChatGPT run (GW0923) put its materials in
+passage blocks, which then used the separate reading face and fell back to 明體
+because no `--reading-font` was passed; its page review passed anyway. The final
+checker and the inspector now read the embedded font names of the question PDF
+(`inspect_hosted_pdf.writing_font_role_samples`): a body-size ideograph of the 說明
+box or a material in a non-楷 face, or of an ask line or 問題 in a 楷 face, is the
+blocking `writing-font-role` failure. All four official 112–115 booklets pass it
+(111 embeds unnamed CID fonts). A computer that has 新細明體 and 標楷體 prints them
+(the preflight copies the installed faces into the run; they are never
+redistributed). A hosted sandbox has neither, so it uses the Ministry of Digital
+Affairs' 全字庫正宋體 (TW-Sung) and 全字庫正楷體 (TW-Kai), both OFL 1.1 and drawn in the
+same standard forms; Latin text is Nimbus Roman, MuPDF's Times clone. TW-Kai draws the Ministry of Education standard
+forms, as 標楷體 does; LXGW WenKai TC, the kai face until 2026.09.22.17, follows
+inherited forms and printed 為 as 爲 (W116M1 「較爲」「改爲」). Its text layer also
+mapped shared glyphs to variant code points (説明、評閲、硏究), so the checker
+accepts 「説明」 as the start of the 說明 box.
+
+The contract, run when a 國寫 batch is saved and again at finalize, requires: exactly two 大題;
+問題（一） printing `文長限80字以內（至多4行）` and `（占4分）` and pointing at 上文／甲、乙二文;
+問題（二） printing `文長限400字以內（至多19行）` and `（占21分）`; 第二大題 `（占25分）` with
+`請以「題目」為題` and an affective task (書寫／抒發／敘述／描述 experience, feeling, imagination);
+第一大題 material 280–700 CJK characters, 第二大題 material 180–520; at least one material with an
+inline attribution `（改寫自 作者《書名》／〈篇名〉）`; no 文言 material; no 自擬／命題所設 marker;
+the section 說明 printing the full official 115 wording; 「請分項回答下列問題：」 before 問題（一）
+and 「請回答下列問題：」 before the 第二大題 task.
+The measured table is `exam_packs/學測/shared-data/subject-form-envelopes-111-115.json`.
+
+## Empirical page and material calibration, 111–115
+
+The following figures are compact text-layer character counts from the official question pages. They include recurring directions and prompts, so they are layout-density evidence rather than an exact source-passage quota.
+
+| Academic year | first-task page | second-task page(s) |
+|---|---:|---:|
+| 111 | 829 | 459 |
+| 112 | 949 | 438 |
+| 113 | 934 | 617 |
+| 114 | 1,028 | 386 |
+| 115 | 1,141 | 217 + 367 |
+
+- A text-only current paper normally uses three printed pages: cover, first task, second task. Use a fourth page only when genuine cross-page or multimodal material needs it. Never create a nearly empty continuation page merely to imitate the page count of a different annual profile.
+- The first task is normally the denser analytical reading page. Its material supplies enough evidence, distinction and tension for both the 80-character response and the 400-character response.
+- The second task is not required to be longer than the first. Its adequacy is judged by the quality of the concrete carrier, semantic turn and experiential opening. For internal mock-paper calibration, text-only second-task pages commonly fall around 500–1,000 compact characters; use this as a warning band, not a mechanical target.
+- Every page must earn its existence. If removing a continuation page leaves the writing decision unchanged, collapse the task to one complete page or replace the material.
+
+### Release floor
+
+The page counts above include running headers, footers and the signature banner.
+Measured with that furniture removed
+(`exam_packs/學測/shared-data/current-form-literacy-envelope.json`), the official
+booklet prints 1,528–1,908 substantive characters, of which 1,109–1,460 is item
+content once the cover and 說明 blocks are excluded: 659–943 in the first task's
+packet and 345–576 in the second's.
+
+Release floors, at 0.85 of the weakest official year: **942 characters of item
+content** (the two packets and their prompts, excluding the cover and 說明
+blocks), **560 for the longer task packet**, **290 for the shorter**. A short
+prompt paired with a large answer area is not a full-form writing task, and a
+paper below the floor is repaired by restoring genuine source material, never by
+enlarging the response area or the type. `validate_literacy_load.py --subject 國寫`
+checks these; it cannot judge whether the material carries a real writing
+affordance, which stays with the source-grounding gate and human review.
+
+## Blind autonomous source discovery
+
+Historical questions define only the abstract form envelope above. They must not supply a subject, title, image, metaphor, proper noun, source family, or content sequence to the writing pass.
+
+For each new full paper:
+
+1. Start with only the intended rhetorical role and publication cutoff. Do not open past-question text or previous generated prompts.
+2. Search the public web independently. Collect at least eight traceable articles or public records for the paper, spanning at least four unrelated domains and four publishers. No publisher may occupy more than half the candidate pool merely because it is easier to discover or extract, and the search record must not declare a preferred or allowed publisher list. Both major tasks must begin from this search pool.
+3. Record a factual nucleus, concrete carrier, tension and possible response directions for each candidate. Reject sources selected only because they are recent or famous. The official 111–115 tasks never anchor a datable event, but four of five years tie at least one task to a current social trend (高齡出遊, 世代標籤, 擬社會互動, 養寵物, 親子溝通) built on older material: give at least one task a verified `current_trend` source under [current-form-topicality.md](current-form-topicality.md), and keep the affective task free of policy argument.
+4. Select one or more sources for each task, then write a new fact-and-viewpoint ledger. Design the material order, comparison, title and writing decision from scratch, but build every concrete scenario from a documented source rather than model invention. Do not reproduce an article's prose sequence or signature metaphor.
+5. Only after the paper is complete, run a separate similarity screen against the official corpus and prior generated papers. The official corpus may veto a draft but may never inspire its replacement.
+
+The search record must list URLs, publishers, dates, selection reasons and rejection reasons. It must also state that selection was publisher-neutral and explain any unavoidable concentration. A generated question that lacks an independent source record fails even if its prose is original.
+
+## Source-grounding gate
+
+For current-form 國寫, originality belongs to selection, arrangement, interpretation and question design; it does not license fabricated stimulus evidence.
+
+- Every printable event, institutional practice, case, statistic, experiment, object history and attributed viewpoint must be traceable to one or more identified sources. This applies to both major tasks.
+- Build a paragraph-level `material_source_map` before drafting. Each material paragraph must list the source ids that support it and the supported claims. A source id attached only at task level is insufficient.
+- The LLM may accurately paraphrase or translate, shorten several parts of one source, or juxtapose facts from multiple sources. It may add connective wording and create the title and questions, provided those additions do not assert a new factual case.
+- Do not add a fictional school, company, interviewee, product comparison, rehearsal, diary, survey result or composite anecdote merely to sharpen a contrast. A label such as `命題所設` or `情境模擬` does not cure this defect.
+- If a real source does not contain enough concrete evidence for the intended rhetorical job, select another source. Do not fill the missing evidence with plausible invention.
+- Print a concise adapted-source note that lets a reviewer identify the publisher and work. Internally retain the canonical URL, publication date, access date and claim mapping.
+- In the student paper, place the full-width parenthetical source note immediately after the final sentence of the passage it supports. Keep it in the same paragraph; allow only normal line wrapping. Never create a detached source-note paragraph, a bibliography box, or a large blank gap before it.
+- Do not introduce passages with `材料一：`, `材料二：`, or similar worksheet labels. When two or more supplied texts require identification, use unobtrusive `甲`, `乙`, and so on, matching the selected official layout profile.
+- Prefer a Chinese author/work/publisher line in the printed paper. A foreign work may be used only through a traceable published Chinese translation and should be cited by its established Chinese author/work form. A raw English article title, English magazine title, and year string is an internal audit record, not the default affective-task source line.
+- Release is blocked if any material paragraph has an empty source mapping, if `invented_modelling_values` is nonempty for a 國寫 source record, or if a source note describes any part of the material as devised for the question.
+
+## Source-selection tournament
+
+Before drafting prose, collect at least three mutually distinct candidate sources for each major task and record why the rejected candidates lost. A candidate may advance only if it passes all of these gates:
+
+1. **Traceable source** — an identifiable authored, published, archival or multimodal work found during the current run exists. A past-exam source or newly invented generic anecdote is not sufficient source selection.
+2. **Concrete carrier** — the material gives a sensuous object, action, scene, image, event or observable mechanism that a candidate can actually write through.
+3. **Semantic hinge** — the carrier can change meaning across time, viewpoint or relation. It must support a turn, not merely illustrate the prompt title.
+4. **Open affective directions** — more than one emotionally and ethically credible response is possible. The material must not pre-decide that the writer should feel nostalgia, gratitude or optimism.
+5. **Broad access** — no specialist knowledge is needed; a candidate without the source experience can still respond through lived experience or realized imagination.
+6. **Material dependence** — after the source is removed, the same generic essay cannot remain. At least one image, relation or tension from the material must shape the writing decision.
+7. **Rights and attribution safety** — prefer paraphrased facts, licensed images, public-domain works, or a short rights-safe excerpt. Preserve an internal source record and print a concise adapted-source note when appropriate.
+8. **Role-appropriate source voice** — an affective task normally needs authored prose or poetry, a lived observation, a literary image system or a reflective turn. A regulation, agency announcement or technical press release must lose unless its actual text supplies that quality; topical importance alone is not enough.
+9. **Chinese-facing literary ecology** — for the affective task, a contemporary Chinese essay, new poem, picture-book text or other published Chinese literary work wins by default. Translated literature remains available when a recognized Chinese translation exists. A directly translated English web essay loses unless no Chinese-source candidate can provide the same carrier and the editorial record explains the exception.
+
+Recency, popularity, outlet familiarity and novelty are tie-breakers only. A fashionable subject that lacks a concrete carrier or semantic hinge must lose to an older, stronger source. Never reward a candidate merely because its publisher is familiar or its archive is easy to search. Automatic discovery may nominate sources, but it may not promote one directly into a paper without the tournament and a human-readable rejection record. Apply the tournament to both major tasks, not only the affective task.
+
+## Release audit
+
+Reject a paper if its search record names a preferred/allowed publisher list, if fewer than eight candidates or four publishers/four domains were considered, if one publisher occupies more than half the candidate pool without a documented external-availability reason, if the two tasks test the same rhetorical job, if a technical fact outside the material is needed, if any material claim or case lacks paragraph-level provenance, if the material contains a model-invented anecdote, if the material can be removed without changing the response task, if the prompt merely asks for a generic opinion, if the affective task invites only slogans without a concrete experiential anchor, if the affective task bypasses available Chinese literary candidates for a raw English web essay without a documented reason, if a source note is detached from its material paragraph, if a passage is headed `材料一：` or `材料二：`, if a text-only paper contains an unearned continuation page, if the first task omits the selected profile's 80/4 plus 400/21 split, or if the rendered task headings/cover rules diverge from the selected verified annual layout profile.

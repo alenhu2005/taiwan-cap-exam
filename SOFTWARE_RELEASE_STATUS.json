@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "scope": "Legacy local install package (v0.7.1) only. The current web Skill ZIP is taiwan-exam-hosted-2026.09.22.25.zip; its scans and upload acceptance are the security.json and browser.json assets on the hosted-2026.09.22.25 GitHub Release, and its changes are in docs/web-updates.md.",
+  "status": "ready",
+  "reason": "Reviewed v0.7.1 fixes, exact-archive Defender and attachment scans, post-publication hash verification, and maintainer confirmation of normal browser downloads from both draft and stable URLs are complete. The verified ZIP is unchanged.",
+  "version": "0.7.1",
+  "download_url": "https://github.com/niansia/taiwan-exam/releases/download/v0.7.1/taiwan-exam-generator-v0.7.1.zip",
+  "incident": "references/security-incident-2026-09-09.md",
+  "resolution": {
+    "kind": "reviewed-code-fix",
+    "reference": "references/security-resolution-2026-09-12.md",
+    "archive_sha256": "18e9a07760ac544f98e58945b3b44e18153e0f038a7864a83f3816e829ccfec8",
+    "browser_result": "maintainer-confirmed-normal-download-at-stable-url",
+    "confirmed_date": "2026-09-12",
+    "security_scan": "downloads/security-scan.json"
+  },
+  "reviewed_fix_candidate": {
+    "kind": "reviewed-code-fix",
+    "reference": "references/security-resolution-2026-09-12.md",
+    "candidate_version": "0.7.1",
+    "candidate_archive_sha256": "18e9a07760ac544f98e58945b3b44e18153e0f038a7864a83f3816e829ccfec8",
+    "browser_result": "draft-and-stable-urls-user-confirmed",
+    "download_url": "https://github.com/niansia/taiwan-exam/releases/download/v0.7.1/taiwan-exam-generator-v0.7.1.zip",
+    "security_scan": "maintenance/security-scan-2026-09-12.json"
+  },
+  "withdrawn_archive_sha256": [
+    "935f091d1f16a8334a4e259adca99354f632237ba9b3422ad529513cb3078798",
+    "d7e6836d7ca965ba9b3a9d5f5434de09a8577f6e5bac1754113c5e0b11173a8e"
+  ]
+}

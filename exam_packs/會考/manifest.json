@@ -1,0 +1,18 @@
+{
+  "id": "cap",
+  "name": "國中教育會考",
+  "folder": "會考",
+  "pack_version": "0.3.0",
+  "schema_version": 1,
+  "default_curriculum": "108",
+  "subjects": [
+    "國文",
+    "英語",
+    "數學",
+    "社會",
+    "自然",
+    "寫作測驗"
+  ],
+  "official_baseline": "official-baseline.json",
+  "status": "ready"
+}

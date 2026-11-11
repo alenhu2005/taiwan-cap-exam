@@ -1,0 +1,1023 @@
+{
+  "schema_version": 1,
+  "exam": "學測",
+  "subject": "國文",
+  "curricula": [
+    "108"
+  ],
+  "record_count": 30,
+  "years": {
+    "minimum": 2022,
+    "maximum": 2026,
+    "counts": {
+      "2022": 6,
+      "2023": 6,
+      "2024": 6,
+      "2025": 6,
+      "2026": 6
+    }
+  },
+  "metadata_fingerprint": "41eae76a45893a59c50ef6fbbaf339d8cf8ebc120cbbdd7907020f08a6119b0a",
+  "built_at": "2026-09-09T16:55:56.787026+00:00",
+  "calibration_status": "ready",
+  "calibration_by_curriculum": {
+    "108": {
+      "record_count": 30,
+      "year_count": 5,
+      "official_record_count": 30,
+      "official_year_count": 5,
+      "mock_record_count": 0,
+      "dimensions": {
+        "semantic_sample": {
+          "status": "ready",
+          "record_count": 30,
+          "year_count": 5
+        },
+        "official_semantic_anchor": {
+          "status": "ready",
+          "record_count": 30,
+          "year_count": 5
+        },
+        "official_objective_difficulty": {
+          "status": "ready",
+          "measured_item_count": 167,
+          "year_count": 5,
+          "source_fingerprint": "0648ed9ed5d03b4925db00e760155adbeaa164ec5f492e3227951dd9a7e89421"
+        },
+        "difficulty_vector": {
+          "status": "ready",
+          "complete_count": 30,
+          "coverage": 1.0
+        },
+        "literacy_annotation": {
+          "status": "ready",
+          "complete_count": 30,
+          "coverage": 1.0
+        },
+        "stimulus_provenance": {
+          "status": "ready",
+          "competence_item_count": 25,
+          "complete_count": 25,
+          "coverage": 1.0
+        },
+        "constructed_response_calibration": {
+          "status": "ready",
+          "required_by_official_structure": true,
+          "official_record_count": 15,
+          "complete_count": 15,
+          "year_count": 5
+        },
+        "formal_layout": {
+          "status": "ready",
+          "verified_profile_count": 2,
+          "profile_ids": [
+            "gsat-chinese-comprehensive-115-measured-v1",
+            "gsat-chinese-writing-115-measured-v1"
+          ]
+        }
+      },
+      "status": "ready"
+    }
+  },
+  "calibration_notes": [],
+  "source_visibility": "aggregate-only",
+  "individual_source_question_ids_included": false,
+  "individual_question_numbers_included": false,
+  "distribution_policy": "multi-year probability envelope; never copy one historical paper's unit sequence",
+  "distributions": {
+    "unit": {
+      "情意寫作": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "知性寫作": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "知性統整": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "語文知識": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "現代文閱讀": {
+        "count": 4,
+        "proportion": 0.133333
+      },
+      "古典閱讀": {
+        "count": 2,
+        "proportion": 0.066667
+      },
+      "文史閱讀": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "科普閱讀": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "美學閱讀": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "藝術閱讀": {
+        "count": 1,
+        "proportion": 0.033333
+      }
+    },
+    "subunit": {
+      "字音辨識": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "中文字型、媒介與辨識性": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "以52赫茲抒發獨特生命經驗": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "以細節呈現人物性格": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "吃甘蔗經驗的互文比較": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "名字、字形與自我認同": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "天文知識與文本預設": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "廳堂壁面與書畫設計": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "情緒調整與禮教觀點": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "樂齡出遊的意義與身心需求": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "歸納擬社會互動的特徵": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "比較福爾摩斯與華生的生活態度": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "比較臺灣與丹麥樂齡活動的內容與用意": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "由臉與共感說明豬魚選擇": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "當我打開課本：知識探索經驗": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "福爾摩斯創作與讀者補釋": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "縫隙的聯想與生命體悟": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "自敘帖的流傳與創作資訊": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "舉例評論貼標籤現象": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "花草樹木的氣味記憶": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "評論擬社會互動的正負影響": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "說明標籤用於人的正負作用": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "說明華生購買午餐的兩項錯誤": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "逃避或承擔倫理責任的選擇": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "鄭崇和家族史料判讀": {
+        "count": 1,
+        "proportion": 0.033333
+      },
+      "隔閡、換位思考與關係回應": {
+        "count": 1,
+        "proportion": 0.033333
+      }
+    },
+    "question_type": {
+      "guided_writing": {
+        "count": 15,
+        "proportion": 0.5
+      },
+      "single_choice": {
+        "count": 15,
+        "proportion": 0.5
+      }
+    },
+    "section": {
+      "國寫-section-1": {
+        "count": 15,
+        "proportion": 0.5
+      },
+      "國綜-section-1": {
+        "count": 15,
+        "proportion": 0.5
+      }
+    },
+    "domain": {
+      "國寫": {
+        "count": 15,
+        "proportion": 0.5
+      },
+      "國綜": {
+        "count": 15,
+        "proportion": 0.5
+      }
+    },
+    "score": {
+      "2": {
+        "count": 15,
+        "proportion": 0.5
+      },
+      "21": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "25": {
+        "count": 5,
+        "proportion": 0.166667
+      },
+      "4": {
+        "count": 5,
+        "proportion": 0.166667
+      }
+    },
+    "difficulty_band": {
+      "medium": {
+        "count": 15,
+        "proportion": 0.5
+      },
+      "medium_hard": {
+        "count": 11,
+        "proportion": 0.366667
+      },
+      "easy": {
+        "count": 3,
+        "proportion": 0.1
+      },
+      "hard": {
+        "count": 1,
+        "proportion": 0.033333
+      }
+    },
+    "difficulty_basis": {
+      "empirical": {
+        "count": 15,
+        "proportion": 0.5
+      },
+      "expert_review": {
+        "count": 15,
+        "proportion": 0.5
+      }
+    },
+    "source_kind": {
+      "official_past_exam": {
+        "count": 30,
+        "proportion": 1.0
+      }
+    }
+  },
+  "aggregate_pattern_clusters": [
+    {
+      "cluster_id": "aggregate-3f5ff4dd2e9e",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "語文知識",
+        "subunit": "字音辨識",
+        "stimulus_type": "language_form",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 4,
+      "supporting_year_count": 4,
+      "year_range": [
+        2022,
+        2025
+      ],
+      "proportion": 0.133333
+    },
+    {
+      "cluster_id": "aggregate-006d2043337f",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "語文知識",
+        "subunit": "字音辨識",
+        "stimulus_type": "language_form",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 5,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-0743e99776be",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "藝術閱讀",
+        "subunit": "自敘帖的流傳與創作資訊",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-164b91745ce8",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "古典閱讀",
+        "subunit": "情緒調整與禮教觀點",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-1c48e1bc7c1d",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 4,
+        "unit": "知性統整",
+        "subunit": "說明標籤用於人的正負作用",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-239f2af27cad",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "科普閱讀",
+        "subunit": "天文知識與文本預設",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-4f02d2fbd0a6",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 25,
+        "unit": "情意寫作",
+        "subunit": "當我打開課本：知識探索經驗",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-50a15a500954",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 4,
+        "unit": "知性統整",
+        "subunit": "由臉與共感說明豬魚選擇",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-565a1be18fd8",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "現代文閱讀",
+        "subunit": "名字、字形與自我認同",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-57acddd66516",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "現代文閱讀",
+        "subunit": "吃甘蔗經驗的互文比較",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-5acb9421e9a7",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 21,
+        "unit": "知性寫作",
+        "subunit": "比較福爾摩斯與華生的生活態度",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-5e5f05cf5648",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 21,
+        "unit": "知性寫作",
+        "subunit": "舉例評論貼標籤現象",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-69af6f921116",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 25,
+        "unit": "情意寫作",
+        "subunit": "隔閡、換位思考與關係回應",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": true,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-6ec84ce4d499",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "美學閱讀",
+        "subunit": "廳堂壁面與書畫設計",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-70860697a1dc",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 25,
+        "unit": "情意寫作",
+        "subunit": "縫隙的聯想與生命體悟",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-97a5ca3d3188",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 21,
+        "unit": "知性寫作",
+        "subunit": "評論擬社會互動的正負影響",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-ae5800479dde",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 21,
+        "unit": "知性寫作",
+        "subunit": "樂齡出遊的意義與身心需求",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-b4e81d4b7c2b",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "古典閱讀",
+        "subunit": "以細節呈現人物性格",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 2,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-b8eca5203a2c",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 21,
+        "unit": "知性寫作",
+        "subunit": "逃避或承擔倫理責任的選擇",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-bc547dd3f6d3",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 4,
+        "unit": "知性統整",
+        "subunit": "比較臺灣與丹麥樂齡活動的內容與用意",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-be3a73343fa0",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "文史閱讀",
+        "subunit": "鄭崇和家族史料判讀",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2022,
+        2022
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-c0e7e2e2b419",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "現代文閱讀",
+        "subunit": "中文字型、媒介與辨識性",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 1,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2024,
+        2024
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-ccf8ff06c8de",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國綜-section-1",
+        "domain": "國綜",
+        "question_type": "single_choice",
+        "score": 2,
+        "unit": "現代文閱讀",
+        "subunit": "福爾摩斯創作與讀者補釋",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2026,
+        2026
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-d5809014a383",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 25,
+        "unit": "情意寫作",
+        "subunit": "花草樹木的氣味記憶",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-f21c26408850",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 25,
+        "unit": "情意寫作",
+        "subunit": "以52赫茲抒發獨特生命經驗",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 4,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-f79c85e13702",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 4,
+        "unit": "知性統整",
+        "subunit": "說明華生購買午餐的兩項錯誤",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2023,
+        2023
+      ],
+      "proportion": 0.033333
+    },
+    {
+      "cluster_id": "aggregate-fb8093b0f0c4",
+      "pattern": {
+        "curriculum": "108",
+        "regime": "111學年度起",
+        "section": "國寫-section-1",
+        "domain": "國寫",
+        "question_type": "guided_writing",
+        "score": 4,
+        "unit": "知性統整",
+        "subunit": "歸納擬社會互動的特徵",
+        "stimulus_type": "reading_or_writing_prompt",
+        "requires_diagram": false,
+        "difficulty": {
+          "overall": 3,
+          "basis": "multi-item-aggregate"
+        }
+      },
+      "count": 1,
+      "supporting_year_count": 1,
+      "year_range": [
+        2025,
+        2025
+      ],
+      "proportion": 0.033333
+    }
+  ]
+}

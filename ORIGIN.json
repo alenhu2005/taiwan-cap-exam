@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "upstream": {
+    "project_id": "taiwan-exam-generator",
+    "name": "Taiwan Exam",
+    "repository_url": "https://github.com/niansia/taiwan-exam"
+  },
+  "distribution": {
+    "name": "Taiwan CAP Exam",
+    "is_derivative": true,
+    "repository_url": "https://github.com/alenhu2005/taiwan-cap-exam",
+    "changes": [
+      "Adds 國中教育會考 (會考) generation: 國文、英語閱讀、數學、社會、自然、寫作測驗 (English listening out of scope).",
+      "Adds 115-form 會考 fixed templates (A4) measured from the official booklets, and a 會考 template map.",
+      "Adds 會考 calibration from official 113-115 booklets, 各題通過率 and 各題鑑別度 (aggregate data and hashes only).",
+      "Adds 會考 form and item-quality gates (answer leaks, distractor quality, domain order, 混合考點, scope, explanations) and selectable difficulty levels.",
+      "Adds 會考 tools (cap_plan.py, hosted_auto_review.py, run_hosted_workflow.py status) and routes 會考 through the hosted workflow without 學測 rules.",
+      "Replaces README with a 會考-focused README."
+    ]
+  },
+  "licensing": {
+    "status": "owner-confirmed",
+    "spdx_id": "MIT",
+    "copyright_holders": [
+      "niansia",
+      "alenhu2005"
+    ],
+    "license_file": "LICENSE"
+  }
+}
