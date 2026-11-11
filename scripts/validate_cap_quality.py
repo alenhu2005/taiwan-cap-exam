@@ -40,6 +40,16 @@ INTEGRATED_SHARE = 0.20  # items joining concepts across domains (社會) or cur
 SINGLE_STEP_SHARE = 0.20  # items answerable from one decision (cap116a: 「單一知識點直球對決」)
 MIN_PICK_RATE = 0.05      # a distractor nobody chooses does not discriminate
 MAX_RUN, MIN_SWITCHES = 7, 10
+# Settings of the worked examples in references/current-cap-form.md and of reviewed AI papers: they
+# illustrate a technique, and a paper that reuses them repeats other papers instead of inventing.
+EXAMPLE_SETTINGS = re.compile(r"坑頭|坑尾|咖啡(?:果|農場)|剝除果皮|柏林圍牆|聖索菲亞|尼羅河.{0,6}夜|朗多尼亞|魚骨狀|五腳基|"
+                              r"斯巴達.{0,4}棄嬰|普魯塔克|牙刷主義|床蝨|臭蟲|北極.{0,4}航線|宏都拉斯.{0,4}白蝦|"
+                              r"天災減產導致供給|立賣契人|竹塹社")
+# cap116a took all 11 photographs from the bundled 59-photo library although the preflight found
+# web images reachable; every paper then repeats the same pictures. With the web reachable,
+# most photographs must be newly found (scripts/web_image.py); the library is the fallback.
+FRESH_PHOTO_SHARE = 1.0   # maintainer: every photograph newly found when the web is reachable
+PHOTO_KINDS = {"photo", "archival_image", "satellite_image", "aerial_photo", "artifact_photo"}
 
 
 def plain(value) -> str:
@@ -115,6 +125,10 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
         lengths = [len(t) for t in options.values() if t]
         if lengths and len(options[key]) >= 4 and max(lengths) / max(1, min(lengths)) > SPREAD_LIMIT:
             spread_items += 1
+        setting = EXAMPLE_SETTINGS.search(str(q.get("group_stimulus") or "") + str(q.get("prompt") or ""))
+        if setting:
+            errors.append(f"Q{n}: reuses the setting 「{setting.group(0)}」 of a worked example or a reviewed paper; examples "
+                          "show a technique only: invent a new situation for this paper")
         if LEAD_IN.search(str(q.get("group_stimulus") or "") + str(q.get("prompt") or "")):
             errors.append(f"Q{n}: do not type the 題組 lead-in (「閱讀下列選文，回答…」); the renderer prints it once")
         if subject in NON_MATH and COUNTING.search(str(q.get("prompt") or "")):
@@ -187,6 +201,26 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
                 sequence.append(domain)
     if not full or not choice:
         return errors
+    if asset_root is not None and (Path(asset_root) / "preflight.json").is_file():
+        import json
+        try:
+            reachable = (json.loads((Path(asset_root) / "preflight.json").read_text(encoding="utf-8"))
+                         .get("image_sources") or {}).get("web_images") == "reachable"
+        except ValueError:
+            reachable = False
+        modes = [((q.get("visual_asset") or {}).get("visual_spec") or {}).get("generation_mode")
+                 for q in choice if (((q.get("visual_asset") or {}).get("visual_spec") or {}).get("kind")) in PHOTO_KINDS]
+        assets = {}
+        for q in choice:
+            asset = q.get("visual_asset") or {}
+            spec_ = asset.get("visual_spec") or {}
+            if spec_.get("kind") in PHOTO_KINDS:
+                assets[asset.get("sha256") or asset.get("path")] = spec_.get("generation_mode")
+        fresh = sum(mode == "web_source" for mode in assets.values())
+        if reachable and assets and fresh < FRESH_PHOTO_SHARE * len(assets):
+            errors.append(f"only {fresh} of {len(assets)} photographs are newly found (web_source); the web is reachable, so "
+                          "every photograph must be: search with `python scripts/web_image.py search \"…\"` and "
+                          "use `web_image.py use`; the bundled photo library is the fallback when the web is unreachable")
     if spread_items > max(2, SPREAD_SHARE * len(choice)):
         errors.append(f"{spread_items} items have one option over {SPREAD_LIMIT:g} times as long as another (official 90% "
                       f"at most 1.75): keep the four options alike in length, voice and structure")

@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import secrets
 import statistics
 import sys
 from pathlib import Path
@@ -31,6 +32,26 @@ SECTION_TITLES = {
     "會考社會": ("一、單題：（{a}～{b}題）", "二、題組：（{a}～{b}題）"),
 }
 DOMAINS = ("地理", "歷史", "公民")
+# Broad 國中 strands each slot is pointed at, drawn per paper_id so repeated papers cover different
+# ground (a maintainer found repeated generations converging on the same topics and pictures).
+FOCUS = {
+    "歷史": ("七年級臺灣史・史前與原住民族", "七年級臺灣史・荷西與鄭氏", "七年級臺灣史・清帝國時期", "七年級臺灣史・日本統治時期",
+             "七年級臺灣史・戰後臺灣", "八年級中國與東亞・先秦至隋唐", "八年級中國與東亞・宋元明清", "八年級中國與東亞・近代變局",
+             "八年級中國與東亞・二十世紀", "九年級世界史・古代文明", "九年級世界史・中古至近代歐洲", "九年級世界史・帝國主義與世界大戰",
+             "九年級世界史・冷戰與當代"),
+    "地理": ("七年級臺灣・地形與氣候", "七年級臺灣・人口與產業", "七年級臺灣・區域與交通", "八年級中國與東亞・自然環境",
+             "八年級中國與東亞・人口與產業", "九年級世界・東南亞與南亞", "九年級世界・西亞與非洲", "九年級世界・歐洲與俄羅斯",
+             "九年級世界・美洲", "九年級世界・大洋洲與兩極", "地理技能・地圖與統計判讀"),
+    "公民": ("七年級・個人、家庭與社群", "七年級・性別、文化與多元", "八年級・民主政治與政府", "八年級・法律與權利救濟",
+             "八年級・刑法、民法與行政法", "九年級・經濟活動與市場", "九年級・貨幣、金融與政府經濟角色", "九年級・全球化與國際社會"),
+    "會考自然": ("生物・細胞與生殖遺傳", "生物・生理與恆定", "生物・生態與演化", "理化・物質與化學反應", "理化・酸鹼與氧化還原",
+                 "理化・力與運動", "理化・能量、熱與電磁", "理化・波動、光與聲", "地球科學・岩石、地形與板塊", "地球科學・天氣與氣候",
+                 "地球科學・天文", "跨科・科學探究與資料判讀"),
+    "會考數學": ("數與量", "代數與方程式", "函數與坐標", "平面幾何與證明", "空間與立體", "統計與機率", "數列與規律"),
+    "會考國文": ("語文知識・字音字形與詞義", "語文知識・修辭與文法", "白話文閱讀", "文言文閱讀", "詩詞曲賞析", "應用文與圖表文本"),
+    "會考英語": ("school life", "family and community", "health and sport", "science and technology", "environment",
+                 "travel and culture", "work and money", "media and notices"),
+}
 TITLES = {"會考寫作測驗": "寫作測驗"}
 
 
@@ -114,7 +135,10 @@ def sections(subject: str) -> list[dict]:
              "instructions": []} for i, s in enumerate(found[:2])]
 
 
-def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考") -> dict:
+def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", seed: str | None = None) -> dict:
+    """A fresh random seed per plan unless one is given: two papers never share a topic draw,
+    even with the same paper_id; the seed is saved so the same paper resumes with the same draw."""
+    seed = seed or secrets.token_hex(8)
     if subject not in SUBJECTS or level not in LEVELS:
         raise ValueError(f"subject must be one of {SUBJECTS}; level one of {LEVELS}")
     current = form(subject)["current_form"]
@@ -126,14 +150,14 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考") 
                 "difficulty_balance_plan": {"basis": f"113-115 official 通過率 by position, level {level}",
                                             "required_bands": [], "target_counts": {b: None for b in BANDS},
                                             "shared_reading_minutes": None},
-                "visual_contract": {}, "mixed_group_originality_records": []}
+                "visual_contract": {}, "mixed_group_originality_records": [], "variety_seed": seed}
     slots = []
     if subject != "會考寫作測驗":
         targets = position_targets(subject, level)
         count = current["choice_items"]["reference_115"]
         groups = {n: g for g in current.get("groups_115") or [] for n in range(g[0], g[1] + 1)}
         single = [n for n in range(1, count + 1) if n not in groups]
-        schedule = dict(zip(single, domain_schedule(len(single), paper_id))) if subject == "會考社會" else {}
+        schedule = dict(zip(single, domain_schedule(len(single), seed))) if subject == "會考社會" else {}
         secs = sections(subject)
         for n in range(1, count + 1):
             slot = {"number": n, "type": "single_choice",
@@ -141,6 +165,10 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考") 
                     "group": groups.get(n), **targets.get(n, {})}
             if n in schedule:
                 slot["domain"] = schedule[n]
+            pool = FOCUS.get(slot.get("domain") or subject)
+            if pool:
+                rank = hashlib.sha256(f"{seed}:{n}".encode()).digest()[0]
+                slot["suggested_focus"] = pool[rank % len(pool)]
             slots.append(slot)
         for n in range(1, current.get("constructed_items", 0) + 1):
             slots.append({"number": n, "type": "constructed_response", "section_id": "s2", "rubric": "0-3 級分"})
@@ -151,7 +179,7 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考") 
 
 
 def item(subject: str, number: int, level: str = "會考", kind: str = "single_choice") -> dict:
-    slots = [s for s in plan(subject, "skeleton", level=level)["planning_slots"]
+    slots = [s for s in plan(subject, "skeleton", level=level, seed="skeleton")["planning_slots"]
              if s["number"] == number and s["type"] == kind]
     if not slots:
         raise ValueError(f"{subject} has no {kind} slot {number}")
@@ -180,7 +208,7 @@ def item(subject: str, number: int, level: str = "會考", kind: str = "single_c
             "question": question, "answer": answer,
             "rules": ["references/current-cap-form.md 品質標準 and 難度等級",
                       "cap_distractors: delete the key's row; each wrong option names its misconception and the real "
-                      "neighbouring concept it borrows (三省六部 ↔ 三公九卿), never an absurd or absolute claim",
+                      "neighbouring concept it borrows, never an absurd or absolute claim",
                       "hidden_concept: the term the student must infer; it may not appear in the stem, material or figure",
                       "混合考點: at least 20% of items join two domains (社會: cap_competency.domains, primary first) or two "
                       "curriculum strands, with a bridge saying why the answer needs both",
@@ -224,13 +252,14 @@ def main() -> int:
     p = sub.add_parser("plan"); p.add_argument("--subject", required=True, choices=SUBJECTS)
     p.add_argument("--paper-id", required=True); p.add_argument("--year", default="116")
     p.add_argument("--level", default="會考", choices=LEVELS); p.add_argument("--output", type=Path)
+    p.add_argument("--seed", help="reuse a saved variety_seed (resuming the same paper); omit for a new draw")
     i = sub.add_parser("item"); i.add_argument("--subject", required=True, choices=SUBJECTS)
     i.add_argument("--number", type=int, required=True); i.add_argument("--level", default="會考", choices=LEVELS)
     i.add_argument("--constructed", action="store_true", help="數學 非選擇題 slot")
     c = sub.add_parser("check"); c.add_argument("plan", type=Path)
     args = parser.parse_args()
     if args.command == "plan":
-        result = plan(args.subject, args.paper_id, args.year, args.level)
+        result = plan(args.subject, args.paper_id, args.year, args.level, args.seed)
         if args.output:
             args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
             result = {"status": "plan-written", "output": str(args.output), "check": check(result)}

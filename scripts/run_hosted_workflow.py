@@ -1935,6 +1935,80 @@ def status(state_path):
     return report
 
 
+def advance(state_path, year=None):
+    """Preset workflow: run every mechanical step in order and stop only where an author must write or look.
+
+    Order: items complete → check-figures → auto-review (structure, balance) → item review drafts →
+    checkpoint → lock-content → specs → plan → build. Each stop says exactly what to do, then run
+    `advance` again. After the build: look at the flagged pages, record-review, then auto-review the
+    built booklets (template_composition, answer_separation), checkpoint and finalize.
+    """
+    from hosted_auto_review import auto_review
+    from check_hosted_run import ITEM_GATES
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    done = []
+
+    def stop(step, todo, details=None):
+        return {'status': 'pending', 'stopped_at': step, 'done': done, 'todo': todo, **({'details': details} if details else {})}
+
+    summary = status(state_path)
+    if (summary['items_target'] and summary['items_saved'] < summary['items_target']) or summary['subject_gate_open']:
+        return stop('authoring', summary['next_step'], summary['subject_gate_sample'] or None)
+    done.append('items complete')
+    if not read(state_path).get('exam'):
+        checkpoint(root)
+    figures = check_figures(state_path)
+    if figures.get('status') != 'pass':
+        return stop('check-figures', 'fix the figures listed, re-save the items, then advance', figures.get('errors', [])[:8])
+    done.append('figures pass')
+    mechanical = auto_review(state_path, ('structure_scope', 'difficulty_balance'))
+    if mechanical['status'] != 'ok':
+        return stop('auto-review', mechanical['next_action'])
+    done.append('structure_scope and difficulty_balance written')
+    exam_sha = digest(root / 'exam.json')
+    reviewer = [*ITEM_GATES, 'source_grounding']
+    stale = [g for g in reviewer if not (root / f'{g}.json').is_file()
+             or read(root / f'{g}.json').get('exam_sha256') != exam_sha or read(root / f'{g}.json').get('status') != 'pass']
+    if stale:
+        try:
+            checkpoint(root)
+            refresh_evidence(state_path)
+        except (OSError, ValueError, KeyError):
+            pass
+        return stop('reviews', 'complete these reviews (drafts are <gate>.draft.json where they exist; edit only the flagged '
+                    'rows) and save each as <gate>.json: ' + ', '.join(stale))
+    checkpoint(root)
+    done.append('reviews registered')
+    if not (root / 'content-lock.json').is_file():
+        content_lock(state_path)
+        done.append('content locked')
+    written = specs(state_path)
+    font, kai = recorded_font(state_path), recorded_kai_font(state_path)
+    question, solution = root / written['question_spec'], root / written['solution_spec']
+    def fresh(prefix):
+        n = 1
+        while (root / f'{prefix}-v{n}').exists():
+            n += 1
+        return root / f'{prefix}-v{n}'
+    paged = plan(state_path, question, solution, font, fresh('plan'), kai_font=kai)
+    if paged.get('bottom_void_attention') or paged.get('form_attention'):
+        return stop('plan', 'adjust layout hints (figure width_percent, option layout) for the pages listed, then advance',
+                    {'bottom_void': paged.get('bottom_void_attention'), 'form': paged.get('form_attention')})
+    done.append(f"plan clean ({paged['page_counts']})")
+    exam = read(root / 'exam.json')
+    year = year or (re.match(r'(\d{3})', str(exam.get('metadata', {}).get('title') or '')) or [None, '116'])[1]
+    built = build(state_path, question, solution, font, fresh('build'), year=str(year), kai_font=kai)
+    done.append('both booklets built')
+    review_state = built.get('continue_from_state')
+    return {'status': 'built', 'done': done, 'review_state': review_state,
+            'todo': ['look at the flagged pages and item crops the build lists, then record-review --state ' + str(review_state),
+                     'run_hosted_workflow.py auto-review --state ' + str(review_state) +
+                     ' --gates template_composition answer_separation',
+                     'checkpoint, then finalize --state ' + str(review_state)],
+            'build': {k: built.get(k) for k in ('status', 'review_batches', 'iteration_budget') if k in built}}
+
+
 def run_auto_review(state_path, gates=None):
     from hosted_auto_review import GATES, auto_review
     return auto_review(state_path, tuple(gates) if gates else GATES)
@@ -2004,6 +2078,9 @@ def main():
     auto_parser = commands.add_parser('auto-review', help='Write the four mechanical paper reviews from executed checks')
     auto_parser.add_argument('--state', type=Path, required=True)
     auto_parser.add_argument('--gates', nargs='*', default=None)
+    advance_parser = commands.add_parser('advance', help='Preset workflow: run the next mechanical steps, stop where an author must act')
+    advance_parser.add_argument('--state', type=Path, required=True)
+    advance_parser.add_argument('--year')
     status_parser = commands.add_parser('status', help='Short resume summary; writes NEXT.md')
     status_parser.add_argument('--state', type=Path, required=True)
     args = vars(parser.parse_args())
@@ -2019,7 +2096,8 @@ def main():
                 args['font'] = recorded_font(args['state_path'])
             result = {'build': build, 'specs': specs, 'proof': proof, 'plan': plan, 'finalize': finalize,
                       'clock': clock, 'lock-content': content_lock, 'refresh-evidence': refresh_evidence,
-                      'check-figures': check_figures, 'status': status, 'auto-review': run_auto_review}[action](**args)
+                      'check-figures': check_figures, 'status': status, 'auto-review': run_auto_review,
+                      'advance': advance}[action](**args)
     except (OSError, ValueError, KeyError, RuntimeError) as exc:
         print(json.dumps({'status': 'pending', 'errors': [str(exc)]}, ensure_ascii=False))
         return 2

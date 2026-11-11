@@ -617,17 +617,17 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "references/cap-execution-card.md",
-    "bytes": 4023,
-    "sha256": "677363f313ee071d027465c3781afbb282556102e00ea18c6cffceef5beb4056",
-    "embedded_bytes": 4023,
-    "embedded_sha256": "677363f313ee071d027465c3781afbb282556102e00ea18c6cffceef5beb4056"
+    "bytes": 4654,
+    "sha256": "e2e4357deb97408b65fb0a3a426e0fe7eef4f88a580ad39e8ac63cf3720c8f3d",
+    "embedded_bytes": 4654,
+    "embedded_sha256": "e2e4357deb97408b65fb0a3a426e0fe7eef4f88a580ad39e8ac63cf3720c8f3d"
   },
   {
     "path": "references/current-cap-form.md",
-    "bytes": 16541,
-    "sha256": "d42f33a6123e009502d7834dad2bff47354026469c5486c8533207259f68ed5d",
-    "embedded_bytes": 16541,
-    "embedded_sha256": "d42f33a6123e009502d7834dad2bff47354026469c5486c8533207259f68ed5d"
+    "bytes": 14269,
+    "sha256": "9b3697c3c34ef93ddcb05f473e1090ca80fc69b45f5683cc208e49c83078e793",
+    "embedded_bytes": 14269,
+    "embedded_sha256": "9b3697c3c34ef93ddcb05f473e1090ca80fc69b45f5683cc208e49c83078e793"
   },
   {
     "path": "references/current-form-literacy-load.md",
@@ -1023,10 +1023,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/cap_plan.py",
-    "bytes": 15066,
-    "sha256": "e66566f871d5a5e0460add6ddfe5a466b14445ea04142c5c0aa56385e1160af4",
-    "embedded_bytes": 15066,
-    "embedded_sha256": "e66566f871d5a5e0460add6ddfe5a466b14445ea04142c5c0aa56385e1160af4"
+    "bytes": 18312,
+    "sha256": "b0b42907b12bb57d9d0386091d7bb0606e8d2f18d4da54839c55ba2a62ff101b",
+    "embedded_bytes": 18312,
+    "embedded_sha256": "b0b42907b12bb57d9d0386091d7bb0606e8d2f18d4da54839c55ba2a62ff101b"
   },
   {
     "path": "scripts/check_hosted_run.py",
@@ -1177,10 +1177,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/photo_library.py",
-    "bytes": 11229,
-    "sha256": "f621ed02a7a3c72b032556bc958cf09478e063259b6e7e07067d53f8eee6a79a",
-    "embedded_bytes": 11029,
-    "embedded_sha256": "b93e0def3b0f8d332d3feaab66e7613ab8b3b679461e5fcf9c4c7648bfa621b1"
+    "bytes": 11599,
+    "sha256": "849a9613c0c32d1c94de8c24e4a8752b06165160273b4a0438efbeaa3358c0d7",
+    "embedded_bytes": 11599,
+    "embedded_sha256": "849a9613c0c32d1c94de8c24e4a8752b06165160273b4a0438efbeaa3358c0d7"
   },
   {
     "path": "scripts/prepare_hosted_review.py",
@@ -1191,10 +1191,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/prepare_hosted_run.py",
-    "bytes": 44719,
-    "sha256": "204e118f71e74ae00cd602de1766154d09e7753f4c0d264b85f5262ba3f0639d",
-    "embedded_bytes": 44719,
-    "embedded_sha256": "204e118f71e74ae00cd602de1766154d09e7753f4c0d264b85f5262ba3f0639d"
+    "bytes": 45099,
+    "sha256": "e42a5d9a73b34267adc93b091860188ead5743a7bfc678c088b1eae5f686ff5c",
+    "embedded_bytes": 45099,
+    "embedded_sha256": "e42a5d9a73b34267adc93b091860188ead5743a7bfc678c088b1eae5f686ff5c"
   },
   {
     "path": "scripts/read_web_knowledge.py",
@@ -1205,10 +1205,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/run_hosted_workflow.py",
-    "bytes": 118386,
-    "sha256": "c784691f68632116c53656cc090e5e5b546f36606212f9ecda74fa1a58e13377",
-    "embedded_bytes": 118386,
-    "embedded_sha256": "c784691f68632116c53656cc090e5e5b546f36606212f9ecda74fa1a58e13377"
+    "bytes": 122943,
+    "sha256": "909f46ee3e10f0e037706bcbb8b3762b175f2447e8dd42cea5fe7fc8cce59412",
+    "embedded_bytes": 122943,
+    "embedded_sha256": "909f46ee3e10f0e037706bcbb8b3762b175f2447e8dd42cea5fe7fc8cce59412"
   },
   {
     "path": "scripts/safe_rendering.py",
@@ -1226,10 +1226,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/validate_cap_quality.py",
-    "bytes": 15323,
-    "sha256": "e9c590a6b6b7b8953efe2a16dcd3d81f244dbb156669692a833a5ff1c46d66e5",
-    "embedded_bytes": 15323,
-    "embedded_sha256": "e9c590a6b6b7b8953efe2a16dcd3d81f244dbb156669692a833a5ff1c46d66e5"
+    "bytes": 18106,
+    "sha256": "22691da84bedae65b83b36a171e43626e7cfebee333f6c1a7ef9808368cc6c27",
+    "embedded_bytes": 18106,
+    "embedded_sha256": "22691da84bedae65b83b36a171e43626e7cfebee333f6c1a7ef9808368cc6c27"
   },
   {
     "path": "scripts/validate_chinese_layout_contract.py",
@@ -1398,6 +1398,13 @@ attachments; extract only the selected subject's components.
     "sha256": "f059d4ece38979857c079b195ebcd238978aaab6e72f967eb0c593439ff4ca47",
     "embedded_bytes": 11872,
     "embedded_sha256": "f059d4ece38979857c079b195ebcd238978aaab6e72f967eb0c593439ff4ca47"
+  },
+  {
+    "path": "scripts/web_image.py",
+    "bytes": 8812,
+    "sha256": "cede36b74d6824645bdf0efe198788bda4b2cba7ec9ae69af0f1f8f5c328a51e",
+    "embedded_bytes": 8812,
+    "embedded_sha256": "cede36b74d6824645bdf0efe198788bda4b2cba7ec9ae69af0f1f8f5c328a51e"
   },
   {
     "path": "templates/current-gsat-math-scope.json",
@@ -63558,15 +63565,20 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 2  python scripts/cap_plan.py plan --subject 會考社會 --paper-id ID --level 會考 --output RUN/plan.json
    填 metadata.difficulty_balance_plan.target_counts → python scripts/cap_plan.py check RUN/plan.json
 3  每題：python scripts/cap_plan.py item --subject 會考社會 --number N --level 會考   （骨架，填空）
+   題材照藍圖的 suggested_focus 走：每次 plan 都抽新的 variety_seed，續做同一份卷時用 --seed 沿用
+   範例只示範手法：不要沿用說明文件或過去卷子的情境、地點、材料
+   照片：python scripts/web_image.py search "關鍵字"（中英文都試，--offset 換一批）→ web_image.py use
+   先找圖再出題、或先出題再找圖都可以；題目必須依圖中真的看得到的證據作答，對不上就改題目
+   網路可用時照片必須全部新找；內附圖片庫只在網路不通時備援，並告訴使用者
 4  每 2–4 題：python scripts/append_items.py --run-dir RUN --batch BATCH.json [--plan RUN/plan.json 第一批]
    回報的 subject_gate_pending 先修完再寫下一批；--replace 修同一批
 5  每 2–3 批：python scripts/run_hosted_workflow.py status --state RUN/run-state.json
    → 開新對話，只讀 RUN/NEXT.md、本卡與 current-cap-form.md 接著做
-6  全部存完：run_hosted_workflow.py check-figures（有警告先修圖）→ refresh-evidence（產生審查草稿）
-   → 只補 answers／difficulty／originality／visuals／source_grounding 草稿中被標記的題目 → checkpoint → lock-content
-7  specs → plan（最多 3 次）→ build（最多 2 次）→ 看圖 → record-review
-8  run_hosted_workflow.py auto-review --state STATE：工具實際執行檢查，寫好 structure_scope、difficulty_balance、
-   template_composition、answer_separation 四份報告（不必手寫）→ checkpoint → finalize
+6  全部存完後只要反覆執行：python scripts/run_hosted_workflow.py advance --state RUN/run-state.json
+   它依序自動跑完檢查圖表、兩份機械性審查、審查草稿、登錄、鎖定內容、specs、分頁、組成兩本 PDF，
+   只在需要你動手時停下並說明要做什麼（補審查、修圖、調版面）；做完再執行 advance
+7  組好後：看它列出的頁面與題目 → record-review → auto-review --gates template_composition answer_separation
+   → checkpoint → finalize（advance 的 todo 會給完整指令）
 ```
 
 ## 每題必填（存檔就會檢查）
@@ -63587,10 +63599,11 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 | 訊息或症狀 | 解法 |
 | :-- | :-- |
 | `the figure or its caption prints the answer` | 圖只放證據（數據、地圖、史料），結論留給學生推 |
-| `extreme wording`、`absolute words` | 誘答改用真實相鄰概念（三公九卿 ↔ 三省六部），不要「一律、只能、連…也」 |
+| `extreme wording`、`absolute words` | 誘答改用學生真的會混淆的相鄰概念，不要「一律、只能、連…也」 |
 | `run in blocks` | 社會單題照 `cap_plan.py plan` 排的題序穿插三科 |
+| `photographs are newly found` | 用 `web_image.py` 換成新找的照片，不要用內附圖片庫 |
 | `painted content exceeds the body by N pt` | 訊息已指出題號：縮短最寬那行、縮小該題圖表，或把選項改成一行一個 |
-| `rare CJK Extension character` | 改用教科書通用字（琅𤩝 → 琅嶠） |
+| `rare CJK Extension character` | 改用教科書通用字形 |
 | 題組引導語印了兩三次 | 材料裡不要自己寫「閱讀下列選文，回答…」 |
 | finalize 要求六個時間階段 | 各階段開始時用 `clock --operation resume --phase <階段>` 記錄，不要事後補 |
 | 頁面留白超過 0.32 | 用 `plan` 看分頁，調整圖寬（`width_percent`）或選項排法，不要改題目內容湊頁 |
@@ -63689,65 +63702,39 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 - **詳解**：每題寫出完整推導，說明正解如何由材料證據與已學知識一步步推出，並指出每個誘答
   選項錯在哪個概念；不得只寫「故選 B」。
 
-## 命題寫法：照正式會考做，避開已知的失敗
+## 命題寫法：原則，而非範本
 
-以下規則來自維護者把兩份 AI 會考社會卷與 115 正式卷逐題比較的結果，以及對 113–115 正式卷的量測。
-`scripts/validate_cap_quality.py` 在每批存檔時檢查能機械判斷的部分；其餘由審題逐題確認。
+本節只描述原則，刻意不提供題目範例：題材、情境、材料與解題路徑都由每份卷自己發想，
+同一個要求重複生成應得到不同的卷子。`scripts/validate_cap_quality.py` 在每批存檔時檢查能機械判斷的部分，
+其餘由審題逐題確認。數字門檻來自 113–115 正式卷量測。
 
-**1. 圖表給證據，不給結論。** 官方 113–115 社會 113 題中，沒有一題的題幹、材料或圖表含有正解
-連續 6 字以上、而誘答選項沒有的文字。
-- 錯：題目問市場均衡如何變動，圖下印「天災減產導致供給曲線向左移動，均衡價格上漲」，正解一字不差。
-- 錯：圖例直接寫「深色：已達 20% 以上」，再問「達 20% 以上的有幾個」，學生數黑色長條就得分。
-- 對：等高線圖加上「坑頭／坑尾」命名規則（115 第 29 題），學生先判上下游，再套族群規則才選得出。
-- 對：把進口商週一、週四的訪談轉成匯率折線圖（115 第 41 題），學生要把文字轉譯成圖上的變化。
-
-**2. 轉譯型題幹：給線索，讓學生推出概念。** 會考社會至少 60% 的題目要記錄
-`cap_competency.hidden_concept`（學生要推論出的課本概念），而這個詞不得出現在題幹、材料、圖或誘答選項。
-- 錯：「依據三省六部的分工，下列何者正確？」
-- 對：給一段唐代文書的流程（起草、審核封駁、執行），問這段資料呈現的是哪種政治制度的運作。
-- 對：給經緯度與農場衛星影像、曬果實剝果肉的描述（115 第 3 題），讓學生推出勞力密集的商業性農業。
-- 少用：題幹直接寫「新竹科學園區」「馬關條約」「機會成本」之類的名稱。改用當時的書信、契約、地圖軌跡、統計變化。
-
-**3. 誘答選項是真的同儕概念，不是荒謬句。** 官方 496 個選項沒有一個使用「歸零、終身、廢除、宣告獨立、
-全體、片面、徹底」這類極端字；「一律、只有、完全」只出現在誘答選項的題目每年 2–4 題（本 Skill 上限 5%）。
-每題記錄 `item_spec.cap_distractors`：每個錯誤選項寫 `misconception`（學生為什麼會選）與 `peer_concept`
-（它借用的相鄰真實概念）。
-- 錯：考三省六部，誘答寫「六部各自制定法律並決定預算，連皇帝也無權干涉」。
-- 對：誘答借用「秦漢三公九卿」「明代廢丞相、設內閣」的職權，讓沒弄清楚的學生真的會選。
-- 錯：「全年的日照時數與降水量急速歸零」「強制北部居民限期遷居」「廢除世界各國主權」。
-- 錯（cap116a）：「憲法只保障稱讚他人的言論，批評他人就算違憲」「以公路為主，經由跨海大橋與其他國家連結」——
-  沒有極端字，但違反常識，準備不足的學生也不會選。每個誘答記錄 `expected_pick_rate`
-  （預估多少考生會選它），低於 0.05 就重寫；「只能、只保障、無權、不受…約束、連…也、就算」
-  也算絕對化字眼，計入上限。
-- 四個選項長度相近（官方同題最長／最短中位數 1.0，九成不超過 1.75 倍），正解不是最長的。
-
-**4. 不要單一知識點直球對決。** 官方題目先從材料取證，再連結概念、再判斷；
-`difficulty_design.linked_decisions` 少於兩個的題目最多 20%。
-
-**5. 詳解逐一處理四個選項。** 每題詳解寫出正解的推導，並點名 (A)～(D) 每個誘答錯在哪裡；
-寫不出某個誘答「確定錯」的理由，就表示它可能也對，題目要重寫（避免像機會成本題那樣的疑義）。
-
-**6. 每題都要考科目概念。** 社會、國文、英語不出純算術（四捨五入、平均每……約多少）；
-任何非數學科都不出「圖中共有幾個」這類數數題。數學的計算也要服務一個概念判斷。
-
-**7. 有爭議的題目重寫。** 選項之間只差在定義寬窄，或答案取決於課本沒有統一的說法，都要重寫。
-例：機會成本題同時列「總經濟成本」與「放棄的打工收入」，國中課綱只比較放棄的最高價值，會引起申訴。
-
-**8. 社會的題序穿插三科。** 115 第 1–43 題以 1–5 題為一段，交替出現歷史、地理、公民，
-約 18 次換科；不要排成「歷史 1–15、地理 16–29、公民 30–43」三大塊。
-會考社會單題要記錄 `cap_competency.domain`（歷史／地理／公民），最長同科連續不超過 7 題、
-至少換科 10 次，三科各占 25%–42%。`cap_plan.py plan` 會排好一個符合條件的題序。
-
-**混合考點。** 至少 20% 的題目要結合兩個概念，且答案必須同時用到兩者（如 115 第 46–48 題：
-媒體識讀加上統計表判讀；第 29 題：等高線判讀加上族群命名規則）。社會在 `cap_competency.domains`
-列出兩科以上（第一個是主科，用於題序），其他科的 `curriculum_codes` 要涵蓋兩個不同主軸；
-都要寫 `bridge`：為什麼答案需要兩個概念，而不是把兩個知識點並排。
-注意：學測社會「單題依科目排成連續區塊」的規則**不適用會考**。
-
-**9. 題組引導語由排版程式印。** 不要把「閱讀下列選文，回答第 44 至 45 題：」寫進材料或題幹，否則會重複印出。
-
-**10. 圖要畫對、畫完整。** 題幹說「虛線的甲河」，圖就畫虛線；文字不可被色塊蓋住或被裁切。
-建置前執行 `run_hosted_workflow.py check-figures`，有警告就先修圖，不要留到成品檢查。
+1. **圖表與材料給證據，不給結論。** 題幹、材料、圖說都不得出現正解的關鍵字句；學生必須自己讀圖、
+   比較資料、轉譯文字，才推得出答案。圖例與標示不得直接把答案標出來。
+2. **轉譯型題幹。** 不先寫出要考的概念名稱再問「下列何者」；改給原始材料（文書、地圖、數據、
+   紀錄、對話、影像），讓學生推出概念。會考社會至少 60% 的題目記錄 `cap_competency.hidden_concept`，
+   且這個詞不得出現在題幹、材料、圖或誘答中。
+3. **誘答是真實的相鄰概念。** 每個錯誤選項對應一個學生真的會混淆的概念或常見迷思，
+   而不是違反常識、一看就錯的句子；不用極端字眼，絕對化字眼極少；四個選項長度、語氣、結構相近，
+   正解不是最長的。每個誘答記錄 `misconception`、`peer_concept`、`expected_pick_rate`（≥ 0.05）與
+   `ruled_out_by`（使它確定錯的課本定義或材料證據）。
+4. **多步推理。** 從材料取證、連結概念、再判斷；只需一個判斷就能作答的題目最多 20%。
+5. **混合考點。** 至少 20% 的題目結合兩個概念，且答案必須同時用到兩者；社會在 `cap_competency.domains`
+   列出兩科以上，其他科的 `curriculum_codes` 涵蓋兩個不同主軸，並寫 `bridge` 說明為什麼兩者都必要。
+6. **詳解逐一處理四個選項。** 寫出正解的推導，並點名每個誘答錯在哪；寫不出某個誘答「確定錯」的理由，
+   就表示題目可能有疑義，要重寫。
+7. **每題都考科目概念。** 非數學科不出數數題或純算術題；數學的計算也要服務一個概念判斷。
+8. **社會題序穿插三科。** 單題以短段交替歷史、地理、公民（官方 115 每段 1–5 題）；記錄
+   `cap_competency.domain`，最長同科連續不超過 7 題、至少換科 10 次、三科各占 25%–42%。
+   學測社會「依科目排成連續區塊」的規則不適用會考。
+9. **題組引導語由排版程式印**，材料與題幹裡不要自己寫。
+10. **照片全部新找，題材每份不同。** 網路可用時，每張照片都用 `scripts/web_image.py` 這次新找；
+    內附圖片庫只在網路不通時備援。可以先找圖再出題，也可以先出題再找圖，但題目必須依圖中真的看得到的
+    證據作答。`cap_plan.py plan` 每次抽新的題材方向（`suggested_focus`），只是起點，可依更好的發想調整，
+    但要維持三科比例與題序規則。
+11. **原創。** 不沿用正式試題、本說明或過去卷子的情境、地點、材料與解題路徑；課綱核心概念可以考，
+    但要用新的材料與問法。
+12. **圖要畫對、畫完整。** 題幹描述與圖一致，文字不被遮蓋或裁切；建置前執行
+    `run_hosted_workflow.py check-figures`，有警告先修圖。
 
 ## 工具
 
@@ -75687,6 +75674,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import secrets
 import statistics
 import sys
 from pathlib import Path
@@ -75705,6 +75693,26 @@ SECTION_TITLES = {
     "會考社會": ("一、單題：（{a}～{b}題）", "二、題組：（{a}～{b}題）"),
 }
 DOMAINS = ("地理", "歷史", "公民")
+# Broad 國中 strands each slot is pointed at, drawn per paper_id so repeated papers cover different
+# ground (a maintainer found repeated generations converging on the same topics and pictures).
+FOCUS = {
+    "歷史": ("七年級臺灣史・史前與原住民族", "七年級臺灣史・荷西與鄭氏", "七年級臺灣史・清帝國時期", "七年級臺灣史・日本統治時期",
+             "七年級臺灣史・戰後臺灣", "八年級中國與東亞・先秦至隋唐", "八年級中國與東亞・宋元明清", "八年級中國與東亞・近代變局",
+             "八年級中國與東亞・二十世紀", "九年級世界史・古代文明", "九年級世界史・中古至近代歐洲", "九年級世界史・帝國主義與世界大戰",
+             "九年級世界史・冷戰與當代"),
+    "地理": ("七年級臺灣・地形與氣候", "七年級臺灣・人口與產業", "七年級臺灣・區域與交通", "八年級中國與東亞・自然環境",
+             "八年級中國與東亞・人口與產業", "九年級世界・東南亞與南亞", "九年級世界・西亞與非洲", "九年級世界・歐洲與俄羅斯",
+             "九年級世界・美洲", "九年級世界・大洋洲與兩極", "地理技能・地圖與統計判讀"),
+    "公民": ("七年級・個人、家庭與社群", "七年級・性別、文化與多元", "八年級・民主政治與政府", "八年級・法律與權利救濟",
+             "八年級・刑法、民法與行政法", "九年級・經濟活動與市場", "九年級・貨幣、金融與政府經濟角色", "九年級・全球化與國際社會"),
+    "會考自然": ("生物・細胞與生殖遺傳", "生物・生理與恆定", "生物・生態與演化", "理化・物質與化學反應", "理化・酸鹼與氧化還原",
+                 "理化・力與運動", "理化・能量、熱與電磁", "理化・波動、光與聲", "地球科學・岩石、地形與板塊", "地球科學・天氣與氣候",
+                 "地球科學・天文", "跨科・科學探究與資料判讀"),
+    "會考數學": ("數與量", "代數與方程式", "函數與坐標", "平面幾何與證明", "空間與立體", "統計與機率", "數列與規律"),
+    "會考國文": ("語文知識・字音字形與詞義", "語文知識・修辭與文法", "白話文閱讀", "文言文閱讀", "詩詞曲賞析", "應用文與圖表文本"),
+    "會考英語": ("school life", "family and community", "health and sport", "science and technology", "environment",
+                 "travel and culture", "work and money", "media and notices"),
+}
 TITLES = {"會考寫作測驗": "寫作測驗"}
 
 
@@ -75788,7 +75796,10 @@ def sections(subject: str) -> list[dict]:
              "instructions": []} for i, s in enumerate(found[:2])]
 
 
-def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考") -> dict:
+def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", seed: str | None = None) -> dict:
+    """A fresh random seed per plan unless one is given: two papers never share a topic draw,
+    even with the same paper_id; the seed is saved so the same paper resumes with the same draw."""
+    seed = seed or secrets.token_hex(8)
     if subject not in SUBJECTS or level not in LEVELS:
         raise ValueError(f"subject must be one of {SUBJECTS}; level one of {LEVELS}")
     current = form(subject)["current_form"]
@@ -75800,14 +75811,14 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考") 
                 "difficulty_balance_plan": {"basis": f"113-115 official 通過率 by position, level {level}",
                                             "required_bands": [], "target_counts": {b: None for b in BANDS},
                                             "shared_reading_minutes": None},
-                "visual_contract": {}, "mixed_group_originality_records": []}
+                "visual_contract": {}, "mixed_group_originality_records": [], "variety_seed": seed}
     slots = []
     if subject != "會考寫作測驗":
         targets = position_targets(subject, level)
         count = current["choice_items"]["reference_115"]
         groups = {n: g for g in current.get("groups_115") or [] for n in range(g[0], g[1] + 1)}
         single = [n for n in range(1, count + 1) if n not in groups]
-        schedule = dict(zip(single, domain_schedule(len(single), paper_id))) if subject == "會考社會" else {}
+        schedule = dict(zip(single, domain_schedule(len(single), seed))) if subject == "會考社會" else {}
         secs = sections(subject)
         for n in range(1, count + 1):
             slot = {"number": n, "type": "single_choice",
@@ -75815,6 +75826,10 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考") 
                     "group": groups.get(n), **targets.get(n, {})}
             if n in schedule:
                 slot["domain"] = schedule[n]
+            pool = FOCUS.get(slot.get("domain") or subject)
+            if pool:
+                rank = hashlib.sha256(f"{seed}:{n}".encode()).digest()[0]
+                slot["suggested_focus"] = pool[rank % len(pool)]
             slots.append(slot)
         for n in range(1, current.get("constructed_items", 0) + 1):
             slots.append({"number": n, "type": "constructed_response", "section_id": "s2", "rubric": "0-3 級分"})
@@ -75825,7 +75840,7 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考") 
 
 
 def item(subject: str, number: int, level: str = "會考", kind: str = "single_choice") -> dict:
-    slots = [s for s in plan(subject, "skeleton", level=level)["planning_slots"]
+    slots = [s for s in plan(subject, "skeleton", level=level, seed="skeleton")["planning_slots"]
              if s["number"] == number and s["type"] == kind]
     if not slots:
         raise ValueError(f"{subject} has no {kind} slot {number}")
@@ -75854,7 +75869,7 @@ def item(subject: str, number: int, level: str = "會考", kind: str = "single_c
             "question": question, "answer": answer,
             "rules": ["references/current-cap-form.md 品質標準 and 難度等級",
                       "cap_distractors: delete the key's row; each wrong option names its misconception and the real "
-                      "neighbouring concept it borrows (三省六部 ↔ 三公九卿), never an absurd or absolute claim",
+                      "neighbouring concept it borrows, never an absurd or absolute claim",
                       "hidden_concept: the term the student must infer; it may not appear in the stem, material or figure",
                       "混合考點: at least 20% of items join two domains (社會: cap_competency.domains, primary first) or two "
                       "curriculum strands, with a bridge saying why the answer needs both",
@@ -75898,13 +75913,14 @@ def main() -> int:
     p = sub.add_parser("plan"); p.add_argument("--subject", required=True, choices=SUBJECTS)
     p.add_argument("--paper-id", required=True); p.add_argument("--year", default="116")
     p.add_argument("--level", default="會考", choices=LEVELS); p.add_argument("--output", type=Path)
+    p.add_argument("--seed", help="reuse a saved variety_seed (resuming the same paper); omit for a new draw")
     i = sub.add_parser("item"); i.add_argument("--subject", required=True, choices=SUBJECTS)
     i.add_argument("--number", type=int, required=True); i.add_argument("--level", default="會考", choices=LEVELS)
     i.add_argument("--constructed", action="store_true", help="數學 非選擇題 slot")
     c = sub.add_parser("check"); c.add_argument("plan", type=Path)
     args = parser.parse_args()
     if args.command == "plan":
-        result = plan(args.subject, args.paper_id, args.year, args.level)
+        result = plan(args.subject, args.paper_id, args.year, args.level, args.seed)
         if args.output:
             args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
             result = {"status": "plan-written", "output": str(args.output), "check": check(result)}
@@ -82130,12 +82146,19 @@ def probe(timeout=4):
         results = dict(zip(PROBES, pool.map(lambda url: _reachable(url, timeout), PROBES.values())))
     web = any(state == 'reachable' for name, state in results.items() if name != 'github_release')
     library = results['github_release'] == 'reachable'
-    advice = ('Search the web for fitting real images first and use them from this environment (record them as '
-              'web_source). ' if web else
-              'Web image hosts are blocked here: do not spend time retrying them. ')
-    advice += ('The photo library is available: `python scripts/photo_library.py fetch --run-dir RUN`.' if library else
-               'GitHub is blocked too: ask the user once to upload images or taiwan-exam-photo-library-v1.zip '
-               f'({ZIP_URL}).')
+    if web:
+        # Every paper that took the bundled 59 photos repeated the same pictures; with the web reachable,
+        # find new images and design each item around the evidence the image actually shows.
+        advice = ('Find NEW images for every photograph: `python scripts/web_image.py search "…"` (Chinese and English '
+                  'queries, --offset for further results), then `web_image.py use`; design the item around the evidence '
+                  'the image shows. Do not use the bundled photo library while the web is reachable (會考 papers are '
+                  'refused otherwise).')
+    else:
+        advice = 'Web image hosts are blocked here: do not spend time retrying them. '
+        advice += ('Fall back to the photo library: `python scripts/photo_library.py fetch --run-dir RUN`, and tell the '
+                   'user the photographs are reused library images.' if library else
+                   'GitHub is blocked too: ask the user once to upload images or taiwan-exam-photo-library-v1.zip '
+                   f'({ZIP_URL}).')
     return {'hosts': results, 'web_images': 'reachable' if web else 'blocked',
             'photo_library_download': 'reachable' if library else 'blocked', 'advice': advice}
 
@@ -83049,7 +83072,11 @@ def cap_requirements(subject):
                      'no extreme wording (歸零、終身、廢除、宣告獨立), options alike in length; figures and captions carry evidence, '
                      'never the key\'s wording; no counting-the-figure or pure-arithmetic items; never type the 題組 lead-in',
                      'start from `python scripts/cap_plan.py plan --subject ' + subject + ' --paper-id <id> --level <level> '
-                     '--output plan.json` (official sections, 題組 positions, per-position targets) and `cap_plan.py item` skeletons',
+                     '--output plan.json` (official sections, 題組 positions, per-position targets, a per-paper suggested_focus) '
+                     'and `cap_plan.py item` skeletons',
+                     'every photograph newly found with `python scripts/web_image.py search/use` while the web is reachable '
+                     '(the bundled photo library is the offline fallback only); find the image first or after writing, but the '
+                     'item must rest on evidence the real image shows',
                      'answers name the chosen option in the reasoning; keys unpatterned (answer_key_patterns.py)']
 
 
@@ -85898,6 +85925,80 @@ def status(state_path):
     return report
 
 
+def advance(state_path, year=None):
+    """Preset workflow: run every mechanical step in order and stop only where an author must write or look.
+
+    Order: items complete → check-figures → auto-review (structure, balance) → item review drafts →
+    checkpoint → lock-content → specs → plan → build. Each stop says exactly what to do, then run
+    `advance` again. After the build: look at the flagged pages, record-review, then auto-review the
+    built booklets (template_composition, answer_separation), checkpoint and finalize.
+    """
+    from hosted_auto_review import auto_review
+    from check_hosted_run import ITEM_GATES
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    done = []
+
+    def stop(step, todo, details=None):
+        return {'status': 'pending', 'stopped_at': step, 'done': done, 'todo': todo, **({'details': details} if details else {})}
+
+    summary = status(state_path)
+    if (summary['items_target'] and summary['items_saved'] < summary['items_target']) or summary['subject_gate_open']:
+        return stop('authoring', summary['next_step'], summary['subject_gate_sample'] or None)
+    done.append('items complete')
+    if not read(state_path).get('exam'):
+        checkpoint(root)
+    figures = check_figures(state_path)
+    if figures.get('status') != 'pass':
+        return stop('check-figures', 'fix the figures listed, re-save the items, then advance', figures.get('errors', [])[:8])
+    done.append('figures pass')
+    mechanical = auto_review(state_path, ('structure_scope', 'difficulty_balance'))
+    if mechanical['status'] != 'ok':
+        return stop('auto-review', mechanical['next_action'])
+    done.append('structure_scope and difficulty_balance written')
+    exam_sha = digest(root / 'exam.json')
+    reviewer = [*ITEM_GATES, 'source_grounding']
+    stale = [g for g in reviewer if not (root / f'{g}.json').is_file()
+             or read(root / f'{g}.json').get('exam_sha256') != exam_sha or read(root / f'{g}.json').get('status') != 'pass']
+    if stale:
+        try:
+            checkpoint(root)
+            refresh_evidence(state_path)
+        except (OSError, ValueError, KeyError):
+            pass
+        return stop('reviews', 'complete these reviews (drafts are <gate>.draft.json where they exist; edit only the flagged '
+                    'rows) and save each as <gate>.json: ' + ', '.join(stale))
+    checkpoint(root)
+    done.append('reviews registered')
+    if not (root / 'content-lock.json').is_file():
+        content_lock(state_path)
+        done.append('content locked')
+    written = specs(state_path)
+    font, kai = recorded_font(state_path), recorded_kai_font(state_path)
+    question, solution = root / written['question_spec'], root / written['solution_spec']
+    def fresh(prefix):
+        n = 1
+        while (root / f'{prefix}-v{n}').exists():
+            n += 1
+        return root / f'{prefix}-v{n}'
+    paged = plan(state_path, question, solution, font, fresh('plan'), kai_font=kai)
+    if paged.get('bottom_void_attention') or paged.get('form_attention'):
+        return stop('plan', 'adjust layout hints (figure width_percent, option layout) for the pages listed, then advance',
+                    {'bottom_void': paged.get('bottom_void_attention'), 'form': paged.get('form_attention')})
+    done.append(f"plan clean ({paged['page_counts']})")
+    exam = read(root / 'exam.json')
+    year = year or (re.match(r'(\d{3})', str(exam.get('metadata', {}).get('title') or '')) or [None, '116'])[1]
+    built = build(state_path, question, solution, font, fresh('build'), year=str(year), kai_font=kai)
+    done.append('both booklets built')
+    review_state = built.get('continue_from_state')
+    return {'status': 'built', 'done': done, 'review_state': review_state,
+            'todo': ['look at the flagged pages and item crops the build lists, then record-review --state ' + str(review_state),
+                     'run_hosted_workflow.py auto-review --state ' + str(review_state) +
+                     ' --gates template_composition answer_separation',
+                     'checkpoint, then finalize --state ' + str(review_state)],
+            'build': {k: built.get(k) for k in ('status', 'review_batches', 'iteration_budget') if k in built}}
+
+
 def run_auto_review(state_path, gates=None):
     from hosted_auto_review import GATES, auto_review
     return auto_review(state_path, tuple(gates) if gates else GATES)
@@ -85967,6 +86068,9 @@ def main():
     auto_parser = commands.add_parser('auto-review', help='Write the four mechanical paper reviews from executed checks')
     auto_parser.add_argument('--state', type=Path, required=True)
     auto_parser.add_argument('--gates', nargs='*', default=None)
+    advance_parser = commands.add_parser('advance', help='Preset workflow: run the next mechanical steps, stop where an author must act')
+    advance_parser.add_argument('--state', type=Path, required=True)
+    advance_parser.add_argument('--year')
     status_parser = commands.add_parser('status', help='Short resume summary; writes NEXT.md')
     status_parser.add_argument('--state', type=Path, required=True)
     args = vars(parser.parse_args())
@@ -85982,7 +86086,8 @@ def main():
                 args['font'] = recorded_font(args['state_path'])
             result = {'build': build, 'specs': specs, 'proof': proof, 'plan': plan, 'finalize': finalize,
                       'clock': clock, 'lock-content': content_lock, 'refresh-evidence': refresh_evidence,
-                      'check-figures': check_figures, 'status': status, 'auto-review': run_auto_review}[action](**args)
+                      'check-figures': check_figures, 'status': status, 'auto-review': run_auto_review,
+                      'advance': advance}[action](**args)
     except (OSError, ValueError, KeyError, RuntimeError) as exc:
         print(json.dumps({'status': 'pending', 'errors': [str(exc)]}, ensure_ascii=False))
         return 2
@@ -86371,6 +86476,16 @@ INTEGRATED_SHARE = 0.20  # items joining concepts across domains (社會) or cur
 SINGLE_STEP_SHARE = 0.20  # items answerable from one decision (cap116a: 「單一知識點直球對決」)
 MIN_PICK_RATE = 0.05      # a distractor nobody chooses does not discriminate
 MAX_RUN, MIN_SWITCHES = 7, 10
+# Settings of the worked examples in references/current-cap-form.md and of reviewed AI papers: they
+# illustrate a technique, and a paper that reuses them repeats other papers instead of inventing.
+EXAMPLE_SETTINGS = re.compile(r"坑頭|坑尾|咖啡(?:果|農場)|剝除果皮|柏林圍牆|聖索菲亞|尼羅河.{0,6}夜|朗多尼亞|魚骨狀|五腳基|"
+                              r"斯巴達.{0,4}棄嬰|普魯塔克|牙刷主義|床蝨|臭蟲|北極.{0,4}航線|宏都拉斯.{0,4}白蝦|"
+                              r"天災減產導致供給|立賣契人|竹塹社")
+# cap116a took all 11 photographs from the bundled 59-photo library although the preflight found
+# web images reachable; every paper then repeats the same pictures. With the web reachable,
+# most photographs must be newly found (scripts/web_image.py); the library is the fallback.
+FRESH_PHOTO_SHARE = 1.0   # maintainer: every photograph newly found when the web is reachable
+PHOTO_KINDS = {"photo", "archival_image", "satellite_image", "aerial_photo", "artifact_photo"}
 
 
 def plain(value) -> str:
@@ -86446,6 +86561,10 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
         lengths = [len(t) for t in options.values() if t]
         if lengths and len(options[key]) >= 4 and max(lengths) / max(1, min(lengths)) > SPREAD_LIMIT:
             spread_items += 1
+        setting = EXAMPLE_SETTINGS.search(str(q.get("group_stimulus") or "") + str(q.get("prompt") or ""))
+        if setting:
+            errors.append(f"Q{n}: reuses the setting 「{setting.group(0)}」 of a worked example or a reviewed paper; examples "
+                          "show a technique only: invent a new situation for this paper")
         if LEAD_IN.search(str(q.get("group_stimulus") or "") + str(q.get("prompt") or "")):
             errors.append(f"Q{n}: do not type the 題組 lead-in (「閱讀下列選文，回答…」); the renderer prints it once")
         if subject in NON_MATH and COUNTING.search(str(q.get("prompt") or "")):
@@ -86518,6 +86637,26 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
                 sequence.append(domain)
     if not full or not choice:
         return errors
+    if asset_root is not None and (Path(asset_root) / "preflight.json").is_file():
+        import json
+        try:
+            reachable = (json.loads((Path(asset_root) / "preflight.json").read_text(encoding="utf-8"))
+                         .get("image_sources") or {}).get("web_images") == "reachable"
+        except ValueError:
+            reachable = False
+        modes = [((q.get("visual_asset") or {}).get("visual_spec") or {}).get("generation_mode")
+                 for q in choice if (((q.get("visual_asset") or {}).get("visual_spec") or {}).get("kind")) in PHOTO_KINDS]
+        assets = {}
+        for q in choice:
+            asset = q.get("visual_asset") or {}
+            spec_ = asset.get("visual_spec") or {}
+            if spec_.get("kind") in PHOTO_KINDS:
+                assets[asset.get("sha256") or asset.get("path")] = spec_.get("generation_mode")
+        fresh = sum(mode == "web_source" for mode in assets.values())
+        if reachable and assets and fresh < FRESH_PHOTO_SHARE * len(assets):
+            errors.append(f"only {fresh} of {len(assets)} photographs are newly found (web_source); the web is reachable, so "
+                          "every photograph must be: search with `python scripts/web_image.py search \"…\"` and "
+                          "use `web_image.py use`; the bundled photo library is the fallback when the web is unreachable")
     if spread_items > max(2, SPREAD_SHARE * len(choice)):
         errors.append(f"{spread_items} items have one option over {SPREAD_LIMIT:g} times as long as another (official 90% "
                       f"at most 1.75): keep the four options alike in length, voice and structure")
@@ -93903,6 +94042,172 @@ if __name__ == '__main__':
         args.output.write_text(text, encoding='utf-8')
     print(text)
     raise SystemExit(0 if result['status'] == 'pass-fixed-template' else 2)
+</canonical-source>
+
+<canonical-source path="scripts/web_image.py">
+#!/usr/bin/env python3
+"""Find and use NEW real photographs from Wikimedia Commons, with full provenance.
+
+  search  "嘉南大圳" [--limit 8]                     candidates: size, license, creator, preview
+  use     --title "File:…jpg" --run-dir RUN --output figures/q12.jpg [--crop x0,y0,x1,y1] [--kind photo]
+          → visual_asset and visual_spec for the item (generation_mode web_source)
+
+Every 會考 photograph must be newly found when the preflight finds the web reachable;
+scripts/photo_library.py (59 bundled photos, reused by every paper) is only the offline fallback. Search
+in Chinese and English; prefer documentary photos, maps and archival images whose content
+carries answer evidence. Never print the credit in the booklet: the record is the attribution.
+"""
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import hashlib
+import html
+import json
+import os
+import re
+import sys
+import urllib.parse
+import urllib.request
+from pathlib import Path
+
+API = "https://commons.wikimedia.org/w/api.php"
+USER_AGENT = "taiwan-cap-exam/1.0 (https://github.com/alenhu2005/taiwan-cap-exam)"
+MANIFEST = Path(__file__).resolve().parents[1] / "references" / "photo-library-manifest.json"
+RASTER = {"image/jpeg", "image/png", "image/tiff", "image/webp"}
+
+
+def _get(url: str, timeout: int = 20) -> bytes:
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        return response.read()
+
+
+def _text(value) -> str:
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", str(value or "")))).strip()
+
+
+def library_pages() -> set[str]:
+    """Commons pages already in the bundled photo library (reused by every paper)."""
+    try:
+        items = json.loads(MANIFEST.read_text(encoding="utf-8"))["items"]
+    except (OSError, KeyError, ValueError):
+        return set()
+    return {urllib.parse.unquote(i["source"]["page"]).replace(" ", "_") for i in items if i.get("source", {}).get("page")}
+
+
+def candidates(payload: dict) -> list[dict]:
+    """Rows from a Commons generator=search query with imageinfo/extmetadata."""
+    library = library_pages()
+    rows = []
+    for page in (payload.get("query") or {}).get("pages", {}).values():
+        info = (page.get("imageinfo") or [{}])[0]
+        meta = info.get("extmetadata") or {}
+        if info.get("mime") not in RASTER:
+            continue
+        url = info.get("descriptionurl") or ""
+        rows.append({
+            "title": page.get("title"), "page": url, "width": info.get("width"), "height": info.get("height"),
+            "license": _text((meta.get("LicenseShortName") or {}).get("value")),
+            "creator": _text((meta.get("Artist") or {}).get("value"))[:120],
+            "date": re.split(r"date QS|QS:", _text((meta.get("DateTimeOriginal") or {}).get("value")))[0].strip()[:40],
+            "description": _text((meta.get("ImageDescription") or {}).get("value"))[:200],
+            "preview": info.get("thumburl") or info.get("url"),
+            "in_bundled_library": urllib.parse.unquote(url).replace(" ", "_") in library,
+        })
+    rows.sort(key=lambda r: (r["in_bundled_library"], -(r["width"] or 0)))
+    return rows
+
+
+def search(query: str, limit: int = 8, offset: int = 0) -> list[dict]:
+    params = {"action": "query", "generator": "search", "gsrnamespace": 6, "gsrsearch": query, "gsrlimit": limit,
+              "gsroffset": offset,
+              "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata", "iiurlwidth": 1600, "format": "json"}
+    return candidates(json.loads(_get(API + "?" + urllib.parse.urlencode(params))))
+
+
+def use(title: str, run_dir: Path, output: str, crop: str | None = None, kind: str = "photo",
+        print_width_cm: float = 12.0) -> dict:
+    import pymupdf
+    params = {"action": "query", "titles": title, "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata",
+              "iiurlwidth": 1600, "format": "json"}
+    rows = candidates(json.loads(_get(API + "?" + urllib.parse.urlencode(params))))
+    if not rows:
+        raise SystemExit(f"{title}: not a raster image on Wikimedia Commons")
+    row = rows[0]
+    run_dir = Path(run_dir).resolve()
+    data = _get(row["preview"], timeout=60)
+    digest = hashlib.sha256(data).hexdigest()
+    store = run_dir / "web-images"
+    store.mkdir(parents=True, exist_ok=True)
+    source = store / f"{digest[:16]}{Path(urllib.parse.urlparse(row['preview']).path).suffix.lower() or '.jpg'}"
+    source.write_bytes(data)
+    pix = pymupdf.Pixmap(data)
+    if pix.alpha:
+        pix = pymupdf.Pixmap(pix, 0)
+    box = [0.0, 0.0, 1.0, 1.0] if not crop else [float(v) for v in crop.split(",")]
+    if len(box) != 4 or not (0 <= box[0] < box[2] <= 1 and 0 <= box[1] < box[3] <= 1):
+        raise SystemExit("--crop takes x0,y0,x1,y1 as fractions of the width and height")
+    x0, y0, x1, y1 = (round(box[0] * pix.width), round(box[1] * pix.height), round(box[2] * pix.width), round(box[3] * pix.height))
+    doc = pymupdf.open()
+    page = doc.new_page(width=x1 - x0, height=y1 - y0)
+    page.insert_image(pymupdf.Rect(-x0, -y0, pix.width - x0, pix.height - y0), pixmap=pix)
+    gray = page.get_pixmap(dpi=72, colorspace=pymupdf.csGRAY, clip=page.rect)
+    target = (run_dir / output).resolve()
+    if not target.is_relative_to(run_dir):
+        raise SystemExit("--output must be inside the run directory")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(gray.tobytes("jpg", jpg_quality=85))
+    relative = lambda p: Path(os.path.relpath(p, run_dir)).as_posix()
+    dpi = int(gray.width / (print_width_cm / 2.54))
+    public = re.search(r"public domain|cc0|pd", row["license"], re.I)
+    used = store / "used.json"
+    log = json.loads(used.read_text(encoding="utf-8")) if used.is_file() else []
+    log.append({"title": row["title"], "page": row["page"], "output": relative(target)})
+    used.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
+    return {
+        "visual_asset": {"path": relative(target), "sha256": hashlib.sha256(target.read_bytes()).hexdigest(), "grayscale": True},
+        "visual_spec": {
+            "kind": kind, "generation_mode": "web_source",
+            "source_rights": "public_domain" if public else "web_sourced",
+            "source_url": row["page"], "source_creator": row["creator"] or "unknown", "source_site": "Wikimedia Commons",
+            "source_retrieved_at": dt.date.today().isoformat(), "source_published_at": row["date"] or None,
+            "license_or_authorization": row["license"] or "see source page",
+            "source_asset_path": relative(source), "source_asset_sha256": digest,
+            "crop_description": "full frame" if not crop else f"crop x {box[0]:g}-{box[2]:g}, y {box[1]:g}-{box[3]:g}",
+            "processing_steps": ["downloaded 1600 px rendition", *(["cropped"] if crop else []), "grayscale", "JPEG quality 85"],
+            "tonal_transform": "grayscale", "min_raster_dpi": dpi,
+        },
+        "notes": [f"Printed {print_width_cm:g} cm wide it gives {dpi} dpi" + ("" if dpi >= 200 else "; print it narrower"),
+                  *(["This image is also in the bundled photo library; a fresher one avoids repeating other papers."]
+                    if row["in_bundled_library"] else []),
+                  "Fill answer_bearing_features, role, grayscale_review and validation_checks after looking at it.",
+                  "Do not print the credit in the booklet; the record above is the attribution."],
+    }
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    sub = parser.add_subparsers(dest="command", required=True)
+    s = sub.add_parser("search"); s.add_argument("query"); s.add_argument("--limit", type=int, default=8)
+    s.add_argument("--offset", type=int, default=0, help="skip the first N results (vary between papers)")
+    u = sub.add_parser("use"); u.add_argument("--title", required=True); u.add_argument("--run-dir", type=Path, required=True)
+    u.add_argument("--output", required=True); u.add_argument("--crop"); u.add_argument("--kind", default="photo")
+    u.add_argument("--print-width-cm", type=float, default=12.0)
+    args = parser.parse_args()
+    try:
+        result = (search(args.query, args.limit, args.offset) if args.command == "search" else
+                  use(args.title, args.run_dir, args.output, args.crop, args.kind, args.print_width_cm))
+    except OSError as exc:
+        print(json.dumps({"status": "unreachable", "error": str(exc),
+                          "fallback": "python scripts/photo_library.py fetch --run-dir RUN"}, ensure_ascii=False))
+        return 2
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
 </canonical-source>
 
 <canonical-source path="templates/current-gsat-math-scope.json">

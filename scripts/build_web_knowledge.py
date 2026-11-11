@@ -122,6 +122,7 @@ def source_paths(root: Path = ROOT) -> list[Path]:
     paths.append(root / "scripts" / "validate_cap_quality.py")
     paths.append(root / "scripts" / "cap_plan.py")
     paths.append(root / "scripts" / "hosted_auto_review.py")
+    paths.append(root / "scripts" / "web_image.py")
 
     for pack in ("學測", "會考"):
         pack_root = root / "exam_packs" / pack

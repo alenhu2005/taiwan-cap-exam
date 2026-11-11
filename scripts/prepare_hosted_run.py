@@ -275,7 +275,11 @@ def cap_requirements(subject):
                      'no extreme wording (歸零、終身、廢除、宣告獨立), options alike in length; figures and captions carry evidence, '
                      'never the key\'s wording; no counting-the-figure or pure-arithmetic items; never type the 題組 lead-in',
                      'start from `python scripts/cap_plan.py plan --subject ' + subject + ' --paper-id <id> --level <level> '
-                     '--output plan.json` (official sections, 題組 positions, per-position targets) and `cap_plan.py item` skeletons',
+                     '--output plan.json` (official sections, 題組 positions, per-position targets, a per-paper suggested_focus) '
+                     'and `cap_plan.py item` skeletons',
+                     'every photograph newly found with `python scripts/web_image.py search/use` while the web is reachable '
+                     '(the bundled photo library is the offline fallback only); find the image first or after writing, but the '
+                     'item must rest on evidence the real image shows',
                      'answers name the chosen option in the reasoning; keys unpatterned (answer_key_patterns.py)']
 
 

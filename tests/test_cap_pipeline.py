@@ -329,7 +329,9 @@ def test_cap_quality_gates_catch_the_reviewed_defects(tmp_path):
     for x in exam['questions'][20:26]:
         x['options'][next(i for i, c in enumerate('ABCD') if c != key[x['id']])]['text'] = '憲法只保障稱讚他人的言論'
     errors = validate_items(exam, asset_root=tmp_path)
-    for needle in ('prints the answer', 'extreme wording', 'count things', 'arithmetic exercise', 'lead-in',
+    q['q30']['prompt'] = '某地名中的「坑頭」與「坑尾」反映了什麼？'
+    errors = validate_items(exam, asset_root=tmp_path)
+    for needle in ('reuses the setting', 'prints the answer', 'extreme wording', 'count things', 'arithmetic exercise', 'lead-in',
                    'must infer', 'cap_distractors.' + wrong, 'draw 1%', 'never addresses option',
                    'fewer than two linked decisions', 'absolute words'):
         assert any(needle in e for e in errors), (needle, errors)
@@ -349,6 +351,12 @@ def test_cap_plan_follows_the_official_structure(key, level):
     from cap_plan import check, item, plan
     from validate_cap_quality import MAX_RUN, MIN_SWITCHES
     result = plan(key, f'seed-{key}-{level}', level=level)
+    # Same paper_id, new draw each time; the saved seed reproduces a paper's draw.
+    again = plan(key, f'seed-{key}-{level}', level=level)
+    assert result['metadata']['variety_seed'] != again['metadata']['variety_seed']
+    if key not in ('會考寫作測驗',):
+        same = plan(key, 'x', level=level, seed=result['metadata']['variety_seed'])
+        assert [s.get('suggested_focus') for s in same['planning_slots']] == [s.get('suggested_focus') for s in result['planning_slots']]
     assert result['metadata']['exam'] == '會考' and result['metadata']['cap_difficulty_level'] == level
     assert set(result) >= {'metadata', 'instructions', 'sections'}
     errors = check(result)
@@ -397,3 +405,40 @@ def test_auto_review_executes_the_mechanical_paper_checks(tmp_path):
     assert reviews['structure_scope']['observations'].startswith('executed hosted_subject_gates')
     assert all(r['exam_sha256'] == hashlib.sha256((tmp_path / 'exam.json').read_bytes()).hexdigest()
                for r in reviews.values())
+
+
+def test_cap_photos_are_mostly_new_when_the_web_is_reachable(tmp_path):
+    from validate_cap_quality import validate_items
+    from web_image import candidates
+    exam = cap_paper('會考社會', tmp_path)
+    for n, q in enumerate(exam['questions'][:5]):
+        q['visual_asset'] = {'path': f'p{n}.jpg', 'sha256': f'h{n}',
+                             'visual_spec': {'kind': 'photo', 'generation_mode': 'photo_library' if n < 3 else 'web_source'}}
+    (tmp_path / 'preflight.json').write_text(json.dumps({'image_sources': {'web_images': 'reachable'}}), encoding='utf-8')
+    assert any('newly found' in e for e in validate_items(exam, asset_root=tmp_path))
+    (tmp_path / 'preflight.json').write_text(json.dumps({'image_sources': {'web_images': 'unreachable'}}), encoding='utf-8')
+    assert not any('newly found' in e for e in validate_items(exam, asset_root=tmp_path))
+    # Commons search rows: rasters only, bundled-library pages flagged and listed last.
+    payload = {'query': {'pages': {
+        '1': {'title': 'File:Map of Kanan Irrigation System.jpg', 'imageinfo': [{'mime': 'image/jpeg', 'width': 3332,
+              'descriptionurl': 'https://commons.wikimedia.org/wiki/File:Map_of_Kanan_Irrigation_System.jpg',
+              'extmetadata': {'LicenseShortName': {'value': 'Public domain'}}}]},
+        '2': {'title': 'File:New gate.jpg', 'imageinfo': [{'mime': 'image/jpeg', 'width': 900,
+              'descriptionurl': 'https://commons.wikimedia.org/wiki/File:New_gate.jpg',
+              'extmetadata': {'Artist': {'value': '<a>Someone</a>'}, 'DateTimeOriginal': {'value': '1938date QS:P,+1938'}}}]},
+        '3': {'title': 'File:Diagram.svg', 'imageinfo': [{'mime': 'image/svg+xml'}]}}}}
+    rows = candidates(payload)
+    assert [r['title'] for r in rows] == ['File:New gate.jpg', 'File:Map of Kanan Irrigation System.jpg']
+    assert rows[0]['creator'] == 'Someone' and rows[0]['date'] == '1938' and rows[1]['in_bundled_library']
+
+
+def test_advance_stops_where_the_author_must_act(tmp_path):
+    exam = cap_paper('會考社會', tmp_path)
+    exam['metadata'].update(paper_id='adv', generation_mode='full-paper')
+    exam['questions'] = exam['questions'][:10]
+    (tmp_path / 'exam.json').write_text(json.dumps(exam, ensure_ascii=False), encoding='utf-8')
+    (tmp_path / 'run-state.json').write_text(json.dumps({'paper_id': 'adv', 'subject': '會考社會', 'checks': {}}),
+                                             encoding='utf-8')
+    result = workflow.advance(tmp_path / 'run-state.json')
+    assert result['status'] == 'pending' and result['stopped_at'] == 'authoring'
+    assert '10 of 54' in result['todo'] and (tmp_path / 'NEXT.md').is_file()

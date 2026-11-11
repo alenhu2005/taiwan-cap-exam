@@ -70,12 +70,19 @@ def probe(timeout=4):
         results = dict(zip(PROBES, pool.map(lambda url: _reachable(url, timeout), PROBES.values())))
     web = any(state == 'reachable' for name, state in results.items() if name != 'github_release')
     library = results['github_release'] == 'reachable'
-    advice = ('Search the web for fitting real images first and use them from this environment (record them as '
-              'web_source). ' if web else
-              'Web image hosts are blocked here: do not spend time retrying them. ')
-    advice += ('The photo library is available: `python scripts/photo_library.py fetch --run-dir RUN`.' if library else
-               'GitHub is blocked too: ask the user once to upload images or taiwan-exam-photo-library-v1.zip '
-               f'({ZIP_URL}).')
+    if web:
+        # Every paper that took the bundled 59 photos repeated the same pictures; with the web reachable,
+        # find new images and design each item around the evidence the image actually shows.
+        advice = ('Find NEW images for every photograph: `python scripts/web_image.py search "…"` (Chinese and English '
+                  'queries, --offset for further results), then `web_image.py use`; design the item around the evidence '
+                  'the image shows. Do not use the bundled photo library while the web is reachable (會考 papers are '
+                  'refused otherwise).')
+    else:
+        advice = 'Web image hosts are blocked here: do not spend time retrying them. '
+        advice += ('Fall back to the photo library: `python scripts/photo_library.py fetch --run-dir RUN`, and tell the '
+                   'user the photographs are reused library images.' if library else
+                   'GitHub is blocked too: ask the user once to upload images or taiwan-exam-photo-library-v1.zip '
+                   f'({ZIP_URL}).')
     return {'hosts': results, 'web_images': 'reachable' if web else 'blocked',
             'photo_library_download': 'reachable' if library else 'blocked', 'advice': advice}
 
