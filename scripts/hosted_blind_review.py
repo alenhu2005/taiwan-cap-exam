@@ -57,6 +57,13 @@ def cap_p_band(subject, level):
 CAP_MEAN_D = {'會考國文': 0.49, '會考英語': 0.60, '會考數學': 0.50, '會考社會': 0.50, '會考自然': 0.51}
 CAP_D_TOLERANCE = 0.0
 CAP_LOW_D_SHARE = 0.03
+# Estimated D cannot be verified before the paper is sat. A floor above the official papers only taught
+# authors to write higher numbers (M1111 estimated every item at 0.42 or more; official 115 數學 has two
+# items under 0.30, 第 22 題 0.13). So the share of items under 0.30 may reach the official maximum, and
+# the hardest items' estimates must look like official hard items (p < 0.40), which discriminate less.
+CAP_LOW_D_SHARE_BY_SUBJECT = {'會考國文': 0.05, '會考英語': 0.03, '會考數學': 0.08, '會考自然': 0.06}
+CAP_HARD_D_MEAN = {'會考國文': 0.33, '會考英語': 0.33, '會考數學': 0.35, '會考社會': 0.37, '會考自然': 0.40}
+CAP_HARD_D_TOLERANCE = 0.10
 # A user may ask for a different difficulty in the request (「數A 難題 40%」「自然平均答對率 0.5」);
 # the run records it in metadata.user_difficulty_request with the user's words and the gates
 # use it in place of the 學測 defaults. Without one the defaults apply unchanged.
@@ -282,10 +289,17 @@ def review_errors(exam, review):
                                   f'(113-115 best mean {CAP_MEAN_D[subject_name]:.2f}; the target is above 會考): rewrite items '
                                   'whose distractors no prepared student would pick or whose key a weak student can guess')
                 low_d = sum(d < 0.30 for d in discrimination)
-                if low_d > CAP_LOW_D_SHARE * len(discrimination):
-                    errors.append(f'difficulty: {low_d} items have a reviewed 鑑別度 below 0.30 (official 113-115: 0-8%, '
-                                  'target better than official); '
-                                  f'at most {CAP_LOW_D_SHARE:.0%} accepted')
+                low_share = CAP_LOW_D_SHARE_BY_SUBJECT.get(subject_name, CAP_LOW_D_SHARE)
+                if low_d > low_share * len(discrimination):
+                    errors.append(f'difficulty: {low_d} items have a reviewed 鑑別度 below 0.30 (official 113-115: 0-8%); '
+                                  f'at most {low_share:.0%} accepted')
+                hard = [d for p, d in zip(estimates, discrimination) if p < 0.40]
+                ceiling = CAP_HARD_D_MEAN[subject_name] + CAP_HARD_D_TOLERANCE
+                if len(hard) >= 2 and sum(hard) / len(hard) > ceiling:
+                    errors.append(f'difficulty: the {len(hard)} items estimated below 通過率 0.40 average 鑑別度 '
+                                  f'{sum(hard) / len(hard):.2f}; official {subject_name[2:]} items that hard average '
+                                  f'{CAP_HARD_D_MEAN[subject_name]:.2f} (113-115): estimate from the official items in the '
+                                  f'same position (plan official_d_113_115), at most {ceiling:.2f}')
             band_low, band_high = cap_p_band(subject_name, level)
             if type(wanted) in (int, float):
                 pass

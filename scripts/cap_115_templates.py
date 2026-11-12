@@ -255,6 +255,9 @@ html,body { margin:0; padding:0; background:#fff; color:#000; }
 .formula-box i { font:italic 700 14pt "Times New Roman",serif; }
 .formula-box .m { font:700 14pt "Times New Roman",serif; }
 .formula-box sup,.formula-box sub { font-size:9pt; line-height:0; }
+/* The italic and digit rules set 14pt on every letter, so a superscript inherited 14pt and ran the long
+   rows (Sₙ, rⁿ⁻¹) past the box's right edge; scripts keep the 9pt the 115 page prints. */
+.formula-box sup i,.formula-box sub i,.formula-box sup .m,.formula-box sub .m { font-size:9pt; }
 .formula-box .fr { display:inline-flex; flex-direction:column; vertical-align:middle; text-align:center; line-height:16pt; margin:0 2pt; }
 .formula-box .fr > span:first-child { border-bottom:.7pt solid #000; padding:0 2pt; }
 .formula-box .rad { border-top:.7pt solid #000; padding-top:.5pt; }

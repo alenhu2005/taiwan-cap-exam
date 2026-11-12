@@ -13,6 +13,7 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import run_hosted_workflow as workflow
+import cap_plan
 from compose_hosted_pdf import compose
 from fetch_hosted_template_assets import (CAP_MAP, DEFAULT_MAP, inner_component, map_for, production_records,
                                           style_subject, template_key)
@@ -125,34 +126,45 @@ def cap_paper(key, root):
     subject = key[2:]
     if key == '會考寫作測驗':
         questions = [{'id': 'w1', 'number': 1, 'type': 'guided_writing',
-                      'number_display': '', 'prompt': '請先閱讀以下資訊，並依據題意要求完成一篇文章。\n\n' + PLACEHOLDER * 6}]
+                      'number_display': '', 'prompt': '請先閱讀以下資訊，並依據題意要求完成一篇文章。\n\n' + PLACEHOLDER * 6
+                      + '\n請結合你的經驗或見聞，寫下對此的感受、想法。\n※不必訂題\n※不可在文中洩漏私人身分\n※不可使用詩歌體'}]
         sections = []
-        answers = [{'question_id': 'w1', 'final_answer': '依六級分規準評閱', 'reasoning': ['合成評閱說明。']}]
+        answers = [{'question_id': 'w1', 'final_answer': '依六級分規準評閱',
+                    'reasoning': ['合成審題說明。', '立意取材：合成。結構組織：合成。遣詞造句：合成。錯別字、格式與標點符號：合成。']}]
         return {'metadata': {'exam': '會考', 'subject': key}, 'sections': sections, 'questions': questions, 'answers': answers}
     count = {'會考國文': 42, '會考英語': 43, '會考數學': 25, '會考社會': 54, '會考自然': 50}[key]
     stem = 'Read the note and choose the best answer.' if key == '會考英語' else PLACEHOLDER
+    plan_slots = cap_plan.plan(key, 'fixture', seed='fixture')['planning_slots']
+    units = {s['number']: s.get('unit') or s.get('domain') for s in plan_slots}
+    targets = cap_plan.position_targets(key, '會考')
     keys = 'ABCD' * 20
     order = [keys[(i * 3 + i // 4) % 4] for i in range(count)]
     questions, answers = [], []
     for n in range(1, count + 1):
         key_label = order[n - 1]
         competency = {**COMPETENCY,
-                      # 會考社會 單題 alternate 歷史／地理／公民 in short runs, as 115 prints them.
-                      'domain': {'會考社會': ('歷史', '地理', '公民'), '會考自然': ('生物', '理化', '地球科學')}
-                                .get(key, ('',))[(n // 2) % 3] if key in ('會考社會', '會考自然') else '',
+                      # 會考社會 單題 alternate 歷史／地理／公民 in short runs, as 115 prints them; 自然 domains
+                      # follow the plan's official shares.
+                      'domain': ('歷史', '地理', '公民')[(n // 2) % 3] if key == '會考社會' else
+                                units[n] if key == '會考自然' else '',
                       'hidden_concept': f'合成目標概念{n}', 'bridge': '合成：答案同時需要兩個概念'}
+        if key == '會考數學':
+            # 113-115: three direct openings, about a third situated, two items judging two people's claims.
+            competency['context_type'] = '生活情境' if n > 3 and n % 2 else '學科知識'
+            competency['process'] = '評鑑' if n in (14, 20) else competency['process']
         if n % 4 == 0 and key in ('會考社會',):
             competency['domains'] = [competency['domain'], '公民' if competency['domain'] != '公民' else '地理']
         q = {'id': f'q{n}', 'number': n, 'section_id': 's1', 'type': 'single_choice',
              'prompt': f'{stem}（{n}）', 'options': [{'label': c, 'text': f'合成選項{c}{n}'} for c in 'ABCD'],
              'item_spec': {'cap_competency': competency,
+                           **({'cap_unit': units[n]} if key in ('會考數學', '會考國文', '會考英語') else {}),
                            'curriculum_codes': ['Ea-IV-1', 'Mb-IV-2'] if n % 4 == 0 else ['Ea-IV-1'],
                            'textbook_volumes': ['第三冊'],
                            'cap_distractors': {c: {'misconception': '合成迷思', 'peer_concept': '合成相鄰概念',
                                                    'expected_pick_rate': 0.12, 'ruled_out_by': '合成：課本定義排除'}
                                                for c in 'ABCD' if c != key_label},
                            'difficulty_design': {'linked_decisions': ['合成判斷一', '合成判斷二'],
-                                                 'estimated_p': round(sum(cap_p_band(key, '會考')) / 2, 2)}}}
+                                                 'estimated_p': targets[n]['target_p']}}}
         if key in ('會考社會', '會考自然') and n in (5, 9, 13):
             # 圖形選項: four figures as the options (official 社會 1-3, 自然 4 a year).
             q['inline_assets'] = {}
@@ -177,7 +189,8 @@ def cap_paper(key, root):
     if key == '會考數學':
         sections.append({'id': 's2', 'title': '第二部分：非選擇題（1～2題）', 'instructions': []})
         for n in (1, 2):
-            questions.append({'id': f'c{n}', 'number': n, 'number_display': f'{n}.', 'section_id': 's2',
+            questions.append({'id': f'c{n}', 'number': count + n, 'number_display': f'{n}.', 'section_id': 's2',
+                              'answer_label': f'非選擇題第{n}題',
                               'type': 'constructed_response', 'prompt': '合成非選擇題，請寫出完整的解題過程。',
                               'item_spec': {'cap_competency': COMPETENCY, 'curriculum_codes': ['N-8-1']}})
             answers.append({'question_id': f'c{n}', 'final_answer': '見詳解',
@@ -275,10 +288,10 @@ def test_cap_quality_gates(tmp_path):
         assert any(needle in e for e in errors), (needle, errors)
 
 
-def test_cap_difficulty_review_needs_official_p_and_discrimination():
+def test_cap_difficulty_review_needs_official_p_and_discrimination(tmp_path):
     from hosted_blind_review import CAP_MEAN_D, CAP_MEAN_P, review_errors
     assert set(CAP_MEAN_P) == set(CAP_MEAN_D) == set(OFFICIAL_RANGES)
-    exam = cap_paper('會考社會', Path('.'))
+    exam = cap_paper('會考社會', tmp_path)   # writes option figures: never into the repository
     def errors(p, d):
         rows = [{'id': q['id'], 'estimated_p': p, 'estimated_d': d} for q in exam['questions']]
         return [e for e in review_errors(exam, {'items': rows}) if '通過率' in e or '鑑別度' in e]
@@ -476,7 +489,7 @@ def test_cap_gates_from_the_115_comparison(tmp_path):
             for i, o in enumerate(q['options']):
                 o['text'] = f'圖形選項改回文字{i}'
     errors = validate_items(exam, asset_root=tmp_path)
-    for needle in ('甲乙丙丁 combinations', 'figures as options', 'options run long', 'prints statistics', 'running mean'):
+    for needle in ('甲乙丙丁 combinations', 'figures as options', 'options run long', 'prints real-world data', 'running mean'):
         assert any(needle in e for e in errors), (needle, [e for e in errors if 'Q' not in e[:3]])
     # A shared curriculum term is not a rewrite; several shared phrases of one official item are.
     assert official_overlaps('日本統治時期的水庫蓄水量與法定代理人') == []

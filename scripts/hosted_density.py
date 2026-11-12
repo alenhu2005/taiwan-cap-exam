@@ -26,6 +26,8 @@ value to argue about.
 """
 from __future__ import annotations
 
+import re
+
 MAX_BODY_VOID = {'default': 0.32, '英文': 0.42, '會考英語': 0.42}
 MAX_LAST_PAGE_VOID = 0.60
 MATH_SUBJECTS = {'數學A', '數學B', '會考數學'}
@@ -49,22 +51,34 @@ def page_role(page_text: str, number: int, count: int, subject=None, *, solution
 
 def last_body_page(number: int, count: int, roles: dict) -> bool:
     """True when no later page of the booklet is a body/solutions page."""
-    return all(roles.get(n) in {'cover', 'formula'} for n in range(number + 1, count + 1))
+    return all(roles.get(n) in {'cover', 'formula', 'working'} for n in range(number + 1, count + 1))
 
 
 def page_void_limit(subject, role: str, is_last_body_page: bool):
     """The fixed limit for this page, or None when the page is a fixed template layer."""
-    if role in {'cover', 'formula'}:
+    if role in {'cover', 'formula', 'working'}:
         return None
     if is_last_body_page:
         return MAX_LAST_PAGE_VOID
     return body_void_limit(subject)
 
 
+def working_room_from(pages, subject=None, *, solutions=False):
+    """會考數學 question booklets print each 非選擇題 on its own page with the rest left for working
+    (113-115): the first page from 「第二部分：非選擇題」 on, or None."""
+    if subject != '會考數學' or solutions:
+        return None
+    return next((n for n, text in pages if '非選擇題' in re.sub(r'\s', '', text or '') and '第二部分' in
+                 re.sub(r'\s', '', text or '') and not any(m in (text or '') for m in COVER_MARKERS)), None)
+
+
 def booklet_limits(pages, subject=None, *, solutions=False):
     """{page number: (role, limit)} for a sequence of (number, text) pairs."""
     count = len(pages)
     roles = {n: page_role(text, n, count, subject, solutions=solutions) for n, text in pages}
+    working = working_room_from(pages, subject, solutions=solutions)
+    if working is not None:
+        roles.update({n: 'working' for n in roles if n >= working and roles[n] == 'body'})
     return {n: (roles[n], page_void_limit(subject, roles[n], last_body_page(n, count, roles))) for n, _ in pages}
 
 

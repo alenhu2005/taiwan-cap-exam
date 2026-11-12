@@ -8,7 +8,7 @@
   "originality.json": {
     "comparison_scope": "no-history-available",
     "history": [],
-    "items": [{"id": "<題目 id>", "status": "pass", "observations": "<與官方題目、本卷其他題目的差異；情境與解題路徑是否新>"}]
+    "items": [{"id": "<題目 id>", "status": "pass", "observations": "<與官方題目、課本與參考書常見題型、本卷其他題目的差異；情境、問法與解題路徑哪裡是新的；數值是否與他題重複>"}]
   },
   "visuals.json": {
     "items": [
@@ -24,8 +24,11 @@
     "author_context": "<本對話的識別>",
     "reviewer_context": "<單一脈絡時與 author_context 相同>",
     "blind_packet": {"path": "<blind-packet.json 的路徑>", "sha256": "<雜湊>"},
+    "draft": "run_hosted_workflow.py auto-review 會寫出 difficulty.draft.json：每題的欄位、錨點鍵與作者預估都已填好，審查時逐題修改後另存為 difficulty.json",
     "items": [{
-      "id": "<題目 id>",
+      "id": "<選擇題 id>",
+      "status": "pass",
+      "observations": "<蓋掉答案重新作答的觀察：哪一步最難、誘答會吸引誰>",
       "estimated_p": 0.0,
       "estimated_d": 0.0,
       "difficulty_band": "<very_easy | easy | medium | hard | very_hard>",
@@ -36,6 +39,21 @@
       "anchor_comparison": {"kind": "embedded-calibration", "key": "objective", "note": "<與官方同題位通過率的比較>"},
       "anchor": {"kind": "embedded-calibration", "key": "objective"},
       "answer_recheck": "<蓋掉答案後重新作答的過程，與存檔答案比對>",
+      "unresolved": []
+    }, {
+      "id": "<非選擇題 id（數學 c1、c2）或寫作測驗 id>",
+      "status": "pass",
+      "observations": "<依 0-3 級分規準試評的觀察>",
+      "estimated_p": 0.0,
+      "estimated_d": 0.0,
+      "difficulty_band": "<very_easy | easy | medium | hard | very_hard>",
+      "expected_minutes": 0.0,
+      "shortest_route": "<最短解法>",
+      "decisive_steps": ["<關鍵判斷一>", "<關鍵判斷二>"],
+      "shortcut_search": "<是否能不經推理直接寫出答案>",
+      "anchor_comparison": {"kind": "embedded-calibration", "key": "constructed-response", "note": "<與官方非選擇題級分分布的比較>"},
+      "anchor": {"kind": "embedded-calibration", "key": "constructed-response"},
+      "answer_recheck": "<重新作答並依規準評分的結果>",
       "unresolved": []
     }]
   }

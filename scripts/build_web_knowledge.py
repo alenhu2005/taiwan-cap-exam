@@ -121,6 +121,8 @@ def source_paths(root: Path = ROOT) -> list[Path]:
     paths.append(root / "scripts" / "validate_cap_form.py")
     paths.append(root / "scripts" / "validate_cap_quality.py")
     paths.append(root / "scripts" / "cap_plan.py")
+    paths.append(root / "scripts" / "cap_units.py")
+    paths.append(root / "scripts" / "cap_draw.py")
     paths.append(root / "scripts" / "hosted_auto_review.py")
     paths.append(root / "scripts" / "web_image.py")
     paths.append(root / "scripts" / "cap_figure.py")

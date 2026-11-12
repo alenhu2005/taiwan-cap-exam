@@ -273,6 +273,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="產生115會考版型資產（不產生題目）")
     parser.add_argument("--build-all", action="store_true", help="重建六科模板PDF與模板對照表")
     parser.add_argument("--map-only", action="store_true", help="只依現有PDF重寫模板對照表")
+    parser.add_argument("--subject", action="append", help="with --build-all: rebuild only this template key (repeatable)")
     parser.add_argument("--browser", type=Path)
     parser.add_argument("--kai-font", type=Path, help="TW-Kai-98_1.ttf (the preflight's pinned 楷體)")
     parser.add_argument("--sung-font", type=Path, help="TW-Sung-98_1.ttf (the preflight's pinned 明體)")
@@ -281,7 +282,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.build_all:
             browser = find_browser(args.browser)
             fonts = {k: v for k, v in (("kai", args.kai_font), ("sung", args.sung_font)) if v}
-            for subject in SUBJECT_ORDER:
+            for subject in args.subject or SUBJECT_ORDER:
                 build_subject(browser, subject, PACK_ROOT / "assets", fonts)
         elif not args.map_only:
             raise ValueError("請指定 --build-all 或 --map-only")

@@ -11,7 +11,8 @@ from pathlib import Path
 import re
 from urllib.parse import urlparse
 
-SOURCE_NOTE = re.compile(r'資料來源[：:]|參考來源[：:]|資料出處[：:]|參考文獻[：:]|出處[：:]|改寫自|改編自|節錄自|摘自|https?://|www\.|doi[：:]', re.I)
+# 「可能出處：第三冊（八上）」 is the 會考 solution's textbook-volume note, not a source note.
+SOURCE_NOTE = re.compile(r'資料來源[：:]|參考來源[：:]|資料出處[：:]|參考文獻[：:]|(?<!可能)出處[：:]|改寫自|改編自|節錄自|摘自|https?://|www\.|doi[：:]', re.I)
 PRODUCTION_CAPTION = re.compile(r'(?:第\s*[\d一二三四五六七八九十百]+\s*題\s*(?:附圖|示意圖|圖)\s*[:：]|\b(?:Question|Q)\s*\d+\s*(?:figure|diagram)\s*[:：])', re.I)
 
 

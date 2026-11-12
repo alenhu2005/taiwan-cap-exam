@@ -607,11 +607,13 @@ def plan(state_path, question_spec, solution_spec, font, output, *, reading_font
         body_height = page_plan['body_bbox'][3] - page_plan['body_bbox'][1]
         pages = []
         plan_subject = read(spec_path).get('subject')
+        working = set(layout.get('working_pages') or [])
         for row in page_plan['pages']:
             void = round(row['bottom_safety_pt'] / body_height, 3)
             last = row['page'] == page_plan['page_count']
             # The same fixed limit the inspector and the final checker apply, last page included.
-            void_limit = page_void_limit(plan_subject, 'solutions' if role == 'solution' else 'body', last)
+            void_limit = page_void_limit(plan_subject, 'working' if row['page'] in working else
+                                         'solutions' if role == 'solution' else 'body', last)
             pages.append({**row, 'bottom_void_ratio': void, 'bottom_void_limit': void_limit})
             if void_limit is not None and void > void_limit:
                 attention.append({'role': role, 'page': row['page'], 'bottom_void_ratio': void, 'limit': void_limit,
@@ -1109,13 +1111,14 @@ MATERIAL_VISUAL = re.compile(r'下表|下圖|附表|附圖|如表|如圖|右表|
 RANGE_DISPLAY = re.compile(r'(\d{1,2})\s*[-–]\s*(\d{1,2})')
 
 
-def project_specs(exam, hints, body_width):
+def project_specs(exam, hints, body_width, reviewed=None):
     """Deterministic layout projection of saved items. It adds no printed content.
 
     Printed text comes only from exam.json, following the conventions of the
     maintained official-form renderers for every subject. Hints hold layout
     choices and explicit blocks for structures the item fields cannot express.
     """
+    reviewed = reviewed or {}
     spec_subject = exam['metadata']['subject']
     # 會考 keys (會考社會) lay out with their closest 學測 component style; labels stay 會考's.
     subject = style_subject(spec_subject)
@@ -1468,11 +1471,13 @@ def project_specs(exam, hints, body_width):
         if not steps:
             raise ValueError(where + ': saved answer has no printable solution steps')
         if spec_subject.startswith('會考'):
-            # 會考 solutions open with the item's 108 課綱 codes and the likely 國中 volume(s).
-            from cap_plan import solution_note
+            # 會考 solutions open with the item's 108 課綱 codes and the likely 國中 volume(s), then its
+            # estimated 難易度 and 鑑別度 (labelled 預估: no examinee has sat the paper).
+            from cap_plan import difficulty_note, solution_note
             note = solution_note(q.get('item_spec') or {})
-            if note:
-                steps = [note, *steps]
+            estimate = difficulty_note(q.get('item_spec') or {}, reviewed.get(q['id']),
+                                       constructed=q.get('type') != 'single_choice')
+            steps = [line for line in (note, estimate) if line] + steps
         solution = {'kind': 'solution', 'id': q['id'],
                     'text': printed(hint.get('solution_text') or '答案：' + answer_text(answer.get('final_answer')),
                                     where + ' final_answer', english=english),
@@ -1490,7 +1495,32 @@ def project_specs(exam, hints, body_width):
         attach_assets(solution, answer, where, body_width, hint.get('solution', {}), figure_key='solution-figure',
                       position='below')
         solutions.append(solution)
+    if spec_subject == '會考數學':
+        # 113-115 print each 非選擇題 on a page of its own, below 「第二部分：非選擇題」, and leave the rest
+        # of the page for working; M1111 packed item 25 and both 非選擇題 onto one page.
+        constructed_seen = False
+        for block in blocks:
+            if block.get('kind') == 'section' and '非選' in re.sub(r'<[^>]+>', '', str(block.get('title') or '')):
+                block['break_before'] = True
+                constructed_seen = True
+            elif block.get('kind') == 'constructed':
+                if constructed_seen:
+                    constructed_seen = False   # the first follows its heading on the same page
+                else:
+                    block['break_before'] = True
     return [{'subject': spec_subject, 'blocks': blocks}, {'subject': spec_subject, 'blocks': solutions}]
+
+
+def reviewed_estimates(root, state, exam_path):
+    """{item id: difficulty.json row} when the registered difficulty review covers this exam."""
+    try:
+        path = inside(root, root / ((state.get('checks') or {}).get('difficulty') or {}).get('path', ''))
+        review = read(path)
+    except (OSError, ValueError, TypeError, AttributeError):
+        return {}
+    if not isinstance(review, dict) or review.get('exam_sha256') != record(root, exam_path).get('sha256'):
+        return {}
+    return {row.get('id'): row for row in review.get('items') or [] if isinstance(row, dict)}
 
 
 def specs(state_path, question_output=None, solution_output=None, hints=None):
@@ -1515,7 +1545,7 @@ def specs(state_path, question_output=None, solution_output=None, hints=None):
             raise ValueError('Hints allow items, solution_heading and solution_section_headings only')
     manifest = read(map_for(exam['metadata']['subject']))
     body = next(s for s in manifest['subjects'] if s['subject'] == exam['metadata']['subject'])['overlay_geometry_pt']['body']
-    projections = project_specs(exam, hint_data, body[2] - body[0] - 8)
+    projections = project_specs(exam, hint_data, body[2] - body[0] - 8, reviewed_estimates(root, state, exam_path))
     for role, spec in zip(('question', 'solution'), projections):
         printed = [str(b.get('label')).strip() for b in spec['blocks'] if b.get('kind') != 'section' and b.get('label')]
         duplicates = sorted({label for label in printed if printed.count(label) > 1})

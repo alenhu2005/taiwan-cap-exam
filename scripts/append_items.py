@@ -121,6 +121,35 @@ def check_numbering(questions):
             raise ValueError(f'Question {n}: use one ordering scheme for its subparts, either 1, 2, … or a, b, …')
 
 
+# Identity and provenance keys stay as first saved; everything else in a later --plan (a filled
+# difficulty_balance_plan.target_counts, a corrected title or section heading) replaces the saved
+# value. A hosted run edited its plan after the first batch and found the change silently ignored.
+PLAN_LOCKED_METADATA = {'paper_id', 'subject', 'exam', 'mixed_group_originality_records'}
+
+
+def merge_plan(exam, plan):
+    if not isinstance(plan, dict) or not isinstance(plan.get('metadata'), dict):
+        raise ValueError('--plan must hold the paper metadata, instructions and sections')
+    for name in ('paper_id', 'subject'):
+        if plan['metadata'].get(name) not in (None, exam.get('metadata', {}).get(name)):
+            raise ValueError('--plan belongs to another paper or subject')
+    updated = []
+    for key, value in plan['metadata'].items():
+        if key not in PLAN_LOCKED_METADATA and exam['metadata'].get(key) != value:
+            exam['metadata'][key] = copy.deepcopy(value)
+            updated.append('metadata.' + key)
+    for key in ('instructions', 'sections'):
+        if isinstance(plan.get(key), list) and plan[key] != exam.get(key):
+            if key == 'sections':
+                ids = {s.get('id') for s in plan[key] if isinstance(s, dict)}
+                orphans = sorted({q.get('section_id') for q in exam.get('questions', [])} - ids)
+                if orphans:
+                    raise ValueError(f'--plan drops sections {orphans} that saved items use')
+            exam[key] = copy.deepcopy(plan[key])
+            updated.append(key)
+    return updated
+
+
 def validate_batch(batch):
     if not isinstance(batch, dict) or set(batch) - {'questions', 'answers'}:
         raise ValueError('Batch must contain only questions and answers')
@@ -262,8 +291,11 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
             if preflight.get('subject') in {'數學A', '數學B'} and len(options) != 5:
                 raise ValueError(f'{question["id"]}: 數學 choice items print exactly five options (1)-(5); found {len(options)}')
     exam_path = root / 'exam.json'
+    plan_updates = []
     if exam_path.exists():
         exam = read(exam_path)
+        if plan:
+            plan_updates = merge_plan(exam, read(plan))
     else:
         if not plan:
             raise ValueError('The first batch requires --plan with the actual paper metadata, instructions and sections')
@@ -336,7 +368,7 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
     exam['answers'] = [by_answer[q['id']] for q in exam['questions']]
     # Never overwrite review reports or mutate their exam hashes to make them pass.
     # Atomic exam first: a crash before checkpoint leaves recoverable, real content.
-    if changed or not exam_path.exists():
+    if changed or plan_updates or not exam_path.exists():
         save(exam_path, exam)
     before = existing_state.get('exam')
     content_changed = before != record(root, exam_path)
@@ -351,6 +383,8 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
               'saved_item_ids': [q['id'] for q in questions], 'changed_item_ids': changed,
               'idempotent_replay': not changed, 'content_status': 'pending-review' if content_changed else saved.get('content_status', 'pending-review'),
               'reviews_approved_by_tool': False}
+    if plan_updates:
+        report['plan_updated'] = plan_updates
     gaps = design_gaps(exam, root, questions)
     if gaps:
         report['design_fields_pending'] = gaps

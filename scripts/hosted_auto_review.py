@@ -92,6 +92,62 @@ def answer_separation(exam: dict, root: Path, state: dict) -> tuple[bool, str]:
     return not findings, text_note + ("" if not findings else ": " + " | ".join(findings[:12]))
 
 
+BANDS = (("very_hard", 0.30), ("hard", 0.50), ("medium", 0.70), ("easy", 0.85), ("very_easy", 1.01))
+
+
+def difficulty_draft(exam: dict, root: Path) -> Path | None:
+    """difficulty.draft.json for a 會考 paper: every row with the fields the final check reads, the anchor
+    key its item type needs (objective / constructed-response), the official same-position 通過率 and
+    the author's own estimates as a starting point. status stays pending: the reviewer re-solves each
+    item with the answer covered, edits the estimates, writes observations and answer_recheck, then
+    saves it as difficulty.json. A math author learned these fields one failed finalize at a time."""
+    metadata = exam.get("metadata") or {}
+    subject = metadata.get("subject")
+    if not str(subject or "").startswith("會考"):
+        return None
+    try:
+        from cap_plan import position_targets
+        targets = position_targets(subject, metadata.get("cap_difficulty_level", "會考"))
+    except (KeyError, OSError, ValueError):
+        targets = {}
+    from hosted_blind_review import packet as blind_packet
+    exam_sha = _sha(root / "exam.json")
+    packet = root / f"blind-packet-{exam_sha[:12]}.json"
+    packet.write_text(json.dumps(blind_packet(exam, "single-context"), ensure_ascii=False, indent=1) + "\n",
+                      encoding="utf-8", newline="\n")
+    rows = []
+    for q in exam.get("questions") or []:
+        design = (q.get("item_spec") or {}).get("difficulty_design") or {}
+        constructed = q.get("type") != "single_choice"
+        p = design.get("estimated_p")
+        target = targets.get(q.get("number")) if not constructed else None
+        rows.append({
+            "id": q.get("id"), "status": "pending", "observations": "",
+            "estimated_p": p, "estimated_d": design.get("estimated_d"),
+            "difficulty_band": next((b for b, edge in BANDS if type(p) in (int, float) and p < edge), None),
+            "expected_minutes": design.get("expected_minutes"),
+            "shortest_route": design.get("short_route") or "",
+            "decisive_steps": [d for d in design.get("linked_decisions") or [] if d],
+            "shortcut_search": "",
+            "anchor_comparison": {"kind": "embedded-calibration",
+                                  "key": "constructed-response" if constructed else "objective",
+                                  "note": (f"official 113-115 position {q.get('number')}: 通過率 {target['official_p_113_115']}, "
+                                           f"鑑別度 {target.get('official_d_113_115')}" if target else "")},
+            "anchor": {"kind": "embedded-calibration", "key": "constructed-response" if constructed else "objective"},
+            "answer_recheck": "", "unresolved": []})
+    draft = {"draft_note": "pending until reviewed: re-solve each item with the answer covered, adjust the estimates, "
+                           "fill observations, shortcut_search and answer_recheck, set status pass, remove this note, "
+                           "save as difficulty.json",
+             "exam_sha256": exam_sha, "status": "pending", "observations": "",
+             "review_mode": "single-context", "independent_review": False, "review_reason": "",
+             "author_context": "", "reviewer_context": "",
+             "blind_packet": {"path": packet.name, "sha256": _sha(packet)},
+             "items": rows}
+    path = root / "difficulty.draft.json"
+    path.write_text(json.dumps(draft, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return path
+
+
 def auto_review(state_path, gates=GATES) -> dict:
     state_path = Path(state_path).resolve()
     root = state_path.parent
@@ -109,6 +165,8 @@ def auto_review(state_path, gates=GATES) -> dict:
         (root / f"{gate}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         written[gate] = report["status"]
     pending = [g for g, s in written.items() if s != "pass"]
+    draft = difficulty_draft(exam, root)
     return {"status": "pending" if pending else "ok", "reviews": written,
+            **({"difficulty_draft": draft.name} if draft else {}),
             "next_action": ("fix the findings in " + ", ".join(f"{g}.json" for g in pending) + ", then rerun auto-review"
                             if pending else "run checkpoint to register these reviews")}

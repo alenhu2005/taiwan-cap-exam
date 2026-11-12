@@ -21,6 +21,9 @@ CONSTRUCTED = {"會考數學": 2}
 CAP_SUBJECTS = (*OFFICIAL_RANGES, "會考寫作測驗")
 LABELS = ("A", "B", "C", "D")
 LONGEST_KEY_SHARE = 0.05   # official 會考社會 113-115: 0-3 a year (0-7%); target above official
+# Official best year per subject (113-115 measured 2026-11): 國文 2/42, 數學 0/25, 自然 2/50, 社會 0/54,
+# 英語 6/43 (English words differ in length by nature: 10/43 in 115).
+LONGEST_KEY_BY_SUBJECT = {"會考英語": 0.14}
 CHOICE_TYPES = {"single_choice"}
 CONSTRUCTED_TYPES = {"constructed_response", "short_answer"}
 WRITING_TYPES = {"guided_writing", "essay", "constructed_response"}
@@ -29,7 +32,13 @@ WRITING_TYPES = {"guided_writing", "essay", "constructed_response"}
 SITUATED_CONTEXTS = {"生活情境", "社會議題", "科學探究", "跨領域"}
 CONTEXT_TYPES = SITUATED_CONTEXTS | {"學科知識", "文本閱讀"}
 PROCESSES = {"擷取訊息", "統整解釋", "推論", "應用", "評鑑"}
-SITUATED_SHARE = {"會考國文": 0.50, "會考英語": 0.60, "會考數學": 0.60, "會考社會": 0.70, "會考自然": 0.70}
+# Measured on 113-115 (maintainer review 2026-11): 國文 about 30% (posts, ads, data, notices; the rest
+# reads literary and classical texts), 英語 about 55% (題組 texts; 單題 are word and structure items),
+# 數學 33-41% (115: 文旦、細菌、書店、用電量、時速錶、馬拉松、沙發), 自然 70-80%. A math paper written
+# at 89% situated (M1111) dropped the bare computation, geometry and judgement items every official
+# paper has, so 數學 also has a ceiling.
+SITUATED_SHARE = {"會考國文": 0.30, "會考英語": 0.50, "會考數學": 0.30, "會考社會": 0.70, "會考自然": 0.70}
+SITUATED_MAX = {"會考數學": 0.60}
 # Printed disclaimers that announce an invented or classroom-only world (hosted 學測 papers
 # printed 「教學模型」「非 NASA 數據」「虛構小鎮」); real, checkable situations only.
 # 國中 scope: 108 課綱 第四學習階段 learning-content codes (自然 Ea-IV-1, 社會 歷Ha-IV-1, 國文 Ab-IV-1)
@@ -44,6 +53,36 @@ DISCLAIMERS = re.compile(r"虛構|假想情境|假設性資料|教學模型|非�
 def _label(option) -> str:
     raw = str(option.get("label", "") if isinstance(option, dict) else "")
     return re.sub(r"[()（）\s]", "", raw)
+
+
+# 寫作測驗 113-115 print the same frame: the opening line, the material (headlines, a picture and a word
+# bank, or a short paragraph), the questions to think about, a task joining 經驗 or 見聞, and three
+# notes in this order. The 六級分 rubric scores four dimensions; the solution explains each.
+WRITING_OPENING = re.compile(r"^\s*請先閱讀以下資訊，並(?:按|依據?)題意要求完成一篇文章。")
+WRITING_NOTES = ("※不必訂題", "※不可在文中洩漏私人身分", "※不可使用詩歌體")
+WRITING_RUBRIC = ("立意取材", "結構組織", "遣詞造句", "錯別字")
+
+
+def writing_task_errors(task: dict, answer: dict) -> list[str]:
+    errors = []
+    prompt = str(task.get("prompt") or "")
+    flat = re.sub(r"\s", "", prompt)
+    if not WRITING_OPENING.match(prompt):
+        errors.append("寫作測驗 opens 「請先閱讀以下資訊，並依據題意要求完成一篇文章。」 as 113-115 do")
+    positions = [flat.find(note) for note in WRITING_NOTES]
+    if -1 in positions or positions != sorted(positions):
+        errors.append("寫作測驗 ends with the three notes in the official order: " + " ".join(WRITING_NOTES))
+    if not re.search(r"經驗|見聞", flat) or "寫下" not in flat:
+        errors.append("寫作測驗 asks the writer to join their own 經驗 or 見聞 and 寫下 their 感受、想法 or 觀察 "
+                      "(113-115 task wording)")
+    if re.search(r"題目[：:]", flat):
+        errors.append("寫作測驗 prints no title (※不必訂題): give material and a task, not 「題目：」")
+    explained = " ".join(str(step) for step in answer.get("reasoning") or []) + str(answer.get("final_answer") or "")
+    missing = [d for d in WRITING_RUBRIC if d not in explained]
+    if missing:
+        errors.append(f"寫作測驗 solution explains the 級分 by the official dimensions; missing {'、'.join(missing)} "
+                      "(立意取材、結構組織、遣詞造句、錯別字格式與標點符號), with a 審題 and 取材 guide")
+    return errors
 
 
 def full_paper_minimum(subject: str) -> int:
@@ -71,6 +110,8 @@ def validate_exam(exam: dict, *, full: bool = True, asset_root: Path | None = No
                 errors.append("寫作測驗 task must not print options")
             if q.get("score") not in (None, 6):
                 errors.append("寫作測驗 is scored 1-6 級分; leave score unset or 6")
+            if full:
+                errors += writing_task_errors(q, answers.get(q.get("id")) or {})
         return errors
     if any(q.get("type") == "listening_choice" or q.get("audio") for q in questions):
         errors.append("英語聽力 is out of scope: the 英語 booklet is the reading booklet only")
@@ -114,9 +155,10 @@ def validate_exam(exam: dict, *, full: bool = True, asset_root: Path | None = No
         lengths = {_label(o): len(re.sub(r"<[^>]+>|\s", "", str(o.get("text", "")))) for o in q.get("options") or []}
         if key in lengths and list(lengths.values()).count(max(lengths.values())) == 1 and lengths[key] == max(lengths.values()):
             longest += 1
-    if full and choice and longest > max(2, round(LONGEST_KEY_SHARE * len(choice))):
+    share = LONGEST_KEY_BY_SUBJECT.get(subject, LONGEST_KEY_SHARE)
+    if full and choice and longest > max(2, round(share * len(choice))):
         errors.append(f"{longest} of {len(choice)} keys are the single longest option (at most "
-                      f"{round(LONGEST_KEY_SHARE * 100)}%): lengthen distractors so length never signals the answer")
+                      f"{round(share * 100)}%): lengthen distractors so length never signals the answer")
     level = metadata.get("cap_difficulty_level", "會考")
     if level not in CAP_LEVELS:
         errors.append(f"metadata.cap_difficulty_level must be one of {'、'.join(CAP_LEVELS)} (the user's choice; default 會考)")
@@ -166,6 +208,10 @@ def validate_exam(exam: dict, *, full: bool = True, asset_root: Path | None = No
     if full and items and situated < SITUATED_SHARE[subject] * items:
         errors.append(f"only {situated} of {items} items are set in a real situation (生活情境／社會議題／科學探究／跨領域); "
                       f"{subject[2:]} needs at least {SITUATED_SHARE[subject]:.0%}, as official 會考 素養題 do")
+    if full and items and subject in SITUATED_MAX and situated > SITUATED_MAX[subject] * items:
+        errors.append(f"{situated} of {items} items are situated; official 會考{subject[2:]} 113-115 set about a third in a "
+                      f"situation (at most {SITUATED_MAX[subject]:.0%} here) and ask the rest directly: computation, "
+                      "geometric properties, judging two people's claims (context_type 學科知識)")
     groups: dict[str, list[int]] = {}
     for q in choice:
         if q.get("group_stimulus"):

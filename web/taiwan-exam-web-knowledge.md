@@ -85,10 +85,10 @@ attachments; extract only the selected subject's components.
 [
   {
     "path": "SKILL.md",
-    "bytes": 91281,
-    "sha256": "421b7194d1353cf9857f765612ff893f07ab33cc41a1dcb40b0f534107f01951",
-    "embedded_bytes": 91281,
-    "embedded_sha256": "421b7194d1353cf9857f765612ff893f07ab33cc41a1dcb40b0f534107f01951"
+    "bytes": 91631,
+    "sha256": "c742558630669665da1935ceb576f2e3f2936836a2f6bb1f1194555259d80b2a",
+    "embedded_bytes": 91631,
+    "embedded_sha256": "c742558630669665da1935ceb576f2e3f2936836a2f6bb1f1194555259d80b2a"
   },
   {
     "path": "core/taxonomy.json",
@@ -611,9 +611,9 @@ attachments; extract only the selected subject's components.
   {
     "path": "exam_packs/會考/templates/115/hosted-web-template-assets.json",
     "bytes": 28727,
-    "sha256": "a8cd5a02991a5d4d63f70a129663d628788a8da9bb3b7760e17d8f8454b0e55c",
+    "sha256": "543144186f6c4c0a06530e7b293dc0f2b51ad0ebaad03b95981a642cf8cb31b2",
     "embedded_bytes": 28727,
-    "embedded_sha256": "a8cd5a02991a5d4d63f70a129663d628788a8da9bb3b7760e17d8f8454b0e55c"
+    "embedded_sha256": "543144186f6c4c0a06530e7b293dc0f2b51ad0ebaad03b95981a642cf8cb31b2"
   },
   {
     "path": "exam_packs/會考/templates/115/template-pack.json",
@@ -624,17 +624,17 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "references/cap-execution-card.md",
-    "bytes": 5902,
-    "sha256": "8a6ecaecb0379bab01b843d7d7204ff2d55fccf09c016910e7c516b2a1a79d95",
-    "embedded_bytes": 5902,
-    "embedded_sha256": "8a6ecaecb0379bab01b843d7d7204ff2d55fccf09c016910e7c516b2a1a79d95"
+    "bytes": 9004,
+    "sha256": "67f70d7dfd24a961d7c7d583dc281bca626be5b94a6e0d00e8f2157f342a046e",
+    "embedded_bytes": 9004,
+    "embedded_sha256": "67f70d7dfd24a961d7c7d583dc281bca626be5b94a6e0d00e8f2157f342a046e"
   },
   {
     "path": "references/current-cap-form.md",
-    "bytes": 15607,
-    "sha256": "4dcbf33e6fb94782b3ca641f7063943a9c09f1de301c18791f1c3803c85c3175",
-    "embedded_bytes": 15607,
-    "embedded_sha256": "4dcbf33e6fb94782b3ca641f7063943a9c09f1de301c18791f1c3803c85c3175"
+    "bytes": 20872,
+    "sha256": "ad3aafc961efb719dbd31f40e805d0affb69f50cb2f508663290346131ea2b52",
+    "embedded_bytes": 20872,
+    "embedded_sha256": "ad3aafc961efb719dbd31f40e805d0affb69f50cb2f508663290346131ea2b52"
   },
   {
     "path": "references/current-form-literacy-load.md",
@@ -1009,10 +1009,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/append_items.py",
-    "bytes": 24603,
-    "sha256": "e0fe73c52d209394af4f70244cfdcf50319965a82c8ad6ca95e5538dd1deaa7d",
-    "embedded_bytes": 24603,
-    "embedded_sha256": "e0fe73c52d209394af4f70244cfdcf50319965a82c8ad6ca95e5538dd1deaa7d"
+    "bytes": 26375,
+    "sha256": "23ad208e22fabc7cd2b0a171acd5b86fae36c1d39affb5cad4854d9186bb4e5d",
+    "embedded_bytes": 26375,
+    "embedded_sha256": "23ad208e22fabc7cd2b0a171acd5b86fae36c1d39affb5cad4854d9186bb4e5d"
   },
   {
     "path": "scripts/audit_item_originality.py",
@@ -1029,6 +1029,13 @@ attachments; extract only the selected subject's components.
     "embedded_sha256": "8d902fa71eb9d77144a6e49b49c340b96d294edfc69ffa0bb478da98ba367d68"
   },
   {
+    "path": "scripts/cap_draw.py",
+    "bytes": 15523,
+    "sha256": "22b719b31711e7679991d89236c033f878950b85277c8959a20c57f49ba2c824",
+    "embedded_bytes": 15523,
+    "embedded_sha256": "22b719b31711e7679991d89236c033f878950b85277c8959a20c57f49ba2c824"
+  },
+  {
     "path": "scripts/cap_figure.py",
     "bytes": 1991,
     "sha256": "4ef65af3fba3b12d918b764a1a98c060fd3c39e23414a8533136e0da9c7b1123",
@@ -1037,10 +1044,17 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/cap_plan.py",
-    "bytes": 25644,
-    "sha256": "784204ed317ce20e42a26aa7de2820104d823246b23a218730555a79b2d84f90",
-    "embedded_bytes": 25644,
-    "embedded_sha256": "784204ed317ce20e42a26aa7de2820104d823246b23a218730555a79b2d84f90"
+    "bytes": 35227,
+    "sha256": "663ce7b1cbeb033e2b2d506640bb6cfd89d21077e94c520fc3ebbd0b06b41092",
+    "embedded_bytes": 35227,
+    "embedded_sha256": "663ce7b1cbeb033e2b2d506640bb6cfd89d21077e94c520fc3ebbd0b06b41092"
+  },
+  {
+    "path": "scripts/cap_units.py",
+    "bytes": 11135,
+    "sha256": "b0ee6314f621817788667e1f37c36c0855784a09222e64023a493bf8dfff5f66",
+    "embedded_bytes": 11135,
+    "embedded_sha256": "b0ee6314f621817788667e1f37c36c0855784a09222e64023a493bf8dfff5f66"
   },
   {
     "path": "scripts/check_hosted_run.py",
@@ -1086,24 +1100,24 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/hosted_auto_review.py",
-    "bytes": 6039,
-    "sha256": "7c535ea2e4c6b6f3e11cec1282636525fd805a6359964cd569c24d4b15b34f6e",
-    "embedded_bytes": 6039,
-    "embedded_sha256": "7c535ea2e4c6b6f3e11cec1282636525fd805a6359964cd569c24d4b15b34f6e"
+    "bytes": 9701,
+    "sha256": "3ea7362ae4c241f87035c167ebd93287644b4678ffd3ea680e621b24d66b44a4",
+    "embedded_bytes": 9701,
+    "embedded_sha256": "3ea7362ae4c241f87035c167ebd93287644b4678ffd3ea680e621b24d66b44a4"
   },
   {
     "path": "scripts/hosted_blind_review.py",
-    "bytes": 24060,
-    "sha256": "7181b089a63f8b3889bfa0ae2e65ee21ffb1ac5a9b1a912709fe56077055342f",
-    "embedded_bytes": 24060,
-    "embedded_sha256": "7181b089a63f8b3889bfa0ae2e65ee21ffb1ac5a9b1a912709fe56077055342f"
+    "bytes": 25466,
+    "sha256": "fb9bef16f98a02e65140847751542a2f65237739ff7b5f20bf16e785b9ea3dac",
+    "embedded_bytes": 25466,
+    "embedded_sha256": "fb9bef16f98a02e65140847751542a2f65237739ff7b5f20bf16e785b9ea3dac"
   },
   {
     "path": "scripts/hosted_body_templates.py",
-    "bytes": 76723,
-    "sha256": "48aee7c30241fbc5ade451dcdbfe6b754eaa67cdafccf83c123b709541bd09a4",
-    "embedded_bytes": 76723,
-    "embedded_sha256": "48aee7c30241fbc5ade451dcdbfe6b754eaa67cdafccf83c123b709541bd09a4"
+    "bytes": 78653,
+    "sha256": "be559795e6067f0d0f6e441caa122de713993072a7bcee368e703b1e6d46ed39",
+    "embedded_bytes": 78653,
+    "embedded_sha256": "be559795e6067f0d0f6e441caa122de713993072a7bcee368e703b1e6d46ed39"
   },
   {
     "path": "scripts/hosted_bundles.py",
@@ -1121,10 +1135,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/hosted_density.py",
-    "bytes": 3569,
-    "sha256": "9b4cdc10a94ca897d4e084bc0af2c48ce6b8ade8c1c224100cb2322e46f64566",
-    "embedded_bytes": 3569,
-    "embedded_sha256": "9b4cdc10a94ca897d4e084bc0af2c48ce6b8ade8c1c224100cb2322e46f64566"
+    "bytes": 4339,
+    "sha256": "9578997267828cddd627abacc9f11b6df4d4a3fd497d19f6674e0193415db49f",
+    "embedded_bytes": 4339,
+    "embedded_sha256": "9578997267828cddd627abacc9f11b6df4d4a3fd497d19f6674e0193415db49f"
   },
   {
     "path": "scripts/hosted_evidence_refresh.py",
@@ -1149,10 +1163,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/hosted_math_typeset.py",
-    "bytes": 14731,
-    "sha256": "f5d624a9c699b7d07679b9bf61bebd9db38af1b2978c2b4e6af871a686c55dfc",
-    "embedded_bytes": 14731,
-    "embedded_sha256": "f5d624a9c699b7d07679b9bf61bebd9db38af1b2978c2b4e6af871a686c55dfc"
+    "bytes": 15483,
+    "sha256": "8f1e91ecb649ab84ff236e2066bf40d26e6d6800e5a4e2ddc375538ad0d86f72",
+    "embedded_bytes": 15483,
+    "embedded_sha256": "8f1e91ecb649ab84ff236e2066bf40d26e6d6800e5a4e2ddc375538ad0d86f72"
   },
   {
     "path": "scripts/hosted_run_timing.py",
@@ -1219,10 +1233,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/run_hosted_workflow.py",
-    "bytes": 124582,
-    "sha256": "837ec05e72aa1bc6da903a2ff3a2085ca6f1d094644f386580cb4cd4fb72f931",
-    "embedded_bytes": 124582,
-    "embedded_sha256": "837ec05e72aa1bc6da903a2ff3a2085ca6f1d094644f386580cb4cd4fb72f931"
+    "bytes": 126484,
+    "sha256": "4f374a427357740ace93f3471ed5333991e1c443843f3a825189b3f158feac62",
+    "embedded_bytes": 126484,
+    "embedded_sha256": "4f374a427357740ace93f3471ed5333991e1c443843f3a825189b3f158feac62"
   },
   {
     "path": "scripts/safe_rendering.py",
@@ -1233,17 +1247,17 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/validate_cap_form.py",
-    "bytes": 12213,
-    "sha256": "20a90ac96eec11686372ff02ad70cbed1a51ac7aa16c3f35977f07a5fec3c92f",
-    "embedded_bytes": 12213,
-    "embedded_sha256": "20a90ac96eec11686372ff02ad70cbed1a51ac7aa16c3f35977f07a5fec3c92f"
+    "bytes": 15629,
+    "sha256": "17b1db71f5f544560a6418851134afc540398541532e9f17ff7e4ff3ad3a51ff",
+    "embedded_bytes": 15629,
+    "embedded_sha256": "17b1db71f5f544560a6418851134afc540398541532e9f17ff7e4ff3ad3a51ff"
   },
   {
     "path": "scripts/validate_cap_quality.py",
-    "bytes": 24256,
-    "sha256": "5362e090552d0a3358cea4cc12df858bc3166c20666d5eb9642bca9da5b5d312",
-    "embedded_bytes": 24256,
-    "embedded_sha256": "5362e090552d0a3358cea4cc12df858bc3166c20666d5eb9642bca9da5b5d312"
+    "bytes": 37314,
+    "sha256": "6a13977905741af05c5d21c6d34caeeb27f708c0bfc5e81e0874dde6e71e2014",
+    "embedded_bytes": 37314,
+    "embedded_sha256": "6a13977905741af05c5d21c6d34caeeb27f708c0bfc5e81e0874dde6e71e2014"
   },
   {
     "path": "scripts/validate_chinese_layout_contract.py",
@@ -1317,10 +1331,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/validate_math_context.py",
-    "bytes": 5861,
-    "sha256": "05924ccf3d106bca19582de20821a80a2f44bfbba4090e4c609eebe28babb249",
-    "embedded_bytes": 5861,
-    "embedded_sha256": "05924ccf3d106bca19582de20821a80a2f44bfbba4090e4c609eebe28babb249"
+    "bytes": 5983,
+    "sha256": "a0b6a3e8507ff24ad3e11aaf5182d4da5f299627e4a37cfd5702b52eb307aa3a",
+    "embedded_bytes": 5983,
+    "embedded_sha256": "a0b6a3e8507ff24ad3e11aaf5182d4da5f299627e4a37cfd5702b52eb307aa3a"
   },
   {
     "path": "scripts/validate_math_curriculum.py",
@@ -1422,10 +1436,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "templates/cap-review-templates.json",
-    "bytes": 2458,
-    "sha256": "1f08e6dd79fc12c1f3463a348ff8af805e3ac8e78c9d27984222a98412f64db0",
-    "embedded_bytes": 2458,
-    "embedded_sha256": "1f08e6dd79fc12c1f3463a348ff8af805e3ac8e78c9d27984222a98412f64db0"
+    "bytes": 3681,
+    "sha256": "291dbca7607f3d0383ee4a799aa1d589372e3894701cc31b35b0b91fa3a112a1",
+    "embedded_bytes": 3681,
+    "embedded_sha256": "291dbca7607f3d0383ee4a799aa1d589372e3894701cc31b35b0b91fa3a112a1"
   },
   {
     "path": "templates/current-gsat-math-scope.json",
@@ -1844,7 +1858,7 @@ ask users to disable protection, restore quarantined scripts, or add exclusions.
 Official subject folders are:
 
 - 學測: 國文、英文、數學A、數學B、社會、自然. 國綜 and 國寫 share the 國文 data folder but are separate examinations/booklets with separate timing, numbering, scoring and layout contracts. Do not merge them into one 180-minute/150-point paper. If both are requested, produce two separately validated booklets. English translation/composition, by contrast, remain inside the English booklet.
-- 會考: 國文、英語、數學、社會、自然、寫作測驗. This Skill makes the 英語 reading booklet only; the listening section needs audio and is out of scope. For every 會考 paper read [references/current-cap-form.md](references/current-cap-form.md): its 113–115 counts, (A)–(D) options, group lead-ins, 數學 非選擇題 rubric, 寫作 rules and official pass-rate targets are hard constraints, enforced by `scripts/validate_cap_form.py`. No 學測 subject rule applies to a 會考 paper: in particular the 學測 社會 rule that groups standalone items into contiguous discipline blocks does NOT apply; 會考社會 alternates 歷史／地理／公民 in short runs (115: runs of 1-5) and at least 20% of 會考 items join two domains or curriculum strands (混合考點).
+- 會考: 國文、英語、數學、社會、自然、寫作測驗. This Skill makes the 英語 reading booklet only; the listening section needs audio and is out of scope. For every 會考 paper read [references/current-cap-form.md](references/current-cap-form.md): its 113–115 counts, (A)–(D) options, group lead-ins, 數學 非選擇題 rubric, 寫作 rules and official pass-rate targets are hard constraints, enforced by `scripts/validate_cap_form.py`. No 學測 subject rule applies to a 會考 paper: in particular the 學測 社會 rule that groups standalone items into contiguous discipline blocks does NOT apply; 會考社會 alternates 歷史／地理／公民 in short runs (115: runs of 1-5) and at least 20% of 會考 items join two domains or curriculum strands (混合考點). Each 會考 paper also keeps the official unit coverage (`cap_plan.py plan` schedules `cap_unit` per slot from `scripts/cap_units.py`); 會考數學 adds the official paper shape (three direct openers, judgement items, non-numeric option forms, sorted numeric options, each 非選擇題 on its own page) and draws figures with `scripts/cap_draw.py`.
 
 The auxiliary `數學（舊制）` folder is historical-only. Do not merge pre-111 GSAT mathematics into Math A or Math B. The auxiliary `數學（共同範圍模考）` folder holds current-regime mock exams that cover only the common books and are not labeled A or B; use their item patterns only for shared units, never as the full-paper distribution of Math A or Math B. When a blueprint contains more than one curriculum, require an explicit curriculum and never sample across regimes.
 
@@ -63141,8 +63155,8 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
           "repository_path": "exam_packs/會考/templates/115/assets/cap-math/blank-template.pdf",
           "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/blank-template.pdf",
           "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/blank-template.pdf",
-          "bytes": 979362,
-          "sha256": "f0600b75fd46eb090ac0bb2db4eae9b909a3e579256eef7156255d945bd6d838",
+          "bytes": 997201,
+          "sha256": "3b853cae180c3d087b81e67212d7e56f81cc453b6c192352d6050f452f646b80",
           "pages": 5
         },
         {
@@ -63151,7 +63165,7 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
           "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/cover-blank.pdf",
           "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/cover-blank.pdf",
           "bytes": 900486,
-          "sha256": "94deac2f231b1f89cdc3535936c073b7c47db7221d8a259f1dc69589ada447d8",
+          "sha256": "2e6778aa65a4953d50ba93db077fd3e5d45a1884aa3a8db44712fe9da8eb07b2",
           "pages": 1
         },
         {
@@ -63160,7 +63174,7 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
           "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-odd-blank.pdf",
           "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-odd-blank.pdf",
           "bytes": 853,
-          "sha256": "0c0494a8d4bbdd53fa71814dc92fc7602c3d0b1bcd9c7c2dda44c9102e6c28e8",
+          "sha256": "552b0d2e67a8dfa32784c91e24cfd8ebca90dd507d8bab8fe8f64abce79f65cd",
           "pages": 1
         },
         {
@@ -63169,7 +63183,7 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
           "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-even-blank.pdf",
           "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-even-blank.pdf",
           "bytes": 853,
-          "sha256": "0c0494a8d4bbdd53fa71814dc92fc7602c3d0b1bcd9c7c2dda44c9102e6c28e8",
+          "sha256": "552b0d2e67a8dfa32784c91e24cfd8ebca90dd507d8bab8fe8f64abce79f65cd",
           "pages": 1
         },
         {
@@ -63178,7 +63192,7 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
           "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-even-turn-blank.pdf",
           "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/inner-even-turn-blank.pdf",
           "bytes": 161734,
-          "sha256": "c79cccac66cffb2af5c5a15bc80efdc8f58ada04dcb5f3b3753deebe730d33c7",
+          "sha256": "25bd18013182a5d6010eae83501d5b40a40530323a71689f8ee2d55011415e29",
           "pages": 1
         },
         {
@@ -63186,8 +63200,8 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
           "repository_path": "exam_packs/會考/templates/115/assets/cap-math/formula-blank.pdf",
           "download_url": "https://raw.githubusercontent.com/alenhu2005/taiwan-cap-exam/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/formula-blank.pdf",
           "view_url": "https://github.com/alenhu2005/taiwan-cap-exam/blob/main/exam_packs/%E6%9C%83%E8%80%83/templates/115/assets/cap-math/formula-blank.pdf",
-          "bytes": 190446,
-          "sha256": "3a8f624cf00b29b2939be3d5606a1317e64720fd69650c4a3af9e371784fa04b",
+          "bytes": 208165,
+          "sha256": "aa1279bd2d3b946464b8515d817b892309d0b3e16b84b447b40dff9d6ddb2af5",
           "pages": 1
         }
       ],
@@ -63593,8 +63607,17 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
    更快：用 field_guide 的精簡欄位寫一批，python scripts/cap_plan.py expand --plan RUN/plan.json
    --compact items.json --run-dir RUN --output BATCH.json 自動補齊 id、分節、標籤、雜湊與題組繼承
    寫題時就填 est_p（預估通過率）：存檔會回報目前平均是否落在所選難度區間，偏了立刻調整
-   印出的數據一律上網查證並填 data_sources（url、retrieved_at），不要憑記憶寫數字
+   宣稱是真實資料的數據（寫出年份、調查、統計、公布者）一律上網查證並填 data_sources（url、retrieved_at）；
+   數學與自然可用「某國」「某商店」「某生實驗」這類假設數字，就不必附來源（官方也這樣寫）
+   純數值選項由小到大排：expand 會自動排序並同步改答案、誘答與詳解裡的 (A)～(D)；要保留原順序加 keep_order
+   畫圖：python scripts/cap_draw.py render 圖.json 圖.pdf --font RUN/fonts/TW-Sung-98_1.ttf
+   （座標格線、坐標軸、點、線段、多邊形、圓、弧、角與直角記號、等長記號、中文標籤；點名自動斜體、
+   標籤自動避開線條；四張圖當選項用 cap_draw.py options）
    圖檔：python scripts/cap_figure.py subset 圖.pdf --output 圖-小.pdf（只留用到的字形）
+   每個題位已排好單元（slot.unit，自然是 domain）：照官方 113–115 的單元分布抽出，題位之間可互換，
+   但整卷要留在 plan 的 unit_coverage 範圍內；國文、英語的題組整組同一單元，英語最後一組是克漏字
+   數學題位另有 suggested_form（直接作答、判斷兩人看法、推理關係、選出算式、讀新資訊建模、判讀圖表）：
+   它只說學生要做什麼，情境與問法由你設計；第 1–3 題直接作答，不包情境
    題材照藍圖的 suggested_focus 走：每次 plan 都抽新的 variety_seed，續做同一份卷時用 --seed 沿用
    範例只示範手法：不要沿用說明文件或過去卷子的情境、地點、材料
    照片：python scripts/web_image.py search "關鍵字"（中英文都試，--offset 換一批）→ web_image.py use
@@ -63602,6 +63625,7 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
    網路可用時照片必須全部新找；內附圖片庫只在網路不通時備援，並告訴使用者
 4  每 2–4 題：python scripts/append_items.py --run-dir RUN --batch BATCH.json [--plan RUN/plan.json 第一批]
    回報的 subject_gate_pending 先修完再寫下一批；--replace 修同一批
+   之後改了 plan.json（例如補 target_counts）就在下一批再加 --plan，metadata 會更新（回報 plan_updated）
 5  每 2–3 批：python scripts/run_hosted_workflow.py status --state RUN/run-state.json
    → 開新對話，只讀 RUN/NEXT.md、本卡與 current-cap-form.md 接著做
 6  全部存完後只要反覆執行：python scripts/run_hosted_workflow.py advance --state RUN/run-state.json
@@ -63609,6 +63633,9 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
    只在需要你動手時停下並說明要做什麼（補審查、修圖、調版面）；做完再執行 advance
 7  組好後：看它列出的頁面與題目 → record-review → auto-review --gates template_composition answer_separation
    → checkpoint → finalize（advance 的 todo 會給完整指令）
+   auto-review 另寫出 difficulty.draft.json：每題欄位、錨點鍵（選擇題 objective、非選擇題 constructed-response）、
+   官方同題位通過率與你的預估都已填好；逐題蓋答案重做、改預估、填 observations 與 answer_recheck、
+   status 改 pass、刪掉 draft_note，存成 difficulty.json
 ```
 
 ## 每題必填（存檔就會檢查）
@@ -63620,9 +63647,12 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
   混合考點寫 `bridge`
 - `item_spec.cap_distractors`：每個錯誤選項 `misconception`、`peer_concept`、`expected_pick_rate`（≥ 0.05）、
   `ruled_out_by`（使它確定錯的課本定義或材料證據；寫不出來就表示可能有疑義，重寫）
-- `difficulty_design.linked_decisions` 至少兩項；`answers[].reasoning` 至少 2 步（高／極難 3 步），
-  並逐一點名 (A)～(D)
-- 審查時每題記錄 `estimated_p`（預估通過率）與 `estimated_d`（預估鑑別度）
+- `item_spec.cap_unit`：數學、國文、英語的單元（plan 已排好，expand 自動帶入）；自然用 `cap_competency.domain`
+- `difficulty_design.linked_decisions` 至少兩項（英語字彙、文法題與國文語文知識題除外）；
+  `answers[].reasoning` 至少 2 步（高／極難 3 步），並逐一點名 (A)～(D)
+- 數學非選擇題存成第 26、27 題（印「1.」「2.」，詳解標「非選擇題第1題」）；expand 寫 1、2 也會自動換算
+- 審查時每題記錄 `estimated_p`（預估通過率）與 `estimated_d`（預估鑑別度）：鑑別度以 plan 裡同題位的
+  官方範圍（official_d_113_115）為錨，難題的官方鑑別度本來就較低，照實估，不要美化
 
 ## 已知錯誤與解法
 
@@ -63636,7 +63666,15 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 | `figures as options` | 加入以圖為選項的題目：四個選項各是一張圖（compact 的 `images`） |
 | `options run long` | 選項縮短（官方中位數 11–13 字），難度放在題幹與材料 |
 | `shares … wording runs with official` | 和某題官方試題的情境太像：換成新的情境與材料 |
-| `running mean of estimated_p` | 目前題目整體太易或太難，下一批調整 |
+| `running mean of estimated_p` | 已存題目的預估和它們題位的目標平均差太多，下一批調整（存檔順序不影響） |
+| `third of the paper … estimated at` | 前中後段難度不像官方：開頭放易題、題組前放最難的題 |
+| `items on 統計` 等單元題數 | 照 plan 的 unit_coverage 增減該單元，或和別的題位互換單元 |
+| `options other than a bare number` | 數學選項太多純數字：改問關係、位置、算式、敘述或判斷 |
+| `judge others' claims` | 數學至少兩題判斷甲、乙兩人的看法或作法（process 填 評鑑） |
+| `rebuild a textbook exercise` | 課本或參考書的老題型太多（梯子滑動、靠牆圍籬、彈力球…）：保留概念，換新情境與問法 |
+| `right-triangle family` | 同一組畢氏數（如 6-8-10）出現在三題以上：換數字 |
+| `numeric options print in order` | 數值選項由小到大排；用 expand 會自動排 |
+| `items are situated` 上限 | 數學情境題太多（官方約三分之一）：改成直接計算、性質或判斷題 |
 | `painted content exceeds the body by N pt` | 訊息已指出題號：縮短最寬那行、縮小該題圖表，或把選項改成一行一個 |
 | `rare CJK Extension character` | 改用教科書通用字形 |
 | 題組引導語印了兩三次 | 材料裡不要自己寫「閱讀下列選文，回答…」 |
@@ -63691,7 +63729,11 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
   - 數學：「請閱讀下列選文後，回答 23～25 題」
   - 英語：「第 20 至 22 題為題組」
 - 數學非選擇題每題在答案中記錄 0–3 級分評分規準（`answers[].rubric`），題本不印配分。
-- 寫作測驗：一題引導寫作，可附文字或圖文材料；不必訂題、不得使用詩歌體、不可洩漏私人身分；以一至六級分評閱，題本不印配分。
+- 寫作測驗：一題引導寫作，113–115 都是同一個框架：開頭「請先閱讀以下資訊，並依據題意要求完成一篇文章。」，
+  接著是材料（一組常見的文字樣本、一張圖片加可選的詞彙，或一段引導短文）與兩三個思考問題，要求結合自己的
+  經驗或見聞寫下觀察、感受或想法，不給題目；最後依序印「※不必訂題」「※不可在文中洩漏私人身分」「※不可使用詩歌體」。
+  以一至六級分評閱，題本不印配分；詳解寫審題與取材引導，並依立意取材、結構組織、遣詞造句、錯別字格式與標點符號
+  四個向度說明各級分表現（`validate_cap_form.py` 檢查）。
 
 ## 難度（官方各題通過率 p，113–115）
 
@@ -63710,33 +63752,72 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 
 ## 品質標準：超過正式會考
 
-目標是品質**超過**正式會考：每一題都以 113–115 正式試題為比較基準，凡能量測的指標（鑑別度、誘答品質、
-選項均衡、情境比例、轉譯型題幹）門檻都設在官方最好表現之上。達不到就重寫，不以「模擬卷」降低標準。
+目標是品質**超過**正式會考：每一題都以 113–115 正式試題為比較基準。題目品質的指標（誘答品質、選項均衡、
+轉譯型題幹、詳解）門檻設在官方最好的一年；**卷型特徵**（單元分布、情境題比例、題型形式、難度曲線、
+選項排序）照官方實測範圍，因為偏離這些就不像會考（M1111 數學卷 89% 是情境題、5 題統計機率、沒有圓與相似形，
+平均難度對了卻像一份素養練習卷）。達不到就重寫，不以「模擬卷」降低標準。
 
 - **素養導向**：題目把核心概念放進真實情境（生活、社會議題、科學探究、跨領域），要求學生
   擷取、統整、推論、應用或評鑑材料中的證據，答案必須依賴材料，而不是背誦就能作答。
   每題記錄 `item_spec.cap_competency`：`context_type`（生活情境／社會議題／科學探究／跨領域／學科知識／文本閱讀）、
   `process`（擷取訊息／統整解釋／推論／應用／評鑑）、`real_world_anchor`（真實情境來源）、
   `evidence_link`（答案如何依賴證據）、`prerequisite_knowledge`（推導用到的已學概念）。
-  情境題比例下限：國文 50%、英語與數學 60%、社會與自然 70%。
+  情境題比例（113–115 實測）：國文至少 30%（其餘是文學與文言閱讀）、英語至少 50%（單題是字彙與文法）、
+  數學 30%–60%（官方約三分之一，其餘直接考計算、性質與判斷）、社會與自然至少 70%。
 - **生活化且可查證**：情境取自臺灣國中生看得到的真實生活、新聞、公告、資料與現象，日期、
-  地點、數據須可查證並記錄來源。不得印「虛構」「教學模型」「非真實數據」「僅供練習」之類的說明，
+  地點、數據須可查證並記錄來源。社會印出的數據一律附來源；其他科只有宣稱是真實資料的數據
+  （寫出年份、調查、統計、公布者）要附來源，「某國」「某商店」「某生的實驗」這類假設數字不必（官方也這樣寫）。不得印「虛構」「教學模型」「非真實數據」「僅供練習」之類的說明，
   也不得用「某虛構小鎮＋研究者」這類空殼情境。
 - **高鑑別度**：官方 113–115 各題鑑別度平均 國文 0.47、英語 0.59、數學 0.50、社會 0.48、自然 0.48，
   八成以上試題 ≥ 0.40。每個誘答選項都要對應一個具體、常見的迷思，讓準備不足的學生會選、
-  準備充分的學生不會選；選項長度、語氣與結構相近，正解是唯一最長選項的題目不超過 5%（官方 0–7%）。
+  準備充分的學生不會選；選項長度、語氣與結構相近，正解是唯一最長選項的題目不超過 5%
+  （官方最好的一年；英語單字長短天生不一，14%）。
   難度審查為每題記錄 `estimated_p`（預估通過率）與 `estimated_d`（預估鑑別度），
-  全卷平均鑑別度要達到官方 113–115 **最好的一年**（國文 0.49、英語 0.60、數學 0.50、社會 0.50、自然 0.51），預估鑑別度低於 0.30 的題目不超過 3%。
+  全卷平均鑑別度要達到官方 113–115 **最好的一年**（國文 0.49、英語 0.60、數學 0.50、社會 0.50、自然 0.51）。
+  預估鑑別度無法事先驗證，所以照實估：以 plan 裡同題位的官方範圍為錨；低於 0.30 的題目最多到官方的最高比例
+  （國文 5%、英語 3%、數學 8%、社會 3%、自然 6%）；預估通過率低於 0.40 的難題，平均鑑別度不得高於官方同等難題
+  0.10 以上（官方難題平均約 0.33–0.40）。
 - **圖表品質**：圖表必須承載答題證據（移除後無法作答），不放裝飾圖；以向量圖（SVG）繪製，
   標籤用中文、灰階列印仍可判讀、字級與官方相近；真實照片先上網找可追溯來源，
   無法下載時用 `scripts/photo_library.py`。圖表數量下限（低於官方最少的一年）：
   數學 14、社會 20（含 2 張以上照片或史料圖像、18 題以上引用圖表）、自然 30、英語 3、國文 2。
   完整考卷要設 `metadata.generation_mode = "full-paper"`，下限才會檢查。
 - **詳解標註課綱與冊別**：每題記錄 `item_spec.textbook_volumes`（例 `["第三冊"]`；第一冊＝七上 … 第六冊＝九下），
-  詳解開頭自動印「課綱：歷Ha-IV-1；可能出處：第三冊（八上）」。各版本教科書編排不同，所以印「可能出處」；
+  詳解開頭自動印「課綱：歷Ha-IV-1；可能出處：第三冊（八上）」，下一行印「難易度：中（預估通過率 0.62）；
+  鑑別度：優良（預估 0.45）」（有登錄的難度審查就用審查值，否則用 `difficulty_design` 的預估；難易度依官方分類
+  易 ≥ 0.70、中 0.40–0.70、難 < 0.40，鑑別度 ≥ 0.40 優良、0.30–0.39 良好、0.20–0.29 尚可、以下待改進；兩者都是預估，不是實測）。各版本教科書編排不同，所以印「可能出處」；
   數學可留空，由代碼年級（N-8-1 → 第三、四冊）推出。
 - **詳解**：每題寫出完整推導，說明正解如何由材料證據與已學知識一步步推出，並指出每個誘答
   選項錯在哪個概念；不得只寫「故選 B」。
+
+## 單元分布（113–115 實測）
+
+每題記錄 `item_spec.cap_unit`（自然記 `cap_competency.domain`）。`cap_plan.py plan` 依下表為每個題位排好單元
+（數學依官方題序，圓、相似形放在後段），題位之間可以互換，但整卷要落在範圍內（`scripts/cap_units.py`）。
+
+| 科目 | 單元與題數範圍（選擇題） |
+| :-- | :-- |
+| 數學 | 數與運算 4–7、二次方根 1–2、數列 0–2、方程式與不等式 2–5、多項式與一元二次方程式 1–4、坐標與函數 2–3、平面幾何 2–5、相似形與三角形三心 1–4、圓 1–3、立體與空間 1–2、統計 1–2、機率 1–2（統計＋機率最多 3） |
+| 國文 | 語文知識 6–10、詩歌 2–5、文言文本 9–12、白話文學 5–8、資訊與圖表 12–16 |
+| 英語 | 字彙 7–12、文法 7–12（單題）；實用文本 2–6、圖文對話 0–5、記敘文本 2–6、說明文本 7–11、克漏字 4–6（題組，最後一組是克漏字） |
+| 自然 | 生物 22%–38%、理化 42%–58%、地球科學 14%–26%（題組也記） |
+
+英語字彙、文法題與國文語文知識題本來就是一個判斷，不受「多步推理」限制。
+
+## 數學卷的樣貌（113–115 實測）
+
+- **題型形式要多樣。** 官方每卷約 12–14 題的選項不是單一數字，而是關係、位置、算式、敘述或判斷；
+  本 Skill 至少 40%。`cap_plan.py plan` 給每個題位一個 `suggested_form`（直接作答、判斷兩人看法或作法、
+  推理大小位置或必然性、選出算式或關係式、讀新資訊建模、判讀圖表），只說學生要做什麼，情境與問法自己設計。
+- **開頭三題直接作答**（計算、化簡、圖形性質，不包情境），後段放最難的題；全卷前、中、後三段的預估通過率
+  與官方同題位平均差不超過 0.10。題組的子題由淺入深：後題可以用前題的結果，前題不能要先算出後題才答得出來。
+- **至少兩題判斷甲、乙兩人的看法或作法**（官方每年 2–3 題；`process` 填 評鑑）。
+- **純數值選項由小到大排**（官方一律依大小；分數、根式與算式依形式排）。
+- **不做參考書老題。** 課本與參考書常見的題型（梯子沿牆下滑、靠牆圍籬求最大面積、禮堂每排座位、
+  彈力球反彈、骰子展開圖、轉盤、吸管排圖形、沿對角線摺紙、二分球三分球…）每卷最多 2 題；
+  保留概念，換成新的情境與問法。
+- **數值不重複。** 同一組畢氏數（如 6-8-10）最多出現在 2 題（題組算一題）。
+- **非選擇題各自獨立成頁**（官方一題一頁，其餘是作答空間）；存成第 26、27 題，印「1.」「2.」。
 
 ## 命題寫法：原則，而非範本
 
@@ -63753,7 +63834,8 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
    而不是違反常識、一看就錯的句子；不用極端字眼，絕對化字眼極少；四個選項長度、語氣、結構相近，
    正解不是最長的。每個誘答記錄 `misconception`、`peer_concept`、`expected_pick_rate`（≥ 0.05）與
    `ruled_out_by`（使它確定錯的課本定義或材料證據）。
-4. **多步推理。** 從材料取證、連結概念、再判斷；只需一個判斷就能作答的題目最多 20%。
+4. **多步推理。** 從材料取證、連結概念、再判斷；只需一個判斷就能作答的題目最多 20%
+   （英語字彙、文法題與國文語文知識題不計）。
 5. **混合考點。** 至少 20% 的題目結合兩個概念，且答案必須同時用到兩者；社會在 `cap_competency.domains`
    列出兩科以上，其他科的 `curriculum_codes` 涵蓋兩個不同主軸，並寫 `bridge` 說明為什麼兩者都必要。
 6. **詳解逐一處理四個選項。** 寫出正解的推導，並點名每個誘答錯在哪；寫不出某個誘答「確定錯」的理由，
@@ -63775,8 +63857,8 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
     （地圖、統計圖、示意圖），學生把文字資訊轉成圖形判斷。社會至少 2 題、自然至少 3 題。
 13. **國中生進得去的情境。** 多用 15 歲學生熟悉的生活經驗（校園、家庭、社區、消費、網路、旅行），
     時事也從學生能理解的角度切入，而不是大人的財經或外交新聞。
-14. **數據要查證。** 印出的統計、數值一律上網查證，在 `item_spec.data_sources` 記錄網址與取得日期；
-    不憑記憶寫近似值。
+14. **數據要查證。** 宣稱是真實資料的統計、數值一律上網查證，在 `item_spec.data_sources` 記錄網址與取得日期；
+    不憑記憶寫近似值。假設情境（「某國」「某商店」）的數字不必附來源。
 15. **與官方試題保持距離。** 存題時以官方 113–115 題目的雜湊指紋比對（不含原文），和某題官方試題
     共有多段特有字句時退回，請換成新的情境。
 16. **原創。** 不沿用正式試題、本說明或過去卷子的情境、地點、材料與解題路徑；課綱核心概念可以考，
@@ -63790,6 +63872,9 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
   產生可直接給 `append_items.py --plan` 的藍圖，含官方分節、題組位置、社會題序，以及每個題位的
   目標通過率（依等級調整）與官方通過率、鑑別度範圍。填好 `difficulty_balance_plan.target_counts` 後用
   `cap_plan.py check plan.json` 檢查。
+- `python scripts/cap_draw.py render 圖.json 圖.pdf --font RUN/fonts/TW-Sung-98_1.ttf`：畫幾何圖、坐標圖
+  （格線、坐標軸、點、線段、多邊形、圓、弧、角與直角記號、等長記號、中文標籤），點名自動斜體、標籤自動避開線條；
+  `cap_draw.py options` 用同一個框畫四張選項圖。
 - `python scripts/cap_plan.py item --subject 會考社會 --number 12`：產生一題的空白骨架，所有會考欄位都已列出
   （`emit_item_skeleton.py` 對會考科目也會轉用它）。
 
@@ -75103,6 +75188,35 @@ def check_numbering(questions):
             raise ValueError(f'Question {n}: use one ordering scheme for its subparts, either 1, 2, … or a, b, …')
 
 
+# Identity and provenance keys stay as first saved; everything else in a later --plan (a filled
+# difficulty_balance_plan.target_counts, a corrected title or section heading) replaces the saved
+# value. A hosted run edited its plan after the first batch and found the change silently ignored.
+PLAN_LOCKED_METADATA = {'paper_id', 'subject', 'exam', 'mixed_group_originality_records'}
+
+
+def merge_plan(exam, plan):
+    if not isinstance(plan, dict) or not isinstance(plan.get('metadata'), dict):
+        raise ValueError('--plan must hold the paper metadata, instructions and sections')
+    for name in ('paper_id', 'subject'):
+        if plan['metadata'].get(name) not in (None, exam.get('metadata', {}).get(name)):
+            raise ValueError('--plan belongs to another paper or subject')
+    updated = []
+    for key, value in plan['metadata'].items():
+        if key not in PLAN_LOCKED_METADATA and exam['metadata'].get(key) != value:
+            exam['metadata'][key] = copy.deepcopy(value)
+            updated.append('metadata.' + key)
+    for key in ('instructions', 'sections'):
+        if isinstance(plan.get(key), list) and plan[key] != exam.get(key):
+            if key == 'sections':
+                ids = {s.get('id') for s in plan[key] if isinstance(s, dict)}
+                orphans = sorted({q.get('section_id') for q in exam.get('questions', [])} - ids)
+                if orphans:
+                    raise ValueError(f'--plan drops sections {orphans} that saved items use')
+            exam[key] = copy.deepcopy(plan[key])
+            updated.append(key)
+    return updated
+
+
 def validate_batch(batch):
     if not isinstance(batch, dict) or set(batch) - {'questions', 'answers'}:
         raise ValueError('Batch must contain only questions and answers')
@@ -75244,8 +75358,11 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
             if preflight.get('subject') in {'數學A', '數學B'} and len(options) != 5:
                 raise ValueError(f'{question["id"]}: 數學 choice items print exactly five options (1)-(5); found {len(options)}')
     exam_path = root / 'exam.json'
+    plan_updates = []
     if exam_path.exists():
         exam = read(exam_path)
+        if plan:
+            plan_updates = merge_plan(exam, read(plan))
     else:
         if not plan:
             raise ValueError('The first batch requires --plan with the actual paper metadata, instructions and sections')
@@ -75318,7 +75435,7 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
     exam['answers'] = [by_answer[q['id']] for q in exam['questions']]
     # Never overwrite review reports or mutate their exam hashes to make them pass.
     # Atomic exam first: a crash before checkpoint leaves recoverable, real content.
-    if changed or not exam_path.exists():
+    if changed or plan_updates or not exam_path.exists():
         save(exam_path, exam)
     before = existing_state.get('exam')
     content_changed = before != record(root, exam_path)
@@ -75333,6 +75450,8 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
               'saved_item_ids': [q['id'] for q in questions], 'changed_item_ids': changed,
               'idempotent_replay': not changed, 'content_status': 'pending-review' if content_changed else saved.get('content_status', 'pending-review'),
               'reviews_approved_by_tool': False}
+    if plan_updates:
+        report['plan_updated'] = plan_updates
     gaps = design_gaps(exam, root, questions)
     if gaps:
         report['design_fields_pending'] = gaps
@@ -75706,6 +75825,321 @@ if __name__ == "__main__":
     raise SystemExit(main())
 </canonical-source>
 
+<canonical-source path="scripts/cap_draw.py">
+#!/usr/bin/env python3
+"""Vector figures for 會考 items: one-page PDFs with embedded fonts, drawn from a small JSON spec.
+
+A math author (M1111, 2026-11) wrote a drawing library of their own and lost time to it: the SVG
+renderer's Times had no 「−」「…」「′」, white boxes behind labels showed as frames on the grid, and
+labels sat on lines. This draws what 會考 figures use, in the booklet's faces (Times italic point
+names, Times numerals, the run's 明體 for Chinese), and keeps labels off lines with a thin outline
+halo instead of a box.
+
+  python scripts/cap_draw.py render spec.json fig.pdf [--font RUN/fonts/TW-Sung-98_1.ttf]
+  python scripts/cap_draw.py options spec.json --out-dir figs/ [--font …]   four option figures, one frame
+
+Spec (units are the figure's own coordinates, y upward; sizes in pt):
+  {"width_pt": 220, "view": [xmin, xmax, ymin, ymax],
+   "items": [
+     {"grid": {"step": 1}},                                   light grid lines
+     {"axes": {"ticks": 2, "labels": true, "names": ["x", "y"]}},
+     {"segment": [[0, 0], [8, 6]], "dash": false, "width": 0.9},
+     {"polygon": [[0, 0], [8, 6], [14, -2]], "fill": 0.9},     fill gray level, omit for none
+     {"circle": [[0, 0], 5]}, {"arc": [[0, 0], 5, 30, 120]},  degrees, counter-clockwise
+     {"point": [8, 6], "label": "A", "at": "auto"},           at: auto|n|ne|e|se|s|sw|w|nw
+     {"angle": [[1, 0], [0, 0], [0, 1]], "label": "40°"},     arc at the middle vertex
+     {"right_angle": [[1, 0], [0, 0], [0, 1]]},
+     {"ticks": [[0, 0], [8, 6]], "count": 1},                 equal-length marks
+     {"text": "圖書館", "at": [8, 7], "size": 9}               Chinese or mixed text
+   ]}
+The labels a student reads are the figure's evidence: never print the answer on it.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import re
+from pathlib import Path
+
+import pymupdf
+
+LABEL_PT, NUMBER_PT, TEXT_PT = 11.0, 9.0, 9.5
+DIRECTIONS = {"n": (0, 1), "ne": (.7, .7), "e": (1, 0), "se": (.7, -.7), "s": (0, -1), "sw": (-.7, -.7),
+              "w": (-1, 0), "nw": (-.7, .7)}
+
+
+class Figure:
+    def __init__(self, width_pt: float, view, *, font: Path | None = None, margin: float = 14):
+        self.xmin, self.xmax, self.ymin, self.ymax = view
+        self.margin = margin
+        self.scale = (width_pt - 2 * margin) / (self.xmax - self.xmin)
+        self.height = (self.ymax - self.ymin) * self.scale + 2 * margin
+        self.doc = pymupdf.open()
+        self.page = self.doc.new_page(width=width_pt, height=self.height)
+        self.fonts = {"italic": pymupdf.Font("tiit"), "roman": pymupdf.Font("tiro"),
+                      "cjk": pymupdf.Font(fontfile=str(font)) if font else pymupdf.Font("cjk")}
+        self.has_grid = False
+        self.lines: list[tuple] = []   # page-space segments, for keeping labels off them
+
+    def xy(self, p) -> pymupdf.Point:
+        return pymupdf.Point(self.margin + (p[0] - self.xmin) * self.scale,
+                             self.height - self.margin - (p[1] - self.ymin) * self.scale)
+
+    # -- strokes --------------------------------------------------------------------------------
+    def _stroke(self, shape, width=0.9, dash=False, fill=None, gray=0.0):
+        shape.finish(color=(gray,) * 3, width=width, dashes="[3 2] 0" if dash else None,
+                     fill=(fill,) * 3 if fill is not None else None, closePath=False)
+        shape.commit()
+
+    def segment(self, a, b, *, dash=False, width=0.9):
+        shape = self.page.new_shape()
+        shape.draw_line(self.xy(a), self.xy(b))
+        self._stroke(shape, width, dash)
+        self.lines.append((self.xy(a), self.xy(b)))
+
+    def polygon(self, points, *, fill=None, dash=False, width=0.9):
+        shape = self.page.new_shape()
+        shape.draw_polyline([self.xy(p) for p in points] + [self.xy(points[0])])
+        self._stroke(shape, width, dash, fill)
+        for a, b in zip(points, points[1:] + points[:1]):
+            self.lines.append((self.xy(a), self.xy(b)))
+
+    def circle(self, center, r, *, dash=False, width=0.9):
+        shape = self.page.new_shape()
+        shape.draw_circle(self.xy(center), r * self.scale)
+        self._stroke(shape, width, dash)
+        c = self.xy(center)
+        for k in range(36):   # coarse chords so labels avoid the curve
+            a, b = math.radians(k * 10), math.radians(k * 10 + 10)
+            self.lines.append((c + (r * self.scale * math.cos(a), -r * self.scale * math.sin(a)),
+                               c + (r * self.scale * math.cos(b), -r * self.scale * math.sin(b))))
+
+    def arc(self, center, r, start, end, *, width=0.9, dash=False):
+        c, steps = self.xy(center), max(8, int(abs(end - start) / 4))
+        pts = [c + (r * self.scale * math.cos(math.radians(start + (end - start) * k / steps)),
+                    -r * self.scale * math.sin(math.radians(start + (end - start) * k / steps))) for k in range(steps + 1)]
+        shape = self.page.new_shape()
+        shape.draw_polyline(pts)
+        self._stroke(shape, width, dash)
+        self.lines += list(zip(pts, pts[1:]))
+
+    def grid(self, step=1, gray=0.75):
+        self.has_grid = True
+        shape = self.page.new_shape()
+        x = math.ceil(self.xmin / step) * step
+        while x <= self.xmax + 1e-9:
+            shape.draw_line(self.xy((x, self.ymin)), self.xy((x, self.ymax)))
+            x += step
+        y = math.ceil(self.ymin / step) * step
+        while y <= self.ymax + 1e-9:
+            shape.draw_line(self.xy((self.xmin, y)), self.xy((self.xmax, y)))
+            y += step
+        self._stroke(shape, 0.4, gray=gray)
+
+    def axes(self, ticks=None, labels=True, names=("x", "y")):
+        shape = self.page.new_shape()
+        for a, b in (((self.xmin, 0), (self.xmax, 0)), ((0, self.ymin), (0, self.ymax))):
+            shape.draw_line(self.xy(a), self.xy(b))
+        self._stroke(shape, 0.9)
+        self.lines += [(self.xy((self.xmin, 0)), self.xy((self.xmax, 0))), (self.xy((0, self.ymin)), self.xy((0, self.ymax)))]
+        for tip, d in ((self.xy((self.xmax, 0)), (-1, 0)), (self.xy((0, self.ymax)), (0, 1))):
+            shape = self.page.new_shape()
+            back = pymupdf.Point(tip.x + 6 * d[0], tip.y + 6 * d[1])
+            side = (3 * d[1], 3 * d[0])
+            shape.draw_polyline([back + side, tip, back - side])
+            self._stroke(shape, 0.9)
+        if names:
+            self._write(names[0], self.xy((self.xmax, 0)) + (2, 12), "italic", LABEL_PT)
+            self._write(names[1], self.xy((0, self.ymax)) + (7, 8), "italic", LABEL_PT)
+        self._write("O", self.xy((0, 0)) + (-10, 11), "italic", LABEL_PT)
+        if ticks and labels:
+            for axis in (0, 1):
+                low, high = (self.xmin, self.xmax) if axis == 0 else (self.ymin, self.ymax)
+                v = math.ceil(low / ticks) * ticks
+                while v <= high - ticks / 2:
+                    if abs(v) > 1e-9:
+                        text = f"{v:g}".replace("-", "−")
+                        at = self.xy((v, 0)) + (-self._width(text, "roman", NUMBER_PT) / 2, 11) if axis == 0 else \
+                            self.xy((0, v)) + (-self._width(text, "roman", NUMBER_PT) - 4, 3)
+                        self._write(text, at, "roman", NUMBER_PT)
+                    v += ticks
+
+    # -- marks ----------------------------------------------------------------------------------
+    def right_angle(self, a, o, b, size=7):
+        po, pa, pb = self.xy(o), self.xy(a), self.xy(b)
+        ua, ub = _unit(pa - po), _unit(pb - po)
+        shape = self.page.new_shape()
+        shape.draw_polyline([po + ua * size, po + ua * size + ub * size, po + ub * size])
+        self._stroke(shape, 0.7)
+
+    def angle(self, a, o, b, label=None, radius=14):
+        po, pa, pb = self.xy(o), self.xy(a), self.xy(b)
+        t0 = math.degrees(math.atan2(-(pa.y - po.y), pa.x - po.x))
+        t1 = math.degrees(math.atan2(-(pb.y - po.y), pb.x - po.x))
+        if (t1 - t0) % 360 > 180:
+            t0, t1 = t1, t0
+        span = (t1 - t0) % 360
+        pts = [po + (radius * math.cos(math.radians(t0 + span * k / 16)), -radius * math.sin(math.radians(t0 + span * k / 16)))
+               for k in range(17)]
+        shape = self.page.new_shape()
+        shape.draw_polyline(pts)
+        self._stroke(shape, 0.7)
+        if label:
+            mid = math.radians(t0 + span / 2)
+            at = po + ((radius + 10) * math.cos(mid), -(radius + 10) * math.sin(mid))
+            self._centered(label, at, NUMBER_PT)
+
+    def ticks(self, a, b, count=1):
+        pa, pb = self.xy(a), self.xy(b)
+        mid, u = (pa + pb) * 0.5, _unit(pb - pa)
+        n = pymupdf.Point(-u.y, u.x)
+        shape = self.page.new_shape()
+        for k in range(count):
+            c = mid + u * ((k - (count - 1) / 2) * 3)
+            shape.draw_line(c + n * 4, c - n * 4)
+        self._stroke(shape, 0.7)
+
+    def point(self, p, label=None, at="auto", dot=True):
+        c = self.xy(p)
+        if dot:
+            shape = self.page.new_shape()
+            shape.draw_circle(c, 1.6)
+            shape.finish(color=(0, 0, 0), fill=(0, 0, 0))
+            shape.commit()
+        if label:
+            direction = DIRECTIONS.get(at) if at != "auto" else self._free_direction(c)
+            w = self._mixed_width(label, LABEL_PT)
+            centre = c + (direction[0] * (5 + w / 2), -direction[1] * (5 + LABEL_PT / 2))
+            self._label(label, centre)
+
+    def text(self, value, at, size=TEXT_PT):
+        self._centered(value, self.xy(at), size)
+
+    # -- text -----------------------------------------------------------------------------------
+    def _free_direction(self, c):
+        best, score = (0.7, 0.7), -1
+        for d in DIRECTIONS.values():
+            probe = c + (d[0] * 9, -d[1] * 9)
+            gap = min((_distance(probe, a, b) for a, b in self.lines), default=99)
+            inside = self.margin / 2 <= probe.x <= self.page.rect.width - self.margin / 2 and \
+                self.margin / 2 <= probe.y <= self.height - self.margin / 2
+            if inside and gap > score:
+                best, score = d, gap
+        return best
+
+    def _runs(self, value):
+        """(text, face) runs: Latin letters italic (point names), digits and symbols roman, CJK 明體."""
+        for match in re.finditer(r"[A-Za-z]+′*|[0-9.,°′″−+=×÷()%:]+|\s+|[^\sA-Za-z0-9.,°′″−+=×÷()%:]+", value):
+            chunk = match.group(0)
+            face = "italic" if chunk[0].isascii() and chunk[0].isalpha() else \
+                "roman" if all(self.fonts["roman"].has_glyph(ord(ch)) for ch in chunk) else "cjk"
+            yield chunk, face
+
+    def _width(self, text, face, size):
+        return self.fonts[face].text_length(text, fontsize=size)
+
+    def _mixed_width(self, value, size):
+        return sum(self._width(t, f, size) for t, f in self._runs(value))
+
+    def _write(self, value, at, face=None, size=LABEL_PT):
+        runs = [(value, face)] if face else list(self._runs(value))
+        x = at.x
+        for text, f in runs:
+            if text.strip():
+                # Over a grid, a white outline under the glyphs keeps grid lines off the letters (never a
+                # box, which printed as a frame). TextWriter, not insert_text: the built-in Times then
+                # keeps 「−」「′」「…」 instead of encoding them as 「·」.
+                for halo in ((True, False) if self.has_grid else (False,)):
+                    writer = pymupdf.TextWriter(self.page.rect)
+                    writer.append((x, at.y), text, font=self.fonts[f], fontsize=size)
+                    writer.write_text(self.page, color=(1, 1, 1) if halo else (0, 0, 0), render_mode=1 if halo else 0)
+            x += self._width(text, f, size)
+
+    def _centered(self, value, at, size):
+        self._write(value, at + (-self._mixed_width(value, size) / 2, size * 0.35), size=size)
+
+    def _label(self, value, centre):
+        self._centered(value, centre, LABEL_PT)
+
+    def save(self, path: Path):
+        self.doc.subset_fonts()
+        self.doc.save(path, garbage=4, deflate=True)
+        self.doc.close()
+        return path
+
+
+def _unit(v):
+    length = math.hypot(v.x, v.y) or 1
+    return pymupdf.Point(v.x / length, v.y / length)
+
+
+def _distance(p, a, b):
+    ab = b - a
+    t = max(0, min(1, ((p.x - a.x) * ab.x + (p.y - a.y) * ab.y) / ((ab.x ** 2 + ab.y ** 2) or 1)))
+    return math.hypot(p.x - (a.x + ab.x * t), p.y - (a.y + ab.y * t))
+
+
+def draw(spec: dict, output: Path, font: Path | None = None) -> dict:
+    fig = Figure(spec.get("width_pt", 220), spec["view"], font=font)
+    for item in spec.get("items") or []:
+        if "grid" in item:
+            fig.grid(**(item["grid"] or {}))
+        elif "axes" in item:
+            fig.axes(**(item["axes"] or {}))
+        elif "segment" in item:
+            fig.segment(*item["segment"], dash=item.get("dash", False), width=item.get("width", 0.9))
+        elif "polygon" in item:
+            fig.polygon(item["polygon"], fill=item.get("fill"), dash=item.get("dash", False))
+        elif "circle" in item:
+            fig.circle(*item["circle"], dash=item.get("dash", False))
+        elif "arc" in item:
+            fig.arc(*item["arc"], dash=item.get("dash", False))
+        elif "point" in item:
+            fig.point(item["point"], item.get("label"), item.get("at", "auto"), item.get("dot", True))
+        elif "angle" in item:
+            fig.angle(*item["angle"], label=item.get("label"))
+        elif "right_angle" in item:
+            fig.right_angle(*item["right_angle"])
+        elif "ticks" in item:
+            fig.ticks(*item["ticks"], count=item.get("count", 1))
+        elif "text" in item:
+            fig.text(item["text"], item["at"], item.get("size", TEXT_PT))
+        else:
+            raise ValueError(f"unknown figure item {sorted(item)}")
+    width, height = fig.page.rect.width, fig.height
+    fig.save(output)
+    return {"path": str(output), "width_pt": round(width, 1), "height_pt": round(height, 1)}
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    sub = parser.add_subparsers(dest="command", required=True)
+    r = sub.add_parser("render"); r.add_argument("spec", type=Path); r.add_argument("output", type=Path)
+    r.add_argument("--font", type=Path, help="the run's 明體 (RUN/fonts/TW-Sung-98_1.ttf) for Chinese labels")
+    o = sub.add_parser("options", help="four option figures (A-D) drawn in one shared frame")
+    o.add_argument("spec", type=Path, help='{"width_pt": 120, "view": [...], "options": {"A": [items], ...}, "common": [items]}')
+    o.add_argument("--out-dir", type=Path, required=True); o.add_argument("--font", type=Path)
+    args = parser.parse_args()
+    spec = json.loads(args.spec.read_text(encoding="utf-8"))
+    if args.command == "render":
+        result = draw(spec, args.output, args.font)
+    else:
+        args.out_dir.mkdir(parents=True, exist_ok=True)
+        result = {"options": {}}
+        for label, items in spec["options"].items():
+            single = {**spec, "items": (spec.get("common") or []) + items}
+            result["options"][label] = draw(single, args.out_dir / f"option-{label}.pdf", args.font)
+        result["next"] = ("compact record: \"images\": the four paths in A-D order, \"image_width_pt\": "
+                          f"{spec.get('width_pt', 120)}; cap_plan.py expand makes them the options")
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+</canonical-source>
+
 <canonical-source path="scripts/cap_figure.py">
 #!/usr/bin/env python3
 """Shrink a figure PDF before it goes into an item: keep only the glyphs it draws.
@@ -75772,6 +76206,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import secrets
 import statistics
 import sys
@@ -75812,6 +76247,18 @@ FOCUS = {
                  "travel and culture", "work and money", "media and notices"),
 }
 TITLES = {"會考寫作測驗": "寫作測驗"}
+# 會考數學 item forms, counted on 113-115 (M1111 wrote 22 of 25 as one textbook form: a story, then a
+# number). Forms say what the student does, never which situation to use: the setting is the author's.
+MATH_FORMS = {
+    "直接作答：計算、化簡或圖形性質，不包情境": 9,
+    "判斷兩人的看法或作法（甲、乙皆正確…）": 3,
+    "推理大小、位置或必然性，不必算出數值": 3,
+    "選出算式、關係式或圖形，而非數值": 2,
+    "閱讀新資訊（表格、對話、規定、說明）後建立模型": 6,
+    "判讀圖表資料後推論": 2,
+}
+MATH_OPENING_FORM = "直接作答：計算、化簡或圖形性質，不包情境"
+MATH_GROUP_FORM = "閱讀新資訊（表格、對話、規定、說明）後建立模型"
 
 
 VOLUMES = {"第一冊": "七上", "第二冊": "七下", "第三冊": "八上", "第四冊": "八下", "第五冊": "九上", "第六冊": "九下"}
@@ -75838,6 +76285,30 @@ def solution_note(item_spec: dict) -> str:
     return "；".join(part for part in (f"課綱：{codes}" if codes else "", f"可能出處：{volumes}" if volumes else "") if part)
 
 
+def difficulty_label(p: float) -> str:
+    """The official 會考 categories (易 p ≥ .70, 中 .40-.70, 難 < .40)."""
+    return "易" if p >= 0.70 else "中" if p >= 0.40 else "難"
+
+
+def discrimination_label(d: float) -> str:
+    """Customary item-analysis grades (Ebel): ≥ .40 優良, .30-.39 良好, .20-.29 尚可, below 待改進."""
+    return "優良" if d >= 0.40 else "良好" if d >= 0.30 else "尚可" if d >= 0.20 else "待改進"
+
+
+def difficulty_note(item_spec: dict, reviewed: dict | None = None, *, constructed: bool = False) -> str:
+    """Printed 「難易度：中（預估通過率 0.62）；鑑別度：優良（預估 0.45）」. Both are estimates made while
+    writing and reviewing (the reviewed difficulty.json first), never results from examinees."""
+    design = item_spec.get("difficulty_design") or {}
+    p = (reviewed or {}).get("estimated_p", design.get("estimated_p"))
+    d = (reviewed or {}).get("estimated_d", design.get("estimated_d"))
+    parts = []
+    if type(p) in (int, float) and 0 <= p <= 1:
+        parts.append(f"難易度：{difficulty_label(p)}（預估{'得分率' if constructed else '通過率'} {p:.2f}）")
+    if type(d) in (int, float) and -1 <= d <= 1:
+        parts.append(f"鑑別度：{discrimination_label(d)}（預估 {d:.2f}）")
+    return "；".join(parts)
+
+
 def load(name: str) -> dict:
     return json.loads((PACK / name).read_text(encoding="utf-8"))
 
@@ -75857,8 +76328,10 @@ def position_targets(subject: str, level: str) -> dict[int, dict]:
         ds = [y["discrimination_by_position"][n - 1] for y in years.values()
               if n <= len(y.get("discrimination_by_position") or [])]
         centre = min(0.95, max(0.15, statistics.mean(ps) + LEVEL_SHIFT[level]))
+        # D estimates anchor on the official items in this position, not on a fixed floor: official
+        # hard positions run 0.13-0.45, and a fixed 0.40 floor only taught authors to inflate.
         out[n] = {"target_p": round(centre, 2), "official_p_113_115": [min(ps), max(ps)],
-                  "d_floor": 0.40, "official_d_113_115": [min(ds), max(ds)] if ds else None}
+                  "official_d_113_115": [min(ds), max(ds)] if ds else None}
     return out
 
 
@@ -75884,6 +76357,28 @@ def domain_schedule(count: int, seed: str) -> list[str]:
     return schedule
 
 
+def math_forms(slots: list[dict], seed: str) -> dict:
+    """{slot: form}: items 1-3 direct, the 題組 a modelling text, the rest a seeded shuffle."""
+    import random
+    rng = random.Random(hashlib.sha256(f"{seed}:forms".encode()).digest())
+    left = dict(MATH_FORMS)
+    out = {}
+    for slot in slots:
+        if slot["number"] <= 3:
+            out[id(slot)] = MATH_OPENING_FORM
+        elif slot.get("group"):
+            out[id(slot)] = MATH_GROUP_FORM
+        else:
+            continue
+        left[out[id(slot)]] -= 1
+    rest = [s for s in slots if id(s) not in out]
+    pool = [f for f, k in left.items() for _ in range(max(0, k))]
+    pool += [MATH_OPENING_FORM] * (len(rest) - len(pool))
+    rng.shuffle(pool)
+    out.update({id(s): f for s, f in zip(rest, pool)})
+    return [(s, out[id(s)]) for s in slots if id(s) in out]
+
+
 def sections(subject: str) -> list[dict]:
     current = form(subject)["current_form"]
     titles = SECTION_TITLES.get(subject)
@@ -75892,6 +76387,18 @@ def sections(subject: str) -> list[dict]:
         return [{"id": "s1", "title": "", "instructions": []}]   # 自然, 寫作: no printed heading
     return [{"id": f"s{i + 1}", "title": titles[i].format(a=s["first"], b=s["last"], n=s["last"] - s["first"] + 1),
              "instructions": []} for i, s in enumerate(found[:2])]
+
+
+def constructed_section(subject: str) -> str | None:
+    """The section id of the 非選擇題 (數學 第二部分), or None."""
+    found = form(subject)["current_form"].get("sections_115") or [] if subject != "會考寫作測驗" else []
+    return "s2" if len(found) > 1 and "非選" in str(found[1].get("title")) else None
+
+
+def constructed_labels(n: int) -> dict:
+    """數學 非選擇題 print 「1.」「2.」 under 第二部分 but are saved after the choice items (26, 27),
+    so their numbers never collide with choice items 1 and 2."""
+    return {"number_display": f"{n}.", "answer_label": f"非選擇題第{n}題"}
 
 
 def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", seed: str | None = None) -> dict:
@@ -75908,48 +76415,84 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
                 "cap_difficulty_level": level, "duration_minutes": current["duration_minutes"],
                 "difficulty_balance_plan": {"basis": f"113-115 official 通過率 by position, level {level}",
                                             "required_bands": [], "target_counts": {b: None for b in BANDS},
-                                            "shared_reading_minutes": None},
+                                            "shared_reading_minutes": 0},
                 "visual_contract": {}, "mixed_group_originality_records": [], "variety_seed": seed}
     slots = []
     if subject != "會考寫作測驗":
         targets = position_targets(subject, level)
         count = current["choice_items"]["reference_115"]
         groups = {n: g for g in current.get("groups_115") or [] for n in range(g[0], g[1] + 1)}
+        # Reading a 題組's shared material once: about two minutes a group (a number, never null).
+        metadata["difficulty_balance_plan"]["shared_reading_minutes"] = 2 * len(current.get("groups_115") or [])
         single = [n for n in range(1, count + 1) if n not in groups]
         schedule = dict(zip(single, domain_schedule(len(single), seed))) if subject == "會考社會" else {}
         secs = sections(subject)
+        from cap_units import UNIT_RANGES, schedule as unit_schedule
+        # 國文／英語／社會 print 題組 as their own second section; 數學's second section is the
+        # 非選擇題, so its 題組 (23-25) stay in 第一部分.
+        group_section = secs[1]["id"] if len(secs) > 1 and not constructed_section(subject) else secs[0]["id"]
         for n in range(1, count + 1):
             slot = {"number": n, "type": "single_choice",
-                    "section_id": secs[1]["id"] if len(secs) > 1 and n in groups else secs[0]["id"],
+                    "section_id": group_section if n in groups else secs[0]["id"],
                     "group": groups.get(n), **targets.get(n, {})}
             if n in schedule:
                 slot["domain"] = schedule[n]
-            pool = FOCUS.get(slot.get("domain") or subject)
-            if pool:
-                rank = hashlib.sha256(f"{seed}:{n}".encode()).digest()[0]
-                slot["suggested_focus"] = pool[rank % len(pool)]
             slots.append(slot)
+        if subject == "會考數學":
+            for slot, suggested in math_forms(slots, seed):
+                slot["suggested_form"] = suggested
+        # Official unit coverage (cap_units.py): every paper starts inside the 113-115 ranges.
+        units = unit_schedule(subject, slots, seed)
+        for slot in slots:
+            unit = units.get(slot["number"])
+            if subject == "會考自然" and unit:
+                slot["domain"] = unit
+            elif unit:
+                slot["unit"] = unit
+            pool = FOCUS.get(slot.get("domain") or subject)
+            if subject == "會考自然":
+                pool = tuple(f for f in FOCUS["會考自然"] if f.startswith(slot.get("domain", "")) or f.startswith("跨科"))
+            if pool and subject != "會考數學":
+                rank = hashlib.sha256(f"{seed}:{slot['number']}".encode()).digest()[0]
+                slot["suggested_focus"] = pool[rank % len(pool)]
         for n in range(1, current.get("constructed_items", 0) + 1):
-            slots.append({"number": n, "type": "constructed_response", "section_id": "s2", "rubric": "0-3 級分"})
+            slots.append({"number": count + n, **constructed_labels(n), "type": "constructed_response",
+                          "section_id": constructed_section(subject), "rubric": "0-3 級分"})
+    if subject == "會考寫作測驗":
+        from validate_cap_form import WRITING_NOTES, WRITING_RUBRIC
+        metadata["writing_frame"] = {
+            "opening": "請先閱讀以下資訊，並依據題意要求完成一篇文章。",
+            "material_forms_113_115": ["一組生活中常見的文字樣本（標題、文案）", "一張圖片加一組可選的詞彙", "一段引導短文"],
+            "task": "提出兩三個思考問題，再要求結合自己的經驗或見聞，寫下觀察、感受或想法；不給題目",
+            "notes": list(WRITING_NOTES),
+            "solution": f"審題與取材引導，並依 {'、'.join(WRITING_RUBRIC)}（格式與標點符號）四個向度說明各級分表現"}
+    from cap_units import SCIENCE_SHARES, UNIT_RANGES
+    coverage = ({u: list(r) for u, r in UNIT_RANGES[subject].items()} if subject in UNIT_RANGES else
+                {d: [round(a, 2), round(b, 2)] for d, (a, b) in SCIENCE_SHARES.items()} if subject == "會考自然" else None)
     return {"metadata": metadata, "instructions": [], "sections": sections(subject),
             "planning_slots": slots,
+            **({"unit_coverage": {"official_113_115": coverage,
+                                  "note": "slots carry a unit (自然: domain) inside these ranges; swap units between slots "
+                                          "freely, but the finished paper must stay inside them"}} if coverage else {}),
             "note": "append_items.py --plan keeps metadata, instructions and sections; planning_slots are guidance only. "
                     "Fill difficulty_balance_plan.target_counts before the first batch."}
 
 
 def item(subject: str, number: int, level: str = "會考", kind: str = "single_choice") -> dict:
     slots = [s for s in plan(subject, "skeleton", level=level, seed="skeleton")["planning_slots"]
-             if s["number"] == number and s["type"] == kind]
+             if s["type"] == kind and (s["number"] == number or s.get("number_display") == f"{number}.")]
     if not slots:
         raise ValueError(f"{subject} has no {kind} slot {number}")
     slot = slots[0]
     choice = kind == "single_choice"
     steps = 3 if level in ("高", "極難") or not choice else 2
-    question = {"id": f"q{number}" if choice else f"c{number}", "number": number, "section_id": slot["section_id"],
+    printed = int(str(slot.get("number_display") or slot["number"]).rstrip("."))
+    question = {"id": f"q{number}" if choice else f"c{printed}", "number": slot["number"], "section_id": slot["section_id"],
                 "type": kind, "prompt": None, "group_stimulus": None, "visual_asset": None,
-                **({"options": [{"label": c, "text": None} for c in "ABCD"]} if choice else {"number_display": f"{number}."}),
+                **({"options": [{"label": c, "text": None} for c in "ABCD"]} if choice else constructed_labels(printed)),
                 "item_spec": {
                     "curriculum_codes": [], "textbook_volumes": [],
+                    **({"cap_unit": slot["unit"]} if slot.get("unit") else {}),
                     "cap_competency": {"context_type": None, "process": None, "real_world_anchor": None,
                                        "evidence_link": None, "prerequisite_knowledge": [], "hidden_concept": None,
                                        **({"domain": slot["domain"], "domains": [slot["domain"]]} if "domain" in slot else {}),
@@ -75990,6 +76533,8 @@ FIELD_GUIDE = {
     "process": "擷取訊息 | 統整解釋 | 推論 | 應用 | 評鑑",
     "anchor": "the real situation the item rests on", "evidence": "how the answer depends on the material's evidence",
     "prerequisites": "list of learned concepts the derivation uses", "hidden_concept": "the term the student must infer",
+    "unit": "the slot's unit (數學／國文／英語, from the plan; swap with another slot if needed); 自然 uses domain",
+    "domain": "自然: 生物 | 理化 | 地球科學 (the plan's slot domain by default)",
     "domains": "社會: list of 歷史/地理/公民, primary first", "bridge": "why the answer needs both concepts (混合考點)",
     "distractors": "{label: {misconception, peer_concept, pick (0-1, at least 0.05), ruled_out_by}} for each wrong option",
     "band": "簡單 | 中 | 中偏難 | 難", "est_p": "predicted 通過率 0-1", "est_d": "predicted 鑑別度 0-1",
@@ -75998,6 +76543,8 @@ FIELD_GUIDE = {
     "data_sources": "list of {url, retrieved_at} for every printed statistic",
     "figure": "{path, width_percent, visual_spec} for the item's own figure (web_image.py use prints visual_spec)",
     "material": "shared 題組 material (identical text for every item of the group)",
+    "keep_order": "true keeps numeric options as written; otherwise expand sorts them ascending and relabels key and steps",
+    "form": "數學: the slot's suggested_form says what the student does; the setting is yours",
 }
 
 
@@ -76007,24 +76554,31 @@ def expand(plan_data: dict, compact: list[dict], run_dir: Path) -> dict:
     from validate_paper_difficulty_balance import content_hash
     subject = plan_data["metadata"]["subject"]
     slots = {(s["number"], s["type"]): s for s in plan_data.get("planning_slots") or []}
+    choice_count = sum(1 for s in plan_data.get("planning_slots") or [] if s.get("type") == "single_choice")
     sha = lambda p: hashlib.sha256((run_dir / p).read_bytes()).hexdigest()
-    questions, answers, leaders = [], [], {}
+    questions, answers, leaders, reordered = [], [], {}, {}
     for row in compact:
         kind = "constructed_response" if row.get("constructed") else "single_choice"
-        slot = slots.get((row["number"], kind), {})
-        qid = row.get("id") or (f"q{row['number']}" if kind == "single_choice" else f"c{row['number']}")
-        q = {"id": qid, "number": row["number"], "type": kind,
+        number = row["number"]
+        if kind == "constructed_response" and number <= choice_count:
+            number = choice_count + number   # 非選擇題 1 → saved as 26 (printed 「1.」)
+        slot = slots.get((number, kind), {})
+        printed = number - choice_count if kind == "constructed_response" else number
+        qid = row.get("id") or (f"q{number}" if kind == "single_choice" else f"c{printed}")
+        q = {"id": qid, "number": number, "type": kind,
              "section_id": row.get("section") or slot.get("section_id") or "s1", "prompt": row["stem"]}
         if row.get("material"):
             q["group_stimulus"] = row["material"]
         if kind == "constructed_response":
-            q["number_display"] = f"{row['number']}."
+            q.update(constructed_labels(printed))
         elif row.get("images"):
             q["inline_assets"] = {f"{qid}{c}": {"path": p, "width_pt": row.get("image_width_pt", 120), "sha256": sha(p)}
                                   for c, p in zip("ABCD", row["images"])}
             q["options"] = [{"label": c, "text": "{{asset:" + f"{qid}{c}" + "}}"} for c in "ABCD"]
         else:
             q["options"] = [{"label": c, "text": t} for c, t in zip("ABCD", row["options"])]
+            if not row.get("keep_order"):
+                row = sort_numeric_options(row, q)
         if row.get("figure"):
             figure = dict(row["figure"])
             figure["sha256"] = sha(figure["path"])
@@ -76033,11 +76587,13 @@ def expand(plan_data: dict, compact: list[dict], run_dir: Path) -> dict:
                       "real_world_anchor": row.get("anchor"), "evidence_link": row.get("evidence"),
                       "prerequisite_knowledge": row.get("prerequisites") or [], "hidden_concept": row.get("hidden_concept"),
                       "bridge": row.get("bridge")}
-        domains = row.get("domains") or ([slot["domain"]] if slot.get("domain") else [])
+        domains = row.get("domains") or ([row["domain"]] if row.get("domain") else []) or \
+            ([slot["domain"]] if slot.get("domain") else [])
         if domains:
             competency.update(domain=domains[0], domains=domains)
         band = row.get("band")
         spec = {"curriculum_codes": row.get("codes") or [], "textbook_volumes": row.get("volumes") or [],
+                **({"cap_unit": row.get("unit") or slot.get("unit")} if row.get("unit") or slot.get("unit") else {}),
                 "cap_competency": competency, "difficulty": {"label": band},
                 "difficulty_design": {"band": band, "basis": row.get("basis") or "113-115 官方同題位通過率",
                                       "confidence": row.get("confidence") or "中", "short_route": row.get("short_route"),
@@ -76059,12 +76615,42 @@ def expand(plan_data: dict, compact: list[dict], run_dir: Path) -> dict:
         q["item_spec"] = spec
         spec["difficulty_design"]["content_sha256"] = content_hash(q)
         questions.append(q)
+        if row.get("sorted_options"):
+            reordered[qid] = row["sorted_options"]
         answer = {"question_id": qid, "final_answer": row.get("key") or row.get("answer"), "difficulty_label": band,
                   "reasoning": row.get("steps") or []}
         if kind == "constructed_response":
             answer["rubric"] = row.get("rubric")
         answers.append(answer)
-    return {"questions": questions, "answers": answers}
+    batch = {"questions": questions, "answers": answers}
+    if reordered:
+        batch["options_reordered"] = reordered   # reported by the CLI, removed before writing
+    return batch
+
+
+LABEL_REF = re.compile(r"([（(]\s*)([ABCD])(\s*[)）])|(選項\s*)([ABCD])|([ABCD])(\s*選項)")
+
+
+def sort_numeric_options(row: dict, question: dict) -> dict:
+    """Plain numeric options in ascending order, as official 113-115 print them; the key, the distractor
+    records and every (A)-(D) mention in the steps follow their option."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from validate_cap_quality import numeric_values
+    values = numeric_values([o["text"] for o in question["options"]])
+    if not values or values == sorted(values) or values == sorted(values, reverse=True):
+        return row
+    order = sorted(range(4), key=lambda i: values[i])
+    mapping = {"ABCD"[old]: "ABCD"[new] for new, old in enumerate(order)}
+    question["options"] = [{"label": "ABCD"[new], "text": question["options"][old]["text"]} for new, old in enumerate(order)]
+    relabel = lambda text: LABEL_REF.sub(lambda m: "".join(
+        mapping[g] if g in mapping else g or "" for g in m.groups()), str(text))
+    row = dict(row)
+    if row.get("key") in mapping:
+        row["key"] = mapping[row["key"]]
+    row["distractors"] = {mapping.get(k, k): v for k, v in (row.get("distractors") or {}).items()}
+    row["steps"] = [relabel(step) for step in row.get("steps") or []]
+    row["sorted_options"] = mapping
+    return row
 
 
 def check(plan_data: dict) -> list[str]:
@@ -76118,8 +76704,12 @@ def main() -> int:
     elif args.command == "expand":
         batch = expand(json.loads(args.plan.read_text(encoding="utf-8")),
                        json.loads(args.compact.read_text(encoding="utf-8")), args.run_dir.resolve())
+        reordered = batch.pop("options_reordered", None)
         args.output.write_text(json.dumps(batch, ensure_ascii=False, indent=2), encoding="utf-8")
+        if reordered:
+            batch["options_reordered"] = reordered
         result = {"status": "batch-written", "output": str(args.output), "items": len(batch["questions"]),
+                  **({"options_reordered": batch["options_reordered"]} if batch.get("options_reordered") else {}),
                   "next": f"python scripts/append_items.py --run-dir {args.run_dir} --batch {args.output}"}
     else:
         errors = check(json.loads(args.plan.read_text(encoding="utf-8")))
@@ -76130,6 +76720,194 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+</canonical-source>
+
+<canonical-source path="scripts/cap_units.py">
+#!/usr/bin/env python3
+"""Content coverage of official 會考 papers (113-115), per subject, as closed unit lists.
+
+A hosted 會考數學 paper (M1111, 2026-11) put five of 25 items on 統計／機率 and none on 圓、
+相似形、多項式 or 二次方根, although every official year has them: the plan only drew a random
+topic per slot. Each item now records `item_spec.cap_unit` (自然: `cap_competency.domain`) from the
+list below; `cap_plan.py plan` schedules the units so a paper starts inside the official ranges,
+and `validate_cap_quality.py` checks the finished paper.
+
+Counts are choice items classified by hand from the official booklets (113/114/115, maintainer
+review 2026-11; 自然 domains by keyword and spot check, so its ranges are wider). A range is the
+official minimum and maximum, widened by one where three years differ, so a paper may differ
+from any one year without leaving the official pattern.
+"""
+from __future__ import annotations
+
+import hashlib
+import random
+
+# 數學 choice items 1-25: (113, 114, 115)
+MATH_OFFICIAL = {
+    "數與運算": (6, 6, 5), "二次方根": (1, 1, 1), "數列": (1, 0, 1), "方程式與不等式": (4, 3, 4),
+    "多項式與一元二次方程式": (1, 3, 2), "坐標與函數": (2, 2, 2), "平面幾何": (4, 3, 4),
+    "相似形與三角形三心": (1, 3, 1), "圓": (2, 1, 2), "立體與空間": (1, 1, 1), "統計": (1, 1, 1), "機率": (1, 1, 1),
+}
+# 國文 items 1-42: 語文知識 = 字音字形字義、詞語成語、標點、六書字體、題辭稱謂；詩歌 = 古典詩詞曲與現代詩；
+# 文言文本 = 文言散文、筆記、史傳；白話文學 = 白話散文、小說、劇本；資訊與圖表 = 說明議論、資料、海報貼文、圖表。
+CHINESE_OFFICIAL = {"語文知識": (9, 7, 8), "詩歌": (2, 4, 4), "文言文本": (10, 10, 10), "白話文學": (6, 7, 6),
+                    "資訊與圖表": (15, 14, 14)}
+# 英語 items 1-43: 單題 (113: 1-21; 114, 115: 1-19) are 字彙 or 文法; 題組 by text type, the last
+# group a 克漏字 passage every year.
+ENGLISH_OFFICIAL = {"字彙": (None, None, 9), "文法": (None, None, 10), "實用文本": (4, 3, 5), "圖文對話": (0, 5, 2),
+                    "記敘文本": (4, 2, 5), "說明文本": (10, 8, 8), "克漏字": (4, 6, 4)}
+
+# Mean printed position of each 數學 unit in 113-115 (circles and similar triangles close the paper,
+# radicals, polynomials and solids open it); the plan orders units by it with a random jitter.
+MATH_MEAN_POSITION = {"數與運算": 13, "二次方根": 7, "數列": 11, "方程式與不等式": 13, "多項式與一元二次方程式": 8.5,
+                      "坐標與函數": 11.7, "平面幾何": 14.6, "相似形與三角形三心": 19.6, "圓": 19.6, "立體與空間": 5.3,
+                      "統計": 7.3, "機率": 7}
+POSITION_JITTER = 6
+
+UNIT_RANGES = {
+    "會考數學": {"數與運算": (4, 7), "二次方根": (1, 2), "數列": (0, 2), "方程式與不等式": (2, 5),
+                 "多項式與一元二次方程式": (1, 4), "坐標與函數": (2, 3), "平面幾何": (2, 5), "相似形與三角形三心": (1, 4),
+                 "圓": (1, 3), "立體與空間": (1, 2), "統計": (1, 2), "機率": (1, 2)},
+    "會考國文": {"語文知識": (6, 10), "詩歌": (2, 5), "文言文本": (9, 12), "白話文學": (5, 8), "資訊與圖表": (12, 16)},
+    "會考英語": {"字彙": (7, 12), "文法": (7, 12), "實用文本": (2, 6), "圖文對話": (0, 5), "記敘文本": (2, 6),
+                 "說明文本": (7, 11), "克漏字": (4, 6)},
+}
+# Units that are one decision by design (a word, a structure): official 英語 1-19 and 國文 語文知識
+# items are, so the linked-decision rule skips them.
+SINGLE_DECISION_UNITS = {"字彙", "文法", "語文知識"}
+SINGLE_UNITS = {"會考英語": ("字彙", "文法")}
+GROUP_UNITS = {"會考英語": ("實用文本", "圖文對話", "記敘文本", "說明文本"),
+               "會考國文": ("詩歌", "文言文本", "白話文學", "資訊與圖表")}
+DATA_UNITS_MAX = {"會考數學": (("統計", "機率"), 3)}   # official 2 a year; M1111 printed 5
+# 自然 (cap_competency.domain), share of all items. 115 by hand 13/26/11; 113-114 by keyword.
+SCIENCE_SHARES = {"生物": (0.22, 0.38), "理化": (0.42, 0.58), "地球科學": (0.14, 0.26)}
+SCIENCE_OFFICIAL = {"生物": (21, 11, 13), "理化": (22, 28, 26), "地球科學": (7, 11, 11)}
+
+
+def unit_of(question: dict, subject: str) -> str | None:
+    spec = question.get("item_spec") or {}
+    if subject == "會考自然":
+        record = spec.get("cap_competency") or {}
+        return (record.get("domains") or [None])[0] or record.get("domain") or spec.get("domain")
+    return spec.get("cap_unit")
+
+
+def unit_errors(subject: str, questions: list[dict], *, full: bool = True) -> list[str]:
+    """Missing or unknown units per item, and (full papers) counts outside the official ranges."""
+    choice = [q for q in questions if q.get("type") == "single_choice"]
+    errors: list[str] = []
+    if subject == "會考自然":
+        domains = [unit_of(q, subject) for q in choice]
+        if full and choice and all(d in SCIENCE_SHARES for d in domains):
+            for domain, (low, high) in SCIENCE_SHARES.items():
+                share = domains.count(domain) / len(domains)
+                if not low <= share <= high:
+                    errors.append(f"{domain} holds {domains.count(domain)} of {len(domains)} items ({share:.0%}); official "
+                                  f"113-115 keep it at {low:.0%}-{high:.0%} (cap_competency.domain on every item, 題組 too)")
+        elif full and choice:
+            missing = [q.get("number") for q, d in zip(choice, domains) if d not in SCIENCE_SHARES]
+            errors.append(f"items {missing[:12]} need cap_competency.domain (生物／理化／地球科學), 題組 items too")
+        return errors
+    ranges = UNIT_RANGES.get(subject)
+    if not ranges:
+        return errors
+    units = [unit_of(q, subject) for q in choice]
+    unknown = [q.get("number") for q, u in zip(choice, units) if u not in ranges]
+    if unknown:
+        errors.append(f"items {unknown[:12]}: item_spec.cap_unit must be one of {'、'.join(ranges)} "
+                      "(cap_plan.py plan assigns one per slot)")
+        return errors
+    if not full:
+        return errors
+    for unit, (low, high) in ranges.items():
+        count = units.count(unit)
+        if not low <= count <= high:
+            errors.append(f"{count} items on {unit}; official 113-115 papers hold {low}-{high} "
+                          f"({'more' if count < low else 'fewer'} needed): a 會考 paper covers the units every year covers")
+    if subject in DATA_UNITS_MAX:
+        names, cap = DATA_UNITS_MAX[subject]
+        count = sum(units.count(n) for n in names)
+        if count > cap:
+            errors.append(f"{count} items on {'＋'.join(names)} (official 2 a year, at most {cap})")
+    return errors
+
+
+def _official_mean(subject: str, unit: str) -> float:
+    table = {"會考數學": MATH_OFFICIAL, "會考國文": CHINESE_OFFICIAL, "會考英語": ENGLISH_OFFICIAL}[subject]
+    values = [v for v in table.get(unit, ()) if v is not None]
+    return sum(values) / len(values) if values else 1.0
+
+
+def _counts(subject: str, total: int, rng: random.Random, units=None) -> dict[str, int]:
+    """Counts within the ranges that add up to `total`, leaning on the official means."""
+    ranges = {u: r for u, r in UNIT_RANGES[subject].items() if units is None or u in units}
+    counts = {u: low for u, (low, high) in ranges.items()}
+    while sum(counts.values()) < total:
+        open_ = [u for u in ranges if counts[u] < ranges[u][1]]
+        if not open_:
+            break
+        weights = [max(0.2, _official_mean(subject, u) - counts[u] + 0.5) for u in open_]
+        counts[rng.choices(open_, weights)[0]] += 1
+    return counts
+
+
+def schedule(subject: str, slots: list[dict], seed: str) -> dict[int, str]:
+    """{slot number: unit} for the choice slots of a plan; 題組 members share one unit (國文、英語)."""
+    if subject not in UNIT_RANGES and subject != "會考自然":
+        return {}
+    choice = [s for s in slots if s.get("type") == "single_choice"]
+    groups: dict[tuple, list[int]] = {}
+    for s in choice:
+        if s.get("group"):
+            groups.setdefault(tuple(s["group"]), []).append(s["number"])
+    singles = [s["number"] for s in choice if not s.get("group")]
+    for attempt in range(200):
+        rng = random.Random(hashlib.sha256(f"{seed}:units:{attempt}".encode()).digest())
+        out: dict[int, str] = {}
+        if subject == "會考自然":
+            target = {d: round(len(choice) * (low + high) / 2) for d, (low, high) in SCIENCE_SHARES.items()}
+            target["理化"] += len(choice) - sum(target.values())
+            left = dict(target)
+            for members in groups.values():
+                domain = rng.choices(list(left), [max(0, left[d] - len(members) + 1) + 0.01 for d in left])[0]
+                for n in members:
+                    out[n] = domain
+                left[domain] -= len(members)
+            pool = [d for d, k in left.items() for _ in range(max(0, k))]
+            rng.shuffle(pool)
+            pool += ["理化"] * (len(singles) - len(pool))
+            out.update(zip(singles, pool))
+        elif subject in GROUP_UNITS:
+            counts = _counts(subject, len(choice), rng)
+            ordered = sorted(groups.values())
+            if subject == "會考英語" and ordered:
+                cloze = ordered.pop()          # the last group is the 克漏字 passage every year
+                for n in cloze:
+                    out[n] = "克漏字"
+                counts["克漏字"] -= len(cloze)
+            for members in ordered:
+                allowed = [u for u in GROUP_UNITS[subject] if counts.get(u, 0) >= len(members)] or list(GROUP_UNITS[subject])
+                unit = rng.choices(allowed, [counts.get(u, 0) + 0.1 for u in allowed])[0]
+                for n in members:
+                    out[n] = unit
+                counts[unit] = counts.get(unit, 0) - len(members)
+            pool = [u for u, k in counts.items() for _ in range(max(0, k))
+                    if subject != "會考英語" or u in SINGLE_UNITS[subject]]
+            if subject == "會考英語":
+                pool = (pool + list(SINGLE_UNITS[subject]) * len(singles))[:len(singles)]
+            rng.shuffle(pool)
+            out.update(zip(singles, pool))
+        else:
+            counts = _counts(subject, len(choice), rng)
+            pool = [u for u, k in counts.items() for _ in range(k)]
+            rng.shuffle(pool)
+            pool.sort(key=lambda u: MATH_MEAN_POSITION.get(u, 12) + rng.uniform(-POSITION_JITTER, POSITION_JITTER))
+            out.update(zip(sorted(s["number"] for s in choice), pool))
+        trial = [{"type": "single_choice", "number": n,
+                  "item_spec": {"cap_unit": u, "cap_competency": {"domain": u}}} for n, u in out.items()]
+        if len(out) == len(choice) and not unit_errors(subject, trial):
+            return out
+    return out
 </canonical-source>
 
 <canonical-source path="scripts/check_hosted_run.py">
@@ -77817,6 +78595,62 @@ def answer_separation(exam: dict, root: Path, state: dict) -> tuple[bool, str]:
     return not findings, text_note + ("" if not findings else ": " + " | ".join(findings[:12]))
 
 
+BANDS = (("very_hard", 0.30), ("hard", 0.50), ("medium", 0.70), ("easy", 0.85), ("very_easy", 1.01))
+
+
+def difficulty_draft(exam: dict, root: Path) -> Path | None:
+    """difficulty.draft.json for a 會考 paper: every row with the fields the final check reads, the anchor
+    key its item type needs (objective / constructed-response), the official same-position 通過率 and
+    the author's own estimates as a starting point. status stays pending: the reviewer re-solves each
+    item with the answer covered, edits the estimates, writes observations and answer_recheck, then
+    saves it as difficulty.json. A math author learned these fields one failed finalize at a time."""
+    metadata = exam.get("metadata") or {}
+    subject = metadata.get("subject")
+    if not str(subject or "").startswith("會考"):
+        return None
+    try:
+        from cap_plan import position_targets
+        targets = position_targets(subject, metadata.get("cap_difficulty_level", "會考"))
+    except (KeyError, OSError, ValueError):
+        targets = {}
+    from hosted_blind_review import packet as blind_packet
+    exam_sha = _sha(root / "exam.json")
+    packet = root / f"blind-packet-{exam_sha[:12]}.json"
+    packet.write_text(json.dumps(blind_packet(exam, "single-context"), ensure_ascii=False, indent=1) + "\n",
+                      encoding="utf-8", newline="\n")
+    rows = []
+    for q in exam.get("questions") or []:
+        design = (q.get("item_spec") or {}).get("difficulty_design") or {}
+        constructed = q.get("type") != "single_choice"
+        p = design.get("estimated_p")
+        target = targets.get(q.get("number")) if not constructed else None
+        rows.append({
+            "id": q.get("id"), "status": "pending", "observations": "",
+            "estimated_p": p, "estimated_d": design.get("estimated_d"),
+            "difficulty_band": next((b for b, edge in BANDS if type(p) in (int, float) and p < edge), None),
+            "expected_minutes": design.get("expected_minutes"),
+            "shortest_route": design.get("short_route") or "",
+            "decisive_steps": [d for d in design.get("linked_decisions") or [] if d],
+            "shortcut_search": "",
+            "anchor_comparison": {"kind": "embedded-calibration",
+                                  "key": "constructed-response" if constructed else "objective",
+                                  "note": (f"official 113-115 position {q.get('number')}: 通過率 {target['official_p_113_115']}, "
+                                           f"鑑別度 {target.get('official_d_113_115')}" if target else "")},
+            "anchor": {"kind": "embedded-calibration", "key": "constructed-response" if constructed else "objective"},
+            "answer_recheck": "", "unresolved": []})
+    draft = {"draft_note": "pending until reviewed: re-solve each item with the answer covered, adjust the estimates, "
+                           "fill observations, shortcut_search and answer_recheck, set status pass, remove this note, "
+                           "save as difficulty.json",
+             "exam_sha256": exam_sha, "status": "pending", "observations": "",
+             "review_mode": "single-context", "independent_review": False, "review_reason": "",
+             "author_context": "", "reviewer_context": "",
+             "blind_packet": {"path": packet.name, "sha256": _sha(packet)},
+             "items": rows}
+    path = root / "difficulty.draft.json"
+    path.write_text(json.dumps(draft, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return path
+
+
 def auto_review(state_path, gates=GATES) -> dict:
     state_path = Path(state_path).resolve()
     root = state_path.parent
@@ -77834,7 +78668,9 @@ def auto_review(state_path, gates=GATES) -> dict:
         (root / f"{gate}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         written[gate] = report["status"]
     pending = [g for g, s in written.items() if s != "pass"]
+    draft = difficulty_draft(exam, root)
     return {"status": "pending" if pending else "ok", "reviews": written,
+            **({"difficulty_draft": draft.name} if draft else {}),
             "next_action": ("fix the findings in " + ", ".join(f"{g}.json" for g in pending) + ", then rerun auto-review"
                             if pending else "run checkpoint to register these reviews")}
 </canonical-source>
@@ -77899,6 +78735,13 @@ def cap_p_band(subject, level):
 CAP_MEAN_D = {'會考國文': 0.49, '會考英語': 0.60, '會考數學': 0.50, '會考社會': 0.50, '會考自然': 0.51}
 CAP_D_TOLERANCE = 0.0
 CAP_LOW_D_SHARE = 0.03
+# Estimated D cannot be verified before the paper is sat. A floor above the official papers only taught
+# authors to write higher numbers (M1111 estimated every item at 0.42 or more; official 115 數學 has two
+# items under 0.30, 第 22 題 0.13). So the share of items under 0.30 may reach the official maximum, and
+# the hardest items' estimates must look like official hard items (p < 0.40), which discriminate less.
+CAP_LOW_D_SHARE_BY_SUBJECT = {'會考國文': 0.05, '會考英語': 0.03, '會考數學': 0.08, '會考自然': 0.06}
+CAP_HARD_D_MEAN = {'會考國文': 0.33, '會考英語': 0.33, '會考數學': 0.35, '會考社會': 0.37, '會考自然': 0.40}
+CAP_HARD_D_TOLERANCE = 0.10
 # A user may ask for a different difficulty in the request (「數A 難題 40%」「自然平均答對率 0.5」);
 # the run records it in metadata.user_difficulty_request with the user's words and the gates
 # use it in place of the 學測 defaults. Without one the defaults apply unchanged.
@@ -78124,10 +78967,17 @@ def review_errors(exam, review):
                                   f'(113-115 best mean {CAP_MEAN_D[subject_name]:.2f}; the target is above 會考): rewrite items '
                                   'whose distractors no prepared student would pick or whose key a weak student can guess')
                 low_d = sum(d < 0.30 for d in discrimination)
-                if low_d > CAP_LOW_D_SHARE * len(discrimination):
-                    errors.append(f'difficulty: {low_d} items have a reviewed 鑑別度 below 0.30 (official 113-115: 0-8%, '
-                                  'target better than official); '
-                                  f'at most {CAP_LOW_D_SHARE:.0%} accepted')
+                low_share = CAP_LOW_D_SHARE_BY_SUBJECT.get(subject_name, CAP_LOW_D_SHARE)
+                if low_d > low_share * len(discrimination):
+                    errors.append(f'difficulty: {low_d} items have a reviewed 鑑別度 below 0.30 (official 113-115: 0-8%); '
+                                  f'at most {low_share:.0%} accepted')
+                hard = [d for p, d in zip(estimates, discrimination) if p < 0.40]
+                ceiling = CAP_HARD_D_MEAN[subject_name] + CAP_HARD_D_TOLERANCE
+                if len(hard) >= 2 and sum(hard) / len(hard) > ceiling:
+                    errors.append(f'difficulty: the {len(hard)} items estimated below 通過率 0.40 average 鑑別度 '
+                                  f'{sum(hard) / len(hard):.2f}; official {subject_name[2:]} items that hard average '
+                                  f'{CAP_HARD_D_MEAN[subject_name]:.2f} (113-115): estimate from the official items in the '
+                                  f'same position (plan official_d_113_115), at most {ceiling:.2f}')
             band_low, band_high = cap_p_band(subject_name, level)
             if type(wanted) in (int, float):
                 pass
@@ -78502,7 +79352,7 @@ def _writing_paragraph(piece, plain):
     return f'<p class="{cls}">{markup}</p>'
 
 
-MATH_SYMBOL = r'[−+=×÷±≤≥()\[\]αβγδθλμσφωπ·°]'
+MATH_SYMBOL = r'[−+=×÷±≤≥()\[\]αβγδθλμσφωπ·°′″∆]'   # ′ in Times beside its letter (「C′」 printed 「C ´」 in a CJK face)
 # A Latin run keeps the spaces inside and around it, so an English sentence stays one
 # Times span. Spaces take the Times width everywhere: a CJK face such as 全字庫正宋體
 # draws U+0020 a full em wide, which opened 「為 2/3」 and 「sin x」 like a tab.
@@ -78551,6 +79401,8 @@ def latin_runs(markup):
     # Tags, entities and {{tokens}} stay untouched; mathematics keeps &lt; and &gt; inside
     # its formulas.
     entity = r'&(?!lt;|gt;)[a-z#0-9]+;' if _math_mode else r'&[a-z#0-9]+;'
+    if _math_mode and _cap_mode:
+        markup = markup.replace('△', '∆')   # 114-115 print ∆ABC in Times; the CJK △ set small and high
     parts = re.split(rf'(<[^>]+>|{entity}|\{{\{{[^{{}}]*\}}\}})', markup)
     for index, part in enumerate(parts):
         if not part or part.startswith(('<', '&', '{{')):
@@ -78564,7 +79416,7 @@ def latin_runs(markup):
             if match.lastgroup == 'run' and _math_mode:
                 # Variables print italic, as in every mathematics booklet; function
                 # names, words and acronyms stay upright.
-                chunk = identifier_markup(chunk, part, base + match.start())
+                chunk = identifier_markup(chunk, part, base + match.start(), cap=_cap_mode)
             return f'<span class="latin">{unligated(chunk)}</span>'
         if _math_mode:
             parts[index] = keep_formulas_whole(part, lambda base, part=part: (lambda m: wrap(m, part, base)))
@@ -79025,6 +79877,17 @@ RANGE_LABEL = re.compile(r'\d{1,2}\s*[-–]\s*\d{1,2}')
 HINT_LABEL = re.compile(r'^((?:<span class="kai">)?)提示[：︰]')
 
 
+PRINTED_TOKEN = re.compile(r'\{\{(frac|sqrt|vec|seg)(\.s)?:([^{}]*)\}\}')
+
+
+def _token_text(match):
+    kind, body = match.group(1), html.unescape(match.group(3))
+    if kind == 'frac':
+        top, _, bottom = body.partition('|')
+        return html.escape(max(top, bottom, key=len))
+    return html.escape(('√' if kind == 'sqrt' else '') + body)
+
+
 def english_columns(inners, columns, archive, wrap, width):
     """Columns that hold every option on one line at the official tab.
 
@@ -79037,7 +79900,10 @@ def english_columns(inners, columns, archive, wrap, width):
     minimum = 3 if _subject == '英文' else 2 if _subject in {'數學A', '數學B'} else None
     if minimum is None or columns < minimum or _measure_css is None:
         return columns
-    widths = [_cell_advance(inner, archive, wrap) for inner in inners]
+    # Typeset constructs are still tokens here: 「{{frac:7|12}}」 measured as thirteen characters and
+    # pushed four short fractions one per line (會考數學 M1111). Measure what prints: the wider operand
+    # of a fraction, a radical's sign and radicand, a segment's letters.
+    widths = [_cell_advance(PRINTED_TOKEN.sub(_token_text, inner), archive, wrap) for inner in inners]
     if any(w is None for w in widths):
         return columns
 
@@ -79328,6 +80194,11 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
             i=0
             while i<len(work):
                 y=snap_block_top(y)
+                if work[i].get('break_before') and not fresh_page:
+                    # A block that opens its own page (會考數學 非選擇題): the rest of that page is working room.
+                    close_page()
+                    page=doc.new_page(width=595.28,height=841.89);y=top;fresh_page=True
+                    continue
                 # `break_after`: a section heading that fits closes the current page and
                 # its material starts the next one (英文 「二、綜合測驗」 under 詞彙題 10,
                 # 112 and 115). At the top of a page it simply leads its material.
@@ -79389,9 +80260,19 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
     def voids(pages_,count_):
         return [round((body.y1-max(row['bbox'][3] for row in pages_ if row['page']==n))/body.height,3) for n in range(1,count_+1)]
 
-    def over_limit(voids_):
+    # Pages from the first block that opens its own page onward are working room, not unfilled body.
+    working_from=min((b['_source'] for b in blocks if b.get('break_before')),default=None)
+
+    def working_pages(pages_):
+        if working_from is None:
+            return set()
+        first=min((row['page'] for row in pages_ if row['block']>=working_from),default=None)
+        return set() if first is None else {row['page'] for row in pages_ if row['page']>=first}
+
+    def over_limit(voids_,pages_):
+        working=working_pages(pages_)
         limits=[page_void_limit(spec['subject'],'solutions' if spec.get('booklet_role')=='solutions' else 'body',n==len(voids_))
-                for n in range(1,len(voids_)+1)]
+                if n not in working else None for n in range(1,len(voids_)+1)]
         return sum(1 for v,l in zip(voids_,limits) if l is not None and v>l),max(voids_) if voids_ else 0
 
     try:
@@ -79406,21 +80287,21 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
                     raw,parts,pages,count,fill=attempt;tightness=trial;pagination='tighter-gaps'
                     break
         best_voids=voids(pages,count)
-        if balance_last_page and count>1 and over_limit(best_voids)[0]:
+        if balance_last_page and count>1 and over_limit(best_voids,pages)[0]:
             # Greedy filling piles every remainder onto the last page and leaves a
             # tall block's page half empty. Spread the same content evenly across
             # the same number of pages and keep the pass with the fewest pages
             # over the fixed limit, then the smallest worst void.
             used=sum(row['measured_height_pt'] for row in pages)+sum(
                 (8 if row['kind']=='section' else item_gap_pt(style))*tightness for row in pages)
-            best=(over_limit(best_voids),count)
+            best=(over_limit(best_voids,pages),count)
             for slack in (1.02,1.05,1.08,1.12):
                 try:
                     attempt=paginate(tightness,capacity=used/count*slack)
                 except ValueError:
                     continue  # e.g. a detached heading lost its page foot; the greedy pass stands
                 if attempt[3]>count:continue
-                candidate=(over_limit(voids(attempt[2],attempt[3])),attempt[3])
+                candidate=(over_limit(voids(attempt[2],attempt[3]),attempt[2]),attempt[3])
                 if candidate<best:
                     raw,parts,pages,count,fill=attempt;best=candidate;pagination=f'balanced-{slack:g}'
                     best_voids=voids(pages,count)
@@ -79436,6 +80317,7 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
                              'bottom_safety_pt':round(body.y1-max(b['bbox'][3] for b in pages if b['page']==n),3)}
                              for n in range(1,count+1)]},
             'gap_scale':tightness,'pagination':pagination,'bottom_void_ratios':best_voids,
+            **({'working_pages':sorted(working_pages(pages))} if working_from is not None else {}),
             'scaled_assets':[scaled[key] for key in sorted(scaled)],
             'scope':'Body layout only; compose onto original fixed PDFs and perform actual QA',
             'elapsed_seconds':round(time.monotonic()-started,3)}
@@ -79814,6 +80696,8 @@ value to argue about.
 """
 from __future__ import annotations
 
+import re
+
 MAX_BODY_VOID = {'default': 0.32, '英文': 0.42, '會考英語': 0.42}
 MAX_LAST_PAGE_VOID = 0.60
 MATH_SUBJECTS = {'數學A', '數學B', '會考數學'}
@@ -79837,22 +80721,34 @@ def page_role(page_text: str, number: int, count: int, subject=None, *, solution
 
 def last_body_page(number: int, count: int, roles: dict) -> bool:
     """True when no later page of the booklet is a body/solutions page."""
-    return all(roles.get(n) in {'cover', 'formula'} for n in range(number + 1, count + 1))
+    return all(roles.get(n) in {'cover', 'formula', 'working'} for n in range(number + 1, count + 1))
 
 
 def page_void_limit(subject, role: str, is_last_body_page: bool):
     """The fixed limit for this page, or None when the page is a fixed template layer."""
-    if role in {'cover', 'formula'}:
+    if role in {'cover', 'formula', 'working'}:
         return None
     if is_last_body_page:
         return MAX_LAST_PAGE_VOID
     return body_void_limit(subject)
 
 
+def working_room_from(pages, subject=None, *, solutions=False):
+    """會考數學 question booklets print each 非選擇題 on its own page with the rest left for working
+    (113-115): the first page from 「第二部分：非選擇題」 on, or None."""
+    if subject != '會考數學' or solutions:
+        return None
+    return next((n for n, text in pages if '非選擇題' in re.sub(r'\s', '', text or '') and '第二部分' in
+                 re.sub(r'\s', '', text or '') and not any(m in (text or '') for m in COVER_MARKERS)), None)
+
+
 def booklet_limits(pages, subject=None, *, solutions=False):
     """{page number: (role, limit)} for a sequence of (number, text) pairs."""
     count = len(pages)
     roles = {n: page_role(text, n, count, subject, solutions=solutions) for n, text in pages}
+    working = working_room_from(pages, subject, solutions=solutions)
+    if working is not None:
+        roles.update({n: 'working' for n in roles if n >= working and roles[n] == 'body'})
     return {n: (roles[n], page_void_limit(subject, roles[n], last_body_page(n, count, roles))) for n, _ in pages}
 
 
@@ -81105,7 +82001,14 @@ _standalone_cache: dict = {}
 UNITS = frozenset({'cm', 'mm', 'km', 'kg', 'mg', 'ml', 'mL', 'am', 'pm', 'hr', 'min', 'sec'})
 
 
-def identifier_markup(run: str, context: str, start: int) -> str:
+# 會考數學 113-115 set every point, segment and polygon name in Times italic (ABCDEF, CO, ADEF);
+# upright only acronyms and labels such as 「Y 字型」「A 圖案」.
+CAP_ACRONYMS = frozenset({'AI', 'APP', 'LED', 'USB', 'GPS', 'PM', 'DNA', 'ATM', 'MRT', 'QR', 'TV', 'NBA', 'ID', 'OK',
+                          'CEO', 'LINE', 'YouBike'})
+CAP_LABEL_AFTER = re.compile(r'^[ \u00a0]*(?:字型|字形|字|圖案|型|號|牌|款|恤|尺寸|級|罩)')
+
+
+def identifier_markup(run: str, context: str, start: int, cap: bool = False) -> str:
     """Italicise variable names inside one escaped Latin run of mathematics text."""
     # One scan per text, not per run: a long passage has thousands of runs.
     if _standalone_cache.get('context') is not context:
@@ -81127,6 +82030,11 @@ def identifier_markup(run: str, context: str, start: int) -> str:
             return f'<span class="var">{word}</span>'
         if len(word) > 1 and not word.isupper():
             return word
+        if cap and word.isupper() and len(word) <= 8:
+            after = context[start + match.end():start + match.end() + 6]
+            if word in CAP_ACRONYMS or CAP_LABEL_AFTER.match(after):
+                return word
+            return f'<span class="var">{word}</span>'
         if len(word) == 1 or (len(word) <= 4 and (all(c in standalone for c in word) or geometric)):
             return f'<span class="var">{word}</span>'
         return word
@@ -84816,11 +85724,13 @@ def plan(state_path, question_spec, solution_spec, font, output, *, reading_font
         body_height = page_plan['body_bbox'][3] - page_plan['body_bbox'][1]
         pages = []
         plan_subject = read(spec_path).get('subject')
+        working = set(layout.get('working_pages') or [])
         for row in page_plan['pages']:
             void = round(row['bottom_safety_pt'] / body_height, 3)
             last = row['page'] == page_plan['page_count']
             # The same fixed limit the inspector and the final checker apply, last page included.
-            void_limit = page_void_limit(plan_subject, 'solutions' if role == 'solution' else 'body', last)
+            void_limit = page_void_limit(plan_subject, 'working' if row['page'] in working else
+                                         'solutions' if role == 'solution' else 'body', last)
             pages.append({**row, 'bottom_void_ratio': void, 'bottom_void_limit': void_limit})
             if void_limit is not None and void > void_limit:
                 attention.append({'role': role, 'page': row['page'], 'bottom_void_ratio': void, 'limit': void_limit,
@@ -85318,13 +86228,14 @@ MATERIAL_VISUAL = re.compile(r'下表|下圖|附表|附圖|如表|如圖|右表|
 RANGE_DISPLAY = re.compile(r'(\d{1,2})\s*[-–]\s*(\d{1,2})')
 
 
-def project_specs(exam, hints, body_width):
+def project_specs(exam, hints, body_width, reviewed=None):
     """Deterministic layout projection of saved items. It adds no printed content.
 
     Printed text comes only from exam.json, following the conventions of the
     maintained official-form renderers for every subject. Hints hold layout
     choices and explicit blocks for structures the item fields cannot express.
     """
+    reviewed = reviewed or {}
     spec_subject = exam['metadata']['subject']
     # 會考 keys (會考社會) lay out with their closest 學測 component style; labels stay 會考's.
     subject = style_subject(spec_subject)
@@ -85677,11 +86588,13 @@ def project_specs(exam, hints, body_width):
         if not steps:
             raise ValueError(where + ': saved answer has no printable solution steps')
         if spec_subject.startswith('會考'):
-            # 會考 solutions open with the item's 108 課綱 codes and the likely 國中 volume(s).
-            from cap_plan import solution_note
+            # 會考 solutions open with the item's 108 課綱 codes and the likely 國中 volume(s), then its
+            # estimated 難易度 and 鑑別度 (labelled 預估: no examinee has sat the paper).
+            from cap_plan import difficulty_note, solution_note
             note = solution_note(q.get('item_spec') or {})
-            if note:
-                steps = [note, *steps]
+            estimate = difficulty_note(q.get('item_spec') or {}, reviewed.get(q['id']),
+                                       constructed=q.get('type') != 'single_choice')
+            steps = [line for line in (note, estimate) if line] + steps
         solution = {'kind': 'solution', 'id': q['id'],
                     'text': printed(hint.get('solution_text') or '答案：' + answer_text(answer.get('final_answer')),
                                     where + ' final_answer', english=english),
@@ -85699,7 +86612,32 @@ def project_specs(exam, hints, body_width):
         attach_assets(solution, answer, where, body_width, hint.get('solution', {}), figure_key='solution-figure',
                       position='below')
         solutions.append(solution)
+    if spec_subject == '會考數學':
+        # 113-115 print each 非選擇題 on a page of its own, below 「第二部分：非選擇題」, and leave the rest
+        # of the page for working; M1111 packed item 25 and both 非選擇題 onto one page.
+        constructed_seen = False
+        for block in blocks:
+            if block.get('kind') == 'section' and '非選' in re.sub(r'<[^>]+>', '', str(block.get('title') or '')):
+                block['break_before'] = True
+                constructed_seen = True
+            elif block.get('kind') == 'constructed':
+                if constructed_seen:
+                    constructed_seen = False   # the first follows its heading on the same page
+                else:
+                    block['break_before'] = True
     return [{'subject': spec_subject, 'blocks': blocks}, {'subject': spec_subject, 'blocks': solutions}]
+
+
+def reviewed_estimates(root, state, exam_path):
+    """{item id: difficulty.json row} when the registered difficulty review covers this exam."""
+    try:
+        path = inside(root, root / ((state.get('checks') or {}).get('difficulty') or {}).get('path', ''))
+        review = read(path)
+    except (OSError, ValueError, TypeError, AttributeError):
+        return {}
+    if not isinstance(review, dict) or review.get('exam_sha256') != record(root, exam_path).get('sha256'):
+        return {}
+    return {row.get('id'): row for row in review.get('items') or [] if isinstance(row, dict)}
 
 
 def specs(state_path, question_output=None, solution_output=None, hints=None):
@@ -85724,7 +86662,7 @@ def specs(state_path, question_output=None, solution_output=None, hints=None):
             raise ValueError('Hints allow items, solution_heading and solution_section_headings only')
     manifest = read(map_for(exam['metadata']['subject']))
     body = next(s for s in manifest['subjects'] if s['subject'] == exam['metadata']['subject'])['overlay_geometry_pt']['body']
-    projections = project_specs(exam, hint_data, body[2] - body[0] - 8)
+    projections = project_specs(exam, hint_data, body[2] - body[0] - 8, reviewed_estimates(root, state, exam_path))
     for role, spec in zip(('question', 'solution'), projections):
         printed = [str(b.get('label')).strip() for b in spec['blocks'] if b.get('kind') != 'section' and b.get('label')]
         duplicates = sorted({label for label in printed if printed.count(label) > 1})
@@ -86502,6 +87440,9 @@ CONSTRUCTED = {"會考數學": 2}
 CAP_SUBJECTS = (*OFFICIAL_RANGES, "會考寫作測驗")
 LABELS = ("A", "B", "C", "D")
 LONGEST_KEY_SHARE = 0.05   # official 會考社會 113-115: 0-3 a year (0-7%); target above official
+# Official best year per subject (113-115 measured 2026-11): 國文 2/42, 數學 0/25, 自然 2/50, 社會 0/54,
+# 英語 6/43 (English words differ in length by nature: 10/43 in 115).
+LONGEST_KEY_BY_SUBJECT = {"會考英語": 0.14}
 CHOICE_TYPES = {"single_choice"}
 CONSTRUCTED_TYPES = {"constructed_response", "short_answer"}
 WRITING_TYPES = {"guided_writing", "essay", "constructed_response"}
@@ -86510,7 +87451,13 @@ WRITING_TYPES = {"guided_writing", "essay", "constructed_response"}
 SITUATED_CONTEXTS = {"生活情境", "社會議題", "科學探究", "跨領域"}
 CONTEXT_TYPES = SITUATED_CONTEXTS | {"學科知識", "文本閱讀"}
 PROCESSES = {"擷取訊息", "統整解釋", "推論", "應用", "評鑑"}
-SITUATED_SHARE = {"會考國文": 0.50, "會考英語": 0.60, "會考數學": 0.60, "會考社會": 0.70, "會考自然": 0.70}
+# Measured on 113-115 (maintainer review 2026-11): 國文 about 30% (posts, ads, data, notices; the rest
+# reads literary and classical texts), 英語 about 55% (題組 texts; 單題 are word and structure items),
+# 數學 33-41% (115: 文旦、細菌、書店、用電量、時速錶、馬拉松、沙發), 自然 70-80%. A math paper written
+# at 89% situated (M1111) dropped the bare computation, geometry and judgement items every official
+# paper has, so 數學 also has a ceiling.
+SITUATED_SHARE = {"會考國文": 0.30, "會考英語": 0.50, "會考數學": 0.30, "會考社會": 0.70, "會考自然": 0.70}
+SITUATED_MAX = {"會考數學": 0.60}
 # Printed disclaimers that announce an invented or classroom-only world (hosted 學測 papers
 # printed 「教學模型」「非 NASA 數據」「虛構小鎮」); real, checkable situations only.
 # 國中 scope: 108 課綱 第四學習階段 learning-content codes (自然 Ea-IV-1, 社會 歷Ha-IV-1, 國文 Ab-IV-1)
@@ -86525,6 +87472,36 @@ DISCLAIMERS = re.compile(r"虛構|假想情境|假設性資料|教學模型|非�
 def _label(option) -> str:
     raw = str(option.get("label", "") if isinstance(option, dict) else "")
     return re.sub(r"[()（）\s]", "", raw)
+
+
+# 寫作測驗 113-115 print the same frame: the opening line, the material (headlines, a picture and a word
+# bank, or a short paragraph), the questions to think about, a task joining 經驗 or 見聞, and three
+# notes in this order. The 六級分 rubric scores four dimensions; the solution explains each.
+WRITING_OPENING = re.compile(r"^\s*請先閱讀以下資訊，並(?:按|依據?)題意要求完成一篇文章。")
+WRITING_NOTES = ("※不必訂題", "※不可在文中洩漏私人身分", "※不可使用詩歌體")
+WRITING_RUBRIC = ("立意取材", "結構組織", "遣詞造句", "錯別字")
+
+
+def writing_task_errors(task: dict, answer: dict) -> list[str]:
+    errors = []
+    prompt = str(task.get("prompt") or "")
+    flat = re.sub(r"\s", "", prompt)
+    if not WRITING_OPENING.match(prompt):
+        errors.append("寫作測驗 opens 「請先閱讀以下資訊，並依據題意要求完成一篇文章。」 as 113-115 do")
+    positions = [flat.find(note) for note in WRITING_NOTES]
+    if -1 in positions or positions != sorted(positions):
+        errors.append("寫作測驗 ends with the three notes in the official order: " + " ".join(WRITING_NOTES))
+    if not re.search(r"經驗|見聞", flat) or "寫下" not in flat:
+        errors.append("寫作測驗 asks the writer to join their own 經驗 or 見聞 and 寫下 their 感受、想法 or 觀察 "
+                      "(113-115 task wording)")
+    if re.search(r"題目[：:]", flat):
+        errors.append("寫作測驗 prints no title (※不必訂題): give material and a task, not 「題目：」")
+    explained = " ".join(str(step) for step in answer.get("reasoning") or []) + str(answer.get("final_answer") or "")
+    missing = [d for d in WRITING_RUBRIC if d not in explained]
+    if missing:
+        errors.append(f"寫作測驗 solution explains the 級分 by the official dimensions; missing {'、'.join(missing)} "
+                      "(立意取材、結構組織、遣詞造句、錯別字格式與標點符號), with a 審題 and 取材 guide")
+    return errors
 
 
 def full_paper_minimum(subject: str) -> int:
@@ -86552,6 +87529,8 @@ def validate_exam(exam: dict, *, full: bool = True, asset_root: Path | None = No
                 errors.append("寫作測驗 task must not print options")
             if q.get("score") not in (None, 6):
                 errors.append("寫作測驗 is scored 1-6 級分; leave score unset or 6")
+            if full:
+                errors += writing_task_errors(q, answers.get(q.get("id")) or {})
         return errors
     if any(q.get("type") == "listening_choice" or q.get("audio") for q in questions):
         errors.append("英語聽力 is out of scope: the 英語 booklet is the reading booklet only")
@@ -86595,9 +87574,10 @@ def validate_exam(exam: dict, *, full: bool = True, asset_root: Path | None = No
         lengths = {_label(o): len(re.sub(r"<[^>]+>|\s", "", str(o.get("text", "")))) for o in q.get("options") or []}
         if key in lengths and list(lengths.values()).count(max(lengths.values())) == 1 and lengths[key] == max(lengths.values()):
             longest += 1
-    if full and choice and longest > max(2, round(LONGEST_KEY_SHARE * len(choice))):
+    share = LONGEST_KEY_BY_SUBJECT.get(subject, LONGEST_KEY_SHARE)
+    if full and choice and longest > max(2, round(share * len(choice))):
         errors.append(f"{longest} of {len(choice)} keys are the single longest option (at most "
-                      f"{round(LONGEST_KEY_SHARE * 100)}%): lengthen distractors so length never signals the answer")
+                      f"{round(share * 100)}%): lengthen distractors so length never signals the answer")
     level = metadata.get("cap_difficulty_level", "會考")
     if level not in CAP_LEVELS:
         errors.append(f"metadata.cap_difficulty_level must be one of {'、'.join(CAP_LEVELS)} (the user's choice; default 會考)")
@@ -86647,6 +87627,10 @@ def validate_exam(exam: dict, *, full: bool = True, asset_root: Path | None = No
     if full and items and situated < SITUATED_SHARE[subject] * items:
         errors.append(f"only {situated} of {items} items are set in a real situation (生活情境／社會議題／科學探究／跨領域); "
                       f"{subject[2:]} needs at least {SITUATED_SHARE[subject]:.0%}, as official 會考 素養題 do")
+    if full and items and subject in SITUATED_MAX and situated > SITUATED_MAX[subject] * items:
+        errors.append(f"{situated} of {items} items are situated; official 會考{subject[2:]} 113-115 set about a third in a "
+                      f"situation (at most {SITUATED_MAX[subject]:.0%} here) and ask the rest directly: computation, "
+                      "geometric properties, judging two people's claims (context_type 學科知識)")
     groups: dict[str, list[int]] = {}
     for q in choice:
         if q.get("group_stimulus"):
@@ -86699,6 +87683,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from cap_units import SINGLE_DECISION_UNITS, unit_errors
+
 LABELS = ("A", "B", "C", "D")
 EXTREME = re.compile(r"歸零|終身|廢除|宣告獨立|全體|片面|毫無|從不|徹底|立即消失|永久禁止|全面禁止|完全消失|無限")
 ABSOLUTE = re.compile(r"完全|一律|全面|全部|所有|絕對|永遠|必定|一定|只要|只有|只能|只會|只保障|僅|任何|必須|禁止|強制"
@@ -86712,6 +87698,14 @@ LEAK_RUN = 6          # characters of the key's wording
 LEAK_MARGIN = 4       # longer than any distractor's shared run by this much
 SPREAD_LIMIT = 2.0    # longest/shortest option length
 SPREAD_SHARE = 0.10
+# 英語 options are words of natural length (bow/smell, it/like this): official 113-115 have 9 of 43
+# items a year over the limit, so 英語 takes the official share; the others keep the 社會 floor.
+SPREAD_SHARE_BY_SUBJECT = {"會考英語": 0.21}
+# Extreme wording is a 社會／自然 distractor defect; 國文 options paraphrase literary texts (「毫無」
+# 「從不」 occur in official 113 國文 options) and 英語 options are English.
+EXTREME_SUBJECTS = {"會考社會", "會考自然", "會考數學"}
+# 數學 items judging two people's claims or methods (115 第 14、20、22 題; 113 第 9、24 題; 114 第 12、18 題).
+JUDGE_MIN = {"會考數學": 2}
 ABSOLUTE_SHARE = 0.05   # official up to 9%; target above official
 TRANSLATION_SHARE = 0.6   # 社會: items whose target concept the student must infer
 INTEGRATED_SHARE = 0.20  # items joining concepts across domains (社會) or curriculum strands (others)
@@ -86733,6 +87727,11 @@ COMBO = re.compile(r"[甲乙丙丁戊己].*[甲乙丙丁戊己]")
 COMBO_MAX = {"會考社會": 3, "會考自然": 5, "會考數學": 3, "會考國文": 1, "會考英語": 1}
 IMAGE_OPTION_MIN = {"會考社會": 2, "會考自然": 3}
 OPTION_LENGTH = {"會考社會": (15, 0.12), "會考自然": (14, 0.27), "會考國文": (19, 0.25)}   # median cap, share >20
+# 社會 prints real data, so every printed statistic needs its source. Elsewhere official items use
+# hypothetical numbers (「某國政府公布…」, an experiment's readings, a shop's prices): only a sentence that
+# claims real data (a year, 根據／調查／統計／公布, a named survey) and names no 「某」 needs a source.
+CLAIM = re.compile(r"(?:19|20)\d{2}\s*年|根據|依據|公布|統計|調查|報告|資料顯示|研究指出|官方|according to|survey|"
+                   r"statistic|reported|census", re.I)
 STATISTIC = re.compile(r"\d[\d,.]*\s*(?:%|％|萬|億|人|公噸|噸|元|美元|度|公里|公頃|戶|件|次|倍|毫米|mm|℃)")
 OVERLAP_MIN, OVERLAP_PHRASES = 6, 2   # shared distinctive runs, in at least two separate phrases
 FINGERPRINTS = Path(__file__).resolve().parents[1] / "exam_packs" / "會考" / "metadata" / "official-item-fingerprints.json"
@@ -86815,13 +87814,49 @@ def spec_sources(question: dict) -> list[dict]:
     return [r for r in rows if isinstance(r, dict)]
 
 
+def real_data(subject: str | None, text: str) -> bool:
+    """Printed numbers presented as real-world data (社會: any printed statistic)."""
+    if subject == "會考社會":
+        return bool(STATISTIC.search(text))
+    return any(STATISTIC.search(s) and CLAIM.search(s) and "某" not in s for s in re.split(r"[。！？!?\n]", text))
+
+
+# Running mean of estimated_p while writing, against the plan's own targets for the same positions:
+# items are saved in any order, and the first easy positions alone sit above the paper's band
+# (a math author had to save hard items early to pass). Within this tolerance of the targets.
+RUNNING_TOLERANCE = 0.08
+
+
+def running_mean_errors(exam: dict, subject: str | None, numbered: list[tuple[int, float]]) -> list[str]:
+    if len(numbered) < 5:
+        return []
+    from hosted_blind_review import CAP_MEAN_P
+    if subject not in CAP_MEAN_P:
+        return []
+    from cap_plan import position_targets
+    level = (exam.get("metadata") or {}).get("cap_difficulty_level", "會考")
+    level = level if level in ("會考", "中", "高", "極難") else "會考"
+    targets = position_targets(subject, level)
+    pairs = [(p, targets[n]["target_p"]) for n, p in numbered if n in targets]
+    if len(pairs) < 5:
+        return []
+    mean = sum(p for p, _ in pairs) / len(pairs)
+    expected = sum(t for _, t in pairs) / len(pairs)
+    if abs(mean - expected) <= RUNNING_TOLERANCE:
+        return []
+    return [f"running mean of estimated_p over the {len(pairs)} saved items is {mean:.2f}; the {level} targets for "
+            f"those positions average {expected:.2f} (±{RUNNING_TOLERANCE}): adjust the next items now, not after the "
+            "paper is written"]
+
+
 def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = None) -> list[str]:
     errors: list[str] = []
     metadata = exam.get("metadata") or {}
     subject = metadata.get("subject")
     answers = {a.get("question_id"): a for a in exam.get("answers") or [] if isinstance(a, dict)}
     choice = [q for q in exam.get("questions") or [] if isinstance(q, dict) and q.get("type") == "single_choice"]
-    spread_items = absolute_items = translation = single_step = integrated = combos = image_options = 0
+    spread_items = absolute_items = translation = single_step = integrated = combos = image_options = judges = 0
+    numbered_estimates: list[tuple[int, float]] = []
     option_lengths: list[int] = []
     estimates: list[float] = []
     sequence: list[str] = []
@@ -86849,14 +87884,17 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
         for official in official_overlaps(printed_all + figure):
             errors.append(f"Q{n}: shares {official[3]} distinctive wording runs with official {official[1]} "
                           f"{official[0][2:]} item {official[2]}: compare the two: if yours retells that item's situation, write a new one")
-        if STATISTIC.search(printed_all + figure):
+        if real_data(subject, printed_all + "。" + figure):
             sources = [s for s in spec_sources(q) if str(s.get("url") or "").startswith("http") and s.get("retrieved_at")]
             if full and not sources:
-                errors.append(f"Q{n}: prints statistics; item_spec.data_sources must list each figure's source "
-                              "{url, retrieved_at}: look the numbers up, never write them from memory")
+                errors.append(f"Q{n}: prints real-world data; item_spec.data_sources must list each figure's source "
+                              "{url, retrieved_at}: look the numbers up, never write them from memory"
+                              + ("" if subject == "會考社會" else " (or make it hypothetical, as official items do: "
+                                 "「某國」「某商店」 and no year or survey named)"))
         estimate = ((q.get("item_spec") or {}).get("difficulty_design") or {}).get("estimated_p")
         if type(estimate) in (int, float):
             estimates.append(float(estimate))
+            numbered_estimates.append((n, float(estimate)))
         elif full:
             errors.append(f"Q{n}: item_spec.difficulty_design.estimated_p (predicted 通過率) is required while writing, "
                           "so the paper's difficulty is steered before review")
@@ -86864,7 +87902,7 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             errors.append(f"Q{n}: the stem or material repeats the key's wording; official 會考社會 113-115 never do: "
                           "make the student infer it")
         for label, text in options.items():
-            if EXTREME.search(text):
+            if subject in EXTREME_SUBJECTS and EXTREME.search(text):
                 errors.append(f"Q{n}: option ({label}) uses extreme wording 「{EXTREME.search(text).group(0)}」 (0 of 496 "
                               "official options): write a plausible distractor from a real neighbouring concept")
         absolute = [label for label, text in options.items() if ABSOLUTE.search(text)]
@@ -86884,6 +87922,7 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             errors.append(f"Q{n}: is an arithmetic exercise; {subject[2:]} items assess the subject's concepts")
         spec = q.get("item_spec") or {}
         record = spec.get("cap_competency") if isinstance(spec.get("cap_competency"), dict) else {}
+        judges += record.get("process") == "評鑑"
         # 混合考點: one item joining concepts from two domains (社會) or two curriculum strands, with
         # the bridge that makes both necessary (115 第 46-48 題: 媒體識讀 + 統計表判讀).
         domains = [d for d in (record.get("domains") or [record.get("domain") or spec.get("domain")]) if d]
@@ -86925,7 +87964,8 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
                         errors.append(f"Q{n}: option ({label}) is predicted to draw {pick:.0%} of examinees: a distractor "
                                       "no one chooses does not discriminate; borrow a concept students really confuse")
             decisions = (spec.get("difficulty_design") or {}).get("linked_decisions") or []
-            single_step += len([d for d in decisions if d]) < 2
+            if spec.get("cap_unit") not in SINGLE_DECISION_UNITS:   # 英語 字彙／文法, 國文 語文知識: one decision
+                single_step += len([d for d in decisions if d]) < 2
             # Every option is argued in the explanation, so a defensible second answer surfaces in review
             # (cap116a Q37 listed total cost and forgone income side by side).
             reasoning = " ".join(str(step) for step in (answers.get(q.get("id")) or {}).get("reasoning") or [])
@@ -86946,15 +87986,8 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
                     errors.append(f"Q{n}: cap_competency.domain must be one of {'、'.join(DOMAINS[subject])}")
             else:
                 sequence.append(domain)
-    if len(estimates) >= 5:
-        from hosted_blind_review import CAP_MEAN_P, cap_p_band
-        if subject in CAP_MEAN_P:
-            level = (exam.get("metadata") or {}).get("cap_difficulty_level", "會考")
-            low, high = cap_p_band(subject, level if level in ("會考", "中", "高", "極難") else "會考")
-            mean = sum(estimates) / len(estimates)
-            if not low <= mean <= high:
-                errors.append(f"running mean of estimated_p over {len(estimates)} saved items is {mean:.2f}, outside the "
-                              f"{level} band {low:.2f}-{high:.2f}: adjust the next items now, not after the paper is written")
+    errors += running_mean_errors(exam, subject, numbered_estimates)
+    errors += unit_errors(subject, choice, full=full)
     if not full or not choice:
         return errors
     if combos > COMBO_MAX.get(subject, 1):
@@ -86992,7 +88025,13 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             errors.append(f"only {fresh} of {len(assets)} photographs are newly found (web_source); the web is reachable, so "
                           "every photograph must be: search with `python scripts/web_image.py search \"…\"` and "
                           "use `web_image.py use`; the bundled photo library is the fallback when the web is unreachable")
-    if spread_items > max(2, SPREAD_SHARE * len(choice)):
+    errors += option_order_errors(exam)
+    errors += curve_errors(exam)
+    errors += math_form_errors(exam, asset_root=asset_root)
+    if judges < JUDGE_MIN.get(subject, 0):
+        errors.append(f"{judges} items ask the student to judge others' claims or methods (cap_competency.process 評鑑); "
+                      f"official 會考數學 prints 2-3 a year (「甲、乙兩人的看法」「兩人的作法」): write at least {JUDGE_MIN[subject]}")
+    if spread_items > max(2, SPREAD_SHARE_BY_SUBJECT.get(subject, SPREAD_SHARE) * len(choice)):
         errors.append(f"{spread_items} items have one option over {SPREAD_LIMIT:g} times as long as another (official 90% "
                       f"at most 1.75): keep the four options alike in length, voice and structure")
     if absolute_items > max(2, ABSOLUTE_SHARE * len(choice)):
@@ -87023,6 +88062,164 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             share = sequence.count(domain) / len(sequence)
             if not 0.25 <= share <= 0.42:
                 errors.append(f"{domain} holds {share:.0%} of the 單題; keep each of 歷史／地理／公民 between 25% and 42%")
+    return errors
+
+
+# ---- 數學 and option-form rules from the M1111 reviews (2026-11), measured on 113-115 ----
+
+# Plain numeric options print in order (official 113-115: every such item, mostly ascending); M1111
+# left 18 of 25 unsorted. Fractions, radicals and expressions are ordered by form and are not checked.
+NUMERIC_OPTION = re.compile(r"^(-?\d+(?:\.\d+)?)([^\d\s/√×÷^+=<>{}]{0,6})$")
+
+
+def numeric_values(texts: list[str]) -> list[float] | None:
+    values, units = [], set()
+    for text in texts:
+        raw = re.sub(r"<[^>]+>|\s|,", "", str(text or "")).replace("−", "-")
+        match = NUMERIC_OPTION.match(raw)
+        if not match:
+            return None
+        values.append(float(match.group(1)))
+        units.add(match.group(2))
+    return values if len(units) == 1 else None
+
+
+# Textbook and workbook archetypes: a paper made of them reads as 參考書, not 會考 (M1111: a ladder
+# sliding down a wall, fencing against a wall, auditorium rows, a bouncing ball, a die net, a
+# spinner, straws in hexagons, a folded rectangle). Official 113-115 use at most one a paper.
+MATH_ARCHETYPES = {
+    "梯子沿牆下滑": r"梯子?.{0,40}牆.{0,40}滑|梯.{0,10}滑.{0,30}牆",
+    "靠牆圍籬求面積": r"靠.{0,8}牆.{0,40}圍(?:籬|欄)|圍(?:籬|欄).{0,40}靠.{0,6}牆",
+    "每排座位等差": r"每一?排.{0,16}(?:多|少)\s*\d*\s*(?:個|張)?座位",
+    "彈力球反彈": r"彈力球|反彈.{0,12}高度",
+    "雞兔同籠": r"雞.{0,12}兔|兔.{0,12}雞",
+    "骰子展開圖": r"骰子.{0,30}展開|展開圖.{0,30}骰子",
+    "轉盤機率": r"轉盤",
+    "吸管火柴排圖形": r"(?:吸管|火柴|牙籤).{0,40}(?:圖形|排成|拼成|黏出)",
+    "沿對角線摺紙": r"沿.{0,8}對角線.{0,12}(?:摺|折)",
+    "二分球三分球": r"(?:二|2)\s*分球.{0,30}(?:三|3)\s*分球",
+    "色紙磁磚貼滿": r"(?:磁磚|色紙|地磚).{0,40}(?:貼滿|鋪滿)",
+    "紙張疊放厚度": r"(?:影印紙|紙張).{0,30}厚度",
+    "放入物體水位上升": r"(?:放入|沉入|直立放入).{0,40}水(?:面|位|深).{0,16}(?:上升|高度|多少)",
+}
+ARCHETYPE_MAX = 2
+# Integer right-triangle families (3-4-5 …): M1111 built item 20, the 23-25 題組 and 非選擇題 2 on 6-8-10.
+TRIPLES = ((3, 4, 5), (5, 12, 13), (8, 15, 17), (7, 24, 25), (20, 21, 29), (9, 40, 41))
+TRIPLE_ITEMS_MAX = 2   # official 113: 2 (第 4、22 題), 114: 0, 115: 1
+GEOMETRIC_UNITS = {"平面幾何", "相似形與三角形三心", "圓", "立體與空間", "坐標與函數"}
+# 數學 options that are statements, relations, expressions, positions or judgements, not a bare number:
+# official 113-115 12-14 of 25 a paper; M1111 about 4.
+FORM_OPTION_MIN = {"會考數學": 0.40}
+CURVE_TOLERANCE = 0.10
+
+
+def triple_families(text: str) -> set[tuple]:
+    """Families whose three sides all print, or two legs at a multiple of two or more (6 and 8, 10 and 24)."""
+    numbers = {int(n) for n in re.findall(r"(?<![\d.])(\d{1,3})(?![\d.])", text)}
+    found = set()
+    for family in TRIPLES:
+        for k in range(1, 41):
+            sides = [k * side for side in family]
+            if all(side in numbers for side in sides) or (k >= 2 and sides[0] in numbers and sides[1] in numbers):
+                found.add(family)
+                break
+    return found
+
+
+def math_form_errors(exam: dict, *, asset_root: Path | None = None) -> list[str]:
+    """Whole-paper 會考數學 checks: opening items, option forms, archetypes, repeated triangles."""
+    subject = (exam.get("metadata") or {}).get("subject")
+    questions = [q for q in exam.get("questions") or [] if isinstance(q, dict)]
+    choice = [q for q in questions if q.get("type") == "single_choice"]
+    errors: list[str] = []
+    if subject != "會考數學" or not choice:
+        return errors
+    for q in choice:
+        if q.get("number") in (1, 2, 3):
+            record = (q.get("item_spec") or {}).get("cap_competency") or {}
+            if record.get("context_type") not in (None, "學科知識"):
+                errors.append(f"Q{q.get('number')}: 113-115 open with three direct items (a computation, a figure's "
+                              "property): no story in items 1-3 (context_type 學科知識)")
+    formed = sum(numeric_values([o.get("text") for o in q.get("options") or [] if isinstance(o, dict)]) is None
+                 and not all(re.fullmatch(r"\s*-?−?\d+(?:\.\d+)?\s*", re.sub(r"\{\{frac:[^}]*\}\}|\d+/\d+", "1", str(o.get("text") or "")))
+                             for o in q.get("options") or [] if isinstance(o, dict))
+                 for q in choice)
+    if formed < FORM_OPTION_MIN[subject] * len(choice):
+        errors.append(f"only {formed} of {len(choice)} items have options other than a bare number; official 會考數學 "
+                      f"113-115 print 12-14 a paper (at least {FORM_OPTION_MIN[subject]:.0%}): ask for a relation, a position, "
+                      "an expression, a statement or a judgement where the reasoning, not the arithmetic, is the point")
+    hits: dict[str, list] = {}
+    families: dict[tuple, list] = {}
+    for q in questions:
+        text = " ".join([str(q.get("group_stimulus") or ""), str(q.get("prompt") or "")]
+                        + [str(o.get("text") or "") for o in q.get("options") or [] if isinstance(o, dict)])
+        label = q.get("number_display") or q.get("number")
+        for name, pattern in MATH_ARCHETYPES.items():
+            if re.search(pattern, re.sub(r"\s", "", text)):
+                hits.setdefault(name, []).append(label)
+        # Geometry and coordinate items and the 非選擇題 only (a probability item's 3, 4 and 5 are not a
+        # triangle); a 題組 counts once.
+        unit = (q.get("item_spec") or {}).get("cap_unit")
+        if q.get("type") != "single_choice" or unit in GEOMETRIC_UNITS:
+            stem = " ".join([str(q.get("group_stimulus") or ""), str(q.get("prompt") or "")])
+            owner = f"題組({str(q.get('group_stimulus'))[:6]})" if q.get("group_stimulus") else label
+            for family in triple_families(stem + " " + figure_text(q, asset_root)):
+                if owner not in families.setdefault(family, []):
+                    families[family].append(owner)
+    if sum(len(v) for v in hits.values()) > ARCHETYPE_MAX:
+        listed = "；".join(f"{k}（{', '.join(map(str, v))}）" for k, v in hits.items())
+        errors.append(f"{sum(len(v) for v in hits.values())} items rebuild a textbook exercise ({listed}); official papers "
+                      f"use at most one, here at most {ARCHETYPE_MAX}: keep the concept, invent the situation and the question")
+    for family, labels in families.items():
+        if len(set(map(str, labels))) > TRIPLE_ITEMS_MAX:
+            errors.append(f"items {', '.join(map(str, labels))} all rest on the {'-'.join(map(str, family))} right-triangle "
+                          f"family; vary the numbers so no family appears in more than {TRIPLE_ITEMS_MAX} items")
+    return errors
+
+
+def option_order_errors(exam: dict) -> list[str]:
+    errors = []
+    for q in exam.get("questions") or []:
+        if not isinstance(q, dict) or q.get("type") != "single_choice":
+            continue
+        values = numeric_values([o.get("text") for o in q.get("options") or [] if isinstance(o, dict)])
+        if values and values != sorted(values) and values != sorted(values, reverse=True):
+            errors.append(f"Q{q.get('number')}: numeric options print in order (official 113-115 always do, mostly "
+                          f"ascending); got {', '.join(f'{v:g}' for v in values)}: reorder them and move the key "
+                          "(cap_plan.py expand sorts them for you)")
+    return errors
+
+
+def curve_errors(exam: dict) -> list[str]:
+    """Estimated 通過率 by thirds of the paper against the official position targets: 會考 papers open easy
+    and close hard (M1111 put a die net and a one-step circumcentre at 19-20)."""
+    from hosted_blind_review import CAP_MEAN_P
+    from cap_plan import position_targets
+    metadata = exam.get("metadata") or {}
+    subject = metadata.get("subject")
+    if subject not in CAP_MEAN_P:
+        return []
+    level = metadata.get("cap_difficulty_level", "會考")
+    targets = position_targets(subject, level if level in ("會考", "中", "高", "極難") else "會考")
+    rows = []
+    for q in exam.get("questions") or []:
+        estimate = ((q.get("item_spec") or {}).get("difficulty_design") or {}).get("estimated_p")
+        if q.get("type") == "single_choice" and type(estimate) in (int, float) and q.get("number") in targets:
+            rows.append((q["number"], float(estimate), targets[q["number"]]["target_p"]))
+    if len(rows) < 9:
+        return []
+    rows.sort()
+    size = len(rows) // 3
+    errors = []
+    for name, part in (("first", rows[:size]), ("middle", rows[size:-size]), ("last", rows[-size:])):
+        estimated = sum(r[1] for r in part) / len(part)
+        target = sum(r[2] for r in part) / len(part)
+        if abs(estimated - target) > CURVE_TOLERANCE:
+            errors.append(f"the {name} third of the paper (items {part[0][0]}-{part[-1][0]}) is estimated at 通過率 "
+                          f"{estimated:.2f}; the official positions average {target:.2f} (±{CURVE_TOLERANCE}): "
+                          + ("move harder items later or make these more direct" if estimated < target else
+                             "this part needs harder items: official 會考 builds from easy openings to the hardest items "
+                             "before the 題組"))
     return errors
 </canonical-source>
 
@@ -90821,7 +92018,8 @@ from pathlib import Path
 import re
 from urllib.parse import urlparse
 
-SOURCE_NOTE = re.compile(r'資料來源[：:]|參考來源[：:]|資料出處[：:]|參考文獻[：:]|出處[：:]|改寫自|改編自|節錄自|摘自|https?://|www\.|doi[：:]', re.I)
+# 「可能出處：第三冊（八上）」 is the 會考 solution's textbook-volume note, not a source note.
+SOURCE_NOTE = re.compile(r'資料來源[：:]|參考來源[：:]|資料出處[：:]|參考文獻[：:]|(?<!可能)出處[：:]|改寫自|改編自|節錄自|摘自|https?://|www\.|doi[：:]', re.I)
 PRODUCTION_CAPTION = re.compile(r'(?:第\s*[\d一二三四五六七八九十百]+\s*題\s*(?:附圖|示意圖|圖)\s*[:：]|\b(?:Question|Q)\s*\d+\s*(?:figure|diagram)\s*[:：])', re.I)
 
 
@@ -94567,7 +95765,7 @@ if __name__ == "__main__":
   "originality.json": {
     "comparison_scope": "no-history-available",
     "history": [],
-    "items": [{"id": "<題目 id>", "status": "pass", "observations": "<與官方題目、本卷其他題目的差異；情境與解題路徑是否新>"}]
+    "items": [{"id": "<題目 id>", "status": "pass", "observations": "<與官方題目、課本與參考書常見題型、本卷其他題目的差異；情境、問法與解題路徑哪裡是新的；數值是否與他題重複>"}]
   },
   "visuals.json": {
     "items": [
@@ -94583,8 +95781,11 @@ if __name__ == "__main__":
     "author_context": "<本對話的識別>",
     "reviewer_context": "<單一脈絡時與 author_context 相同>",
     "blind_packet": {"path": "<blind-packet.json 的路徑>", "sha256": "<雜湊>"},
+    "draft": "run_hosted_workflow.py auto-review 會寫出 difficulty.draft.json：每題的欄位、錨點鍵與作者預估都已填好，審查時逐題修改後另存為 difficulty.json",
     "items": [{
-      "id": "<題目 id>",
+      "id": "<選擇題 id>",
+      "status": "pass",
+      "observations": "<蓋掉答案重新作答的觀察：哪一步最難、誘答會吸引誰>",
       "estimated_p": 0.0,
       "estimated_d": 0.0,
       "difficulty_band": "<very_easy | easy | medium | hard | very_hard>",
@@ -94595,6 +95796,21 @@ if __name__ == "__main__":
       "anchor_comparison": {"kind": "embedded-calibration", "key": "objective", "note": "<與官方同題位通過率的比較>"},
       "anchor": {"kind": "embedded-calibration", "key": "objective"},
       "answer_recheck": "<蓋掉答案後重新作答的過程，與存檔答案比對>",
+      "unresolved": []
+    }, {
+      "id": "<非選擇題 id（數學 c1、c2）或寫作測驗 id>",
+      "status": "pass",
+      "observations": "<依 0-3 級分規準試評的觀察>",
+      "estimated_p": 0.0,
+      "estimated_d": 0.0,
+      "difficulty_band": "<very_easy | easy | medium | hard | very_hard>",
+      "expected_minutes": 0.0,
+      "shortest_route": "<最短解法>",
+      "decisive_steps": ["<關鍵判斷一>", "<關鍵判斷二>"],
+      "shortcut_search": "<是否能不經推理直接寫出答案>",
+      "anchor_comparison": {"kind": "embedded-calibration", "key": "constructed-response", "note": "<與官方非選擇題級分分布的比較>"},
+      "anchor": {"kind": "embedded-calibration", "key": "constructed-response"},
+      "answer_recheck": "<重新作答並依規準評分的結果>",
       "unresolved": []
     }]
   }

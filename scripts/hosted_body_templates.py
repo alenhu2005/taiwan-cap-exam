@@ -299,7 +299,7 @@ def _writing_paragraph(piece, plain):
     return f'<p class="{cls}">{markup}</p>'
 
 
-MATH_SYMBOL = r'[−+=×÷±≤≥()\[\]αβγδθλμσφωπ·°]'
+MATH_SYMBOL = r'[−+=×÷±≤≥()\[\]αβγδθλμσφωπ·°′″∆]'   # ′ in Times beside its letter (「C′」 printed 「C ´」 in a CJK face)
 # A Latin run keeps the spaces inside and around it, so an English sentence stays one
 # Times span. Spaces take the Times width everywhere: a CJK face such as 全字庫正宋體
 # draws U+0020 a full em wide, which opened 「為 2/3」 and 「sin x」 like a tab.
@@ -348,6 +348,8 @@ def latin_runs(markup):
     # Tags, entities and {{tokens}} stay untouched; mathematics keeps &lt; and &gt; inside
     # its formulas.
     entity = r'&(?!lt;|gt;)[a-z#0-9]+;' if _math_mode else r'&[a-z#0-9]+;'
+    if _math_mode and _cap_mode:
+        markup = markup.replace('△', '∆')   # 114-115 print ∆ABC in Times; the CJK △ set small and high
     parts = re.split(rf'(<[^>]+>|{entity}|\{{\{{[^{{}}]*\}}\}})', markup)
     for index, part in enumerate(parts):
         if not part or part.startswith(('<', '&', '{{')):
@@ -361,7 +363,7 @@ def latin_runs(markup):
             if match.lastgroup == 'run' and _math_mode:
                 # Variables print italic, as in every mathematics booklet; function
                 # names, words and acronyms stay upright.
-                chunk = identifier_markup(chunk, part, base + match.start())
+                chunk = identifier_markup(chunk, part, base + match.start(), cap=_cap_mode)
             return f'<span class="latin">{unligated(chunk)}</span>'
         if _math_mode:
             parts[index] = keep_formulas_whole(part, lambda base, part=part: (lambda m: wrap(m, part, base)))
@@ -822,6 +824,17 @@ RANGE_LABEL = re.compile(r'\d{1,2}\s*[-–]\s*\d{1,2}')
 HINT_LABEL = re.compile(r'^((?:<span class="kai">)?)提示[：︰]')
 
 
+PRINTED_TOKEN = re.compile(r'\{\{(frac|sqrt|vec|seg)(\.s)?:([^{}]*)\}\}')
+
+
+def _token_text(match):
+    kind, body = match.group(1), html.unescape(match.group(3))
+    if kind == 'frac':
+        top, _, bottom = body.partition('|')
+        return html.escape(max(top, bottom, key=len))
+    return html.escape(('√' if kind == 'sqrt' else '') + body)
+
+
 def english_columns(inners, columns, archive, wrap, width):
     """Columns that hold every option on one line at the official tab.
 
@@ -834,7 +847,10 @@ def english_columns(inners, columns, archive, wrap, width):
     minimum = 3 if _subject == '英文' else 2 if _subject in {'數學A', '數學B'} else None
     if minimum is None or columns < minimum or _measure_css is None:
         return columns
-    widths = [_cell_advance(inner, archive, wrap) for inner in inners]
+    # Typeset constructs are still tokens here: 「{{frac:7|12}}」 measured as thirteen characters and
+    # pushed four short fractions one per line (會考數學 M1111). Measure what prints: the wider operand
+    # of a fraction, a radical's sign and radicand, a segment's letters.
+    widths = [_cell_advance(PRINTED_TOKEN.sub(_token_text, inner), archive, wrap) for inner in inners]
     if any(w is None for w in widths):
         return columns
 
@@ -1125,6 +1141,11 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
             i=0
             while i<len(work):
                 y=snap_block_top(y)
+                if work[i].get('break_before') and not fresh_page:
+                    # A block that opens its own page (會考數學 非選擇題): the rest of that page is working room.
+                    close_page()
+                    page=doc.new_page(width=595.28,height=841.89);y=top;fresh_page=True
+                    continue
                 # `break_after`: a section heading that fits closes the current page and
                 # its material starts the next one (英文 「二、綜合測驗」 under 詞彙題 10,
                 # 112 and 115). At the top of a page it simply leads its material.
@@ -1186,9 +1207,19 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
     def voids(pages_,count_):
         return [round((body.y1-max(row['bbox'][3] for row in pages_ if row['page']==n))/body.height,3) for n in range(1,count_+1)]
 
-    def over_limit(voids_):
+    # Pages from the first block that opens its own page onward are working room, not unfilled body.
+    working_from=min((b['_source'] for b in blocks if b.get('break_before')),default=None)
+
+    def working_pages(pages_):
+        if working_from is None:
+            return set()
+        first=min((row['page'] for row in pages_ if row['block']>=working_from),default=None)
+        return set() if first is None else {row['page'] for row in pages_ if row['page']>=first}
+
+    def over_limit(voids_,pages_):
+        working=working_pages(pages_)
         limits=[page_void_limit(spec['subject'],'solutions' if spec.get('booklet_role')=='solutions' else 'body',n==len(voids_))
-                for n in range(1,len(voids_)+1)]
+                if n not in working else None for n in range(1,len(voids_)+1)]
         return sum(1 for v,l in zip(voids_,limits) if l is not None and v>l),max(voids_) if voids_ else 0
 
     try:
@@ -1203,21 +1234,21 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
                     raw,parts,pages,count,fill=attempt;tightness=trial;pagination='tighter-gaps'
                     break
         best_voids=voids(pages,count)
-        if balance_last_page and count>1 and over_limit(best_voids)[0]:
+        if balance_last_page and count>1 and over_limit(best_voids,pages)[0]:
             # Greedy filling piles every remainder onto the last page and leaves a
             # tall block's page half empty. Spread the same content evenly across
             # the same number of pages and keep the pass with the fewest pages
             # over the fixed limit, then the smallest worst void.
             used=sum(row['measured_height_pt'] for row in pages)+sum(
                 (8 if row['kind']=='section' else item_gap_pt(style))*tightness for row in pages)
-            best=(over_limit(best_voids),count)
+            best=(over_limit(best_voids,pages),count)
             for slack in (1.02,1.05,1.08,1.12):
                 try:
                     attempt=paginate(tightness,capacity=used/count*slack)
                 except ValueError:
                     continue  # e.g. a detached heading lost its page foot; the greedy pass stands
                 if attempt[3]>count:continue
-                candidate=(over_limit(voids(attempt[2],attempt[3])),attempt[3])
+                candidate=(over_limit(voids(attempt[2],attempt[3]),attempt[2]),attempt[3])
                 if candidate<best:
                     raw,parts,pages,count,fill=attempt;best=candidate;pagination=f'balanced-{slack:g}'
                     best_voids=voids(pages,count)
@@ -1233,6 +1264,7 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
                              'bottom_safety_pt':round(body.y1-max(b['bbox'][3] for b in pages if b['page']==n),3)}
                              for n in range(1,count+1)]},
             'gap_scale':tightness,'pagination':pagination,'bottom_void_ratios':best_voids,
+            **({'working_pages':sorted(working_pages(pages))} if working_from is not None else {}),
             'scaled_assets':[scaled[key] for key in sorted(scaled)],
             'scope':'Body layout only; compose onto original fixed PDFs and perform actual QA',
             'elapsed_seconds':round(time.monotonic()-started,3)}

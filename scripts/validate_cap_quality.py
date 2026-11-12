@@ -21,6 +21,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from cap_units import SINGLE_DECISION_UNITS, unit_errors
+
 LABELS = ("A", "B", "C", "D")
 EXTREME = re.compile(r"歸零|終身|廢除|宣告獨立|全體|片面|毫無|從不|徹底|立即消失|永久禁止|全面禁止|完全消失|無限")
 ABSOLUTE = re.compile(r"完全|一律|全面|全部|所有|絕對|永遠|必定|一定|只要|只有|只能|只會|只保障|僅|任何|必須|禁止|強制"
@@ -34,6 +36,14 @@ LEAK_RUN = 6          # characters of the key's wording
 LEAK_MARGIN = 4       # longer than any distractor's shared run by this much
 SPREAD_LIMIT = 2.0    # longest/shortest option length
 SPREAD_SHARE = 0.10
+# 英語 options are words of natural length (bow/smell, it/like this): official 113-115 have 9 of 43
+# items a year over the limit, so 英語 takes the official share; the others keep the 社會 floor.
+SPREAD_SHARE_BY_SUBJECT = {"會考英語": 0.21}
+# Extreme wording is a 社會／自然 distractor defect; 國文 options paraphrase literary texts (「毫無」
+# 「從不」 occur in official 113 國文 options) and 英語 options are English.
+EXTREME_SUBJECTS = {"會考社會", "會考自然", "會考數學"}
+# 數學 items judging two people's claims or methods (115 第 14、20、22 題; 113 第 9、24 題; 114 第 12、18 題).
+JUDGE_MIN = {"會考數學": 2}
 ABSOLUTE_SHARE = 0.05   # official up to 9%; target above official
 TRANSLATION_SHARE = 0.6   # 社會: items whose target concept the student must infer
 INTEGRATED_SHARE = 0.20  # items joining concepts across domains (社會) or curriculum strands (others)
@@ -55,6 +65,11 @@ COMBO = re.compile(r"[甲乙丙丁戊己].*[甲乙丙丁戊己]")
 COMBO_MAX = {"會考社會": 3, "會考自然": 5, "會考數學": 3, "會考國文": 1, "會考英語": 1}
 IMAGE_OPTION_MIN = {"會考社會": 2, "會考自然": 3}
 OPTION_LENGTH = {"會考社會": (15, 0.12), "會考自然": (14, 0.27), "會考國文": (19, 0.25)}   # median cap, share >20
+# 社會 prints real data, so every printed statistic needs its source. Elsewhere official items use
+# hypothetical numbers (「某國政府公布…」, an experiment's readings, a shop's prices): only a sentence that
+# claims real data (a year, 根據／調查／統計／公布, a named survey) and names no 「某」 needs a source.
+CLAIM = re.compile(r"(?:19|20)\d{2}\s*年|根據|依據|公布|統計|調查|報告|資料顯示|研究指出|官方|according to|survey|"
+                   r"statistic|reported|census", re.I)
 STATISTIC = re.compile(r"\d[\d,.]*\s*(?:%|％|萬|億|人|公噸|噸|元|美元|度|公里|公頃|戶|件|次|倍|毫米|mm|℃)")
 OVERLAP_MIN, OVERLAP_PHRASES = 6, 2   # shared distinctive runs, in at least two separate phrases
 FINGERPRINTS = Path(__file__).resolve().parents[1] / "exam_packs" / "會考" / "metadata" / "official-item-fingerprints.json"
@@ -137,13 +152,49 @@ def spec_sources(question: dict) -> list[dict]:
     return [r for r in rows if isinstance(r, dict)]
 
 
+def real_data(subject: str | None, text: str) -> bool:
+    """Printed numbers presented as real-world data (社會: any printed statistic)."""
+    if subject == "會考社會":
+        return bool(STATISTIC.search(text))
+    return any(STATISTIC.search(s) and CLAIM.search(s) and "某" not in s for s in re.split(r"[。！？!?\n]", text))
+
+
+# Running mean of estimated_p while writing, against the plan's own targets for the same positions:
+# items are saved in any order, and the first easy positions alone sit above the paper's band
+# (a math author had to save hard items early to pass). Within this tolerance of the targets.
+RUNNING_TOLERANCE = 0.08
+
+
+def running_mean_errors(exam: dict, subject: str | None, numbered: list[tuple[int, float]]) -> list[str]:
+    if len(numbered) < 5:
+        return []
+    from hosted_blind_review import CAP_MEAN_P
+    if subject not in CAP_MEAN_P:
+        return []
+    from cap_plan import position_targets
+    level = (exam.get("metadata") or {}).get("cap_difficulty_level", "會考")
+    level = level if level in ("會考", "中", "高", "極難") else "會考"
+    targets = position_targets(subject, level)
+    pairs = [(p, targets[n]["target_p"]) for n, p in numbered if n in targets]
+    if len(pairs) < 5:
+        return []
+    mean = sum(p for p, _ in pairs) / len(pairs)
+    expected = sum(t for _, t in pairs) / len(pairs)
+    if abs(mean - expected) <= RUNNING_TOLERANCE:
+        return []
+    return [f"running mean of estimated_p over the {len(pairs)} saved items is {mean:.2f}; the {level} targets for "
+            f"those positions average {expected:.2f} (±{RUNNING_TOLERANCE}): adjust the next items now, not after the "
+            "paper is written"]
+
+
 def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = None) -> list[str]:
     errors: list[str] = []
     metadata = exam.get("metadata") or {}
     subject = metadata.get("subject")
     answers = {a.get("question_id"): a for a in exam.get("answers") or [] if isinstance(a, dict)}
     choice = [q for q in exam.get("questions") or [] if isinstance(q, dict) and q.get("type") == "single_choice"]
-    spread_items = absolute_items = translation = single_step = integrated = combos = image_options = 0
+    spread_items = absolute_items = translation = single_step = integrated = combos = image_options = judges = 0
+    numbered_estimates: list[tuple[int, float]] = []
     option_lengths: list[int] = []
     estimates: list[float] = []
     sequence: list[str] = []
@@ -171,14 +222,17 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
         for official in official_overlaps(printed_all + figure):
             errors.append(f"Q{n}: shares {official[3]} distinctive wording runs with official {official[1]} "
                           f"{official[0][2:]} item {official[2]}: compare the two: if yours retells that item's situation, write a new one")
-        if STATISTIC.search(printed_all + figure):
+        if real_data(subject, printed_all + "。" + figure):
             sources = [s for s in spec_sources(q) if str(s.get("url") or "").startswith("http") and s.get("retrieved_at")]
             if full and not sources:
-                errors.append(f"Q{n}: prints statistics; item_spec.data_sources must list each figure's source "
-                              "{url, retrieved_at}: look the numbers up, never write them from memory")
+                errors.append(f"Q{n}: prints real-world data; item_spec.data_sources must list each figure's source "
+                              "{url, retrieved_at}: look the numbers up, never write them from memory"
+                              + ("" if subject == "會考社會" else " (or make it hypothetical, as official items do: "
+                                 "「某國」「某商店」 and no year or survey named)"))
         estimate = ((q.get("item_spec") or {}).get("difficulty_design") or {}).get("estimated_p")
         if type(estimate) in (int, float):
             estimates.append(float(estimate))
+            numbered_estimates.append((n, float(estimate)))
         elif full:
             errors.append(f"Q{n}: item_spec.difficulty_design.estimated_p (predicted 通過率) is required while writing, "
                           "so the paper's difficulty is steered before review")
@@ -186,7 +240,7 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             errors.append(f"Q{n}: the stem or material repeats the key's wording; official 會考社會 113-115 never do: "
                           "make the student infer it")
         for label, text in options.items():
-            if EXTREME.search(text):
+            if subject in EXTREME_SUBJECTS and EXTREME.search(text):
                 errors.append(f"Q{n}: option ({label}) uses extreme wording 「{EXTREME.search(text).group(0)}」 (0 of 496 "
                               "official options): write a plausible distractor from a real neighbouring concept")
         absolute = [label for label, text in options.items() if ABSOLUTE.search(text)]
@@ -206,6 +260,7 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             errors.append(f"Q{n}: is an arithmetic exercise; {subject[2:]} items assess the subject's concepts")
         spec = q.get("item_spec") or {}
         record = spec.get("cap_competency") if isinstance(spec.get("cap_competency"), dict) else {}
+        judges += record.get("process") == "評鑑"
         # 混合考點: one item joining concepts from two domains (社會) or two curriculum strands, with
         # the bridge that makes both necessary (115 第 46-48 題: 媒體識讀 + 統計表判讀).
         domains = [d for d in (record.get("domains") or [record.get("domain") or spec.get("domain")]) if d]
@@ -247,7 +302,8 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
                         errors.append(f"Q{n}: option ({label}) is predicted to draw {pick:.0%} of examinees: a distractor "
                                       "no one chooses does not discriminate; borrow a concept students really confuse")
             decisions = (spec.get("difficulty_design") or {}).get("linked_decisions") or []
-            single_step += len([d for d in decisions if d]) < 2
+            if spec.get("cap_unit") not in SINGLE_DECISION_UNITS:   # 英語 字彙／文法, 國文 語文知識: one decision
+                single_step += len([d for d in decisions if d]) < 2
             # Every option is argued in the explanation, so a defensible second answer surfaces in review
             # (cap116a Q37 listed total cost and forgone income side by side).
             reasoning = " ".join(str(step) for step in (answers.get(q.get("id")) or {}).get("reasoning") or [])
@@ -268,15 +324,8 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
                     errors.append(f"Q{n}: cap_competency.domain must be one of {'、'.join(DOMAINS[subject])}")
             else:
                 sequence.append(domain)
-    if len(estimates) >= 5:
-        from hosted_blind_review import CAP_MEAN_P, cap_p_band
-        if subject in CAP_MEAN_P:
-            level = (exam.get("metadata") or {}).get("cap_difficulty_level", "會考")
-            low, high = cap_p_band(subject, level if level in ("會考", "中", "高", "極難") else "會考")
-            mean = sum(estimates) / len(estimates)
-            if not low <= mean <= high:
-                errors.append(f"running mean of estimated_p over {len(estimates)} saved items is {mean:.2f}, outside the "
-                              f"{level} band {low:.2f}-{high:.2f}: adjust the next items now, not after the paper is written")
+    errors += running_mean_errors(exam, subject, numbered_estimates)
+    errors += unit_errors(subject, choice, full=full)
     if not full or not choice:
         return errors
     if combos > COMBO_MAX.get(subject, 1):
@@ -314,7 +363,13 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             errors.append(f"only {fresh} of {len(assets)} photographs are newly found (web_source); the web is reachable, so "
                           "every photograph must be: search with `python scripts/web_image.py search \"…\"` and "
                           "use `web_image.py use`; the bundled photo library is the fallback when the web is unreachable")
-    if spread_items > max(2, SPREAD_SHARE * len(choice)):
+    errors += option_order_errors(exam)
+    errors += curve_errors(exam)
+    errors += math_form_errors(exam, asset_root=asset_root)
+    if judges < JUDGE_MIN.get(subject, 0):
+        errors.append(f"{judges} items ask the student to judge others' claims or methods (cap_competency.process 評鑑); "
+                      f"official 會考數學 prints 2-3 a year (「甲、乙兩人的看法」「兩人的作法」): write at least {JUDGE_MIN[subject]}")
+    if spread_items > max(2, SPREAD_SHARE_BY_SUBJECT.get(subject, SPREAD_SHARE) * len(choice)):
         errors.append(f"{spread_items} items have one option over {SPREAD_LIMIT:g} times as long as another (official 90% "
                       f"at most 1.75): keep the four options alike in length, voice and structure")
     if absolute_items > max(2, ABSOLUTE_SHARE * len(choice)):
@@ -345,4 +400,162 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             share = sequence.count(domain) / len(sequence)
             if not 0.25 <= share <= 0.42:
                 errors.append(f"{domain} holds {share:.0%} of the 單題; keep each of 歷史／地理／公民 between 25% and 42%")
+    return errors
+
+
+# ---- 數學 and option-form rules from the M1111 reviews (2026-11), measured on 113-115 ----
+
+# Plain numeric options print in order (official 113-115: every such item, mostly ascending); M1111
+# left 18 of 25 unsorted. Fractions, radicals and expressions are ordered by form and are not checked.
+NUMERIC_OPTION = re.compile(r"^(-?\d+(?:\.\d+)?)([^\d\s/√×÷^+=<>{}]{0,6})$")
+
+
+def numeric_values(texts: list[str]) -> list[float] | None:
+    values, units = [], set()
+    for text in texts:
+        raw = re.sub(r"<[^>]+>|\s|,", "", str(text or "")).replace("−", "-")
+        match = NUMERIC_OPTION.match(raw)
+        if not match:
+            return None
+        values.append(float(match.group(1)))
+        units.add(match.group(2))
+    return values if len(units) == 1 else None
+
+
+# Textbook and workbook archetypes: a paper made of them reads as 參考書, not 會考 (M1111: a ladder
+# sliding down a wall, fencing against a wall, auditorium rows, a bouncing ball, a die net, a
+# spinner, straws in hexagons, a folded rectangle). Official 113-115 use at most one a paper.
+MATH_ARCHETYPES = {
+    "梯子沿牆下滑": r"梯子?.{0,40}牆.{0,40}滑|梯.{0,10}滑.{0,30}牆",
+    "靠牆圍籬求面積": r"靠.{0,8}牆.{0,40}圍(?:籬|欄)|圍(?:籬|欄).{0,40}靠.{0,6}牆",
+    "每排座位等差": r"每一?排.{0,16}(?:多|少)\s*\d*\s*(?:個|張)?座位",
+    "彈力球反彈": r"彈力球|反彈.{0,12}高度",
+    "雞兔同籠": r"雞.{0,12}兔|兔.{0,12}雞",
+    "骰子展開圖": r"骰子.{0,30}展開|展開圖.{0,30}骰子",
+    "轉盤機率": r"轉盤",
+    "吸管火柴排圖形": r"(?:吸管|火柴|牙籤).{0,40}(?:圖形|排成|拼成|黏出)",
+    "沿對角線摺紙": r"沿.{0,8}對角線.{0,12}(?:摺|折)",
+    "二分球三分球": r"(?:二|2)\s*分球.{0,30}(?:三|3)\s*分球",
+    "色紙磁磚貼滿": r"(?:磁磚|色紙|地磚).{0,40}(?:貼滿|鋪滿)",
+    "紙張疊放厚度": r"(?:影印紙|紙張).{0,30}厚度",
+    "放入物體水位上升": r"(?:放入|沉入|直立放入).{0,40}水(?:面|位|深).{0,16}(?:上升|高度|多少)",
+}
+ARCHETYPE_MAX = 2
+# Integer right-triangle families (3-4-5 …): M1111 built item 20, the 23-25 題組 and 非選擇題 2 on 6-8-10.
+TRIPLES = ((3, 4, 5), (5, 12, 13), (8, 15, 17), (7, 24, 25), (20, 21, 29), (9, 40, 41))
+TRIPLE_ITEMS_MAX = 2   # official 113: 2 (第 4、22 題), 114: 0, 115: 1
+GEOMETRIC_UNITS = {"平面幾何", "相似形與三角形三心", "圓", "立體與空間", "坐標與函數"}
+# 數學 options that are statements, relations, expressions, positions or judgements, not a bare number:
+# official 113-115 12-14 of 25 a paper; M1111 about 4.
+FORM_OPTION_MIN = {"會考數學": 0.40}
+CURVE_TOLERANCE = 0.10
+
+
+def triple_families(text: str) -> set[tuple]:
+    """Families whose three sides all print, or two legs at a multiple of two or more (6 and 8, 10 and 24)."""
+    numbers = {int(n) for n in re.findall(r"(?<![\d.])(\d{1,3})(?![\d.])", text)}
+    found = set()
+    for family in TRIPLES:
+        for k in range(1, 41):
+            sides = [k * side for side in family]
+            if all(side in numbers for side in sides) or (k >= 2 and sides[0] in numbers and sides[1] in numbers):
+                found.add(family)
+                break
+    return found
+
+
+def math_form_errors(exam: dict, *, asset_root: Path | None = None) -> list[str]:
+    """Whole-paper 會考數學 checks: opening items, option forms, archetypes, repeated triangles."""
+    subject = (exam.get("metadata") or {}).get("subject")
+    questions = [q for q in exam.get("questions") or [] if isinstance(q, dict)]
+    choice = [q for q in questions if q.get("type") == "single_choice"]
+    errors: list[str] = []
+    if subject != "會考數學" or not choice:
+        return errors
+    for q in choice:
+        if q.get("number") in (1, 2, 3):
+            record = (q.get("item_spec") or {}).get("cap_competency") or {}
+            if record.get("context_type") not in (None, "學科知識"):
+                errors.append(f"Q{q.get('number')}: 113-115 open with three direct items (a computation, a figure's "
+                              "property): no story in items 1-3 (context_type 學科知識)")
+    formed = sum(numeric_values([o.get("text") for o in q.get("options") or [] if isinstance(o, dict)]) is None
+                 and not all(re.fullmatch(r"\s*-?−?\d+(?:\.\d+)?\s*", re.sub(r"\{\{frac:[^}]*\}\}|\d+/\d+", "1", str(o.get("text") or "")))
+                             for o in q.get("options") or [] if isinstance(o, dict))
+                 for q in choice)
+    if formed < FORM_OPTION_MIN[subject] * len(choice):
+        errors.append(f"only {formed} of {len(choice)} items have options other than a bare number; official 會考數學 "
+                      f"113-115 print 12-14 a paper (at least {FORM_OPTION_MIN[subject]:.0%}): ask for a relation, a position, "
+                      "an expression, a statement or a judgement where the reasoning, not the arithmetic, is the point")
+    hits: dict[str, list] = {}
+    families: dict[tuple, list] = {}
+    for q in questions:
+        text = " ".join([str(q.get("group_stimulus") or ""), str(q.get("prompt") or "")]
+                        + [str(o.get("text") or "") for o in q.get("options") or [] if isinstance(o, dict)])
+        label = q.get("number_display") or q.get("number")
+        for name, pattern in MATH_ARCHETYPES.items():
+            if re.search(pattern, re.sub(r"\s", "", text)):
+                hits.setdefault(name, []).append(label)
+        # Geometry and coordinate items and the 非選擇題 only (a probability item's 3, 4 and 5 are not a
+        # triangle); a 題組 counts once.
+        unit = (q.get("item_spec") or {}).get("cap_unit")
+        if q.get("type") != "single_choice" or unit in GEOMETRIC_UNITS:
+            stem = " ".join([str(q.get("group_stimulus") or ""), str(q.get("prompt") or "")])
+            owner = f"題組({str(q.get('group_stimulus'))[:6]})" if q.get("group_stimulus") else label
+            for family in triple_families(stem + " " + figure_text(q, asset_root)):
+                if owner not in families.setdefault(family, []):
+                    families[family].append(owner)
+    if sum(len(v) for v in hits.values()) > ARCHETYPE_MAX:
+        listed = "；".join(f"{k}（{', '.join(map(str, v))}）" for k, v in hits.items())
+        errors.append(f"{sum(len(v) for v in hits.values())} items rebuild a textbook exercise ({listed}); official papers "
+                      f"use at most one, here at most {ARCHETYPE_MAX}: keep the concept, invent the situation and the question")
+    for family, labels in families.items():
+        if len(set(map(str, labels))) > TRIPLE_ITEMS_MAX:
+            errors.append(f"items {', '.join(map(str, labels))} all rest on the {'-'.join(map(str, family))} right-triangle "
+                          f"family; vary the numbers so no family appears in more than {TRIPLE_ITEMS_MAX} items")
+    return errors
+
+
+def option_order_errors(exam: dict) -> list[str]:
+    errors = []
+    for q in exam.get("questions") or []:
+        if not isinstance(q, dict) or q.get("type") != "single_choice":
+            continue
+        values = numeric_values([o.get("text") for o in q.get("options") or [] if isinstance(o, dict)])
+        if values and values != sorted(values) and values != sorted(values, reverse=True):
+            errors.append(f"Q{q.get('number')}: numeric options print in order (official 113-115 always do, mostly "
+                          f"ascending); got {', '.join(f'{v:g}' for v in values)}: reorder them and move the key "
+                          "(cap_plan.py expand sorts them for you)")
+    return errors
+
+
+def curve_errors(exam: dict) -> list[str]:
+    """Estimated 通過率 by thirds of the paper against the official position targets: 會考 papers open easy
+    and close hard (M1111 put a die net and a one-step circumcentre at 19-20)."""
+    from hosted_blind_review import CAP_MEAN_P
+    from cap_plan import position_targets
+    metadata = exam.get("metadata") or {}
+    subject = metadata.get("subject")
+    if subject not in CAP_MEAN_P:
+        return []
+    level = metadata.get("cap_difficulty_level", "會考")
+    targets = position_targets(subject, level if level in ("會考", "中", "高", "極難") else "會考")
+    rows = []
+    for q in exam.get("questions") or []:
+        estimate = ((q.get("item_spec") or {}).get("difficulty_design") or {}).get("estimated_p")
+        if q.get("type") == "single_choice" and type(estimate) in (int, float) and q.get("number") in targets:
+            rows.append((q["number"], float(estimate), targets[q["number"]]["target_p"]))
+    if len(rows) < 9:
+        return []
+    rows.sort()
+    size = len(rows) // 3
+    errors = []
+    for name, part in (("first", rows[:size]), ("middle", rows[size:-size]), ("last", rows[-size:])):
+        estimated = sum(r[1] for r in part) / len(part)
+        target = sum(r[2] for r in part) / len(part)
+        if abs(estimated - target) > CURVE_TOLERANCE:
+            errors.append(f"the {name} third of the paper (items {part[0][0]}-{part[-1][0]}) is estimated at 通過率 "
+                          f"{estimated:.2f}; the official positions average {target:.2f} (±{CURVE_TOLERANCE}): "
+                          + ("move harder items later or make these more direct" if estimated < target else
+                             "this part needs harder items: official 會考 builds from easy openings to the hardest items "
+                             "before the 題組"))
     return errors

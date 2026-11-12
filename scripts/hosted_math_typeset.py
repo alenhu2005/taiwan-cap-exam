@@ -291,7 +291,14 @@ _standalone_cache: dict = {}
 UNITS = frozenset({'cm', 'mm', 'km', 'kg', 'mg', 'ml', 'mL', 'am', 'pm', 'hr', 'min', 'sec'})
 
 
-def identifier_markup(run: str, context: str, start: int) -> str:
+# 會考數學 113-115 set every point, segment and polygon name in Times italic (ABCDEF, CO, ADEF);
+# upright only acronyms and labels such as 「Y 字型」「A 圖案」.
+CAP_ACRONYMS = frozenset({'AI', 'APP', 'LED', 'USB', 'GPS', 'PM', 'DNA', 'ATM', 'MRT', 'QR', 'TV', 'NBA', 'ID', 'OK',
+                          'CEO', 'LINE', 'YouBike'})
+CAP_LABEL_AFTER = re.compile(r'^[ \u00a0]*(?:字型|字形|字|圖案|型|號|牌|款|恤|尺寸|級|罩)')
+
+
+def identifier_markup(run: str, context: str, start: int, cap: bool = False) -> str:
     """Italicise variable names inside one escaped Latin run of mathematics text."""
     # One scan per text, not per run: a long passage has thousands of runs.
     if _standalone_cache.get('context') is not context:
@@ -313,6 +320,11 @@ def identifier_markup(run: str, context: str, start: int) -> str:
             return f'<span class="var">{word}</span>'
         if len(word) > 1 and not word.isupper():
             return word
+        if cap and word.isupper() and len(word) <= 8:
+            after = context[start + match.end():start + match.end() + 6]
+            if word in CAP_ACRONYMS or CAP_LABEL_AFTER.match(after):
+                return word
+            return f'<span class="var">{word}</span>'
         if len(word) == 1 or (len(word) <= 4 and (all(c in standalone for c in word) or geometric)):
             return f'<span class="var">{word}</span>'
         return word
