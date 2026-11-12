@@ -55,6 +55,8 @@ FOCUS = {
                  "travel and culture", "work and money", "media and notices"),
 }
 TITLES = {"會考寫作測驗": "寫作測驗"}
+SUBJECT_FILES = {"會考國文": "cap-chinese.md", "會考英語": "cap-english.md", "會考數學": "cap-math.md",
+                 "會考社會": "cap-social.md", "會考自然": "cap-science.md", "會考寫作測驗": "cap-writing.md"}
 # 會考數學 item forms, counted on 113-115 (M1111 wrote 22 of 25 as one textbook form: a story, then a
 # number). Forms say what the student does, never which situation to use: the setting is the author's.
 MATH_FORMS = {
@@ -66,6 +68,19 @@ MATH_FORMS = {
     "判讀圖表資料後推論": 2,
 }
 MATH_OPENING_FORM = "直接作答：計算、化簡或圖形性質，不包情境"
+# 自然 單題 forms, 113-115 item by item (official-item-analysis.json): 生活現象 11-12, 圖表 9-13, 實驗 4-9,
+# 概念 5-10, 判斷他人 1-6, 計算 1-3 a year; 題組 read a new report, study or experiment record.
+SCIENCE_FORMS = {"解釋生活或時事中的現象": 11, "判讀圖表資料後推論": 10, "實驗探究：變因、步驟或結果": 7,
+                 "直接運用概念": 7, "判斷他人的看法、預測或分類": 4, "計算": 2}
+SCIENCE_GROUP_FORM = "閱讀題組：讀新的報導、研究或實驗紀錄後判讀"
+# 國文 語文知識 items, 113-115: every year one each of 字音、字形、詞語成語 and both 六書 and 字體, plus
+# 標點斷句 or 字義 and an 應用文 usage item (題辭、稱謂、謙詞).
+CHINESE_KNOWLEDGE_FORMS = ("字音", "字形", "詞語或成語的使用", "六書（造字法則）", "字體演變", "標點或斷句",
+                           "應用文用語（題辭、稱謂、謙詞、書信）", "字義（一字多義）", "修辭或句型")
+# 英語 題組 questions, 113-115 by hand: 細節 5-6, 推論 3-5, 字義 2, 主旨或目的 2-5, 應用 2-3, 指涉或比較 1-3.
+ENGLISH_GROUP_FORMS = {"細節擷取": 5, "推論": 4, "依上下文判斷字義": 2, "主旨或作者目的": 4, "把資訊用到情境": 2,
+                       "指涉或比較": 2}
+ENGLISH_PICTURE_FORM = "看圖作答（Look at the picture.），113-115 第 1 題"
 MATH_GROUP_FORM = "閱讀新資訊（表格、對話、規定、說明）後建立模型"
 
 
@@ -187,6 +202,40 @@ def math_forms(slots: list[dict], seed: str) -> dict:
     return [(s, out[id(s)]) for s in slots if id(s) in out]
 
 
+def subject_forms(subject: str, slots: list[dict], seed: str) -> None:
+    """suggested_form for 自然、國文 語文知識 and 英語 slots, drawn from the official 113-115 counts."""
+    import random
+    rng = random.Random(hashlib.sha256(f"{seed}:{subject}:forms".encode()).digest())
+    if subject == "會考自然":
+        singles = [s for s in slots if not s.get("group")]
+        pool = [f for f, k in SCIENCE_FORMS.items() for _ in range(k)]
+        pool = (pool * 2)[:len(singles)]
+        rng.shuffle(pool)
+        for slot, form in zip(singles, pool):
+            slot["suggested_form"] = form
+        for slot in slots:
+            if slot.get("group"):
+                slot["suggested_form"] = SCIENCE_GROUP_FORM
+    elif subject == "會考國文":
+        knowledge = [s for s in slots if s.get("unit") == "語文知識"]
+        core, extra = list(CHINESE_KNOWLEDGE_FORMS[:5]), list(CHINESE_KNOWLEDGE_FORMS[5:])
+        rng.shuffle(extra)
+        forms = core + extra   # the five every year prints first, then the optional kinds
+        rng.shuffle(knowledge)
+        for slot, form in zip(knowledge, forms + forms):
+            slot["suggested_form"] = form
+    elif subject == "會考英語":
+        singles = sorted((s for s in slots if not s.get("group")), key=lambda s: s["number"])
+        if singles:
+            singles[0]["suggested_form"] = ENGLISH_PICTURE_FORM
+        reading = [s for s in slots if s.get("group") and s.get("unit") != "克漏字"]
+        pool = [f for f, k in ENGLISH_GROUP_FORMS.items() for _ in range(k)]
+        pool += ["細節擷取"] * max(0, len(reading) - len(pool))
+        rng.shuffle(pool)
+        for slot, form in zip(reading, pool):
+            slot["suggested_form"] = form
+
+
 def sections(subject: str) -> list[dict]:
     current = form(subject)["current_form"]
     titles = SECTION_TITLES.get(subject)
@@ -263,6 +312,10 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
             if pool and subject != "會考數學":
                 rank = hashlib.sha256(f"{seed}:{slot['number']}".encode()).digest()[0]
                 slot["suggested_focus"] = pool[rank % len(pool)]
+        subject_forms(subject, slots, seed)
+        if subject == "會考自然":
+            from cap_units import science_volumes
+            science_volumes(slots)   # every 國中 volume appears, as 113-115 cover all six
         for n in range(1, current.get("constructed_items", 0) + 1):
             slots.append({"number": count + n, **constructed_labels(n), "type": "constructed_response",
                           "section_id": constructed_section(subject), "rubric": "0-3 級分"})
@@ -278,6 +331,7 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
     coverage = ({u: list(r) for u, r in UNIT_RANGES[subject].items()} if subject in UNIT_RANGES else
                 {d: [round(a, 2), round(b, 2)] for d, (a, b) in SCIENCE_SHARES.items()} if subject == "會考自然" else None)
     return {"metadata": metadata, "instructions": [], "sections": sections(subject),
+            "subject_guide": f"references/{SUBJECT_FILES[subject]}",
             "planning_slots": slots,
             **({"unit_coverage": {"official_113_115": coverage,
                                   "note": "slots carry a unit (自然: domain) inside these ranges; swap units between slots "
@@ -316,7 +370,8 @@ def item(subject: str, number: int, level: str = "會考", kind: str = "single_c
               "reasoning": [None] * steps, **({} if choice else {"rubric": {"3": None, "2": None, "1": None, "0": None}})}
     return {"status": "pending-authoring", "subject": subject, "level": level, "slot": slot, "field_guide": FIELD_GUIDE,
             "question": question, "answer": answer,
-            "rules": ["references/current-cap-form.md 品質標準 and 難度等級",
+            "rules": ["references/current-cap-form.md 品質標準 and 難度等級, and the subject's own file "
+                      f"references/{SUBJECT_FILES[subject]} (structure types, habits, 課綱 and the subject's rules)",
                       "cap_distractors: delete the key's row; each wrong option names its misconception and the real "
                       "neighbouring concept it borrows, never an absurd or absolute claim",
                       "hidden_concept: the term the student must infer; it may not appear in the stem, material or figure",
@@ -352,7 +407,7 @@ FIELD_GUIDE = {
     "figure": "{path, width_percent, visual_spec} for the item's own figure (web_image.py use prints visual_spec)",
     "material": "shared 題組 material (identical text for every item of the group)",
     "keep_order": "true keeps numeric options as written; otherwise expand sorts them ascending and relabels key and steps",
-    "form": "數學: the slot's suggested_form says what the student does; the setting is yours",
+    "form": "the slot's suggested_form (數學、自然、國文語文知識、英語) says what the student does; the setting is yours",
 }
 
 

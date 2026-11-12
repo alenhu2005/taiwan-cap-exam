@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 AUTHORING_REFERENCES = {
     "cap-execution-card.md",
     "current-cap-form.md",
+    "cap-chinese.md", "cap-english.md", "cap-math.md", "cap-social.md", "cap-science.md", "cap-writing.md",
     "current-form-literacy-load.md",
     "current-form-topicality.md",
     "current-gsat-chinese-natural-form.md",

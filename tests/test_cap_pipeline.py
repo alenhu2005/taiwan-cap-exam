@@ -152,6 +152,12 @@ def cap_paper(key, root):
             # 113-115: three direct openings, about a third situated, two items judging two people's claims.
             competency['context_type'] = '生活情境' if n > 3 and n % 2 else '學科知識'
             competency['process'] = '評鑑' if n in (14, 20) else competency['process']
+        if key == '會考自然':
+            # 113-115: experiments every year, at least one judgement of another's claim.
+            competency['context_type'] = '科學探究' if n % 6 == 0 else competency['context_type']
+            competency['process'] = '評鑑' if n in (9, 22) else competency['process']
+        if key == '會考英語' and n > count - 24:
+            competency['process'] = ('擷取訊息', '推論', '統整解釋', '應用')[n % 4]
         if n % 4 == 0 and key in ('會考社會',):
             competency['domains'] = [competency['domain'], '公民' if competency['domain'] != '公民' else '地理']
         q = {'id': f'q{n}', 'number': n, 'section_id': 's1', 'type': 'single_choice',
@@ -159,7 +165,8 @@ def cap_paper(key, root):
              'item_spec': {'cap_competency': competency,
                            **({'cap_unit': units[n]} if key in ('會考數學', '會考國文', '會考英語') else {}),
                            'curriculum_codes': ['Ea-IV-1', 'Mb-IV-2'] if n % 4 == 0 else ['Ea-IV-1'],
-                           'textbook_volumes': ['第三冊'],
+                           'textbook_volumes': [('第一冊', '第二冊', '第三冊', '第四冊', '第五冊', '第六冊')[n % 6]]
+                                                if key == '會考自然' else ['第三冊'],
                            'cap_distractors': {c: {'misconception': '合成迷思', 'peer_concept': '合成相鄰概念',
                                                    'expected_pick_rate': 0.12, 'ruled_out_by': '合成：課本定義排除'}
                                                for c in 'ABCD' if c != key_label},
@@ -177,6 +184,13 @@ def cap_paper(key, root):
                 q['options']['ABCD'.index(c)]['text'] = '{{asset:opt' + f'{n}{c}' + '}}'
         if n in (count - 1, count):
             q['group_stimulus'] = PLACEHOLDER * 5
+        if key == '會考英語' and n == 1:
+            # 113-115 open the 單題 with a picture item.
+            path = Path(root) / 'picture-1.svg'
+            path.write_text('<svg xmlns="http://www.w3.org/2000/svg" width="160" height="90"><rect x="10" y="10" '
+                            'width="140" height="70" fill="none" stroke="black"/></svg>', encoding='utf-8')
+            q['visual_asset'] = {'path': path.name, 'width_percent': 30, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+                                 'visual_spec': {'kind': 'diagram', 'semantic_data': {}}}
         questions.append(q)
         option = q['options']['ABCD'.index(order[n - 1])]['text']
         if option.startswith('{{asset:'):

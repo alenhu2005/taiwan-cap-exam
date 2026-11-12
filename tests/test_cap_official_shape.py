@@ -43,7 +43,10 @@ def test_plans_schedule_units_inside_the_official_ranges(subject):
         choice = [s for s in slots if s['type'] == 'single_choice']
         items = [{'type': 'single_choice', 'number': s['number'],
                   'item_spec': {'cap_unit': s.get('unit'), 'cap_competency': {'domain': s.get('domain')}}} for s in choice]
-        assert cap_units.unit_errors(subject, items) == []
+        assert cap_units.unit_errors(subject, items, volumes=False) == []
+        if subject == '會考自然':
+            volumes = [s['suggested_volume'] for s in choice]
+            assert all(volumes.count(v) >= 3 for v in cap_units.VOLUME_NAMES)
         if subject == '會考英語':
             assert {s['unit'] for s in choice if s['number'] >= 40} == {'克漏字'}
         if subject == '會考數學':
@@ -220,3 +223,43 @@ def test_solutions_print_estimated_difficulty_and_discrimination(tmp_path):
     first = next(b for b in solutions['blocks'] if b.get('id') == 'q1')
     assert first['steps'][1] == '難易度：難（預估通過率 0.35）；鑑別度：尚可（預估 0.25）'
     assert cap_plan.difficulty_note({}) == ''
+
+
+def test_science_and_english_habits_from_the_item_analysis(tmp_path):
+    from validate_cap_quality import subject_habit_errors
+    science = cap_paper('會考自然', tmp_path)
+    assert subject_habit_errors(science) == [] and cap_units.unit_errors('會考自然', science['questions']) == []
+    for q in science['questions']:
+        q['item_spec']['textbook_volumes'] = ['第四冊']
+        q['item_spec']['cap_competency'].update(context_type='生活情境', process='推論')
+    for q in science['questions'][:4]:
+        q['prompt'] = '下列何者最不可能發生？'
+    errors = ' '.join(subject_habit_errors(science) + cap_units.unit_errors('會考自然', science['questions']))
+    for needle in ('experiments or investigations', 'ask in the negative', 'teach from 第一冊'):
+        assert needle in errors
+    english = cap_paper('會考英語', tmp_path)
+    assert subject_habit_errors(english) == []
+    english['questions'][0].pop('visual_asset')
+    assert 'picture item' in ' '.join(subject_habit_errors(english))
+
+
+def test_plans_give_structure_types_for_every_subject():
+    science = cap_plan.plan('會考自然', 'p', seed='s')['planning_slots']
+    assert all(s.get('suggested_form') for s in science if s['type'] == 'single_choice')
+    chinese = cap_plan.plan('會考國文', 'p', seed='s')['planning_slots']
+    forms = {s['suggested_form'] for s in chinese if s.get('unit') == '語文知識'}
+    assert set(cap_plan.CHINESE_KNOWLEDGE_FORMS[:5]) <= forms
+    english = cap_plan.plan('會考英語', 'p', seed='s')['planning_slots']
+    assert english[0]['suggested_form'].startswith('看圖作答')
+    assert all(s.get('suggested_form') for s in english if s.get('group') and s.get('unit') != '克漏字')
+    assert cap_plan.plan('會考數學', 'p', seed='s')['subject_guide'] == 'references/cap-math.md'
+
+
+def test_each_subject_reads_only_its_own_guide():
+    from read_web_knowledge import SUBJECT_REFERENCES
+    guides = {'會考國文': 'cap-chinese.md', '會考英語': 'cap-english.md', '會考數學': 'cap-math.md',
+              '會考社會': 'cap-social.md', '會考自然': 'cap-science.md', '會考寫作測驗': 'cap-writing.md'}
+    for subject, guide in guides.items():
+        assert guide in SUBJECT_REFERENCES[subject]
+        assert not (set(guides.values()) - {guide}) & SUBJECT_REFERENCES[subject]
+        assert (ROOT / 'references' / guide).is_file()

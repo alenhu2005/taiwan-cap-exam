@@ -42,8 +42,16 @@ SPREAD_SHARE_BY_SUBJECT = {"會考英語": 0.21}
 # Extreme wording is a 社會／自然 distractor defect; 國文 options paraphrase literary texts (「毫無」
 # 「從不」 occur in official 113 國文 options) and 英語 options are English.
 EXTREME_SUBJECTS = {"會考社會", "會考自然", "會考數學"}
-# 數學 items judging two people's claims or methods (115 第 14、20、22 題; 113 第 9、24 題; 114 第 12、18 題).
-JUDGE_MIN = {"會考數學": 2}
+# 數學 items judging two people's claims or methods (115 第 14、20、22 題; 113 第 9、24 題; 114 第 12、18 題);
+# 自然 items judging a prediction, a claim or a classification (113: 6, 114: 1, 115: 4).
+JUDGE_MIN = {"會考數學": 2, "會考自然": 1}
+# 自然 experiment items (variables, procedure, results): 113-115 4-9 a year plus the 題組 experiments.
+INQUIRY_MIN = {"會考自然": 4}
+# Negative stems (「何者錯誤」「最不可能」「無法」「NOT」), 113-115 at most: 國文 5, 自然 3, 數學 1.
+NEGATIVE_STEM = re.compile(r"不可能|無法|錯誤|不正確|最不|不包含|不是|不適合|不合理|\bNOT\b|\bEXCEPT\b")
+NEGATIVE_MAX = {"會考國文": 5, "會考自然": 3, "會考數學": 1, "會考英語": 3}
+# 英語 題組 questions (113-115 by hand): 細節 5-6, 推論與字義 5-7, 主旨／目的／比較 3-7, 應用 2-3 a year.
+ENGLISH_GROUP_PROCESS_MIN = {"擷取訊息": 3, "推論": 4, "統整解釋": 3, "應用": 1}
 ABSOLUTE_SHARE = 0.05   # official up to 9%; target above official
 TRANSLATION_SHARE = 0.6   # 社會: items whose target concept the student must infer
 INTEGRATED_SHARE = 0.20  # items joining concepts across domains (社會) or curriculum strands (others)
@@ -363,6 +371,7 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             errors.append(f"only {fresh} of {len(assets)} photographs are newly found (web_source); the web is reachable, so "
                           "every photograph must be: search with `python scripts/web_image.py search \"…\"` and "
                           "use `web_image.py use`; the bundled photo library is the fallback when the web is unreachable")
+    errors += subject_habit_errors(exam)
     errors += option_order_errors(exam)
     errors += curve_errors(exam)
     errors += math_form_errors(exam, asset_root=asset_root)
@@ -558,4 +567,35 @@ def curve_errors(exam: dict) -> list[str]:
                           + ("move harder items later or make these more direct" if estimated < target else
                              "this part needs harder items: official 會考 builds from easy openings to the hardest items "
                              "before the 題組"))
+    return errors
+
+
+def subject_habit_errors(exam: dict) -> list[str]:
+    """Official 113-115 habits per subject (exam_packs/會考/metadata/official-item-analysis.json)."""
+    subject = (exam.get("metadata") or {}).get("subject")
+    choice = [q for q in exam.get("questions") or [] if isinstance(q, dict) and q.get("type") == "single_choice"]
+    errors: list[str] = []
+    if not choice:
+        return errors
+    negative = [q.get("number") for q in choice if NEGATIVE_STEM.search(re.sub(r"\s", " ", str(q.get("prompt") or ""))[-60:])]
+    if subject in NEGATIVE_MAX and len(negative) > NEGATIVE_MAX[subject]:
+        errors.append(f"items {negative} ask in the negative (「何者錯誤」「最不可能」); official {subject[2:]} 113-115 at most "
+                      f"{NEGATIVE_MAX[subject]} a paper: ask what follows, not what fails")
+    competency = lambda q: ((q.get("item_spec") or {}).get("cap_competency") or {})
+    if subject in INQUIRY_MIN:
+        inquiry = sum(competency(q).get("context_type") == "科學探究" for q in choice)
+        if inquiry < INQUIRY_MIN[subject]:
+            errors.append(f"{inquiry} items are experiments or investigations (context_type 科學探究); official 自然 has 4-9 a "
+                          "year besides the 題組: variables, a procedure, results to interpret")
+    if subject == "會考英語":
+        groups = [q for q in choice if q.get("group_stimulus") and (q.get("item_spec") or {}).get("cap_unit") != "克漏字"]
+        if len(groups) >= 10:
+            for process, least in ENGLISH_GROUP_PROCESS_MIN.items():
+                count = sum(competency(q).get("process") == process for q in groups)
+                if count < least:
+                    errors.append(f"{count} 題組 questions ask for {process}; official 英語 113-115 ask at least {least} "
+                                  "(details, inference and word meaning in context, main idea or purpose, applying the text)")
+        singles = [q for q in choice if not q.get("group_stimulus")]
+        if singles and not any(q.get("visual_asset") for q in singles):
+            errors.append("英語 113-115 open the 單題 with a picture item (「Look at the picture.」): give one 單題 a picture")
     return errors

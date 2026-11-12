@@ -28,12 +28,12 @@ SUBJECT_REFERENCES = {
     "國寫": {"current-gsat-writing-form.md", "gsat-writing-111-115-selection-calibration.md",
              "gsat-writing-source-ecology.md", "current-form-literacy-load.md"},
     # 會考 (prefixed keys; 英語 is the reading booklet only).
-    "會考國文": {"cap-execution-card.md", "current-cap-form.md"},
-    "會考英語": {"cap-execution-card.md", "current-cap-form.md"},
-    "會考數學": {"cap-execution-card.md", "current-cap-form.md"},
-    "會考社會": {"cap-execution-card.md", "current-cap-form.md", "photo-library-manifest.json"},
-    "會考自然": {"cap-execution-card.md", "current-cap-form.md", "photo-library-manifest.json"},
-    "會考寫作測驗": {"cap-execution-card.md", "current-cap-form.md"},
+    "會考國文": {"cap-execution-card.md", "current-cap-form.md", "cap-chinese.md"},
+    "會考英語": {"cap-execution-card.md", "current-cap-form.md", "cap-english.md"},
+    "會考數學": {"cap-execution-card.md", "current-cap-form.md", "cap-math.md"},
+    "會考社會": {"cap-execution-card.md", "current-cap-form.md", "cap-social.md", "photo-library-manifest.json"},
+    "會考自然": {"cap-execution-card.md", "current-cap-form.md", "cap-science.md", "photo-library-manifest.json"},
+    "會考寫作測驗": {"cap-execution-card.md", "current-cap-form.md", "cap-writing.md"},
 }
 SUBJECT_ONLY = set().union(*SUBJECT_REFERENCES.values())
 LAYOUT_SLUGS = {'國綜':'chinese','英文':'english','數學A':'math-a','數學B':'math-b',

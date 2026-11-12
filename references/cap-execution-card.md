@@ -1,6 +1,6 @@
 # 會考出卷執行卡（先讀這一頁）
 
-只讀這頁、`references/current-cap-form.md` 與當科輸出；其他參考文件等工具訊息點名時再查。
+只讀這頁、`references/current-cap-form.md`、當科的專屬說明（`cap-chinese.md`／`cap-english.md`／`cap-math.md`／`cap-social.md`／`cap-science.md`／`cap-writing.md`：出題架構、習慣、課綱對照與本科規則）與當科輸出；其他參考文件等工具訊息點名時再查。
 科目鍵一律加前綴：`會考國文／會考英語／會考數學／會考社會／會考自然／會考寫作測驗`。
 
 ## 指令順序

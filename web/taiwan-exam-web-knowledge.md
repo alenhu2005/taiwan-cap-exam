@@ -623,18 +623,60 @@ attachments; extract only the selected subject's components.
     "embedded_sha256": "a066b06f919baf0d3212089b9776c8b0d79b71416291b41a1ffe9ab2377e3117"
   },
   {
+    "path": "references/cap-chinese.md",
+    "bytes": 3146,
+    "sha256": "8429be33c17390974fdb6e7c95a61dae541fdeda9e8ff84fbd3e305a798a6071",
+    "embedded_bytes": 3146,
+    "embedded_sha256": "8429be33c17390974fdb6e7c95a61dae541fdeda9e8ff84fbd3e305a798a6071"
+  },
+  {
+    "path": "references/cap-english.md",
+    "bytes": 2794,
+    "sha256": "7a811f72c0b64b1c5dd222b25813fad3967ce8460277da8d95a368f634dad813",
+    "embedded_bytes": 2794,
+    "embedded_sha256": "7a811f72c0b64b1c5dd222b25813fad3967ce8460277da8d95a368f634dad813"
+  },
+  {
     "path": "references/cap-execution-card.md",
-    "bytes": 9004,
-    "sha256": "67f70d7dfd24a961d7c7d583dc281bca626be5b94a6e0d00e8f2157f342a046e",
-    "embedded_bytes": 9004,
-    "embedded_sha256": "67f70d7dfd24a961d7c7d583dc281bca626be5b94a6e0d00e8f2157f342a046e"
+    "bytes": 9194,
+    "sha256": "277c3d87646e13cc17575fb64ab2cc9b827e82f6f2f7d9af6dfc8b4216e63f4f",
+    "embedded_bytes": 9194,
+    "embedded_sha256": "277c3d87646e13cc17575fb64ab2cc9b827e82f6f2f7d9af6dfc8b4216e63f4f"
+  },
+  {
+    "path": "references/cap-math.md",
+    "bytes": 4511,
+    "sha256": "b6a8aa9979e619e9224476607794f4aa71b1a87b7376d4a7dacfbc2f60e90be4",
+    "embedded_bytes": 4511,
+    "embedded_sha256": "b6a8aa9979e619e9224476607794f4aa71b1a87b7376d4a7dacfbc2f60e90be4"
+  },
+  {
+    "path": "references/cap-science.md",
+    "bytes": 3692,
+    "sha256": "47444b71666ffa7aab8de29eb41baa8ac9dbb2ad891041a5966d184bd18a1101",
+    "embedded_bytes": 3692,
+    "embedded_sha256": "47444b71666ffa7aab8de29eb41baa8ac9dbb2ad891041a5966d184bd18a1101"
+  },
+  {
+    "path": "references/cap-social.md",
+    "bytes": 1733,
+    "sha256": "91995715bbb0ead10c097664d187840fdaeadb074b5296f8d295ed1f4674508e",
+    "embedded_bytes": 1733,
+    "embedded_sha256": "91995715bbb0ead10c097664d187840fdaeadb074b5296f8d295ed1f4674508e"
+  },
+  {
+    "path": "references/cap-writing.md",
+    "bytes": 1460,
+    "sha256": "0b540abbb101409b6297299f238f3c42caecbfb11b498fccbd9e20acf44e9e25",
+    "embedded_bytes": 1460,
+    "embedded_sha256": "0b540abbb101409b6297299f238f3c42caecbfb11b498fccbd9e20acf44e9e25"
   },
   {
     "path": "references/current-cap-form.md",
-    "bytes": 20872,
-    "sha256": "ad3aafc961efb719dbd31f40e805d0affb69f50cb2f508663290346131ea2b52",
-    "embedded_bytes": 20872,
-    "embedded_sha256": "ad3aafc961efb719dbd31f40e805d0affb69f50cb2f508663290346131ea2b52"
+    "bytes": 17928,
+    "sha256": "c71f38af3681bf43aa6838fdf528c60b349f7877569fd0fb1c1bdf05b5347435",
+    "embedded_bytes": 17928,
+    "embedded_sha256": "c71f38af3681bf43aa6838fdf528c60b349f7877569fd0fb1c1bdf05b5347435"
   },
   {
     "path": "references/current-form-literacy-load.md",
@@ -1044,17 +1086,17 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/cap_plan.py",
-    "bytes": 35227,
-    "sha256": "663ce7b1cbeb033e2b2d506640bb6cfd89d21077e94c520fc3ebbd0b06b41092",
-    "embedded_bytes": 35227,
-    "embedded_sha256": "663ce7b1cbeb033e2b2d506640bb6cfd89d21077e94c520fc3ebbd0b06b41092"
+    "bytes": 39123,
+    "sha256": "86719d554086dedfaaa3b6bc1bb975b10992b10d32aa59200aef83bcbc4bc915",
+    "embedded_bytes": 39123,
+    "embedded_sha256": "86719d554086dedfaaa3b6bc1bb975b10992b10d32aa59200aef83bcbc4bc915"
   },
   {
     "path": "scripts/cap_units.py",
-    "bytes": 11135,
-    "sha256": "b0ee6314f621817788667e1f37c36c0855784a09222e64023a493bf8dfff5f66",
-    "embedded_bytes": 11135,
-    "embedded_sha256": "b0ee6314f621817788667e1f37c36c0855784a09222e64023a493bf8dfff5f66"
+    "bytes": 13049,
+    "sha256": "55f765dc6ea3d2f675c389a8f2f386dee3500b2d1c70ae953c47360f2a27e845",
+    "embedded_bytes": 13049,
+    "embedded_sha256": "55f765dc6ea3d2f675c389a8f2f386dee3500b2d1c70ae953c47360f2a27e845"
   },
   {
     "path": "scripts/check_hosted_run.py",
@@ -1226,10 +1268,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/read_web_knowledge.py",
-    "bytes": 30255,
-    "sha256": "707e75d7c0a22f6a140c2f56052ce4fe6d29309bb6841224aba217859976e36c",
-    "embedded_bytes": 30255,
-    "embedded_sha256": "707e75d7c0a22f6a140c2f56052ce4fe6d29309bb6841224aba217859976e36c"
+    "bytes": 30359,
+    "sha256": "11ed1d42a40aa70e6011011ac2b56ab14e3531d7d1cb3756aee30c1ad4be3205",
+    "embedded_bytes": 30359,
+    "embedded_sha256": "11ed1d42a40aa70e6011011ac2b56ab14e3531d7d1cb3756aee30c1ad4be3205"
   },
   {
     "path": "scripts/run_hosted_workflow.py",
@@ -1247,17 +1289,17 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/validate_cap_form.py",
-    "bytes": 15629,
-    "sha256": "17b1db71f5f544560a6418851134afc540398541532e9f17ff7e4ff3ad3a51ff",
-    "embedded_bytes": 15629,
-    "embedded_sha256": "17b1db71f5f544560a6418851134afc540398541532e9f17ff7e4ff3ad3a51ff"
+    "bytes": 15749,
+    "sha256": "742e040f16d96438cbcd5561496cabfb8530315abafaee31a76237fd94334bf0",
+    "embedded_bytes": 15749,
+    "embedded_sha256": "742e040f16d96438cbcd5561496cabfb8530315abafaee31a76237fd94334bf0"
   },
   {
     "path": "scripts/validate_cap_quality.py",
-    "bytes": 37314,
-    "sha256": "6a13977905741af05c5d21c6d34caeeb27f708c0bfc5e81e0874dde6e71e2014",
-    "embedded_bytes": 37314,
-    "embedded_sha256": "6a13977905741af05c5d21c6d34caeeb27f708c0bfc5e81e0874dde6e71e2014"
+    "bytes": 40413,
+    "sha256": "a9b0af172ee9b6c49fceb494452fd8474af4025a600d30c053495def181c0f2f",
+    "embedded_bytes": 40413,
+    "embedded_sha256": "a9b0af172ee9b6c49fceb494452fd8474af4025a600d30c053495def181c0f2f"
   },
   {
     "path": "scripts/validate_chinese_layout_contract.py",
@@ -63591,10 +63633,102 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 }
 </canonical-source>
 
+<canonical-source path="references/cap-chinese.md">
+# 會考國文：官方出題架構、習慣與課綱對照
+
+出會考國文卷時讀這份與 `current-cap-form.md`（各科共用規則）。數字來自 113–115 正式題本 126 題逐題分類
+（`exam_packs/會考/metadata/official-item-analysis.json`）；只描述類型與比例，不提供題目範例。
+
+## 卷型
+
+- 42 題：一、單題（1～23）；二、題組（24～42，2–4 題一組）；70 分鐘。
+- 題組引導語「請閱讀以下資料，並回答 24～25 題：」由排版程式印。
+
+## 課綱對照：單元與題數
+
+| 單元（`item_spec.cap_unit`） | 對應的課綱學習內容 | 113／114／115 | 本 Skill 範圍 |
+| :-- | :-- | :-- | :-- |
+| 語文知識 | 文字篇章：字詞（Ab）、句段（Ac）、標點；六書與字體 | 9／8／8 | 6–10 |
+| 詩歌 | 文本表述與文化內涵：古典詩、詞、曲與現代詩 | 2／4／4 | 2–5 |
+| 文言文本 | 篇章（Ad）與文化內涵（Cc）：筆記、史傳、論說、寓言 | 10／9／10 | 9–12 |
+| 白話文學 | 記敘、抒情（Ba、Bb）：散文、小說、劇本 | 6／7／5 | 5–8 |
+| 資訊與圖表 | 說明、議論、應用文（Bc、Bd、Be）：資料、研究、展覽、貼文、廣告、簡訊、圖表 | 15／14／15 | 12–16 |
+
+文言約占三成（文言文本加古典詩詞曲每年 12–14 題）。語文知識集中在單題；題組多是資訊與圖表、文言、白話。
+
+## 出題架構種類
+
+- **語文知識單題**：每年都有字音、字形、詞語或成語的使用各 1 題，六書與字體演變各 1 題；另有標點或斷句、
+  一字多義、應用文用語（題辭、稱謂、謙詞、書信）0–2 題。`cap_plan.py plan` 依此給語文知識題位 `suggested_form`。
+- **短文單題**：一段白話或文言摘錄，問觀點、寓意、比較或推論。
+- **詩歌賞析**：意象、情感、手法；常兩首比較。
+- **跨文本題組**：甲、乙兩文或文與圖比較，每年 1–2 組。
+- **資訊文本**：從資料、海報、貼文、問卷、計分表、展覽說明擷取與推論；也有改正別人整理錯誤的題目。
+- **文言題組**：先問字義或詞義，再問人物與事理。
+
+## 出題習慣
+
+- 問法以「下列何者最恰當」為主（約一半），其次「最可能」「最接近」；否定問法每卷 3–5 題。
+- 約四成題目以「根據本文／根據資料」開頭；圖表常寫「右圖」「下表」，很少編號。
+- 選項長度中位數 13–16 字，超過 20 字的不到兩成；正解很少是唯一最長的選項（每年 2–4 題）。
+- 材料是真實作品摘錄或真實資料；白話印「改寫自 作者〈篇名〉」，文言印出處。
+
+## 本科自動檢查（`validate_cap_quality.py`）
+
+- 單元範圍；情境題（生活情境、社會議題、跨領域）至少 30%，其餘是文學與文言閱讀（`context_type` 文本閱讀）。
+- 語文知識題不受「多步推理」限制；否定問法最多 5 題；選項中位數與長選項比例不超過官方。
+- 國文選項裡的「毫無」「從不」等字可以出現（官方也有），不算極端字眼。
+</canonical-source>
+
+<canonical-source path="references/cap-english.md">
+# 會考英語（閱讀）：官方出題架構、習慣與課綱對照
+
+出會考英語卷時讀這份與 `current-cap-form.md`（各科共用規則）。只做閱讀題本，不做聽力。數字來自 113–115 正式題本
+129 題逐題分類（`exam_packs/會考/metadata/official-item-analysis.json`）；只描述類型與比例，不提供題目範例。
+
+## 卷型
+
+- 43 題：第一部分單題（113 為 1–21，114、115 為 1–19），第二部分題組；60 分鐘。
+- 題組引導語「第 20 至 22 題為題組」由排版程式印；最後一組固定是克漏字（4–6 題，選項直接接在文章後）。
+
+## 課綱對照：單元與題數
+
+| 單元（`item_spec.cap_unit`） | 對應的課綱學習內容 | 113／114／115 | 本 Skill 範圍 |
+| :-- | :-- | :-- | :-- |
+| 字彙 | 語言知識：詞彙與片語搭配 | 12／10／9 | 7–12 |
+| 文法 | 語言知識：句構與文法（時態、子句、代名詞、連接詞、比較） | 9／9／10 | 7–12 |
+| 實用文本 | 溝通功能：公告、廣告、菜單、手冊、地圖、食譜 | 4／3／5 | 2–6 |
+| 圖文對話 | 漫畫、對話 | 0／5／2 | 0–5 |
+| 記敘文本 | 故事、人物介紹、書信 | 4／2／5 | 2–6 |
+| 說明文本 | 文化與習俗、思考能力：說明、研究、議題、兩篇比較 | 10／8／8 | 7–11 |
+| 克漏字 | 篇章連貫與文法在語境中的使用 | 4／6／4 | 4–6 |
+
+## 出題架構種類
+
+- **單題**：第 1 題每年都是看圖作答（「Look at the picture.」）；其餘是一兩句情境中的字彙或文法，偶有一則
+  兩人對話。單題是一個判斷，不受「多步推理」限制。
+- **題組題目類型**（三年加總）：細節擷取 16、推論 11、主旨或作者目的 11、依上下文判斷字義 6、把資訊用到情境 7、
+  指涉或比較 5。`cap_plan.py plan` 依此給題組題位 `suggested_form`。
+- 每年都有一組談異國文化或國際議題的說明文本，以及一組需要讀圖、表或地圖的實用文本。
+
+## 出題習慣
+
+- 單題選項是 1–3 個字，四個選項詞性相同；題組選項是短句，長短不一（官方每年約 9 題長短差超過兩倍）。
+- 正解是唯一最長選項的題目每年 6–10 題，本 Skill 上限 14%。
+- 題組問句以 What / Why / Which 開頭；字義題用 "What does it mean when …" 或 "What does … mean?"。
+- 否定問法少（「NOT」每年 0–2 題，全大寫）。
+
+## 本科自動檢查（`validate_cap_quality.py`）
+
+- 單元範圍，最後一組是克漏字；單題至少一題附圖。
+- 題組（克漏字除外）的 `process` 至少：擷取訊息 3、推論 4、統整解釋 3、應用 1。
+- 情境題至少 50%；否定問法最多 3 題；字彙與文法題不受「多步推理」限制。
+</canonical-source>
+
 <canonical-source path="references/cap-execution-card.md">
 # 會考出卷執行卡（先讀這一頁）
 
-只讀這頁、`references/current-cap-form.md` 與當科輸出；其他參考文件等工具訊息點名時再查。
+只讀這頁、`references/current-cap-form.md`、當科的專屬說明（`cap-chinese.md`／`cap-english.md`／`cap-math.md`／`cap-social.md`／`cap-science.md`／`cap-writing.md`：出題架構、習慣、課綱對照與本科規則）與當科輸出；其他參考文件等工具訊息點名時再查。
 科目鍵一律加前綴：`會考國文／會考英語／會考數學／會考社會／會考自然／會考寫作測驗`。
 
 ## 指令順序
@@ -63689,6 +63823,176 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 - 五份需人工判斷的審查報告格式見 `templates/cap-review-templates.json`（只有格式，內容自己寫）。
 </canonical-source>
 
+<canonical-source path="references/cap-math.md">
+# 會考數學：官方出題架構、習慣與課綱對照
+
+出會考數學卷時讀這份與 `current-cap-form.md`（各科共用規則）。數字來自 113–115 正式題本 75 題逐題分類
+（`exam_packs/會考/metadata/official-item-analysis.json` 與 `scripts/cap_units.py`）；只描述類型與比例，
+不提供題目範例，情境與問法每份卷自己設計。
+
+## 卷型
+
+- 第一部分選擇題 25 題（第 23–25 題為題組，留在第一部分），第二部分非選擇題 2 題；80 分鐘；末頁參考公式。
+- 非選擇題存成第 26、27 題，印「1.」「2.」，詳解標「非選擇題第1題」；每題獨立一頁，其餘是作答空間。
+- 每題 0–3 級分規準記在 `answers[].rubric`；詳解至少 3 步。
+
+## 課綱對照：單元與題數（選擇題）
+
+| 單元（`item_spec.cap_unit`） | 主要課綱代碼 | 113／114／115 | 本 Skill 範圍 | 常見題位 |
+| :-- | :-- | :-- | :-- | :-- |
+| 數與運算 | N-7（整數、分數、指數、科學記號、因倍數、數線、比例） | 6／6／5 | 4–7 | 全卷 |
+| 二次方根 | N-8-1～3 | 1／1／1 | 1–2 | 前段 |
+| 數列 | N-8-4～6 | 1／0／1 | 0–2 | 中段 |
+| 方程式與不等式 | A-7（一元一次、二元一次、一元一次不等式） | 4／3／4 | 2–5 | 前段與題組 |
+| 多項式與一元二次方程式 | A-8（乘法公式、多項式、因式分解、一元二次） | 1／3／2 | 1–4 | 前中段 |
+| 坐標與函數 | G-7、F-8、F-9（坐標、直線、一次與二次函數） | 2／2／2 | 2–3 | 中段 |
+| 平面幾何 | S-7、S-8（線對稱、角、多邊形、全等、平行四邊形、尺規） | 4／3／4 | 2–5 | 中後段 |
+| 相似形與三角形三心 | S-9-1～4、S-9-8～10 | 1／3／1 | 1–4 | 後段 |
+| 圓 | S-9-5～7 | 2／1／2 | 1–3 | 後段 |
+| 立體與空間 | S-7 三視圖、S-9 空間與立體 | 1／1／1 | 1–2 | 前段 |
+| 統計 | D-7、D-9（統計圖表、四分位與盒狀圖） | 1／1／1 | 1–2 | 前段 |
+| 機率 | D-9 | 1／1／1 | 1–2 | 前段 |
+
+統計＋機率最多 3 題。七、八、九年級三個年級每年都有；`cap_plan.py plan` 依官方題位排好單元（圓、相似形在後段），
+題位之間可互換。
+
+## 出題架構種類（官方每卷題數）
+
+| 架構 | 113–115 | 說明 |
+| :-- | :-- | :-- |
+| 直接作答：計算、化簡、圖形性質 | 約 9–11 | 第 1–3 題一定是這類，不包情境 |
+| 判斷兩人的看法或作法 | 2–3 | 「甲、乙兩人…，下列判斷何者正確」，`process` 填 評鑑 |
+| 推理大小、位置或必然性 | 2–3 | 不必算出數值：數線位置、恆成立、可能與一定 |
+| 選出算式、關係式或圖形 | 1–2 | 選項是算式或圖，而不是答案數值 |
+| 讀新資訊後建模 | 5–7 | 表格、對話、規定、說明文字；題組三題都是 |
+| 判讀圖表資料 | 1–2 | |
+
+## 出題習慣
+
+- 問法以「之值為何」「為多少」「下列何者正確」為主；否定問法幾乎沒有（每卷 0–1 題）。
+- 每卷約 15–22 張圖、1–2 個表，圖題編號「圖(一)」；圖只給條件與標示，不畫出答案。
+- 選項：純數值依大小排列（多為由小到大）；分數、根式、算式依形式排列。約一半的題目選項不是單一數字。
+- 情境題約三分之一（113–115 33%–41%）；情境多是學生生活、消費、運動、校園、社會數據，數字可以是假設（「某國」「某商店」）。
+- 題組：一篇較長的說明文字（規定、原理、資料），三題由淺入深；後題可以用前題的結果。
+- 非選擇題：兩小題，第二小題需要說理或判斷是否可能；一題偏數量規律或資料，一題偏幾何。
+- 難度：前段 0.8 以上，後段（約第 18–22 題）最難，題組前後略回升。
+
+## 本科自動檢查（`validate_cap_quality.py`）
+
+- 單元範圍與統計＋機率上限；第 1–3 題直接作答；至少 2 題判斷兩人看法。
+- 至少 40% 的題目選項不是單一數字；純數值選項依大小排（`cap_plan.py expand` 自動排序並改答案、詳解）。
+- 課本或參考書老題型每卷最多 2 題；同一組畢氏數最多 2 題（題組算一題）。
+- 情境題 30%–60%；前、中、後三段預估通過率與官方同題位平均差不超過 0.10；否定問法最多 1 題。
+- 圖用 `scripts/cap_draw.py` 畫（點名自動斜體、標籤避線）；以圖為選項用 `cap_draw.py options`。
+</canonical-source>
+
+<canonical-source path="references/cap-science.md">
+# 會考自然：官方出題架構、習慣與課綱對照
+
+出會考自然卷時讀這份與 `current-cap-form.md`（各科共用規則）。數字來自 113–115 正式題本 150 題逐題分類
+（`exam_packs/會考/metadata/official-item-analysis.json`）；只描述類型與比例，不提供題目範例。
+
+## 卷型
+
+- 50 題（考試說明 45–55），單題在前、題組在後（題組約 8–9 題，2–3 題一組）；70 分鐘。
+- 每題記 `cap_competency.domain`（生物／理化／地球科學，題組也記）與 `item_spec.textbook_volumes`（主要概念放第一個）。
+
+## 課綱對照：三科與六冊
+
+| 項目 | 113 | 114 | 115 | 本 Skill 範圍 |
+| :-- | --: | --: | --: | :-- |
+| 生物 | 13 | 13 | 13 | 20%–32% |
+| 理化 | 26 | 27 | 25 | 46%–60% |
+| 地球科學 | 11 | 10 | 12 | 16%–28% |
+| 第一冊（七上：細胞、養分、運輸、協調、恆定） | 5 | 8 | 9 | 每冊 3–16 題 |
+| 第二冊（七下：生殖、遺傳、演化與分類、生態、環境） | 8 | 5 | 4 | |
+| 第三冊（八上：測量、波動與聲音、光、溫度與熱、物質結構與元素） | 4 | 7 | 8 | |
+| 第四冊（八下：化學反應、氧化還原、酸鹼鹽、反應速率與平衡、有機物、力與壓力） | 11 | 10 | 9 | |
+| 第五冊（九上：直線運動、力與運動、功與能、電、地表與板塊、岩石） | 7 | 13 | 9 | |
+| 第六冊（九下：電流效應、電磁、天氣、天文、全球變遷與能源） | 15 | 7 | 11 | |
+
+冊別依各版本教科書的常見編排，屬於「可能出處」。六冊每年都有 4 題以上；八下每年 9–11 題。
+
+## 出題架構種類（單題，官方每卷題數）
+
+| 架構 | 113／114／115 | 說明 |
+| :-- | :-- | :-- |
+| 解釋生活或時事中的現象 | 12／11／11 | 家電、食品、醫療、節日習俗、報導、歷史事件中的科學 |
+| 判讀圖表資料後推論 | 13／10／9 | 曲線、表格、剖面圖、示意圖；要讀出趨勢或比較，不是查值 |
+| 實驗探究 | 4／9／7 | 變因控制、實驗設計、從結果推論；`context_type` 填 科學探究 |
+| 直接運用概念 | 5／10／7 | 不加情境的概念判斷 |
+| 判斷他人的看法、預測或分類 | 6／1／4 | 「兩人均合理／只有…」或指出某人的分類錯誤；`process` 填 評鑑 |
+| 計算 | 1／1／3 | 濃度、密度、壓力、功等，數字簡單 |
+| 閱讀題組 | 9／8／9 | 一篇報導、研究或實驗紀錄配 2–5 題，常跨章節 |
+
+## 出題習慣
+
+- 問法以「下列何者最合理」「最可能」為主，其次「何者正確」；否定問法每卷 2–3 題（「最不可能」「無法」）。
+- 每卷約 25–32 張圖、5–12 個表；以圖為選項每年 4 題以上（示意圖、裝置圖、圖表）。
+- 選項常是成對的結構（「甲為…，乙為…」「…，因為…」），約四分之一到四成；組合題（甲乙丙丁）2–7 題。
+- 實驗數據可以是假設的（「某生」「某實驗」）；宣稱真實的數據（年份、機關、調查）要附來源。
+- 題組材料是新的資訊（新聞、研究、實驗紀錄），學生要把課本概念用到沒看過的情境。
+
+## 本科自動檢查（`validate_cap_quality.py`）
+
+- 三科比例；六冊每冊 3–16 題（依 `textbook_volumes` 第一個）。
+- 至少 4 題實驗探究（科學探究）、至少 1 題判斷他人看法；否定問法最多 3 題。
+- 情境題至少 60%；組合題最多 5 題；以圖為選項至少 3 題；選項中位數不超過官方。
+- `cap_plan.py plan` 依官方比例給每個單題一個 `suggested_form`，題組另標閱讀題組；情境自己設計。
+</canonical-source>
+
+<canonical-source path="references/cap-social.md">
+# 會考社會：本科規則
+
+出會考社會卷時讀這份與 `current-cap-form.md`（各科共用規則）。社會的規則來自前兩輪與 115 卷的逐題比對
+（cap116a、soc01），本輪沒有更動，只從共用文件搬到這裡。
+
+## 卷型
+
+- 54 題：一、單題（1～43）；二、題組（44～54）；70 分鐘。題組引導語「閱讀下列選文，回答第 44 至 45 題：」由排版程式印。
+
+## 本科規則（自動檢查）
+
+- **題序穿插三科。** 單題以短段交替歷史、地理、公民（官方 115 每段 1–5 題）；記錄 `cap_competency.domain`，
+  最長同科連續不超過 7 題、至少換科 10 次、三科各占 25%–42%。學測社會「依科目排成連續區塊」的規則不適用會考。
+  `cap_plan.py plan` 已排好每個單題的科別。
+- **轉譯型題幹。** 至少 60% 的題目記錄 `cap_competency.hidden_concept`（學生要推出的概念），這個詞不得出現在
+  題幹、材料、圖或誘答中；題幹與材料不得重複正解的關鍵字句。
+- **混合考點。** 至少 20% 的題目在 `cap_competency.domains` 列出兩科以上，並寫 `bridge`。
+- **以圖作答。** 至少 2 題以圖為選項（官方每年 1–2 題以上）；組合題最多 3 題。
+- **選項簡短。** 中位數不超過官方（11–13 字），超過 20 字的選項不超過一成。
+- **照片全部新找。** 網路可用時每張照片都用 `scripts/web_image.py` 這次新找；內附圖片庫只在網路不通時備援。
+- **數據附來源。** 印出的統計一律查證並記錄 `item_spec.data_sources`。
+- 情境題至少 70%；圖表至少 20 張（含 2 張以上照片或史料圖像、18 題以上引用圖表）。
+</canonical-source>
+
+<canonical-source path="references/cap-writing.md">
+# 會考寫作測驗：官方題目框架與評分
+
+出會考寫作測驗時讀這份與 `current-cap-form.md`（各科共用規則）。依 113–115 正式題本全文比對整理；
+只描述框架，不提供題目範例，材料與任務每次自己設計。
+
+## 題目框架（113–115 三年相同）
+
+1. 開頭一句：「請先閱讀以下資訊，並依據題意要求完成一篇文章。」
+2. 材料，三種形式輪流出現：一組生活中常見的文字樣本（例如標題、文案）、一張圖片加一組可選的詞彙、
+   或一段引導短文。
+3. 兩三個思考問題（觀察到什麼、為什麼、反映什麼），再要求結合自己的經驗或見聞，寫下觀察、感受或想法。
+4. 不給題目；最後依序印「※不必訂題」「※不可在文中洩漏私人身分」「※不可使用詩歌體」。
+
+`cap_plan.py plan --subject 會考寫作測驗` 的 `metadata.writing_frame` 列出這個框架。
+
+## 評分與詳解
+
+- 一至六級分，題本不印配分。
+- 詳解寫審題與取材引導（題目要學生做什麼、可以從哪些經驗切入、常見的偏題），並依官方四個向度說明
+  各級分的表現：立意取材、結構組織、遣詞造句、錯別字格式與標點符號。
+
+## 本科自動檢查（`validate_cap_form.py`）
+
+- 開頭語、三條注意事項與順序、要求結合經驗或見聞並「寫下」、不印「題目：」；詳解涵蓋四個向度。
+</canonical-source>
+
 <canonical-source path="references/current-cap-form.md">
 # 會考現行卷型（113–115 官方題本量測）
 
@@ -63729,11 +64033,7 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
   - 數學：「請閱讀下列選文後，回答 23～25 題」
   - 英語：「第 20 至 22 題為題組」
 - 數學非選擇題每題在答案中記錄 0–3 級分評分規準（`answers[].rubric`），題本不印配分。
-- 寫作測驗：一題引導寫作，113–115 都是同一個框架：開頭「請先閱讀以下資訊，並依據題意要求完成一篇文章。」，
-  接著是材料（一組常見的文字樣本、一張圖片加可選的詞彙，或一段引導短文）與兩三個思考問題，要求結合自己的
-  經驗或見聞寫下觀察、感受或想法，不給題目；最後依序印「※不必訂題」「※不可在文中洩漏私人身分」「※不可使用詩歌體」。
-  以一至六級分評閱，題本不印配分；詳解寫審題與取材引導，並依立意取材、結構組織、遣詞造句、錯別字格式與標點符號
-  四個向度說明各級分表現（`validate_cap_form.py` 檢查）。
+- 寫作測驗：一題引導寫作，框架、注意事項與詳解的評分向度見 [cap-writing.md](cap-writing.md)。
 
 ## 難度（官方各題通過率 p，113–115）
 
@@ -63790,34 +64090,13 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 - **詳解**：每題寫出完整推導，說明正解如何由材料證據與已學知識一步步推出，並指出每個誘答
   選項錯在哪個概念；不得只寫「故選 B」。
 
-## 單元分布（113–115 實測）
+## 各科專屬說明
 
-每題記錄 `item_spec.cap_unit`（自然記 `cap_competency.domain`）。`cap_plan.py plan` 依下表為每個題位排好單元
-（數學依官方題序，圓、相似形放在後段），題位之間可以互換，但整卷要落在範圍內（`scripts/cap_units.py`）。
-
-| 科目 | 單元與題數範圍（選擇題） |
-| :-- | :-- |
-| 數學 | 數與運算 4–7、二次方根 1–2、數列 0–2、方程式與不等式 2–5、多項式與一元二次方程式 1–4、坐標與函數 2–3、平面幾何 2–5、相似形與三角形三心 1–4、圓 1–3、立體與空間 1–2、統計 1–2、機率 1–2（統計＋機率最多 3） |
-| 國文 | 語文知識 6–10、詩歌 2–5、文言文本 9–12、白話文學 5–8、資訊與圖表 12–16 |
-| 英語 | 字彙 7–12、文法 7–12（單題）；實用文本 2–6、圖文對話 0–5、記敘文本 2–6、說明文本 7–11、克漏字 4–6（題組，最後一組是克漏字） |
-| 自然 | 生物 22%–38%、理化 42%–58%、地球科學 14%–26%（題組也記） |
-
-英語字彙、文法題與國文語文知識題本來就是一個判斷，不受「多步推理」限制。
-
-## 數學卷的樣貌（113–115 實測）
-
-- **題型形式要多樣。** 官方每卷約 12–14 題的選項不是單一數字，而是關係、位置、算式、敘述或判斷；
-  本 Skill 至少 40%。`cap_plan.py plan` 給每個題位一個 `suggested_form`（直接作答、判斷兩人看法或作法、
-  推理大小位置或必然性、選出算式或關係式、讀新資訊建模、判讀圖表），只說學生要做什麼，情境與問法自己設計。
-- **開頭三題直接作答**（計算、化簡、圖形性質，不包情境），後段放最難的題；全卷前、中、後三段的預估通過率
-  與官方同題位平均差不超過 0.10。題組的子題由淺入深：後題可以用前題的結果，前題不能要先算出後題才答得出來。
-- **至少兩題判斷甲、乙兩人的看法或作法**（官方每年 2–3 題；`process` 填 評鑑）。
-- **純數值選項由小到大排**（官方一律依大小；分數、根式與算式依形式排）。
-- **不做參考書老題。** 課本與參考書常見的題型（梯子沿牆下滑、靠牆圍籬求最大面積、禮堂每排座位、
-  彈力球反彈、骰子展開圖、轉盤、吸管排圖形、沿對角線摺紙、二分球三分球…）每卷最多 2 題；
-  保留概念，換成新的情境與問法。
-- **數值不重複。** 同一組畢氏數（如 6-8-10）最多出現在 2 題（題組算一題）。
-- **非選擇題各自獨立成頁**（官方一題一頁，其餘是作答空間）；存成第 26、27 題，印「1.」「2.」。
+每科的出題架構種類、出題習慣、課綱與冊別對照、單元範圍與本科規則，依 113–115 正式題本逐題分類整理在：
+[國文](cap-chinese.md)、[英語](cap-english.md)、[數學](cap-math.md)、[社會](cap-social.md)、[自然](cap-science.md)、
+[寫作測驗](cap-writing.md)。出卷時只讀共用的本檔與當科那一份。每題記錄 `item_spec.cap_unit`（自然記
+`cap_competency.domain`）；`cap_plan.py plan` 依官方比例為每個題位排好單元與出題架構（`suggested_form`），
+題位之間可以互換，但整卷要落在範圍內（`scripts/cap_units.py`）。
 
 ## 命題寫法：原則，而非範本
 
@@ -63841,9 +64120,7 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 6. **詳解逐一處理四個選項。** 寫出正解的推導，並點名每個誘答錯在哪；寫不出某個誘答「確定錯」的理由，
    就表示題目可能有疑義，要重寫。
 7. **每題都考科目概念。** 非數學科不出數數題或純算術題；數學的計算也要服務一個概念判斷。
-8. **社會題序穿插三科。** 單題以短段交替歷史、地理、公民（官方 115 每段 1–5 題）；記錄
-   `cap_competency.domain`，最長同科連續不超過 7 題、至少換科 10 次、三科各占 25%–42%。
-   學測社會「依科目排成連續區塊」的規則不適用會考。
+8. **各科的題序、單元與架構**照當科說明（社會三科穿插見 cap-social.md）。
 9. **題組引導語由排版程式印**，材料與題幹裡不要自己寫。
 10. **照片全部新找，題材每份不同。** 網路可用時，每張照片都用 `scripts/web_image.py` 這次新找；
     內附圖片庫只在網路不通時備援。可以先找圖再出題，也可以先出題再找圖，但題目必須依圖中真的看得到的
@@ -76247,6 +76524,8 @@ FOCUS = {
                  "travel and culture", "work and money", "media and notices"),
 }
 TITLES = {"會考寫作測驗": "寫作測驗"}
+SUBJECT_FILES = {"會考國文": "cap-chinese.md", "會考英語": "cap-english.md", "會考數學": "cap-math.md",
+                 "會考社會": "cap-social.md", "會考自然": "cap-science.md", "會考寫作測驗": "cap-writing.md"}
 # 會考數學 item forms, counted on 113-115 (M1111 wrote 22 of 25 as one textbook form: a story, then a
 # number). Forms say what the student does, never which situation to use: the setting is the author's.
 MATH_FORMS = {
@@ -76258,6 +76537,19 @@ MATH_FORMS = {
     "判讀圖表資料後推論": 2,
 }
 MATH_OPENING_FORM = "直接作答：計算、化簡或圖形性質，不包情境"
+# 自然 單題 forms, 113-115 item by item (official-item-analysis.json): 生活現象 11-12, 圖表 9-13, 實驗 4-9,
+# 概念 5-10, 判斷他人 1-6, 計算 1-3 a year; 題組 read a new report, study or experiment record.
+SCIENCE_FORMS = {"解釋生活或時事中的現象": 11, "判讀圖表資料後推論": 10, "實驗探究：變因、步驟或結果": 7,
+                 "直接運用概念": 7, "判斷他人的看法、預測或分類": 4, "計算": 2}
+SCIENCE_GROUP_FORM = "閱讀題組：讀新的報導、研究或實驗紀錄後判讀"
+# 國文 語文知識 items, 113-115: every year one each of 字音、字形、詞語成語 and both 六書 and 字體, plus
+# 標點斷句 or 字義 and an 應用文 usage item (題辭、稱謂、謙詞).
+CHINESE_KNOWLEDGE_FORMS = ("字音", "字形", "詞語或成語的使用", "六書（造字法則）", "字體演變", "標點或斷句",
+                           "應用文用語（題辭、稱謂、謙詞、書信）", "字義（一字多義）", "修辭或句型")
+# 英語 題組 questions, 113-115 by hand: 細節 5-6, 推論 3-5, 字義 2, 主旨或目的 2-5, 應用 2-3, 指涉或比較 1-3.
+ENGLISH_GROUP_FORMS = {"細節擷取": 5, "推論": 4, "依上下文判斷字義": 2, "主旨或作者目的": 4, "把資訊用到情境": 2,
+                       "指涉或比較": 2}
+ENGLISH_PICTURE_FORM = "看圖作答（Look at the picture.），113-115 第 1 題"
 MATH_GROUP_FORM = "閱讀新資訊（表格、對話、規定、說明）後建立模型"
 
 
@@ -76379,6 +76671,40 @@ def math_forms(slots: list[dict], seed: str) -> dict:
     return [(s, out[id(s)]) for s in slots if id(s) in out]
 
 
+def subject_forms(subject: str, slots: list[dict], seed: str) -> None:
+    """suggested_form for 自然、國文 語文知識 and 英語 slots, drawn from the official 113-115 counts."""
+    import random
+    rng = random.Random(hashlib.sha256(f"{seed}:{subject}:forms".encode()).digest())
+    if subject == "會考自然":
+        singles = [s for s in slots if not s.get("group")]
+        pool = [f for f, k in SCIENCE_FORMS.items() for _ in range(k)]
+        pool = (pool * 2)[:len(singles)]
+        rng.shuffle(pool)
+        for slot, form in zip(singles, pool):
+            slot["suggested_form"] = form
+        for slot in slots:
+            if slot.get("group"):
+                slot["suggested_form"] = SCIENCE_GROUP_FORM
+    elif subject == "會考國文":
+        knowledge = [s for s in slots if s.get("unit") == "語文知識"]
+        core, extra = list(CHINESE_KNOWLEDGE_FORMS[:5]), list(CHINESE_KNOWLEDGE_FORMS[5:])
+        rng.shuffle(extra)
+        forms = core + extra   # the five every year prints first, then the optional kinds
+        rng.shuffle(knowledge)
+        for slot, form in zip(knowledge, forms + forms):
+            slot["suggested_form"] = form
+    elif subject == "會考英語":
+        singles = sorted((s for s in slots if not s.get("group")), key=lambda s: s["number"])
+        if singles:
+            singles[0]["suggested_form"] = ENGLISH_PICTURE_FORM
+        reading = [s for s in slots if s.get("group") and s.get("unit") != "克漏字"]
+        pool = [f for f, k in ENGLISH_GROUP_FORMS.items() for _ in range(k)]
+        pool += ["細節擷取"] * max(0, len(reading) - len(pool))
+        rng.shuffle(pool)
+        for slot, form in zip(reading, pool):
+            slot["suggested_form"] = form
+
+
 def sections(subject: str) -> list[dict]:
     current = form(subject)["current_form"]
     titles = SECTION_TITLES.get(subject)
@@ -76455,6 +76781,10 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
             if pool and subject != "會考數學":
                 rank = hashlib.sha256(f"{seed}:{slot['number']}".encode()).digest()[0]
                 slot["suggested_focus"] = pool[rank % len(pool)]
+        subject_forms(subject, slots, seed)
+        if subject == "會考自然":
+            from cap_units import science_volumes
+            science_volumes(slots)   # every 國中 volume appears, as 113-115 cover all six
         for n in range(1, current.get("constructed_items", 0) + 1):
             slots.append({"number": count + n, **constructed_labels(n), "type": "constructed_response",
                           "section_id": constructed_section(subject), "rubric": "0-3 級分"})
@@ -76470,6 +76800,7 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
     coverage = ({u: list(r) for u, r in UNIT_RANGES[subject].items()} if subject in UNIT_RANGES else
                 {d: [round(a, 2), round(b, 2)] for d, (a, b) in SCIENCE_SHARES.items()} if subject == "會考自然" else None)
     return {"metadata": metadata, "instructions": [], "sections": sections(subject),
+            "subject_guide": f"references/{SUBJECT_FILES[subject]}",
             "planning_slots": slots,
             **({"unit_coverage": {"official_113_115": coverage,
                                   "note": "slots carry a unit (自然: domain) inside these ranges; swap units between slots "
@@ -76508,7 +76839,8 @@ def item(subject: str, number: int, level: str = "會考", kind: str = "single_c
               "reasoning": [None] * steps, **({} if choice else {"rubric": {"3": None, "2": None, "1": None, "0": None}})}
     return {"status": "pending-authoring", "subject": subject, "level": level, "slot": slot, "field_guide": FIELD_GUIDE,
             "question": question, "answer": answer,
-            "rules": ["references/current-cap-form.md 品質標準 and 難度等級",
+            "rules": ["references/current-cap-form.md 品質標準 and 難度等級, and the subject's own file "
+                      f"references/{SUBJECT_FILES[subject]} (structure types, habits, 課綱 and the subject's rules)",
                       "cap_distractors: delete the key's row; each wrong option names its misconception and the real "
                       "neighbouring concept it borrows, never an absurd or absolute claim",
                       "hidden_concept: the term the student must infer; it may not appear in the stem, material or figure",
@@ -76544,7 +76876,7 @@ FIELD_GUIDE = {
     "figure": "{path, width_percent, visual_spec} for the item's own figure (web_image.py use prints visual_spec)",
     "material": "shared 題組 material (identical text for every item of the group)",
     "keep_order": "true keeps numeric options as written; otherwise expand sorts them ascending and relabels key and steps",
-    "form": "數學: the slot's suggested_form says what the student does; the setting is yours",
+    "form": "the slot's suggested_form (數學、自然、國文語文知識、英語) says what the student does; the setting is yours",
 }
 
 
@@ -76750,11 +77082,11 @@ MATH_OFFICIAL = {
 }
 # 國文 items 1-42: 語文知識 = 字音字形字義、詞語成語、標點、六書字體、題辭稱謂；詩歌 = 古典詩詞曲與現代詩；
 # 文言文本 = 文言散文、筆記、史傳；白話文學 = 白話散文、小說、劇本；資訊與圖表 = 說明議論、資料、海報貼文、圖表。
-CHINESE_OFFICIAL = {"語文知識": (9, 7, 8), "詩歌": (2, 4, 4), "文言文本": (10, 10, 10), "白話文學": (6, 7, 6),
-                    "資訊與圖表": (15, 14, 14)}
+CHINESE_OFFICIAL = {"語文知識": (9, 8, 8), "詩歌": (2, 4, 4), "文言文本": (10, 9, 10), "白話文學": (6, 7, 5),
+                    "資訊與圖表": (15, 14, 15)}   # exam_packs/會考/metadata/official-item-analysis.json
 # 英語 items 1-43: 單題 (113: 1-21; 114, 115: 1-19) are 字彙 or 文法; 題組 by text type, the last
 # group a 克漏字 passage every year.
-ENGLISH_OFFICIAL = {"字彙": (None, None, 9), "文法": (None, None, 10), "實用文本": (4, 3, 5), "圖文對話": (0, 5, 2),
+ENGLISH_OFFICIAL = {"字彙": (12, 10, 9), "文法": (9, 9, 10), "實用文本": (4, 3, 5), "圖文對話": (0, 5, 2),
                     "記敘文本": (4, 2, 5), "說明文本": (10, 8, 8), "克漏字": (4, 6, 4)}
 
 # Mean printed position of each 數學 unit in 113-115 (circles and similar triangles close the paper,
@@ -76779,9 +77111,14 @@ SINGLE_UNITS = {"會考英語": ("字彙", "文法")}
 GROUP_UNITS = {"會考英語": ("實用文本", "圖文對話", "記敘文本", "說明文本"),
                "會考國文": ("詩歌", "文言文本", "白話文學", "資訊與圖表")}
 DATA_UNITS_MAX = {"會考數學": (("統計", "機率"), 3)}   # official 2 a year; M1111 printed 5
-# 自然 (cap_competency.domain), share of all items. 115 by hand 13/26/11; 113-114 by keyword.
-SCIENCE_SHARES = {"生物": (0.22, 0.38), "理化": (0.42, 0.58), "地球科學": (0.14, 0.26)}
-SCIENCE_OFFICIAL = {"生物": (21, 11, 13), "理化": (22, 28, 26), "地球科學": (7, 11, 11)}
+# 自然 (cap_competency.domain), share of all items, classified by hand item by item (113/114/115):
+# 生物 13/13/13, 理化 26/27/25, 地球科學 11/10/12; the ranges allow three items either way.
+SCIENCE_SHARES = {"生物": (0.20, 0.32), "理化": (0.46, 0.60), "地球科學": (0.16, 0.28)}
+SCIENCE_OFFICIAL = {"生物": (13, 13, 13), "理化": (26, 27, 25), "地球科學": (11, 10, 12)}
+# 課綱 coverage: every 國中 自然 volume has 4-15 items a year (七上 5/8/9, 七下 8/5/4, 八上 4/7/8,
+# 八下 11/10/9, 九上 7/13/9, 九下 15/7/11), recorded as item_spec.textbook_volumes.
+SCIENCE_VOLUME_MIN, SCIENCE_VOLUME_MAX = 3, 16
+VOLUME_NAMES = ("第一冊", "第二冊", "第三冊", "第四冊", "第五冊", "第六冊")
 
 
 def unit_of(question: dict, subject: str) -> str | None:
@@ -76792,7 +77129,7 @@ def unit_of(question: dict, subject: str) -> str | None:
     return spec.get("cap_unit")
 
 
-def unit_errors(subject: str, questions: list[dict], *, full: bool = True) -> list[str]:
+def unit_errors(subject: str, questions: list[dict], *, full: bool = True, volumes: bool = True) -> list[str]:
     """Missing or unknown units per item, and (full papers) counts outside the official ranges."""
     choice = [q for q in questions if q.get("type") == "single_choice"]
     errors: list[str] = []
@@ -76807,6 +77144,14 @@ def unit_errors(subject: str, questions: list[dict], *, full: bool = True) -> li
         elif full and choice:
             missing = [q.get("number") for q, d in zip(choice, domains) if d not in SCIENCE_SHARES]
             errors.append(f"items {missing[:12]} need cap_competency.domain (生物／理化／地球科學), 題組 items too")
+        if full and choice and volumes:
+            volumes = [next((v[:3] for v in (q.get("item_spec") or {}).get("textbook_volumes") or []
+                             if str(v)[:3] in VOLUME_NAMES), None) for q in choice]
+            for name in VOLUME_NAMES:
+                count = volumes.count(name)
+                if not SCIENCE_VOLUME_MIN <= count <= SCIENCE_VOLUME_MAX:
+                    errors.append(f"{count} items teach from {name}; official 自然 113-115 cover every volume with 4-15 items "
+                                  f"a year (keep {SCIENCE_VOLUME_MIN}-{SCIENCE_VOLUME_MAX}; textbook_volumes, main concept first)")
         return errors
     ranges = UNIT_RANGES.get(subject)
     if not ranges:
@@ -76905,9 +77250,23 @@ def schedule(subject: str, slots: list[dict], seed: str) -> dict[int, str]:
             out.update(zip(sorted(s["number"] for s in choice), pool))
         trial = [{"type": "single_choice", "number": n,
                   "item_spec": {"cap_unit": u, "cap_competency": {"domain": u}}} for n, u in out.items()]
-        if len(out) == len(choice) and not unit_errors(subject, trial):
+        if len(out) == len(choice) and not unit_errors(subject, trial, volumes=False):
             return out
     return out
+
+
+# Likely volumes per 自然 domain (各版本常見編排): the plan suggests one per slot so all six volumes appear.
+SCIENCE_VOLUME_CYCLE = {"生物": ("第一冊", "第二冊"), "地球科學": ("第五冊", "第六冊"),
+                        "理化": ("第三冊", "第四冊", "第四冊", "第五冊", "第六冊")}
+
+
+def science_volumes(slots: list[dict]) -> None:
+    seen: dict[str, int] = {}
+    for slot in sorted(slots, key=lambda s: s["number"]):
+        cycle = SCIENCE_VOLUME_CYCLE.get(slot.get("domain"))
+        if cycle and slot.get("type") == "single_choice":
+            slot["suggested_volume"] = cycle[seen.get(slot["domain"], 0) % len(cycle)]
+            seen[slot["domain"]] = seen.get(slot["domain"], 0) + 1
 </canonical-source>
 
 <canonical-source path="scripts/check_hosted_run.py">
@@ -84637,12 +84996,12 @@ SUBJECT_REFERENCES = {
     "國寫": {"current-gsat-writing-form.md", "gsat-writing-111-115-selection-calibration.md",
              "gsat-writing-source-ecology.md", "current-form-literacy-load.md"},
     # 會考 (prefixed keys; 英語 is the reading booklet only).
-    "會考國文": {"cap-execution-card.md", "current-cap-form.md"},
-    "會考英語": {"cap-execution-card.md", "current-cap-form.md"},
-    "會考數學": {"cap-execution-card.md", "current-cap-form.md"},
-    "會考社會": {"cap-execution-card.md", "current-cap-form.md", "photo-library-manifest.json"},
-    "會考自然": {"cap-execution-card.md", "current-cap-form.md", "photo-library-manifest.json"},
-    "會考寫作測驗": {"cap-execution-card.md", "current-cap-form.md"},
+    "會考國文": {"cap-execution-card.md", "current-cap-form.md", "cap-chinese.md"},
+    "會考英語": {"cap-execution-card.md", "current-cap-form.md", "cap-english.md"},
+    "會考數學": {"cap-execution-card.md", "current-cap-form.md", "cap-math.md"},
+    "會考社會": {"cap-execution-card.md", "current-cap-form.md", "cap-social.md", "photo-library-manifest.json"},
+    "會考自然": {"cap-execution-card.md", "current-cap-form.md", "cap-science.md", "photo-library-manifest.json"},
+    "會考寫作測驗": {"cap-execution-card.md", "current-cap-form.md", "cap-writing.md"},
 }
 SUBJECT_ONLY = set().union(*SUBJECT_REFERENCES.values())
 LAYOUT_SLUGS = {'國綜':'chinese','英文':'english','數學A':'math-a','數學B':'math-b',
@@ -87453,10 +87812,11 @@ CONTEXT_TYPES = SITUATED_CONTEXTS | {"學科知識", "文本閱讀"}
 PROCESSES = {"擷取訊息", "統整解釋", "推論", "應用", "評鑑"}
 # Measured on 113-115 (maintainer review 2026-11): 國文 about 30% (posts, ads, data, notices; the rest
 # reads literary and classical texts), 英語 about 55% (題組 texts; 單題 are word and structure items),
-# 數學 33-41% (115: 文旦、細菌、書店、用電量、時速錶、馬拉松、沙發), 自然 70-80%. A math paper written
+# 數學 33-41% (115: 文旦、細菌、書店、用電量、時速錶、馬拉松、沙發), 自然 about 62-80% (113-115 item by
+# item: 5-10 items a year ask a concept directly and several read a diagram without a situation). A math paper written
 # at 89% situated (M1111) dropped the bare computation, geometry and judgement items every official
 # paper has, so 數學 also has a ceiling.
-SITUATED_SHARE = {"會考國文": 0.30, "會考英語": 0.50, "會考數學": 0.30, "會考社會": 0.70, "會考自然": 0.70}
+SITUATED_SHARE = {"會考國文": 0.30, "會考英語": 0.50, "會考數學": 0.30, "會考社會": 0.70, "會考自然": 0.60}
 SITUATED_MAX = {"會考數學": 0.60}
 # Printed disclaimers that announce an invented or classroom-only world (hosted 學測 papers
 # printed 「教學模型」「非 NASA 數據」「虛構小鎮」); real, checkable situations only.
@@ -87704,8 +88064,16 @@ SPREAD_SHARE_BY_SUBJECT = {"會考英語": 0.21}
 # Extreme wording is a 社會／自然 distractor defect; 國文 options paraphrase literary texts (「毫無」
 # 「從不」 occur in official 113 國文 options) and 英語 options are English.
 EXTREME_SUBJECTS = {"會考社會", "會考自然", "會考數學"}
-# 數學 items judging two people's claims or methods (115 第 14、20、22 題; 113 第 9、24 題; 114 第 12、18 題).
-JUDGE_MIN = {"會考數學": 2}
+# 數學 items judging two people's claims or methods (115 第 14、20、22 題; 113 第 9、24 題; 114 第 12、18 題);
+# 自然 items judging a prediction, a claim or a classification (113: 6, 114: 1, 115: 4).
+JUDGE_MIN = {"會考數學": 2, "會考自然": 1}
+# 自然 experiment items (variables, procedure, results): 113-115 4-9 a year plus the 題組 experiments.
+INQUIRY_MIN = {"會考自然": 4}
+# Negative stems (「何者錯誤」「最不可能」「無法」「NOT」), 113-115 at most: 國文 5, 自然 3, 數學 1.
+NEGATIVE_STEM = re.compile(r"不可能|無法|錯誤|不正確|最不|不包含|不是|不適合|不合理|\bNOT\b|\bEXCEPT\b")
+NEGATIVE_MAX = {"會考國文": 5, "會考自然": 3, "會考數學": 1, "會考英語": 3}
+# 英語 題組 questions (113-115 by hand): 細節 5-6, 推論與字義 5-7, 主旨／目的／比較 3-7, 應用 2-3 a year.
+ENGLISH_GROUP_PROCESS_MIN = {"擷取訊息": 3, "推論": 4, "統整解釋": 3, "應用": 1}
 ABSOLUTE_SHARE = 0.05   # official up to 9%; target above official
 TRANSLATION_SHARE = 0.6   # 社會: items whose target concept the student must infer
 INTEGRATED_SHARE = 0.20  # items joining concepts across domains (社會) or curriculum strands (others)
@@ -88025,6 +88393,7 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             errors.append(f"only {fresh} of {len(assets)} photographs are newly found (web_source); the web is reachable, so "
                           "every photograph must be: search with `python scripts/web_image.py search \"…\"` and "
                           "use `web_image.py use`; the bundled photo library is the fallback when the web is unreachable")
+    errors += subject_habit_errors(exam)
     errors += option_order_errors(exam)
     errors += curve_errors(exam)
     errors += math_form_errors(exam, asset_root=asset_root)
@@ -88220,6 +88589,37 @@ def curve_errors(exam: dict) -> list[str]:
                           + ("move harder items later or make these more direct" if estimated < target else
                              "this part needs harder items: official 會考 builds from easy openings to the hardest items "
                              "before the 題組"))
+    return errors
+
+
+def subject_habit_errors(exam: dict) -> list[str]:
+    """Official 113-115 habits per subject (exam_packs/會考/metadata/official-item-analysis.json)."""
+    subject = (exam.get("metadata") or {}).get("subject")
+    choice = [q for q in exam.get("questions") or [] if isinstance(q, dict) and q.get("type") == "single_choice"]
+    errors: list[str] = []
+    if not choice:
+        return errors
+    negative = [q.get("number") for q in choice if NEGATIVE_STEM.search(re.sub(r"\s", " ", str(q.get("prompt") or ""))[-60:])]
+    if subject in NEGATIVE_MAX and len(negative) > NEGATIVE_MAX[subject]:
+        errors.append(f"items {negative} ask in the negative (「何者錯誤」「最不可能」); official {subject[2:]} 113-115 at most "
+                      f"{NEGATIVE_MAX[subject]} a paper: ask what follows, not what fails")
+    competency = lambda q: ((q.get("item_spec") or {}).get("cap_competency") or {})
+    if subject in INQUIRY_MIN:
+        inquiry = sum(competency(q).get("context_type") == "科學探究" for q in choice)
+        if inquiry < INQUIRY_MIN[subject]:
+            errors.append(f"{inquiry} items are experiments or investigations (context_type 科學探究); official 自然 has 4-9 a "
+                          "year besides the 題組: variables, a procedure, results to interpret")
+    if subject == "會考英語":
+        groups = [q for q in choice if q.get("group_stimulus") and (q.get("item_spec") or {}).get("cap_unit") != "克漏字"]
+        if len(groups) >= 10:
+            for process, least in ENGLISH_GROUP_PROCESS_MIN.items():
+                count = sum(competency(q).get("process") == process for q in groups)
+                if count < least:
+                    errors.append(f"{count} 題組 questions ask for {process}; official 英語 113-115 ask at least {least} "
+                                  "(details, inference and word meaning in context, main idea or purpose, applying the text)")
+        singles = [q for q in choice if not q.get("group_stimulus")]
+        if singles and not any(q.get("visual_asset") for q in singles):
+            errors.append("英語 113-115 open the 單題 with a picture item (「Look at the picture.」): give one 單題 a picture")
     return errors
 </canonical-source>
 

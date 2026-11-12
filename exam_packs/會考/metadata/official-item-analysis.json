@@ -1,0 +1,1218 @@
+{
+ "purpose": "Item-by-item classification of the official 會考 113-115 booklets: labels only, no official text.",
+ "method": "Classified by hand from each item's stem, material and options (maintainer review, 2026-11). Labels are judgements, not official categories; volumes are the likely 國中 textbook volume of the main concept.",
+ "legend": {
+  "自然.form": {
+   "P": "生活情境或新聞、史料中的現象",
+   "E": "實驗探究（變因、步驟、結果）",
+   "G": "圖表判讀",
+   "J": "判斷他人的看法、預測或分類",
+   "C": "直接考概念",
+   "Q": "計算",
+   "R": "閱讀題組"
+  },
+  "英語.groups": {
+   "D": "細節擷取",
+   "I": "推論",
+   "V": "依上下文判斷字義",
+   "M": "主旨或作者目的",
+   "A": "把資訊用到情境",
+   "C": "指涉或比較",
+   "Z": "克漏字"
+  }
+ },
+ "自然": {
+  "113": [
+   {
+    "number": 1,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "P"
+   },
+   {
+    "number": 2,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "P"
+   },
+   {
+    "number": 3,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "G"
+   },
+   {
+    "number": 4,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "G"
+   },
+   {
+    "number": 5,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "P"
+   },
+   {
+    "number": 6,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "P"
+   },
+   {
+    "number": 7,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "P"
+   },
+   {
+    "number": 8,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "P"
+   },
+   {
+    "number": 9,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "J"
+   },
+   {
+    "number": 10,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 11,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "C"
+   },
+   {
+    "number": 12,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "J"
+   },
+   {
+    "number": 13,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "E"
+   },
+   {
+    "number": 14,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "G"
+   },
+   {
+    "number": 15,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "G"
+   },
+   {
+    "number": 16,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "P"
+   },
+   {
+    "number": 17,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "E"
+   },
+   {
+    "number": 18,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "P"
+   },
+   {
+    "number": 19,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "G"
+   },
+   {
+    "number": 20,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "J"
+   },
+   {
+    "number": 21,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "E"
+   },
+   {
+    "number": 22,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "J"
+   },
+   {
+    "number": 23,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "P"
+   },
+   {
+    "number": 24,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "G"
+   },
+   {
+    "number": 25,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 26,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "C"
+   },
+   {
+    "number": 27,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "G"
+   },
+   {
+    "number": 28,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "J"
+   },
+   {
+    "number": 29,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "E"
+   },
+   {
+    "number": 30,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "C"
+   },
+   {
+    "number": 31,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "P"
+   },
+   {
+    "number": 32,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "P"
+   },
+   {
+    "number": 33,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "G"
+   },
+   {
+    "number": 34,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "G"
+   },
+   {
+    "number": 35,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 36,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "C"
+   },
+   {
+    "number": 37,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "Q"
+   },
+   {
+    "number": 38,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "J"
+   },
+   {
+    "number": 39,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "P"
+   },
+   {
+    "number": 40,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "C"
+   },
+   {
+    "number": 41,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "G"
+   },
+   {
+    "number": 42,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "R"
+   },
+   {
+    "number": 43,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "R"
+   },
+   {
+    "number": 44,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "R"
+   },
+   {
+    "number": 45,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "R"
+   },
+   {
+    "number": 46,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "R"
+   },
+   {
+    "number": 47,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "R"
+   },
+   {
+    "number": 48,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "R"
+   },
+   {
+    "number": 49,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "R"
+   },
+   {
+    "number": 50,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "R"
+   }
+  ],
+  "114": [
+   {
+    "number": 1,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "P"
+   },
+   {
+    "number": 2,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "E"
+   },
+   {
+    "number": 3,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "P"
+   },
+   {
+    "number": 4,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "G"
+   },
+   {
+    "number": 5,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "G"
+   },
+   {
+    "number": 6,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "P"
+   },
+   {
+    "number": 7,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "J"
+   },
+   {
+    "number": 8,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "C"
+   },
+   {
+    "number": 9,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "C"
+   },
+   {
+    "number": 10,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "C"
+   },
+   {
+    "number": 11,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "P"
+   },
+   {
+    "number": 12,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "P"
+   },
+   {
+    "number": 13,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "P"
+   },
+   {
+    "number": 14,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "C"
+   },
+   {
+    "number": 15,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 16,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 17,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "C"
+   },
+   {
+    "number": 18,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 19,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "P"
+   },
+   {
+    "number": 20,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "G"
+   },
+   {
+    "number": 21,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "E"
+   },
+   {
+    "number": 22,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "E"
+   },
+   {
+    "number": 23,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "C"
+   },
+   {
+    "number": 24,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "G"
+   },
+   {
+    "number": 25,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "E"
+   },
+   {
+    "number": 26,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "E"
+   },
+   {
+    "number": 27,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "P"
+   },
+   {
+    "number": 28,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "E"
+   },
+   {
+    "number": 29,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "C"
+   },
+   {
+    "number": 30,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "C"
+   },
+   {
+    "number": 31,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "E"
+   },
+   {
+    "number": 32,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "Q"
+   },
+   {
+    "number": 33,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "P"
+   },
+   {
+    "number": 34,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "G"
+   },
+   {
+    "number": 35,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "C"
+   },
+   {
+    "number": 36,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "E"
+   },
+   {
+    "number": 37,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "C"
+   },
+   {
+    "number": 38,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "E"
+   },
+   {
+    "number": 39,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 40,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "P"
+   },
+   {
+    "number": 41,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "G"
+   },
+   {
+    "number": 42,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "P"
+   },
+   {
+    "number": 43,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "R"
+   },
+   {
+    "number": 44,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "R"
+   },
+   {
+    "number": 45,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "R"
+   },
+   {
+    "number": 46,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "R"
+   },
+   {
+    "number": 47,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "R"
+   },
+   {
+    "number": 48,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "R"
+   },
+   {
+    "number": 49,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "R"
+   },
+   {
+    "number": 50,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "R"
+   }
+  ],
+  "115": [
+   {
+    "number": 1,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "E"
+   },
+   {
+    "number": 2,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "P"
+   },
+   {
+    "number": 3,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "C"
+   },
+   {
+    "number": 4,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 5,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "E"
+   },
+   {
+    "number": 6,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "G"
+   },
+   {
+    "number": 7,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "C"
+   },
+   {
+    "number": 8,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "P"
+   },
+   {
+    "number": 9,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "P"
+   },
+   {
+    "number": 10,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "P"
+   },
+   {
+    "number": 11,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "G"
+   },
+   {
+    "number": 12,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "E"
+   },
+   {
+    "number": 13,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "P"
+   },
+   {
+    "number": 14,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "P"
+   },
+   {
+    "number": 15,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "P"
+   },
+   {
+    "number": 16,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "E"
+   },
+   {
+    "number": 17,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "J"
+   },
+   {
+    "number": 18,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "C"
+   },
+   {
+    "number": 19,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "P"
+   },
+   {
+    "number": 20,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "P"
+   },
+   {
+    "number": 21,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "Q"
+   },
+   {
+    "number": 22,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "J"
+   },
+   {
+    "number": 23,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "E"
+   },
+   {
+    "number": 24,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "C"
+   },
+   {
+    "number": 25,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "E"
+   },
+   {
+    "number": 26,
+    "domain": "地球科學",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 27,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "J"
+   },
+   {
+    "number": 28,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "P"
+   },
+   {
+    "number": 29,
+    "domain": "生物",
+    "volume": "七下",
+    "form": "P"
+   },
+   {
+    "number": 30,
+    "domain": "理化",
+    "volume": "八上",
+    "form": "G"
+   },
+   {
+    "number": 31,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "C"
+   },
+   {
+    "number": 32,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "Q"
+   },
+   {
+    "number": 33,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "C"
+   },
+   {
+    "number": 34,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "G"
+   },
+   {
+    "number": 35,
+    "domain": "理化",
+    "volume": "九下",
+    "form": "E"
+   },
+   {
+    "number": 36,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "Q"
+   },
+   {
+    "number": 37,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "G"
+   },
+   {
+    "number": 38,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "G"
+   },
+   {
+    "number": 39,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "J"
+   },
+   {
+    "number": 40,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "C"
+   },
+   {
+    "number": 41,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "G"
+   },
+   {
+    "number": 42,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "R"
+   },
+   {
+    "number": 43,
+    "domain": "地球科學",
+    "volume": "九下",
+    "form": "R"
+   },
+   {
+    "number": 44,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "R"
+   },
+   {
+    "number": 45,
+    "domain": "生物",
+    "volume": "七上",
+    "form": "R"
+   },
+   {
+    "number": 46,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "R"
+   },
+   {
+    "number": 47,
+    "domain": "理化",
+    "volume": "九上",
+    "form": "R"
+   },
+   {
+    "number": 48,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "R"
+   },
+   {
+    "number": 49,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "R"
+   },
+   {
+    "number": 50,
+    "domain": "理化",
+    "volume": "八下",
+    "form": "R"
+   }
+  ]
+ },
+ "英語": {
+  "113": {
+   "singles": [
+    "字彙",
+    "字彙",
+    "字彙",
+    "字彙",
+    "字彙",
+    "文法",
+    "文法",
+    "字彙",
+    "字彙",
+    "字彙",
+    "文法",
+    "文法",
+    "字彙",
+    "文法",
+    "文法",
+    "字彙",
+    "字彙",
+    "字彙",
+    "文法",
+    "文法",
+    "文法"
+   ],
+   "picture_item": 1,
+   "groups": [
+    "D",
+    "I",
+    "A",
+    "D",
+    "D",
+    "A",
+    "I",
+    "C",
+    "M",
+    "I",
+    "I",
+    "D",
+    "D",
+    "V",
+    "V",
+    "D",
+    "M",
+    "I",
+    "Z",
+    "Z",
+    "Z",
+    "Z"
+   ]
+  },
+  "114": {
+   "singles": [
+    "字彙",
+    "字彙",
+    "字彙",
+    "文法",
+    "字彙",
+    "字彙",
+    "字彙",
+    "文法",
+    "字彙",
+    "文法",
+    "文法",
+    "字彙",
+    "字彙",
+    "文法",
+    "文法",
+    "字彙",
+    "文法",
+    "文法",
+    "文法"
+   ],
+   "picture_item": 1,
+   "groups": [
+    "D",
+    "D",
+    "I",
+    "V",
+    "D",
+    "A",
+    "D",
+    "M",
+    "V",
+    "M",
+    "I",
+    "C",
+    "M",
+    "D",
+    "A",
+    "M",
+    "I",
+    "M",
+    "Z",
+    "Z",
+    "Z",
+    "Z",
+    "Z",
+    "Z"
+   ]
+  },
+  "115": {
+   "singles": [
+    "字彙",
+    "字彙",
+    "字彙",
+    "字彙",
+    "字彙",
+    "文法",
+    "字彙",
+    "文法",
+    "文法",
+    "文法",
+    "文法",
+    "文法",
+    "字彙",
+    "字彙",
+    "字彙",
+    "文法",
+    "文法",
+    "文法",
+    "文法"
+   ],
+   "picture_item": 1,
+   "groups": [
+    "A",
+    "D",
+    "I",
+    "V",
+    "M",
+    "A",
+    "A",
+    "D",
+    "C",
+    "M",
+    "D",
+    "M",
+    "M",
+    "D",
+    "I",
+    "V",
+    "D",
+    "C",
+    "I",
+    "C",
+    "Z",
+    "Z",
+    "Z",
+    "Z"
+   ]
+  }
+ },
+ "國文": {
+  "113": [
+   "資訊與圖表",
+   "語文知識",
+   "語文知識",
+   "資訊與圖表",
+   "資訊與圖表",
+   "語文知識",
+   "白話文學",
+   "語文知識",
+   "資訊與圖表",
+   "語文知識",
+   "語文知識",
+   "詩歌",
+   "白話文學",
+   "詩歌",
+   "資訊與圖表",
+   "語文知識",
+   "語文知識",
+   "文言文本",
+   "文言文本",
+   "語文知識",
+   "文言文本",
+   "文言文本",
+   "資訊與圖表",
+   "文言文本",
+   "白話文學",
+   "白話文學",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "白話文學",
+   "白話文學",
+   "文言文本",
+   "文言文本",
+   "文言文本",
+   "文言文本",
+   "文言文本"
+  ],
+  "114": [
+   "資訊與圖表",
+   "資訊與圖表",
+   "語文知識",
+   "詩歌",
+   "語文知識",
+   "資訊與圖表",
+   "資訊與圖表",
+   "詩歌",
+   "資訊與圖表",
+   "文言文本",
+   "白話文學",
+   "語文知識",
+   "語文知識",
+   "語文知識",
+   "資訊與圖表",
+   "語文知識",
+   "詩歌",
+   "詩歌",
+   "語文知識",
+   "文言文本",
+   "資訊與圖表",
+   "文言文本",
+   "文言文本",
+   "文言文本",
+   "白話文學",
+   "白話文學",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "白話文學",
+   "白話文學",
+   "白話文學",
+   "白話文學",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "文言文本",
+   "文言文本",
+   "語文知識",
+   "文言文本",
+   "文言文本"
+  ],
+  "115": [
+   "語文知識",
+   "資訊與圖表",
+   "資訊與圖表",
+   "語文知識",
+   "語文知識",
+   "語文知識",
+   "語文知識",
+   "資訊與圖表",
+   "詩歌",
+   "語文知識",
+   "白話文學",
+   "文言文本",
+   "文言文本",
+   "資訊與圖表",
+   "資訊與圖表",
+   "語文知識",
+   "白話文學",
+   "文言文本",
+   "語文知識",
+   "文言文本",
+   "文言文本",
+   "文言文本",
+   "詩歌",
+   "詩歌",
+   "詩歌",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "白話文學",
+   "白話文學",
+   "白話文學",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "資訊與圖表",
+   "文言文本",
+   "文言文本",
+   "文言文本",
+   "文言文本"
+  ]
+ }
+}

@@ -34,10 +34,11 @@ CONTEXT_TYPES = SITUATED_CONTEXTS | {"學科知識", "文本閱讀"}
 PROCESSES = {"擷取訊息", "統整解釋", "推論", "應用", "評鑑"}
 # Measured on 113-115 (maintainer review 2026-11): 國文 about 30% (posts, ads, data, notices; the rest
 # reads literary and classical texts), 英語 about 55% (題組 texts; 單題 are word and structure items),
-# 數學 33-41% (115: 文旦、細菌、書店、用電量、時速錶、馬拉松、沙發), 自然 70-80%. A math paper written
+# 數學 33-41% (115: 文旦、細菌、書店、用電量、時速錶、馬拉松、沙發), 自然 about 62-80% (113-115 item by
+# item: 5-10 items a year ask a concept directly and several read a diagram without a situation). A math paper written
 # at 89% situated (M1111) dropped the bare computation, geometry and judgement items every official
 # paper has, so 數學 also has a ceiling.
-SITUATED_SHARE = {"會考國文": 0.30, "會考英語": 0.50, "會考數學": 0.30, "會考社會": 0.70, "會考自然": 0.70}
+SITUATED_SHARE = {"會考國文": 0.30, "會考英語": 0.50, "會考數學": 0.30, "會考社會": 0.70, "會考自然": 0.60}
 SITUATED_MAX = {"會考數學": 0.60}
 # Printed disclaimers that announce an invented or classroom-only world (hosted 學測 papers
 # printed 「教學模型」「非 NASA 數據」「虛構小鎮」); real, checkable situations only.

@@ -25,11 +25,11 @@ MATH_OFFICIAL = {
 }
 # 國文 items 1-42: 語文知識 = 字音字形字義、詞語成語、標點、六書字體、題辭稱謂；詩歌 = 古典詩詞曲與現代詩；
 # 文言文本 = 文言散文、筆記、史傳；白話文學 = 白話散文、小說、劇本；資訊與圖表 = 說明議論、資料、海報貼文、圖表。
-CHINESE_OFFICIAL = {"語文知識": (9, 7, 8), "詩歌": (2, 4, 4), "文言文本": (10, 10, 10), "白話文學": (6, 7, 6),
-                    "資訊與圖表": (15, 14, 14)}
+CHINESE_OFFICIAL = {"語文知識": (9, 8, 8), "詩歌": (2, 4, 4), "文言文本": (10, 9, 10), "白話文學": (6, 7, 5),
+                    "資訊與圖表": (15, 14, 15)}   # exam_packs/會考/metadata/official-item-analysis.json
 # 英語 items 1-43: 單題 (113: 1-21; 114, 115: 1-19) are 字彙 or 文法; 題組 by text type, the last
 # group a 克漏字 passage every year.
-ENGLISH_OFFICIAL = {"字彙": (None, None, 9), "文法": (None, None, 10), "實用文本": (4, 3, 5), "圖文對話": (0, 5, 2),
+ENGLISH_OFFICIAL = {"字彙": (12, 10, 9), "文法": (9, 9, 10), "實用文本": (4, 3, 5), "圖文對話": (0, 5, 2),
                     "記敘文本": (4, 2, 5), "說明文本": (10, 8, 8), "克漏字": (4, 6, 4)}
 
 # Mean printed position of each 數學 unit in 113-115 (circles and similar triangles close the paper,
@@ -54,9 +54,14 @@ SINGLE_UNITS = {"會考英語": ("字彙", "文法")}
 GROUP_UNITS = {"會考英語": ("實用文本", "圖文對話", "記敘文本", "說明文本"),
                "會考國文": ("詩歌", "文言文本", "白話文學", "資訊與圖表")}
 DATA_UNITS_MAX = {"會考數學": (("統計", "機率"), 3)}   # official 2 a year; M1111 printed 5
-# 自然 (cap_competency.domain), share of all items. 115 by hand 13/26/11; 113-114 by keyword.
-SCIENCE_SHARES = {"生物": (0.22, 0.38), "理化": (0.42, 0.58), "地球科學": (0.14, 0.26)}
-SCIENCE_OFFICIAL = {"生物": (21, 11, 13), "理化": (22, 28, 26), "地球科學": (7, 11, 11)}
+# 自然 (cap_competency.domain), share of all items, classified by hand item by item (113/114/115):
+# 生物 13/13/13, 理化 26/27/25, 地球科學 11/10/12; the ranges allow three items either way.
+SCIENCE_SHARES = {"生物": (0.20, 0.32), "理化": (0.46, 0.60), "地球科學": (0.16, 0.28)}
+SCIENCE_OFFICIAL = {"生物": (13, 13, 13), "理化": (26, 27, 25), "地球科學": (11, 10, 12)}
+# 課綱 coverage: every 國中 自然 volume has 4-15 items a year (七上 5/8/9, 七下 8/5/4, 八上 4/7/8,
+# 八下 11/10/9, 九上 7/13/9, 九下 15/7/11), recorded as item_spec.textbook_volumes.
+SCIENCE_VOLUME_MIN, SCIENCE_VOLUME_MAX = 3, 16
+VOLUME_NAMES = ("第一冊", "第二冊", "第三冊", "第四冊", "第五冊", "第六冊")
 
 
 def unit_of(question: dict, subject: str) -> str | None:
@@ -67,7 +72,7 @@ def unit_of(question: dict, subject: str) -> str | None:
     return spec.get("cap_unit")
 
 
-def unit_errors(subject: str, questions: list[dict], *, full: bool = True) -> list[str]:
+def unit_errors(subject: str, questions: list[dict], *, full: bool = True, volumes: bool = True) -> list[str]:
     """Missing or unknown units per item, and (full papers) counts outside the official ranges."""
     choice = [q for q in questions if q.get("type") == "single_choice"]
     errors: list[str] = []
@@ -82,6 +87,14 @@ def unit_errors(subject: str, questions: list[dict], *, full: bool = True) -> li
         elif full and choice:
             missing = [q.get("number") for q, d in zip(choice, domains) if d not in SCIENCE_SHARES]
             errors.append(f"items {missing[:12]} need cap_competency.domain (生物／理化／地球科學), 題組 items too")
+        if full and choice and volumes:
+            volumes = [next((v[:3] for v in (q.get("item_spec") or {}).get("textbook_volumes") or []
+                             if str(v)[:3] in VOLUME_NAMES), None) for q in choice]
+            for name in VOLUME_NAMES:
+                count = volumes.count(name)
+                if not SCIENCE_VOLUME_MIN <= count <= SCIENCE_VOLUME_MAX:
+                    errors.append(f"{count} items teach from {name}; official 自然 113-115 cover every volume with 4-15 items "
+                                  f"a year (keep {SCIENCE_VOLUME_MIN}-{SCIENCE_VOLUME_MAX}; textbook_volumes, main concept first)")
         return errors
     ranges = UNIT_RANGES.get(subject)
     if not ranges:
@@ -180,6 +193,20 @@ def schedule(subject: str, slots: list[dict], seed: str) -> dict[int, str]:
             out.update(zip(sorted(s["number"] for s in choice), pool))
         trial = [{"type": "single_choice", "number": n,
                   "item_spec": {"cap_unit": u, "cap_competency": {"domain": u}}} for n, u in out.items()]
-        if len(out) == len(choice) and not unit_errors(subject, trial):
+        if len(out) == len(choice) and not unit_errors(subject, trial, volumes=False):
             return out
     return out
+
+
+# Likely volumes per 自然 domain (各版本常見編排): the plan suggests one per slot so all six volumes appear.
+SCIENCE_VOLUME_CYCLE = {"生物": ("第一冊", "第二冊"), "地球科學": ("第五冊", "第六冊"),
+                        "理化": ("第三冊", "第四冊", "第四冊", "第五冊", "第六冊")}
+
+
+def science_volumes(slots: list[dict]) -> None:
+    seen: dict[str, int] = {}
+    for slot in sorted(slots, key=lambda s: s["number"]):
+        cycle = SCIENCE_VOLUME_CYCLE.get(slot.get("domain"))
+        if cycle and slot.get("type") == "single_choice":
+            slot["suggested_volume"] = cycle[seen.get(slot["domain"], 0) % len(cycle)]
+            seen[slot["domain"]] = seen.get(slot["domain"], 0) + 1
