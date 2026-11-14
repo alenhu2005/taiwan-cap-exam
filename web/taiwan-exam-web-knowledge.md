@@ -85,10 +85,10 @@ attachments; extract only the selected subject's components.
 [
   {
     "path": "SKILL.md",
-    "bytes": 91631,
-    "sha256": "c742558630669665da1935ceb576f2e3f2936836a2f6bb1f1194555259d80b2a",
-    "embedded_bytes": 91631,
-    "embedded_sha256": "c742558630669665da1935ceb576f2e3f2936836a2f6bb1f1194555259d80b2a"
+    "bytes": 91979,
+    "sha256": "8105538fb5171df1d154e2b2ccd5bc92cc83c1e5de1a8ef22e0994b89d9d8d23",
+    "embedded_bytes": 91979,
+    "embedded_sha256": "8105538fb5171df1d154e2b2ccd5bc92cc83c1e5de1a8ef22e0994b89d9d8d23"
   },
   {
     "path": "core/taxonomy.json",
@@ -462,11 +462,67 @@ attachments; extract only the selected subject's components.
     "embedded_sha256": "50e2212a94980b7fac8ab8fd76dd953dbd58f6901cf70b42ef42b680ca1af6f8"
   },
   {
+    "path": "exam_packs/會考/curriculum/國文.json",
+    "bytes": 12311,
+    "sha256": "775803951ad4f7731e09e6ba263642e2ceaec327a9923eefd22b8dad9c62dd78",
+    "embedded_bytes": 12311,
+    "embedded_sha256": "775803951ad4f7731e09e6ba263642e2ceaec327a9923eefd22b8dad9c62dd78"
+  },
+  {
+    "path": "exam_packs/會考/curriculum/數學.json",
+    "bytes": 33385,
+    "sha256": "89a7bd9e295ebdcee15010fde2b26cfe241cbcd6cd1a7f3499bea9819f25f6cd",
+    "embedded_bytes": 33385,
+    "embedded_sha256": "89a7bd9e295ebdcee15010fde2b26cfe241cbcd6cd1a7f3499bea9819f25f6cd"
+  },
+  {
+    "path": "exam_packs/會考/curriculum/社會.json",
+    "bytes": 69339,
+    "sha256": "97cd94c667861f372d1f51e61ae727ade39a4f833e0cd6b7e3ecdf671728ac0d",
+    "embedded_bytes": 69339,
+    "embedded_sha256": "97cd94c667861f372d1f51e61ae727ade39a4f833e0cd6b7e3ecdf671728ac0d"
+  },
+  {
+    "path": "exam_packs/會考/curriculum/自然.json",
+    "bytes": 65062,
+    "sha256": "fb9b3e7fd645788470c5305e7eda7fd6e4f5bb03ce16824cac1b4e6e5ad5213f",
+    "embedded_bytes": 65062,
+    "embedded_sha256": "fb9b3e7fd645788470c5305e7eda7fd6e4f5bb03ce16824cac1b4e6e5ad5213f"
+  },
+  {
+    "path": "exam_packs/會考/curriculum/英語.json",
+    "bytes": 16619,
+    "sha256": "a3e0a4e468192f905b5c18fba4da2be0c25a8f38d3e02a1a4e31f3d3d620c2a6",
+    "embedded_bytes": 16619,
+    "embedded_sha256": "a3e0a4e468192f905b5c18fba4da2be0c25a8f38d3e02a1a4e31f3d3d620c2a6"
+  },
+  {
     "path": "exam_packs/會考/manifest.json",
     "bytes": 333,
     "sha256": "b31a7e066b9dc81ca29e6147ad8e8c57918284afb0854858e99d134cfa879ca8",
     "embedded_bytes": 333,
     "embedded_sha256": "b31a7e066b9dc81ca29e6147ad8e8c57918284afb0854858e99d134cfa879ca8"
+  },
+  {
+    "path": "exam_packs/會考/maps/east-asia-countries.json",
+    "bytes": 92945,
+    "sha256": "b5810acdb897f7df8389df1dd04140eaf1032a0349bb1e5de80395c4a71e53a4",
+    "embedded_bytes": 92946,
+    "embedded_sha256": "4513bd93506c81628e261a23a76038e0fa9bc550dd7bf6bba19573dee38cc5b1"
+  },
+  {
+    "path": "exam_packs/會考/maps/taiwan-counties.json",
+    "bytes": 51890,
+    "sha256": "30ec358797b2f854ff3fd9b5bf4265874a361d671017274bee60043674f6f918",
+    "embedded_bytes": 51891,
+    "embedded_sha256": "9d2a6fa834d26b69d02e5f7387e9d74d4cbf52221005a02d335d150ad4a33e3d"
+  },
+  {
+    "path": "exam_packs/會考/maps/world-countries.json",
+    "bytes": 95859,
+    "sha256": "6192f032f1d61acf71d72e8bcb6e3e6909e8ee2ed1043f1cb25aa8c98b2b53ea",
+    "embedded_bytes": 95860,
+    "embedded_sha256": "de5024f39ec00129a2c6dc6ac7cec087ee228385ea6448ead16a044b25f72952"
   },
   {
     "path": "exam_packs/會考/metadata/hosted-page-metrics.json",
@@ -624,45 +680,59 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "references/cap-chinese.md",
-    "bytes": 3146,
-    "sha256": "8429be33c17390974fdb6e7c95a61dae541fdeda9e8ff84fbd3e305a798a6071",
-    "embedded_bytes": 3146,
-    "embedded_sha256": "8429be33c17390974fdb6e7c95a61dae541fdeda9e8ff84fbd3e305a798a6071"
+    "bytes": 3359,
+    "sha256": "88fb5ed5790cf2e1f41168408a1051b2f2ae6dfdaa61ab14ab9821b58b2d2107",
+    "embedded_bytes": 3359,
+    "embedded_sha256": "88fb5ed5790cf2e1f41168408a1051b2f2ae6dfdaa61ab14ab9821b58b2d2107"
+  },
+  {
+    "path": "references/cap-data-sources.md",
+    "bytes": 3314,
+    "sha256": "251529c3094f2ed295fceb5f07292ae777ad04b889852881475d3daa36fc6760",
+    "embedded_bytes": 3314,
+    "embedded_sha256": "251529c3094f2ed295fceb5f07292ae777ad04b889852881475d3daa36fc6760"
   },
   {
     "path": "references/cap-english.md",
-    "bytes": 2794,
-    "sha256": "7a811f72c0b64b1c5dd222b25813fad3967ce8460277da8d95a368f634dad813",
-    "embedded_bytes": 2794,
-    "embedded_sha256": "7a811f72c0b64b1c5dd222b25813fad3967ce8460277da8d95a368f634dad813"
+    "bytes": 3000,
+    "sha256": "c79f2464f0d772ae336769abe2893fa0c24f977f8829f22c7c95bfbab1580b63",
+    "embedded_bytes": 3000,
+    "embedded_sha256": "c79f2464f0d772ae336769abe2893fa0c24f977f8829f22c7c95bfbab1580b63"
   },
   {
     "path": "references/cap-execution-card.md",
-    "bytes": 9194,
-    "sha256": "277c3d87646e13cc17575fb64ab2cc9b827e82f6f2f7d9af6dfc8b4216e63f4f",
-    "embedded_bytes": 9194,
-    "embedded_sha256": "277c3d87646e13cc17575fb64ab2cc9b827e82f6f2f7d9af6dfc8b4216e63f4f"
+    "bytes": 8198,
+    "sha256": "5b31f9a75669ee720f37b7f0983ccbf5aa318a9cd2abce77d94ece0423cd4fe3",
+    "embedded_bytes": 8198,
+    "embedded_sha256": "5b31f9a75669ee720f37b7f0983ccbf5aa318a9cd2abce77d94ece0423cd4fe3"
   },
   {
     "path": "references/cap-math.md",
-    "bytes": 4511,
-    "sha256": "b6a8aa9979e619e9224476607794f4aa71b1a87b7376d4a7dacfbc2f60e90be4",
-    "embedded_bytes": 4511,
-    "embedded_sha256": "b6a8aa9979e619e9224476607794f4aa71b1a87b7376d4a7dacfbc2f60e90be4"
+    "bytes": 4805,
+    "sha256": "f4868d775d99a2fe3023dba2e07e02940df1a22fbd920b2c7725a3e3181a9586",
+    "embedded_bytes": 4805,
+    "embedded_sha256": "f4868d775d99a2fe3023dba2e07e02940df1a22fbd920b2c7725a3e3181a9586"
   },
   {
     "path": "references/cap-science.md",
-    "bytes": 3692,
-    "sha256": "47444b71666ffa7aab8de29eb41baa8ac9dbb2ad891041a5966d184bd18a1101",
-    "embedded_bytes": 3692,
-    "embedded_sha256": "47444b71666ffa7aab8de29eb41baa8ac9dbb2ad891041a5966d184bd18a1101"
+    "bytes": 4004,
+    "sha256": "7a52ca744a68f6d520a01e74008dc9a36881b325afd70ccdea5029aa0907048b",
+    "embedded_bytes": 4004,
+    "embedded_sha256": "7a52ca744a68f6d520a01e74008dc9a36881b325afd70ccdea5029aa0907048b"
   },
   {
     "path": "references/cap-social.md",
-    "bytes": 1733,
-    "sha256": "91995715bbb0ead10c097664d187840fdaeadb074b5296f8d295ed1f4674508e",
-    "embedded_bytes": 1733,
-    "embedded_sha256": "91995715bbb0ead10c097664d187840fdaeadb074b5296f8d295ed1f4674508e"
+    "bytes": 2421,
+    "sha256": "b860ad9c0020c54f6acba7f067cb61846edec753fe49ebdfd9cab98e2dd4713a",
+    "embedded_bytes": 2421,
+    "embedded_sha256": "b860ad9c0020c54f6acba7f067cb61846edec753fe49ebdfd9cab98e2dd4713a"
+  },
+  {
+    "path": "references/cap-workflow.md",
+    "bytes": 5119,
+    "sha256": "847a67b05f89c897356dfdbfa3d5df63b4e22e88d499c0408a9ba959bd8e209c",
+    "embedded_bytes": 5119,
+    "embedded_sha256": "847a67b05f89c897356dfdbfa3d5df63b4e22e88d499c0408a9ba959bd8e209c"
   },
   {
     "path": "references/cap-writing.md",
@@ -673,10 +743,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "references/current-cap-form.md",
-    "bytes": 17928,
-    "sha256": "c71f38af3681bf43aa6838fdf528c60b349f7877569fd0fb1c1bdf05b5347435",
-    "embedded_bytes": 17928,
-    "embedded_sha256": "c71f38af3681bf43aa6838fdf528c60b349f7877569fd0fb1c1bdf05b5347435"
+    "bytes": 18761,
+    "sha256": "c1f393a26474f2314b823adf1f5036d8e9c80722f0a155a94799b98e65a7a246",
+    "embedded_bytes": 18761,
+    "embedded_sha256": "c1f393a26474f2314b823adf1f5036d8e9c80722f0a155a94799b98e65a7a246"
   },
   {
     "path": "references/current-form-literacy-load.md",
@@ -1051,10 +1121,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/append_items.py",
-    "bytes": 26375,
-    "sha256": "23ad208e22fabc7cd2b0a171acd5b86fae36c1d39affb5cad4854d9186bb4e5d",
-    "embedded_bytes": 26375,
-    "embedded_sha256": "23ad208e22fabc7cd2b0a171acd5b86fae36c1d39affb5cad4854d9186bb4e5d"
+    "bytes": 28039,
+    "sha256": "5a38ec2628c7367bb6097a2e2d068ba12537da147d25c340c55fa0ebfbaa844e",
+    "embedded_bytes": 28039,
+    "embedded_sha256": "5a38ec2628c7367bb6097a2e2d068ba12537da147d25c340c55fa0ebfbaa844e"
   },
   {
     "path": "scripts/audit_item_originality.py",
@@ -1071,11 +1141,25 @@ attachments; extract only the selected subject's components.
     "embedded_sha256": "8d902fa71eb9d77144a6e49b49c340b96d294edfc69ffa0bb478da98ba367d68"
   },
   {
+    "path": "scripts/cap_batch.py",
+    "bytes": 5308,
+    "sha256": "75749a0bc8bc2ece8593effe9a20671f8f75f4bb95cb7dc9e944c6416b62b392",
+    "embedded_bytes": 5308,
+    "embedded_sha256": "75749a0bc8bc2ece8593effe9a20671f8f75f4bb95cb7dc9e944c6416b62b392"
+  },
+  {
+    "path": "scripts/cap_charts.py",
+    "bytes": 18875,
+    "sha256": "0040433d13cb9c93d1e83f17c558b82c504f0923acfd9a791434a7f6697cfb16",
+    "embedded_bytes": 18875,
+    "embedded_sha256": "0040433d13cb9c93d1e83f17c558b82c504f0923acfd9a791434a7f6697cfb16"
+  },
+  {
     "path": "scripts/cap_draw.py",
-    "bytes": 15523,
-    "sha256": "22b719b31711e7679991d89236c033f878950b85277c8959a20c57f49ba2c824",
-    "embedded_bytes": 15523,
-    "embedded_sha256": "22b719b31711e7679991d89236c033f878950b85277c8959a20c57f49ba2c824"
+    "bytes": 16203,
+    "sha256": "bdaf61ac35000a82df07a08f5b38bdf0348925590696274d55b0c8a21bc509ff",
+    "embedded_bytes": 16203,
+    "embedded_sha256": "bdaf61ac35000a82df07a08f5b38bdf0348925590696274d55b0c8a21bc509ff"
   },
   {
     "path": "scripts/cap_figure.py",
@@ -1086,17 +1170,24 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/cap_plan.py",
-    "bytes": 39123,
-    "sha256": "86719d554086dedfaaa3b6bc1bb975b10992b10d32aa59200aef83bcbc4bc915",
-    "embedded_bytes": 39123,
-    "embedded_sha256": "86719d554086dedfaaa3b6bc1bb975b10992b10d32aa59200aef83bcbc4bc915"
+    "bytes": 44883,
+    "sha256": "6bb9fbf69f5d4e040e82165d5702b6c5443f47e5d9ec0c0f0b2c735f6efd7718",
+    "embedded_bytes": 44883,
+    "embedded_sha256": "6bb9fbf69f5d4e040e82165d5702b6c5443f47e5d9ec0c0f0b2c735f6efd7718"
+  },
+  {
+    "path": "scripts/cap_review_book.py",
+    "bytes": 11265,
+    "sha256": "5e7fe27cac3efd6c73756e587102498ac7f6a323afb2d32ad5dff43f900b0337",
+    "embedded_bytes": 11265,
+    "embedded_sha256": "5e7fe27cac3efd6c73756e587102498ac7f6a323afb2d32ad5dff43f900b0337"
   },
   {
     "path": "scripts/cap_units.py",
-    "bytes": 13049,
-    "sha256": "55f765dc6ea3d2f675c389a8f2f386dee3500b2d1c70ae953c47360f2a27e845",
-    "embedded_bytes": 13049,
-    "embedded_sha256": "55f765dc6ea3d2f675c389a8f2f386dee3500b2d1c70ae953c47360f2a27e845"
+    "bytes": 20076,
+    "sha256": "3939903bdf9c4b6ba26c8c77d2cb17494ee7c4dec2fbfecc8bc3a732ec9dd44d",
+    "embedded_bytes": 20076,
+    "embedded_sha256": "3939903bdf9c4b6ba26c8c77d2cb17494ee7c4dec2fbfecc8bc3a732ec9dd44d"
   },
   {
     "path": "scripts/check_hosted_run.py",
@@ -1156,10 +1247,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/hosted_body_templates.py",
-    "bytes": 78653,
-    "sha256": "be559795e6067f0d0f6e441caa122de713993072a7bcee368e703b1e6d46ed39",
-    "embedded_bytes": 78653,
-    "embedded_sha256": "be559795e6067f0d0f6e441caa122de713993072a7bcee368e703b1e6d46ed39"
+    "bytes": 79622,
+    "sha256": "9b5d6d5c9fe2fb6d76084800e9f83b1cf15eba4b5dec1271b13cd6fcc8c23358",
+    "embedded_bytes": 79622,
+    "embedded_sha256": "9b5d6d5c9fe2fb6d76084800e9f83b1cf15eba4b5dec1271b13cd6fcc8c23358"
   },
   {
     "path": "scripts/hosted_bundles.py",
@@ -1212,10 +1303,10 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/hosted_run_timing.py",
-    "bytes": 11913,
-    "sha256": "908126857eefb193a02c0d0b0e52e9d05468d0c0aa75b5bfb669015deffb6089",
-    "embedded_bytes": 11913,
-    "embedded_sha256": "908126857eefb193a02c0d0b0e52e9d05468d0c0aa75b5bfb669015deffb6089"
+    "bytes": 12485,
+    "sha256": "18ff60bc0657afad659be4dbd19caa424f5e6608822249c604fb7d01f88c91ff",
+    "embedded_bytes": 12485,
+    "embedded_sha256": "18ff60bc0657afad659be4dbd19caa424f5e6608822249c604fb7d01f88c91ff"
   },
   {
     "path": "scripts/hosted_subject_gates.py",
@@ -1268,17 +1359,17 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/read_web_knowledge.py",
-    "bytes": 30359,
-    "sha256": "11ed1d42a40aa70e6011011ac2b56ab14e3531d7d1cb3756aee30c1ad4be3205",
-    "embedded_bytes": 30359,
-    "embedded_sha256": "11ed1d42a40aa70e6011011ac2b56ab14e3531d7d1cb3756aee30c1ad4be3205"
+    "bytes": 31031,
+    "sha256": "099907b41472663339e28a89b179f2f841abd622c852bbf1173d37c70065dc05",
+    "embedded_bytes": 31031,
+    "embedded_sha256": "099907b41472663339e28a89b179f2f841abd622c852bbf1173d37c70065dc05"
   },
   {
     "path": "scripts/run_hosted_workflow.py",
-    "bytes": 126484,
-    "sha256": "4f374a427357740ace93f3471ed5333991e1c443843f3a825189b3f158feac62",
-    "embedded_bytes": 126484,
-    "embedded_sha256": "4f374a427357740ace93f3471ed5333991e1c443843f3a825189b3f158feac62"
+    "bytes": 130731,
+    "sha256": "d31bd8fa78490e8e673bc3eed717ad60f454a7cb2d3b84d781709eddbef13377",
+    "embedded_bytes": 130731,
+    "embedded_sha256": "d31bd8fa78490e8e673bc3eed717ad60f454a7cb2d3b84d781709eddbef13377"
   },
   {
     "path": "scripts/safe_rendering.py",
@@ -1289,17 +1380,17 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/validate_cap_form.py",
-    "bytes": 15749,
-    "sha256": "742e040f16d96438cbcd5561496cabfb8530315abafaee31a76237fd94334bf0",
-    "embedded_bytes": 15749,
-    "embedded_sha256": "742e040f16d96438cbcd5561496cabfb8530315abafaee31a76237fd94334bf0"
+    "bytes": 16960,
+    "sha256": "162f7afe3855e89236f213e883bedd51f8e6dad208cac59a45c789546c7b1b65",
+    "embedded_bytes": 16960,
+    "embedded_sha256": "162f7afe3855e89236f213e883bedd51f8e6dad208cac59a45c789546c7b1b65"
   },
   {
     "path": "scripts/validate_cap_quality.py",
-    "bytes": 40413,
-    "sha256": "a9b0af172ee9b6c49fceb494452fd8474af4025a600d30c053495def181c0f2f",
-    "embedded_bytes": 40413,
-    "embedded_sha256": "a9b0af172ee9b6c49fceb494452fd8474af4025a600d30c053495def181c0f2f"
+    "bytes": 40821,
+    "sha256": "62eca1aa5d64a19571b0b07918a7b1d8543f61a8c48241c503a7f7cb3f21eadd",
+    "embedded_bytes": 40821,
+    "embedded_sha256": "62eca1aa5d64a19571b0b07918a7b1d8543f61a8c48241c503a7f7cb3f21eadd"
   },
   {
     "path": "scripts/validate_chinese_layout_contract.py",
@@ -1471,10 +1562,17 @@ attachments; extract only the selected subject's components.
   },
   {
     "path": "scripts/web_image.py",
-    "bytes": 9365,
-    "sha256": "5ba83d7c4170bf3a86b71620ea44de8e50bf0018cc7eaaba9dfe56c1d8e5a086",
-    "embedded_bytes": 9365,
-    "embedded_sha256": "5ba83d7c4170bf3a86b71620ea44de8e50bf0018cc7eaaba9dfe56c1d8e5a086"
+    "bytes": 10018,
+    "sha256": "a0b67e43c1f27102be67f8778b50412330dbc669041c8afb483150b0ef79acc5",
+    "embedded_bytes": 10018,
+    "embedded_sha256": "a0b67e43c1f27102be67f8778b50412330dbc669041c8afb483150b0ef79acc5"
+  },
+  {
+    "path": "templates/cap-item-templates.json",
+    "bytes": 5036,
+    "sha256": "642b148249ba904e21704ff05ddbe307338f1d63de381bddbd30898217e601e3",
+    "embedded_bytes": 5036,
+    "embedded_sha256": "642b148249ba904e21704ff05ddbe307338f1d63de381bddbd30898217e601e3"
   },
   {
     "path": "templates/cap-review-templates.json",
@@ -1900,7 +1998,7 @@ ask users to disable protection, restore quarantined scripts, or add exclusions.
 Official subject folders are:
 
 - 學測: 國文、英文、數學A、數學B、社會、自然. 國綜 and 國寫 share the 國文 data folder but are separate examinations/booklets with separate timing, numbering, scoring and layout contracts. Do not merge them into one 180-minute/150-point paper. If both are requested, produce two separately validated booklets. English translation/composition, by contrast, remain inside the English booklet.
-- 會考: 國文、英語、數學、社會、自然、寫作測驗. This Skill makes the 英語 reading booklet only; the listening section needs audio and is out of scope. For every 會考 paper read [references/current-cap-form.md](references/current-cap-form.md): its 113–115 counts, (A)–(D) options, group lead-ins, 數學 非選擇題 rubric, 寫作 rules and official pass-rate targets are hard constraints, enforced by `scripts/validate_cap_form.py`. No 學測 subject rule applies to a 會考 paper: in particular the 學測 社會 rule that groups standalone items into contiguous discipline blocks does NOT apply; 會考社會 alternates 歷史／地理／公民 in short runs (115: runs of 1-5) and at least 20% of 會考 items join two domains or curriculum strands (混合考點). Each 會考 paper also keeps the official unit coverage (`cap_plan.py plan` schedules `cap_unit` per slot from `scripts/cap_units.py`); 會考數學 adds the official paper shape (three direct openers, judgement items, non-numeric option forms, sorted numeric options, each 非選擇題 on its own page) and draws figures with `scripts/cap_draw.py`.
+- 會考: 國文、英語、數學、社會、自然、寫作測驗. This Skill makes the 英語 reading booklet only; the listening section needs audio and is out of scope. For every 會考 paper read only [references/cap-execution-card.md](references/cap-execution-card.md), [references/current-cap-form.md](references/current-cap-form.md), the subject's own guide (`references/cap-<subject>.md`) and [references/cap-workflow.md](references/cap-workflow.md); the 學測 execution chapters do not apply. A user's 「範圍：第 1–4 冊」 is `cap_plan.py plan --volumes 1-4` (default 1-6). From the shared form: its 113–115 counts, (A)–(D) options, group lead-ins, 數學 非選擇題 rubric, 寫作 rules and official pass-rate targets are hard constraints, enforced by `scripts/validate_cap_form.py`. No 學測 subject rule applies to a 會考 paper: in particular the 學測 社會 rule that groups standalone items into contiguous discipline blocks does NOT apply; 會考社會 alternates 歷史／地理／公民 in short runs (115: runs of 1-5) and at least 20% of 會考 items join two domains or curriculum strands (混合考點). Each 會考 paper also keeps the official unit coverage (`cap_plan.py plan` schedules `cap_unit` per slot from `scripts/cap_units.py`); 會考數學 adds the official paper shape (three direct openers, judgement items, non-numeric option forms, sorted numeric options, each 非選擇題 on its own page) and draws figures with `scripts/cap_draw.py`.
 
 The auxiliary `數學（舊制）` folder is historical-only. Do not merge pre-111 GSAT mathematics into Math A or Math B. The auxiliary `數學（共同範圍模考）` folder holds current-regime mock exams that cover only the common books and are not labeled A or B; use their item patterns only for shared units, never as the full-paper distribution of Math A or Math B. When a blueprint contains more than one curriculum, require an explicit curriculum and never sample across regimes.
 
@@ -57177,6 +57275,6824 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 }
 </canonical-source>
 
+<canonical-source path="exam_packs/會考/curriculum/國文.json">
+{
+ "subject": "國文",
+ "stage": "第四學習階段（國民中學 7-9 年級）",
+ "source": {
+  "publisher": "國家教育研究院（教育部發布之十二年國民基本教育課程綱要）",
+  "url": "https://www.naer.edu.tw/upload/1/16/doc/806/十二年國民基本教育課程綱要國民中小學暨普通型高級中等學校語文領域-國語文.odt",
+  "retrieved_at": "2026-11-14",
+  "sha256": "0eda94b0ed82375999e821d67a5cdffd8081cb4f66e94bfd29000547c5b9207a"
+ },
+ "note": "Codes use ASCII 'IV' (the curriculum prints 'Ⅳ'); validate_cap_form.py accepts either. content = 學習內容 (what items assess); performance = 學習表現. senior_high = 第五學習階段（高中）學習內容: concepts a 國中 item must not require.",
+ "content": [
+  {
+   "code": "Ab-IV-1",
+   "official_code": "Ab-Ⅳ-1",
+   "text": "4,000個常用字的字形、字音和字義。"
+  },
+  {
+   "code": "Ab-IV-2",
+   "official_code": "Ab-Ⅳ-2",
+   "text": "3,500個常用字的使用。"
+  },
+  {
+   "code": "Ab-IV-3",
+   "official_code": "Ab-Ⅳ-3",
+   "text": "基本的造字原則：象形、指事、會意、形聲。"
+  },
+  {
+   "code": "Ab-IV-4",
+   "official_code": "Ab-Ⅳ-4",
+   "text": "6,500個常用語詞的認念。"
+  },
+  {
+   "code": "Ab-IV-5",
+   "official_code": "Ab-Ⅳ-5",
+   "text": "5,000個常用語詞的使用。"
+  },
+  {
+   "code": "Ab-IV-6",
+   "official_code": "Ab-Ⅳ-6",
+   "text": "常用文言文的詞義及語詞結構。"
+  },
+  {
+   "code": "Ab-IV-7",
+   "official_code": "Ab-Ⅳ-7",
+   "text": "常用文言文的字詞、虛字、古今義變。"
+  },
+  {
+   "code": "Ab-IV-8",
+   "official_code": "Ab-Ⅳ-8",
+   "text": "各體書法與名家碑帖的認識與欣賞。"
+  },
+  {
+   "code": "Ac-IV-1",
+   "official_code": "Ac-Ⅳ-1",
+   "text": "標點符號在文本中的不同效果。"
+  },
+  {
+   "code": "Ac-IV-2",
+   "official_code": "Ac-Ⅳ-2",
+   "text": "敘事、有無、判斷、表態等句型。"
+  },
+  {
+   "code": "Ac-IV-3",
+   "official_code": "Ac-Ⅳ-3",
+   "text": "文句表達的邏輯與意義。"
+  },
+  {
+   "code": "Ad-IV-1",
+   "official_code": "Ad-Ⅳ-1",
+   "text": "篇章的主旨、結構、寓意與分析。"
+  },
+  {
+   "code": "Ad-IV-2",
+   "official_code": "Ad-Ⅳ-2",
+   "text": "新詩、現代散文、現代小說、劇本。"
+  },
+  {
+   "code": "Ad-IV-3",
+   "official_code": "Ad-Ⅳ-3",
+   "text": "韻文：如古體詩、樂府詩、近體詩、詞、曲等。"
+  },
+  {
+   "code": "Ad-IV-4",
+   "official_code": "Ad-Ⅳ-4",
+   "text": "非韻文：如古文、古典小說、語錄體、寓言等。"
+  },
+  {
+   "code": "Ba-IV-1",
+   "official_code": "Ba-Ⅳ-1",
+   "text": "順敘、倒敘、插敘與補敘法。"
+  },
+  {
+   "code": "Ba-IV-2",
+   "official_code": "Ba-Ⅳ-2",
+   "text": "各種描寫的作用及呈現的效果。"
+  },
+  {
+   "code": "Bb-IV-1",
+   "official_code": "Bb-Ⅳ-1",
+   "text": "自我及人際交流的感受。"
+  },
+  {
+   "code": "Bb-IV-2",
+   "official_code": "Bb-Ⅳ-2",
+   "text": "對社會群體與家國民族情感的體會。"
+  },
+  {
+   "code": "Bb-IV-3",
+   "official_code": "Bb-Ⅳ-3",
+   "text": "對物或自然以及生命的感悟。"
+  },
+  {
+   "code": "Bb-IV-4",
+   "official_code": "Bb-Ⅳ-4",
+   "text": "直接抒情。"
+  },
+  {
+   "code": "Bb-IV-5",
+   "official_code": "Bb-Ⅳ-5",
+   "text": "藉由敘述事件與描寫景物間接抒情。"
+  },
+  {
+   "code": "Bc-IV-1",
+   "official_code": "Bc-Ⅳ-1",
+   "text": "具邏輯、客觀、理性的說明，如科學知識、產品、環境、制度等說明。"
+  },
+  {
+   "code": "Bc-IV-2",
+   "official_code": "Bc-Ⅳ-2",
+   "text": "描述、列舉、因果、問題解決、比較、分類、定義等寫作手法。"
+  },
+  {
+   "code": "Bc-IV-3",
+   "official_code": "Bc-Ⅳ-3",
+   "text": "數據、圖表、圖片、工具列等輔助說明。"
+  },
+  {
+   "code": "Bd-IV-1",
+   "official_code": "Bd-Ⅳ-1",
+   "text": "以事實、理論為論據，達到說服、建構、批判等目的。"
+  },
+  {
+   "code": "Bd-IV-2",
+   "official_code": "Bd-Ⅳ-2",
+   "text": "論證方式如比較、比喻等。"
+  },
+  {
+   "code": "Be-IV-1",
+   "official_code": "Be-Ⅳ-1",
+   "text": "在生活應用方面，以自傳、簡報、新聞稿等格式與寫作方法為主。"
+  },
+  {
+   "code": "Be-IV-2",
+   "official_code": "Be-Ⅳ-2",
+   "text": "在人際溝通方面，以書信、便條、對聯等之慣用語彙與書寫格式為主。"
+  },
+  {
+   "code": "Be-IV-3",
+   "official_code": "Be-Ⅳ-3",
+   "text": "在學習應用方面，以簡報、讀書報告、演講稿、劇本等格式與寫作方法為主。"
+  },
+  {
+   "code": "Ca-IV-1",
+   "official_code": "Ca-Ⅳ-1",
+   "text": "各類文本中的飲食、服飾、建築形式、交通工具、名勝古蹟及休閒娛樂等文化內涵。"
+  },
+  {
+   "code": "Ca-IV-2",
+   "official_code": "Ca-Ⅳ-2",
+   "text": "各類文本中表現科技文明演進、生存環境發展的文化內涵。"
+  },
+  {
+   "code": "Cb-IV-1",
+   "official_code": "Cb-Ⅳ-1",
+   "text": "各類文本中的親屬關係、道德倫理、儀式風俗、典章制度等文化內涵。"
+  },
+  {
+   "code": "Cb-IV-2",
+   "official_code": "Cb-Ⅳ-2",
+   "text": "各類文本中所反映的個人與家庭、鄉里、國族及其他社群的關係。"
+  },
+  {
+   "code": "Cc-IV-1",
+   "official_code": "Cc-Ⅳ-1",
+   "text": "各類文本中的藝術、信仰、思想等文化內涵。"
+  }
+ ],
+ "performance": [
+  {
+   "code": "1-IV-1",
+   "text": "以同理心，聆聽各項發言，並加以記錄、歸納。"
+  },
+  {
+   "code": "1-IV-2",
+   "text": "依據不同情境，分辨聲情意涵及表達技巧，適切回應。"
+  },
+  {
+   "code": "1-IV-3",
+   "text": "分辨聆聽內容的邏輯性，找出解決問題的方法。"
+  },
+  {
+   "code": "1-IV-4",
+   "text": "靈活應用科技與資訊，增進聆聽能力，加強互動學習效果。"
+  },
+  {
+   "code": "2-IV-1",
+   "text": "掌握生活情境，適切表情達意，分享自身經驗。"
+  },
+  {
+   "code": "2-IV-2",
+   "text": "有效把握聽聞內容的邏輯，做出提問或回饋。"
+  },
+  {
+   "code": "2-IV-3",
+   "text": "依理解的內容，明確表達意見，進行有條理的論辯，並注重言談禮貌。"
+  },
+  {
+   "code": "2-IV-4",
+   "text": "靈活運用科技與資訊，豐富表達內容。"
+  },
+  {
+   "code": "2-IV-5",
+   "text": "視不同情境，進行報告、評論、演說及論辯。"
+  },
+  {
+   "code": "4-IV-1",
+   "text": "認識國字至少4,500字，使用3,500字。"
+  },
+  {
+   "code": "4-IV-2",
+   "text": "認識造字的原則，輔助識字，了解文字的形、音、義。"
+  },
+  {
+   "code": "4-IV-3",
+   "text": "能運用字典或辭典了解一字多音及一字多義的現象。"
+  },
+  {
+   "code": "4-IV-4",
+   "text": "認識各種書體，欣賞名家碑帖。"
+  },
+  {
+   "code": "4-IV-5",
+   "text": "欣賞書法的行款和布局、行氣及風格。"
+  },
+  {
+   "code": "4-IV-6",
+   "text": "能夠寫出正確美觀的硬筆字。"
+  },
+  {
+   "code": "5-IV-1",
+   "text": "比較不同標點符號的表達效果，流暢朗讀各類文本，並表現情感的起伏變化。"
+  },
+  {
+   "code": "5-IV-2",
+   "text": "理解各類文本的句子、段落與主要概念，指出寫作的目的與觀點。"
+  },
+  {
+   "code": "5-IV-3",
+   "text": "理解各類文本內容、形式和寫作特色。"
+  },
+  {
+   "code": "5-IV-4",
+   "text": "應用閱讀策略增進學習效能，整合跨領域知識轉化為解決問題的能力。"
+  },
+  {
+   "code": "5-IV-5",
+   "text": "大量閱讀多元文本，理解議題內涵及其與個人生活、社會結構的關聯性。"
+  },
+  {
+   "code": "5-IV-6",
+   "text": "運用圖書館(室)、科技工具，蒐集資訊、組織材料，擴充閱讀視野。"
+  },
+  {
+   "code": "6-IV-1",
+   "text": "善用標點符號，增進情感表達及說服力。"
+  },
+  {
+   "code": "6-IV-2",
+   "text": "依據審題、立意、取材、組織、遣詞造句、修改潤飾，寫出結構完整、主旨明確、文辭優美的文章。"
+  },
+  {
+   "code": "6-IV-3",
+   "text": "靈活運用仿寫、改寫等技巧，增進寫作能力"
+  },
+  {
+   "code": "6-IV-4",
+   "text": "依據需求書寫各類文本。"
+  },
+  {
+   "code": "6-IV-5",
+   "text": "主動創作、自訂題目、闡述見解，並發表自己的作品。"
+  },
+  {
+   "code": "6-IV-6",
+   "text": "運用資訊科技編輯作品，發表個人見解、分享寫作樂趣。"
+  }
+ ],
+ "senior_high": [
+  {
+   "code": "Ab-Ⅴ-1",
+   "text": "六書的基本原則。"
+  },
+  {
+   "code": "Ab-Ⅴ-2",
+   "text": "文言文的詞義及語詞結構。"
+  },
+  {
+   "code": "Ab-Ⅴ-3",
+   "text": "文言文的字詞、虛字、古今義變。"
+  },
+  {
+   "code": "Ab-Ⅴ-4",
+   "text": "各體書法作品與名家碑帖的深入鑑賞。"
+  },
+  {
+   "code": "Ac-Ⅴ-1",
+   "text": "文句的深層意涵與象徵意義。"
+  },
+  {
+   "code": "Ad-Ⅴ-1",
+   "text": "篇章的主旨、結構、寓意與評述。"
+  },
+  {
+   "code": "Ad-Ⅴ-2",
+   "text": "新詩、現代散文、現代小說、劇本。"
+  },
+  {
+   "code": "Ad-Ⅴ-3",
+   "text": "韻文：如辭賦、古體詩、樂府詩、近體詩、詞、散曲、戲曲等。"
+  },
+  {
+   "code": "Ad-Ⅴ-4",
+   "text": "非韻文：如古文、古典小說、語錄體、寓言等。"
+  },
+  {
+   "code": "Ba-Ⅴ-1",
+   "text": "順敘、倒敘、插敘與補敘法。"
+  },
+  {
+   "code": "Ba-Ⅴ-2",
+   "text": "人、事、時、地、物的細部描寫。"
+  },
+  {
+   "code": "Ba-Ⅴ-3",
+   "text": "寫作手法與文學美感的呈現。"
+  },
+  {
+   "code": "Bb-Ⅴ-1",
+   "text": "自我及人際交流的感受。"
+  },
+  {
+   "code": "Bb-Ⅴ-2",
+   "text": "對社會群體與家國民族情感的體會。"
+  },
+  {
+   "code": "Bb-Ⅴ-3",
+   "text": "對萬物之情、宇宙之愛的感悟。"
+  },
+  {
+   "code": "Bb-Ⅴ-4",
+   "text": "藉由敘述事件與描寫景物間接抒情。"
+  },
+  {
+   "code": "Bc-Ⅴ-1",
+   "text": "具邏輯、客觀、理性、知識的說明，如人權公約、百科全書、制度演變等。"
+  },
+  {
+   "code": "Bc-Ⅴ-2",
+   "text": "描述、列舉、因果、問題解決、比較、定義、引用、問答等寫作手法。"
+  },
+  {
+   "code": "Bc-Ⅴ-3",
+   "text": "數據、圖表、圖片、工具列等輔助說明。"
+  },
+  {
+   "code": "Bd-Ⅴ-1",
+   "text": "以事實、理論為論據，達到說服、建構、批判等目的。"
+  },
+  {
+   "code": "Bd-Ⅴ-2",
+   "text": "論證方式如歸納、演繹、因果論證等。"
+  },
+  {
+   "code": "Be-Ⅴ-1",
+   "text": "在生活應用方面，以自傳、新聞稿、報導、評論、等格式與寫作方法為主。"
+  },
+  {
+   "code": "Be-Ⅴ-2",
+   "text": "在人際溝通方面，以書信、便條、啟事、柬帖、對聯、題辭、慶賀文、祭弔文等慣用語彙與書寫格式為主。"
+  },
+  {
+   "code": "Be-Ⅴ-3",
+   "text": "在學習應用方面，以簡報、讀書報告、演講稿、會議紀錄、劇本、小論文、計劃書、申請書等格式與寫作方法為主。"
+  },
+  {
+   "code": "Ca-Ⅴ-1",
+   "text": "各類文本中的飲食、服飾、建築形式、交通工具、名勝古蹟及休閒娛樂等文化內涵。"
+  },
+  {
+   "code": "Ca-Ⅴ-2",
+   "text": "各類文本中表現科技文明演進、生存環境發展的文化內涵。"
+  },
+  {
+   "code": "Ca-Ⅴ-3",
+   "text": "各類文本中物質形貌樣態的呈現方式與文本脈絡的關聯性。"
+  },
+  {
+   "code": "Cb-Ⅴ-1",
+   "text": "各類文本中的親屬關係、道德倫理、儀式風俗、典章制度等文化內涵。"
+  },
+  {
+   "code": "Cb-Ⅴ-2",
+   "text": "各類文本中所反映的個人與家庭、鄉里、國族及其他社群的關係。"
+  },
+  {
+   "code": "Cb-Ⅴ-3",
+   "text": "各類文本中所反映不同社群間的文化差異、交互影響等現象。"
+  },
+  {
+   "code": "Cb-Ⅴ-4",
+   "text": "各類文本所呈現社群關係中的性別、權力等文化符碼。"
+  },
+  {
+   "code": "Cc-Ⅴ-1",
+   "text": "各類文本中的藝術、信仰、思想等文化內涵。"
+  },
+  {
+   "code": "Cc-Ⅴ-2",
+   "text": "各類文本中所反映的矛盾衝突、生命態度、天人關係等文化內涵。"
+  }
+ ]
+}
+</canonical-source>
+
+<canonical-source path="exam_packs/會考/curriculum/數學.json">
+{
+ "subject": "數學",
+ "stage": "第四學習階段（國民中學 7-9 年級）",
+ "source": {
+  "publisher": "國家教育研究院（教育部發布之十二年國民基本教育課程綱要）",
+  "url": "https://www.naer.edu.tw/upload/1/16/doc/815/十二年國民基本教育課程綱要國民中小學暨普通型高級中等學校─數學領域.odt",
+  "retrieved_at": "2026-11-14",
+  "sha256": "dab98560a98cf3b3d06d6dda912c2adfb735e52c074342d5bcc3e98af4f02ef1"
+ },
+ "note": "Codes use ASCII 'IV' (the curriculum prints 'Ⅳ'); validate_cap_form.py accepts either. content = 學習內容 (what items assess); performance = 學習表現. senior_high = 第五學習階段（高中）學習內容: concepts a 國中 item must not require.",
+ "content": [
+  {
+   "code": "N-7-1",
+   "official_code": "N-7-1",
+   "text": "100以內的質數：質數和合數的定義；質數的篩法。",
+   "grade": 7
+  },
+  {
+   "code": "N-7-2",
+   "official_code": "N-7-2",
+   "text": "質因數分解的標準分解式：質因數分解的標準分解式，並能用於求因數及倍數的問題。",
+   "grade": 7
+  },
+  {
+   "code": "N-7-3",
+   "official_code": "N-7-3",
+   "text": "負數與數的四則混合運算(含分數、小數)：使用「正、負」表徵生活中的量；相反數；數的四則混合運算。",
+   "grade": 7
+  },
+  {
+   "code": "N-7-4",
+   "official_code": "N-7-4",
+   "text": "數的運算規律：交換律；結合律；分配律；；。",
+   "grade": 7
+  },
+  {
+   "code": "N-7-5",
+   "official_code": "N-7-5",
+   "text": "數線：擴充至含負數的數線；比較數的大小；絕對值的意義；以表示數線上兩點的距離。",
+   "grade": 7
+  },
+  {
+   "code": "N-7-6",
+   "official_code": "N-7-6",
+   "text": "指數的意義：指數為非負整數的次方；時；同底數的大小比較；指數的運算。",
+   "grade": 7
+  },
+  {
+   "code": "N-7-7",
+   "official_code": "N-7-7",
+   "text": "指數律：以數字例表示「同底數的乘法指數律」（、、，其中為非負整數）；以數字例表示「同底數的除法指數律」（，其中且為非負整數）。",
+   "grade": 7
+  },
+  {
+   "code": "N-7-8",
+   "official_code": "N-7-8",
+   "text": "科學記號：以科學記號表達正數，此數可以是很大的數（次方為正整數），也可以是很小的數（次方為負整數）。",
+   "grade": 7
+  },
+  {
+   "code": "N-7-9",
+   "official_code": "N-7-9",
+   "text": "比與比例式：比；比例式；正比；反比；相關之基本運算與應用問題，教學情境應以有意義之比值為例。",
+   "grade": 7
+  },
+  {
+   "code": "S-7-1",
+   "official_code": "S-7-1",
+   "text": "簡單圖形與幾何符號：點、線、線段、射線、角、三角形與其符號的介紹。＃",
+   "grade": 7
+  },
+  {
+   "code": "S-7-2",
+   "official_code": "S-7-2",
+   "text": "三視圖：立體圖形的前視圖、上視圖、左（右）視圖。立體圖形限制內嵌於333的正方體且不得中空。",
+   "grade": 7
+  },
+  {
+   "code": "S-7-3",
+   "official_code": "S-7-3",
+   "text": "垂直：垂直的符號；線段的中垂線；點到直線距離的意義。",
+   "grade": 7
+  },
+  {
+   "code": "S-7-4",
+   "official_code": "S-7-4",
+   "text": "線對稱的性質：對稱線段等長；對稱角相等；對稱點的連線段會被對稱軸垂直平分。",
+   "grade": 7
+  },
+  {
+   "code": "S-7-5",
+   "official_code": "S-7-5",
+   "text": "線對稱的基本圖形：等腰三角形；正方形；菱形；箏形；正多邊形。",
+   "grade": 7
+  },
+  {
+   "code": "G-7-1",
+   "official_code": "G-7-1",
+   "text": "平面直角坐標系：以平面直角坐標系、方位距離標定位置；平面直角坐標系及其相關術語（縱軸、橫軸、象限）。",
+   "grade": 7
+  },
+  {
+   "code": "A-7-1",
+   "official_code": "A-7-1",
+   "text": "代數符號：以代數符號表徵交換律、分配律、結合律；一次式的化簡及同類項；以符號記錄生活中的情境問題。",
+   "grade": 7
+  },
+  {
+   "code": "A-7-2",
+   "official_code": "A-7-2",
+   "text": "一元一次方程式的意義：一元一次方程式及其解的意義；具體情境中列出一元一次方程式。",
+   "grade": 7
+  },
+  {
+   "code": "A-7-3",
+   "official_code": "A-7-3",
+   "text": "一元一次方程式的解法與應用：等量公理；移項法則；驗算；應用問題。",
+   "grade": 7
+  },
+  {
+   "code": "A-7-4",
+   "official_code": "A-7-4",
+   "text": "二元一次聯立方程式的意義：二元一次方程式及其解的意義；具體情境中列出二元一次方程式；二元一次聯立方程式及其解的意義；具體情境中列出二元一次聯立方程式。",
+   "grade": 7
+  },
+  {
+   "code": "A-7-5",
+   "official_code": "A-7-5",
+   "text": "二元一次聯立方程式的解法與應用：代入消去法；加減消去法；應用問題。",
+   "grade": 7
+  },
+  {
+   "code": "A-7-6",
+   "official_code": "A-7-6",
+   "text": "二元一次聯立方程式的幾何意義：的圖形；的圖形（水平線）；的圖形（鉛垂線）；二元一次聯立方程式的解只處理相交且只有一個交點的情況。",
+   "grade": 7
+  },
+  {
+   "code": "A-7-7",
+   "official_code": "A-7-7",
+   "text": "一元一次不等式的意義：不等式的意義；具體情境中列出一元一次不等式。",
+   "grade": 7
+  },
+  {
+   "code": "A-7-8",
+   "official_code": "A-7-8",
+   "text": "一元一次不等式的解與應用：單一的一元一次不等式的解；在數線上標示解的範圍；應用問題。",
+   "grade": 7
+  },
+  {
+   "code": "D-7-1",
+   "official_code": "D-7-1",
+   "text": "統計圖表：蒐集生活中常見的數據資料，整理並繪製成含有原始資料或百分率的統計圖表：直方圖、長條圖、圓形圖、折線圖、列聯表。遇到複雜數據時可使用計算機輔助，教師可使用電腦應用軟體演示教授。",
+   "grade": 7
+  },
+  {
+   "code": "D-7-2",
+   "official_code": "D-7-2",
+   "text": "統計數據：用平均數、中位數與眾數描述一組資料的特性；使用計算機的「M+」或「Σ」鍵計算平均數。",
+   "grade": 7
+  },
+  {
+   "code": "N-8-1",
+   "official_code": "N-8-1",
+   "text": "二次方根：二次方根的意義；根式的化簡及四則運算。",
+   "grade": 8
+  },
+  {
+   "code": "N-8-2",
+   "official_code": "N-8-2",
+   "text": "二次方根的近似值：二次方根的近似值；二次方根的整數部分；十分逼近法。使用計算機鍵。",
+   "grade": 8
+  },
+  {
+   "code": "N-8-3",
+   "official_code": "N-8-3",
+   "text": "認識數列：生活中常見的數列及其規律性（包括圖形的規律性）。",
+   "grade": 8
+  },
+  {
+   "code": "N-8-4",
+   "official_code": "N-8-4",
+   "text": "等差數列：等差數列；給定首項、公差計算等差數列的一般項。",
+   "grade": 8
+  },
+  {
+   "code": "N-8-5",
+   "official_code": "N-8-5",
+   "text": "等差級數求和：等差級數求和公式；生活中相關的問題。",
+   "grade": 8
+  },
+  {
+   "code": "N-8-6",
+   "official_code": "N-8-6",
+   "text": "等比數列：等比數列；給定首項、公比計算等比數列的一般項。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-1",
+   "official_code": "S-8-1",
+   "text": "角：角的種類；兩個角的關係（互餘、互補、對頂角、同位角、內錯角、同側內角）；角平分線的意義。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-2",
+   "official_code": "S-8-2",
+   "text": "凸多邊形的內角和：凸多邊形的意義；內角與外角的意義；凸多邊形的內角和公式；正邊形的每個內角度數。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-3",
+   "official_code": "S-8-3",
+   "text": "平行：平行的意義與符號；平行線截角性質；兩平行線間的距離處處相等。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-4",
+   "official_code": "S-8-4",
+   "text": "全等圖形：全等圖形的意義（兩個圖形經過平移、旋轉或翻轉可以完全疊合）；兩個多邊形全等則其對應邊和對應角相等（反之亦然）。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-5",
+   "official_code": "S-8-5",
+   "text": "三角形的全等性質：三角形的全等判定（SAS、SSS、ASA、AAS、RHS）；全等符號（）。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-6",
+   "official_code": "S-8-6",
+   "text": "畢氏定理：畢氏定理（勾股弦定理、商高定理）的意義及其數學史；畢氏定理在生活上的應用；三邊長滿足畢氏定理的三角形必定是直角三角形。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-7",
+   "official_code": "S-8-7",
+   "text": "平面圖形的面積：正三角形的高與面積公式，及其相關之複合圖形的面積。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-8",
+   "official_code": "S-8-8",
+   "text": "三角形的基本性質：等腰三角形兩底角相等；非等腰三角形大角對大邊，大邊對大角；三角形兩邊和大於第三邊；外角等於其內對角和。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-9",
+   "official_code": "S-8-9",
+   "text": "平行四邊形的基本性質：關於平行四邊形的內角、邊、對角線等的幾何性質。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-10",
+   "official_code": "S-8-10",
+   "text": "正方形、長方形、箏形的基本性質：長方形的對角線等長且互相平分；菱形對角線互相垂直平分；箏形的其中一條對角線垂直平分另一條對角線。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-11",
+   "official_code": "S-8-11",
+   "text": "梯形的基本性質：等腰梯形的兩底角相等；等腰梯形為線對稱圖形；梯形兩腰中點的連線段長等於兩底長和的一半，且平行於上下底。",
+   "grade": 8
+  },
+  {
+   "code": "S-8-12",
+   "official_code": "S-8-12",
+   "text": "尺規作圖與幾何推理：複製已知的線段、圓、角、三角形；能以尺規作出指定的中垂線、角平分線、平行線、垂直線；能寫出幾何推理所依據的幾何性質。＃",
+   "grade": 8
+  },
+  {
+   "code": "G-8-1",
+   "official_code": "G-8-1",
+   "text": "直角坐標系上兩點距離公式：直角坐標系上兩點和的距離為",
+   "grade": 8
+  },
+  {
+   "code": "A-8-1",
+   "official_code": "A-8-1",
+   "text": "二次式的乘法公式：；；；。",
+   "grade": 8
+  },
+  {
+   "code": "A-8-2",
+   "official_code": "A-8-2",
+   "text": "多項式的意義：一元多項式的定義與相關名詞（多項式、項數、係數、常數項、一次項、二次項、最高次項、升冪、降冪）。",
+   "grade": 8
+  },
+  {
+   "code": "A-8-3",
+   "official_code": "A-8-3",
+   "text": "多項式的四則運算：直式、橫式的多項式加法與減法；直式的多項式乘法（乘積最高至三次）；被除式為二次之多項式的除法運算。",
+   "grade": 8
+  },
+  {
+   "code": "A-8-4",
+   "official_code": "A-8-4",
+   "text": "因式分解：因式的意義（限制在二次多項式的一次因式）；二次多項式的因式分解意義。",
+   "grade": 8
+  },
+  {
+   "code": "A-8-5",
+   "official_code": "A-8-5",
+   "text": "因式分解的方法：提公因式法；利用乘法公式與十字交乘法因式分解。",
+   "grade": 8
+  },
+  {
+   "code": "A-8-6",
+   "official_code": "A-8-6",
+   "text": "一元二次方程式的意義：一元二次方程式及其解，具體情境中列出一元二次方程式。",
+   "grade": 8
+  },
+  {
+   "code": "A-8-7",
+   "official_code": "A-8-7",
+   "text": "一元二次方程式的解法與應用：利用因式分解、配方法、公式解一元二次方程式；應用問題；使用計算機計算一元二次方程式根的近似值。",
+   "grade": 8
+  },
+  {
+   "code": "F-8-1",
+   "official_code": "F-8-1",
+   "text": "一次函數：透過對應關係認識函數（不要出現的抽象型式）、常數函數（）、一次函數（）。",
+   "grade": 8
+  },
+  {
+   "code": "F-8-2",
+   "official_code": "F-8-2",
+   "text": "一次函數的圖形：常數函數的圖形；一次函數的圖形。",
+   "grade": 8
+  },
+  {
+   "code": "D-8-1",
+   "official_code": "D-8-1",
+   "text": "統計資料處理：累積次數、相對次數、累積相對次數折線圖。",
+   "grade": 8
+  },
+  {
+   "code": "N-9-1",
+   "official_code": "N-9-1",
+   "text": "連比：連比的記錄；連比推理；連比例式；及其基本運算與相關應用問題；涉及複雜數值時使用計算機協助計算。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-1",
+   "official_code": "S-9-1",
+   "text": "相似形：平面圖形縮放的意義；多邊形相似的意義；對應角相等；對應邊長成比例。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-2",
+   "official_code": "S-9-2",
+   "text": "三角形的相似性質：三角形的相似判定（AA、SAS、SSS）；對應邊長之比＝對應高之比；對應面積之比＝對應邊長平方之比；利用三角形相似的概念解應用問題；相似符號（~）。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-3",
+   "official_code": "S-9-3",
+   "text": "平行線截比例線段：連接三角形兩邊中點的線段必平行於第三邊（其長度等於第三邊的一半）；平行線截比例線段性質；利用截線段成比例判定兩直線平行；平行線截比例線段性質的應用。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-4",
+   "official_code": "S-9-4",
+   "text": "相似直角三角形邊長比值的不變性：直角三角形中某一銳角的角度決定邊長比值，該比值為不變量，不因相似直角三角形的大小而改變；三內角為30°,",
+   "grade": 9
+  },
+  {
+   "code": "S-9-5",
+   "official_code": "S-9-5",
+   "text": "圓弧長與扇形面積：以π表示圓周率；弦、圓弧、弓形的意義；圓弧長公式；扇形面積公式。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-6",
+   "official_code": "S-9-6",
+   "text": "圓的幾何性質：圓心角、圓周角與所對應弧的度數三者之間的關係；圓內接四邊形對角互補；切線段等長。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-7",
+   "official_code": "S-9-7",
+   "text": "點、直線與圓的關係：點與圓的位置關係（內部、圓上、外部）；直線與圓的位置關係（不相交、相切、交於兩點）；圓心與切點的連線垂直此切線（切線性質）；圓心到弦的垂直線段（弦心距）垂直平分此弦。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-8",
+   "official_code": "S-9-8",
+   "text": "三角形的外心：外心的意義與外接圓；三角形的外心到三角形的三個頂點等距；直角三角形的外心即斜邊的中點。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-9",
+   "official_code": "S-9-9",
+   "text": "三角形的內心：內心的意義與內切圓；三角形的內心到三角形的三邊等距；三角形的面積＝周長內切圓半徑；直角三角形的內切圓半徑＝（兩股和－斜邊）。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-10",
+   "official_code": "S-9-10",
+   "text": "三角形的重心：重心的意義與中線；三角形的三條中線將三角形面積六等份；重心到頂點的距離等於它到對邊中點的兩倍；重心的物理意義。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-11",
+   "official_code": "S-9-11",
+   "text": "證明的意義：幾何推理（須說明所依據的幾何性質）；代數推理（須說明所依據的代數性質）。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-12",
+   "official_code": "S-9-12",
+   "text": "空間中的線與平面：長方體與正四面體的示意圖，利用長方體與正四面體作為特例，介紹線與線的平行、垂直與歪斜關係，線與平面的垂直與平行關係。",
+   "grade": 9
+  },
+  {
+   "code": "S-9-13",
+   "official_code": "S-9-13",
+   "text": "表面積與體積：直角柱、直圓錐、正角錐的展開圖；直角柱、直圓錐、正角錐的表面積；直角柱的體積。",
+   "grade": 9
+  },
+  {
+   "code": "F-9-1",
+   "official_code": "F-9-1",
+   "text": "二次函數的意義：二次函數的意義；具體情境中列出兩量的二次函數關係。",
+   "grade": 9
+  },
+  {
+   "code": "F-9-2",
+   "official_code": "F-9-2",
+   "text": "二次函數的圖形與極值：二次函數的相關名詞（對稱軸、頂點、最低點、最高點、開口向上、開口向下、最大值、最小值）；描繪、、、的圖形；對稱軸就是通過頂點（最高點、最低點）的鉛垂線；的圖形與的圖形的平移關係；已配方好之二次函數的最大值與最小值。",
+   "grade": 9
+  },
+  {
+   "code": "D-9-1",
+   "official_code": "D-9-1",
+   "text": "統計數據的分布：全距；四分位距；盒狀圖。",
+   "grade": 9
+  },
+  {
+   "code": "D-9-2",
+   "official_code": "D-9-2",
+   "text": "認識機率：機率的意義；樹狀圖（以兩層為限）。",
+   "grade": 9
+  },
+  {
+   "code": "D-9-3",
+   "official_code": "D-9-3",
+   "text": "古典機率：具有對稱性的情境下（銅板、骰子、撲克牌、抽球等）之機率；不具對稱性的物體（圖釘、圓錐、爻杯）之機率探究。",
+   "grade": 9
+  }
+ ],
+ "performance": [
+  {
+   "code": "n-IV-1",
+   "text": "理解因數、倍數、質數、最大公因數、最小公倍數的意義及熟練其計算，並能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "n-IV-2",
+   "text": "理解負數之意義、符號與在數線上的表示，並熟練其四則運算，且能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "n-IV-3",
+   "text": "理解非負整數次方的指數和指數律，應用於質因數分解與科學記號，並能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "n-IV-4",
+   "text": "理解比、比例式、正比、反比和連比的意義和推理，並能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "n-IV-5",
+   "text": "理解二次方根的意義、符號與根式的四則運算，並能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "n-IV-6",
+   "text": "應用十分逼近法估算二次方根的近似值，並能應用計算機計算、驗證與估算，建立對二次方根的數感。"
+  },
+  {
+   "code": "n-IV-7",
+   "text": "辨識數列的規律性，以數學符號表徵生活中的數量關係與規律，認識等差數列與等比數列，並能依首項與公差或公比計算其他各項。"
+  },
+  {
+   "code": "n-IV-8",
+   "text": "理解等差級數的求和公式，並能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "n-IV-9",
+   "text": "使用計算機計算比值、複雜的數式、小數或根式等四則運算與三角比的近似值問題，並能理解計算機可能產生誤差。"
+  },
+  {
+   "code": "s-IV-1",
+   "text": "理解常用幾何形體的定義、符號、性質，並應用於幾何問題的解題。"
+  },
+  {
+   "code": "s-IV-2",
+   "text": "理解角的各種性質、三角形與凸多邊形的內角和外角的意義、三角形的外角和、與凸多邊形的內角和，並能應用於解決幾何與日常生活的問題。"
+  },
+  {
+   "code": "s-IV-3",
+   "text": "理解兩條直線的垂直和平行的意義，以及各種性質，並能應用於解決幾何與日常生活的問題。"
+  },
+  {
+   "code": "s-IV-4",
+   "text": "理解平面圖形全等的意義，知道圖形經平移、旋轉、鏡射後仍保持全等，並能應用於解決幾何與日常生活的問題。"
+  },
+  {
+   "code": "s-IV-5",
+   "text": "理解線對稱的意義和線對稱圖形的幾何性質，並能應用於解決幾何與日常生活的問題。"
+  },
+  {
+   "code": "s-IV-6",
+   "text": "理解平面圖形相似的意義，知道圖形經縮放後其圖形相似，並能應用於解決幾何與日常生活的問題。"
+  },
+  {
+   "code": "s-IV-7",
+   "text": "理解畢氏定理與其逆敘述，並能應用於數學解題與日常生活的問題。"
+  },
+  {
+   "code": "s-IV-8",
+   "text": "理解特殊三角形（如正三角形、等腰三角形、直角三角形）、特殊四邊形（如正方形、矩形、平行四邊形、菱形、箏形、梯形）和正多邊形的幾何性質及相關問題。"
+  },
+  {
+   "code": "s-IV-9",
+   "text": "理解三角形的邊角關係，利用邊角對應相等，判斷兩個三角形的全等，並能應用於解決幾何與日常生活的問題。"
+  },
+  {
+   "code": "s-IV-10",
+   "text": "理解三角形相似的性質，利用對應角相等或對應邊成比例，判斷兩個三角形的相似，並能應用於解決幾何與日常生活的問題。"
+  },
+  {
+   "code": "s-IV-11",
+   "text": "理解三角形重心、外心、內心的意義和其相關性質。"
+  },
+  {
+   "code": "s-IV-12",
+   "text": "理解直角三角形中某一銳角的角度決定邊長的比值，認識這些比值的符號，並能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "s-IV-13",
+   "text": "理解直尺、圓規操作過程的敘述，並應用於尺規作圖。"
+  },
+  {
+   "code": "s-IV-14",
+   "text": "認識圓的相關概念（如半徑、弦、弧、弓形等）和幾何性質（如圓心角、圓周角、圓內接四邊形的對角互補等），並理解弧長、圓面積、扇形面積的公式。"
+  },
+  {
+   "code": "s-IV-15",
+   "text": "認識線與線、線與平面在空間中的垂直關係和平行關係。"
+  },
+  {
+   "code": "s-IV-16",
+   "text": "理解簡單的立體圖形及其三視圖與平面展開圖，並能計算立體圖形的表面積、側面積及體積。"
+  },
+  {
+   "code": "g-IV-1",
+   "text": "認識直角坐標的意義與構成要素，並能報讀與標示坐標點，以及計算兩個坐標點的距離。"
+  },
+  {
+   "code": "g-IV-2",
+   "text": "在直角坐標上能描繪與理解二元一次方程式的直線圖形，以及二元一次聯立方程式唯一解的幾何意義。"
+  },
+  {
+   "code": "a-IV-1",
+   "text": "理解並應用符號及文字敘述表達概念、運算、推理及證明。"
+  },
+  {
+   "code": "a-IV-2",
+   "text": "理解一元一次方程式及其解的意義，能以等量公理與移項法則求解和驗算，並能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "a-IV-3",
+   "text": "理解一元一次不等式的意義，並應用於標示數的範圍和其在數線上的圖形，以及使用不等式的數學符號描述情境，與人溝通。"
+  },
+  {
+   "code": "a-IV-4",
+   "text": "理解二元一次聯立方程式及其解的意義，並能以代入消去法與加減消去法求解和驗算，以及能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "a-IV-5",
+   "text": "認識多項式及相關名詞，並熟練多項式的四則運算及運用乘法公式。"
+  },
+  {
+   "code": "a-IV-6",
+   "text": "理解一元二次方程式及其解的意義，能以因式分解和配方法求解和驗算，並能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "f-IV-1",
+   "text": "理解常數函數和一次函數的意義，能描繪常數函數和一次函數的圖形，並能運用到日常生活的情境解決問題。"
+  },
+  {
+   "code": "f-IV-2",
+   "text": "理解二次函數的意義，並能描繪二次函數的圖形。"
+  },
+  {
+   "code": "f-IV-3",
+   "text": "理解二次函數的標準式，熟知開口方向、大小、頂點、對稱軸與極值等問題。"
+  },
+  {
+   "code": "d-IV-1",
+   "text": "理解常用統計圖表，並能運用簡單統計量分析資料的特性及使用統計軟體的資訊表徵，與人溝通。"
+  },
+  {
+   "code": "d-IV-2",
+   "text": "理解機率的意義，能以機率表示不確定性和以樹狀圖分析所有的可能性，並能應用機率到簡單的日常生活情境解決問題。"
+  }
+ ],
+ "senior_high": [
+  {
+   "code": "N-10-1",
+   "text": "實數：數線，十進制小數的意義，三一律，有理數的十進制小數特徵，無理數之十進制小數的估算（為無理數的證明★），科學記號數字的運算。"
+  },
+  {
+   "code": "N-10-2",
+   "text": "絕對值：絕對值方程式與不等式。"
+  },
+  {
+   "code": "N-10-3",
+   "text": "指數：非負實數之小數或分數次方的意義，幾何平均數與算幾不等式，複習指數律，實數指數的意義，使用計算機的鍵。"
+  },
+  {
+   "code": "N-10-4",
+   "text": "常用對數：log的意義，常用對數與科學記號連結，使用計算機的鍵和log鍵。"
+  },
+  {
+   "code": "N-10-5",
+   "text": "數值計算的誤差：認識計算機的有限性，可察覺誤差的發生並做適當有效位數的取捨。★＃"
+  },
+  {
+   "code": "N-10-6",
+   "text": "數列、級數與遞迴關係：有限項遞迴數列，有限項等比級數，常用的求和公式，數學歸納法。"
+  },
+  {
+   "code": "N-10-7",
+   "text": "邏輯：認識命題及其否定，兩命題的或、且、推論關係，充分、必要、充要條件。★＃"
+  },
+  {
+   "code": "G-10-1",
+   "text": "坐標圖形的對稱性：坐標平面上，對軸，對軸，對直線的對稱，對原點的對稱。＃"
+  },
+  {
+   "code": "G-10-2",
+   "text": "直線方程式：斜率，其絕對值的意義，點斜式，點與直線之平移，平行線、垂直線的方程式。點到直線的距離，平行線的距離、二元一次不等式。"
+  },
+  {
+   "code": "G-10-3",
+   "text": "圓方程式：圓的標準式。"
+  },
+  {
+   "code": "G-10-4",
+   "text": "直線與圓：圓的切線，圓與直線關係的代數與幾何判定。"
+  },
+  {
+   "code": "G-10-5",
+   "text": "廣義角和極坐標：廣義角的終邊，極坐標的定義，透過方格紙操作極坐標與直角坐標的轉換。"
+  },
+  {
+   "code": "G-10-6",
+   "text": "三角比：定義銳角的正弦、餘弦、正切，推廣至廣義角的正弦、餘弦、正切，特殊角的值，使用計算機的sin, cos, tan鍵。"
+  },
+  {
+   "code": "G-10-7",
+   "text": "三角比的性質：正弦定理，餘弦定理，正射影。連結斜率與直線斜角的正切，用計算機的反正弦、反餘弦、反正切鍵計算斜角或兩相交直線的夾角，（三角測量＃）。"
+  },
+  {
+   "code": "A-10-1",
+   "text": "式的運算：三次乘法公式，根式與分式的運算。"
+  },
+  {
+   "code": "A-10-2",
+   "text": "多項式之除法原理：因式定理與餘式定理，多項式除以之運算，並將其表為之形式的多項式。"
+  },
+  {
+   "code": "F-10-1",
+   "text": "一次與二次函數：從方程式到的形式轉換，一次函數圖形與圖形的關係，數線上的分點公式與一次函數求值。用配方將二次函數化為標準式，二次函數圖形與圖形的關係，情境中的應"
+  },
+  {
+   "code": "F-10-2",
+   "text": "三次函數的圖形特徵：二次、三次函數圖形的對稱性，兩者圖形的大域（global）特徵由最高次項決定，而局部（local）則近似一條直線。"
+  },
+  {
+   "code": "F-10-3",
+   "text": "多項式不等式：解一次、二次、或已分解之多項式不等式的解區間，連結多項式函數的圖形。"
+  },
+  {
+   "code": "D-10-1",
+   "text": "集合：集合的表示法，宇集、空集、子集、交集、聯集、餘集，屬於和包含關係，文氏圖。★＃"
+  },
+  {
+   "code": "D-10-2",
+   "text": "數據分析：一維數據的平均數、標準差。二維數據的散布圖，最適直線與相關係數，數據的標準化。"
+  },
+  {
+   "code": "D-10-3",
+   "text": "有系統的計數：有系統的窮舉，樹狀圖，加法原理，乘法原理，取捨原理。直線排列與組合。"
+  },
+  {
+   "code": "D-10-4",
+   "text": "複合事件的古典機率：樣本空間與事件，複合事件的古典機率性質，期望值。"
+  },
+  {
+   "code": "N-11A-1",
+   "text": "弧度量：弧度量的定義，弧長與扇形面積，計算機的rad鍵。"
+  },
+  {
+   "code": "S-11A-1",
+   "text": "空間概念：空間的基本性質，空間中兩直線、兩平面、直線與平面的位置關係，三垂線定理。"
+  },
+  {
+   "code": "G-11A-1",
+   "text": "平面向量：坐標平面上的向量係數積與加減，線性組合。"
+  },
+  {
+   "code": "G-11A-2",
+   "text": "空間坐標系：點坐標，兩點距離，點到坐標軸或坐標平面的投影。"
+  },
+  {
+   "code": "G-11A-3",
+   "text": "空間向量：坐標空間中的向量係數積與加減，線性組合。"
+  },
+  {
+   "code": "G-11A-4",
+   "text": "三角不等式：向量的長度，三角不等式。"
+  },
+  {
+   "code": "G-11A-5",
+   "text": "三角的和差角公式：正弦與餘弦的和差角、倍角與半角公式。"
+  },
+  {
+   "code": "G-11A-6",
+   "text": "平面向量的運算：正射影與內積，面積與行列式，兩向量的平行與垂直判定，兩向量的夾角，柯西不等式。"
+  },
+  {
+   "code": "G-11A-7",
+   "text": "空間向量的運算：正射影與內積，兩向量平行與垂直的判定、柯西不等式，外積。"
+  },
+  {
+   "code": "G-11A-8",
+   "text": "三階行列式：三向量決定的平行六面體體積，三重積。"
+  },
+  {
+   "code": "G-11A-9",
+   "text": "平面方程式：平面的法向量與標準式、兩平面的夾角、點到平面的距離。"
+  },
+  {
+   "code": "G-11A-10",
+   "text": "空間中的直線方程式：空間中直線的參數式與比例式，直線與平面的關係，點到直線距離，兩平行或歪斜線的距離。"
+  },
+  {
+   "code": "A-11A-1",
+   "text": "二元一次方程組的矩陣表達：定義方陣符號及其乘以向量的線性組合意涵，克拉瑪公式，方程組唯一解、無窮多組解、無解的情況。"
+  },
+  {
+   "code": "A-11A-2",
+   "text": "三元一次聯立方程式：以消去法求解，改以方陣表達。用電腦求解多元一次方程組的觀念與示範。"
+  },
+  {
+   "code": "A-11A-3",
+   "text": "矩陣的運算：矩陣的定義，矩陣的係數積與加減運算，矩陣相乘，反方陣。將矩陣視為資料表，用電腦做矩陣運算的觀念與示範。"
+  },
+  {
+   "code": "A-11A-4",
+   "text": "對數律：從及指數律認識log的對數律，其基本應用，並用於求解指數方程式。"
+  },
+  {
+   "code": "F-11A-1",
+   "text": "三角函數的圖形：sin, cos, tan函數的圖形、定義域、值域、週期性，週期現象的數學模型。（cot, sec, csc之定義與圖形※）"
+  },
+  {
+   "code": "F-11A-2",
+   "text": "正餘弦的疊合：同頻波疊合後的頻率、振幅。"
+  },
+  {
+   "code": "F-11A-3",
+   "text": "矩陣的應用：平面上的線性變換，二階轉移方陣。"
+  },
+  {
+   "code": "F-11A-4",
+   "text": "指數與對數函數：指數函數及其圖形，按比例成長或衰退的數學模型，常用對數函數的圖形，在科學和金融上的應用。"
+  },
+  {
+   "code": "D-11A-1",
+   "text": "主觀機率與客觀機率：根據機率性質檢視主觀機率的合理性，根據已知的數據獲得客觀機率。"
+  },
+  {
+   "code": "D-11A-2",
+   "text": "條件機率：條件機率的意涵及其應用，事件的獨立性及其應用。"
+  },
+  {
+   "code": "D-11A-3",
+   "text": "貝氏定理：條件機率的乘法公式，貝氏定理及其應用。"
+  },
+  {
+   "code": "N-11B-1",
+   "text": "弧度量：弧度量的定義，弧長與扇形面積，計算機的rad鍵。"
+  },
+  {
+   "code": "S-11B-1",
+   "text": "空間概念：空間的基本性質，空間中兩直線、兩平面、及直線與平面的位置關係。利用長方體的展開圖討論表面上的兩點距離，認識球面上的經線與緯線。"
+  },
+  {
+   "code": "S-11B-2",
+   "text": "圓錐曲線：由平面與圓錐截痕，視覺性地認識圓錐曲線，及其在自然中的呈現。"
+  },
+  {
+   "code": "G-11B-1",
+   "text": "平面向量：坐標平面上的向量係數積與加減，線性組合。"
+  },
+  {
+   "code": "G-11B-2",
+   "text": "平面向量的運算：正射影與內積，兩向量的垂直與平行判定，兩向量的夾角。"
+  },
+  {
+   "code": "G-11B-3",
+   "text": "平面上的比例：生活情境與平面幾何的比例問題（在設計和透視上）。"
+  },
+  {
+   "code": "G-11B-4",
+   "text": "空間坐標系：點坐標，兩點距離，點到坐標軸或坐標平面的投影。"
+  },
+  {
+   "code": "A-11B-1",
+   "text": "矩陣與資料表格：矩陣乘向量的線性組合意涵，二元一次方程組的意涵，矩陣之加、減、乘及二階反方陣。將矩陣視為資料表，用電腦做矩陣運算的觀念與示範。"
+  },
+  {
+   "code": "F-11B-1",
+   "text": "週期性數學模型：正弦函數的圖形、週期性，其振幅、週期與頻率，週期性現象的範例。"
+  },
+  {
+   "code": "F-11B-2",
+   "text": "按比例成長模型：指數函數與對數函數及其生活上的應用，例如地震規模，金融與理財，平均成長率，連續複利與的認識，自然對數函數。"
+  },
+  {
+   "code": "D-11B-1",
+   "text": "主觀機率與客觀機率：根據機率性質檢視主觀機率的合理性，根據已知的數據獲得客觀機率。"
+  },
+  {
+   "code": "D-11B-2",
+   "text": "不確定性：條件機率、貝氏定理、獨立事件及其基本應用，列聯表與文氏圖的關聯。"
+  }
+ ]
+}
+</canonical-source>
+
+<canonical-source path="exam_packs/會考/curriculum/社會.json">
+{
+ "subject": "社會",
+ "stage": "第四學習階段（國民中學 7-9 年級）",
+ "source": {
+  "publisher": "國家教育研究院（教育部發布之十二年國民基本教育課程綱要）",
+  "url": "https://www.naer.edu.tw/upload/1/16/doc/819/十二年國民基本教育課程綱要國民中小學暨普通型高級中等學校─社會領域.odt",
+  "retrieved_at": "2026-11-14",
+  "sha256": "45e8eb87a07610f5801ad66f5217956ec8311289fe0743b4b6877770cfb9ab10"
+ },
+ "note": "Codes use ASCII 'IV' (the curriculum prints 'Ⅳ'); validate_cap_form.py accepts either. content = 學習內容 (what items assess); performance = 學習表現. senior_high = 第五學習階段（高中）學習內容: concepts a 國中 item must not require.",
+ "content": [
+  {
+   "code": "歷A-IV-1",
+   "official_code": "歷A-Ⅳ-1",
+   "text": "紀年與分期。"
+  },
+  {
+   "code": "歷Ba-IV-1",
+   "official_code": "歷Ba-Ⅳ-1",
+   "text": "考古發掘與史前文化。"
+  },
+  {
+   "code": "歷Ba-IV-2",
+   "official_code": "歷Ba-Ⅳ-2",
+   "text": "臺灣原住民族的遷徙與傳說。"
+  },
+  {
+   "code": "歷Bb-IV-1",
+   "official_code": "歷Bb-Ⅳ-1",
+   "text": "十六、十七世紀東亞海域的各方勢力。"
+  },
+  {
+   "code": "歷Bb-IV-2",
+   "official_code": "歷Bb-Ⅳ-2",
+   "text": "原住民族與外來者的接觸。"
+  },
+  {
+   "code": "歷Ca-IV-1",
+   "official_code": "歷Ca-Ⅳ-1",
+   "text": "清帝國的統治政策。"
+  },
+  {
+   "code": "歷Ca-IV-2",
+   "official_code": "歷Ca-Ⅳ-2",
+   "text": "農商業的發展。"
+  },
+  {
+   "code": "歷Cb-IV-1",
+   "official_code": "歷Cb-Ⅳ-1",
+   "text": "原住民族社會及其變化。"
+  },
+  {
+   "code": "歷Cb-IV-2",
+   "official_code": "歷Cb-Ⅳ-2",
+   "text": "漢人社會的活動。"
+  },
+  {
+   "code": "歷D-IV-1",
+   "official_code": "歷D-Ⅳ-1",
+   "text": "地方史探究（一）。"
+  },
+  {
+   "code": "歷D-IV-2",
+   "official_code": "歷D-Ⅳ-2",
+   "text": "從主題B或C挑選適當課題深入探究，或規劃與執行歷史踏查或展演。"
+  },
+  {
+   "code": "歷Ea-IV-1",
+   "official_code": "歷Ea-Ⅳ-1",
+   "text": "殖民統治體制的建立。"
+  },
+  {
+   "code": "歷Ea-IV-2",
+   "official_code": "歷Ea-Ⅳ-2",
+   "text": "基礎建設與產業政策。"
+  },
+  {
+   "code": "歷Ea-IV-3",
+   "official_code": "歷Ea-Ⅳ-3",
+   "text": "「理蕃」政策與原住民族社會的對應。"
+  },
+  {
+   "code": "歷Eb-IV-1",
+   "official_code": "歷Eb-Ⅳ-1",
+   "text": "現代教育與文化啟蒙運動。"
+  },
+  {
+   "code": "歷Eb-IV-2",
+   "official_code": "歷Eb-Ⅳ-2",
+   "text": "都會文化的出現。"
+  },
+  {
+   "code": "歷Eb-IV-3",
+   "official_code": "歷Eb-Ⅳ-3",
+   "text": "新舊文化的衝突與在地社會的調適。"
+  },
+  {
+   "code": "歷Fa-IV-1",
+   "official_code": "歷Fa-Ⅳ-1",
+   "text": "中華民國統治體制的移入與轉變。"
+  },
+  {
+   "code": "歷Fa-IV-2",
+   "official_code": "歷Fa-Ⅳ-2",
+   "text": "二二八事件與白色恐怖。"
+  },
+  {
+   "code": "歷Fa-IV-3",
+   "official_code": "歷Fa-Ⅳ-3",
+   "text": "國家政策下的原住民族。"
+  },
+  {
+   "code": "歷Fa-IV-4",
+   "official_code": "歷Fa-Ⅳ-4",
+   "text": "臺海兩岸關係與臺灣的國際處境。"
+  },
+  {
+   "code": "歷Fb-IV-1",
+   "official_code": "歷Fb-Ⅳ-1",
+   "text": "經濟發展與社會轉型。"
+  },
+  {
+   "code": "歷Fb-IV-2",
+   "official_code": "歷Fb-Ⅳ-2",
+   "text": "大眾文化的演變。"
+  },
+  {
+   "code": "歷G-IV-1",
+   "official_code": "歷G-Ⅳ-1",
+   "text": "地方史探究（二）。"
+  },
+  {
+   "code": "歷G-IV-2",
+   "official_code": "歷G-Ⅳ-2",
+   "text": "從主題E或F挑選適當課題深入探究，或規劃與執行歷史踏查或展演。"
+  },
+  {
+   "code": "歷Ha-IV-1",
+   "official_code": "歷Ha-Ⅳ-1",
+   "text": "商周至隋唐時期國家與社會的重要變遷。"
+  },
+  {
+   "code": "歷Ha-IV-2",
+   "official_code": "歷Ha-Ⅳ-2",
+   "text": "商周至隋唐時期民族與文化的互動。"
+  },
+  {
+   "code": "歷Hb-IV-1",
+   "official_code": "歷Hb-Ⅳ-1",
+   "text": "宋、元時期的國際互動。"
+  },
+  {
+   "code": "歷Hb-IV-2",
+   "official_code": "歷Hb-Ⅳ-2",
+   "text": "宋、元時期的商貿與文化交流。"
+  },
+  {
+   "code": "歷Ia-IV-1",
+   "official_code": "歷Ia-Ⅳ-1",
+   "text": "明、清時期東亞世界的變動。"
+  },
+  {
+   "code": "歷Ia-IV-2",
+   "official_code": "歷Ia-Ⅳ-2",
+   "text": "明、清時期東亞世界的商貿與文化交流。"
+  },
+  {
+   "code": "歷Ib-IV-1",
+   "official_code": "歷Ib-Ⅳ-1",
+   "text": "晚清時期的東西方接觸與衝突。"
+  },
+  {
+   "code": "歷Ib-IV-2",
+   "official_code": "歷Ib-Ⅳ-2",
+   "text": "甲午戰爭後的政治體制變革。"
+  },
+  {
+   "code": "歷Ic-IV-1",
+   "official_code": "歷Ic-Ⅳ-1",
+   "text": "城市風貌的改變與新媒體的出現。"
+  },
+  {
+   "code": "歷Ic-IV-2",
+   "official_code": "歷Ic-Ⅳ-2",
+   "text": "家族與婦女角色的轉變。"
+  },
+  {
+   "code": "歷J-IV-1",
+   "official_code": "歷J-Ⅳ-1",
+   "text": "從主題H或I挑選適當課題深入探究，或規劃與執行歷史踏查或展演。"
+  },
+  {
+   "code": "歷Ka-IV-1",
+   "official_code": "歷Ka-Ⅳ-1",
+   "text": "中華民國的建立與早期發展。"
+  },
+  {
+   "code": "歷Ka-IV-2",
+   "official_code": "歷Ka-Ⅳ-2",
+   "text": "舊傳統與新思潮間的激盪。"
+  },
+  {
+   "code": "歷Kb-IV-1",
+   "official_code": "歷Kb-Ⅳ-1",
+   "text": "現代國家的建制與外交發展。"
+  },
+  {
+   "code": "歷Kb-IV-2",
+   "official_code": "歷Kb-Ⅳ-2",
+   "text": "日本帝國的對外擴張與衝擊。"
+  },
+  {
+   "code": "歷La-IV-1",
+   "official_code": "歷La-Ⅳ-1",
+   "text": "中華人民共和國的建立。"
+  },
+  {
+   "code": "歷La-IV-2",
+   "official_code": "歷La-Ⅳ-2",
+   "text": "改革開放後的政經發展。"
+  },
+  {
+   "code": "歷Lb-IV-1",
+   "official_code": "歷Lb-Ⅳ-1",
+   "text": "冷戰時期東亞國家間的競合。"
+  },
+  {
+   "code": "歷Lb-IV-2",
+   "official_code": "歷Lb-Ⅳ-2",
+   "text": "東南亞地區國際組織的發展與影響。"
+  },
+  {
+   "code": "歷M-IV-1",
+   "official_code": "歷M-Ⅳ-1",
+   "text": "從主題K或L挑選適當課題深入探究，或規劃與執行歷史踏查或展演。"
+  },
+  {
+   "code": "歷Na-IV-1",
+   "official_code": "歷Na-Ⅳ-1",
+   "text": "非洲與西亞的早期文化。"
+  },
+  {
+   "code": "歷Na-IV-2",
+   "official_code": "歷Na-Ⅳ-2",
+   "text": "希臘、羅馬的政治及文化。"
+  },
+  {
+   "code": "歷Nb-IV-1",
+   "official_code": "歷Nb-Ⅳ-1",
+   "text": "佛教的起源與發展。"
+  },
+  {
+   "code": "歷Nb-IV-2",
+   "official_code": "歷Nb-Ⅳ-2",
+   "text": "基督教的起源與發展。"
+  },
+  {
+   "code": "歷Nb-IV-3",
+   "official_code": "歷Nb-Ⅳ-3",
+   "text": "伊斯蘭教的起源與發展。"
+  },
+  {
+   "code": "歷Oa-IV-1",
+   "official_code": "歷Oa-Ⅳ-1",
+   "text": "文藝復興。"
+  },
+  {
+   "code": "歷Oa-IV-2",
+   "official_code": "歷Oa-Ⅳ-2",
+   "text": "宗教改革。"
+  },
+  {
+   "code": "歷Oa-IV-3",
+   "official_code": "歷Oa-Ⅳ-3",
+   "text": "科學革命與啟蒙運動。"
+  },
+  {
+   "code": "歷Ob-IV-1",
+   "official_code": "歷Ob-Ⅳ-1",
+   "text": "歐洲的海外擴張與傳教。"
+  },
+  {
+   "code": "歷Ob-IV-2",
+   "official_code": "歷Ob-Ⅳ-2",
+   "text": "美洲和澳洲的政治與文化。"
+  },
+  {
+   "code": "歷Ob-IV-3",
+   "official_code": "歷Ob-Ⅳ-3",
+   "text": "近代南亞與東南亞。"
+  },
+  {
+   "code": "歷P-IV-1",
+   "official_code": "歷P-Ⅳ-1",
+   "text": "從主題N或O挑選適當課題深入探究，或規劃與執行歷史踏查或展演。"
+  },
+  {
+   "code": "歷Qa-IV-1",
+   "official_code": "歷Qa-Ⅳ-1",
+   "text": "美國獨立與法國大革命。"
+  },
+  {
+   "code": "歷Qa-IV-2",
+   "official_code": "歷Qa-Ⅳ-2",
+   "text": "工業革命與社會變遷。"
+  },
+  {
+   "code": "歷Qa-IV-3",
+   "official_code": "歷Qa-Ⅳ-3",
+   "text": "民族主義與國家建立。"
+  },
+  {
+   "code": "歷Qb-IV-1",
+   "official_code": "歷Qb-Ⅳ-1",
+   "text": "歐洲帝國的擴張。"
+  },
+  {
+   "code": "歷Qb-IV-2",
+   "official_code": "歷Qb-Ⅳ-2",
+   "text": "亞、非、美三洲的發展及回應。"
+  },
+  {
+   "code": "歷Qb-IV-3",
+   "official_code": "歷Qb-Ⅳ-3",
+   "text": "第一次世界大戰。"
+  },
+  {
+   "code": "歷Qc-IV-1",
+   "official_code": "歷Qc-Ⅳ-1",
+   "text": "戰間期的世界局勢。"
+  },
+  {
+   "code": "歷Qc-IV-2",
+   "official_code": "歷Qc-Ⅳ-2",
+   "text": "第二次世界大戰。"
+  },
+  {
+   "code": "歷Qc-IV-3",
+   "official_code": "歷Qc-Ⅳ-3",
+   "text": "從兩極到多元的戰後世界。"
+  },
+  {
+   "code": "歷R-IV-1",
+   "official_code": "歷R-Ⅳ-1",
+   "text": "從主題Q挑選適當課題深入探究，或規劃與執行歷史踏查或展演。"
+  },
+  {
+   "code": "地Aa-IV-1",
+   "official_code": "地Aa-Ⅳ-1",
+   "text": "全球經緯度座標系統。"
+  },
+  {
+   "code": "地Aa-IV-2",
+   "official_code": "地Aa-Ⅳ-2",
+   "text": "全球海陸分布。"
+  },
+  {
+   "code": "地Aa-IV-3",
+   "official_code": "地Aa-Ⅳ-3",
+   "text": "臺灣地理位置的特性及其影響。"
+  },
+  {
+   "code": "地Aa-IV-4",
+   "official_code": "地Aa-Ⅳ-4",
+   "text": "問題探究：臺灣和世界各地的關聯性。"
+  },
+  {
+   "code": "地Ab-IV-1",
+   "official_code": "地Ab-Ⅳ-1",
+   "text": "地形與海岸的分類。"
+  },
+  {
+   "code": "地Ab-IV-2",
+   "official_code": "地Ab-Ⅳ-2",
+   "text": "臺灣主要地形的分布與特色。"
+  },
+  {
+   "code": "地Ab-IV-3",
+   "official_code": "地Ab-Ⅳ-3",
+   "text": "臺灣的領海與經濟海域。"
+  },
+  {
+   "code": "地Ab-IV-4",
+   "official_code": "地Ab-Ⅳ-4",
+   "text": "問題探究：土地利用或地形災害與環境倫理。"
+  },
+  {
+   "code": "地Ac-IV-1",
+   "official_code": "地Ac-Ⅳ-1",
+   "text": "天氣與氣候。"
+  },
+  {
+   "code": "地Ac-IV-2",
+   "official_code": "地Ac-Ⅳ-2",
+   "text": "臺灣的氣候特色。"
+  },
+  {
+   "code": "地Ac-IV-3",
+   "official_code": "地Ac-Ⅳ-3",
+   "text": "臺灣的水資源分布。"
+  },
+  {
+   "code": "地Ac-IV-4",
+   "official_code": "地Ac-Ⅳ-4",
+   "text": "問題探究：颱風與生活。"
+  },
+  {
+   "code": "地Ad-IV-1",
+   "official_code": "地Ad-Ⅳ-1",
+   "text": "臺灣的人口成長與分布。"
+  },
+  {
+   "code": "地Ad-IV-2",
+   "official_code": "地Ad-Ⅳ-2",
+   "text": "臺灣的人口組成。"
+  },
+  {
+   "code": "地Ad-IV-3",
+   "official_code": "地Ad-Ⅳ-3",
+   "text": "多元族群的文化特色。"
+  },
+  {
+   "code": "地Ad-IV-4",
+   "official_code": "地Ad-Ⅳ-4",
+   "text": "問題探究：臺灣人口問題與對策。"
+  },
+  {
+   "code": "地Ae-IV-1",
+   "official_code": "地Ae-Ⅳ-1",
+   "text": "臺灣農業經營的特色。"
+  },
+  {
+   "code": "地Ae-IV-2",
+   "official_code": "地Ae-Ⅳ-2",
+   "text": "臺灣工業發展的特色。"
+  },
+  {
+   "code": "地Ae-IV-3",
+   "official_code": "地Ae-Ⅳ-3",
+   "text": "臺灣的國際貿易與全球關連。"
+  },
+  {
+   "code": "地Ae-IV-4",
+   "official_code": "地Ae-Ⅳ-4",
+   "text": "問題探究：產業活動的挑戰與調適。"
+  },
+  {
+   "code": "地Af-IV-1",
+   "official_code": "地Af-Ⅳ-1",
+   "text": "聚落體系與交通網絡。"
+  },
+  {
+   "code": "地Af-IV-2",
+   "official_code": "地Af-Ⅳ-2",
+   "text": "都市發展與都市化。"
+  },
+  {
+   "code": "地Af-IV-3",
+   "official_code": "地Af-Ⅳ-3",
+   "text": "臺灣的區域發展及其空間差異。"
+  },
+  {
+   "code": "地Af-IV-4",
+   "official_code": "地Af-Ⅳ-4",
+   "text": "問題探究：原住民族文化、生活空間與生態保育政策。"
+  },
+  {
+   "code": "地Ba-IV-1",
+   "official_code": "地Ba-Ⅳ-1",
+   "text": "自然環境的地區差異。"
+  },
+  {
+   "code": "地Ba-IV-2",
+   "official_code": "地Ba-Ⅳ-2",
+   "text": "傳統維生方式與人口分布。"
+  },
+  {
+   "code": "地Ba-IV-3",
+   "official_code": "地Ba-Ⅳ-3",
+   "text": "人口成長、人口遷移與文化擴散。"
+  },
+  {
+   "code": "地Bb-IV-1",
+   "official_code": "地Bb-Ⅳ-1",
+   "text": "產業活動的轉型。"
+  },
+  {
+   "code": "地Bb-IV-2",
+   "official_code": "地Bb-Ⅳ-2",
+   "text": "經濟發展的地區差異。"
+  },
+  {
+   "code": "地Bb-IV-3",
+   "official_code": "地Bb-Ⅳ-3",
+   "text": "經濟發展與全球關連。"
+  },
+  {
+   "code": "地Bb-IV-4",
+   "official_code": "地Bb-Ⅳ-4",
+   "text": "問題探究：經濟發展與環境衝擊。"
+  },
+  {
+   "code": "地Bc-IV-1",
+   "official_code": "地Bc-Ⅳ-1",
+   "text": "自然環境與資源。"
+  },
+  {
+   "code": "地Bc-IV-2",
+   "official_code": "地Bc-Ⅳ-2",
+   "text": "全球氣候變遷的衝擊。"
+  },
+  {
+   "code": "地Bc-IV-3",
+   "official_code": "地Bc-Ⅳ-3",
+   "text": "區域發展與戰略競合。"
+  },
+  {
+   "code": "地Bc-IV-4",
+   "official_code": "地Bc-Ⅳ-4",
+   "text": "問題探究：大洋洲與臺灣原住民族文化的連結。"
+  },
+  {
+   "code": "地Bd-IV-1",
+   "official_code": "地Bd-Ⅳ-1",
+   "text": "自然環境背景。"
+  },
+  {
+   "code": "地Bd-IV-2",
+   "official_code": "地Bd-Ⅳ-2",
+   "text": "產業與文化發展的特色。"
+  },
+  {
+   "code": "地Bd-IV-3",
+   "official_code": "地Bd-Ⅳ-3",
+   "text": "東北亞經濟發展的成就與挑戰。"
+  },
+  {
+   "code": "地Bd-IV-4",
+   "official_code": "地Bd-Ⅳ-4",
+   "text": "問題探究：臺灣與東北亞的文化交流。"
+  },
+  {
+   "code": "地Be-IV-1",
+   "official_code": "地Be-Ⅳ-1",
+   "text": "自然環境背景。"
+  },
+  {
+   "code": "地Be-IV-2",
+   "official_code": "地Be-Ⅳ-2",
+   "text": "多元文化的發展。"
+  },
+  {
+   "code": "地Be-IV-3",
+   "official_code": "地Be-Ⅳ-3",
+   "text": "經濟發展與區域結盟。"
+  },
+  {
+   "code": "地Be-IV-4",
+   "official_code": "地Be-Ⅳ-4",
+   "text": "問題探究：東南亞和南亞新興市場與臺灣產業發展的關聯。"
+  },
+  {
+   "code": "地Bf-IV-1",
+   "official_code": "地Bf-Ⅳ-1",
+   "text": "自然環境與資源。"
+  },
+  {
+   "code": "地Bf-IV-2",
+   "official_code": "地Bf-Ⅳ-2",
+   "text": "伊斯蘭文化的發展與特色。"
+  },
+  {
+   "code": "地Bf-IV-3",
+   "official_code": "地Bf-Ⅳ-3",
+   "text": "國際衝突的焦點。"
+  },
+  {
+   "code": "地Bf-IV-4",
+   "official_code": "地Bf-Ⅳ-4",
+   "text": "問題探究：伊斯蘭文化與西方文化的互動。"
+  },
+  {
+   "code": "地Bg-IV-1",
+   "official_code": "地Bg-Ⅳ-1",
+   "text": "自然環境與資源。"
+  },
+  {
+   "code": "地Bg-IV-2",
+   "official_code": "地Bg-Ⅳ-2",
+   "text": "漠南非洲的文化特色與影響。"
+  },
+  {
+   "code": "地Bg-IV-3",
+   "official_code": "地Bg-Ⅳ-3",
+   "text": "現代經濟的發展與挑戰。"
+  },
+  {
+   "code": "地Bg-IV-4",
+   "official_code": "地Bg-Ⅳ-4",
+   "text": "問題探究：漠南非洲的公平貿易議題。"
+  },
+  {
+   "code": "地Bh-IV-1",
+   "official_code": "地Bh-Ⅳ-1",
+   "text": "自然環境背景。"
+  },
+  {
+   "code": "地Bh-IV-2",
+   "official_code": "地Bh-Ⅳ-2",
+   "text": "產業活動的發展與文化特色。"
+  },
+  {
+   "code": "地Bh-IV-3",
+   "official_code": "地Bh-Ⅳ-3",
+   "text": "現代經濟的發展與區域結盟。"
+  },
+  {
+   "code": "地Bh-IV-4",
+   "official_code": "地Bh-Ⅳ-4",
+   "text": "問題探究：歐洲發展綠能的原因與條件。"
+  },
+  {
+   "code": "地Bi-IV-1",
+   "official_code": "地Bi-Ⅳ-1",
+   "text": "自然環境背景。"
+  },
+  {
+   "code": "地Bi-IV-2",
+   "official_code": "地Bi-Ⅳ-2",
+   "text": "移民與產業活動的發展。"
+  },
+  {
+   "code": "地Bi-IV-3",
+   "official_code": "地Bi-Ⅳ-3",
+   "text": "經濟發展的區域差異。"
+  },
+  {
+   "code": "地Bi-IV-4",
+   "official_code": "地Bi-Ⅳ-4",
+   "text": "問題探究：南美洲熱帶雨林的開發與保育。"
+  },
+  {
+   "code": "地Ca-IV-1",
+   "official_code": "地Ca-Ⅳ-1",
+   "text": "「臺灣」地名的由來與指涉範圍的演變。"
+  },
+  {
+   "code": "地Ca-IV-2",
+   "official_code": "地Ca-Ⅳ-2",
+   "text": "鄉鎮市區（或縣市）地名的由來與變遷。"
+  },
+  {
+   "code": "地Ca-IV-3",
+   "official_code": "地Ca-Ⅳ-3",
+   "text": "聚落地名的命名與環境、族群文化的關係。"
+  },
+  {
+   "code": "地Ca-IV-4",
+   "official_code": "地Ca-Ⅳ-4",
+   "text": "問題探究：地名和生產活動、產物命名等商品行銷的關係。"
+  },
+  {
+   "code": "地Cb-IV-1",
+   "official_code": "地Cb-Ⅳ-1",
+   "text": "農業生產與地理環境。"
+  },
+  {
+   "code": "地Cb-IV-2",
+   "official_code": "地Cb-Ⅳ-2",
+   "text": "食物運銷與國際貿易。"
+  },
+  {
+   "code": "地Cb-IV-3",
+   "official_code": "地Cb-Ⅳ-3",
+   "text": "飲食文化與食品加工、基因改造食物。"
+  },
+  {
+   "code": "地Cb-IV-4",
+   "official_code": "地Cb-Ⅳ-4",
+   "text": "問題探究：從地理觀點探究食安問題的原因與解決策略。"
+  },
+  {
+   "code": "公Aa-IV-1",
+   "official_code": "公Aa-Ⅳ-1",
+   "text": "什麼是公民？"
+  },
+  {
+   "code": "公Aa-IV-2",
+   "official_code": "公Aa-Ⅳ-2",
+   "text": "現代公民必須具備哪些基本的德性？為什麼？"
+  },
+  {
+   "code": "公Ab-IV-1",
+   "official_code": "公Ab-Ⅳ-1",
+   "text": "民主國家中權力與權利的差別及關聯。"
+  },
+  {
+   "code": "公Ab-IV-2",
+   "official_code": "公Ab-Ⅳ-2",
+   "text": "學生們在校園中享有哪些權利？如何在校園生活中實踐公民德性？"
+  },
+  {
+   "code": "公Ad-IV-1",
+   "official_code": "公Ad-Ⅳ-1",
+   "text": "為什麼保障人權與維護人性尊嚴有關？"
+  },
+  {
+   "code": "公Ad-IV-2",
+   "official_code": "公Ad-Ⅳ-2",
+   "text": "為什麼人權應超越國籍、種族、族群、區域、文化、性別、性傾向與身心障礙等界限，受到普遍性的保障？"
+  },
+  {
+   "code": "公Ba-IV-1",
+   "official_code": "公Ba-Ⅳ-1",
+   "text": "為什麼家庭是基本及重要的社會組織？"
+  },
+  {
+   "code": "公Ba-IV-2",
+   "official_code": "公Ba-Ⅳ-2",
+   "text": "在原住民族社會中，部落的意義與重要性是什麼？為什麼？"
+  },
+  {
+   "code": "公Ba-IV-3",
+   "official_code": "公Ba-Ⅳ-3",
+   "text": "家人間的親屬關係在法律上是如何形成的？親子之間為何互有權利與義務？"
+  },
+  {
+   "code": "公Ba-IV-4",
+   "official_code": "公Ba-Ⅳ-4",
+   "text": "為什麼會產生多樣化的家庭型態？家庭職能如何隨著社會變遷而改變？"
+  },
+  {
+   "code": "公Ba-IV-5",
+   "official_code": "公Ba-Ⅳ-5",
+   "text": "公權力如何介入以協助建立平權的家庭和發揮家庭職能？"
+  },
+  {
+   "code": "公Bb-IV-1",
+   "official_code": "公Bb-Ⅳ-1",
+   "text": "除了家庭之外，個人還會參與哪些團體？為什麼？"
+  },
+  {
+   "code": "公Bb-IV-2",
+   "official_code": "公Bb-Ⅳ-2",
+   "text": "民主社會中的志願結社具有哪些特徵？對公共生活有什麼影響？"
+  },
+  {
+   "code": "公Bc-IV-1",
+   "official_code": "公Bc-Ⅳ-1",
+   "text": "為什麼會有社會規範？法律與其他社會規範有什麼不同？"
+  },
+  {
+   "code": "公Bc-IV-2",
+   "official_code": "公Bc-Ⅳ-2",
+   "text": "日常生活規範與文化有什麼關係？"
+  },
+  {
+   "code": "公Bc-IV-3",
+   "official_code": "公Bc-Ⅳ-3",
+   "text": "社會規範如何隨著時間與空間而變動？臺灣社會之族群、性別、性傾向與身心障礙相關規範如何變動？"
+  },
+  {
+   "code": "公Bd-IV-1",
+   "official_code": "公Bd-Ⅳ-1",
+   "text": "國家與政府的區別。"
+  },
+  {
+   "code": "公Be-IV-1",
+   "official_code": "公Be-Ⅳ-1",
+   "text": "民主國家的政府體制為什麼須符合權力分立的原則？"
+  },
+  {
+   "code": "公Be-IV-2",
+   "official_code": "公Be-Ⅳ-2",
+   "text": "為什麼政府的職權與行使要規範在憲法中？"
+  },
+  {
+   "code": "公Be-IV-3",
+   "official_code": "公Be-Ⅳ-3",
+   "text": "我國中央政府如何組成？我國的地方政府如何組成？"
+  },
+  {
+   "code": "公Bf-IV-1",
+   "official_code": "公Bf-Ⅳ-1",
+   "text": "法治與人治的差異。"
+  },
+  {
+   "code": "公Bf-IV-2",
+   "official_code": "公Bf-Ⅳ-2",
+   "text": "憲法、法律、命令三者為什麼有位階的關係？"
+  },
+  {
+   "code": "公Bg-IV-1",
+   "official_code": "公Bg-Ⅳ-1",
+   "text": "為什麼憲法被稱為「人民權利的保障書」？"
+  },
+  {
+   "code": "公Bh-IV-1",
+   "official_code": "公Bh-Ⅳ-1",
+   "text": "為什麼行政法與我們日常生活息息相關？為什麼政府應依法行政？"
+  },
+  {
+   "code": "公Bh-IV-2",
+   "official_code": "公Bh-Ⅳ-2",
+   "text": "人民生活中有哪些常見的行政管制？當人民的權益受到侵害時，可以尋求行政救濟的意義為何？"
+  },
+  {
+   "code": "公Bi-IV-1",
+   "official_code": "公Bi-Ⅳ-1",
+   "text": "國家為什麼要制定刑法？為什麼行為的處罰，必須以行為時的法律有明文規定者為限？"
+  },
+  {
+   "code": "公Bi-IV-2",
+   "official_code": "公Bi-Ⅳ-2",
+   "text": "國家制定刑罰的目的是什麼？我國刑罰的制裁方式有哪些？"
+  },
+  {
+   "code": "公Bi-IV-3",
+   "official_code": "公Bi-Ⅳ-3",
+   "text": "在犯罪的追訴及處罰過程中，警察、檢察官及法官有哪些功能與權限？"
+  },
+  {
+   "code": "公Bj-IV-1",
+   "official_code": "公Bj-Ⅳ-1",
+   "text": "為什麼一般契約只要雙方當事人合意即可生效，而有些契約必須完成登記方能生效？契約不履行會產生哪些責任？"
+  },
+  {
+   "code": "公Bj-IV-2",
+   "official_code": "公Bj-Ⅳ-2",
+   "text": "為什麼一般人能自由訂立契約，而限制行為能力人訂立契約原則上必須得法定代理人同意？"
+  },
+  {
+   "code": "公Bj-IV-3",
+   "official_code": "公Bj-Ⅳ-3",
+   "text": "侵權行為的概念與責任。"
+  },
+  {
+   "code": "公Bj-IV-4",
+   "official_code": "公Bj-Ⅳ-4",
+   "text": "智慧財產權為什麼需要保障？日常生活中，如何合理使用他人的著作？侵害著作權須負的法律責任有哪些？"
+  },
+  {
+   "code": "公Bj-IV-5",
+   "official_code": "公Bj-Ⅳ-5",
+   "text": "社會生活上人民如何解決民事紛爭？這些解決方法各有哪些優缺點？"
+  },
+  {
+   "code": "公Bk-IV-1",
+   "official_code": "公Bk-Ⅳ-1",
+   "text": "為什麼少年應具備重要的兒童及少年保護的相關法律知識？我國制定保護兒童及少年相關法律的目的是什麼？有哪些相關的重要保護措施？"
+  },
+  {
+   "code": "公Bl-IV-1",
+   "official_code": "公Bl-Ⅳ-1",
+   "text": "個人與家庭為什麼需要做選擇？如何選擇？"
+  },
+  {
+   "code": "公Bl-IV-2",
+   "official_code": "公Bl-Ⅳ-2",
+   "text": "如何計算某項選擇的機會成本？"
+  },
+  {
+   "code": "公Bl-IV-3",
+   "official_code": "公Bl-Ⅳ-3",
+   "text": "如何使用機會成本的概念來解釋選擇行為？"
+  },
+  {
+   "code": "公Bl-IV-4",
+   "official_code": "公Bl-Ⅳ-4",
+   "text": "價格如何影響資源分配？"
+  },
+  {
+   "code": "公Bl-IV-5",
+   "official_code": "公Bl-Ⅳ-5",
+   "text": "不同分配資源的方法，各有哪些優缺點？"
+  },
+  {
+   "code": "公Bm-IV-1",
+   "official_code": "公Bm-Ⅳ-1",
+   "text": "家庭與學校如何透過誘因影響學生的行為？"
+  },
+  {
+   "code": "公Bm-IV-2",
+   "official_code": "公Bm-Ⅳ-2",
+   "text": "為什麼不同人對同一誘因的反應不同？"
+  },
+  {
+   "code": "公Bn-IV-1",
+   "official_code": "公Bn-Ⅳ-1",
+   "text": "個人與家庭如何解決食衣住行的需求？"
+  },
+  {
+   "code": "公Bn-IV-2",
+   "official_code": "公Bn-Ⅳ-2",
+   "text": "人為什麼從自給自足轉向交易？"
+  },
+  {
+   "code": "公Bn-IV-3",
+   "official_code": "公Bn-Ⅳ-3",
+   "text": "自願的交易為什麼對雙方都有利？"
+  },
+  {
+   "code": "公Bn-IV-4",
+   "official_code": "公Bn-Ⅳ-4",
+   "text": "臺灣開放外國商品進口的利弊。"
+  },
+  {
+   "code": "公Bp-IV-1",
+   "official_code": "公Bp-Ⅳ-1",
+   "text": "貨幣為什麼會出現？"
+  },
+  {
+   "code": "公Bp-IV-2",
+   "official_code": "公Bp-Ⅳ-2",
+   "text": "使用儲值卡和使用貨幣的差異。"
+  },
+  {
+   "code": "公Bp-IV-3",
+   "official_code": "公Bp-Ⅳ-3",
+   "text": "使用信用卡與儲值卡的差異。"
+  },
+  {
+   "code": "公Bp-IV-4",
+   "official_code": "公Bp-Ⅳ-4",
+   "text": "買賣外幣通常透過銀行，哪些人會想要買外幣？哪些人會想要賣外幣？"
+  },
+  {
+   "code": "公Ca-IV-1",
+   "official_code": "公Ca-Ⅳ-1",
+   "text": "日常生活和公共事務中的爭議，為什麼應該以非暴力的方式來解決？"
+  },
+  {
+   "code": "公Ca-IV-2",
+   "official_code": "公Ca-Ⅳ-2",
+   "text": "行政機關在政策制定前，為什麼應提供人民參與和表達意見的機會？"
+  },
+  {
+   "code": "公Ca-IV-3",
+   "official_code": "公Ca-Ⅳ-3",
+   "text": "中學生如何參與校園公共事務的決策過程？"
+  },
+  {
+   "code": "公Cb-IV-1",
+   "official_code": "公Cb-Ⅳ-1",
+   "text": "民主社會的公共意見是如何形成的？有什麼特性？"
+  },
+  {
+   "code": "公Cb-IV-2",
+   "official_code": "公Cb-Ⅳ-2",
+   "text": "媒體與社群網路在公共意見形成的過程中，扮演什麼角色？閱聽人如何覺察其影響？"
+  },
+  {
+   "code": "公Cc-IV-1",
+   "official_code": "公Cc-Ⅳ-1",
+   "text": "民主社會中的政治參與為什麼很重要？"
+  },
+  {
+   "code": "公Cc-IV-2",
+   "official_code": "公Cc-Ⅳ-2",
+   "text": "民主社會中為什麼常用投票來做為重要的參與形式？"
+  },
+  {
+   "code": "公Cc-IV-3",
+   "official_code": "公Cc-Ⅳ-3",
+   "text": "公平投票有哪些基本原則？"
+  },
+  {
+   "code": "公Cd-IV-1",
+   "official_code": "公Cd-Ⅳ-1",
+   "text": "為什麼勞動參與是重要的？"
+  },
+  {
+   "code": "公Cd-IV-2",
+   "official_code": "公Cd-Ⅳ-2",
+   "text": "家務勞動的分擔如何影響成員的個人發展與社會參與？其中可能蘊含哪些性別不平等的現象？"
+  },
+  {
+   "code": "公Cd-IV-3",
+   "official_code": "公Cd-Ⅳ-3",
+   "text": "為什麼需要立法保障公平的市場勞動參與？"
+  },
+  {
+   "code": "公Cf-IV-1",
+   "official_code": "公Cf-Ⅳ-1",
+   "text": "廠商間的競爭對消費者有何影響？"
+  },
+  {
+   "code": "公Cf-IV-2",
+   "official_code": "公Cf-Ⅳ-2",
+   "text": "廠商可能的競爭方式有哪些？"
+  },
+  {
+   "code": "公Cf-IV-3",
+   "official_code": "公Cf-Ⅳ-3",
+   "text": "為什麼新廠商越容易加入某一市場，則該市場的競爭程度越高？"
+  },
+  {
+   "code": "公Da-IV-1",
+   "official_code": "公Da-Ⅳ-1",
+   "text": "日常生活中所說的「公不公平」有哪些例子？考量的原理或原則有哪些？"
+  },
+  {
+   "code": "公Da-IV-2",
+   "official_code": "公Da-Ⅳ-2",
+   "text": "日常生活中，個人或群體可能面臨哪些不公平處境？"
+  },
+  {
+   "code": "公Da-IV-3",
+   "official_code": "公Da-Ⅳ-3",
+   "text": "日常生活中，僅依賴個人或團體行善可以促成社會公平正義的實現嗎？"
+  },
+  {
+   "code": "公Db-IV-1",
+   "official_code": "公Db-Ⅳ-1",
+   "text": "個人的基本生活受到保障，和人性尊嚴及選擇自由有什麼關聯？"
+  },
+  {
+   "code": "公Db-IV-2",
+   "official_code": "公Db-Ⅳ-2",
+   "text": "為什麼國家有責任促成個人基本生活的保障？"
+  },
+  {
+   "code": "公Dc-IV-1",
+   "official_code": "公Dc-Ⅳ-1",
+   "text": "日常生活中，有哪些文化差異的例子？"
+  },
+  {
+   "code": "公Dc-IV-2",
+   "official_code": "公Dc-Ⅳ-2",
+   "text": "不同語言與文化之間在哪些情況下會產生位階和不平等的現象？為什麼？"
+  },
+  {
+   "code": "公Dc-IV-3",
+   "official_code": "公Dc-Ⅳ-3",
+   "text": "面對文化差異時，為什麼要互相尊重與包容？"
+  },
+  {
+   "code": "公Dd-IV-1",
+   "official_code": "公Dd-Ⅳ-1",
+   "text": "可以用哪些現象或議題來理解「全球化過程」？"
+  },
+  {
+   "code": "公Dd-IV-2",
+   "official_code": "公Dd-Ⅳ-2",
+   "text": "全球化帶來哪些影響？人們有哪些回應和評價？"
+  },
+  {
+   "code": "公Dd-IV-3",
+   "official_code": "公Dd-Ⅳ-3",
+   "text": "臺海兩岸關係對我國的國際參與有什麼影響？"
+  },
+  {
+   "code": "公De-IV-1",
+   "official_code": "公De-Ⅳ-1",
+   "text": "科技發展如何改變我們的日常生活？"
+  },
+  {
+   "code": "公De-IV-2",
+   "official_code": "公De-Ⅳ-2",
+   "text": "科技發展對中學生參與公共事務有什麼影響？"
+  }
+ ],
+ "performance": [
+  {
+   "code": "社1a-IV-1",
+   "text": "發覺生活經驗或社會現象與社會領域內容知識的關係。"
+  },
+  {
+   "code": "歷1a-IV-1",
+   "text": "理解以不同的紀年、歷史分期描述過去的意義。"
+  },
+  {
+   "code": "歷1a-IV-2",
+   "text": "理解所習得歷史事件的發展歷程與重要歷史變遷。"
+  },
+  {
+   "code": "地1a-IV-1",
+   "text": "說明重要地理現象分布特性的成因。"
+  },
+  {
+   "code": "地1a-IV-2",
+   "text": "說明重要環境、經濟與文化議題間的相互關係。"
+  },
+  {
+   "code": "公1a-IV-1",
+   "text": "理解公民知識的核心概念。"
+  },
+  {
+   "code": "社1b-IV-1",
+   "text": "應用社會領域內容知識解析生活經驗或社會現象。"
+  },
+  {
+   "code": "歷1b-IV-1",
+   "text": "運用歷史資料，解釋重要歷史人物與事件間的關聯。"
+  },
+  {
+   "code": "歷1b-IV-2",
+   "text": "運用歷史資料，進行歷史事件的因果分析與詮釋。"
+  },
+  {
+   "code": "地1b-IV-1",
+   "text": "解析自然環境與人文景觀的相互關係。"
+  },
+  {
+   "code": "地1b-IV-2",
+   "text": "歸納自然與人文環境互動的結果。"
+  },
+  {
+   "code": "公1b-IV-1",
+   "text": "比較社會現象的多種解釋觀點。"
+  },
+  {
+   "code": "社1c-IV-1",
+   "text": "評估社會領域內容知識與多元觀點，並提出自己的看法。"
+  },
+  {
+   "code": "歷1c-IV-1",
+   "text": "區別歷史事實與歷史解釋。"
+  },
+  {
+   "code": "歷1c-IV-2",
+   "text": "從多元觀點探究重要歷史事件與人物在歷史中的作用與意義。"
+  },
+  {
+   "code": "地1c-IV-1",
+   "text": "利用地理基本概念與技能，檢視生活中面對的選擇與決策。"
+  },
+  {
+   "code": "地1c-IV-2",
+   "text": "反思各種地理環境與議題的內涵，並提出相關意見。"
+  },
+  {
+   "code": "公1c-IV-1",
+   "text": "運用公民知識，提出自己對公共議題的見解。"
+  },
+  {
+   "code": "社2a-IV-1",
+   "text": "敏銳察覺人與環境的互動關係及其淵源。"
+  },
+  {
+   "code": "社2a-IV-2",
+   "text": "關注生活周遭的重要議題及其脈絡，發展本土意識與在地關懷。"
+  },
+  {
+   "code": "社2a-IV-3",
+   "text": "關心不同的社會文化及其發展，並展現開闊的世界觀。"
+  },
+  {
+   "code": "社2b-IV-1",
+   "text": "感受個人或不同群體在社會處境中的經歷與情緒，並了解其抉擇。"
+  },
+  {
+   "code": "社2b-IV-2",
+   "text": "尊重不同群體文化的差異性，並欣賞其文化之美。"
+  },
+  {
+   "code": "社2b-IV-3",
+   "text": "重視環境倫理，並願意維護生態的多樣性。"
+  },
+  {
+   "code": "社2c-IV-1",
+   "text": "從歷史或社會事件中，省思自身或所屬群體的文化淵源、處境及自主性。"
+  },
+  {
+   "code": "社2c-IV-2",
+   "text": "珍視重要的公民價值並願意付諸行動。"
+  },
+  {
+   "code": "社2c-IV-3",
+   "text": "欣賞並願意維護自然與人文之美。"
+  },
+  {
+   "code": "社3a-IV-1",
+   "text": "發現不同時空脈絡中的人類生活問題，並進行探究。"
+  },
+  {
+   "code": "社3b-IV-1",
+   "text": "適當選用多種管道蒐集與社會領域相關的資料。"
+  },
+  {
+   "code": "社3b-IV-2",
+   "text": "利用社會領域相關概念，整理並檢視所蒐集資料的適切性。"
+  },
+  {
+   "code": "社3b-IV-3",
+   "text": "使用文字、照片、圖表、數據、地圖、年表、言語等多種方式，呈現並解釋探究結果。"
+  },
+  {
+   "code": "社3c-IV-1",
+   "text": "聆聽他人意見，表達自我觀點，並能以同理心與他人討論。"
+  },
+  {
+   "code": "社3c-IV-2",
+   "text": "理解成員特質並相互學習與合作。"
+  },
+  {
+   "code": "社3d-IV-1",
+   "text": "規劃與執行社會領域的問題探究、訪查、創作或展演等活動。"
+  },
+  {
+   "code": "社3d-IV-2",
+   "text": "提出保存文化資產、改善環境或維護社會正義等可能方案。"
+  },
+  {
+   "code": "社3d-IV-3",
+   "text": "執行具有公共性或利他性的行動方案並檢討其歷程與結果。"
+  }
+ ],
+ "senior_high": [
+  {
+   "code": "歷A-Ⅴ-1",
+   "text": "誰的歷史？誰留下的史料？誰寫的歷史？"
+  },
+  {
+   "code": "歷Ba-Ⅴ-1",
+   "text": "我群界定、原住民與原住民族的分類。"
+  },
+  {
+   "code": "歷Ba-Ⅴ-2",
+   "text": "當代原住民族的處境與權利伸張。"
+  },
+  {
+   "code": "歷Bb-Ⅴ-1",
+   "text": "早期移民的歷史背景及其影響。"
+  },
+  {
+   "code": "歷Bb-Ⅴ-2",
+   "text": "戰後來臺的各方移民。"
+  },
+  {
+   "code": "歷Ca-Ⅴ-1",
+   "text": "臺灣歷史上的商貿活動。"
+  },
+  {
+   "code": "歷Ca-Ⅴ-2",
+   "text": "臺灣歷史上的土地問題。"
+  },
+  {
+   "code": "歷Cb-Ⅴ-1",
+   "text": "原住民族的語言、傳統信仰與祭儀。"
+  },
+  {
+   "code": "歷Cb-Ⅴ-2",
+   "text": "多元的信仰與祭祀活動。"
+  },
+  {
+   "code": "歷Cb-Ⅴ-3",
+   "text": "從傳統到現代的文學與藝術。"
+  },
+  {
+   "code": "歷Da-Ⅴ-1",
+   "text": "從地方到中央。"
+  },
+  {
+   "code": "歷Da-Ⅴ-2",
+   "text": "國際局勢與臺灣地位。"
+  },
+  {
+   "code": "歷Da-Ⅴ-3",
+   "text": "教育、語言與基礎建設。"
+  },
+  {
+   "code": "歷Db-Ⅴ-1",
+   "text": "日治時期的人權情況與政治、社會運動。"
+  },
+  {
+   "code": "歷Db-Ⅴ-2",
+   "text": "戰後的民主化追求與人權運動。"
+  },
+  {
+   "code": "歷Db-Ⅴ-3",
+   "text": "戰後的社會運動。"
+  },
+  {
+   "code": "歷E-Ⅴ-1",
+   "text": "從主題B、C或D挑選適當課題深入探究，或規劃與執行歷史踏查或展演。"
+  },
+  {
+   "code": "歷F-Ⅴ-1",
+   "text": "可以在什麼樣的脈絡中討論中國史？"
+  },
+  {
+   "code": "歷Ga-Ⅴ-1",
+   "text": "傳統政治權威的類型。"
+  },
+  {
+   "code": "歷Ga-Ⅴ-2",
+   "text": "戶籍、土地或賦役與國家統治的關係。"
+  },
+  {
+   "code": "歷Gb-Ⅴ-1",
+   "text": "民間社會組織的型態。"
+  },
+  {
+   "code": "歷Gb-Ⅴ-2",
+   "text": "社會組織與國家的互動。"
+  },
+  {
+   "code": "歷Ha-Ⅴ-1",
+   "text": "從漢、晉到宋、元時期東亞人群移動的特色與影響。"
+  },
+  {
+   "code": "歷Ha-Ⅴ-2",
+   "text": "明、清時期東亞人群移動的特色與影響。"
+  },
+  {
+   "code": "歷Hb-Ⅴ-1",
+   "text": "十九世紀以後東亞的人群移動。"
+  },
+  {
+   "code": "歷Hb-Ⅴ-2",
+   "text": "十九世紀以後東亞人群移動的變遷及其影響。"
+  },
+  {
+   "code": "歷Ia-Ⅴ-1",
+   "text": "西方文化傳入東亞的影響。"
+  },
+  {
+   "code": "歷Ia-Ⅴ-2",
+   "text": "東亞國家對西方帝國主義的回應。"
+  },
+  {
+   "code": "歷Ia-Ⅴ-3",
+   "text": "民間社會與現代化的激盪。"
+  },
+  {
+   "code": "歷Ib-Ⅴ-1",
+   "text": "東亞地區人民在二十世紀重大戰爭中的經歷。"
+  },
+  {
+   "code": "歷Ib-Ⅴ-2",
+   "text": "共產主義在東亞的發展歷程及對局勢的影響。"
+  },
+  {
+   "code": "歷Ib-Ⅴ-3",
+   "text": "區域合作與經貿統合的追求。"
+  },
+  {
+   "code": "歷J-Ⅴ-1",
+   "text": "從主題G、H或I挑選適當課題深入探究，或規劃與執行歷史踏查或展演。"
+  },
+  {
+   "code": "歷K-Ⅴ-1",
+   "text": "可以在什麼樣的脈絡中討論世界史？"
+  },
+  {
+   "code": "歷La-Ⅴ-1",
+   "text": "神話與哲學。"
+  },
+  {
+   "code": "歷La-Ⅴ-2",
+   "text": "中古基督教世界。"
+  },
+  {
+   "code": "歷La-Ⅴ-3",
+   "text": "文藝復興。"
+  },
+  {
+   "code": "歷Lb-Ⅴ-1",
+   "text": "從宗教改革到啟蒙運動。"
+  },
+  {
+   "code": "歷Lb-Ⅴ-2",
+   "text": "資本主義與社會主義。"
+  },
+  {
+   "code": "歷Lb-Ⅴ-3",
+   "text": "民主傳統及其現代挑戰。"
+  },
+  {
+   "code": "歷Ma-Ⅴ-1",
+   "text": "伊斯蘭文化的發展與擴張。"
+  },
+  {
+   "code": "歷Ma-Ⅴ-2",
+   "text": "伊斯蘭世界與西方的互動。"
+  },
+  {
+   "code": "歷Mb-Ⅴ-1",
+   "text": "歐洲與亞洲的交流。"
+  },
+  {
+   "code": "歷Mb-Ⅴ-2",
+   "text": "歐洲與非、美兩洲的交流。"
+  },
+  {
+   "code": "歷Mb-Ⅴ-3",
+   "text": "反殖民運動的發展。"
+  },
+  {
+   "code": "歷Na-Ⅴ-1",
+   "text": "冷戰期間的政治局勢。"
+  },
+  {
+   "code": "歷Na-Ⅴ-2",
+   "text": "社會運動與反戰。"
+  },
+  {
+   "code": "歷Nb-Ⅴ-1",
+   "text": "現代性與現代文化。"
+  },
+  {
+   "code": "歷Nb-Ⅴ-2",
+   "text": "「西方」與「反西方」。"
+  },
+  {
+   "code": "歷Nb-Ⅴ-3",
+   "text": "全球化與多元文化。"
+  },
+  {
+   "code": "歷O-Ⅴ-1",
+   "text": "從主題L、M或N挑選適當課題深入探究，或規劃與執行歷史踏查或展演。"
+  },
+  {
+   "code": "地Aa-Ⅴ-1",
+   "text": "地理學的傳統與觀點。"
+  },
+  {
+   "code": "地Aa-Ⅴ-2",
+   "text": "研究問題的發想。"
+  },
+  {
+   "code": "地Aa-Ⅴ-3",
+   "text": "資料的來源與蒐集。"
+  },
+  {
+   "code": "地Aa-Ⅴ-4",
+   "text": "資料整理、分析與展示。"
+  },
+  {
+   "code": "地Aa-Ⅴ-5",
+   "text": "問題探究：解決問題的策略與步驟。"
+  },
+  {
+   "code": "地Ab-Ⅴ-1",
+   "text": "地理資訊的組成與特性。"
+  },
+  {
+   "code": "地Ab-Ⅴ-2",
+   "text": "地理資訊系統的功能。"
+  },
+  {
+   "code": "地Ab-Ⅴ-3",
+   "text": "問題探究：地理資訊的生活應用。"
+  },
+  {
+   "code": "地Ac-Ⅴ-1",
+   "text": "地圖本質與要素。"
+  },
+  {
+   "code": "地Ac-Ⅴ-2",
+   "text": "地圖種類及其用途。"
+  },
+  {
+   "code": "地Ac-Ⅴ-3",
+   "text": "問題探究：地圖判讀與使用。"
+  },
+  {
+   "code": "地Ba-Ⅴ-1",
+   "text": "氣候要素。"
+  },
+  {
+   "code": "地Ba-Ⅴ-2",
+   "text": "大氣環流與洋流。"
+  },
+  {
+   "code": "地Ba-Ⅴ-3",
+   "text": "氣候類型。"
+  },
+  {
+   "code": "地Ba-Ⅴ-4",
+   "text": "氣候與自然景觀帶。"
+  },
+  {
+   "code": "地Ba-Ⅴ-5",
+   "text": "問題探究：氣候、水資源與人類生活。"
+  },
+  {
+   "code": "地Bb-Ⅴ-1",
+   "text": "地形營力。"
+  },
+  {
+   "code": "地Bb-Ⅴ-2",
+   "text": "各類地形系統。"
+  },
+  {
+   "code": "地Bb-Ⅴ-3",
+   "text": "地形辨識。"
+  },
+  {
+   "code": "地Bb-Ⅴ-4",
+   "text": "問題探究：地形與人類生活。"
+  },
+  {
+   "code": "地Bc-Ⅴ-1",
+   "text": "人口成長與人口轉型。"
+  },
+  {
+   "code": "地Bc-Ⅴ-2",
+   "text": "人口移動與人口分布。"
+  },
+  {
+   "code": "地Bc-Ⅴ-3",
+   "text": "問題探究：人口動態與環境負載力。"
+  },
+  {
+   "code": "地Bd-Ⅴ-1",
+   "text": "聚落系統。"
+  },
+  {
+   "code": "地Bd-Ⅴ-2",
+   "text": "運輸與交通。"
+  },
+  {
+   "code": "地Bd-Ⅴ-3",
+   "text": "中地體系。"
+  },
+  {
+   "code": "地Bd-Ⅴ-4",
+   "text": "問題探究：中地概念與生活。"
+  },
+  {
+   "code": "地Be-Ⅴ-1",
+   "text": "都市成長與都市化。"
+  },
+  {
+   "code": "地Be-Ⅴ-2",
+   "text": "地價與土地利用。"
+  },
+  {
+   "code": "地Be-Ⅴ-3",
+   "text": "都市內部空間結構。"
+  },
+  {
+   "code": "地Be-Ⅴ-4",
+   "text": "問題探究：都市機能與城鄉關係。"
+  },
+  {
+   "code": "地Bf-Ⅴ-1",
+   "text": "產業系統與類別。"
+  },
+  {
+   "code": "地Bf-Ⅴ-2",
+   "text": "產業分布與區位選擇。"
+  },
+  {
+   "code": "地Bf-Ⅴ-3",
+   "text": "資訊革命與知識經濟。"
+  },
+  {
+   "code": "地Bf-Ⅴ-4",
+   "text": "問題探究：產業發展與變遷。"
+  },
+  {
+   "code": "地Bg-Ⅴ-1",
+   "text": "區域互賴與不平等交換。"
+  },
+  {
+   "code": "地Bg-Ⅴ-2",
+   "text": "擴散與反吸。"
+  },
+  {
+   "code": "地Bg-Ⅴ-3",
+   "text": "核心-半邊陲-邊陲體系。"
+  },
+  {
+   "code": "地Bg-Ⅴ-4",
+   "text": "問題探究：區域發展的反思。"
+  },
+  {
+   "code": "地Ca-Ⅴ-1",
+   "text": "臺灣自然環境的特殊性。"
+  },
+  {
+   "code": "地Ca-Ⅴ-2",
+   "text": "臺灣的原住民族與南島語族。"
+  },
+  {
+   "code": "地Ca-Ⅴ-3",
+   "text": "臺灣的移民社會與多元文化。"
+  },
+  {
+   "code": "地Ca-Ⅴ-4",
+   "text": "問題探究：臺灣經濟發展與世界的關聯。"
+  },
+  {
+   "code": "地Cb-Ⅴ-1",
+   "text": "東亞文化圈形成的環境背景。"
+  },
+  {
+   "code": "地Cb-Ⅴ-2",
+   "text": "經濟崛起與轉型的歷程。"
+  },
+  {
+   "code": "地Cb-Ⅴ-3",
+   "text": "人口與環境問題。"
+  },
+  {
+   "code": "地Cb-Ⅴ-4",
+   "text": "問題探究：國家間的競爭與合作。"
+  },
+  {
+   "code": "地Cc-Ⅴ-1",
+   "text": "東西文化接觸的環境背景。"
+  },
+  {
+   "code": "地Cc-Ⅴ-2",
+   "text": "多元的文化景觀。"
+  },
+  {
+   "code": "地Cc-Ⅴ-3",
+   "text": "經濟發展與轉型。"
+  },
+  {
+   "code": "地Cc-Ⅴ-4",
+   "text": "問題探究1：東南亞國協的發展與挑戰。"
+  },
+  {
+   "code": "地Cd-Ⅴ-1",
+   "text": "自然環境背景與位置的特殊性。"
+  },
+  {
+   "code": "地Cd-Ⅴ-2",
+   "text": "原住民族、移民與移民社會的發展。"
+  },
+  {
+   "code": "地Cd-Ⅴ-3",
+   "text": "產業發展與地緣樞紐。"
+  },
+  {
+   "code": "地Cd-Ⅴ-4",
+   "text": "問題探究：原生物種與環境永續。"
+  },
+  {
+   "code": "地Ce-Ⅴ-1",
+   "text": "自然環境的特殊性。"
+  },
+  {
+   "code": "地Ce-Ⅴ-2",
+   "text": "文化異同。"
+  },
+  {
+   "code": "地Ce-Ⅴ-3",
+   "text": "資源爭奪。"
+  },
+  {
+   "code": "地Ce-Ⅴ-4",
+   "text": "問題探究：區域紛爭與發展機會。"
+  },
+  {
+   "code": "地Cf-Ⅴ-1",
+   "text": "自然環境與文明發展的關係。"
+  },
+  {
+   "code": "地Cf-Ⅴ-2",
+   "text": "工業革命與海外發展。"
+  },
+  {
+   "code": "地Cf-Ⅴ-3",
+   "text": "區域競爭、合作與歐盟。"
+  },
+  {
+   "code": "地Cf-Ⅴ-4",
+   "text": "問題探究：西方文化圈的形成與特色。"
+  },
+  {
+   "code": "地Cg-Ⅴ-1",
+   "text": "美國的環境背景。"
+  },
+  {
+   "code": "地Cg-Ⅴ-2",
+   "text": "多元族群共同塑造的文化特色。"
+  },
+  {
+   "code": "地Cg-Ⅴ-3",
+   "text": "產業發展與都市文明。"
+  },
+  {
+   "code": "地Cg-Ⅴ-4",
+   "text": "問題探究：美國發展的前景與挑戰。"
+  },
+  {
+   "code": "地Ch-Ⅴ-1",
+   "text": "南方區域的意涵。"
+  },
+  {
+   "code": "地Ch-Ⅴ-2",
+   "text": "自然環境背景。"
+  },
+  {
+   "code": "地Ch-Ⅴ-3",
+   "text": "列強入侵與殖民。"
+  },
+  {
+   "code": "地Ch-Ⅴ-4",
+   "text": "殖民地式經濟。"
+  },
+  {
+   "code": "地Ch-Ⅴ-5",
+   "text": "問題探究：現代發展的優勢與挑戰。"
+  },
+  {
+   "code": "地Ci-Ⅴ-1",
+   "text": "發展條件的空間差異。"
+  },
+  {
+   "code": "地Ci-Ⅴ-2",
+   "text": "交通革新與全球化。"
+  },
+  {
+   "code": "地Ci-Ⅴ-3",
+   "text": "經濟地理空間重組。"
+  },
+  {
+   "code": "地Ci-Ⅴ-4",
+   "text": "世界都市。"
+  },
+  {
+   "code": "地Ci-Ⅴ-5",
+   "text": "問題探究：全球化的貢獻與挑戰。"
+  },
+  {
+   "code": "公Aa-Ⅴ-1",
+   "text": "戰後的社會運動。"
+  },
+  {
+   "code": "公Aa-Ⅴ-2",
+   "text": "同理個人或不同群體在社會處境中的經歷與情緒。"
+  },
+  {
+   "code": "公Ab-Ⅴ-1",
+   "text": "為什麼人是權利主體，且享有平等的權利能力？為什麼在自然人之外，還有法人的概念？"
+  },
+  {
+   "code": "公Ab-Ⅴ-2",
+   "text": "核心-半邊陲-邊陲體系。"
+  },
+  {
+   "code": "公Ab-Ⅴ-3",
+   "text": "民主國家中，人民或政府如何才會被賦予法律上的義務或責任（包括學生參與校園民主及學生自治的責任）？"
+  },
+  {
+   "code": "公Ab-Ⅴ-4",
+   "text": "問題探究：原生物種與環境永續。"
+  },
+  {
+   "code": "公Ac-Ⅴ-1",
+   "text": "國家主權和人民的日常生活有什麼關係？"
+  },
+  {
+   "code": "公Ac-Ⅴ-2",
+   "text": "為什麼公民身分是現代國家認同的基礎？"
+  },
+  {
+   "code": "公Ac-Ⅴ-3",
+   "text": "為什麼多元身分認同的建構、肯認與保障，和國家政策關係密切？"
+  },
+  {
+   "code": "公Ad-Ⅴ-1",
+   "text": "國際人權公約與相關國際組織（包括聯合國與非政府組織等）如何促成普世人權的實現？"
+  },
+  {
+   "code": "公Ad-Ⅴ-2",
+   "text": "我國如何將國際人權公約的相關主張融入法律制度中？"
+  },
+  {
+   "code": "公Bb-Ⅴ-1",
+   "text": "為什麼人民的志願結社受到相關法律的規範？會產生什麼影響？"
+  },
+  {
+   "code": "公Bc-Ⅴ-1",
+   "text": "社會規範如何維護社會秩序與形成社會控制？在什麼情形下，規範會受到質疑而改變？"
+  },
+  {
+   "code": "公Bc-Ⅴ-2",
+   "text": "社會規範對個人追求自我實現以及社群的資源分配，會產生哪些影響？"
+  },
+  {
+   "code": "公Bd-Ⅴ-1",
+   "text": "我國國家主權在憲法上如何界定？有何爭議？"
+  },
+  {
+   "code": "公Be-Ⅴ-1",
+   "text": "民主國家有哪些常見的政府體制？與我國的政府體制有什麼差異？"
+  },
+  {
+   "code": "公Be-Ⅴ-2",
+   "text": "民主國家中央與地方政府的權力分享原則有哪些？我國中央與地方政府之間如何劃分權限？"
+  },
+  {
+   "code": "公Bf-Ⅴ-1",
+   "text": "法律如何制定、修改與廢止？"
+  },
+  {
+   "code": "公Bf-Ⅴ-2",
+   "text": "法律如何解釋與適用？"
+  },
+  {
+   "code": "公Bg-Ⅴ-1",
+   "text": "戰後的民主化追求與人權運動。"
+  },
+  {
+   "code": "公Bg-Ⅴ-2",
+   "text": "憲法與基本權利的保障，有什麼關聯？基本權利的限制，有何範圍？國家如何促進基本權利的實現？"
+  },
+  {
+   "code": "公Bh-Ⅴ-1",
+   "text": "人民日常生活如何受到行政法的影響？行政法有哪些重要的原理原則？"
+  },
+  {
+   "code": "公Bh-Ⅴ-2",
+   "text": "行政行為要達成實質正義，為什麼必須先有公平合理的程序？行政程序有哪些的基本原則？"
+  },
+  {
+   "code": "公Bh-Ⅴ-3",
+   "text": "人民的權益因行政公權力違法或不當而受損時，人民如何尋求行政救濟？"
+  },
+  {
+   "code": "公Bi-Ⅴ-1",
+   "text": "國家為什麼要以刑罰的方式處罰人民？犯罪的一般成立要件有哪些？"
+  },
+  {
+   "code": "公Bi-Ⅴ-2",
+   "text": "為什麼罪刑法定主義是刑法的最高原則？有哪些重要內涵？"
+  },
+  {
+   "code": "公Bi-Ⅴ-3",
+   "text": "國家如何追訴、處罰犯罪行為？為什麼被告未經審判確定有罪前，應推定其為無罪？為什麼被告與被害人的權利應受到保障？"
+  },
+  {
+   "code": "公Bi-Ⅴ-4",
+   "text": "法院的事實認定與自由心證主義。"
+  },
+  {
+   "code": "公Bj-Ⅴ-1",
+   "text": "為什麼消費者保護契約、勞動契約的資方不能享有完全的締約自由，必須被多加限制？如何判斷其限制的合理性？"
+  },
+  {
+   "code": "公Bj-Ⅴ-2",
+   "text": "所有權的物權特性與保障。"
+  },
+  {
+   "code": "公Bj-Ⅴ-3",
+   "text": "配偶之間的財產應如何規範方屬合理？"
+  },
+  {
+   "code": "公Bj-Ⅴ-4",
+   "text": "落實具有公共性或利他性的行動並反思與修正。"
+  },
+  {
+   "code": "公Bk-Ⅴ-1",
+   "text": "為什麼少年的刑事司法程序與成年人不同？"
+  },
+  {
+   "code": "公Bl-Ⅴ-1",
+   "text": "廠商與政府有什麼資源？如何決定資源的用途？"
+  },
+  {
+   "code": "公Bm-Ⅴ-1",
+   "text": "價格高低對誘因的影響。"
+  },
+  {
+   "code": "公Bm-Ⅴ-2",
+   "text": "政府政策如何影響誘因，進而改變人民行為？"
+  },
+  {
+   "code": "公Bn-Ⅴ-1",
+   "text": "專業分工的影響。"
+  },
+  {
+   "code": "公Bn-Ⅴ-2",
+   "text": "決定一國進出口某項商品的主要因素。"
+  },
+  {
+   "code": "公Bo-Ⅴ-1",
+   "text": "消費者對某單位產品的願付價格是如何決定的？"
+  },
+  {
+   "code": "公Bo-Ⅴ-2",
+   "text": "某產品的市場需求線是如何決定的？"
+  },
+  {
+   "code": "公Bo-Ⅴ-3",
+   "text": "需求的變動與需求量的變動有什麼不同？"
+  },
+  {
+   "code": "公Bo-Ⅴ-4",
+   "text": "廠商某單位產出之願售價格如何決定？"
+  },
+  {
+   "code": "公Bo-Ⅴ-5",
+   "text": "某產品的市場供給線是如何決定的？"
+  },
+  {
+   "code": "公Bo-Ⅴ-6",
+   "text": "供給的變動與供給量的變動有什麼不同？"
+  },
+  {
+   "code": "公Bq-Ⅴ-1",
+   "text": "國民所得如何衡量？"
+  },
+  {
+   "code": "公Bq-Ⅴ-2",
+   "text": "國內生產毛額如何衡量？"
+  },
+  {
+   "code": "公Bq-Ⅴ-3",
+   "text": "國民所得與國內生產毛額的關係。"
+  },
+  {
+   "code": "公Ca-Ⅴ-1",
+   "text": "民主治理的核心概念是什麼？我國有哪些民主治理的實踐？"
+  },
+  {
+   "code": "公Ca-Ⅴ-2",
+   "text": "民主治理如何課責？"
+  },
+  {
+   "code": "公Cb-Ⅴ-1",
+   "text": "媒體與社群網路的所有權或產製過程，如何影響公共意見的形成？"
+  },
+  {
+   "code": "公Cb-Ⅴ-2",
+   "text": "公共意見形成過程中，可能存在哪些媒體近用與媒體再現（可包括族群、性別、性傾向或身心障礙等群體之再現）的不平等？"
+  },
+  {
+   "code": "公Cc-Ⅴ-1",
+   "text": "我國公民如何透過選舉參與中央及地方政治？"
+  },
+  {
+   "code": "公Cc-Ⅴ-2",
+   "text": "除了選舉之外，我國還有哪些重要的政治參與形式及管道？"
+  },
+  {
+   "code": "公Cd-Ⅴ-1",
+   "text": "為什麼勞動參與可以促成社會發展與經濟永續？"
+  },
+  {
+   "code": "公Cd-Ⅴ-2",
+   "text": "「個別勞動權益」和「集體勞動三權」的內涵為何？為什麼政府需透過個別與集體勞動法制相關規定來保障平等的市場勞動參與？"
+  },
+  {
+   "code": "公Ce-Ⅴ-1",
+   "text": "市場價格如何決定？"
+  },
+  {
+   "code": "公Ce-Ⅴ-2",
+   "text": "市場機能如何影響資源分配？"
+  },
+  {
+   "code": "公Ce-Ⅴ-3",
+   "text": "為什麼經由市場機能可以達到經濟效率？"
+  },
+  {
+   "code": "公Ce-Ⅴ-4",
+   "text": "為什麼政府的價格管制會降低經濟效率？"
+  },
+  {
+   "code": "公Cf-Ⅴ-1",
+   "text": "單一廠商漲價與所有廠商聯合漲價之效果有何不同？"
+  },
+  {
+   "code": "公Cf-Ⅴ-2",
+   "text": "為什麼政府需要關心廠商的聯合漲價？"
+  },
+  {
+   "code": "公Cg-Ⅴ-1",
+   "text": "外部成本如何影響我們的日常生活？"
+  },
+  {
+   "code": "公Cg-Ⅴ-2",
+   "text": "政府如何解決外部成本的問題？"
+  },
+  {
+   "code": "公Da-Ⅴ-1",
+   "text": "原住民族、移民與移民社會的發展。"
+  },
+  {
+   "code": "公Da-Ⅴ-2",
+   "text": "群體權利跟公平正義有什麼關聯？在什麼情形下，特定群體受到「差別對待」會成為追求社會公平正義的積極原則？"
+  },
+  {
+   "code": "公Da-Ⅴ-3",
+   "text": "為什麼社會的不同群體，對於「公平正義」的理解與追求會有衝突？"
+  },
+  {
+   "code": "公Db-Ⅴ-1",
+   "text": "國家為促進社會安全，為什麼需要社會救助、社會福利和社會保險等多種制度的規劃？"
+  },
+  {
+   "code": "公Db-Ⅴ-2",
+   "text": "我國社會安全制度有哪些常見的難題與辯論（包括公平、責任與效率之間如何權衡）？"
+  },
+  {
+   "code": "公Dc-Ⅴ-1",
+   "text": "不同文化之間為何會有摩擦或衝突？"
+  },
+  {
+   "code": "公Dc-Ⅴ-2",
+   "text": "我國目前有什麼具體政策，促進不同文化之間的平等？"
+  },
+  {
+   "code": "公Dd-Ⅴ-1",
+   "text": "全球化會對國家治理帶來哪些挑戰？我國面臨的議題有哪些？"
+  },
+  {
+   "code": "公Dd-Ⅴ-2",
+   "text": "我國在全球競爭與合作關係中的地位與處境為何？臺海兩岸關係如何影響我國的國際地位與處境？"
+  },
+  {
+   "code": "公Dd-Ⅴ-3",
+   "text": "全球永續發展的理念有哪些？全球化及永續發展之間有什麼緊張關係？個人與國家如何面對這些挑戰？"
+  },
+  {
+   "code": "公De-Ⅴ-1",
+   "text": "問題探究：地理資訊的生活應用。"
+  },
+  {
+   "code": "公De-Ⅴ-2",
+   "text": "科技發展會衍生哪些倫理或法律問題？"
+  },
+  {
+   "code": "公Df-Ⅴ-1",
+   "text": "為什麼會產生貿易自由化？"
+  },
+  {
+   "code": "公Df-Ⅴ-2",
+   "text": "貿易的管制與開放對哪些人有利？對哪些人不利？"
+  },
+  {
+   "code": "公Df-Ⅴ-3",
+   "text": "世界貿易組織在國際間所扮演的角色有哪些？"
+  },
+  {
+   "code": "歷Pa-Ⅴ-1",
+   "text": "原住民族的傳統社會、傳統領域與知識體系。"
+  },
+  {
+   "code": "歷Pa-Ⅴ-2",
+   "text": "原住民與外來者的互動。"
+  },
+  {
+   "code": "歷Pa-Ⅴ-3",
+   "text": "殖民統治下的原住民、原住民族。"
+  },
+  {
+   "code": "歷Pa-Ⅴ-4",
+   "text": "原住民族的權利復振運動與現代國家的角色。"
+  },
+  {
+   "code": "歷Pb-Ⅴ-1",
+   "text": "人群移動的背景與型態。"
+  },
+  {
+   "code": "歷Pb-Ⅴ-2",
+   "text": "移民社會的形成與認同問題。"
+  },
+  {
+   "code": "歷Pb-Ⅴ-3",
+   "text": "殖民與反殖民運動。"
+  },
+  {
+   "code": "歷Pb-Ⅴ-4",
+   "text": "殖民的影響與對殖民經驗的省思。"
+  },
+  {
+   "code": "歷Qa-Ⅴ-1",
+   "text": "歷史中的女性領袖。"
+  },
+  {
+   "code": "歷Qa-Ⅴ-2",
+   "text": "國族主義下的女性。"
+  },
+  {
+   "code": "歷Qa-Ⅴ-3",
+   "text": "女性權利的提升。"
+  },
+  {
+   "code": "歷Qb-Ⅴ-1",
+   "text": "傳統社會中的性別角色。"
+  },
+  {
+   "code": "歷Qb-Ⅴ-2",
+   "text": "婚姻與家庭的變遷。"
+  },
+  {
+   "code": "歷Qb-Ⅴ-3",
+   "text": "歷史上的宗教與性別。"
+  },
+  {
+   "code": "歷Qb-Ⅴ-4",
+   "text": "性別平等運動的發展。"
+  },
+  {
+   "code": "歷Ra-Ⅴ-1",
+   "text": "戰爭的殺戮及其影響。"
+  },
+  {
+   "code": "歷Ra-Ⅴ-2",
+   "text": "戰爭宣傳的操作。"
+  },
+  {
+   "code": "歷Ra-Ⅴ-3",
+   "text": "戰爭的創傷與集體記憶。"
+  },
+  {
+   "code": "歷Rb-Ⅴ-1",
+   "text": "現代的國家暴力。"
+  },
+  {
+   "code": "歷Rb-Ⅴ-2",
+   "text": "轉型正義的追求與反思。"
+  },
+  {
+   "code": "歷Sa-Ⅴ-1",
+   "text": "多元的醫療傳統。"
+  },
+  {
+   "code": "歷Sa-Ⅴ-2",
+   "text": "疾疫傳布的過去與現在。"
+  },
+  {
+   "code": "歷Sb-Ⅴ-1",
+   "text": "交通運輸的發展與國家治理。"
+  },
+  {
+   "code": "歷Sb-Ⅴ-2",
+   "text": "能源利用與生活方式的改變。"
+  },
+  {
+   "code": "歷Sb-Ⅴ-3",
+   "text": "媒體的發展與社會變遷。"
+  },
+  {
+   "code": "歷Ta-Ⅴ-1",
+   "text": "大航海時代的物種交流與影響。"
+  },
+  {
+   "code": "歷Ta-Ⅴ-2",
+   "text": "育種技術與人類社會。"
+  },
+  {
+   "code": "歷Tb-Ⅴ-1",
+   "text": "環境變遷與消失的文明。"
+  },
+  {
+   "code": "歷Tb-Ⅴ-2",
+   "text": "石化產業的發展與衝擊。"
+  },
+  {
+   "code": "歷Tb-Ⅴ-3",
+   "text": "永續發展的省思。"
+  },
+  {
+   "code": "歷Ua-Ⅴ-1",
+   "text": "西方古代傳統到現代藝術。"
+  },
+  {
+   "code": "歷Ua-Ⅴ-2",
+   "text": "中國的書畫藝術。"
+  },
+  {
+   "code": "歷Ub-Ⅴ-1",
+   "text": "宗教信仰與節慶的意義。"
+  },
+  {
+   "code": "歷Ub-Ⅴ-2",
+   "text": "戲劇、文學與大眾生活。"
+  },
+  {
+   "code": "歷Ub-Ⅴ-3",
+   "text": "科技、環境與藝術創作。"
+  },
+  {
+   "code": "歷Va-Ⅴ-1",
+   "text": "為什麼學歷史？"
+  },
+  {
+   "code": "歷Va-Ⅴ-2",
+   "text": "什麼是史料？"
+  },
+  {
+   "code": "歷Va-Ⅴ-3",
+   "text": "歷史事實如何建構？"
+  },
+  {
+   "code": "歷Vb-Ⅴ-1",
+   "text": "歷史著作選讀。"
+  },
+  {
+   "code": "歷Vb-Ⅴ-2",
+   "text": "歷史著作分析。"
+  },
+  {
+   "code": "歷Vb-Ⅴ-3",
+   "text": "如何寫作歷史？"
+  },
+  {
+   "code": "歷Vc-Ⅴ-1",
+   "text": "歷史解釋怎麼形成？"
+  },
+  {
+   "code": "歷Vc-Ⅴ-2",
+   "text": "歷史敘述中的觀點問題。"
+  },
+  {
+   "code": "歷Vc-Ⅴ-3",
+   "text": "學習歷史的意義。"
+  },
+  {
+   "code": "地Da-Ⅴ-1",
+   "text": "空間的意義與維度。"
+  },
+  {
+   "code": "地Da-Ⅴ-2",
+   "text": "空間的類別與社會性。"
+  },
+  {
+   "code": "地Db-Ⅴ-1",
+   "text": "空間思考的要素。"
+  },
+  {
+   "code": "地Db-Ⅴ-2",
+   "text": "空間思考與空間資訊。"
+  },
+  {
+   "code": "地Db-Ⅴ-3",
+   "text": "問題探究：利用地圖觀察或標定某地表現象的發生地點，討論其空間分布型態與成因。"
+  },
+  {
+   "code": "地Ea-Ⅴ-1",
+   "text": "空間資料的種類與獲取。"
+  },
+  {
+   "code": "地Ea-Ⅴ-2",
+   "text": "網路圖資服務平台。"
+  },
+  {
+   "code": "地Ea-Ⅴ-3",
+   "text": "自願性地理資訊。"
+  },
+  {
+   "code": "地Eb-Ⅴ-1",
+   "text": "空間資料的處理。"
+  },
+  {
+   "code": "地Eb-Ⅴ-2",
+   "text": "空間資料的分析。"
+  },
+  {
+   "code": "地Eb-Ⅴ-3",
+   "text": "空間資訊的呈現。"
+  },
+  {
+   "code": "地Eb-Ⅴ-4",
+   "text": "地圖設計。"
+  },
+  {
+   "code": "地Eb-Ⅴ-5",
+   "text": "問題探究：針對特定地理議題繪製主題地圖，進行議題討論。"
+  },
+  {
+   "code": "地Fa-Ⅴ-1",
+   "text": "環境品質的查詢與評估。"
+  },
+  {
+   "code": "地Fa-Ⅴ-2",
+   "text": "災害潛勢地圖的查詢。"
+  },
+  {
+   "code": "地Fb-Ⅴ-1",
+   "text": "文史研究應用。"
+  },
+  {
+   "code": "地Fb-Ⅴ-2",
+   "text": "公共衛生應用。"
+  },
+  {
+   "code": "地Fb-Ⅴ-3",
+   "text": "產業與商業應用。"
+  },
+  {
+   "code": "地Fb-Ⅴ-4",
+   "text": "都市計畫應用。"
+  },
+  {
+   "code": "地Fc-Ⅴ-1",
+   "text": "公眾參與式地理資訊系統與社區發展。"
+  },
+  {
+   "code": "地Fc-Ⅴ-2",
+   "text": "空間資訊與人道救援。"
+  },
+  {
+   "code": "地Fc-Ⅴ-3",
+   "text": "公民科學與智慧城市。"
+  },
+  {
+   "code": "地Ga-Ⅴ-1",
+   "text": "製圖目的與資訊傳播。"
+  },
+  {
+   "code": "地Ga-Ⅴ-2",
+   "text": "地圖的解讀與批判。"
+  },
+  {
+   "code": "地Ga-Ⅴ-3",
+   "text": "主流地圖與對抗性地圖。"
+  },
+  {
+   "code": "地Gb-Ⅴ-1",
+   "text": "空間資訊結合社群網站的影響力。"
+  },
+  {
+   "code": "地Gb-Ⅴ-2",
+   "text": "地理媒體與空間隱私權。"
+  },
+  {
+   "code": "地Gb-Ⅴ-3",
+   "text": "問題探究：應用地理媒體向他人分享自己對某個社會空間議題的看法。"
+  },
+  {
+   "code": "地Ha-Ⅴ-1",
+   "text": "以網路地圖為平台共同參與規劃學校或社區的空間。"
+  },
+  {
+   "code": "地Ha-Ⅴ-2",
+   "text": "家鄉特定空間議題。"
+  },
+  {
+   "code": "地Ha-Ⅴ-3",
+   "text": "疊合全臺活動斷層與某種重要設施的圖層，評估災害風險。"
+  },
+  {
+   "code": "地Ia-Ⅴ-1",
+   "text": "氣候變遷發生的原因為何？"
+  },
+  {
+   "code": "地Ia-Ⅴ-2",
+   "text": "極端氣候事件的發生頻率是否正在變化？"
+  },
+  {
+   "code": "地Ia-Ⅴ-3",
+   "text": "氣候變遷如何影響人類的生活？"
+  },
+  {
+   "code": "地Ia-Ⅴ-4",
+   "text": "為何國際社會對氣候變遷的反應有別？"
+  },
+  {
+   "code": "地Ia-Ⅴ-5",
+   "text": "國家與個人如何調適氣候變遷的影響？"
+  },
+  {
+   "code": "地Ib-Ⅴ-1",
+   "text": "什麼是自然災害？"
+  },
+  {
+   "code": "地Ib-Ⅴ-2",
+   "text": "什麼是土地退化？"
+  },
+  {
+   "code": "地Ib-Ⅴ-3",
+   "text": "自然災害和人類生活有何關係？"
+  },
+  {
+   "code": "地Ib-Ⅴ-4",
+   "text": "土地退化對人類生活有何影響？"
+  },
+  {
+   "code": "地Ib-Ⅴ-5",
+   "text": "如何避免或減少自然災害與土地退化的衝擊？"
+  },
+  {
+   "code": "地Ib-Ⅴ-6",
+   "text": "原住民族傳統生態知識（TEK）和生態永續有何關係？"
+  },
+  {
+   "code": "地Ja-Ⅴ-1",
+   "text": "水資源的豐缺和人類活動有何關係？"
+  },
+  {
+   "code": "地Ja-Ⅴ-2",
+   "text": "水資源的開發與分配和國家、區域的經濟發展有何關係？"
+  },
+  {
+   "code": "地Ja-Ⅴ-3",
+   "text": "海洋資源的開發利用和人類活動有何關係？"
+  },
+  {
+   "code": "地Ja-Ⅴ-4",
+   "text": "海洋資源的開發與利用如何影響國際關係？"
+  },
+  {
+   "code": "地Ja-Ⅴ-5",
+   "text": "水資源和海洋資源如何永續利用？"
+  },
+  {
+   "code": "地Jb-Ⅴ-1",
+   "text": "化石能源的開發利用和人類活動有何關係？"
+  },
+  {
+   "code": "地Jb-Ⅴ-2",
+   "text": "核能是否為乾淨且安全的能源？"
+  },
+  {
+   "code": "地Jb-Ⅴ-3",
+   "text": "化石能源的產銷如何影響國際關係？"
+  },
+  {
+   "code": "地Jb-Ⅴ-4",
+   "text": "除了核能外，化石能源還有哪些替代能源？"
+  },
+  {
+   "code": "地Jb-Ⅴ-5",
+   "text": "替代能源是否可以取代化石能源的主要地位？"
+  },
+  {
+   "code": "地Ka-Ⅴ-1",
+   "text": "人口倍時和人口分布有何空間差異？"
+  },
+  {
+   "code": "地Ka-Ⅴ-2",
+   "text": "為何有些國家具備人口紅利，有些國家卻出現人口負利？"
+  },
+  {
+   "code": "地Ka-Ⅴ-3",
+   "text": "國際移民和區域社會、經濟與政治有何關係？"
+  },
+  {
+   "code": "地Ka-Ⅴ-4",
+   "text": "當一地區同時出現人口數量與人口結構問題時，人口政策如何擬訂？"
+  },
+  {
+   "code": "地Kb-Ⅴ-1",
+   "text": "全球農業系統生產的糧食是否足夠供應目前人口所需？"
+  },
+  {
+   "code": "地Kb-Ⅴ-2",
+   "text": "糧食供應和國民健康有何關聯？"
+  },
+  {
+   "code": "地Kb-Ⅴ-3",
+   "text": "綠色革命與基因改造食物能否解決糧食問題？"
+  },
+  {
+   "code": "地Kb-Ⅴ-4",
+   "text": "縮短食物里程能否增進國家糧食供應的穩定性？"
+  },
+  {
+   "code": "地La-Ⅴ-1",
+   "text": "研究的分類。"
+  },
+  {
+   "code": "地La-Ⅴ-2",
+   "text": "發掘問題的方法。"
+  },
+  {
+   "code": "地La-Ⅴ-3",
+   "text": "蒐集和解析資料的技能。"
+  },
+  {
+   "code": "地Ma-Ⅴ-1",
+   "text": "疾病擴散的空間分析。"
+  },
+  {
+   "code": "地Ma-Ⅴ-2",
+   "text": "原住民族傳統生態知識（TEK）與生活方式的變遷。"
+  },
+  {
+   "code": "地Ma-Ⅴ-3",
+   "text": "都市化與都市生態環境的變遷。"
+  },
+  {
+   "code": "地Mb-Ⅴ-1",
+   "text": "移民與區域發展。"
+  },
+  {
+   "code": "地Mb-Ⅴ-2",
+   "text": "文學、藝術作品中的地理歷史文化背景。"
+  },
+  {
+   "code": "地Mb-Ⅴ-3",
+   "text": "文化資產、歷史現場與現代發展的關係。"
+  },
+  {
+   "code": "地Mc-Ⅴ-1",
+   "text": "法規、制度、地權與地理景觀塑造。"
+  },
+  {
+   "code": "地Mc-Ⅴ-2",
+   "text": "工商業活動的區位選擇。"
+  },
+  {
+   "code": "地Mc-Ⅴ-3",
+   "text": "國土規劃與區域經濟發展。"
+  },
+  {
+   "code": "地Md-Ⅴ-1",
+   "text": "農業生產、食物消費、飲食文化與地理環境。"
+  },
+  {
+   "code": "地Md-Ⅴ-2",
+   "text": "地方文化與觀光產業的發展。"
+  },
+  {
+   "code": "地Md-Ⅴ-3",
+   "text": "生態旅遊的意涵與省思。"
+  },
+  {
+   "code": "地Na-Ⅴ-1",
+   "text": "從學習經驗及日常生活中發掘有意義的問題。"
+  },
+  {
+   "code": "地Na-Ⅴ-2",
+   "text": "設計解決問題的策略。"
+  },
+  {
+   "code": "地Na-Ⅴ-3",
+   "text": "蒐集、分析、解釋資料。"
+  },
+  {
+   "code": "地Na-Ⅴ-4",
+   "text": "展現成果：依教學環境的實際情況，使用各種形式展現以上活動的成果，撰寫心得報告、製作海報、拍攝照片或影片、繪製各式地圖以及撰寫小論文等，並鼓勵學生參加各種比賽。"
+  },
+  {
+   "code": "公Ea-Ⅴ-1",
+   "text": "什麼是階層化？不同的社會學理論如何解釋階層化所蘊含的資源分配不均等現象？"
+  },
+  {
+   "code": "公Ea-Ⅴ-2",
+   "text": "社會階層化如何表現在經濟資源、文化資本、社會資本與政治權力等不同面向？"
+  },
+  {
+   "code": "公Ea-Ⅴ-3",
+   "text": "家庭的社會經濟地位如何影響子女的教育機會？民主社會有什麼重要機制促進社會流動？"
+  },
+  {
+   "code": "公Ea-Ⅴ-4",
+   "text": "社會階層化現象與族群、性別、身心障礙等因素的關係為何？這些因素如何造成社會不平等現象？"
+  },
+  {
+   "code": "公Eb-Ⅴ-1",
+   "text": "什麼是社會運動？為什麼會出現社會運動？社會運動為什麼是公民參與的重要形式？"
+  },
+  {
+   "code": "公Eb-Ⅴ-2",
+   "text": "臺灣有哪些社會運動曾對社會變遷形成重大影響？"
+  },
+  {
+   "code": "公Eb-Ⅴ-3",
+   "text": "社會運動與政黨活動及壓力團體有什麼區別？"
+  },
+  {
+   "code": "公Fa-Ⅴ-1",
+   "text": "經濟成長率對人民有何影響？"
+  },
+  {
+   "code": "公Fa-Ⅴ-2",
+   "text": "比較各國的國民所得時，為何要使用購買力平價指數？"
+  },
+  {
+   "code": "公Fa-Ⅴ-3",
+   "text": "如何衡量生活成本的變動？"
+  },
+  {
+   "code": "公Fa-Ⅴ-4",
+   "text": "物價膨脹的原因有哪些？"
+  },
+  {
+   "code": "公Fb-Ⅴ-1",
+   "text": "勞動市場的薪資如何決定？"
+  },
+  {
+   "code": "公Fb-Ⅴ-2",
+   "text": "為什麼受薪者關心的是實質薪資，而非名目薪資？"
+  },
+  {
+   "code": "公Fb-Ⅴ-3",
+   "text": "政府訂定基本工資對勞動市場可能造成什麼影響？"
+  },
+  {
+   "code": "公Fb-Ⅴ-4",
+   "text": "工廠外移、國際移工增加、生產的自動化與服務業數位化，如何影響本地勞動市場？"
+  },
+  {
+   "code": "公Fc-Ⅴ-1",
+   "text": "為什麼國外的景氣衰退會導致臺灣也出現景氣衰退？"
+  },
+  {
+   "code": "公Fc-Ⅴ-2",
+   "text": "景氣衰退對於薪資與就業有哪些影響？"
+  },
+  {
+   "code": "公Fc-Ⅴ-3",
+   "text": "失業可分為哪幾種類型？失業率如何衡量？"
+  },
+  {
+   "code": "公Fc-Ⅴ-4",
+   "text": "「怯志工作者」為什麼會影響失業率？"
+  },
+  {
+   "code": "公Fd-Ⅴ-1",
+   "text": "可貸資金市場上，哪些人是主要的需求者？哪些人是主要的供給者？"
+  },
+  {
+   "code": "公Fd-Ⅴ-2",
+   "text": "資金借貸的價格為何？"
+  },
+  {
+   "code": "公Fd-Ⅴ-3",
+   "text": "景氣波動如何影響利率？"
+  },
+  {
+   "code": "公Fe-Ⅴ-1",
+   "text": "貨幣政策如何影響廠商的固定投資？"
+  },
+  {
+   "code": "公Fe-Ⅴ-2",
+   "text": "為什麼寬鬆貨幣政策有提振景氣的效果？"
+  },
+  {
+   "code": "公Fe-Ⅴ-3",
+   "text": "寬鬆貨幣政策可能有哪些副作用？"
+  },
+  {
+   "code": "公Ga-Ⅴ-1",
+   "text": "審議民主與代議民主的變遷有什麼關聯？"
+  },
+  {
+   "code": "公Ga-Ⅴ-2",
+   "text": "民主社會為什麼會產生公民不服從？公民不服從的正當性與爭議有哪些？會產生哪些法律後果與對社會的影響？"
+  },
+  {
+   "code": "公Gb-Ⅴ-1",
+   "text": "中國的政治有哪些特性？面臨哪些挑戰？"
+  },
+  {
+   "code": "公Gb-Ⅴ-2",
+   "text": "中國的政治與經濟發展如何影響區域和平和臺海兩岸關係？"
+  },
+  {
+   "code": "公Gc-Ⅴ-1",
+   "text": "為什麼當代國際組織的成員通常是民族國家或經濟體？"
+  },
+  {
+   "code": "公Gc-Ⅴ-2",
+   "text": "有哪些因素會產生國際衝突？常見的國際衝突型態與解決機制有哪些？"
+  },
+  {
+   "code": "公Gc-Ⅴ-3",
+   "text": "國際的政治結盟與世界秩序的變動會受到哪些因素的影響？"
+  },
+  {
+   "code": "公Ha-Ⅴ-1",
+   "text": "為什麼適用法令時應考量合憲性的問題？當發生法令的合憲性疑義時，聲請大法官解釋的程序為何？"
+  },
+  {
+   "code": "公Ha-Ⅴ-2",
+   "text": "有哪些大法官解釋，立下重要人權保障的里程碑？"
+  },
+  {
+   "code": "公Hb-Ⅴ-1",
+   "text": "為實踐公共利益的公權力與應受法律拘束的公權力，如何影響人民的日常生活？"
+  },
+  {
+   "code": "公Hb-Ⅴ-2",
+   "text": "如何判定行政處分的合法性？人民提起訴願或行政訴訟的重要程序要件有哪些？"
+  },
+  {
+   "code": "公Hb-Ⅴ-3",
+   "text": "什麼情況下人民可以請求國家賠償？什麼情況下國家應對人民補償損失？國家為什麼要賠償或補償人民？"
+  },
+  {
+   "code": "公Hc-Ⅴ-1",
+   "text": "民法對於財產權、身分權與人格權的保障有什麼基本差異？"
+  },
+  {
+   "code": "公Hc-Ⅴ-2",
+   "text": "人格權的保障與公益之間應如何衡量？"
+  },
+  {
+   "code": "公Hd-Ⅴ-1",
+   "text": "現代社會中資訊生活為什麼需要有規範？有什麼重要性？"
+  },
+  {
+   "code": "公Hd-Ⅴ-2",
+   "text": "在刑法中與高中生密切相關的資訊生活重要法律規範有哪些？"
+  }
+ ]
+}
+</canonical-source>
+
+<canonical-source path="exam_packs/會考/curriculum/自然.json">
+{
+ "subject": "自然",
+ "stage": "第四學習階段（國民中學 7-9 年級）",
+ "source": {
+  "publisher": "國家教育研究院（教育部發布之十二年國民基本教育課程綱要）",
+  "url": "https://www.naer.edu.tw/upload/1/16/doc/820/十二年國民基本教育課程綱要國民中小學暨普通型高級中等學校─自然科學領域.odt",
+  "retrieved_at": "2026-11-14",
+  "sha256": "f8751e78b24b9a70cd482a073ecc18315d54dce2b5daaf593137a45eac56abd4"
+ },
+ "note": "Codes use ASCII 'IV' (the curriculum prints 'Ⅳ'); validate_cap_form.py accepts either. content = 學習內容 (what items assess); performance = 學習表現. senior_high = 第五學習階段（高中）學習內容: concepts a 國中 item must not require.",
+ "content": [
+  {
+   "code": "Aa-IV-1",
+   "official_code": "Aa-Ⅳ-1",
+   "text": "原子模型的發展。"
+  },
+  {
+   "code": "Aa-IV-2",
+   "official_code": "Aa-Ⅳ-2",
+   "text": "原子量與分子量是原子、分子之間的相對質量。"
+  },
+  {
+   "code": "Aa-IV-3",
+   "official_code": "Aa-Ⅳ-3",
+   "text": "純物質包括元素與化合物。"
+  },
+  {
+   "code": "Aa-IV-4",
+   "official_code": "Aa-Ⅳ-4",
+   "text": "元素的性質有規律性和週期性。"
+  },
+  {
+   "code": "Aa-IV-5",
+   "official_code": "Aa-Ⅳ-5",
+   "text": "元素與化合物有特定的化學符號表示法。"
+  },
+  {
+   "code": "Ab-IV-1",
+   "official_code": "Ab-Ⅳ-1",
+   "text": "物質的粒子模型與物質三態。"
+  },
+  {
+   "code": "Ab-IV-2",
+   "official_code": "Ab-Ⅳ-2",
+   "text": "溫度會影響物質的狀態。"
+  },
+  {
+   "code": "Ab-IV-3",
+   "official_code": "Ab-Ⅳ-3",
+   "text": "物質的物理性質與化學性質。"
+  },
+  {
+   "code": "Ab-IV-4",
+   "official_code": "Ab-Ⅳ-4",
+   "text": "物質依是否可用物理方法分離，可分為純物質和混合物。"
+  },
+  {
+   "code": "Ba-IV-1",
+   "official_code": "Ba-Ⅳ-1",
+   "text": "能量有不同形式，例如：動能、熱能、光能、電能、化學能等，而且彼此之間可以轉換。孤立系統的總能量會維持定值。"
+  },
+  {
+   "code": "Ba-IV-2",
+   "official_code": "Ba-Ⅳ-2",
+   "text": "光合作用是將光能轉換成化學能；呼吸作用是將化學能轉換成熱能。"
+  },
+  {
+   "code": "Ba-IV-3",
+   "official_code": "Ba-Ⅳ-3",
+   "text": "化學反應中的能量改變，常以吸熱或放熱的形式發生。"
+  },
+  {
+   "code": "Ba-IV-4",
+   "official_code": "Ba-Ⅳ-4",
+   "text": "電池是化學能轉變成電能的裝置。"
+  },
+  {
+   "code": "Ba-IV-5",
+   "official_code": "Ba-Ⅳ-5",
+   "text": "力可以作功，作功可以改變物體的能量。"
+  },
+  {
+   "code": "Ba-IV-6",
+   "official_code": "Ba-Ⅳ-6",
+   "text": "每單位時間對物體所做的功稱為功率。"
+  },
+  {
+   "code": "Ba-IV-7",
+   "official_code": "Ba-Ⅳ-7",
+   "text": "物體的動能與位能之和稱為力學能，動能與位能可以互換。"
+  },
+  {
+   "code": "Bb-IV-1",
+   "official_code": "Bb-Ⅳ-1",
+   "text": "熱具有從高溫處傳到低溫處的趨勢。"
+  },
+  {
+   "code": "Bb-IV-2",
+   "official_code": "Bb-Ⅳ-2",
+   "text": "透過水升高溫度所吸收的熱能定義熱量單位。"
+  },
+  {
+   "code": "Bb-IV-3",
+   "official_code": "Bb-Ⅳ-3",
+   "text": "不同物質受熱後，其溫度的變化可能不同，比熱就是此特性的定量化描述。"
+  },
+  {
+   "code": "Bb-IV-4",
+   "official_code": "Bb-Ⅳ-4",
+   "text": "熱的傳播方式包含傳導、對流與輻射。"
+  },
+  {
+   "code": "Bb-IV-5",
+   "official_code": "Bb-Ⅳ-5",
+   "text": "熱會改變物質形態，例如：狀態產生變化、體積發生脹縮。"
+  },
+  {
+   "code": "Bc-IV-1",
+   "official_code": "Bc-Ⅳ-1",
+   "text": "生物經由酵素的催化進行新陳代謝，並以實驗活動探討影響酵素作用速率的因素。"
+  },
+  {
+   "code": "Bc-IV-2",
+   "official_code": "Bc-Ⅳ-2",
+   "text": "細胞利用養分進行呼吸作用釋放能量，供生物生存所需。"
+  },
+  {
+   "code": "Bc-IV-3",
+   "official_code": "Bc-Ⅳ-3",
+   "text": "植物利用葉綠體進行光合作用，將二氧化碳和水轉變成醣類養分，並釋出氧氣；養分可供植物本身及動物生長所需。"
+  },
+  {
+   "code": "Bc-IV-4",
+   "official_code": "Bc-Ⅳ-4",
+   "text": "日光、二氧化碳和水分等因素會影響光合作用的進行，這些因素的影響可經由探究實驗來證實。"
+  },
+  {
+   "code": "Bd-IV-1",
+   "official_code": "Bd-Ⅳ-1",
+   "text": "生態系中的能量來源是太陽，能量會經由食物鏈在不同生物間流轉。"
+  },
+  {
+   "code": "Bd-IV-2",
+   "official_code": "Bd-Ⅳ-2",
+   "text": "在生態系中，碳元素會出現在不同的物質中（例如：二氧化碳、葡萄糖），在生物與無生物間循環使用。"
+  },
+  {
+   "code": "Bd-IV-3",
+   "official_code": "Bd-Ⅳ-3",
+   "text": "生態系中，生產者、消費者和分解者共同促成能量的流轉和物質的循環。"
+  },
+  {
+   "code": "Ca-IV-1",
+   "official_code": "Ca-Ⅳ-1",
+   "text": "實驗分離混合物，例如：結晶法、過濾法及簡易濾紙色層分析法。"
+  },
+  {
+   "code": "Ca-IV-2",
+   "official_code": "Ca-Ⅳ-2",
+   "text": "化合物可利用化學性質來鑑定。"
+  },
+  {
+   "code": "Cb-IV-1",
+   "official_code": "Cb-Ⅳ-1",
+   "text": "分子與原子。"
+  },
+  {
+   "code": "Cb-IV-2",
+   "official_code": "Cb-Ⅳ-2",
+   "text": "元素會因原子排列方式不同而有不同的特性。"
+  },
+  {
+   "code": "Cb-IV-3",
+   "official_code": "Cb-Ⅳ-3",
+   "text": "分子式相同會因原子排列方式不同而形成不同的物質。"
+  },
+  {
+   "code": "Da-IV-1",
+   "official_code": "Da-Ⅳ-1",
+   "text": "使用適當的儀器可觀察到細胞的形態及細胞膜、細胞質、細胞核、細胞壁等基本構造。"
+  },
+  {
+   "code": "Da-IV-2",
+   "official_code": "Da-Ⅳ-2",
+   "text": "細胞是組成生物體的基本單位。"
+  },
+  {
+   "code": "Da-IV-3",
+   "official_code": "Da-Ⅳ-3",
+   "text": "多細胞個體具有細胞、組織、器官、器官系統等組成層次。"
+  },
+  {
+   "code": "Da-IV-4",
+   "official_code": "Da-Ⅳ-4",
+   "text": "細胞會進行細胞分裂，染色體在分裂過程中會發生變化。"
+  },
+  {
+   "code": "Db-IV-1",
+   "official_code": "Db-Ⅳ-1",
+   "text": "動物體（以人體為例）經由攝食、消化、吸收獲得所需的養分。"
+  },
+  {
+   "code": "Db-IV-2",
+   "official_code": "Db-Ⅳ-2",
+   "text": "動物體（以人體為例）的循環系統能將體內的物質運輸至各細胞處，並進行物質交換。並經由心跳、心音及脈搏的探測，以了解循環系統的運作情形。"
+  },
+  {
+   "code": "Db-IV-3",
+   "official_code": "Db-Ⅳ-3",
+   "text": "動物體（以人體為例）藉由呼吸系統與外界交換氣體。"
+  },
+  {
+   "code": "Db-IV-4",
+   "official_code": "Db-Ⅳ-4",
+   "text": "生殖系統（以人體為例）能產生配子進行有性生殖，並且有分泌激素的功能。"
+  },
+  {
+   "code": "Db-IV-5",
+   "official_code": "Db-Ⅳ-5",
+   "text": "動植物體適應環境的構造常成為人類發展各種精密儀器的參考。"
+  },
+  {
+   "code": "Db-IV-6",
+   "official_code": "Db-Ⅳ-6",
+   "text": "植物體根、莖、葉、花、果實內的維管束具有運輸功能。"
+  },
+  {
+   "code": "Db-IV-7",
+   "official_code": "Db-Ⅳ-7",
+   "text": "花的構造中，雄蕊的花藥可產生花粉粒，花粉粒內有精細胞；雌蕊的子房內有胚珠，胚珠內有卵細胞。"
+  },
+  {
+   "code": "Db-IV-8",
+   "official_code": "Db-Ⅳ-8",
+   "text": "植物體的分布會影響水在地表的流動，也會影響氣溫和空氣品質。"
+  },
+  {
+   "code": "Dc-IV-1",
+   "official_code": "Dc-Ⅳ-1",
+   "text": "人體的神經系統能察覺環境的變動並產生反應。"
+  },
+  {
+   "code": "Dc-IV-2",
+   "official_code": "Dc-Ⅳ-2",
+   "text": "人體的內分泌系統能調節代謝作用，維持體內物質的恆定。"
+  },
+  {
+   "code": "Dc-IV-3",
+   "official_code": "Dc-Ⅳ-3",
+   "text": "皮膚是人體的第一道防禦系統，能阻止外來物，例如：細菌的侵入；而淋巴系統則可進一步產生免疫作用。"
+  },
+  {
+   "code": "Dc-IV-4",
+   "official_code": "Dc-Ⅳ-4",
+   "text": "人體會藉由各系統的協調，使體內所含的物質以及各種狀態能維持在一定範圍內。"
+  },
+  {
+   "code": "Dc-IV-5",
+   "official_code": "Dc-Ⅳ-5",
+   "text": "生物體能覺察外界環境變化、採取適當的反應以使體內環境維持恆定，這些現象能以觀察或改變自變項的方式來探討。"
+  },
+  {
+   "code": "Ea-IV-1",
+   "official_code": "Ea-Ⅳ-1",
+   "text": "時間、長度、質量等為基本物理量，經由計算可得到密度、體積等衍伸物理量。"
+  },
+  {
+   "code": "Ea-IV-2",
+   "official_code": "Ea-Ⅳ-2",
+   "text": "以適當的尺度量測或推估物理量，例如：奈米到光年、毫克到公噸、毫升到立方公尺等。"
+  },
+  {
+   "code": "Ea-IV-3",
+   "official_code": "Ea-Ⅳ-3",
+   "text": "測量時可依工具的最小刻度進行估計。"
+  },
+  {
+   "code": "Eb-IV-1",
+   "official_code": "Eb-Ⅳ-1",
+   "text": "力能引發物體的移動或轉動。"
+  },
+  {
+   "code": "Eb-IV-2",
+   "official_code": "Eb-Ⅳ-2",
+   "text": "力矩會改變物體的轉動，槓桿是力矩的作用。"
+  },
+  {
+   "code": "Eb-IV-3",
+   "official_code": "Eb-Ⅳ-3",
+   "text": "平衡的物體所受合力為零且合力矩為零。"
+  },
+  {
+   "code": "Eb-IV-4",
+   "official_code": "Eb-Ⅳ-4",
+   "text": "摩擦力可分靜摩擦力與動摩擦力。"
+  },
+  {
+   "code": "Eb-IV-5",
+   "official_code": "Eb-Ⅳ-5",
+   "text": "壓力的定義與帕斯卡原理。"
+  },
+  {
+   "code": "Eb-IV-6",
+   "official_code": "Eb-Ⅳ-6",
+   "text": "物體在靜止液體中所受浮力，等於排開液體的重量。"
+  },
+  {
+   "code": "Eb-IV-7",
+   "official_code": "Eb-Ⅳ-7",
+   "text": "簡單機械，例如：槓桿、滑輪、輪軸、齒輪、斜面，通常具有省時、省力，或者是改變作用力方向等功能。"
+  },
+  {
+   "code": "Eb-IV-8",
+   "official_code": "Eb-Ⅳ-8",
+   "text": "距離、時間及方向等概念可用來描述物體的運動。"
+  },
+  {
+   "code": "Eb-IV-9",
+   "official_code": "Eb-Ⅳ-9",
+   "text": "圓周運動是一種加速度運動。"
+  },
+  {
+   "code": "Eb-IV-10",
+   "official_code": "Eb-Ⅳ-10",
+   "text": "物體不受力時，會保持原有的運動狀態。"
+  },
+  {
+   "code": "Eb-IV-11",
+   "official_code": "Eb-Ⅳ-11",
+   "text": "物體做加速度運動時，必受力。以相同的力量作用相同的時間，則質量愈小的物體其受力後造成的速度改變愈大。"
+  },
+  {
+   "code": "Eb-IV-12",
+   "official_code": "Eb-Ⅳ-12",
+   "text": "物體的質量決定其慣性大小。"
+  },
+  {
+   "code": "Eb-IV-13",
+   "official_code": "Eb-Ⅳ-13",
+   "text": "對於每一作用力都有一個大小相等、方向相反的反作用力。"
+  },
+  {
+   "code": "Ec-IV-1",
+   "official_code": "Ec-Ⅳ-1",
+   "text": "大氣壓力是因為大氣層中空氣的重量所造成。"
+  },
+  {
+   "code": "Ec-IV-2",
+   "official_code": "Ec-Ⅳ-2",
+   "text": "定溫下，定量氣體在密閉容器內，其壓力與體積的定性關係。"
+  },
+  {
+   "code": "Ed-IV-1",
+   "official_code": "Ed-Ⅳ-1",
+   "text": "星系是組成宇宙的基本單位。"
+  },
+  {
+   "code": "Ed-IV-2",
+   "official_code": "Ed-Ⅳ-2",
+   "text": "我們所在的星系，稱為銀河系，主要是由恆星所組成；太陽是銀河系的成員之一。"
+  },
+  {
+   "code": "Fa-IV-1",
+   "official_code": "Fa-Ⅳ-1",
+   "text": "地球具有大氣圈、水圈和岩石圈。"
+  },
+  {
+   "code": "Fa-IV-2",
+   "official_code": "Fa-Ⅳ-2",
+   "text": "三大類岩石有不同的特徵和成因。"
+  },
+  {
+   "code": "Fa-IV-3",
+   "official_code": "Fa-Ⅳ-3",
+   "text": "大氣的主要成分為氮氣和氧氣，並含有水氣、二氧化碳等變動氣體。"
+  },
+  {
+   "code": "Fa-IV-4",
+   "official_code": "Fa-Ⅳ-4",
+   "text": "大氣可由溫度變化分層。"
+  },
+  {
+   "code": "Fa-IV-5",
+   "official_code": "Fa-Ⅳ-5",
+   "text": "海水具有不同的成分及特性。"
+  },
+  {
+   "code": "Fb-IV-1",
+   "official_code": "Fb-Ⅳ-1",
+   "text": "太陽系由太陽和行星組成，行星均繞太陽公轉。"
+  },
+  {
+   "code": "Fb-IV-2",
+   "official_code": "Fb-Ⅳ-2",
+   "text": "類地行星的環境差異極大。"
+  },
+  {
+   "code": "Fb-IV-3",
+   "official_code": "Fb-Ⅳ-3",
+   "text": "月球繞地球公轉；日、月、地在同一直線上會發生日月食。"
+  },
+  {
+   "code": "Fb-IV-4",
+   "official_code": "Fb-Ⅳ-4",
+   "text": "月相變化具有規律性。"
+  },
+  {
+   "code": "Fc-IV-1",
+   "official_code": "Fc-Ⅳ-1",
+   "text": "生物圈內含有不同的生態系。生態系的生物因子，其組成層次由低到高為個體、族群、群集。"
+  },
+  {
+   "code": "Fc-IV-2",
+   "official_code": "Fc-Ⅳ-2",
+   "text": "組成生物體的基本層次是細胞，而細胞則由醣類、蛋白質及脂質等分子所組成，這些分子則由更小的粒子所組成。"
+  },
+  {
+   "code": "Ga-IV-1",
+   "official_code": "Ga-Ⅳ-1",
+   "text": "生物的生殖可分為有性生殖與無性生殖，有性生殖產生的子代其性狀和親代差異較大。"
+  },
+  {
+   "code": "Ga-IV-2",
+   "official_code": "Ga-Ⅳ-2",
+   "text": "人類的性別主要由性染色體決定。"
+  },
+  {
+   "code": "Ga-IV-3",
+   "official_code": "Ga-Ⅳ-3",
+   "text": "人類的ABO血型是可遺傳的性狀。"
+  },
+  {
+   "code": "Ga-IV-4",
+   "official_code": "Ga-Ⅳ-4",
+   "text": "遺傳物質會發生變異，其變異可能造成性狀的改變，若變異發生在生殖細胞可遺傳到後代。"
+  },
+  {
+   "code": "Ga-IV-5",
+   "official_code": "Ga-Ⅳ-5",
+   "text": "生物技術的進步，有助於解決農業、食品、能源、醫藥，以及環境相關的問題，但也可能帶來新問題。"
+  },
+  {
+   "code": "Ga-IV-6",
+   "official_code": "Ga-Ⅳ-6",
+   "text": "孟德爾遺傳研究的科學史。"
+  },
+  {
+   "code": "Gb-IV-1",
+   "official_code": "Gb-Ⅳ-1",
+   "text": "從地層中發現的化石，可以知道地球上曾經存在許多的生物，但有些生物已經消失了，例如：三葉蟲、恐龍等。"
+  },
+  {
+   "code": "Gc-IV-1",
+   "official_code": "Gc-Ⅳ-1",
+   "text": "依據生物形態與構造的特徵，可以將生物分類。"
+  },
+  {
+   "code": "Gc-IV-2",
+   "official_code": "Gc-Ⅳ-2",
+   "text": "地球上有形形色色的生物，在生態系中擔任不同的角色，發揮不同的功能，有助於維持生態系的穩定。"
+  },
+  {
+   "code": "Gc-IV-3",
+   "official_code": "Gc-Ⅳ-3",
+   "text": "人的體表和體內有許多微生物，有些微生物對人體有利，有些則有害。"
+  },
+  {
+   "code": "Gc-IV-4",
+   "official_code": "Gc-Ⅳ-4",
+   "text": "人類文明發展中有許多利用微生物的例子，例如：早期的釀酒、近期的基因轉殖等。"
+  },
+  {
+   "code": "Hb-IV-1",
+   "official_code": "Hb-Ⅳ-1",
+   "text": "研究岩層岩性與化石可幫助了解地球的歷史。"
+  },
+  {
+   "code": "Hb-IV-2",
+   "official_code": "Hb-Ⅳ-2",
+   "text": "解讀地層、地質事件，可幫助了解當地的地層發展先後順序。"
+  },
+  {
+   "code": "Ia-IV-1",
+   "official_code": "Ia-Ⅳ-1",
+   "text": "外營力及內營力的作用會改變地貌。"
+  },
+  {
+   "code": "Ia-IV-2",
+   "official_code": "Ia-Ⅳ-2",
+   "text": "岩石圈可分為數個板塊。"
+  },
+  {
+   "code": "Ia-IV-3",
+   "official_code": "Ia-Ⅳ-3",
+   "text": "板塊之間會相互分離或聚合，產生地震、火山和造山運動。"
+  },
+  {
+   "code": "Ia-IV-4",
+   "official_code": "Ia-Ⅳ-4",
+   "text": "全球地震、火山分布在特定的地帶，且兩者相當吻合。"
+  },
+  {
+   "code": "Ib-IV-1",
+   "official_code": "Ib-Ⅳ-1",
+   "text": "氣團是性質均勻的大型空氣團塊，性質各有不同。"
+  },
+  {
+   "code": "Ib-IV-2",
+   "official_code": "Ib-Ⅳ-2",
+   "text": "氣壓差會造成空氣的流動而產生風。"
+  },
+  {
+   "code": "Ib-IV-3",
+   "official_code": "Ib-Ⅳ-3",
+   "text": "由於地球自轉的關係會造成高、低氣壓空氣的旋轉。"
+  },
+  {
+   "code": "Ib-IV-4",
+   "official_code": "Ib-Ⅳ-4",
+   "text": "鋒面是性質不同的氣團之交界面，會產生各種天氣變化。"
+  },
+  {
+   "code": "Ib-IV-5",
+   "official_code": "Ib-Ⅳ-5",
+   "text": "臺灣的災變天氣包括颱風、梅雨、寒潮、乾旱等現象。"
+  },
+  {
+   "code": "Ib-IV-6",
+   "official_code": "Ib-Ⅳ-6",
+   "text": "臺灣秋冬季受東北季風影響，夏季受西南季風影響，造成各地氣溫、風向和降水的季節性差異。"
+  },
+  {
+   "code": "Ic-IV-1",
+   "official_code": "Ic-Ⅳ-1",
+   "text": "海水運動包含波浪、海流和潮汐，各有不同的運動方式。"
+  },
+  {
+   "code": "Ic-IV-2",
+   "official_code": "Ic-Ⅳ-2",
+   "text": "海流對陸地的氣候會產生影響。"
+  },
+  {
+   "code": "Ic-IV-3",
+   "official_code": "Ic-Ⅳ-3",
+   "text": "臺灣附近的海流隨季節有所不同。"
+  },
+  {
+   "code": "Ic-IV-4",
+   "official_code": "Ic-Ⅳ-4",
+   "text": "潮汐變化具有規律性。"
+  },
+  {
+   "code": "Id-IV-1",
+   "official_code": "Id-Ⅳ-1",
+   "text": "夏季白天較長，冬季黑夜較長。"
+  },
+  {
+   "code": "Id-IV-2",
+   "official_code": "Id-Ⅳ-2",
+   "text": "陽光照射角度之變化，會造成地表單位面積土地吸收太陽能量的不同。"
+  },
+  {
+   "code": "Id-IV-3",
+   "official_code": "Id-Ⅳ-3",
+   "text": "地球的四季主要是因為地球自轉軸傾斜於地球公轉軌道面而造成。"
+  },
+  {
+   "code": "Ja-IV-1",
+   "official_code": "Ja-Ⅳ-1",
+   "text": "化學反應中的質量守恆定律。"
+  },
+  {
+   "code": "Ja-IV-2",
+   "official_code": "Ja-Ⅳ-2",
+   "text": "化學反應是原子重新排列。"
+  },
+  {
+   "code": "Ja-IV-3",
+   "official_code": "Ja-Ⅳ-3",
+   "text": "化學反應中常伴隨沉澱、氣體、顏色及溫度變化等現象。"
+  },
+  {
+   "code": "Ja-IV-4",
+   "official_code": "Ja-Ⅳ-4",
+   "text": "化學反應的表示法。"
+  },
+  {
+   "code": "Jb-IV-1",
+   "official_code": "Jb-Ⅳ-1",
+   "text": "由水溶液導電的實驗認識電解質與非電解質。"
+  },
+  {
+   "code": "Jb-IV-2",
+   "official_code": "Jb-Ⅳ-2",
+   "text": "電解質在水溶液中會解離出陰離子和陽離子而導電。"
+  },
+  {
+   "code": "Jb-IV-3",
+   "official_code": "Jb-Ⅳ-3",
+   "text": "不同的離子在水溶液中可能會發生沉澱、酸鹼中和及氧化還原等反應。"
+  },
+  {
+   "code": "Jb-IV-4",
+   "official_code": "Jb-Ⅳ-4",
+   "text": "溶液的概念及重量百分濃度（P%）、百萬分點的表示法（ppm）。"
+  },
+  {
+   "code": "Jc-IV-1",
+   "official_code": "Jc-Ⅳ-1",
+   "text": "氧化與還原的狹義定義為：物質得到氧稱為氧化反應；失去氧稱為還原反應。"
+  },
+  {
+   "code": "Jc-IV-2",
+   "official_code": "Jc-Ⅳ-2",
+   "text": "物質燃燒實驗認識氧化。"
+  },
+  {
+   "code": "Jc-IV-3",
+   "official_code": "Jc-Ⅳ-3",
+   "text": "不同金屬元素燃燒實驗認識元素對氧氣的活性。"
+  },
+  {
+   "code": "Jc-IV-4",
+   "official_code": "Jc-Ⅳ-4",
+   "text": "生活中常見的氧化還原反應與應用。"
+  },
+  {
+   "code": "Jc-IV-5",
+   "official_code": "Jc-Ⅳ-5",
+   "text": "鋅銅電池實驗認識電池原理。"
+  },
+  {
+   "code": "Jc-IV-6",
+   "official_code": "Jc-Ⅳ-6",
+   "text": "化學電池的放電與充電。"
+  },
+  {
+   "code": "Jc-IV-7",
+   "official_code": "Jc-Ⅳ-7",
+   "text": "電解水與硫酸銅水溶液實驗認識電解原理。"
+  },
+  {
+   "code": "Jd-IV-1",
+   "official_code": "Jd-Ⅳ-1",
+   "text": "金屬與非金屬氧化物在水溶液中的酸鹼性，及酸性溶液對金屬與大理石的反應。"
+  },
+  {
+   "code": "Jd-IV-2",
+   "official_code": "Jd-Ⅳ-2",
+   "text": "酸鹼強度與 pH 值的關係。"
+  },
+  {
+   "code": "Jd-IV-3",
+   "official_code": "Jd-Ⅳ-3",
+   "text": "實驗認識廣用指示劑及pH計。"
+  },
+  {
+   "code": "Jd-IV-4",
+   "official_code": "Jd-Ⅳ-4",
+   "text": "水溶液中氫離子與氫氧根離子的關係。"
+  },
+  {
+   "code": "Jd-IV-5",
+   "official_code": "Jd-Ⅳ-5",
+   "text": "酸、鹼、鹽類在日常生活中的應用與危險性。"
+  },
+  {
+   "code": "Jd-IV-6",
+   "official_code": "Jd-Ⅳ-6",
+   "text": "實驗認識酸與鹼中和生成鹽和水，並可放出熱量而使溫度變化。"
+  },
+  {
+   "code": "Je-IV-1",
+   "official_code": "Je-Ⅳ-1",
+   "text": "實驗認識化學反應速率及影響反應速率的因素，例如：本性、溫度、濃度、接觸面積及催化劑。"
+  },
+  {
+   "code": "Je-IV-2",
+   "official_code": "Je-Ⅳ-2",
+   "text": "可逆反應。"
+  },
+  {
+   "code": "Je-IV-3",
+   "official_code": "Je-Ⅳ-3",
+   "text": "化學平衡及溫度、濃度如何影響化學平衡的因素。"
+  },
+  {
+   "code": "Jf-IV-1",
+   "official_code": "Jf-Ⅳ-1",
+   "text": "有機化合物與無機化合物的重要特徵。"
+  },
+  {
+   "code": "Jf-IV-2",
+   "official_code": "Jf-Ⅳ-2",
+   "text": "生活中常見的烷類、醇類、有機酸及酯類。"
+  },
+  {
+   "code": "Jf-IV-3",
+   "official_code": "Jf-Ⅳ-3",
+   "text": "酯化與皂化反應。"
+  },
+  {
+   "code": "Jf-IV-4",
+   "official_code": "Jf-Ⅳ-4",
+   "text": "常見的塑膠。"
+  },
+  {
+   "code": "Ka-IV-1",
+   "official_code": "Ka-Ⅳ-1",
+   "text": "波的特徵，例如：波峰、波谷、波長、頻率、波速、振幅。"
+  },
+  {
+   "code": "Ka-IV-2",
+   "official_code": "Ka-Ⅳ-2",
+   "text": "波傳播的類型，例如：橫波和縱波。"
+  },
+  {
+   "code": "Ka-IV-3",
+   "official_code": "Ka-Ⅳ-3",
+   "text": "介質的種類、狀態、密度及溫度等因素會影響聲音傳播的速率。"
+  },
+  {
+   "code": "Ka-IV-4",
+   "official_code": "Ka-Ⅳ-4",
+   "text": "聲波會反射，可以做為測量、傳播等用途。"
+  },
+  {
+   "code": "Ka-IV-5",
+   "official_code": "Ka-Ⅳ-5",
+   "text": "耳朵可以分辨不同的聲音，例如：大小、高低及音色，但人耳聽不到超聲波。"
+  },
+  {
+   "code": "Ka-IV-6",
+   "official_code": "Ka-Ⅳ-6",
+   "text": "由針孔成像、影子實驗驗證與說明光的直進性。"
+  },
+  {
+   "code": "Ka-IV-7",
+   "official_code": "Ka-Ⅳ-7",
+   "text": "光速的大小和影響光速的因素。"
+  },
+  {
+   "code": "Ka-IV-8",
+   "official_code": "Ka-Ⅳ-8",
+   "text": "透過實驗探討光的反射與折射規律。"
+  },
+  {
+   "code": "Ka-IV-9",
+   "official_code": "Ka-Ⅳ-9",
+   "text": "生活中有許多運用光學原理的實例或儀器，例如：透鏡、面鏡、眼睛、眼鏡及顯微鏡等。"
+  },
+  {
+   "code": "Ka-IV-10",
+   "official_code": "Ka-Ⅳ-10",
+   "text": "陽光經過三稜鏡可以分散成各種色光。"
+  },
+  {
+   "code": "Ka-IV-11",
+   "official_code": "Ka-Ⅳ-11",
+   "text": "物體的顏色是光選擇性反射的結果。"
+  },
+  {
+   "code": "Kb-IV-1",
+   "official_code": "Kb-Ⅳ-1",
+   "text": "物體在地球或月球等星體上因為星體的引力作用而具有重量；物體之質量與其重量是不同的物理量。"
+  },
+  {
+   "code": "Kb-IV-2",
+   "official_code": "Kb-Ⅳ-2",
+   "text": "帶質量的兩物體之間有重力，例如：萬有引力，此力大小與兩物體各自的質量成正比、與物體間距離的平方成反比。"
+  },
+  {
+   "code": "Kc-IV-1",
+   "official_code": "Kc-Ⅳ-1",
+   "text": "摩擦可以產生靜電，電荷有正負之別。"
+  },
+  {
+   "code": "Kc-IV-2",
+   "official_code": "Kc-Ⅳ-2",
+   "text": "靜止帶電物體之間有靜電力，同號電荷會相斥，異號電荷則會相吸。"
+  },
+  {
+   "code": "Kc-IV-3",
+   "official_code": "Kc-Ⅳ-3",
+   "text": "磁場可以用磁力線表示，磁力線方向即為磁場方向，磁力線越密處磁場越大。"
+  },
+  {
+   "code": "Kc-IV-4",
+   "official_code": "Kc-Ⅳ-4",
+   "text": "電流會產生磁場，其方向分布可以由安培右手定則求得。"
+  },
+  {
+   "code": "Kc-IV-5",
+   "official_code": "Kc-Ⅳ-5",
+   "text": "載流導線在磁場會受力，並簡介電動機的運作原理。"
+  },
+  {
+   "code": "Kc-IV-6",
+   "official_code": "Kc-Ⅳ-6",
+   "text": "環形導線內磁場變化，會產生感應電流。"
+  },
+  {
+   "code": "Kc-IV-7",
+   "official_code": "Kc-Ⅳ-7",
+   "text": "電池連接導體形成通路時，多數導體通過的電流與其兩端電壓差成正比，其比值即為電阻。"
+  },
+  {
+   "code": "Kc-IV-8",
+   "official_code": "Kc-Ⅳ-8",
+   "text": "電流通過帶有電阻物體時，能量會以發熱的形式逸散。"
+  },
+  {
+   "code": "La-IV-1",
+   "official_code": "La-Ⅳ-1",
+   "text": "隨著生物間、生物與環境間的交互作用，生態系中的結構會隨時間改變，形成演替現象。"
+  },
+  {
+   "code": "Lb-IV-1",
+   "official_code": "Lb-Ⅳ-1",
+   "text": "生態系中的非生物因子會影響生物的分布與生存，環境調查時常需檢測非生物因子的變化。"
+  },
+  {
+   "code": "Lb-IV-2",
+   "official_code": "Lb-Ⅳ-2",
+   "text": "人類活動會改變環境，也可能影響其他生物的生存。"
+  },
+  {
+   "code": "Lb-IV-3",
+   "official_code": "Lb-Ⅳ-3",
+   "text": "人類可採取行動來維持生物的生存環境，使生物能在自然環境中生長、繁殖、交互作用，以維持生態平衡。"
+  },
+  {
+   "code": "Ma-IV-1",
+   "official_code": "Ma-Ⅳ-1",
+   "text": "生命科學的進步，有助於解決社會中發生的農業、食品、能源、醫藥，以及環境相關的問題。"
+  },
+  {
+   "code": "Ma-IV-2",
+   "official_code": "Ma-Ⅳ-2",
+   "text": "保育工作不是只有科學家能夠處理，所有的公民都有權利及義務，共同研究、監控及維護生物多樣性。"
+  },
+  {
+   "code": "Ma-IV-3",
+   "official_code": "Ma-Ⅳ-3",
+   "text": "不同的材料對生活及社會的影響。"
+  },
+  {
+   "code": "Ma-IV-4",
+   "official_code": "Ma-Ⅳ-4",
+   "text": "各種發電方式與新興的能源科技對社會、經濟、環境及生態的影響。"
+  },
+  {
+   "code": "Ma-IV-5",
+   "official_code": "Ma-Ⅳ-5",
+   "text": "各種本土科學知能（含原住民族科學與世界觀）對社會、經濟環境及生態保護之啟示。"
+  },
+  {
+   "code": "Mb-IV-1",
+   "official_code": "Mb-Ⅳ-1",
+   "text": "生物技術的發展是為了因應人類需求，運用跨領域技術來改造生物。發展相關技術的歷程中，也應避免對其他生物以及環境造成過度的影響。"
+  },
+  {
+   "code": "Mb-IV-2",
+   "official_code": "Mb-Ⅳ-2",
+   "text": "科學史上重要發現的過程，以及不同性別、背景、族群者於其中的貢獻。"
+  },
+  {
+   "code": "Mc-IV-1",
+   "official_code": "Mc-Ⅳ-1",
+   "text": "生物生長條件與機制在處理環境汙染物質的應用。"
+  },
+  {
+   "code": "Mc-IV-2",
+   "official_code": "Mc-Ⅳ-2",
+   "text": "運用生物體的構造與功能，可改善人類生活。"
+  },
+  {
+   "code": "Mc-IV-3",
+   "official_code": "Mc-Ⅳ-3",
+   "text": "生活中對各種材料進行加工與運用。"
+  },
+  {
+   "code": "Mc-IV-4",
+   "official_code": "Mc-Ⅳ-4",
+   "text": "常見人造材料的特性、簡單的製造過程及在生活上的應用。"
+  },
+  {
+   "code": "Mc-IV-5",
+   "official_code": "Mc-Ⅳ-5",
+   "text": "電力供應與輸送方式的概要。"
+  },
+  {
+   "code": "Mc-IV-6",
+   "official_code": "Mc-Ⅳ-6",
+   "text": "用電安全常識，避免觸電和電線走火。"
+  },
+  {
+   "code": "Mc-IV-7",
+   "official_code": "Mc-Ⅳ-7",
+   "text": "電器標示和電費計算。"
+  },
+  {
+   "code": "Md-IV-1",
+   "official_code": "Md-Ⅳ-1",
+   "text": "生物保育知識與技能在防治天然災害的應用。"
+  },
+  {
+   "code": "Md-IV-2",
+   "official_code": "Md-Ⅳ-2",
+   "text": "颱風主要發生在七至九月，並容易造成生命財產的損失。"
+  },
+  {
+   "code": "Md-IV-3",
+   "official_code": "Md-Ⅳ-3",
+   "text": "颱風會帶來狂風、豪雨及暴潮等災害。"
+  },
+  {
+   "code": "Md-IV-4",
+   "official_code": "Md-Ⅳ-4",
+   "text": "臺灣位處於板塊交界，因此地震頻仍，常造成災害。"
+  },
+  {
+   "code": "Md-IV-5",
+   "official_code": "Md-Ⅳ-5",
+   "text": "大雨過後和順向坡會加重山崩的威脅。"
+  },
+  {
+   "code": "Me-IV-1",
+   "official_code": "Me-Ⅳ-1",
+   "text": "環境汙染物對生物生長的影響及應用。"
+  },
+  {
+   "code": "Me-IV-2",
+   "official_code": "Me-Ⅳ-2",
+   "text": "家庭廢水的影響與再利用。"
+  },
+  {
+   "code": "Me-IV-3",
+   "official_code": "Me-Ⅳ-3",
+   "text": "空氣品質與空氣汙染的種類、來源及一般防治方法。"
+  },
+  {
+   "code": "Me-IV-4",
+   "official_code": "Me-Ⅳ-4",
+   "text": "溫室氣體與全球暖化。"
+  },
+  {
+   "code": "Me-IV-5",
+   "official_code": "Me-Ⅳ-5",
+   "text": "重金屬汙染的影響。"
+  },
+  {
+   "code": "Me-IV-6",
+   "official_code": "Me-Ⅳ-6",
+   "text": "環境汙染物與生物放大的關係。"
+  },
+  {
+   "code": "Me-IV-7",
+   "official_code": "Me-Ⅳ-7",
+   "text": "對聲音的特性做深入的研究可以幫助我們更確實防範噪音的汙染。"
+  },
+  {
+   "code": "Na-IV-1",
+   "official_code": "Na-Ⅳ-1",
+   "text": "利用生物資源會影響生物間相互依存的關係。"
+  },
+  {
+   "code": "Na-IV-2",
+   "official_code": "Na-Ⅳ-2",
+   "text": "生活中節約能源的方法。"
+  },
+  {
+   "code": "Na-IV-3",
+   "official_code": "Na-Ⅳ-3",
+   "text": "環境品質繫於資源的永續利用與維持生態平衡。"
+  },
+  {
+   "code": "Na-IV-4",
+   "official_code": "Na-Ⅳ-4",
+   "text": "資源使用的5R：減量、拒絕、重複使用、回收及再生。"
+  },
+  {
+   "code": "Na-IV-5",
+   "official_code": "Na-Ⅳ-5",
+   "text": "各種廢棄物對環境的影響，環境的承載能力與處理方法。"
+  },
+  {
+   "code": "Na-IV-6",
+   "official_code": "Na-Ⅳ-6",
+   "text": "人類社會的發展必須建立在保護地球自然環境的基礎上。"
+  },
+  {
+   "code": "Na-IV-7",
+   "official_code": "Na-Ⅳ-7",
+   "text": "為使地球永續發展，可以從減量、回收、再利用、綠能等做起。"
+  },
+  {
+   "code": "Nb-IV-1",
+   "official_code": "Nb-Ⅳ-1",
+   "text": "全球暖化對生物的影響。"
+  },
+  {
+   "code": "Nb-IV-2",
+   "official_code": "Nb-Ⅳ-2",
+   "text": "氣候變遷產生的衝擊有海平面上升、全球暖化、異常降水等現象。"
+  },
+  {
+   "code": "Nb-IV-3",
+   "official_code": "Nb-Ⅳ-3",
+   "text": "因應氣候變遷的方法有減緩與調適。"
+  },
+  {
+   "code": "Nc-IV-1",
+   "official_code": "Nc-Ⅳ-1",
+   "text": "生質能源的發展現況。"
+  },
+  {
+   "code": "Nc-IV-2",
+   "official_code": "Nc-Ⅳ-2",
+   "text": "開發任何一種能源都有風險，應依據證據來評估與決策。"
+  },
+  {
+   "code": "Nc-IV-3",
+   "official_code": "Nc-Ⅳ-3",
+   "text": "化石燃料的形成與特性。"
+  },
+  {
+   "code": "Nc-IV-4",
+   "official_code": "Nc-Ⅳ-4",
+   "text": "新興能源的開發，例如：風能、太陽能、核融合發電、汽電共生、生質能、燃料電池等。"
+  },
+  {
+   "code": "Nc-IV-5",
+   "official_code": "Nc-Ⅳ-5",
+   "text": "新興能源的科技，例如：油電混合動力車、太陽能飛機等。"
+  },
+  {
+   "code": "Nc-IV-6",
+   "official_code": "Nc-Ⅳ-6",
+   "text": "臺灣能源的利用現況與未來展望。"
+  },
+  {
+   "code": "INc-IV-1",
+   "official_code": "INc-Ⅳ-1",
+   "text": "宇宙間事、物的規模可以分為微觀尺度及巨觀尺度。"
+  },
+  {
+   "code": "INc-IV-2",
+   "official_code": "INc-Ⅳ-2",
+   "text": "對應不同尺度，各有適用的單位（以長度單位為例），尺度大小可以使用科學記號來表達。"
+  },
+  {
+   "code": "INc-IV-3",
+   "official_code": "INc-Ⅳ-3",
+   "text": "測量時要選擇適當的尺度。"
+  },
+  {
+   "code": "INc-IV-4",
+   "official_code": "INc-Ⅳ-4",
+   "text": "不同物體間的尺度關係可以用比例的方式來呈現。"
+  },
+  {
+   "code": "INc-IV-5",
+   "official_code": "INc-Ⅳ-5",
+   "text": "原子與分子是組成生命世界與物質世界的微觀尺度。"
+  },
+  {
+   "code": "INc-IV-6",
+   "official_code": "INc-Ⅳ-6",
+   "text": "從個體到生物圈是組成生命世界的巨觀尺度。"
+  },
+  {
+   "code": "INa-IV-1",
+   "official_code": "INa-Ⅳ-1",
+   "text": "能量有多種不同的形式。"
+  },
+  {
+   "code": "INa-IV-2",
+   "official_code": "INa-Ⅳ-2",
+   "text": "能量之間可以轉換，且會維持定值。"
+  },
+  {
+   "code": "INa-IV-3",
+   "official_code": "INa-Ⅳ-3",
+   "text": "科學的發現與新能源，及其對生活與社會的影響。"
+  },
+  {
+   "code": "INa-IV-4",
+   "official_code": "INa-Ⅳ-4",
+   "text": "生活中各種能源的特性及其影響。"
+  },
+  {
+   "code": "INa-IV-5",
+   "official_code": "INa-Ⅳ-5",
+   "text": "能源開發、利用及永續性。"
+  },
+  {
+   "code": "INg-IV-1",
+   "official_code": "INg-Ⅳ-1",
+   "text": "地球上各系統的能量主要來源是太陽，且彼此之間有流動轉換。"
+  },
+  {
+   "code": "INg-IV-2",
+   "official_code": "INg-Ⅳ-2",
+   "text": "大氣組成中的變動氣體有些是溫室氣體。"
+  },
+  {
+   "code": "INg-IV-3",
+   "official_code": "INg-Ⅳ-3",
+   "text": "不同物質受熱後，其溫度的變化可能不同。"
+  },
+  {
+   "code": "INg-IV-4",
+   "official_code": "INg-Ⅳ-4",
+   "text": "碳元素在自然界中的儲存與流動。"
+  },
+  {
+   "code": "INg-IV-5",
+   "official_code": "INg-Ⅳ-5",
+   "text": "生物活動會改變環境，環境改變之後也會影響生物活動。"
+  },
+  {
+   "code": "INg-IV-6",
+   "official_code": "INg-Ⅳ-6",
+   "text": "新興科技的發展對自然環境的影響。"
+  },
+  {
+   "code": "INg-IV-7",
+   "official_code": "INg-Ⅳ-7",
+   "text": "溫室氣體與全球暖化的關係。"
+  },
+  {
+   "code": "INg-IV-8",
+   "official_code": "INg-Ⅳ-8",
+   "text": "氣候變遷產生的衝擊是全球性的。"
+  },
+  {
+   "code": "INg-IV-9",
+   "official_code": "INg-Ⅳ-9",
+   "text": "因應氣候變遷的方法，主要有減緩與調適兩種途徑。"
+  }
+ ],
+ "performance": [
+  {
+   "code": "ti-IV-1",
+   "text": "能依據已知的自然科學知識概念，經由自我或團體探索與討論的過程，想像當使用的觀察方法或實驗方法改變時，其結果可能產生的差異；並能嘗試在指導下以創新思考和方法得到新的模型、成品或結果。"
+  },
+  {
+   "code": "tr-IV-1",
+   "text": "能將所習得的知識正確的連結到所觀察到的自然現象及實驗數據，並推論出其中的關聯，進而運用習得的知識來解釋自己論點的正確性。"
+  },
+  {
+   "code": "tc-IV-1",
+   "text": "能依據已知的自然科學知識與概念，對自己蒐集與分類的科學數據，抱持合理的懷疑態度，並對他人的資訊或報告，提出自己的看法或解釋。"
+  },
+  {
+   "code": "tm-IV-1",
+   "text": "能從實驗過程、合作討論中理解較複雜的自然界模型，並能評估不同模型的優點和限制，進能應用在後續的科學理解或生活。"
+  },
+  {
+   "code": "po-IV-1",
+   "text": "能從學習活動、日常經驗及科技運用、自然環境、書刊及網路媒體中，進行各種有計畫的觀察，進而能察覺問題。"
+  },
+  {
+   "code": "po-IV-2",
+   "text": "能辨別適合科學探究或適合以科學方式尋求解決的問題（或假說），並能依據觀察、蒐集資料、閱讀、思考、討論等，提出適宜探究之問題。"
+  },
+  {
+   "code": "pe-IV-1",
+   "text": "能辨明多個自變項、應變項並計劃適當次數的測試、預測活動的可能結果。在教師或教科書的指導或說明下，能了解探究的計畫，並進而能根據問題特性、資源（例如：設備、時間）等因素，規劃具有可信度（例如：多次測量等）的探究活動。"
+  },
+  {
+   "code": "pe-IV-2",
+   "text": "能正確安全操作適合學習階段的物品、器材儀器、科技設備及資源。能進行客觀的質性觀察或數值量測並詳實記錄。"
+  },
+  {
+   "code": "pa-IV-1",
+   "text": "能分析歸納、製作圖表、使用資訊及數學等方法，整理資訊或數據。"
+  },
+  {
+   "code": "pa-IV-2",
+   "text": "能運用科學原理、思考智能、數學等方法，從（所得的）資訊或數據，形成解釋、發現新知、獲知因果關係、解決問題或是發現新的問題。並能將自己的探究結果和同學的結果或其他相關的資訊比較對照，相互檢核，確認結果。"
+  },
+  {
+   "code": "pc-IV-1",
+   "text": "能理解同學的探究過程和結果（或經簡化過的科學報告），提出合理而且具有根據的疑問或意見。並能對問題、探究方法、證據及發現，彼此間的符應情形，進行檢核並提出可能的改善方案。"
+  },
+  {
+   "code": "pc-IV-2",
+   "text": "能利用口語、影像（例如：攝影、錄影）、文字與圖案、繪圖或實物、科學名詞、數學公式、模型或經教師認可後以報告或新媒體形式表達完整之探究過程、發現與成果、價值、限制和主張等。視需要，並能摘要描述主要過程、發現和可能的運用。"
+  },
+  {
+   "code": "ai-IV-1",
+   "text": "動手實作解決問題或驗證自己想法，而獲得成就感。"
+  },
+  {
+   "code": "ai-IV-2",
+   "text": "透過與同儕的討論，分享科學發現的樂趣。"
+  },
+  {
+   "code": "ai-IV-3",
+   "text": "透過所學到的科學知識和科學探索的各種方法，解釋自然現象發生的原因，建立科學學習的自信心。"
+  },
+  {
+   "code": "ah-IV-1",
+   "text": "對於有關科學發現的報導，甚至權威的解釋（例如：報章雜誌的報導或書本上的解釋），能抱持懷疑的態度，評估其推論的證據是否充分且可信賴。"
+  },
+  {
+   "code": "ah-IV-2",
+   "text": "應用所學到的科學知識與科學探究方法，幫助自己做出最佳的決定。"
+  },
+  {
+   "code": "an-IV-1",
+   "text": "察覺到科學的觀察、測量和方法是否具有正當性，是受到社會共同建構的標準所規範。"
+  },
+  {
+   "code": "an-IV-2",
+   "text": "分辨科學知識的確定性和持久性，會因科學研究的時空背景不同而有所變化。"
+  },
+  {
+   "code": "an-IV-3",
+   "text": "體察到不同性別、背景、族群科學家們具有堅毅、嚴謹和講求邏輯的特質，也具有好奇心、求知慾和想像力。"
+  }
+ ],
+ "senior_high": [
+  {
+   "code": "BDa-Ⅴc-1",
+   "text": "不同的細胞具有不同的功能、形態及構造。"
+  },
+  {
+   "code": "BDa-Ⅴc-2",
+   "text": "原核細胞與真核細胞的構造與功能。"
+  },
+  {
+   "code": "BDa-Ⅴc-3",
+   "text": "ATP是提供細胞生理作用所需能量的直接來源。"
+  },
+  {
+   "code": "BDa-Ⅴc-4",
+   "text": "光合作用與呼吸作用的能量轉換關係。"
+  },
+  {
+   "code": "BDa-Ⅴc-5",
+   "text": "真核細胞的細胞週期包括間期與細胞分裂期。"
+  },
+  {
+   "code": "BDa-Ⅴc-6",
+   "text": "真核細胞的細胞分裂。"
+  },
+  {
+   "code": "BDa-Ⅴc-7",
+   "text": "有絲分裂的過程。"
+  },
+  {
+   "code": "BDa-Ⅴc-8",
+   "text": "動物生殖細胞一般須經過減數分裂的過程形成配子。"
+  },
+  {
+   "code": "BDa-Ⅴc-9",
+   "text": "多細胞生物的受精卵經由有絲分裂與細胞分化的過程，形成不同類型的細胞。"
+  },
+  {
+   "code": "BGa-Ⅴc-1",
+   "text": "孟德爾遺傳法則中，性狀與遺傳因子之關係。"
+  },
+  {
+   "code": "BGa-Ⅴc-2",
+   "text": "孟德爾遺傳法則的延伸。"
+  },
+  {
+   "code": "BGa-Ⅴc-3",
+   "text": "遺傳的染色體學說之發展歷程。"
+  },
+  {
+   "code": "BGa-Ⅴc-4",
+   "text": "性聯遺傳。"
+  },
+  {
+   "code": "BGa-Ⅴc-5",
+   "text": "遺傳物質為核酸。"
+  },
+  {
+   "code": "BGa-Ⅴc-6",
+   "text": "分子遺傳學的中心法則。"
+  },
+  {
+   "code": "BGa-Ⅴc-7",
+   "text": "同一性狀具有不同的表徵。"
+  },
+  {
+   "code": "BGb-Ⅴc-1",
+   "text": "生物性狀的表徵比例會變動。"
+  },
+  {
+   "code": "BGb-Ⅴc-2",
+   "text": "達爾文的演化理論。"
+  },
+  {
+   "code": "BGb-Ⅴc-3",
+   "text": "共同祖先的概念對生物分類系統之影響。"
+  },
+  {
+   "code": "BGb-Ⅴc-4",
+   "text": "演化證據對生物分類系統演變之影響。"
+  },
+  {
+   "code": "BGb-Ⅴc-5",
+   "text": "在地球上的生物經演化過程而形成目前的生物多樣性。"
+  },
+  {
+   "code": "BMb-Ⅴc-1",
+   "text": "細胞學說的發展歷程。"
+  },
+  {
+   "code": "BMb-Ⅴc-2",
+   "text": "孟德爾依據實驗結果推論遺傳現象的規律性。"
+  },
+  {
+   "code": "BMb-Ⅴc-3",
+   "text": "性染色體的發現。"
+  },
+  {
+   "code": "BMb-Ⅴc-4",
+   "text": "演化觀念的形成與發展。"
+  },
+  {
+   "code": "BMc-Ⅴc-1",
+   "text": "基因轉殖技術的應用。"
+  },
+  {
+   "code": "PBa-Ⅴc-1",
+   "text": "電場以及磁場均具有能量，利用手機傳遞訊息即是電磁場以電磁波的形式來傳遞能量的實例。"
+  },
+  {
+   "code": "PBa-Ⅴc-2",
+   "text": "不同形式的能量間可以轉換，且總能量守恆。能量的形式因觀察尺度的不同，而有不同的展現與說明。"
+  },
+  {
+   "code": "PBa-Ⅴc-3",
+   "text": "質量及能量可以相互轉換，其轉換公式為E = mc2。"
+  },
+  {
+   "code": "PBa-Ⅴc-4",
+   "text": "原子核的融合以及原子核的分裂是質量可以轉換為能量的應用實例，且為目前重要之能源議題。"
+  },
+  {
+   "code": "PBb-Ⅴc-1",
+   "text": "克氏溫標的意義及理想氣體的內能的簡單說明。"
+  },
+  {
+   "code": "PBb-Ⅴc-2",
+   "text": "實驗顯示：把功轉換成熱很容易，卻無法把熱完全轉換為功。"
+  },
+  {
+   "code": "PBb-Ⅴc-3",
+   "text": "物體內的原子不斷在運動並交互作用，此交互作用能量與原子的動能合稱為熱能。"
+  },
+  {
+   "code": "PBb-Ⅴc-4",
+   "text": "由於物體溫度的不同所造成的能量傳遞稱為熱。"
+  },
+  {
+   "code": "PEa-Ⅴc-1",
+   "text": "科學上常用的物理量有國際標準單位。"
+  },
+  {
+   "code": "PEa-Ⅴc-2",
+   "text": "因工具的限制或應用上的方便，許多自然科學所需的測量，包含物理量，是經由基本物理量的測量再計算而得。"
+  },
+  {
+   "code": "PEa-Ⅴc-3",
+   "text": "原子的大小約為10-10公尺，原子核的大小約為10-15公尺。"
+  },
+  {
+   "code": "PEb-Ⅴc-1",
+   "text": "伽利略之前學者對物體運動的觀察與思辯。"
+  },
+  {
+   "code": "PEb-Ⅴc-2",
+   "text": "伽利略對物體運動的研究與思辯歷程。"
+  },
+  {
+   "code": "PEb-Ⅴc-3",
+   "text": "克卜勒行星運動三大定律發現的歷史背景及內容。"
+  },
+  {
+   "code": "PEb-Ⅴc-4",
+   "text": "牛頓三大運動定律。"
+  },
+  {
+   "code": "PEb-Ⅴc-5",
+   "text": "摩擦力、正向力、彈力等常見的作用力。"
+  },
+  {
+   "code": "PKa-Ⅴc-1",
+   "text": "波速、頻率、波長的數學關係。"
+  },
+  {
+   "code": "PKa-Ⅴc-2",
+   "text": "定性介紹都卜勒效應及其應用。"
+  },
+  {
+   "code": "PKa-Ⅴc-3",
+   "text": "歷史上光的主要理論有微粒說和波動說。"
+  },
+  {
+   "code": "PKa-Ⅴc-4",
+   "text": "光的反射定律，並以波動理論解釋折射定律。"
+  },
+  {
+   "code": "PKa-Ⅴc-5",
+   "text": "光除了反射和折射現象外，也有干涉及繞射現象。"
+  },
+  {
+   "code": "PKa-Ⅴc-6",
+   "text": "惠更斯原理可以解釋光波如何前進、干涉和繞射。"
+  },
+  {
+   "code": "PKa-Ⅴc-7",
+   "text": "馬克士威從其方程式預測電磁波的存在，且計算出電磁波的速度等於光速，因此推論光是一種電磁波，後來也獲得證實。"
+  },
+  {
+   "code": "PKb-Ⅴc-1",
+   "text": "牛頓運動定律結合萬有引力定律可用以解釋克卜勒行星運動定律。"
+  },
+  {
+   "code": "PKb-Ⅴc-2",
+   "text": "物體在重力場中運動的定性描述。"
+  },
+  {
+   "code": "PKc-Ⅴc-1",
+   "text": "電荷會產生電場，兩點電荷間有電力，此力量值與兩點電荷所帶電荷量成正比，與兩點電荷間的距離平方成反比。"
+  },
+  {
+   "code": "PKc-Ⅴc-2",
+   "text": "原子內帶負電的電子與帶正電的原子核以電力互相吸引，形成穩定的原子結構。"
+  },
+  {
+   "code": "PKc-Ⅴc-3",
+   "text": "變動的磁場會產生電場，變動的電場會產生磁場。"
+  },
+  {
+   "code": "PKc-Ⅴc-4",
+   "text": "所有的電磁現象經統整後，皆可由馬克士威方程式描述。"
+  },
+  {
+   "code": "PKc-Ⅴc-5",
+   "text": "馬克士威方程式預測電磁場的擾動可以在空間中傳遞，即為電磁波。"
+  },
+  {
+   "code": "PKc-Ⅴc-6",
+   "text": "電磁波包含低頻率的無線電波，到高頻率的伽瑪射線在日常生活中有廣泛的應用。"
+  },
+  {
+   "code": "PKd-Ⅴc-1",
+   "text": "光具有粒子性，光子能量E=hν，與其頻率ν成正比。"
+  },
+  {
+   "code": "PKd-Ⅴc-2",
+   "text": "光電效應在日常生活中之應用。"
+  },
+  {
+   "code": "PKd-Ⅴc-3",
+   "text": "原子光譜。"
+  },
+  {
+   "code": "PKd-Ⅴc-4",
+   "text": "能階的概念。"
+  },
+  {
+   "code": "PKd-Ⅴc-5",
+   "text": "電子的雙狹縫干涉現象與其波動性。"
+  },
+  {
+   "code": "PKd-Ⅴc-6",
+   "text": "光子與電子以及所有微觀粒子都具有波粒二象性。"
+  },
+  {
+   "code": "PKd-Ⅴc-7",
+   "text": "牛頓運動定律在原子尺度以下並不適用。"
+  },
+  {
+   "code": "PKe-Ⅴc-1",
+   "text": "原子核內的質子與質子、質子與中子、中子與中子之間有強力使它們互相吸引。"
+  },
+  {
+   "code": "PKe-Ⅴc-2",
+   "text": "單獨的中子並不穩定，會透過弱作用（或弱力）自動衰變成質子及其他粒子。"
+  },
+  {
+   "code": "PKe-Ⅴc-3",
+   "text": "自然界的一切交互作用可完全由重力、電磁力、強力、以及弱作用等四種基本交互作用所涵蓋。"
+  },
+  {
+   "code": "PMc-Ⅴc-1",
+   "text": "用電安全。"
+  },
+  {
+   "code": "PMc-Ⅴc-2",
+   "text": "電在生活中的應用。"
+  },
+  {
+   "code": "PMc-Ⅴc-3",
+   "text": "科學的態度與方法。"
+  },
+  {
+   "code": "PMc-Ⅴc-4",
+   "text": "近代物理科學的發展，以及不同性別、背景、族群者於其中的貢獻。"
+  },
+  {
+   "code": "PNc-Ⅴc-1",
+   "text": "原子核的分裂。"
+  },
+  {
+   "code": "PNc-Ⅴc-2",
+   "text": "核能發電與輻射安全。"
+  },
+  {
+   "code": "PNc-Ⅴc-3",
+   "text": "能量一樣的系統，作功的能力不一定相同。"
+  },
+  {
+   "code": "PNc-Ⅴc-4",
+   "text": "雖然能量守恆，但能量一旦發生形式上的轉換，通常其作功效能會降低。"
+  },
+  {
+   "code": "CCa-Ⅴc-1",
+   "text": "CCa-Vc-2"
+  },
+  {
+   "code": "BDa-Ⅴa-1",
+   "text": "細胞的分子組成。"
+  },
+  {
+   "code": "BDa-Ⅴa-2",
+   "text": "生物膜的構造與功能。"
+  },
+  {
+   "code": "BDa-Ⅴa-3",
+   "text": "酶的功能與影響酶活性的因素。"
+  },
+  {
+   "code": "BDa-Ⅴa-4",
+   "text": "呼吸作用包括有氧呼吸、無氧呼吸及醱酵作用。"
+  },
+  {
+   "code": "BDa-Ⅴa-5",
+   "text": "能量流轉與生命維持的關係。"
+  },
+  {
+   "code": "BDa-Ⅴa-6",
+   "text": "細胞的生命歷程。"
+  },
+  {
+   "code": "BDb-Ⅴa-1",
+   "text": "動物組織的構造與功能。"
+  },
+  {
+   "code": "BDb-Ⅴa-2",
+   "text": "動物體的器官系統之構造與功能。"
+  },
+  {
+   "code": "BDb-Ⅴa-3",
+   "text": "動物體內恆定的生理意義與重要性。"
+  },
+  {
+   "code": "BDb-Ⅴa-4",
+   "text": "動物體對刺激的感應。"
+  },
+  {
+   "code": "BDb-Ⅴa-5",
+   "text": "動物體的神經系統對生理作用的調節。"
+  },
+  {
+   "code": "BDb-Ⅴa-6",
+   "text": "動物體的激素對生理作用的調節。"
+  },
+  {
+   "code": "BDb-Ⅴa-7",
+   "text": "動物體的防禦構造與功能。"
+  },
+  {
+   "code": "BDb-Ⅴa-8",
+   "text": "動物體的生殖與胚胎發育。"
+  },
+  {
+   "code": "BDb-Ⅴa-9",
+   "text": "植物體的組成層次。"
+  },
+  {
+   "code": "BDb-Ⅴa-10",
+   "text": "光合作用包括光反應與固碳反應。"
+  },
+  {
+   "code": "BDb-Ⅴa-11",
+   "text": "植物體的生殖。"
+  },
+  {
+   "code": "BDb-Ⅴa-12",
+   "text": "植物體內的物質運輸。"
+  },
+  {
+   "code": "BDb-Ⅴa-13",
+   "text": "植物激素會調節植物體的生理作用。"
+  },
+  {
+   "code": "BDb-Ⅴa-14",
+   "text": "植物體對環境刺激的反應。"
+  },
+  {
+   "code": "BFc-Ⅴa-1",
+   "text": "生態學的研究層級主要為個體、族群、群集、生態系及生物圈。"
+  },
+  {
+   "code": "BFc-Ⅴa-2",
+   "text": "臺灣主要的生態系可分為自然生態系與人工生態系。"
+  },
+  {
+   "code": "BGa-Ⅴa-1",
+   "text": "遺傳的染色體學說的建立。"
+  },
+  {
+   "code": "BGa-Ⅴa-2",
+   "text": "確認DNA為遺傳物質的歷程。"
+  },
+  {
+   "code": "BGa-Ⅴa-3",
+   "text": "遺傳訊息的複製。"
+  },
+  {
+   "code": "BGa-Ⅴa-4",
+   "text": "遺傳訊息的轉錄與轉譯。"
+  },
+  {
+   "code": "BGa-Ⅴa-5",
+   "text": "基因表現的調控。"
+  },
+  {
+   "code": "BGa-Ⅴa-6",
+   "text": "遺傳變異。"
+  },
+  {
+   "code": "BGa-Ⅴa-7",
+   "text": "生物科技的應用。"
+  },
+  {
+   "code": "BGb-Ⅴa-1",
+   "text": "生源說與無生源說的爭論歷程。"
+  },
+  {
+   "code": "BGb-Ⅴa-2",
+   "text": "從無機物到有機物的演變，探討生物起源的過程。"
+  },
+  {
+   "code": "BGb-Ⅴa-3",
+   "text": "原核細胞形成的演化歷程。"
+  },
+  {
+   "code": "BGb-Ⅴa-4",
+   "text": "真核細胞形成的演化歷程。"
+  },
+  {
+   "code": "BGb-Ⅴa-5",
+   "text": "現代生物演化理論。"
+  },
+  {
+   "code": "BGb-Ⅴa-6",
+   "text": "族群遺傳學。"
+  },
+  {
+   "code": "BGb-Ⅴa-7",
+   "text": "演化與物種形成。"
+  },
+  {
+   "code": "BGc-Ⅴa-1",
+   "text": "生物多樣性包含遺傳多樣性、物種多樣性及生態系多樣性三個面向。"
+  },
+  {
+   "code": "BGc-Ⅴa-2",
+   "text": "遺傳多樣性。"
+  },
+  {
+   "code": "BGc-Ⅴa-3",
+   "text": "物種多樣性。"
+  },
+  {
+   "code": "BGc-Ⅴa-4",
+   "text": "生態系多樣性。"
+  },
+  {
+   "code": "BGc-Ⅴa-5",
+   "text": "造就臺灣生物多樣性的因素。"
+  },
+  {
+   "code": "BGc-Ⅴa-6",
+   "text": "生物多樣性的保育。"
+  },
+  {
+   "code": "BLb-Ⅴa-1",
+   "text": "生態學的研究層級。"
+  },
+  {
+   "code": "BLb-Ⅴa-2",
+   "text": "族群特徵包括族群大小、族群密度、族群成長曲線、生存曲線及年齡結構等。"
+  },
+  {
+   "code": "BLb-Ⅴa-3",
+   "text": "群集中族群間的交互作用、群集結構及演替。"
+  },
+  {
+   "code": "BLb-Ⅴa-4",
+   "text": "生態系中的非生物因子與生物因子、能量流轉及元素循環。"
+  },
+  {
+   "code": "BMa-Ⅴa-1",
+   "text": "探討代理孕母的倫理與法律問題。"
+  },
+  {
+   "code": "BMa-Ⅴa-2",
+   "text": "探討人類基因組計畫及其意義與重要性。"
+  },
+  {
+   "code": "BMb-Ⅴa-1",
+   "text": "從科學史的觀點，探討生物膜的模型之發展歷程。"
+  },
+  {
+   "code": "BMb-Ⅴa-2",
+   "text": "從科學史的觀點，探討生長素發現過程的相關實驗。"
+  },
+  {
+   "code": "BMb-Ⅴa-3",
+   "text": "從科學史的觀點，說明遺傳的染色體學說之發展歷程。"
+  },
+  {
+   "code": "BMb-Ⅴa-4",
+   "text": "從科學史的觀點，探討聯鎖的相關實驗與推論。"
+  },
+  {
+   "code": "BMb-Ⅴa-5",
+   "text": "從科學史的觀點，探討確認DNA為遺傳物質之發展歷程。"
+  },
+  {
+   "code": "BMb-Ⅴa-6",
+   "text": "從科學史的觀點，探討DNA分子結構模型之發展歷程。"
+  },
+  {
+   "code": "BMb-Ⅴa-7",
+   "text": "從科學史的觀點，探討DNA複製為半保留複製模式之發展歷程。"
+  },
+  {
+   "code": "BMb-Ⅴa-8",
+   "text": "從科學史的觀點，說明現代生物演化理論之發展歷程。"
+  },
+  {
+   "code": "BMc-Ⅴa-1",
+   "text": "生物科技的應用。"
+  },
+  {
+   "code": "BMc-Ⅴa-2",
+   "text": "以生態學的理論為基礎，規劃保育策略。"
+  },
+  {
+   "code": "BMc-Ⅴa-3",
+   "text": "可以實際案例，由研究、教育、立法或行政等方面來探討生物多樣性的保育。"
+  },
+  {
+   "code": "BNa-Ⅴa-1",
+   "text": "棲地零碎化造成的邊緣效應對物種多樣性之影響。"
+  },
+  {
+   "code": "BNa-Ⅴa-2",
+   "text": "入侵外來種對物種多樣性之影響。"
+  },
+  {
+   "code": "PBa-Ⅴa-1",
+   "text": "功等於力和位移的向量內積，功率為功的時間變化率。"
+  },
+  {
+   "code": "PBa-Ⅴa-2",
+   "text": "功能定理。"
+  },
+  {
+   "code": "PBa-Ⅴa-3",
+   "text": "位能的定義。"
+  },
+  {
+   "code": "PBa-Ⅴa-4",
+   "text": "重力位能及彈簧位能的一般表示式。"
+  },
+  {
+   "code": "PBa-Ⅴa-5",
+   "text": "一般性的力學能守恆律與實例。"
+  },
+  {
+   "code": "PBb-Ⅴa-1",
+   "text": "理想氣體狀態方程為PV=nRT，此溫度T為絕對溫度。"
+  },
+  {
+   "code": "PBb-Ⅴa-2",
+   "text": "將牛頓力學定律應用到理想氣體動力論，可以推導出氣體壓力以及體積與內能的定量關係。將此結果套用到理想氣體狀態方程式則可得出理想氣體的內能與絕對溫度成正比的結論。"
+  },
+  {
+   "code": "PBb-Ⅴa-3",
+   "text": "在一系統中氣體分子運動速率並非完全相同，而是有一個速率分布。"
+  },
+  {
+   "code": "PEa-Ⅴa-1",
+   "text": "測量都會有不確定度，不確定度源自被測量物、測量儀器的特性，並受測量者及環境的影響。不確定度有國際公定的標準計算方法。"
+  },
+  {
+   "code": "PEb-Ⅴa-1",
+   "text": "質點如在一平面上運動，則其位移、速度、加速度有兩個獨立的分量。"
+  },
+  {
+   "code": "PEb-Ⅴa-2",
+   "text": "直線等加速運動（例如：自由落體運動），其位移、速度、加速度及時間的數學關係。"
+  },
+  {
+   "code": "PEb-Ⅴa-3",
+   "text": "二質點在同一直線上運動，其相對速度為二質點速度之差。"
+  },
+  {
+   "code": "PEb-Ⅴa-4",
+   "text": "簡諧運動為一週期性運動，其位移和速度可用時間的正弦函數或餘弦函數表示。"
+  },
+  {
+   "code": "PEb-Ⅴa-5",
+   "text": "質點如在一平面上運動，則其位移、速度、加速度有兩個分量，應用向量表示，例如：拋體運動，其軌跡是拋物線。"
+  },
+  {
+   "code": "PEb-Ⅴa-6",
+   "text": "質點作等速圓周運動時其速率及角速度不變，但有向心加速度，因此速度的方向會改變。"
+  },
+  {
+   "code": "PEb-Ⅴa-7",
+   "text": "力是向量，可以分解和合成。"
+  },
+  {
+   "code": "PEb-Ⅴa-8",
+   "text": "牛頓三大運動定律包括慣性定律、運動定律、作用與反作用定律。"
+  },
+  {
+   "code": "PEb-Ⅴa-9",
+   "text": "牛頓第二運動定律的應用，例如：簡諧運動與等速圓周運動。"
+  },
+  {
+   "code": "PEb-Ⅴa-10",
+   "text": "質點的動量等於質點的質量乘以速度，其時間變化率等於質點所受作用力。衝量等於動量的變化。"
+  },
+  {
+   "code": "PEb-Ⅴa-11",
+   "text": "質點系統的動量對時間的變化率等於外力的總和，如外力的總和為零，則系統動量守恆。"
+  },
+  {
+   "code": "PEb-Ⅴa-12",
+   "text": "質點系統質心的定義。"
+  },
+  {
+   "code": "PEb-Ⅴa-13",
+   "text": "質心速度、質心加速度及系統總動量及其所受外力的關係。"
+  },
+  {
+   "code": "PEb-Ⅴa-14",
+   "text": "一質點的角動量等於其位置向量和動量的向量外積，其時間變化率等於質點所受的力矩。"
+  },
+  {
+   "code": "PEb-Ⅴa-15",
+   "text": "許多生活上和工程上的問題都可用牛頓三大運動定律來解釋或計算，例如：靜力平衡、摩擦力、一維碰撞問題。"
+  },
+  {
+   "code": "PKa-Ⅴa-1",
+   "text": "力學波須透過介質來傳播，但光可在真空中傳播。"
+  },
+  {
+   "code": "PKa-Ⅴa-2",
+   "text": "介質振動會產生波。"
+  },
+  {
+   "code": "PKa-Ⅴa-3",
+   "text": "正弦波在時間上以及空間中均有週期性。"
+  },
+  {
+   "code": "PKa-Ⅴa-4",
+   "text": "波遇到不同的介質時會反射和透射，例如：繩波。"
+  },
+  {
+   "code": "PKa-Ⅴa-5",
+   "text": "線性波相遇時波形可以疊加。"
+  },
+  {
+   "code": "PKa-Ⅴa-6",
+   "text": "兩個振幅、波長、週期皆相同的波相向行進會經由干涉形成駐波。"
+  },
+  {
+   "code": "PKa-Ⅴa-7",
+   "text": "如聲音形成駐波，其頻率最低者稱為基音，頻率高者稱為泛音。"
+  },
+  {
+   "code": "PKa-Ⅴa-8",
+   "text": "物體振動的頻率和聲波頻率相同時會產生聲音的共振（或共鳴）。"
+  },
+  {
+   "code": "PKa-Ⅴa-9",
+   "text": "惠更斯原理可解釋波的傳遞，波前的每一點就像一個向外傳播的點波源。"
+  },
+  {
+   "code": "PKa-Ⅴa-10",
+   "text": "光有波動的性質。"
+  },
+  {
+   "code": "PKa-Ⅴa-11",
+   "text": "光的折射遵循司乃耳定律，光由光密介質進入光疏介質的入射角大於臨界角時會發生全反射。"
+  },
+  {
+   "code": "PKa-Ⅴa-12",
+   "text": "光經透鏡成像可用透鏡公式分析，透鏡有很多用途。"
+  },
+  {
+   "code": "PKa-Ⅴa-13",
+   "text": "光有干涉與繞射的現象，其亮紋和暗紋決定於相位差。"
+  },
+  {
+   "code": "PKb-Ⅴa-1",
+   "text": "萬有引力定律的說明。"
+  },
+  {
+   "code": "PKb-Ⅴa-2",
+   "text": "地球表面的重力與重力加速度。"
+  },
+  {
+   "code": "PKb-Ⅴa-3",
+   "text": "行星與人造衛星的運動。"
+  },
+  {
+   "code": "PKb-Ⅴa-4",
+   "text": "以圓周運動為例說明如何由萬有引力定律推論出克卜勒定律。"
+  },
+  {
+   "code": "PKc-Ⅴa-1",
+   "text": "可以用電力線表示出電場的大小與方向。"
+  },
+  {
+   "code": "PKc-Ⅴa-2",
+   "text": "庫倫作用力是守恆力，具有位能。"
+  },
+  {
+   "code": "PKc-Ⅴa-3",
+   "text": "在電場中，單位電荷在某點所具有的位能，即為該點之電位。"
+  },
+  {
+   "code": "PKc-Ⅴa-4",
+   "text": "電位差等於電流乘以電阻，此為歐姆定律。"
+  },
+  {
+   "code": "PKc-Ⅴa-5",
+   "text": "電路中電流帶有能量。"
+  },
+  {
+   "code": "PKc-Ⅴa-6",
+   "text": "電路有串聯、並聯及迴路等形式，電路中的能量及電量必須守恆。"
+  },
+  {
+   "code": "PKc-Ⅴa-7",
+   "text": "載流導線如長直導線、圓線圈、長螺線管，會產生磁場，遵循必歐-沙伐定律及安培右手定則。"
+  },
+  {
+   "code": "PKc-Ⅴa-8",
+   "text": "載流導線在磁場中受力，可利用此特性設計電動機。"
+  },
+  {
+   "code": "PKc-Ⅴa-9",
+   "text": "在平面上運動的帶電質點受到垂直於平面之均勻磁場的作用，會受力並做等速圓周運動。"
+  },
+  {
+   "code": "PKc-Ⅴa-10",
+   "text": "磁通量的負時間變化率等於感應電動勢，此為法拉第定律。"
+  },
+  {
+   "code": "PKc-Ⅴa-11",
+   "text": "電壓和電流有直流電和交流電兩種。"
+  },
+  {
+   "code": "PKc-Ⅴa-12",
+   "text": "發電機與變壓器的原理皆為電磁感應。"
+  },
+  {
+   "code": "PKc-Ⅴa-13",
+   "text": "電場變化會產生磁場。"
+  },
+  {
+   "code": "PKc-Ⅴa-14",
+   "text": "電磁波在真空中傳播的速率由電磁常數決定，與頻率無關。"
+  },
+  {
+   "code": "PKc-Ⅴa-15",
+   "text": "平面電磁波的電場、磁場以及傳播方向互相垂直。"
+  },
+  {
+   "code": "PKd-Ⅴa-1",
+   "text": "用湯木生陰極射線管及密立坎油滴實驗測量電子的荷質比及電量。"
+  },
+  {
+   "code": "PKd-Ⅴa-2",
+   "text": "X射線比起可見光來能量較高、波長較短，可用來分析晶體結構，並且有許多其他的應用。"
+  },
+  {
+   "code": "PKd-Ⅴa-3",
+   "text": "普朗克分析黑體輻射現象，提出量子論之解釋。"
+  },
+  {
+   "code": "PKd-Ⅴa-4",
+   "text": "愛因斯坦分析光電效應，提出光量子論。"
+  },
+  {
+   "code": "PKd-Ⅴa-5",
+   "text": "德布羅意提出物質波理論：物質都具有波與粒子的二象性，並經實驗驗證。"
+  },
+  {
+   "code": "PKd-Ⅴa-6",
+   "text": "拉塞福提出正電荷集中在核心，電子分布在外的原子模型。"
+  },
+  {
+   "code": "PKd-Ⅴa-7",
+   "text": "波耳假設角動量的量子化，提出氫原子模型，成功解釋氫原子光譜。"
+  },
+  {
+   "code": "PKd-Ⅴa-8",
+   "text": "依照量子力學解釋，原子內之電子是以機率分布出現，沒有固定的古典軌道。"
+  },
+  {
+   "code": "PKe-Ⅴa-1",
+   "text": "質子和中子可組成結構穩定以及不穩定的原子核。"
+  },
+  {
+   "code": "PKe-Ⅴa-2",
+   "text": "不穩定的原子核會經由放射性衰變釋放能量或轉變為其他的原子核。"
+  },
+  {
+   "code": "PKe-Ⅴa-3",
+   "text": "基本交互作用遵循許多守恆律，例如：動量守恆、角動量守恆、質能守恆、電荷守恆。"
+  },
+  {
+   "code": "PMb-Ⅴa-1",
+   "text": "克卜勒定律和萬有引力定律的關係。"
+  },
+  {
+   "code": "PMb-Ⅴa-2",
+   "text": "伽利略的慣性原理和牛頓運動定律的關係。"
+  },
+  {
+   "code": "PMc-Ⅴa-1",
+   "text": "以物理原理解釋自然現象，例如：光的各種現象、天體運動、各種力的作用。"
+  },
+  {
+   "code": "PMc-Ⅴa-2",
+   "text": "電路、電磁波、透鏡、核能、光電效應的應用。"
+  },
+  {
+   "code": "CMb-Ⅴa-1",
+   "text": "化學發展史上的重要事件、相關理論發展及科學家的研究事蹟。"
+  },
+  {
+   "code": "ENb-Ⅴc-3",
+   "text": "過去主導地球長期的自然氣候變化的原理並無法完全用來解釋近幾十年來快速的氣候變遷情形。根據目前科學證據了解人類活動是主要因素。"
+  },
+  {
+   "code": "CMc-Ⅴc-3",
+   "text": "化學在先進科技發展的應用。"
+  },
+  {
+   "code": "CJa-Ⅴa-2",
+   "text": "化學反應與化學程序的產率。"
+  },
+  {
+   "code": "EEd-Ⅴc-3",
+   "text": "天文觀測可在不同的電磁波段進行。"
+  },
+  {
+   "code": "EIb-Ⅴc-1",
+   "text": "一定氣壓下，氣溫越高，空氣所能容納的水氣含量越高。"
+  },
+  {
+   "code": "CEc-Ⅴa-3",
+   "text": "理想氣體三大定律與理想氣體方程式。"
+  },
+  {
+   "code": "EMd-Ⅴc-3",
+   "text": "侵臺颱風的路徑主要受太平洋高壓所引導，不同路徑對臺灣各地的風雨影響不同。"
+  },
+  {
+   "code": "CMa-Ⅴc-1",
+   "text": "化學製造流程對日常生活、社會、經濟、環境及生態的影響。"
+  },
+  {
+   "code": "CMa-Ⅴa-2",
+   "text": "化學化工技術與社會、法律及倫理相關議題。"
+  },
+  {
+   "code": "ENb-Ⅴc-2",
+   "text": "冰期與間冰期的氣溫變化及海平面的升降，對全球生物與自然環境會造成影響。"
+  },
+  {
+   "code": "CMb-Ⅴa-3",
+   "text": "科學模型的特性與演變。"
+  },
+  {
+   "code": "EIb-Ⅴc-2",
+   "text": "當水氣達到飽和時，多餘的水氣會凝結或凝固。"
+  },
+  {
+   "code": "CMa-Ⅴa-1",
+   "text": "從化學的主要發展方向和產業成果，建立綠色化學與永續發展的概念，並積極參與科學知識的傳播，促進化學知識進入個人和社會生活。"
+  },
+  {
+   "code": "ENb-Ⅴc-4",
+   "text": "因應氣候變遷的調適有許多面向與方法。"
+  },
+  {
+   "code": "CMc-Ⅴc-1",
+   "text": "水的處理過程。"
+  },
+  {
+   "code": "CNa-Ⅴa-3",
+   "text": "廢棄物的創新利用與再製作。"
+  },
+  {
+   "code": "ENa-Ⅴc-2",
+   "text": "節用資源與合理開發，可以降低人類對地球環境的影響，以利永續發展。"
+  },
+  {
+   "code": "CMe-Ⅴc-2",
+   "text": "全球暖化的成因、影響及因應方法。"
+  },
+  {
+   "code": "CNa-Ⅴa-2",
+   "text": "資源保育的有效方法。"
+  },
+  {
+   "code": "ENa-Ⅴc-3",
+   "text": "認識地球環境有助於經濟、生態、文化及政策四個面向的永續發展。"
+  },
+  {
+   "code": "CNa-Ⅴc-1",
+   "text": "永續發展在於滿足當代人之需求，又不危及下一代之發展。"
+  },
+  {
+   "code": "CNa-Ⅴc-2",
+   "text": "人類活動與其他生物的活動會相互影響，不當引進外來物種可能造成經濟損失和生態破壞。"
+  },
+  {
+   "code": "EIb-Ⅴc-6",
+   "text": "季節的變化與人類生活的關係。"
+  },
+  {
+   "code": "CNc-Ⅴc-1",
+   "text": "自然環境中有許多資源。人類生存與生活需依賴自然環境中的各種資源，但自然資源都是有限的，需要珍惜使用。"
+  },
+  {
+   "code": "EIb-Ⅴc-7",
+   "text": "不同的環境有不同的生物生存。"
+  }
+ ]
+}
+</canonical-source>
+
+<canonical-source path="exam_packs/會考/curriculum/英語.json">
+{
+ "subject": "英語",
+ "stage": "第四學習階段（國民中學 7-9 年級）",
+ "source": {
+  "publisher": "國家教育研究院（教育部發布之十二年國民基本教育課程綱要）",
+  "url": "https://www.naer.edu.tw/upload/1/16/doc/812/十二年國民基本教育課程綱要國民中小學暨普通型高級中等學校語文領域─英語文.odt",
+  "retrieved_at": "2026-11-14",
+  "sha256": "f1f052187d85a16ba38e4c72330746275009c5025ec9e678f1456918f4aed4af"
+ },
+ "note": "Codes use ASCII 'IV' (the curriculum prints 'Ⅳ'); validate_cap_form.py accepts either. content = 學習內容 (what items assess); performance = 學習表現. senior_high = 第五學習階段（高中）學習內容: concepts a 國中 item must not require.",
+ "content": [
+  {
+   "code": "Aa-IV-1",
+   "official_code": "Aa-Ⅳ-1",
+   "text": "連續體大小寫字母的辨識及書寫。"
+  },
+  {
+   "code": "Ab-IV-1",
+   "official_code": "Ab-Ⅳ-1",
+   "text": "句子的發音、重音及語調。"
+  },
+  {
+   "code": "Ab-IV-3",
+   "official_code": "Ab-Ⅳ-3",
+   "text": "字母拼讀規則（含字母拼讀的精熟能力、字彙拼寫的輔助）。"
+  },
+  {
+   "code": "Ac-IV-1",
+   "official_code": "Ac-Ⅳ-1",
+   "text": "簡易的英文標示。"
+  },
+  {
+   "code": "Ac-IV-2",
+   "official_code": "Ac-Ⅳ-2",
+   "text": "常見的教室用語。"
+  },
+  {
+   "code": "Ac-IV-3",
+   "official_code": "Ac-Ⅳ-3",
+   "text": "常見的生活用語。"
+  },
+  {
+   "code": "Ac-IV-4",
+   "official_code": "Ac-Ⅳ-4",
+   "text": "國中階段所學字詞（能聽、讀、說、寫最基本的1,200字詞）。"
+  },
+  {
+   "code": "Ad-IV-1",
+   "official_code": "Ad-Ⅳ-1",
+   "text": "國中階段所學的文法句型。"
+  },
+  {
+   "code": "Ae-IV-1",
+   "official_code": "Ae-Ⅳ-1",
+   "text": "簡易歌謠、韻文、短文、故事及短劇。"
+  },
+  {
+   "code": "Ae-IV-2",
+   "official_code": "Ae-Ⅳ-2",
+   "text": "常見的圖表。"
+  },
+  {
+   "code": "Ae-IV-4",
+   "official_code": "Ae-Ⅳ-4",
+   "text": "簡易賀卡、書信、電子郵件。"
+  },
+  {
+   "code": "Ae-IV-5",
+   "official_code": "Ae-Ⅳ-5",
+   "text": "不同體裁、不同主題之簡易文章。"
+  },
+  {
+   "code": "Ae-IV-6",
+   "official_code": "Ae-Ⅳ-6",
+   "text": "簡易故事的背景、人物、事件和結局。"
+  },
+  {
+   "code": "Ae-IV-8",
+   "official_code": "Ae-Ⅳ-8",
+   "text": "簡易故事及短文的大意。"
+  },
+  {
+   "code": "B-IV-1",
+   "official_code": "B-Ⅳ-1",
+   "text": "自己、家人及朋友的簡易描述。"
+  },
+  {
+   "code": "B-IV-2",
+   "official_code": "B-Ⅳ-2",
+   "text": "國中階段所學字詞及句型的生活溝通。"
+  },
+  {
+   "code": "B-IV-3",
+   "official_code": "B-Ⅳ-3",
+   "text": "語言與非語言的溝通策略（如請求重述、手勢、表情等）。"
+  },
+  {
+   "code": "B-IV-4",
+   "official_code": "B-Ⅳ-4",
+   "text": "個人的需求、意願和感受的表達。"
+  },
+  {
+   "code": "B-IV-5",
+   "official_code": "B-Ⅳ-5",
+   "text": "人、事、時、地、物的描述及問答。"
+  },
+  {
+   "code": "B-IV-6",
+   "official_code": "B-Ⅳ-6",
+   "text": "圖片描述。"
+  },
+  {
+   "code": "B-IV-7",
+   "official_code": "B-Ⅳ-7",
+   "text": "角色扮演。"
+  },
+  {
+   "code": "C-IV-1",
+   "official_code": "C-Ⅳ-1",
+   "text": "國內外節慶習俗。"
+  },
+  {
+   "code": "C-IV-2",
+   "official_code": "C-Ⅳ-2",
+   "text": "國內外風土民情。"
+  },
+  {
+   "code": "C-IV-3",
+   "official_code": "C-Ⅳ-3",
+   "text": "文化習俗的了解及尊重。"
+  },
+  {
+   "code": "C-IV-4",
+   "official_code": "C-Ⅳ-4",
+   "text": "基本的世界觀。"
+  },
+  {
+   "code": "C-IV-5",
+   "official_code": "C-Ⅳ-5",
+   "text": "國際生活禮儀。"
+  },
+  {
+   "code": "D-IV-1",
+   "official_code": "D-Ⅳ-1",
+   "text": "依綜合資訊作合理猜測。"
+  },
+  {
+   "code": "D-IV-2",
+   "official_code": "D-Ⅳ-2",
+   "text": "二至三項訊息的比較、歸類、排序的方法。"
+  },
+  {
+   "code": "D-IV-3",
+   "official_code": "D-Ⅳ-3",
+   "text": "訊息因果關係的釐清。"
+  }
+ ],
+ "performance": [
+  {
+   "code": "1-IV-1",
+   "text": "能聽懂課堂中所學的字詞。"
+  },
+  {
+   "code": "1-IV-2",
+   "text": "能聽懂常用的教室用語及日常生活用語。"
+  },
+  {
+   "code": "1-IV-3",
+   "text": "能聽懂基本或重要句型的句子。"
+  },
+  {
+   "code": "1-IV-4",
+   "text": "能聽懂日常生活對話的主要內容。"
+  },
+  {
+   "code": "1-IV-5",
+   "text": "能聽懂簡易歌謠和韻文的主要內容。"
+  },
+  {
+   "code": "1-IV-6",
+   "text": "能聽懂簡易故事及短劇的主要內容。"
+  },
+  {
+   "code": "1-IV-7",
+   "text": "能辨識簡短說明或敘述的情境及主旨。"
+  },
+  {
+   "code": "1-IV-8",
+   "text": "能聽懂簡易影片的主要內容。"
+  },
+  {
+   "code": "2-IV-1",
+   "text": "能說出課堂中所學的字詞。"
+  },
+  {
+   "code": "2-IV-2",
+   "text": "能依情境使用日常生活用語。"
+  },
+  {
+   "code": "2-IV-3",
+   "text": "能依情境使用教室用語。"
+  },
+  {
+   "code": "2-IV-4",
+   "text": "能以簡易的英語描述自己、家人及朋友。"
+  },
+  {
+   "code": "2-IV-5",
+   "text": "能以簡易的英語表達個人的需求、意願和感受。"
+  },
+  {
+   "code": "2-IV-6",
+   "text": "能依人、事、時、地、物作簡易的描述或回答。"
+  },
+  {
+   "code": "2-IV-7",
+   "text": "能依人、事、時、地、物作簡易的提問。"
+  },
+  {
+   "code": "2-IV-8",
+   "text": "能以正確的發音、適切的重音及語調說出基本或重要句型的句子。"
+  },
+  {
+   "code": "2-IV-9",
+   "text": "能進行簡易的角色扮演。"
+  },
+  {
+   "code": "2-IV-10",
+   "text": "能以簡易的英語描述圖片。"
+  },
+  {
+   "code": "2-IV-12",
+   "text": "能以簡易的英語參與引導式討論。"
+  },
+  {
+   "code": "2-IV-13",
+   "text": "能依主題或情境以簡易英語進行日常生活溝通。"
+  },
+  {
+   "code": "2-IV-14",
+   "text": "能以簡易的英語介紹國內外風土民情。"
+  },
+  {
+   "code": "3-IV-1",
+   "text": "能辨識連續書寫體大小寫字母。"
+  },
+  {
+   "code": "3-IV-2",
+   "text": "能辨識課堂中所學的字詞。"
+  },
+  {
+   "code": "3-IV-3",
+   "text": "能看懂簡易的英文標示。"
+  },
+  {
+   "code": "3-IV-4",
+   "text": "能看懂簡易的圖表。"
+  },
+  {
+   "code": "3-IV-5",
+   "text": "能看懂簡易的生活用語。"
+  },
+  {
+   "code": "3-IV-6",
+   "text": "能看懂基本的句型。"
+  },
+  {
+   "code": "3-IV-7",
+   "text": "能了解對話的主要內容。"
+  },
+  {
+   "code": "3-IV-8",
+   "text": "能了解短文、簡訊、書信的主要內容。"
+  },
+  {
+   "code": "3-IV-9",
+   "text": "能了解故事的主要內容與情節。"
+  },
+  {
+   "code": "3-IV-10",
+   "text": "能辨識簡易故事的要素，如背景、人物、事件和結局。"
+  },
+  {
+   "code": "3-IV-11",
+   "text": "能藉圖畫、標題、書名等作合理的猜測。"
+  },
+  {
+   "code": "3-IV-12",
+   "text": "能熟悉重要的閱讀技巧，如擷取大意、猜測字義、推敲文意、預測後續文意及情節發展等。"
+  },
+  {
+   "code": "3-IV-13",
+   "text": "能了解短劇的主要內容與情節。"
+  },
+  {
+   "code": "3-IV-14",
+   "text": "能快速閱讀了解文章重點，並有效應用於廣泛閱讀中。"
+  },
+  {
+   "code": "3-IV-16",
+   "text": "能閱讀不同體裁、不同主題的簡易文章。"
+  },
+  {
+   "code": "4-IV-1",
+   "text": "能拼寫國中階段基本常用字詞。"
+  },
+  {
+   "code": "4-IV-2",
+   "text": "能依圖畫、圖示書寫英文句子。"
+  },
+  {
+   "code": "4-IV-3",
+   "text": "能掌握正確書寫格式寫出英文句子。"
+  },
+  {
+   "code": "4-IV-4",
+   "text": "能依提示填寫簡單的表格。"
+  },
+  {
+   "code": "4-IV-5",
+   "text": "能依提示寫出正確達意的簡單句子。"
+  },
+  {
+   "code": "4-IV-6",
+   "text": "能將簡易的中文句子譯成英文。"
+  },
+  {
+   "code": "4-IV-7",
+   "text": "能寫簡單的賀卡、簡訊、書信、電子郵件等。"
+  },
+  {
+   "code": "4-IV-8",
+   "text": "能依提示書寫簡短的段落。"
+  },
+  {
+   "code": "5-IV-1",
+   "text": "能聽懂、讀懂國中階段基本字詞，並使用於簡易日常溝通。"
+  },
+  {
+   "code": "5-IV-2",
+   "text": "能掌握國中階段所學字詞及句型，適當地使用於日常生活之溝通。"
+  },
+  {
+   "code": "5-IV-3",
+   "text": "能聽懂日常生活應對中常用語句，並能作適當的回應。"
+  },
+  {
+   "code": "5-IV-4",
+   "text": "能以正確的發音及適切的語調及速度朗讀短文及短劇。"
+  },
+  {
+   "code": "5-IV-5",
+   "text": "能運用字母拼讀規則讀出及拼寫英文字詞。"
+  },
+  {
+   "code": "5-IV-6",
+   "text": "能轉述所聽到的簡短談話。"
+  },
+  {
+   "code": "5-IV-7",
+   "text": "能聽懂日常生活對話，並能以簡單的字詞、句子記下要點。"
+  },
+  {
+   "code": "5-IV-8",
+   "text": "能聽懂簡易故事，並能以簡單的字詞、句子記下要點。"
+  },
+  {
+   "code": "5-IV-9",
+   "text": "能聽懂簡易廣播，並能以簡單的字詞、句子記下要點。"
+  },
+  {
+   "code": "5-IV-10",
+   "text": "能讀懂簡易故事及短文，並能以簡短的句子說出或寫出其內容大意。"
+  },
+  {
+   "code": "5-IV-11",
+   "text": "能看懂並能填寫簡單的表格及資料等。"
+  },
+  {
+   "code": "5-IV-12",
+   "text": "能看懂日常溝通中簡易的書信、簡訊、留言、賀卡、邀請卡等，並能以口語或書面作簡短的回應。"
+  },
+  {
+   "code": "6-IV-1",
+   "text": "樂於參與課堂中各類練習活動，不畏犯錯。"
+  },
+  {
+   "code": "6-IV-2",
+   "text": "主動預習、複習並將學習內容作基本的整理歸納。"
+  },
+  {
+   "code": "6-IV-3",
+   "text": "樂於參與有助提升英語能力的活動（如英語營、歌唱、朗讀、演講、段落寫作、讀者劇場等活動）。"
+  },
+  {
+   "code": "6-IV-4",
+   "text": "樂於接觸課外的英語文多元素材，如歌曲、英語學習雜誌、漫畫、短片、廣播、網路等。"
+  },
+  {
+   "code": "6-IV-5",
+   "text": "主動利用各種查詢工具，以了解所接觸的英語文資訊。"
+  },
+  {
+   "code": "6-IV-6",
+   "text": "主動從網路或其他課外材料，搜尋相關英語文資源，並與教師及同學分享。"
+  },
+  {
+   "code": "7-IV-1",
+   "text": "能使用英文字典，配合上下文找出適當的字義。"
+  },
+  {
+   "code": "7-IV-2",
+   "text": "善用相關主題之背景知識，以利閱讀或聽力理解。"
+  },
+  {
+   "code": "7-IV-3",
+   "text": "利用語言及非語言溝通策略（如請求重述、手勢、表情等）提升溝通效能。"
+  },
+  {
+   "code": "7-IV-4",
+   "text": "能對教師或同學討論的內容觸類旁通、舉一反三。"
+  },
+  {
+   "code": "7-IV-5",
+   "text": "能訂定英文學習計畫，檢視自我學習過程，並隨時改進。"
+  },
+  {
+   "code": "8-IV-1",
+   "text": "能以簡易英語介紹國內主要節慶習俗。"
+  },
+  {
+   "code": "8-IV-2",
+   "text": "能以簡易英語介紹國外主要節慶習俗。"
+  },
+  {
+   "code": "8-IV-3",
+   "text": "能了解國內外風土民情及主要節慶習俗，並加以比較。"
+  },
+  {
+   "code": "8-IV-4",
+   "text": "能了解、尊重不同之文化習俗。"
+  },
+  {
+   "code": "8-IV-5",
+   "text": "能具有基本的世界觀。"
+  },
+  {
+   "code": "8-IV-6",
+   "text": "能了解並遵循基本的國際生活禮儀。"
+  },
+  {
+   "code": "9-IV-1",
+   "text": "能綜合相關資訊作合理的猜測。"
+  },
+  {
+   "code": "9-IV-2",
+   "text": "能把二至三項訊息加以比較、歸類、排序。"
+  },
+  {
+   "code": "9-IV-3",
+   "text": "能根據上下文語境釐清不同訊息間的因果關係。"
+  },
+  {
+   "code": "9-IV-4",
+   "text": "能依上下文所提供的文字線索（如in my opinion、maybe）分辨客觀事實與主觀意見。"
+  }
+ ],
+ "senior_high": [
+  {
+   "code": "Ab-Ⅴ-1",
+   "text": "句子語調所表達的情緒和態度。"
+  },
+  {
+   "code": "Ab-Ⅴ-2",
+   "text": "歌謠、韻文的節奏與音韻。"
+  },
+  {
+   "code": "Ab-Ⅴ-3",
+   "text": "不同腔調/語言背景英語使用者的談話。"
+  },
+  {
+   "code": "Ac-Ⅴ-1",
+   "text": "常見的英文標示。"
+  },
+  {
+   "code": "Ac-Ⅴ-2",
+   "text": "生活用語。"
+  },
+  {
+   "code": "Ac-Ⅴ-3",
+   "text": "高中階段所學字詞（字頻最高的4,500字詞）。"
+  },
+  {
+   "code": "Ad-Ⅴ-1",
+   "text": "高中階段所學的結構。"
+  },
+  {
+   "code": "Ae-Ⅴ-1",
+   "text": "歌曲、短詩、短文、短劇、故事。"
+  },
+  {
+   "code": "Ae-Ⅴ-2",
+   "text": "常見的圖表。"
+  },
+  {
+   "code": "Ae-Ⅴ-3",
+   "text": "公共場所廣播（如捷運、車站、機場廣播）。"
+  },
+  {
+   "code": "Ae-Ⅴ-4",
+   "text": "賀卡、便條、書信、電子郵件、邀請卡。"
+  },
+  {
+   "code": "Ae-Ⅴ-5",
+   "text": "教學廣播節目的內容。"
+  },
+  {
+   "code": "Ae-Ⅴ-6",
+   "text": "學習雜誌、漫畫。"
+  },
+  {
+   "code": "Ae-Ⅴ-7",
+   "text": "新聞報導。"
+  },
+  {
+   "code": "Ae-Ⅴ-8",
+   "text": "工具書（如百科全書）或其他線上資源。"
+  },
+  {
+   "code": "Ae-Ⅴ-9",
+   "text": "不同體裁、不同主題之文章。"
+  },
+  {
+   "code": "Ae-Ⅴ-10",
+   "text": "故事及短劇的內容與情節。"
+  },
+  {
+   "code": "Ae-Ⅴ-11",
+   "text": "故事的背景、人物、事件和結局。"
+  },
+  {
+   "code": "Ae-Ⅴ-12",
+   "text": "敘述者的觀點、態度、及寫作目的。"
+  },
+  {
+   "code": "B-Ⅴ-1",
+   "text": "自己、家人及朋友的主題式或情境式介紹及描述。"
+  },
+  {
+   "code": "B-Ⅴ-2",
+   "text": "高中階段所學字詞及句型的生活溝通。"
+  },
+  {
+   "code": "B-Ⅴ-3",
+   "text": "語言與非語言的溝通策略（如請求重述、委婉語、迂迴解說、手勢、表情等）。"
+  },
+  {
+   "code": "B-Ⅴ-4",
+   "text": "圖片描述。"
+  },
+  {
+   "code": "B-Ⅴ-5",
+   "text": "短劇表演。"
+  },
+  {
+   "code": "B-Ⅴ-6",
+   "text": "引導式討論。"
+  },
+  {
+   "code": "B-Ⅴ-7",
+   "text": "符合情境或場景的自我表達與人際溝通。"
+  },
+  {
+   "code": "B-Ⅴ-8",
+   "text": "短文、書信的內容及文本結構。"
+  },
+  {
+   "code": "B-Ⅴ-9",
+   "text": "有情節發展及細節描述的故事或個人經驗。"
+  },
+  {
+   "code": "B-Ⅴ-10",
+   "text": "一段談話或簡短故事的轉述。"
+  },
+  {
+   "code": "B-Ⅴ-11",
+   "text": "日常對話、故事、廣播的要點。"
+  },
+  {
+   "code": "B-Ⅴ-12",
+   "text": "故事及短文的主旨或大意。"
+  },
+  {
+   "code": "B-Ⅴ-13",
+   "text": "談話或短文的摘要。"
+  },
+  {
+   "code": "B-Ⅴ-14",
+   "text": "不同體裁、不同主題文章之賞析心得。"
+  },
+  {
+   "code": "B-Ⅴ-15",
+   "text": "歌謠、韻文音韻之賞析心得。"
+  },
+  {
+   "code": "B-Ⅴ-16",
+   "text": "字詞的特色、各類文學作品之賞析心得。"
+  },
+  {
+   "code": "C-Ⅴ-1",
+   "text": "多元文化觀點、不同文化及習俗的尊重。"
+  },
+  {
+   "code": "C-Ⅴ-2",
+   "text": "國際社會的基本生活禮儀。"
+  },
+  {
+   "code": "C-Ⅴ-3",
+   "text": "國際情勢、國際視野。"
+  },
+  {
+   "code": "C-Ⅴ-4",
+   "text": "國際議題（如全球暖化、人工智慧、氣候變遷等）。"
+  },
+  {
+   "code": "C-Ⅴ-5",
+   "text": "地球村觀點、生命及全球永續發展的關注。"
+  },
+  {
+   "code": "C-Ⅴ-6",
+   "text": "文化知識與語言能力、生活問題解決之道。"
+  },
+  {
+   "code": "C-Ⅴ-7",
+   "text": "多元文化、文化差異。"
+  },
+  {
+   "code": "C-Ⅴ-8",
+   "text": "文化涵養與國際觀。"
+  },
+  {
+   "code": "C-Ⅴ-9",
+   "text": "文化素養及社會上的多元文化觀點。"
+  },
+  {
+   "code": "D-Ⅴ-1",
+   "text": "多項訊息的比較、歸類、排序。"
+  },
+  {
+   "code": "D-Ⅴ-2",
+   "text": "兩個訊息關係的釐清。"
+  },
+  {
+   "code": "D-Ⅴ-3",
+   "text": "藉文字線索，對客觀事實及主觀意見的分辨。"
+  },
+  {
+   "code": "D-Ⅴ-4",
+   "text": "多項訊息共通點或結論的分析及歸納。"
+  },
+  {
+   "code": "D-Ⅴ-5",
+   "text": "原則的類推、問題解決之道。"
+  },
+  {
+   "code": "D-Ⅴ-6",
+   "text": "依於訊息的整合，對情勢發展的預測。"
+  },
+  {
+   "code": "D-Ⅴ-7",
+   "text": "不同資訊的評估，及合理判斷或建議的提供。"
+  },
+  {
+   "code": "D-Ⅴ-8",
+   "text": "資訊的評估，及任務的規劃與完成。"
+  }
+ ]
+}
+</canonical-source>
+
 <canonical-source path="exam_packs/會考/manifest.json">
 {
   "id": "cap",
@@ -57196,6 +64112,18 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
   "official_baseline": "official-baseline.json",
   "status": "ready"
 }
+</canonical-source>
+
+<canonical-source path="exam_packs/會考/maps/east-asia-countries.json">
+{"name":"east-asia-countries","source":{"title":"Natural Earth 1:50m Admin 0 – Countries","publisher":"Natural Earth","url":"https://www.naturalearthdata.com/","license":"Public domain","retrieved_at":"2026-11-14"},"note":"簡化後的國界輪廓，只供示意圖；國界依 Natural Earth 的 de facto 劃法","countries":[{"code":"VNM","name":"越南","name_en":"Vietnam","rings":[[[104.06,10.39],[104.02,10.03],[103.85,10.37],[104.06,10.39]],[[107.97,21.51],[107.41,21.28],[107.35,21.06],[107.16,20.95],[106.68,21.0],[106.75,20.74],[106.55,20.53],[106.52,20.29],[105.98,19.94],[105.62,18.97],[105.89,18.5],[106.5,17.95],[106.48,17.72],[106.37,17.75],[107.83,16.32],[108.03,16.33],[108.82,15.38],[109.3,13.86],[109.27,13.28],[109.42,12.96],[109.44,12.6],[109.34,12.75],[109.22,12.65],[109.3,12.39],[109.21,12.42],[109.26,11.95],[109.2,12.0],[109.2,11.72],[109.04,11.59],[108.99,11.34],[108.09,10.9],[108.0,10.72],[107.26,10.4],[107.01,10.66],[106.95,10.4],[106.73,10.54],[106.61,10.46],[106.74,10.44],[106.76,10.3],[106.46,10.3],[106.79,10.12],[106.6,9.86],[106.14,10.22],[106.57,9.64],[106.38,9.56],[105.83,10.0],[106.16,9.59],[106.17,9.4],[105.5,9.09],[105.11,8.63],[104.77,8.6],[104.9,8.75],[104.82,8.8],[104.85,9.61],[104.9,9.82],[105.09,9.95],[104.8,10.2],[104.66,10.17],[104.43,10.41],[104.56,10.52],[104.85,10.53],[105.05,10.7],[105.05,10.91],[105.31,10.85],[105.41,10.95],[105.76,10.99],[105.85,10.86],[106.16,10.79],[106.16,11.04],[105.86,11.29],[105.85,11.64],[106.01,11.76],[106.4,11.69],[106.41,11.95],[106.7,11.98],[107.21,12.3],[107.39,12.26],[107.51,12.36],[107.48,13.03],[107.61,13.44],[107.33,14.13],[107.54,14.65],[107.48,14.98],[107.65,15.26],[107.17,15.8],[107.39,15.95],[107.4,16.04],[106.93,16.35],[106.85,16.52],[106.66,16.49],[106.5,16.95],[105.69,17.74],[105.46,18.15],[105.11,18.41],[105.15,18.65],[104.72,18.8],[103.89,19.3],[104.06,19.48],[104.03,19.68],[104.59,19.62],[104.93,20.02],[104.85,20.2],[104.7,20.21],[104.62,20.37],[104.37,20.44],[104.58,20.65],[104.1,20.95],[103.64,20.7],[103.1,20.89],[102.85,21.27],[102.95,21.68],[102.82,21.81],[102.66,21.68],[102.58,21.9],[102.13,22.38],[102.47,22.75],[102.98,22.45],[103.33,22.77],[103.49,22.59],[103.62,22.78],[103.94,22.54],[104.14,22.8],[104.37,22.7],[104.69,22.82],[104.86,23.14],[105.28,23.35],[105.84,22.92],[106.15,22.97],[106.28,22.86],[106.54,22.91],[106.78,22.78],[106.55,22.5],[106.66,21.98],[106.97,21.92],[107.35,21.61],[107.76,21.66],[107.97,21.51]],[[107.6,21.22],[107.4,21.09],[107.48,21.27],[107.6,21.22]],[[107.52,20.93],[107.4,20.9],[107.55,21.03],[107.52,20.93]],[[107.03,20.75],[106.91,20.82],[107.04,20.84],[107.03,20.75]]]},{"code":"TLS","name":"東帝汶","name_en":"Timor-Leste","rings":[[[125.65,-8.14],[125.58,-8.31],[125.51,-8.28],[125.65,-8.14]],[[125.07,-9.51],[124.96,-9.21],[125.1,-9.19],[125.15,-9.04],[124.94,-9.05],[124.92,-8.94],[125.18,-8.65],[125.8,-8.49],[126.62,-8.46],[126.97,-8.32],[127.3,-8.42],[126.92,-8.72],[125.41,-9.28],[125.07,-9.51]],[[124.04,-9.34],[124.44,-9.19],[124.28,-9.43],[124.04,-9.34]]]},{"code":"THA","name":"泰國","name_en":"Thailand","rings":[[[102.61,11.68],[102.59,11.57],[102.53,11.61],[102.61,11.68]],[[102.43,11.99],[102.3,11.98],[102.28,12.15],[102.43,11.99]],[[98.41,7.9],[98.3,7.78],[98.32,8.17],[98.43,8.09],[98.41,7.9]],[[100.12,20.32],[100.14,20.25],[100.32,20.39],[100.52,20.18],[100.4,19.76],[100.51,19.55],[100.74,19.51],[100.97,19.61],[101.21,19.55],[101.29,18.98],[101.05,18.44],[101.14,18.14],[100.96,17.54],[101.17,17.5],[102.1,18.21],[102.66,17.82],[103.05,18.03],[103.29,18.41],[103.95,18.32],[104.82,17.3],[104.74,16.88],[104.82,16.47],[105.05,16.16],[105.41,15.99],[105.4,15.83],[105.64,15.66],[105.49,15.26],[105.55,14.93],[105.48,14.53],[105.07,14.23],[104.78,14.43],[103.98,14.36],[103.6,14.42],[103.2,14.33],[102.91,14.14],[102.55,13.59],[102.32,13.54],[102.5,12.67],[102.76,12.43],[102.74,12.09],[102.93,11.71],[102.59,12.2],[102.54,12.11],[101.84,12.64],[100.9,12.65],[100.96,13.43],[100.6,13.57],[100.02,13.35],[100.09,13.05],[99.96,12.69],[99.99,12.17],[99.63,11.46],[99.49,10.89],[99.17,10.32],[99.16,9.73],[99.29,9.41],[99.25,9.27],[99.84,9.29],[99.99,8.59],[100.13,8.43],[100.16,8.51],[100.28,8.27],[100.55,7.23],[100.44,7.28],[100.38,7.54],[100.28,7.55],[100.26,7.77],[100.16,7.73],[100.16,7.6],[100.42,7.19],[100.59,7.18],[101.02,6.86],[101.5,6.87],[102.1,6.24],[101.87,5.83],[101.68,5.78],[101.56,5.91],[101.11,5.64],[100.98,5.77],[101.08,5.96],[101.05,6.24],[100.87,6.25],[100.75,6.46],[100.35,6.55],[100.26,6.68],[100.18,6.67],[100.12,6.44],[99.7,6.88],[99.72,7.11],[99.55,7.22],[99.6,7.36],[99.36,7.37],[99.26,7.62],[99.08,7.72],[99.05,7.89],[98.79,8.06],[98.7,8.26],[98.58,8.34],[98.36,8.19],[98.24,8.42],[98.24,8.77],[98.75,10.35],[98.76,10.66],[99.19,11.11],[99.61,11.78],[99.41,12.55],[99.22,12.74],[99.12,13.03],[99.14,13.72],[98.93,14.05],[98.57,14.36],[98.2,14.98],[98.19,15.2],[98.56,15.37],[98.59,16.05],[98.82,16.18],[98.89,16.35],[98.84,16.42],[98.66,16.33],[98.44,16.98],[97.71,17.8],[97.63,18.29],[97.45,18.36],[97.37,18.52],[97.75,18.59],[97.71,18.93],[97.82,19.46],[98.02,19.75],[98.37,19.69],[98.92,19.77],[99.07,20.1],[99.49,20.15],[99.46,20.36],[99.72,20.33],[99.89,20.42],[100.12,20.32]],[[100.07,9.59],[99.96,9.42],[99.94,9.56],[100.07,9.59]]]},{"code":"TJK","name":"塔吉克","name_en":"Tajikistan","rings":[[[67.76,37.17],[67.81,37.49],[68.29,38.03],[68.35,38.21],[68.09,38.47],[68.13,38.93],[67.69,38.99],[67.65,39.13],[67.36,39.22],[67.43,39.47],[67.72,39.62],[68.46,39.54],[68.64,39.84],[68.87,39.91],[68.8,40.05],[68.97,40.09],[68.63,40.17],[69.27,40.2],[69.21,40.57],[69.36,40.77],[69.71,40.66],[70.29,40.89],[70.4,41.04],[70.75,40.72],[70.37,40.38],[70.6,40.21],[70.95,40.19],[70.52,39.95],[70.45,40.05],[69.97,40.2],[69.53,40.1],[69.48,39.92],[69.28,39.92],[69.3,39.52],[70.5,39.59],[70.8,39.39],[71.47,39.6],[71.5,39.48],[71.73,39.42],[71.78,39.28],[72.04,39.35],[72.23,39.21],[72.56,39.38],[73.63,39.45],[73.61,39.23],[73.81,38.97],[73.7,38.85],[73.8,38.61],[74.03,38.54],[74.13,38.66],[74.28,38.66],[74.81,38.46],[74.78,38.19],[74.94,37.77],[74.89,37.6],[75.12,37.39],[74.89,37.23],[74.66,37.39],[74.35,37.42],[73.75,37.23],[73.63,37.26],[73.72,37.42],[73.38,37.46],[72.9,37.27],[72.66,37.03],[71.67,36.7],[71.43,37.13],[71.58,37.91],[71.28,37.92],[71.33,38.17],[71.26,38.31],[70.88,38.46],[70.62,38.33],[70.21,37.92],[70.19,37.58],[69.49,37.55],[69.41,37.21],[69.3,37.12],[68.91,37.33],[68.07,36.95],[67.76,37.17]],[[70.7,39.83],[70.56,39.79],[70.48,39.88],[70.7,39.83]]]},{"code":"TWN","name":"中華民國","name_en":"Taiwan","rings":[[[121.01,22.62],[120.84,21.93],[120.74,21.96],[120.58,22.36],[120.32,22.55],[120.08,23.09],[120.13,23.65],[121.04,25.03],[121.59,25.28],[121.93,24.97],[121.82,24.82],[121.83,24.53],[121.4,23.17],[121.01,22.62]],[[118.41,24.52],[118.43,24.41],[118.3,24.44],[118.41,24.52]]]},{"code":"KOR","name":"大韓民國","name_en":"South Korea","rings":[[[126.63,37.78],[126.67,37.92],[127.09,38.28],[128.04,38.31],[128.37,38.62],[129.42,37.06],[129.4,36.05],[129.57,36.05],[129.56,35.95],[129.21,35.18],[128.51,35.1],[128.42,35.02],[128.44,34.87],[128.09,34.93],[128.04,35.02],[127.71,34.95],[127.64,34.89],[127.72,34.72],[127.4,34.82],[127.48,34.63],[127.32,34.46],[127.17,34.55],[127.25,34.76],[126.9,34.44],[126.75,34.51],[126.53,34.31],[126.48,34.49],[126.26,34.67],[126.52,34.7],[126.47,34.76],[126.59,34.82],[126.42,34.82],[126.29,35.15],[126.61,35.57],[126.49,35.65],[126.75,35.87],[126.54,36.17],[126.49,36.69],[126.18,36.69],[126.16,36.77],[126.49,37.01],[126.78,36.95],[126.87,36.82],[126.98,36.94],[126.75,37.19],[126.79,37.29],[126.56,37.72],[126.63,37.78]],[[128.74,34.8],[128.65,34.74],[128.49,34.87],[128.72,35.01],[128.74,34.8]],[[128.07,34.81],[128.05,34.71],[127.87,34.73],[127.83,34.87],[127.92,34.92],[128.07,34.81]],[[126.23,34.37],[126.12,34.44],[126.34,34.54],[126.23,34.37]],[[126.52,37.74],[126.46,37.61],[126.37,37.77],[126.52,37.74]],[[126.75,34.34],[126.69,34.31],[126.65,34.39],[126.75,34.34]],[[126.42,36.49],[126.34,36.47],[126.32,36.61],[126.42,36.49]],[[126.17,34.73],[126.01,34.87],[126.08,34.91],[126.17,34.73]],[[130.92,37.48],[130.81,37.51],[130.9,37.55],[130.92,37.48]],[[126.33,33.22],[126.17,33.31],[126.34,33.46],[126.9,33.52],[126.87,33.34],[126.33,33.22]]]},{"code":"SGP","name":"新加坡","name_en":"Singapore","rings":[[[103.97,1.33],[103.82,1.27],[103.65,1.33],[103.82,1.45],[103.97,1.33]]]},{"code":"RUS","name":"俄羅斯","name_en":"Russia","rings":[[[137.18,55.1],[137.06,54.93],[136.71,54.96],[137.18,55.1]],[[130.69,42.3],[130.53,42.54],[130.58,42.62],[130.42,42.73],[131.07,42.9],[131.26,43.38],[131.17,43.7],[131.26,44.07],[130.98,44.84],[131.45,44.98],[131.85,45.33],[132.94,45.03],[133.11,45.13],[133.19,45.49],[133.44,45.6],[133.51,45.88],[133.86,46.25],[133.87,46.5],[134.2,47.13],[134.17,47.3],[134.54,47.49],[134.75,47.72],[134.57,48.02],[134.67,48.25],[134.29,48.37],[133.47,48.1],[133.14,48.11],[132.71,47.95],[132.48,47.71],[130.96,47.71],[130.73,48.02],[130.8,48.34],[130.55,48.6],[130.62,48.77],[130.55,48.86],[130.2,48.89],[129.5,49.39],[129.07,49.37],[128.7,49.6],[128.0,49.57],[127.55,49.8],[127.49,49.98],[127.59,50.21],[127.34,50.35],[127.31,50.71],[126.92,51.1],[126.81,51.51],[126.34,52.36],[126.02,52.61],[126.05,52.74],[125.73,52.89],[125.65,53.04],[125.08,53.2],[124.81,53.13],[123.61,53.55],[122.34,53.49],[120.99,53.28],[120.09,52.79],[120.07,52.63],[120.66,52.57],[120.75,52.1],[120.68,51.97],[120.07,51.6],[119.16,50.41],[119.35,50.28],[119.26,50.07],[118.45,49.84],[117.87,49.51],[117.25,49.62],[116.22,50.01],[115.43,49.9],[114.74,50.23],[114.3,50.27],[113.57,50.01],[112.81,49.52],[111.34,49.36],[110.71,49.14],[109.24,49.33],[108.61,49.32],[107.97,49.65],[107.92,49.95],[107.23,49.99],[106.71,50.31],[106.22,50.3],[105.38,50.47],[104.08,50.15],[103.3,50.2],[102.29,50.59],[102.11,51.35],[101.38,51.45],[100.47,51.73],[99.92,51.76],[98.89,52.12],[98.64,51.8],[98.35,51.72],[98.22,51.51],[98.04,51.45],[97.84,51.05],[98.03,50.64],[98.28,50.53],[98.25,50.3],[98.0,50.01],[97.59,49.91],[97.36,49.74],[97.21,49.73],[96.99,49.88],[96.32,49.9],[96.07,50.0],[95.52,49.91],[94.61,50.02],[94.35,50.22],[94.25,50.56],[93.1,50.6],[92.94,50.78],[92.63,50.69],[92.35,50.86],[92.19,50.7],[91.8,50.69],[91.42,50.47],[90.05,50.09],[89.98,49.98],[89.64,49.9],[89.65,49.72],[89.24,49.63],[89.11,49.5],[88.19,49.45],[87.99,49.19],[87.42,49.08],[86.63,49.56],[86.73,49.7],[86.68,49.78],[86.18,49.5],[85.23,49.62],[85.0,49.89],[84.99,50.06],[84.32,50.24],[83.95,50.77],[83.36,50.99],[82.76,50.89],[82.49,50.73],[81.47,50.74],[81.39,50.96],[81.07,50.97],[81.13,51.19],[80.74,51.29],[80.45,51.18],[80.42,50.95],[79.99,50.77],[79.47,51.49],[77.86,53.27],[76.48,54.02],[76.42,54.15],[76.65,54.15],[76.84,54.44],[75.44,54.09],[75.22,53.89],[74.45,53.65],[74.35,53.49],[73.86,53.62],[73.41,53.45],[73.31,53.71],[73.68,53.93],[73.67,54.06],[73.23,53.96],[72.62,54.13],[72.59,54.0],[72.45,53.94],[72.19,54.33],[72.0,54.21],[71.09,54.21],[71.19,54.6],[70.74,55.31],[70.18,55.16],[69.49,55.36],[68.98,55.39],[68.21,55.16],[68.24,55.05],[68.16,54.98],[65.48,54.62],[65.09,54.34],[64.46,54.38],[61.93,53.95],[61.23,54.02],[60.98,53.62],[61.53,53.52],[61.23,53.45],[61.2,53.29],[61.66,53.23],[62.08,53.01],[61.05,52.97],[60.77,52.68],[60.99,52.34],[60.03,51.93],[60.39,51.77],[60.46,51.65],[61.55,51.32],[61.59,51.23],[61.39,50.86],[60.94,50.7],[60.42,50.68],[60.06,50.85],[59.81,50.58],[59.52,50.49],[59.45,50.62],[58.88,50.69],[58.36,51.06],[57.84,51.09],[57.65,50.93],[57.44,50.89],[57.01,51.07],[56.49,51.02],[55.69,50.58],[54.64,51.01],[54.55,50.95],[54.65,50.66],[54.56,50.54],[54.14,51.04],[53.34,51.48],[52.57,51.48],[52.22,51.71],[51.61,51.48],[51.34,51.48],[51.16,51.65],[50.79,51.73],[50.31,51.32],[49.5,51.08],[49.32,50.85],[48.81,50.6],[48.63,50.61],[48.84,50.01],[48.76,49.93],[48.33,49.86],[47.71,50.38],[47.43,50.36],[47.25,50.0],[46.89,49.7],[46.8,49.37],[47.03,49.15],[46.7,48.81],[46.61,48.57],[46.66,48.41],[47.06,48.23],[47.09,47.95],[47.29,47.74],[47.48,47.8],[48.17,47.71],[48.96,46.77],[48.88,46.71],[48.56,46.76],[48.54,46.61],[49.25,46.29],[48.68,46.09],[48.73,45.9],[48.49,45.93],[48.16,45.74],[47.7,45.69],[47.63,45.58],[47.46,45.68],[47.51,45.49],[47.08,44.82],[47.0,44.88],[46.72,44.56],[46.75,44.42],[47.02,44.34],[47.31,44.1],[47.46,43.56],[47.65,43.88],[47.46,43.04],[48.38,41.95],[48.57,41.84],[48.39,41.6],[48.06,41.46],[47.86,41.21],[47.52,41.23],[47.26,41.32],[47.21,41.46],[46.75,41.81],[46.57,41.8],[45.64,42.21],[45.73,42.48],[45.66,42.52],[45.34,42.53],[44.87,42.76],[44.77,42.62],[44.51,42.75],[43.83,42.57],[43.74,42.62],[43.78,42.75],[42.76,43.17],[41.58,43.22],[40.65,43.53],[40.15,43.57],[39.98,43.42],[38.72,44.29],[38.18,44.42],[37.85,44.7],[37.5,44.7],[37.2,44.97],[36.65,45.13],[36.62,45.19],[36.94,45.29],[36.72,45.37],[36.79,45.41],[37.21,45.27],[37.65,45.38],[37.61,45.56],[37.93,46.0],[38.01,46.05],[38.08,45.93],[38.18,46.09],[38.49,46.09],[38.08,46.39],[37.91,46.41],[37.77,46.64],[38.5,46.66],[38.44,46.81],[39.27,47.04],[39.2,47.27],[38.67,47.14],[38.55,47.15],[38.76,47.26],[38.58,47.24],[38.21,47.09],[38.28,47.28],[38.2,47.32],[38.29,47.56],[38.64,47.67],[38.82,47.84],[39.78,47.89],[39.96,48.27],[39.85,48.3],[39.84,48.54],[39.64,48.59],[39.79,48.81],[40.0,48.82],[39.69,49.01],[40.11,49.25],[40.08,49.58],[39.78,49.57],[39.17,49.86],[38.92,49.82],[38.26,50.05],[38.05,49.92],[37.7,50.11],[37.42,50.41],[36.62,50.21],[36.12,50.41],[35.59,50.37],[35.41,50.54],[35.44,50.73],[35.31,51.04],[35.16,51.06],[35.06,51.2],[34.21,51.26],[34.27,51.34],[34.12,51.68],[34.4,51.78],[33.74,52.34],[32.81,52.25],[32.44,52.31],[32.12,52.05],[31.76,52.1],[31.58,52.31],[31.56,52.76],[31.26,53.02],[31.42,53.2],[32.14,53.09],[32.7,53.34],[32.71,53.42],[32.47,53.55],[32.45,53.69],[31.75,53.81],[31.83,54.03],[31.4,54.2],[31.07,54.49],[31.15,54.63],[30.8,54.78],[30.98,55.05],[30.81,55.31],[30.91,55.57],[30.23,55.85],[29.94,55.85],[29.48,55.68],[29.35,55.78],[29.4,55.91],[29.28,55.97],[29.03,56.02],[28.79,55.94],[28.56,56.09],[28.28,56.06],[28.15,56.14],[28.17,56.39],[27.88,56.82],[27.64,56.85],[27.83,57.29],[27.35,57.55],[27.54,57.8],[27.78,57.87],[27.5,58.22],[27.43,58.79],[27.9,59.28],[28.15,59.37],[28.01,59.48],[28.06,59.78],[28.33,59.69],[28.52,59.85],[28.95,59.83],[29.15,60.0],[30.12,59.87],[30.17,59.96],[29.72,60.2],[29.07,60.19],[28.64,60.38],[28.49,60.54],[28.62,60.49],[28.65,60.61],[28.51,60.68],[27.8,60.54],[29.25,61.29],[31.19,62.48],[31.54,62.92],[31.18,63.21],[29.99,63.74],[30.21,63.8],[30.53,64.08],[30.49,64.24],[30.11,64.37],[29.99,64.52],[30.11,64.73],[29.78,64.8],[29.6,64.97],[29.83,65.15],[29.61,65.25],[29.82,65.57],[29.72,65.62],[30.1,65.68],[30.09,65.79],[29.9,66.09],[29.07,66.89],[29.94,67.55],[29.99,67.67],[29.34,68.06],[28.69,68.19],[28.47,68.49],[28.77,68.84],[28.41,68.9],[29.12,69.05],[29.39,69.3],[29.99,69.39],[30.16,69.5],[30.16,69.63],[30.86,69.54],[30.87,69.78],[31.55,69.7],[32.0,69.81],[31.98,69.95],[33.01,69.72],[32.92,69.6],[32.18,69.67],[32.09,69.63],[32.38,69.48],[33.0,69.47],[32.98,69.37],[33.45,69.43],[33.33,69.15],[33.14,69.07],[33.44,69.13],[33.68,69.31],[35.86,69.19],[37.73,68.69],[38.43,68.36],[38.83,68.32],[39.57,68.07],[39.82,68.06],[39.75,68.16],[39.81,68.15],[40.38,67.83],[40.97,67.71],[41.13,67.27],[41.36,67.21],[41.19,66.83],[40.1,66.3],[38.65,66.07],[35.51,66.4],[34.82,66.61],[34.48,66.55],[34.4,66.61],[34.45,66.65],[33.15,66.84],[32.85,67.02],[32.93,67.09],[31.9,67.16],[32.5,67.0],[32.46,66.92],[32.86,66.72],[33.18,66.68],[33.22,66.53],[33.66,66.44],[33.36,66.33],[34.11,66.23],[34.69,65.95],[34.78,65.77],[34.62,65.51],[34.41,65.4],[34.8,64.99],[34.83,64.8],[34.95,64.76],[34.86,64.71],[34.87,64.56],[35.04,64.44],[35.65,64.38],[36.15,64.19],[36.36,64.0],[37.44,63.81],[37.97,63.95],[38.06,64.09],[37.95,64.32],[37.18,64.41],[36.58,64.79],[36.53,64.94],[36.79,64.99],[36.88,65.17],[37.14,65.19],[38.01,64.88],[39.76,64.58],[40.06,64.77],[40.44,64.78],[39.8,65.35],[39.82,65.6],[40.69,65.96],[41.48,66.12],[42.21,66.52],[43.23,66.42],[43.65,66.25],[43.54,66.12],[43.84,66.14],[44.1,66.01],[44.1,66.24],[44.49,66.67],[44.43,66.94],[44.29,67.1],[43.78,67.25],[44.23,68.0],[44.2,68.25],[43.33,68.67],[44.05,68.55],[45.08,68.58],[45.89,68.48],[46.68,67.97],[46.69,67.85],[45.53,67.76],[44.9,67.41],[45.56,67.19],[45.89,66.89],[46.49,66.8],[47.66,66.98],[47.91,67.45],[47.87,67.58],[48.83,67.68],[48.88,67.73],[48.7,67.87],[48.75,67.9],[49.16,67.87],[50.7,68.32],[51.99,68.54],[52.29,68.46],[52.18,68.37],[52.4,68.35],[52.72,68.48],[52.34,68.61],[53.8,69.0],[54.49,68.99],[53.8,68.91],[53.97,68.84],[53.76,68.63],[53.93,68.44],[53.26,68.27],[54.48,68.29],[54.86,68.2],[54.92,68.37],[55.42,68.57],[56.04,68.65],[57.13,68.55],[58.17,68.89],[58.24,68.83],[59.06,69.01],[59.37,68.74],[59.11,68.62],[59.1,68.44],[59.73,68.35],[59.92,68.47],[59.9,68.71],[60.49,68.73],[60.93,68.99],[60.86,69.15],[60.66,69.11],[60.17,69.59],[60.91,69.85],[63.36,69.68],[64.19,69.53],[64.93,69.33],[64.9,69.25],[67.0,68.87],[67.73,68.51],[68.37,68.31],[68.5,68.35],[68.83,68.57],[69.14,68.95],[68.54,68.97],[68.12,69.24],[68.01,69.48],[67.62,69.58],[67.06,69.69],[66.9,69.55],[66.8,69.74],[66.93,70.01],[67.24,70.11],[67.15,70.22],[67.28,70.74],[67.14,70.84],[66.7,70.82],[66.67,70.9],[66.85,71.06],[66.64,71.08],[66.92,71.28],[68.27,71.68],[68.61,72.01],[69.04,72.67],[69.39,72.96],[69.69,72.98],[69.65,72.9],[69.74,72.88],[71.5,72.91],[72.81,72.69],[72.57,72.01],[72.28,71.7],[71.87,71.46],[72.58,71.15],[72.7,70.96],[72.7,70.46],[72.47,70.27],[72.6,69.79],[72.58,68.97],[73.55,68.57],[73.59,68.48],[73.14,68.18],[73.17,67.97],[73.07,67.77],[72.59,67.59],[71.85,67.01],[71.37,66.96],[71.54,66.68],[70.72,66.52],[70.38,66.6],[70.69,66.75],[70.28,66.69],[69.88,66.85],[69.01,66.79],[69.19,66.58],[69.98,66.4],[72.07,66.25],[72.32,66.33],[72.42,66.56],[73.79,67.0],[74.07,67.41],[74.77,67.77],[74.74,68.07],[74.39,68.42],[74.58,68.75],[75.12,68.86],[76.46,68.98],[77.24,68.47],[77.17,67.78],[77.77,67.57],[78.92,67.59],[77.59,67.75],[77.54,68.01],[77.66,68.19],[78.0,68.26],[77.65,68.9],[76.0,69.24],[75.42,69.24],[74.81,69.09],[73.98,69.11],[73.78,69.2],[73.89,69.42],[73.56,69.71],[73.58,69.8],[73.83,70.18],[74.34,70.58],[73.58,71.22],[73.09,71.44],[73.67,71.85],[74.99,72.14],[75.09,72.26],[75.06,72.55],[74.79,72.81],[75.37,72.8],[75.6,72.58],[75.59,72.46],[75.74,72.3],[75.27,71.96],[75.25,71.81],[75.5,71.65],[75.47,71.53],[75.28,71.43],[75.33,71.34],[75.73,71.27],[76.93,71.13],[77.59,71.17],[78.32,70.93],[79.02,70.95],[79.08,71.0],[78.49,71.03],[78.21,71.27],[77.48,71.31],[76.43,71.55],[76.03,71.91],[76.87,72.03],[77.55,71.84],[78.19,71.91],[78.23,71.95],[78.02,72.09],[77.49,72.07],[77.44,72.16],[78.48,72.39],[79.42,72.38],[80.76,72.09],[80.86,71.97],[81.66,71.72],[83.11,71.72],[83.23,71.67],[82.98,71.45],[82.32,71.26],[82.24,71.0],[82.34,70.81],[82.16,70.6],[82.22,70.4],[82.59,70.89],[82.87,70.95],[83.01,70.9],[83.03,70.58],[82.68,70.22],[83.08,70.09],[83.07,70.28],[83.5,70.35],[83.74,70.55],[83.15,71.1],[83.55,71.54],[83.53,71.68],[83.2,71.87],[82.65,71.93],[82.09,72.27],[80.83,72.49],[80.66,72.71],[80.84,72.95],[80.51,73.09],[80.42,73.23],[80.4,73.36],[80.6,73.47],[80.58,73.57],[85.2,73.72],[86.89,73.89],[87.03,73.82],[85.79,73.44],[85.82,73.33],[86.68,73.11],[85.97,73.35],[85.94,73.46],[87.12,73.62],[87.57,73.81],[87.21,73.88],[86.57,74.24],[86.0,74.32],[86.4,74.45],[86.9,74.33],[87.23,74.36],[86.43,74.59],[85.79,74.65],[86.2,74.82],[86.65,74.68],[86.86,74.72],[87.42,74.94],[87.47,75.01],[86.94,75.07],[87.01,75.17],[87.67,75.13],[90.18,75.59],[94.08,75.91],[92.89,75.91],[92.97,76.08],[93.1,76.03],[93.26,76.1],[95.58,76.14],[96.08,76.08],[95.65,75.89],[96.51,76.01],[96.6,75.99],[96.5,75.89],[97.35,76.03],[97.5,75.98],[98.66,76.24],[99.77,76.03],[99.44,75.8],[99.54,75.8],[99.85,75.93],[99.83,76.14],[98.87,76.51],[100.84,76.53],[101.6,76.44],[101.68,76.49],[100.93,76.56],[101.1,76.7],[100.92,76.82],[100.99,76.99],[102.61,77.51],[104.01,77.73],[105.71,77.53],[106.06,77.39],[104.2,77.1],[105.65,77.1],[105.82,77.0],[106.94,77.03],[107.43,76.93],[106.64,76.57],[106.38,76.59],[106.41,76.51],[107.72,76.52],[108.18,76.74],[111.11,76.72],[111.94,76.55],[112.09,76.48],[111.94,76.38],[112.62,76.38],[112.8,76.13],[112.66,76.05],[113.09,76.13],[113.15,76.17],[112.99,76.24],[113.27,76.25],[113.56,75.89],[113.86,75.92],[113.57,75.57],[113.39,75.68],[112.47,75.84],[112.96,75.57],[113.24,75.61],[113.73,75.45],[113.61,75.29],[112.92,75.02],[109.84,74.32],[109.91,74.26],[109.81,74.17],[109.08,74.03],[108.2,73.69],[107.27,73.62],[106.68,73.33],[106.19,73.31],[105.68,72.96],[105.14,72.78],[105.71,72.84],[106.48,73.14],[107.75,73.17],[110.77,73.69],[110.87,73.73],[110.72,73.78],[109.71,73.74],[109.67,73.8],[109.87,73.93],[110.26,74.02],[111.06,73.94],[111.13,74.05],[111.55,74.03],[111.23,73.97],[111.4,73.83],[112.15,73.71],[112.8,73.75],[112.94,73.84],[112.84,73.96],[113.03,73.91],[113.42,73.65],[113.16,73.46],[113.49,73.35],[113.47,73.05],[113.13,72.83],[113.31,72.66],[113.66,72.63],[113.22,72.81],[113.54,73.05],[113.56,73.23],[113.89,73.35],[113.51,73.5],[114.06,73.58],[115.34,73.7],[118.45,73.59],[118.94,73.48],[118.46,73.46],[118.38,73.37],[118.43,73.25],[119.75,72.98],[121.75,72.97],[122.54,72.88],[122.75,72.91],[122.53,73.02],[123.16,72.95],[123.62,73.19],[123.32,73.43],[123.42,73.64],[124.54,73.75],[125.62,73.52],[125.6,73.45],[126.25,73.55],[126.34,73.51],[126.29,73.39],[126.55,73.33],[127.03,73.55],[127.74,73.48],[128.28,73.33],[128.26,73.27],[129.1,73.11],[128.6,72.9],[129.02,72.87],[129.25,72.71],[128.42,72.54],[129.28,72.44],[129.41,72.32],[129.41,72.17],[129.28,72.09],[128.93,72.08],[127.73,72.41],[128.91,71.76],[129.12,71.82],[129.12,71.95],[129.21,71.92],[129.46,71.74],[128.84,71.66],[129.13,71.59],[129.76,71.12],[130.54,70.89],[130.76,70.96],[131.02,70.75],[131.56,70.9],[132.04,71.24],[132.0,71.35],[132.23,71.64],[132.65,71.93],[133.13,71.61],[133.69,71.43],[134.7,71.39],[135.56,71.61],[136.09,71.62],[137.12,71.42],[137.94,71.13],[137.84,71.23],[138.31,71.33],[137.92,71.38],[138.23,71.6],[138.78,71.63],[139.21,71.44],[139.98,71.49],[139.7,71.7],[139.72,71.88],[139.36,71.95],[140.19,72.19],[139.18,72.16],[139.14,72.33],[139.6,72.5],[141.08,72.59],[140.65,72.84],[140.81,72.89],[142.06,72.72],[143.52,72.7],[146.25,72.44],[146.23,72.35],[144.78,72.38],[144.17,72.26],[144.47,72.17],[146.83,72.3],[146.11,71.94],[146.01,71.95],[146.23,72.14],[145.76,72.23],[145.66,72.07],[145.76,71.94],[145.06,71.93],[144.99,71.75],[145.19,71.7],[146.07,71.81],[147.26,72.33],[148.4,72.31],[149.5,72.16],[149.96,71.99],[150.02,71.9],[149.05,71.8],[148.97,71.69],[150.06,71.51],[150.6,71.52],[150.67,71.46],[150.1,71.23],[150.97,71.38],[151.58,71.29],[152.09,71.02],[151.76,70.98],[152.51,70.83],[155.9,71.1],[157.45,71.07],[158.7,70.94],[159.35,70.79],[159.91,70.51],[160.01,70.31],[159.73,69.87],[159.83,69.78],[160.91,69.61],[161.04,69.1],[161.34,68.91],[161.13,68.65],[160.86,68.54],[161.1,68.56],[161.57,68.91],[161.48,69.2],[161.54,69.38],[162.17,69.61],[163.2,69.71],[163.95,69.74],[164.51,69.61],[166.82,69.5],[167.63,69.74],[167.86,69.73],[168.15,69.58],[168.3,69.27],[169.31,69.08],[169.61,68.79],[170.54,68.83],[171.0,69.05],[171.0,69.13],[170.58,69.58],[170.16,69.63],[170.5,69.86],[170.49,70.11],[172.56,69.97],[173.28,69.82],[173.44,69.95],[174.79,69.86],[175.92,69.9],[176.92,69.65],[178.85,69.39],[180,68.98],[180,65.07],[179.45,64.82],[178.52,64.6],[177.75,64.72],[176.88,65.08],[176.34,65.05],[177.04,65.0],[177.22,64.86],[177.07,64.79],[176.06,64.96],[175.78,64.84],[174.55,64.68],[175.68,64.78],[176.06,64.9],[176.35,64.71],[176.14,64.59],[177.43,64.76],[177.43,64.44],[177.69,64.3],[178.04,64.22],[178.23,64.36],[178.38,64.26],[178.45,64.01],[178.65,63.97],[178.73,63.67],[178.44,63.61],[178.71,63.52],[178.68,63.4],[178.79,63.54],[178.92,63.35],[179.39,63.15],[179.26,63.01],[179.51,62.86],[179.57,62.69],[179.18,62.47],[179.12,62.32],[177.29,62.6],[177.34,62.78],[177.02,62.78],[176.96,62.66],[177.16,62.56],[176.7,62.51],[174.51,61.82],[173.82,61.68],[173.62,61.72],[173.13,61.41],[172.86,61.47],[172.91,61.31],[172.4,61.17],[172.39,61.06],[170.61,60.43],[170.35,59.97],[169.98,60.07],[169.62,60.44],[169.23,60.6],[168.14,60.57],[167.23,60.41],[166.27,59.86],[166.19,59.85],[166.14,59.98],[166.35,60.48],[165.08,60.1],[165.07,59.95],[164.95,59.84],[164.53,60.06],[164.11,59.9],[164.14,59.98],[163.74,60.03],[163.36,59.78],[163.27,59.3],[162.94,59.11],[162.97,58.99],[162.14,58.45],[161.96,58.08],[162.04,57.92],[162.41,57.78],[162.39,57.72],[162.65,57.95],[163.23,57.79],[163.19,57.64],[162.78,57.36],[162.76,57.24],[162.8,56.81],[163.26,56.69],[163.34,56.23],[163.05,56.04],[162.84,56.07],[162.63,56.23],[163.04,56.52],[162.67,56.49],[162.49,56.4],[162.53,56.26],[162.08,56.09],[161.72,55.5],[161.78,55.21],[162.11,54.75],[161.62,54.52],[161.13,54.6],[160.77,54.54],[160.07,54.19],[159.84,53.78],[160.03,53.13],[159.59,53.24],[158.75,52.91],[158.47,53.03],[158.43,52.96],[158.61,52.87],[158.48,52.63],[158.49,52.38],[158.1,51.81],[156.75,50.97],[156.52,51.38],[156.36,52.51],[156.11,52.87],[155.56,55.2],[155.72,56.07],[155.98,56.7],[156.85,57.29],[156.98,57.47],[156.83,57.78],[157.45,57.8],[157.67,58.02],[158.28,58.01],[159.21,58.52],[159.85,59.13],[161.75,60.15],[162.07,60.47],[162.97,60.78],[163.71,60.92],[163.55,61.03],[164.01,61.34],[163.8,61.46],[164.02,61.71],[164.21,62.29],[164.6,62.47],[165.21,62.37],[165.4,62.49],[164.42,62.7],[163.33,62.55],[163.02,61.89],[163.01,61.79],[163.26,61.7],[163.09,61.57],[162.99,61.54],[162.86,61.71],[162.39,61.66],[160.77,60.75],[160.17,60.64],[160.38,61.03],[159.79,60.96],[159.95,61.13],[159.88,61.29],[160.25,61.65],[160.31,61.89],[159.55,61.72],[159.19,61.93],[158.07,61.75],[157.47,61.8],[157.08,61.68],[156.68,61.48],[156.63,61.27],[156.06,61.0],[155.72,60.68],[154.97,60.38],[154.29,59.83],[154.15,59.53],[154.97,59.45],[155.17,59.36],[155.16,59.19],[154.7,59.14],[154.46,59.22],[154.01,59.08],[153.7,59.22],[153.36,59.21],[153.27,59.09],[152.82,58.93],[152.32,59.03],[152.09,58.91],[151.33,58.88],[151.12,59.08],[151.99,59.16],[152.26,59.22],[152.17,59.28],[151.8,59.32],[151.35,59.56],[150.48,59.49],[150.67,59.56],[149.42,59.76],[149.07,59.63],[149.2,59.49],[148.8,59.53],[148.74,59.37],[148.96,59.37],[148.73,59.26],[148.49,59.26],[148.26,59.41],[147.51,59.27],[146.54,59.46],[146.27,59.22],[146.05,59.17],[145.55,59.41],[143.19,59.37],[142.33,59.15],[141.6,58.65],[140.99,58.42],[140.68,58.21],[140.45,57.81],[140.0,57.69],[139.51,57.36],[139.18,57.26],[138.66,56.97],[137.69,56.14],[135.54,55.11],[135.21,54.84],[135.26,54.73],[135.85,54.58],[136.8,54.62],[136.68,53.93],[136.8,53.78],[137.16,53.82],[137.26,54.03],[137.1,54.13],[137.14,54.18],[137.67,54.28],[137.34,54.1],[137.83,53.95],[137.25,53.55],[137.95,53.6],[138.53,53.96],[138.57,53.82],[138.25,53.52],[138.45,53.54],[138.7,53.87],[138.66,54.3],[139.32,54.19],[139.71,54.28],[140.18,54.05],[140.35,53.81],[140.69,53.6],[141.37,53.29],[141.4,53.18],[141.18,53.02],[140.84,53.09],[141.26,52.84],[141.25,52.55],[141.13,52.44],[141.49,52.18],[141.37,51.92],[140.93,51.62],[140.52,50.8],[140.54,50.13],[140.62,50.08],[140.46,49.91],[140.52,49.6],[140.31,49.05],[140.38,48.96],[140.11,48.42],[139.37,47.89],[139.0,47.38],[138.59,47.06],[138.34,46.54],[137.69,45.82],[136.8,45.17],[136.14,44.49],[135.87,44.37],[135.48,43.84],[135.13,43.53],[134.01,42.95],[133.16,42.7],[132.71,42.88],[132.3,42.88],[132.31,43.31],[131.87,43.1],[132.01,43.28],[131.94,43.3],[131.72,43.2],[131.16,42.63],[130.71,42.66],[130.83,42.52],[130.69,42.3]],[[142.76,54.39],[142.98,54.14],[142.92,53.79],[143.32,52.96],[143.32,52.61],[143.17,52.35],[143.19,51.94],[143.32,51.58],[143.46,51.47],[143.82,50.28],[144.34,49.18],[144.69,48.87],[144.71,48.64],[144.54,48.89],[144.05,49.25],[143.73,49.31],[143.1,49.2],[142.57,48.07],[142.56,47.74],[142.94,47.32],[143.22,46.79],[143.49,46.75],[143.58,46.36],[143.43,46.03],[143.28,46.56],[142.58,46.7],[142.41,46.55],[142.08,45.92],[141.96,46.01],[141.83,46.45],[142.04,47.14],[141.96,47.59],[142.18,48.01],[142.14,48.29],[141.87,48.75],[142.14,49.57],[142.07,50.63],[142.21,51.22],[141.72,51.74],[141.81,51.79],[141.67,51.93],[141.66,52.27],[141.86,52.79],[141.82,53.34],[142.14,53.5],[142.32,53.41],[142.53,53.45],[142.58,53.54],[142.51,53.59],[142.68,53.67],[142.71,53.9],[142.33,54.28],[142.76,54.39]],[[137.94,55.09],[138.21,55.03],[137.72,54.66],[137.46,54.87],[137.23,54.79],[137.58,55.2],[137.94,55.09]],[[149.69,45.64],[149.45,45.59],[149.67,45.84],[150.31,46.2],[150.55,46.21],[149.69,45.64]],[[148.6,45.32],[147.91,44.99],[147.66,44.98],[147.21,44.55],[146.9,44.4],[147.25,44.86],[147.89,45.23],[147.92,45.38],[148.06,45.26],[148.32,45.28],[148.77,45.53],[148.84,45.36],[148.6,45.32]],[[146.71,43.74],[146.61,43.74],[146.62,43.81],[146.9,43.8],[146.71,43.74]],[[146.21,44.5],[146.57,44.44],[146.52,44.37],[145.91,44.1],[145.59,43.85],[145.56,43.66],[145.44,43.74],[145.46,43.87],[146.11,44.5],[146.21,44.5]]]},{"code":"PHL","name":"菲律賓","name_en":"Philippines","rings":[[[121.1,18.62],[121.85,18.3],[122.04,18.33],[122.15,18.49],[122.27,18.46],[122.32,18.32],[122.18,18.06],[122.15,17.66],[122.41,17.18],[122.52,17.12],[122.14,16.18],[121.6,15.93],[121.61,15.67],[121.39,15.32],[121.7,14.74],[121.63,14.58],[121.77,14.17],[121.91,14.02],[122.21,13.93],[122.29,14.0],[122.2,14.15],[122.63,14.32],[122.93,14.19],[123.1,13.75],[123.3,13.84],[123.32,14.06],[123.82,13.84],[123.81,13.72],[123.55,13.65],[123.82,13.27],[123.79,13.11],[124.14,13.04],[124.06,12.57],[123.88,12.69],[123.95,12.92],[123.63,12.91],[123.31,13.04],[123.16,13.44],[122.6,13.91],[122.47,13.89],[122.67,13.4],[122.6,13.19],[122.38,13.52],[121.78,13.94],[121.5,13.84],[121.34,13.65],[121.1,13.68],[120.84,13.88],[120.64,13.8],[120.62,14.19],[120.92,14.49],[120.94,14.65],[120.58,14.88],[120.59,14.48],[120.44,14.45],[120.25,14.79],[120.08,14.85],[119.77,16.26],[119.83,16.33],[120.16,16.05],[120.37,16.11],[120.3,16.65],[120.43,17.38],[120.36,17.64],[120.6,18.51],[121.1,18.62]],[[117.31,8.44],[117.22,8.37],[117.23,8.46],[117.35,8.71],[117.88,9.24],[118.11,9.35],[119.22,10.48],[119.31,10.97],[119.5,11.35],[119.55,11.31],[119.53,10.95],[119.69,10.5],[119.37,10.33],[119.19,10.06],[118.78,9.92],[118.77,9.77],[118.43,9.26],[117.31,8.44]],[[122.5,11.62],[122.84,11.6],[122.93,11.53],[122.89,11.44],[123.16,11.54],[123.12,11.29],[122.8,10.99],[122.77,10.82],[121.95,10.44],[122.1,11.64],[121.89,11.79],[121.92,11.85],[122.03,11.9],[122.5,11.62]],[[123.13,9.06],[122.99,9.06],[122.87,9.32],[122.56,9.48],[122.4,9.82],[122.47,9.96],[122.86,10.09],[122.82,10.5],[122.98,10.89],[123.26,10.99],[123.51,10.92],[123.57,10.78],[123.16,9.86],[123.15,9.61],[123.32,9.27],[123.13,9.06]],[[124.57,11.34],[124.93,11.37],[125.03,11.21],[125.01,10.79],[125.16,10.64],[125.27,10.31],[125.14,10.19],[124.99,10.37],[125.03,10.03],[124.78,10.17],[124.74,10.88],[124.66,10.96],[124.45,10.92],[124.31,11.49],[124.57,11.34]],[[125.24,12.53],[125.32,12.32],[125.54,12.19],[125.46,11.95],[125.49,11.59],[125.57,11.24],[125.74,11.05],[125.63,11.13],[125.23,11.15],[124.95,11.48],[125.0,11.76],[124.45,12.15],[124.33,12.4],[124.29,12.57],[125.24,12.53]],[[120.7,13.48],[121.2,13.43],[121.52,13.13],[121.54,12.64],[121.39,12.3],[121.24,12.22],[120.92,12.51],[120.65,13.17],[120.34,13.41],[120.4,13.52],[120.7,13.48]],[[126.01,9.32],[126.19,9.28],[126.3,8.95],[126.14,8.6],[126.37,8.48],[126.46,8.2],[126.44,7.83],[126.57,7.68],[126.58,7.25],[126.44,7.01],[126.19,6.85],[126.19,6.31],[125.82,7.33],[125.69,7.26],[125.38,6.69],[125.59,6.47],[125.67,5.98],[125.35,5.6],[125.24,5.76],[125.23,6.07],[125.04,5.87],[124.93,5.88],[124.21,6.23],[124.08,6.4],[123.99,6.99],[124.21,7.4],[123.97,7.66],[123.67,7.82],[123.49,7.81],[123.39,7.41],[123.18,7.53],[123.1,7.7],[122.99,7.55],[122.84,7.53],[122.79,7.72],[122.62,7.76],[122.47,7.64],[122.14,6.95],[121.96,6.97],[121.92,7.2],[122.24,7.95],[122.91,8.16],[123.05,8.43],[123.43,8.7],[123.68,8.62],[123.85,8.43],[123.8,8.05],[124.2,8.23],[124.4,8.6],[124.73,8.56],[124.87,8.97],[125.14,8.87],[125.21,9.03],[125.5,9.01],[125.41,9.67],[125.47,9.76],[125.88,9.51],[126.01,9.32]],[[123.37,9.45],[123.39,9.97],[123.71,10.47],[124.04,11.27],[124.0,10.4],[123.7,10.13],[123.37,9.45]],[[121.92,18.89],[121.83,18.84],[121.94,19.01],[121.92,18.89]],[[121.52,19.36],[121.53,19.27],[121.37,19.36],[121.52,19.36]],[[121.96,20.37],[121.94,20.45],[122.03,20.47],[121.96,20.37]],[[121.88,20.78],[121.79,20.7],[121.85,20.84],[121.88,20.78]],[[121.16,6.08],[121.39,6.0],[121.29,5.87],[120.88,5.95],[121.04,6.1],[121.16,6.08]],[[117.08,7.88],[117.03,7.81],[116.97,7.89],[116.99,8.05],[117.08,8.07],[117.08,7.88]],[[119.92,10.49],[119.79,10.46],[119.85,10.64],[120.01,10.57],[119.92,10.49]],[[120.1,12.17],[120.23,12.22],[120.31,12.01],[120.01,12.01],[119.89,12.3],[120.1,12.17]],[[120.04,11.7],[119.94,11.69],[119.86,11.95],[120.04,11.92],[120.04,11.7]],[[122.65,10.47],[122.54,10.42],[122.54,10.61],[122.7,10.74],[122.65,10.47]],[[124.59,9.79],[124.12,9.6],[123.94,9.62],[123.82,9.82],[124.17,10.14],[124.34,10.16],[124.58,10.03],[124.59,9.79]],[[120.25,5.26],[119.82,5.07],[120.17,5.33],[120.25,5.26]],[[122.09,6.43],[121.96,6.42],[121.83,6.66],[122.06,6.74],[122.29,6.64],[122.09,6.43]],[[126.06,9.77],[125.99,9.84],[126.07,10.06],[126.17,9.8],[126.06,9.77]],[[125.69,9.91],[125.49,10.12],[125.52,10.31],[125.67,10.44],[125.69,9.91]],[[121.91,13.54],[122.11,13.46],[122.0,13.2],[121.83,13.33],[121.91,13.54]],[[122.09,12.35],[122.01,12.11],[121.92,12.33],[122.0,12.6],[122.15,12.65],[122.09,12.35]],[[122.65,12.31],[122.42,12.46],[122.6,12.49],[122.65,12.31]],[[123.28,12.85],[123.37,12.7],[122.96,13.11],[123.28,12.85]],[[123.78,12.45],[123.78,12.37],[123.62,12.57],[123.62,12.67],[123.78,12.45]],[[123.72,12.29],[124.04,11.97],[124.05,11.75],[123.47,12.22],[123.16,11.93],[123.24,12.58],[123.72,12.29]],[[124.35,13.63],[124.18,13.53],[124.04,13.66],[124.22,14.08],[124.42,13.87],[124.35,13.63]],[[122.03,15.01],[121.93,14.66],[121.84,15.04],[122.03,15.01]],[[122.94,7.41],[122.8,7.32],[122.82,7.43],[122.94,7.41]],[[125.78,6.96],[125.68,7.07],[125.71,7.19],[125.78,6.96]],[[124.61,11.49],[124.48,11.49],[124.36,11.67],[124.51,11.69],[124.61,11.49]],[[124.81,9.14],[124.67,9.13],[124.65,9.23],[124.81,9.14]],[[121.25,19.08],[121.2,19.05],[121.21,19.18],[121.25,19.08]],[[119.86,11.53],[119.83,11.38],[119.73,11.43],[119.86,11.53]],[[123.76,11.28],[123.82,11.15],[123.74,11.15],[123.76,11.28]],[[124.85,11.59],[124.78,11.58],[124.73,11.72],[124.85,11.59]],[[117.36,8.21],[117.29,8.19],[117.28,8.31],[117.36,8.21]],[[123.7,9.24],[123.71,9.13],[123.61,9.1],[123.49,9.19],[123.7,9.24]]]},{"code":"PAK","name":"巴基斯坦","name_en":"Pakistan","rings":[[[76.77,35.66],[77.05,35.11],[77.0,34.99],[76.59,34.74],[76.04,34.67],[75.71,34.5],[74.3,34.77],[73.96,34.65],[73.79,34.38],[73.97,34.24],[73.9,34.08],[74.25,33.95],[73.98,33.72],[74.15,33.51],[74.0,33.19],[74.3,32.99],[74.35,32.77],[74.66,32.76],[74.69,32.49],[74.99,32.46],[75.33,32.28],[75.25,32.14],[74.56,31.82],[74.52,31.19],[74.63,31.03],[74.34,30.89],[73.9,30.44],[73.93,30.22],[73.81,30.09],[73.38,29.93],[72.9,29.03],[72.34,28.75],[71.87,27.96],[70.8,27.71],[70.63,27.94],[70.4,28.03],[70.14,27.85],[69.54,27.12],[69.51,26.74],[70.15,26.51],[70.1,25.91],[70.26,25.71],[70.65,25.67],[70.65,25.42],[71.05,24.69],[70.97,24.57],[71.04,24.4],[70.72,24.24],[70.49,24.41],[69.81,24.17],[69.56,24.27],[68.78,24.31],[68.72,23.96],[68.28,23.93],[68.12,23.75],[67.86,23.9],[67.67,23.81],[67.65,23.92],[67.5,23.94],[67.31,24.17],[67.17,24.76],[66.7,24.86],[66.7,25.23],[66.53,25.48],[66.32,25.6],[66.13,25.49],[66.47,25.45],[64.78,25.31],[64.66,25.18],[64.06,25.4],[63.56,25.35],[63.49,25.21],[62.66,25.26],[62.32,25.13],[62.2,25.22],[61.91,25.13],[61.57,25.19],[61.84,26.23],[62.24,26.36],[62.44,26.56],[63.16,26.65],[63.3,27.15],[63.17,27.25],[62.76,27.25],[62.76,28.24],[62.56,28.24],[62.35,28.41],[61.89,28.55],[61.62,28.79],[61.32,29.37],[60.84,29.86],[62.48,29.41],[63.57,29.5],[64.1,29.39],[64.39,29.54],[65.1,29.56],[66.23,29.87],[66.31,29.97],[66.24,30.11],[66.35,30.8],[66.83,31.26],[67.45,31.23],[67.74,31.34],[67.58,31.51],[68.16,31.8],[68.6,31.8],[68.87,31.63],[69.28,31.94],[69.24,32.43],[69.5,33.02],[70.26,33.29],[70.13,33.62],[69.87,33.9],[69.89,34.01],[70.65,33.95],[71.05,34.05],[71.1,34.37],[70.97,34.53],[71.62,35.18],[71.43,35.83],[71.19,36.04],[71.62,36.44],[71.77,36.43],[72.16,36.7],[73.12,36.87],[74.04,36.83],[74.6,37.04],[75.15,36.97],[75.35,36.91],[75.42,36.74],[75.67,36.74],[75.88,36.6],[75.97,36.38],[75.91,36.05],[76.07,35.98],[76.15,35.83],[76.55,35.89],[76.56,35.77],[76.77,35.66]]]},{"code":"PRK","name":"朝鮮民主主義人民共和國","name_en":"North Korea","rings":[[[128.37,38.62],[128.04,38.31],[127.09,38.28],[126.67,37.92],[126.63,37.78],[126.37,37.88],[126.12,37.74],[126.05,37.87],[125.77,37.99],[125.36,37.72],[125.31,37.84],[124.99,37.93],[125.21,38.08],[124.69,38.13],[124.87,38.23],[125.07,38.56],[125.55,38.69],[125.17,38.81],[125.41,39.29],[125.36,39.53],[124.78,39.76],[124.64,39.62],[124.56,39.79],[124.35,39.91],[124.39,40.1],[124.89,40.46],[125.73,40.87],[125.99,40.9],[126.49,41.36],[126.6,41.64],[126.9,41.78],[127.18,41.53],[128.15,41.39],[128.29,41.61],[128.05,41.99],[128.92,42.04],[129.31,42.41],[129.7,42.45],[129.86,42.97],[130.08,42.97],[130.24,42.89],[130.25,42.74],[130.69,42.3],[130.24,42.18],[129.76,41.71],[129.69,41.59],[129.77,41.3],[129.71,40.86],[129.34,40.73],[128.51,40.13],[127.97,40.0],[127.53,39.7],[127.55,39.46],[127.42,39.37],[127.39,39.21],[127.79,39.08],[128.37,38.62]],[[124.91,39.54],[124.85,39.56],[124.93,39.61],[124.91,39.54]]]},{"code":"NPL","name":"尼泊爾","name_en":"Nepal","rings":[[[88.11,27.87],[87.98,27.13],[88.16,26.81],[88.05,26.43],[87.29,26.36],[87.02,26.56],[86.7,26.44],[86.01,26.65],[85.79,26.6],[85.65,26.83],[85.19,26.77],[84.69,27.04],[84.61,27.3],[84.09,27.49],[83.83,27.38],[83.45,27.47],[83.29,27.37],[82.73,27.52],[82.68,27.67],[82.45,27.67],[81.99,27.91],[81.85,27.87],[81.17,28.34],[80.59,28.65],[80.42,28.61],[80.05,28.87],[80.32,29.57],[80.61,29.96],[80.91,30.17],[81.18,30.04],[81.42,30.34],[81.85,30.36],[82.04,30.33],[82.22,30.06],[82.85,29.68],[83.16,29.61],[83.58,29.18],[83.94,29.28],[84.1,29.22],[84.23,28.91],[84.8,28.56],[85.16,28.59],[85.12,28.32],[85.68,28.28],[85.99,27.91],[86.14,28.11],[86.41,27.93],[86.61,28.1],[87.14,27.84],[88.11,27.87]]]},{"code":"MNG","name":"蒙古國","name_en":"Mongolia","rings":[[[87.81,49.16],[88.12,49.26],[88.19,49.45],[89.11,49.5],[89.24,49.63],[89.65,49.72],[89.64,49.9],[89.98,49.98],[90.05,50.09],[91.42,50.47],[91.8,50.69],[92.19,50.7],[92.35,50.86],[92.63,50.69],[92.94,50.78],[93.1,50.6],[94.25,50.56],[94.35,50.22],[94.61,50.02],[95.52,49.91],[96.07,50.0],[96.32,49.9],[96.99,49.88],[97.21,49.73],[97.36,49.74],[97.59,49.91],[98.0,50.01],[98.25,50.3],[98.28,50.53],[98.03,50.64],[97.84,51.05],[98.04,51.45],[98.22,51.51],[98.35,51.72],[98.64,51.8],[98.89,52.12],[99.92,51.76],[100.47,51.73],[101.38,51.45],[102.11,51.35],[102.29,50.59],[103.3,50.2],[104.08,50.15],[105.38,50.47],[106.22,50.3],[106.71,50.31],[107.23,49.99],[107.92,49.95],[107.97,49.65],[108.61,49.32],[109.24,49.33],[110.71,49.14],[111.34,49.36],[112.81,49.52],[113.57,50.01],[114.3,50.27],[114.74,50.23],[115.43,49.9],[116.35,49.98],[116.68,49.82],[115.82,48.58],[115.79,48.25],[115.53,48.13],[115.62,47.87],[115.9,47.69],[116.23,47.86],[116.76,47.87],[117.35,47.65],[117.77,47.99],[118.5,47.98],[119.71,47.15],[119.9,46.73],[119.71,46.61],[119.16,46.64],[118.84,46.76],[118.07,46.67],[117.74,46.52],[117.44,46.59],[117.33,46.36],[116.86,46.39],[116.56,46.29],[116.21,45.89],[116.2,45.74],[115.68,45.46],[114.56,45.39],[114.08,44.97],[113.59,44.75],[112.71,44.88],[112.41,45.06],[111.9,45.06],[111.62,44.83],[111.4,44.37],[111.84,43.93],[111.93,43.71],[111.01,43.34],[110.4,42.77],[109.34,42.44],[108.17,42.45],[106.77,42.29],[104.98,41.6],[104.5,41.66],[104.5,41.88],[103.71,41.75],[103.07,42.01],[102.16,42.16],[101.5,42.54],[99.98,42.68],[99.47,42.57],[97.21,42.79],[96.39,42.72],[96.3,42.93],[95.86,43.28],[95.53,43.95],[95.33,44.04],[95.35,44.28],[94.71,44.35],[93.52,44.94],[90.88,45.2],[90.66,45.53],[90.71,45.73],[91.0,46.04],[90.91,46.27],[91.03,46.57],[90.87,46.95],[90.72,47.0],[90.5,47.29],[90.33,47.66],[90.1,47.75],[90.03,47.88],[89.78,47.83],[89.48,48.03],[89.05,48.0],[88.58,48.22],[88.52,48.38],[87.98,48.56],[88.06,48.71],[87.74,48.88],[87.87,49.0],[87.81,49.16]]]},{"code":"MYS","name":"馬來西亞","name_en":"Malaysia","rings":[[[100.12,6.44],[100.18,6.67],[100.26,6.68],[100.35,6.55],[100.75,6.46],[100.87,6.25],[101.05,6.24],[101.08,5.96],[100.98,5.77],[101.11,5.64],[101.56,5.91],[101.79,5.78],[102.1,6.24],[102.27,6.2],[102.53,5.86],[103.1,5.41],[103.45,4.67],[103.36,3.77],[103.45,3.52],[103.44,2.93],[103.81,2.58],[104.22,1.72],[104.25,1.39],[104.11,1.41],[103.98,1.62],[103.99,1.45],[103.69,1.45],[103.48,1.33],[103.36,1.55],[102.73,1.86],[101.3,2.89],[101.3,3.25],[100.72,3.97],[100.8,4.02],[100.61,4.37],[100.34,5.98],[100.12,6.44]],[[117.57,4.17],[117.1,4.34],[116.51,4.37],[116.02,4.29],[115.86,4.35],[115.68,4.19],[115.45,3.03],[115.25,3.03],[115.12,2.89],[115.08,2.63],[115.18,2.52],[114.79,2.25],[114.83,1.98],[114.51,1.45],[113.9,1.43],[113.62,1.24],[113.01,1.43],[112.94,1.57],[112.48,1.56],[112.19,1.44],[112.08,1.14],[111.81,1.01],[111.1,1.05],[110.51,0.86],[109.74,1.52],[109.55,1.85],[109.63,2.03],[109.86,1.76],[110.35,1.72],[111.22,1.4],[111.03,1.56],[111.25,2.06],[111.24,2.44],[111.44,2.38],[111.44,2.63],[111.62,2.82],[113.04,3.21],[113.92,4.24],[114.01,4.58],[114.17,4.53],[114.32,4.26],[114.65,4.04],[114.84,4.39],[114.75,4.72],[115.03,4.9],[115.11,4.39],[115.32,4.37],[115.14,4.9],[115.37,4.93],[115.55,5.09],[115.58,5.19],[115.42,5.41],[115.6,5.6],[115.74,5.53],[115.88,5.61],[116.14,6.13],[116.78,6.99],[116.85,6.83],[116.79,6.61],[117.13,6.97],[117.25,6.92],[117.29,6.68],[117.65,6.47],[117.64,6.0],[117.5,5.88],[118.0,6.05],[118.12,5.86],[117.93,5.79],[117.97,5.71],[118.35,5.81],[118.59,5.59],[119.26,5.37],[119.25,5.2],[119.13,5.1],[118.67,4.96],[118.26,4.99],[118.19,4.83],[118.56,4.5],[118.55,4.38],[118.01,4.25],[117.7,4.34],[117.57,4.17]],[[104.22,2.73],[104.13,2.77],[104.18,2.87],[104.22,2.73]],[[100.29,5.29],[100.19,5.28],[100.25,5.47],[100.34,5.41],[100.29,5.29]],[[99.85,6.47],[99.92,6.36],[99.74,6.26],[99.65,6.42],[99.85,6.47]],[[117.14,7.17],[117.08,7.12],[117.06,7.26],[117.26,7.35],[117.27,7.22],[117.14,7.17]],[[111.39,2.42],[111.31,2.44],[111.33,2.77],[111.39,2.42]],[[117.88,4.19],[117.65,4.17],[117.71,4.26],[117.88,4.19]]]},{"code":"LAO","name":"寮國","name_en":"Laos","rings":[[[102.13,22.38],[102.58,21.9],[102.66,21.68],[102.82,21.81],[102.95,21.68],[102.85,21.27],[103.1,20.89],[103.64,20.7],[104.1,20.95],[104.58,20.65],[104.37,20.44],[104.62,20.37],[104.7,20.21],[104.85,20.2],[104.93,20.02],[104.59,19.62],[104.03,19.68],[104.06,19.48],[103.89,19.3],[104.72,18.8],[105.15,18.65],[105.11,18.41],[105.46,18.15],[105.69,17.74],[106.5,16.95],[106.66,16.49],[106.85,16.52],[106.93,16.35],[107.4,16.04],[107.39,15.95],[107.17,15.8],[107.65,15.26],[107.48,14.98],[107.52,14.71],[107.41,14.56],[107.29,14.59],[106.82,14.31],[106.5,14.58],[106.35,14.45],[106.23,14.48],[106.17,14.37],[105.98,14.34],[106.12,14.05],[106.07,13.92],[105.25,14.2],[105.18,14.35],[105.5,14.59],[105.49,15.26],[105.64,15.66],[105.4,15.83],[105.41,15.99],[105.05,16.16],[104.82,16.47],[104.74,16.88],[104.82,17.3],[103.95,18.32],[103.29,18.41],[103.05,18.03],[102.66,17.82],[102.1,18.21],[101.17,17.5],[100.91,17.58],[101.14,18.14],[101.05,18.44],[101.29,18.98],[101.21,19.55],[100.97,19.61],[100.63,19.5],[100.42,19.64],[100.54,20.13],[100.32,20.39],[100.11,20.26],[100.18,20.59],[100.33,20.8],[100.62,20.86],[100.54,20.99],[100.7,21.25],[101.14,21.57],[101.25,21.2],[101.8,21.21],[101.72,21.31],[101.74,21.83],[101.52,22.25],[101.74,22.5],[101.84,22.39],[102.13,22.38]]]},{"code":"KGZ","name":"吉爾吉斯","name_en":"Kyrgyzstan","rings":[[[70.96,40.24],[71.3,40.29],[71.69,40.15],[72.13,40.44],[72.36,40.4],[72.4,40.58],[72.6,40.53],[73.14,40.81],[72.19,41.03],[72.16,41.17],[71.88,41.2],[71.66,41.54],[71.59,41.33],[71.42,41.34],[71.39,41.12],[70.86,41.22],[70.69,41.45],[70.47,41.41],[70.18,41.54],[70.86,42.03],[71.23,42.16],[70.89,42.34],[71.17,42.67],[71.42,42.78],[72.28,42.76],[73.49,42.41],[73.42,42.59],[73.56,43.0],[74.21,43.24],[75.37,42.84],[75.64,42.81],[75.84,42.94],[76.99,42.97],[79.13,42.78],[79.43,42.48],[79.92,42.41],[80.21,42.19],[80.25,42.06],[79.84,42.0],[79.77,41.9],[78.74,41.56],[78.36,41.37],[78.12,41.08],[76.91,41.02],[76.32,40.35],[76.26,40.43],[75.68,40.31],[75.56,40.63],[75.11,40.45],[74.84,40.48],[74.83,40.33],[73.99,40.04],[73.84,39.8],[73.91,39.58],[73.72,39.46],[72.56,39.38],[72.23,39.21],[72.04,39.35],[71.78,39.28],[71.73,39.42],[71.5,39.48],[71.47,39.6],[70.8,39.39],[70.5,39.59],[69.3,39.52],[69.28,39.92],[69.48,39.92],[69.53,40.1],[69.97,40.2],[70.45,40.05],[70.52,39.95],[70.96,40.24]]]},{"code":"KAZ","name":"哈薩克","name_en":"Kazakhstan","rings":[[[70.95,42.25],[70.58,42.04],[70.42,42.08],[70.1,41.82],[69.15,41.43],[68.58,40.88],[68.57,40.62],[68.42,40.62],[68.05,40.81],[68.11,41.03],[67.94,41.2],[66.71,41.18],[66.5,41.99],[66.01,42.0],[66.1,42.99],[65.8,42.88],[65.5,43.31],[64.91,43.71],[64.44,43.55],[63.21,43.63],[61.99,43.49],[61.16,44.17],[61.01,44.39],[58.56,45.56],[55.98,44.99],[55.98,41.32],[55.43,41.3],[54.85,41.97],[54.12,42.34],[53.06,42.15],[52.49,41.78],[52.46,42.1],[52.62,42.43],[52.6,42.76],[51.9,42.87],[51.62,43.16],[51.3,43.17],[51.3,43.48],[50.83,44.19],[50.33,44.33],[50.25,44.46],[50.41,44.62],[51.54,44.53],[51.31,44.62],[51.01,44.92],[51.42,45.36],[52.43,45.4],[53.2,45.33],[52.77,45.57],[53.14,46.19],[53.06,46.48],[53.17,46.67],[53.07,46.86],[52.92,46.95],[52.48,46.99],[52.14,46.83],[51.18,47.11],[50.42,46.88],[49.89,46.6],[49.35,46.52],[49.36,46.41],[49.29,46.44],[49.23,46.34],[48.61,46.57],[48.52,46.73],[48.88,46.71],[48.96,46.77],[48.17,47.71],[47.48,47.8],[47.29,47.74],[47.09,47.95],[47.06,48.23],[46.66,48.41],[46.61,48.57],[46.7,48.81],[47.03,49.15],[46.8,49.37],[46.82,49.5],[46.99,49.85],[47.25,50.0],[47.33,50.27],[47.5,50.4],[47.71,50.38],[48.33,49.86],[48.76,49.93],[48.84,50.01],[48.63,50.61],[48.81,50.6],[49.32,50.85],[49.5,51.08],[50.31,51.32],[50.79,51.73],[51.16,51.65],[51.34,51.48],[51.61,51.48],[52.22,51.71],[52.57,51.48],[53.34,51.48],[54.14,51.04],[54.56,50.54],[54.65,50.66],[54.55,50.95],[54.64,51.01],[55.69,50.58],[56.49,51.02],[57.01,51.07],[57.44,50.89],[57.65,50.93],[57.84,51.09],[58.36,51.06],[58.88,50.69],[59.45,50.62],[59.52,50.49],[59.81,50.58],[60.06,50.85],[60.42,50.68],[60.94,50.7],[61.39,50.86],[61.59,51.23],[61.55,51.32],[60.46,51.65],[60.39,51.77],[60.03,51.93],[60.99,52.34],[60.77,52.68],[61.05,52.97],[62.08,53.01],[61.66,53.23],[61.2,53.29],[61.23,53.45],[61.53,53.52],[60.98,53.62],[61.23,54.02],[61.93,53.95],[64.46,54.38],[65.09,54.34],[65.48,54.62],[68.16,54.98],[68.24,55.05],[68.21,55.16],[68.98,55.39],[69.49,55.36],[70.18,55.16],[70.74,55.31],[71.19,54.6],[71.09,54.21],[72.0,54.21],[72.19,54.33],[72.45,53.94],[72.59,54.0],[72.62,54.13],[73.23,53.96],[73.67,54.06],[73.68,53.93],[73.31,53.71],[73.41,53.45],[73.86,53.62],[74.35,53.49],[74.45,53.65],[75.22,53.89],[75.44,54.09],[76.84,54.44],[76.65,54.15],[76.42,54.15],[76.48,54.02],[77.86,53.27],[79.47,51.49],[79.99,50.77],[80.42,50.95],[80.45,51.18],[80.74,51.29],[81.13,51.19],[81.07,50.97],[81.39,50.96],[81.47,50.74],[82.49,50.73],[82.76,50.89],[83.36,50.99],[83.95,50.77],[84.32,50.24],[84.99,50.06],[85.0,49.89],[85.23,49.62],[86.18,49.5],[86.68,49.78],[86.73,49.7],[86.63,49.56],[87.32,49.09],[86.81,49.05],[86.72,48.7],[86.55,48.53],[85.75,48.39],[85.53,47.92],[85.66,47.25],[85.48,47.06],[84.79,46.83],[84.67,46.97],[84.02,46.97],[83.03,47.19],[82.32,45.59],[82.61,45.42],[82.52,45.13],[82.27,45.22],[81.94,45.16],[81.69,45.35],[80.06,45.01],[79.87,44.88],[80.48,44.71],[80.36,44.55],[80.36,44.1],[80.79,43.16],[80.39,43.04],[80.54,42.87],[80.2,42.73],[80.21,42.19],[79.92,42.41],[79.43,42.48],[79.13,42.78],[76.99,42.97],[75.84,42.94],[75.64,42.81],[75.37,42.84],[74.21,43.24],[73.56,43.0],[73.42,42.59],[73.49,42.41],[71.76,42.82],[71.26,42.73],[70.89,42.34],[70.95,42.25]]]},{"code":"JPN","name":"日本","name_en":"Japan","rings":[[[133.37,36.2],[133.24,36.18],[133.21,36.29],[133.3,36.34],[133.37,36.2]],[[138.34,37.82],[138.23,37.83],[138.32,37.97],[138.25,38.08],[138.5,38.32],[138.45,38.08],[138.58,38.07],[138.34,37.82]],[[134.93,34.29],[134.82,34.2],[134.67,34.29],[135.0,34.54],[134.93,34.29]],[[130.62,30.26],[130.45,30.26],[130.39,30.39],[130.5,30.47],[130.64,30.39],[130.62,30.26]],[[130.96,30.4],[130.87,30.44],[131.06,30.83],[130.96,30.4]],[[130.08,32.23],[129.96,32.24],[130.01,32.52],[130.17,32.54],[130.2,32.34],[130.08,32.23]],[[129.28,34.12],[129.19,34.15],[129.21,34.32],[129.34,34.28],[129.28,34.12]],[[129.39,34.35],[129.27,34.37],[129.33,34.61],[129.45,34.69],[129.39,34.35]],[[128.67,32.78],[128.84,32.76],[128.89,32.65],[128.69,32.6],[128.67,32.78]],[[130.38,32.42],[130.24,32.46],[130.46,32.52],[130.38,32.42]],[[141.07,45.33],[141.03,45.27],[140.97,45.47],[141.07,45.33]],[[141.3,45.12],[141.14,45.21],[141.25,45.23],[141.3,45.12]],[[139.48,42.08],[139.43,42.2],[139.56,42.24],[139.48,42.08]],[[134.35,34.48],[134.25,34.42],[134.18,34.52],[134.35,34.48]],[[139.46,34.73],[139.39,34.69],[139.37,34.78],[139.46,34.73]],[[129.08,32.84],[129.0,32.95],[129.11,33.13],[129.18,32.99],[129.08,32.84]],[[129.49,33.22],[129.37,33.18],[129.57,33.36],[129.49,33.22]],[[129.8,33.75],[129.67,33.74],[129.72,33.86],[129.8,33.75]],[[132.58,34.12],[132.46,34.09],[132.54,34.17],[132.58,34.12]],[[132.27,33.95],[132.44,33.91],[132.21,33.87],[132.27,33.95]],[[143.82,44.12],[144.72,43.93],[145.37,44.33],[145.13,43.87],[145.14,43.66],[145.34,43.3],[145.83,43.39],[145.51,43.17],[144.92,43.0],[144.2,42.97],[143.97,42.88],[143.43,42.42],[143.24,42.0],[141.85,42.58],[141.41,42.55],[140.99,42.34],[140.71,42.56],[140.48,42.56],[140.33,42.29],[141.15,41.81],[141.0,41.74],[140.66,41.82],[140.27,41.46],[140.04,41.47],[140.11,41.91],[139.84,42.28],[139.86,42.58],[140.43,42.95],[140.49,43.05],[140.39,43.3],[141.14,43.18],[141.37,43.28],[141.4,43.64],[141.64,44.02],[141.76,44.48],[141.78,44.72],[141.58,45.16],[141.67,45.4],[141.94,45.51],[142.88,44.67],[143.82,44.12]],[[131.17,33.6],[131.7,33.6],[131.54,33.27],[131.9,33.25],[131.85,33.12],[132.0,32.88],[131.66,32.47],[131.34,31.4],[131.07,31.44],[131.1,31.26],[130.69,31.02],[130.79,31.27],[130.7,31.58],[130.78,31.71],[130.66,31.72],[130.56,31.56],[130.54,31.4],[130.64,31.27],[130.59,31.18],[130.2,31.29],[130.15,31.41],[130.29,31.45],[130.32,31.6],[130.19,31.77],[130.19,32.09],[130.39,32.22],[130.64,32.62],[130.5,32.66],[130.55,32.83],[130.24,33.18],[130.13,33.1],[130.18,32.85],[130.33,32.85],[130.34,32.7],[130.05,32.77],[129.77,32.57],[129.83,32.73],[129.69,32.88],[129.68,33.06],[129.99,32.85],[129.58,33.24],[129.61,33.34],[129.84,33.32],[129.83,33.44],[130.37,33.63],[130.48,33.83],[130.72,33.93],[130.95,33.87],[131.17,33.6]],[[134.36,34.26],[134.64,34.23],[134.74,33.82],[134.38,33.61],[134.18,33.25],[133.96,33.45],[133.63,33.51],[133.29,33.36],[132.98,32.84],[132.8,32.75],[132.64,32.76],[132.71,32.9],[132.5,32.92],[132.43,33.06],[132.51,33.29],[132.41,33.33],[132.41,33.43],[132.03,33.34],[132.64,33.69],[132.78,33.99],[132.94,34.1],[133.19,33.93],[133.58,34.02],[133.6,34.24],[133.95,34.35],[134.36,34.26]],[[141.23,41.37],[141.46,41.4],[141.43,40.72],[141.8,40.29],[141.99,39.79],[141.98,39.43],[141.9,39.11],[141.66,38.97],[141.55,38.76],[141.47,38.4],[141.11,38.34],[140.96,38.15],[141.0,37.11],[140.73,36.73],[140.57,36.23],[140.87,35.72],[140.46,35.51],[140.35,35.18],[139.84,34.91],[139.83,35.3],[140.1,35.59],[139.83,35.66],[139.65,35.41],[139.74,35.25],[139.68,35.15],[139.47,35.3],[139.25,35.28],[139.13,35.15],[139.09,34.84],[138.84,34.62],[138.76,34.7],[138.8,34.97],[138.9,35.03],[138.72,35.12],[138.58,35.09],[138.19,34.6],[137.54,34.66],[137.06,34.58],[137.28,34.77],[136.96,34.83],[136.94,34.72],[136.87,34.73],[136.9,35.04],[136.8,35.05],[136.53,34.68],[136.88,34.43],[136.85,34.32],[136.33,34.18],[135.92,33.56],[135.7,33.49],[135.45,33.55],[135.13,34.01],[135.1,34.29],[135.31,34.42],[135.42,34.62],[135.04,34.63],[134.74,34.77],[134.25,34.71],[133.97,34.53],[133.14,34.3],[132.66,34.25],[132.31,34.32],[132.15,33.84],[131.74,34.05],[130.92,33.98],[130.89,34.26],[131.0,34.39],[131.35,34.41],[132.92,35.51],[133.98,35.51],[135.17,35.75],[135.27,35.72],[135.23,35.59],[135.33,35.53],[135.68,35.5],[135.9,35.61],[136.1,35.77],[136.01,35.99],[136.07,36.12],[136.7,36.74],[136.72,37.2],[136.84,37.38],[137.32,37.52],[137.34,37.44],[136.9,37.12],[137.02,36.84],[137.25,36.75],[137.51,36.95],[138.32,37.22],[138.63,37.47],[138.89,37.84],[139.36,38.1],[139.52,38.5],[139.8,38.88],[140.06,39.62],[139.99,39.86],[139.74,39.92],[139.91,40.02],[140.01,40.26],[139.97,40.67],[140.28,40.85],[140.39,41.23],[140.63,41.2],[140.75,40.83],[140.94,40.94],[141.12,40.88],[141.23,40.99],[141.24,41.21],[140.8,41.14],[140.8,41.25],[140.94,41.51],[141.23,41.37]],[[124.29,24.52],[124.23,24.36],[124.14,24.35],[124.08,24.44],[124.3,24.59],[124.29,24.52]],[[123.89,24.28],[123.68,24.32],[123.77,24.41],[123.93,24.36],[123.89,24.28]],[[125.44,24.74],[125.27,24.73],[125.28,24.87],[125.44,24.74]],[[128.26,26.65],[127.87,26.44],[127.9,26.33],[127.79,26.26],[127.8,26.15],[127.65,26.09],[127.73,26.43],[127.95,26.59],[127.91,26.69],[128.1,26.67],[128.25,26.88],[128.33,26.81],[128.26,26.65]],[[129.0,27.72],[128.9,27.73],[128.91,27.9],[129.0,27.72]],[[129.45,28.21],[129.37,28.13],[129.16,28.25],[129.69,28.52],[129.71,28.43],[129.45,28.21]]]},{"code":"IDN","name":"印度尼西亞","name_en":"Indonesia","rings":[[[97.48,1.47],[97.93,0.97],[97.82,0.56],[97.68,0.6],[97.6,0.83],[97.41,0.95],[97.08,1.43],[97.24,1.42],[97.36,1.54],[97.48,1.47]],[[99.16,-1.78],[98.83,-1.61],[98.6,-1.2],[98.68,-0.97],[98.93,-0.95],[99.27,-1.63],[99.27,-1.74],[99.16,-1.78]],[[116.64,-8.61],[116.51,-8.82],[116.59,-8.89],[116.24,-8.91],[115.86,-8.79],[116.08,-8.74],[116.06,-8.44],[116.4,-8.2],[116.72,-8.34],[116.64,-8.61]],[[115.45,-8.16],[115.7,-8.41],[115.33,-8.62],[115.14,-8.85],[115.06,-8.57],[114.61,-8.38],[114.47,-8.17],[114.94,-8.19],[115.15,-8.07],[115.45,-8.16]],[[106.05,-1.67],[106.37,-2.46],[106.82,-2.57],[106.61,-2.9],[106.67,-3.07],[106.0,-2.82],[105.79,-2.18],[105.13,-2.04],[105.37,-1.81],[105.46,-1.57],[105.59,-1.53],[105.7,-1.73],[105.72,-1.53],[105.91,-1.5],[106.05,-1.67]],[[123.18,-4.55],[123.2,-4.82],[123.06,-4.75],[122.97,-5.14],[123.19,-5.33],[122.97,-5.41],[122.81,-5.67],[122.65,-5.66],[122.59,-5.49],[122.77,-5.21],[122.85,-4.62],[123.07,-4.39],[123.18,-4.55]],[[122.65,-5.27],[122.56,-5.39],[122.28,-5.32],[122.4,-5.07],[122.37,-4.77],[122.7,-4.62],[122.76,-4.93],[122.61,-5.14],[122.65,-5.27]],[[108.32,3.69],[108.1,3.7],[108.24,3.81],[108.0,3.98],[108.25,4.22],[108.39,3.99],[108.32,3.69]],[[108.21,-3.0],[108.06,-3.23],[107.86,-3.09],[107.61,-3.21],[107.56,-2.92],[107.67,-2.57],[107.84,-2.53],[108.22,-2.7],[108.29,-2.83],[108.21,-3.0]],[[135.38,-0.65],[135.89,-0.73],[136.38,-1.09],[136.16,-1.21],[135.92,-1.18],[135.75,-0.82],[135.65,-0.88],[135.38,-0.65]],[[135.47,-1.59],[136.89,-1.8],[136.23,-1.89],[135.49,-1.67],[135.47,-1.59]],[[130.81,-0.0],[131.28,-0.15],[131.34,-0.29],[131.26,-0.37],[130.95,-0.34],[130.68,-0.08],[130.64,-0.14],[130.9,-0.42],[130.75,-0.44],[130.69,-0.3],[130.55,-0.37],[130.5,-0.27],[130.24,-0.21],[130.36,-0.07],[130.81,-0.0]],[[128.45,2.05],[128.3,2.03],[128.22,2.3],[128.33,2.47],[128.6,2.6],[128.69,2.47],[128.62,2.22],[128.45,2.05]],[[128.15,-1.66],[127.56,-1.73],[127.4,-1.59],[127.65,-1.33],[128.15,-1.66]],[[126.06,-2.45],[125.86,-2.08],[125.92,-1.97],[126.06,-2.45]],[[126.02,-1.79],[126.33,-1.82],[125.96,-1.92],[125.43,-1.94],[125.39,-1.84],[126.02,-1.79]],[[124.97,-1.71],[125.19,-1.71],[125.31,-1.88],[124.42,-2.01],[124.33,-1.86],[124.42,-1.66],[124.97,-1.71]],[[131.33,-8.0],[131.11,-8.0],[131.14,-7.68],[131.64,-7.11],[131.74,-7.2],[131.64,-7.27],[131.62,-7.63],[131.33,-8.0]],[[126.8,-7.67],[126.81,-7.74],[126.58,-7.81],[126.47,-7.95],[126.04,-7.89],[125.8,-7.98],[125.98,-7.66],[126.21,-7.71],[126.61,-7.57],[126.8,-7.67]],[[124.58,-8.14],[125.05,-8.18],[125.13,-8.33],[124.44,-8.44],[124.36,-8.39],[124.39,-8.25],[124.58,-8.14]],[[131.0,-1.32],[130.78,-1.26],[130.67,-0.96],[131.03,-0.92],[131.0,-1.32]],[[96.49,5.23],[97.55,5.21],[98.25,4.41],[98.31,4.09],[99.73,3.18],[100.52,2.19],[100.89,1.95],[100.83,2.24],[101.05,2.26],[101.48,1.69],[101.78,1.62],[102.02,1.44],[102.39,0.84],[102.95,0.66],[103.07,0.49],[103.01,0.42],[102.55,0.22],[102.9,0.28],[103.34,0.51],[103.67,0.29],[103.79,0.05],[103.43,-0.19],[103.41,-0.36],[103.51,-0.47],[103.44,-0.58],[103.72,-0.89],[104.36,-1.04],[104.52,-1.82],[104.85,-2.09],[104.65,-2.43],[104.65,-2.6],[104.97,-2.37],[105.4,-2.38],[105.58,-2.49],[106.04,-3.11],[105.84,-3.61],[105.93,-3.83],[105.83,-4.16],[105.89,-5.01],[105.75,-5.82],[105.35,-5.55],[105.08,-5.75],[104.64,-5.52],[104.68,-5.89],[104.6,-5.9],[103.83,-5.08],[102.54,-4.15],[102.13,-3.6],[101.58,-3.17],[100.89,-2.25],[100.86,-1.93],[100.31,-0.83],[99.67,0.05],[99.16,0.35],[98.6,1.86],[97.7,2.36],[97.59,2.85],[97.39,2.98],[96.97,3.58],[96.44,3.82],[95.43,4.87],[95.21,5.28],[95.28,5.59],[95.74,5.58],[96.13,5.29],[96.49,5.23]],[[122.78,-8.61],[121.65,-8.9],[121.41,-8.81],[121.33,-8.92],[121.04,-8.94],[120.55,-8.8],[120.12,-8.78],[119.91,-8.86],[119.81,-8.7],[119.87,-8.42],[120.61,-8.24],[121.44,-8.58],[121.97,-8.46],[122.32,-8.63],[122.85,-8.3],[122.92,-8.22],[122.76,-8.19],[122.85,-8.09],[122.98,-8.15],[123.01,-8.33],[122.78,-8.61]],[[120.01,-9.37],[120.29,-9.65],[120.56,-9.72],[120.78,-9.96],[120.8,-10.11],[120.44,-10.29],[120.14,-10.2],[119.6,-9.77],[119.04,-9.67],[118.96,-9.52],[119.19,-9.38],[119.8,-9.38],[119.94,-9.3],[120.01,-9.37]],[[118.24,-8.32],[118.61,-8.28],[118.71,-8.41],[118.93,-8.3],[119.13,-8.67],[119.08,-8.73],[118.82,-8.71],[118.75,-8.74],[118.83,-8.83],[118.43,-8.86],[118.38,-8.67],[118.19,-8.84],[117.51,-9.01],[117.06,-9.1],[116.79,-9.01],[116.84,-8.53],[117.16,-8.37],[117.57,-8.43],[117.81,-8.71],[117.97,-8.73],[118.23,-8.59],[117.81,-8.34],[117.76,-8.15],[118.12,-8.12],[118.24,-8.32]],[[124.89,1.0],[124.43,0.47],[123.75,0.31],[123.27,0.33],[123.0,0.49],[121.01,0.44],[120.58,0.53],[120.35,0.45],[120.19,0.27],[120.01,-0.2],[120.06,-0.56],[120.24,-0.87],[120.52,-1.04],[120.67,-1.37],[121.15,-1.34],[121.58,-0.83],[121.97,-0.93],[122.28,-0.76],[122.89,-0.76],[122.83,-0.66],[123.17,-0.57],[123.38,-0.65],[123.43,-0.78],[123.38,-1.0],[122.9,-0.9],[122.25,-1.56],[121.86,-1.69],[121.65,-1.9],[121.36,-1.88],[121.58,-2.15],[121.77,-2.24],[122.08,-2.75],[122.29,-2.91],[122.4,-3.2],[122.25,-3.62],[122.69,-4.08],[122.85,-4.06],[122.87,-4.39],[122.72,-4.34],[122.72,-4.41],[122.11,-4.54],[122.04,-4.83],[121.59,-4.76],[121.49,-4.58],[121.62,-4.09],[120.89,-3.52],[121.05,-3.17],[121.05,-2.75],[120.88,-2.65],[120.65,-2.67],[120.26,-2.95],[120.44,-3.71],[120.36,-4.09],[120.42,-4.62],[120.28,-5.15],[120.43,-5.59],[119.95,-5.58],[119.72,-5.69],[119.56,-5.61],[119.36,-5.31],[119.59,-4.52],[119.62,-4.03],[119.47,-3.51],[118.99,-3.54],[118.87,-3.4],[118.78,-2.72],[119.09,-2.48],[119.32,-1.93],[119.31,-1.41],[119.51,-0.91],[119.71,-0.68],[119.84,-0.86],[119.72,-0.09],[119.87,0.04],[119.81,0.24],[119.91,0.45],[120.27,0.97],[120.42,0.85],[120.6,0.85],[120.87,1.25],[121.08,1.33],[121.4,1.24],[121.59,1.07],[122.44,1.02],[122.84,0.85],[123.07,0.94],[123.93,0.85],[124.53,1.23],[124.6,1.39],[124.99,1.7],[125.16,1.64],[125.23,1.5],[124.89,1.0]],[[107.37,-6.01],[107.67,-6.22],[108.33,-6.29],[108.68,-6.79],[110.43,-6.95],[110.83,-6.42],[110.97,-6.44],[111.18,-6.69],[111.54,-6.65],[112.09,-6.89],[112.54,-6.93],[112.65,-7.22],[112.79,-7.3],[112.79,-7.55],[113.01,-7.66],[113.5,-7.72],[114.07,-7.63],[114.41,-7.79],[114.39,-8.41],[114.58,-8.77],[113.25,-8.29],[112.68,-8.41],[111.51,-8.31],[110.61,-8.15],[110.04,-7.89],[109.28,-7.7],[108.74,-7.67],[108.45,-7.8],[108.22,-7.78],[107.28,-7.47],[106.46,-7.37],[106.42,-7.24],[106.52,-7.05],[105.94,-6.86],[105.26,-6.84],[105.27,-6.73],[105.37,-6.66],[105.48,-6.78],[105.66,-6.47],[105.79,-6.46],[105.87,-6.12],[106.08,-5.91],[106.83,-6.1],[107.05,-5.9],[107.37,-6.01]],[[109.63,2.03],[109.54,1.9],[109.65,1.61],[110.51,0.86],[111.1,1.05],[111.81,1.01],[112.08,1.14],[112.19,1.44],[112.48,1.56],[112.94,1.57],[113.01,1.43],[113.62,1.24],[113.9,1.43],[114.51,1.45],[114.83,1.98],[114.79,2.25],[115.18,2.52],[115.08,2.63],[115.12,2.89],[115.25,3.03],[115.45,3.03],[115.68,4.19],[115.86,4.35],[117.1,4.34],[117.57,4.17],[117.47,4.08],[117.78,3.69],[117.63,3.64],[117.51,3.73],[117.45,3.63],[117.06,3.62],[117.35,3.43],[117.35,3.19],[117.61,3.06],[117.57,2.93],[117.7,2.89],[117.64,2.83],[117.79,2.75],[118.07,2.32],[117.79,2.03],[118.98,0.98],[118.53,0.81],[118.2,0.87],[117.91,1.1],[117.96,0.89],[117.75,0.73],[117.52,0.24],[117.46,-0.32],[117.56,-0.77],[116.91,-1.22],[116.74,-1.04],[116.75,-1.33],[116.28,-1.78],[116.42,-1.78],[116.45,-1.92],[116.31,-2.14],[116.57,-2.3],[116.53,-2.51],[116.32,-2.55],[116.33,-2.9],[116.17,-2.93],[116.26,-3.13],[115.96,-3.6],[114.69,-4.17],[114.53,-3.38],[114.45,-3.48],[114.34,-3.44],[114.34,-3.24],[114.24,-3.36],[114.08,-3.28],[113.71,-3.46],[113.61,-3.2],[113.34,-3.25],[113.03,-2.93],[112.97,-3.19],[112.76,-3.32],[112.6,-3.4],[112.28,-3.32],[111.86,-3.55],[111.82,-3.06],[111.69,-2.89],[111.63,-2.98],[111.37,-2.93],[110.93,-3.07],[110.83,-3.0],[110.9,-2.91],[110.7,-3.02],[110.57,-2.89],[110.26,-2.97],[110.1,-2.0],[109.96,-1.86],[110.04,-1.53],[109.98,-1.27],[109.79,-1.01],[109.26,-0.81],[109.37,-0.64],[109.12,-0.39],[109.26,0.03],[108.94,0.36],[108.92,0.91],[108.96,1.13],[109.13,1.25],[109.01,1.24],[109.08,1.5],[109.38,1.92],[109.63,2.03]],[[127.73,0.85],[127.88,0.83],[127.97,1.04],[128.16,1.16],[128.22,1.4],[128.69,1.57],[128.7,1.11],[128.3,0.88],[128.26,0.73],[128.61,0.55],[128.69,0.36],[128.9,0.22],[127.98,0.47],[127.89,0.3],[127.98,-0.25],[128.43,-0.89],[128.05,-0.71],[127.69,-0.24],[127.71,0.29],[127.54,0.61],[127.61,0.85],[127.43,1.14],[127.63,1.84],[128.04,2.2],[127.89,1.83],[128.01,1.7],[128.01,1.33],[127.65,1.01],[127.73,0.85]],[[129.75,-2.87],[129.98,-2.98],[130.38,-2.99],[130.57,-3.13],[130.86,-3.57],[130.81,-3.86],[129.84,-3.33],[129.51,-3.33],[129.47,-3.45],[128.86,-3.23],[128.52,-3.45],[128.13,-3.16],[127.9,-3.5],[127.88,-3.22],[128.2,-2.87],[128.99,-2.83],[129.17,-2.93],[129.48,-2.79],[129.75,-2.87]],[[126.86,-3.09],[127.03,-3.17],[127.24,-3.47],[127.23,-3.63],[126.94,-3.76],[126.55,-3.77],[126.06,-3.42],[126.09,-3.11],[126.86,-3.09]],[[124.92,-8.94],[124.94,-9.05],[125.15,-9.04],[125.1,-9.19],[124.96,-9.21],[125.07,-9.51],[124.96,-9.67],[124.43,-10.15],[123.86,-10.34],[123.64,-10.31],[123.72,-10.08],[123.59,-9.97],[123.71,-9.61],[124.04,-9.34],[124.32,-9.41],[124.44,-9.19],[124.92,-8.94]],[[134.75,-5.71],[134.71,-6.3],[134.44,-6.33],[134.15,-6.06],[134.3,-6.01],[134.34,-5.83],[134.21,-5.71],[134.34,-5.71],[134.57,-5.43],[134.75,-5.71]],[[134.54,-6.44],[134.32,-6.85],[134.2,-6.91],[134.09,-6.83],[134.11,-6.47],[134.19,-6.46],[134.11,-6.19],[134.54,-6.44]],[[138.54,-8.27],[138.3,-8.41],[137.65,-8.39],[138.08,-7.57],[138.3,-7.44],[138.77,-7.39],[138.99,-7.7],[138.79,-8.06],[138.54,-8.27]],[[140.97,-2.61],[140.97,-6.35],[140.86,-6.74],[140.98,-6.91],[140.98,-9.12],[140.0,-8.2],[140.12,-7.92],[139.93,-8.1],[139.39,-8.19],[139.25,-7.98],[138.89,-8.24],[139.09,-7.59],[138.75,-7.25],[139.18,-7.19],[138.85,-7.14],[138.6,-6.94],[138.86,-6.86],[138.44,-6.34],[138.3,-5.95],[138.37,-5.84],[138.2,-5.81],[138.34,-5.68],[138.09,-5.71],[138.06,-5.47],[137.28,-4.95],[137.2,-4.99],[136.62,-4.82],[135.98,-4.53],[135.2,-4.45],[134.68,-4.08],[134.71,-3.95],[134.89,-3.94],[134.27,-3.95],[134.15,-3.8],[133.97,-3.82],[133.68,-3.48],[133.7,-3.25],[133.84,-3.05],[133.7,-3.09],[133.65,-3.36],[133.52,-3.41],[133.4,-3.9],[133.25,-4.06],[132.91,-4.06],[132.75,-3.7],[132.87,-3.55],[132.75,-3.29],[132.35,-2.98],[132.05,-2.91],[131.97,-2.79],[132.23,-2.68],[132.72,-2.79],[133.19,-2.44],[133.7,-2.62],[133.75,-2.45],[133.9,-2.39],[133.9,-2.3],[133.79,-2.29],[133.92,-2.1],[132.96,-2.27],[132.31,-2.24],[132.02,-1.99],[131.93,-1.56],[131.29,-1.39],[131.0,-1.42],[131.19,-1.17],[131.26,-0.86],[131.8,-0.7],[132.39,-0.36],[132.86,-0.42],[133.47,-0.73],[133.97,-0.74],[134.11,-0.85],[134.07,-1.0],[134.26,-1.36],[134.11,-1.72],[134.19,-2.31],[134.46,-2.83],[134.48,-2.58],[134.63,-2.54],[134.7,-2.93],[134.84,-2.91],[134.89,-3.21],[135.25,-3.37],[135.49,-3.35],[135.86,-3.0],[136.01,-2.73],[136.24,-2.58],[136.39,-2.27],[137.07,-2.11],[137.17,-2.03],[137.12,-1.84],[137.81,-1.48],[139.79,-2.35],[140.62,-2.45],[140.75,-2.61],[140.97,-2.61]],[[138.9,-8.39],[138.56,-8.31],[138.8,-8.17],[138.9,-8.39]],[[101.71,2.08],[101.77,1.94],[101.72,1.79],[101.5,1.73],[101.41,2.02],[101.64,2.13],[101.71,2.08]],[[102.43,0.99],[102.28,1.08],[102.26,1.4],[102.44,1.23],[102.43,0.99]],[[102.49,1.46],[102.5,1.33],[102.08,1.5],[102.02,1.61],[102.49,1.46]],[[103.03,0.75],[102.49,0.86],[102.51,1.09],[103.0,0.86],[103.03,0.75]],[[103.17,0.87],[102.7,1.05],[102.73,1.16],[103.0,1.07],[103.17,0.87]],[[103.28,0.54],[103.14,0.55],[103.19,0.7],[103.28,0.54]],[[103.45,0.66],[103.34,0.78],[103.39,0.87],[103.5,0.72],[103.45,0.66]],[[104.02,1.18],[104.14,1.17],[104.07,0.99],[103.93,1.07],[104.02,1.18]],[[104.59,1.22],[104.66,1.05],[104.58,0.83],[104.44,1.05],[104.25,1.01],[104.36,1.18],[104.59,1.22]],[[104.78,-0.18],[105.01,-0.28],[104.91,-0.32],[104.45,-0.19],[104.54,0.02],[104.78,-0.18]],[[104.47,-0.33],[104.59,-0.47],[104.36,-0.66],[104.26,-0.46],[104.47,-0.33]],[[103.74,-0.35],[103.46,-0.36],[103.55,-0.23],[103.74,-0.35]],[[109.71,-1.18],[109.46,-1.28],[109.48,-0.99],[109.74,-1.04],[109.71,-1.18]],[[113.84,-7.11],[113.13,-7.22],[112.73,-7.07],[112.87,-6.9],[113.97,-6.87],[114.08,-6.99],[113.84,-7.11]],[[134.97,-1.12],[134.86,-1.11],[134.83,-0.98],[135.0,-1.03],[134.97,-1.12]],[[127.25,-0.5],[127.12,-0.52],[127.13,-0.28],[127.29,-0.28],[127.25,-0.5]],[[127.57,-0.32],[127.68,-0.47],[127.6,-0.61],[127.88,-0.81],[127.76,-0.88],[127.62,-0.77],[127.46,-0.81],[127.47,-0.64],[127.3,-0.5],[127.33,-0.34],[127.46,-0.41],[127.57,-0.32]],[[132.93,-5.9],[132.85,-5.99],[132.94,-5.68],[133.14,-5.32],[133.12,-5.58],[132.93,-5.9]],[[132.81,-5.85],[132.68,-5.91],[132.63,-5.61],[132.81,-5.85]],[[128.28,-3.67],[127.98,-3.77],[127.92,-3.7],[128.26,-3.51],[128.33,-3.52],[128.28,-3.67]],[[126.82,4.03],[126.7,4.07],[126.81,4.26],[126.72,4.34],[126.76,4.55],[126.92,4.29],[126.82,4.03]],[[125.66,3.44],[125.51,3.46],[125.47,3.73],[125.66,3.44]],[[130.86,-8.32],[131.02,-8.09],[131.18,-8.13],[130.86,-8.32]],[[129.84,-7.95],[129.71,-8.04],[129.59,-7.92],[129.61,-7.8],[129.81,-7.82],[129.84,-7.95]],[[127.82,-8.1],[128.12,-8.17],[128.02,-8.26],[127.82,-8.19],[127.82,-8.1]],[[130.35,-1.69],[130.42,-1.97],[130.25,-2.05],[129.89,-1.99],[129.74,-1.87],[130.35,-1.69]],[[102.37,-5.48],[102.11,-5.32],[102.37,-5.37],[102.37,-5.48]],[[100.43,-3.18],[100.47,-3.33],[100.35,-3.23],[100.2,-2.99],[100.2,-2.79],[100.45,-3.0],[100.43,-3.18]],[[100.2,-2.74],[100.01,-2.82],[99.99,-2.53],[100.2,-2.74]],[[99.84,-2.34],[99.61,-2.26],[99.57,-2.03],[99.69,-2.06],[99.84,-2.34]],[[98.46,-0.53],[98.31,-0.53],[98.43,-0.23],[98.32,-0.0],[98.54,-0.26],[98.46,-0.53]],[[96.46,2.36],[95.81,2.66],[95.72,2.83],[95.9,2.89],[96.42,2.52],[96.46,2.36]],[[122.04,-5.44],[121.81,-5.26],[121.91,-5.07],[122.04,-5.16],[122.04,-5.44]],[[123.21,-1.17],[123.24,-1.39],[123.43,-1.24],[123.55,-1.34],[123.51,-1.45],[123.37,-1.51],[123.27,-1.44],[123.17,-1.62],[123.15,-1.3],[122.89,-1.59],[122.81,-1.43],[122.91,-1.18],[123.21,-1.17]],[[121.86,-0.41],[121.88,-0.5],[121.66,-0.53],[121.86,-0.41]],[[120.53,-6.3],[120.49,-6.46],[120.44,-6.18],[120.48,-5.78],[120.53,-6.3]],[[115.38,-6.97],[115.22,-6.95],[115.24,-6.86],[115.52,-6.9],[115.38,-6.97]],[[116.3,-3.87],[116.09,-4.05],[116.02,-3.7],[116.12,-3.34],[116.27,-3.25],[116.3,-3.87]],[[122.95,-10.91],[122.83,-10.9],[122.85,-10.76],[123.37,-10.47],[123.42,-10.65],[122.95,-10.91]],[[124.29,-8.33],[124.15,-8.53],[123.93,-8.45],[124.24,-8.2],[124.29,-8.33]],[[123.92,-8.27],[123.78,-8.3],[123.55,-8.57],[123.23,-8.53],[123.48,-8.32],[123.39,-8.28],[123.78,-8.19],[123.92,-8.27]],[[123.32,-8.35],[123.03,-8.4],[123.22,-8.24],[123.34,-8.27],[123.32,-8.35]],[[103.42,1.05],[103.32,1.07],[103.38,1.13],[103.42,1.05]],[[104.24,0.83],[104.18,0.8],[104.11,0.93],[104.24,0.83]],[[106.29,3.16],[106.28,3.09],[106.2,3.2],[106.29,3.16]],[[105.76,2.86],[105.69,3.06],[105.84,2.98],[105.76,2.86]],[[108.89,2.91],[108.79,2.89],[108.89,3.0],[108.89,2.91]],[[108.95,-1.62],[108.84,-1.66],[108.8,-1.57],[108.95,-1.62]],[[106.89,-3.01],[106.74,-2.93],[106.91,-2.93],[106.89,-3.01]],[[112.72,-5.81],[112.59,-5.8],[112.69,-5.73],[112.72,-5.81]],[[105.25,-6.64],[105.12,-6.61],[105.26,-6.52],[105.25,-6.64]],[[97.33,2.08],[97.11,2.22],[97.29,2.2],[97.33,2.08]],[[123.6,-1.7],[123.48,-1.68],[123.53,-1.5],[123.6,-1.7]],[[123.24,-4.11],[123.08,-4.23],[122.97,-4.03],[123.21,-4.0],[123.24,-4.11]],[[119.46,-8.74],[119.39,-8.74],[119.45,-8.43],[119.56,-8.52],[119.46,-8.74]],[[119.07,-8.24],[119.02,-8.2],[119.1,-8.14],[119.07,-8.24]],[[115.61,-8.77],[115.48,-8.72],[115.56,-8.67],[115.61,-8.77]],[[117.65,4.17],[117.88,4.19],[117.92,4.05],[117.74,4.0],[117.65,4.17]],[[117.66,3.28],[117.55,3.43],[117.68,3.41],[117.66,3.28]],[[123.63,-5.27],[123.58,-5.37],[123.54,-5.27],[123.63,-5.27]],[[120.77,-7.12],[120.64,-7.12],[120.63,-7.02],[120.77,-7.12]],[[117.56,-8.37],[117.49,-8.18],[117.67,-8.15],[117.56,-8.37]],[[116.42,-3.46],[116.39,-3.64],[116.33,-3.54],[116.42,-3.46]],[[130.91,-0.78],[130.83,-0.86],[130.4,-0.92],[130.48,-0.83],[130.91,-0.78]],[[130.63,-0.53],[130.47,-0.49],[130.62,-0.42],[130.68,-0.47],[130.63,-0.53]],[[127.3,-0.78],[127.16,-0.76],[127.21,-0.62],[127.3,-0.78]],[[128.72,-3.55],[128.62,-3.59],[128.59,-3.51],[128.72,-3.55]],[[128.56,-3.59],[128.39,-3.64],[128.45,-3.51],[128.56,-3.59]],[[131.98,-7.2],[131.75,-7.12],[131.92,-7.1],[131.98,-7.2]],[[128.67,-7.18],[128.53,-7.13],[128.63,-7.07],[128.67,-7.18]],[[127.42,-7.62],[127.36,-7.65],[127.37,-7.51],[127.48,-7.53],[127.42,-7.62]],[[123.42,-10.3],[123.33,-10.34],[123.33,-10.26],[123.46,-10.14],[123.42,-10.3]],[[121.88,-10.59],[121.7,-10.56],[122.0,-10.45],[121.88,-10.59]],[[122.98,-8.55],[122.95,-8.6],[122.9,-8.53],[123.01,-8.45],[123.15,-8.48],[122.98,-8.55]]]},{"code":"IND","name":"印度","name_en":"India","rings":[[[68.17,23.86],[68.72,23.96],[68.78,24.31],[69.56,24.27],[69.81,24.17],[70.49,24.41],[70.72,24.24],[71.04,24.4],[70.97,24.57],[71.05,24.69],[70.65,25.42],[70.65,25.67],[70.26,25.71],[70.1,25.91],[70.15,26.51],[69.51,26.74],[69.54,27.12],[70.14,27.85],[70.4,28.03],[70.63,27.94],[70.8,27.71],[71.87,27.96],[72.34,28.75],[72.9,29.03],[73.38,29.93],[73.81,30.09],[73.93,30.22],[73.9,30.44],[74.34,30.89],[74.63,31.03],[74.52,31.19],[74.56,31.82],[75.32,32.22],[75.23,32.37],[74.69,32.49],[74.66,32.76],[74.35,32.77],[74.3,32.99],[74.0,33.19],[74.15,33.51],[73.98,33.72],[74.25,33.95],[73.9,34.08],[73.97,34.24],[73.79,34.38],[73.96,34.65],[74.3,34.77],[75.71,34.5],[76.04,34.67],[76.59,34.74],[77.0,34.99],[77.05,35.11],[77.8,35.5],[78.04,35.48],[78.01,35.25],[78.33,34.61],[78.67,34.52],[78.97,34.3],[78.73,34.01],[78.8,33.5],[79.14,33.17],[79.22,32.5],[78.92,32.36],[78.7,32.6],[78.39,32.52],[78.5,32.22],[78.74,31.96],[78.69,31.74],[78.8,31.62],[78.74,31.32],[79.11,31.4],[79.49,30.99],[79.79,30.97],[80.15,30.79],[80.19,30.57],[80.68,30.41],[81.01,30.16],[80.85,30.14],[80.4,29.73],[80.07,28.83],[80.42,28.61],[80.59,28.65],[81.85,27.87],[81.99,27.91],[82.45,27.67],[82.68,27.67],[82.73,27.52],[83.29,27.37],[83.45,27.47],[83.83,27.38],[84.09,27.49],[84.61,27.3],[84.69,27.04],[85.24,26.75],[85.57,26.84],[85.79,26.6],[86.01,26.65],[86.7,26.44],[87.02,26.56],[87.29,26.36],[88.0,26.38],[88.16,26.72],[87.98,27.13],[88.14,27.95],[88.58,28.09],[88.8,28.01],[88.85,27.87],[88.75,27.52],[88.89,27.32],[88.74,27.18],[88.86,26.96],[89.15,26.82],[89.33,26.85],[89.76,26.7],[90.12,26.75],[90.35,26.89],[90.74,26.77],[92.0,26.85],[92.07,26.91],[91.99,27.1],[92.08,27.29],[91.99,27.45],[91.74,27.44],[91.59,27.56],[91.63,27.76],[91.98,27.73],[92.55,27.88],[92.69,27.99],[92.7,28.15],[93.03,28.33],[93.25,28.63],[93.76,28.73],[94.62,29.31],[94.77,29.18],[95.39,29.04],[95.52,29.21],[96.04,29.45],[96.23,29.25],[96.36,29.25],[96.12,29.08],[96.14,28.92],[96.44,29.05],[96.58,28.76],[96.28,28.41],[96.6,28.46],[97.08,28.37],[97.32,28.22],[97.34,27.94],[96.88,27.59],[97.1,27.12],[96.73,27.33],[96.19,27.26],[95.13,26.6],[95.05,26.35],[95.13,26.04],[94.58,25.32],[94.55,25.22],[94.71,25.05],[94.13,23.88],[93.33,24.06],[93.41,23.68],[93.37,23.13],[93.31,23.03],[93.16,23.03],[93.08,22.72],[93.15,22.23],[92.91,21.99],[92.72,22.13],[92.57,21.98],[92.25,23.68],[91.93,23.69],[91.94,23.5],[91.75,23.29],[91.75,23.05],[91.62,22.98],[91.44,23.2],[91.32,23.1],[91.17,23.58],[91.23,23.92],[91.37,24.09],[91.88,24.2],[91.95,24.36],[92.1,24.41],[92.23,24.88],[92.44,24.85],[92.47,24.94],[92.05,25.17],[90.44,25.16],[89.83,25.29],[89.82,25.94],[89.67,26.21],[89.55,26.01],[89.37,26.01],[89.19,26.11],[89.02,26.41],[88.92,26.38],[88.97,26.25],[88.83,26.25],[88.37,26.56],[88.44,26.37],[88.15,26.09],[88.08,25.89],[88.5,25.54],[88.77,25.49],[88.95,25.26],[88.82,25.18],[88.46,25.19],[88.31,24.88],[88.15,24.91],[88.02,24.63],[88.15,24.49],[88.72,24.27],[88.57,23.67],[88.74,23.44],[88.72,23.25],[88.93,23.19],[88.85,23.04],[89.05,22.27],[89.03,21.94],[88.95,21.94],[89.05,21.65],[88.91,21.65],[88.86,21.74],[88.75,21.58],[88.74,22.01],[88.64,22.12],[88.58,21.66],[88.45,21.61],[88.29,21.76],[88.25,21.62],[88.12,21.64],[88.06,21.69],[88.2,22.14],[87.94,22.37],[87.96,22.26],[88.16,22.12],[87.95,21.83],[87.68,21.65],[87.1,21.5],[86.86,21.24],[86.98,20.7],[86.75,20.31],[86.38,20.01],[86.25,20.05],[86.31,19.99],[86.22,19.9],[85.58,19.69],[85.5,19.7],[85.56,19.75],[85.5,19.89],[85.25,19.76],[85.18,19.59],[85.37,19.68],[85.44,19.63],[84.77,19.13],[84.1,18.29],[83.65,18.07],[83.2,17.61],[82.36,17.1],[82.26,16.56],[81.76,16.33],[81.29,16.34],[80.98,15.76],[80.65,15.9],[80.29,15.71],[80.05,15.07],[80.18,14.48],[80.11,14.21],[80.31,13.49],[80.16,13.71],[80.06,13.61],[80.34,13.36],[80.23,12.69],[79.86,11.99],[79.79,11.45],[79.69,11.31],[79.8,11.34],[79.85,11.2],[79.84,10.32],[79.31,10.26],[78.94,9.57],[79.02,9.33],[79.41,9.19],[78.98,9.27],[78.42,9.11],[78.19,8.89],[78.06,8.38],[77.52,8.08],[77.07,8.32],[76.55,8.9],[76.32,9.45],[76.24,9.93],[76.34,9.83],[76.38,9.54],[76.46,9.54],[76.35,9.92],[76.2,10.09],[75.72,11.36],[75.2,12.06],[74.95,12.56],[74.38,14.49],[73.95,15.07],[73.8,15.4],[73.93,15.4],[73.77,15.57],[73.83,15.66],[73.68,15.71],[73.34,16.46],[73.16,17.62],[72.88,18.64],[73.01,19.02],[72.97,19.15],[72.83,18.98],[72.8,19.08],[72.81,19.3],[72.99,19.28],[72.79,19.36],[72.67,19.83],[72.89,20.67],[72.81,21.12],[72.69,21.18],[72.62,21.37],[72.73,21.47],[72.61,21.46],[73.11,21.75],[72.54,21.7],[72.7,21.97],[72.52,21.98],[72.55,22.16],[72.81,22.23],[72.18,22.27],[72.31,22.19],[72.27,22.09],[72.04,21.82],[72.21,21.73],[72.25,21.53],[72.02,21.16],[71.02,20.74],[70.49,20.84],[70.03,21.18],[68.97,22.29],[69.05,22.44],[69.28,22.29],[70.18,22.57],[70.51,23.0],[70.49,23.09],[70.34,22.94],[70.12,22.95],[69.66,22.76],[69.24,22.85],[68.64,23.19],[68.42,23.57],[68.78,23.85],[68.23,23.6],[68.17,23.86]],[[93.89,6.83],[93.83,6.75],[93.66,7.02],[93.68,7.18],[93.82,7.24],[93.93,6.97],[93.89,6.83]],[[93.73,7.36],[93.64,7.26],[93.6,7.32],[93.69,7.41],[93.73,7.36]],[[93.44,7.88],[93.37,7.88],[93.33,8.01],[93.44,7.88]],[[93.54,8.06],[93.48,8.02],[93.49,8.22],[93.54,8.06]],[[92.79,9.14],[92.72,9.17],[92.76,9.24],[92.79,9.14]],[[92.5,10.55],[92.37,10.55],[92.35,10.75],[92.51,10.9],[92.57,10.7],[92.5,10.55]],[[92.69,11.38],[92.6,11.39],[92.64,11.51],[92.69,11.38]],[[92.72,11.54],[92.53,11.87],[92.68,12.19],[92.79,12.23],[92.72,12.54],[92.86,13.36],[93.06,13.55],[93.07,13.22],[92.89,12.94],[92.99,12.54],[92.86,12.44],[92.72,11.54]],[[93.02,12.04],[93.06,11.9],[92.96,12.0],[93.02,12.04]]]},{"code":"CHN","name":"中華人民共和國","name_en":"China","rings":[[[118.18,24.5],[118.15,24.44],[118.08,24.5],[118.18,24.5]],[[121.86,31.49],[121.52,31.55],[121.21,31.81],[121.46,31.76],[121.86,31.49]],[[122.3,29.96],[122.02,30.01],[121.97,30.14],[122.28,30.07],[122.3,29.96]],[[119.82,25.46],[119.7,25.43],[119.72,25.64],[119.84,25.59],[119.82,25.46]],[[110.39,21.09],[110.52,21.08],[110.5,20.97],[110.28,21.0],[110.39,21.09]],[[121.25,28.09],[121.13,28.06],[121.13,28.14],[121.21,28.2],[121.25,28.09]],[[112.79,21.6],[112.71,21.7],[112.78,21.77],[112.86,21.75],[112.79,21.6]],[[112.64,21.64],[112.53,21.62],[112.65,21.71],[112.64,21.64]],[[107.97,21.51],[107.76,21.66],[107.35,21.61],[106.97,21.92],[106.66,21.98],[106.55,22.5],[106.78,22.78],[106.54,22.91],[106.28,22.86],[106.15,22.97],[105.84,22.92],[105.28,23.35],[104.86,23.14],[104.69,22.82],[104.37,22.7],[104.14,22.8],[103.94,22.54],[103.62,22.78],[103.49,22.59],[103.3,22.76],[102.98,22.45],[102.47,22.75],[102.13,22.38],[101.84,22.39],[101.71,22.49],[101.52,22.25],[101.74,21.83],[101.72,21.31],[101.8,21.24],[101.73,21.16],[101.54,21.23],[101.25,21.2],[101.08,21.76],[100.6,21.47],[100.15,21.48],[100.1,21.66],[99.94,21.76],[99.92,22.03],[99.17,22.15],[99.39,22.83],[99.51,22.96],[99.42,23.07],[98.86,23.19],[98.83,23.62],[98.68,23.91],[98.84,24.12],[98.21,24.11],[97.56,23.91],[97.71,24.23],[97.53,24.63],[97.74,24.87],[97.82,25.25],[98.01,25.29],[98.14,25.57],[98.33,25.59],[98.47,25.79],[98.66,25.86],[98.56,26.07],[98.69,26.19],[98.74,26.7],[98.65,27.57],[98.45,27.66],[98.3,27.55],[98.1,28.14],[97.66,28.5],[97.54,28.51],[97.32,28.22],[97.08,28.37],[96.6,28.46],[96.28,28.41],[96.58,28.76],[96.44,29.05],[96.14,28.92],[96.12,29.08],[96.36,29.25],[96.23,29.25],[96.04,29.45],[95.52,29.21],[95.39,29.04],[94.77,29.18],[94.62,29.31],[93.76,28.73],[93.25,28.63],[93.12,28.4],[92.65,28.09],[92.66,27.95],[91.98,27.73],[91.63,27.76],[91.64,27.92],[91.27,28.08],[91.02,27.97],[90.35,28.08],[90.35,28.24],[89.9,28.29],[89.48,28.06],[88.89,27.32],[88.75,27.52],[88.85,27.87],[88.8,28.01],[88.62,28.09],[88.11,27.87],[87.62,27.82],[87.14,27.84],[86.61,28.1],[86.41,27.93],[86.14,28.11],[85.99,27.91],[85.68,28.28],[85.12,28.32],[85.16,28.59],[84.8,28.56],[84.23,28.91],[84.1,29.22],[83.94,29.28],[83.58,29.18],[83.16,29.61],[82.85,29.68],[82.22,30.06],[82.04,30.33],[81.42,30.34],[81.26,30.09],[81.11,30.04],[80.99,30.24],[80.68,30.41],[80.19,30.57],[80.15,30.79],[79.39,31.06],[79.11,31.4],[78.76,31.3],[78.74,31.96],[78.5,32.22],[78.39,32.52],[78.7,32.6],[78.92,32.36],[79.22,32.5],[79.14,33.17],[78.8,33.5],[78.73,34.01],[78.97,34.3],[78.28,34.65],[78.01,35.25],[78.04,35.48],[77.09,35.55],[76.63,35.73],[76.55,35.89],[76.18,35.81],[75.91,36.05],[75.97,36.38],[75.84,36.65],[75.42,36.74],[75.35,36.91],[74.54,37.02],[74.38,37.14],[74.73,37.29],[74.89,37.23],[75.12,37.39],[74.89,37.6],[74.94,37.77],[74.78,38.19],[74.84,38.4],[74.28,38.66],[74.13,38.66],[74.03,38.54],[73.8,38.61],[73.7,38.85],[73.81,38.97],[73.61,39.23],[73.63,39.45],[73.91,39.58],[73.84,39.8],[73.99,40.04],[74.83,40.33],[74.84,40.48],[75.11,40.45],[75.56,40.63],[75.68,40.31],[76.26,40.43],[76.32,40.35],[76.91,41.02],[78.12,41.08],[78.36,41.37],[78.74,41.56],[79.77,41.9],[79.84,42.0],[80.24,42.04],[80.17,42.67],[80.25,42.8],[80.54,42.87],[80.39,43.04],[80.79,43.16],[80.36,44.1],[80.36,44.55],[80.48,44.71],[79.87,44.88],[80.06,45.01],[81.69,45.35],[81.94,45.16],[82.27,45.22],[82.52,45.13],[82.61,45.42],[82.32,45.59],[83.03,47.19],[84.02,46.97],[84.67,46.97],[84.79,46.83],[85.48,47.06],[85.66,47.25],[85.53,47.92],[85.69,48.31],[86.55,48.53],[86.72,48.7],[86.75,49.01],[87.05,49.11],[87.81,49.16],[87.87,49.0],[87.74,48.88],[88.06,48.71],[87.98,48.56],[88.52,48.38],[88.58,48.22],[89.05,48.0],[89.48,48.03],[89.78,47.83],[90.03,47.88],[90.1,47.75],[90.31,47.68],[90.5,47.29],[90.72,47.0],[90.87,46.95],[91.03,46.57],[90.91,46.27],[91.0,46.04],[90.71,45.73],[90.66,45.53],[90.88,45.2],[93.52,44.94],[94.71,44.35],[95.35,44.28],[95.33,44.04],[95.53,43.95],[95.86,43.28],[96.3,42.93],[96.39,42.72],[97.21,42.79],[99.47,42.57],[99.98,42.68],[101.5,42.54],[102.16,42.16],[103.07,42.01],[103.71,41.75],[104.5,41.88],[104.5,41.66],[104.98,41.6],[106.77,42.29],[108.17,42.45],[109.44,42.46],[110.4,42.77],[111.01,43.34],[111.93,43.71],[111.84,43.93],[111.4,44.37],[111.62,44.83],[111.9,45.06],[112.41,45.06],[112.71,44.88],[113.59,44.75],[114.08,44.97],[114.56,45.39],[115.68,45.46],[116.2,45.74],[116.21,45.89],[116.56,46.29],[116.86,46.39],[117.33,46.36],[117.44,46.59],[117.74,46.52],[118.07,46.67],[118.84,46.76],[119.33,46.61],[119.87,46.67],[119.9,46.86],[119.71,47.15],[118.5,47.98],[117.77,47.99],[117.35,47.65],[116.76,47.87],[116.23,47.86],[115.9,47.69],[115.62,47.87],[115.53,48.13],[115.79,48.25],[115.82,48.58],[116.68,49.82],[117.87,49.51],[118.45,49.84],[119.26,50.07],[119.35,50.28],[119.16,50.41],[120.07,51.6],[120.51,51.85],[120.75,52.1],[120.66,52.57],[120.07,52.63],[120.09,52.79],[120.99,53.28],[123.31,53.56],[123.74,53.51],[124.81,53.13],[125.08,53.2],[125.65,53.04],[125.73,52.89],[126.05,52.74],[126.02,52.61],[126.34,52.36],[126.81,51.51],[126.92,51.1],[127.31,50.71],[127.34,50.35],[127.59,50.21],[127.49,49.98],[127.55,49.8],[128.0,49.57],[128.7,49.6],[129.07,49.37],[129.5,49.39],[130.2,48.89],[130.55,48.86],[130.62,48.77],[130.55,48.6],[130.8,48.34],[130.73,48.02],[130.96,47.71],[132.48,47.71],[132.71,47.95],[133.02,48.06],[133.47,48.1],[134.29,48.37],[134.67,48.25],[134.57,48.02],[134.75,47.72],[134.54,47.49],[134.17,47.3],[134.2,47.13],[133.87,46.5],[133.86,46.25],[133.51,45.88],[133.44,45.6],[133.19,45.49],[133.11,45.13],[132.94,45.03],[131.85,45.33],[131.45,44.98],[130.98,44.84],[131.26,44.07],[131.17,43.7],[131.26,43.38],[131.07,42.9],[130.42,42.73],[130.58,42.62],[130.53,42.54],[130.25,42.74],[130.24,42.89],[129.9,43.0],[129.7,42.45],[129.31,42.41],[128.92,42.04],[128.05,41.99],[128.29,41.61],[128.15,41.39],[127.18,41.53],[126.95,41.77],[126.72,41.72],[126.6,41.64],[126.49,41.36],[125.99,40.9],[125.73,40.87],[124.89,40.46],[124.27,39.92],[124.11,39.84],[123.65,39.88],[123.58,39.79],[122.84,39.6],[122.33,39.37],[121.98,39.05],[121.68,39.0],[121.65,38.87],[121.16,38.73],[121.11,38.92],[121.68,39.11],[121.63,39.22],[121.82,39.39],[121.28,39.38],[121.27,39.54],[121.52,39.64],[121.52,39.84],[121.8,39.95],[122.26,40.5],[122.14,40.69],[121.86,40.84],[121.83,40.97],[121.73,40.85],[121.17,40.9],[120.48,40.23],[119.39,39.75],[119.22,39.41],[118.98,39.18],[118.3,39.07],[118.04,39.23],[117.78,39.13],[117.55,38.69],[117.66,38.42],[118.01,38.18],[118.8,38.13],[118.94,38.04],[119.09,37.7],[118.99,37.64],[118.95,37.33],[119.29,37.14],[119.76,37.16],[119.88,37.35],[120.31,37.62],[120.26,37.68],[120.75,37.83],[121.64,37.46],[121.96,37.45],[122.06,37.53],[122.34,37.41],[122.67,37.4],[122.45,37.07],[122.52,36.95],[122.34,36.83],[122.16,36.96],[121.93,36.96],[121.05,36.61],[120.81,36.63],[120.9,36.44],[120.71,36.41],[120.64,36.13],[120.39,36.05],[120.33,36.23],[120.18,36.2],[120.09,36.12],[120.28,35.98],[119.43,35.3],[119.17,34.85],[119.2,34.75],[119.35,34.75],[120.27,34.27],[120.5,33.64],[120.87,33.02],[120.85,32.66],[121.34,32.43],[121.45,32.15],[121.83,31.9],[121.87,31.7],[121.76,31.7],[121.35,31.86],[120.97,31.87],[120.52,32.11],[120.04,31.94],[120.72,31.98],[120.79,31.82],[121.66,31.32],[121.83,31.06],[121.88,30.92],[121.42,30.79],[121.0,30.56],[120.9,30.39],[120.45,30.39],[120.19,30.24],[120.49,30.3],[120.63,30.13],[121.26,30.3],[121.68,29.98],[122.08,29.87],[121.51,29.48],[121.89,29.63],[121.97,29.49],[121.92,29.14],[121.72,29.26],[121.45,29.13],[121.68,28.95],[121.54,28.93],[121.66,28.85],[121.48,28.64],[121.61,28.29],[121.27,28.22],[121.22,28.35],[121.15,28.33],[120.96,28.04],[120.75,28.01],[120.83,27.89],[120.59,27.58],[120.61,27.41],[120.28,27.1],[120.04,26.63],[119.88,26.61],[119.82,26.85],[119.71,26.73],[119.59,26.78],[119.88,26.33],[119.46,26.05],[119.14,26.12],[119.33,25.95],[119.62,26.0],[119.54,25.59],[119.62,25.39],[119.18,25.45],[119.29,25.23],[118.98,25.21],[118.91,24.93],[118.64,24.84],[118.72,24.75],[118.66,24.62],[118.09,24.63],[118.01,24.48],[117.84,24.47],[118.02,24.38],[118.06,24.25],[117.63,23.84],[117.47,23.84],[117.37,23.59],[117.29,23.71],[117.08,23.58],[116.91,23.65],[116.86,23.45],[116.63,23.35],[116.7,23.28],[116.54,23.18],[116.47,22.95],[116.25,22.98],[115.85,22.8],[115.64,22.85],[115.5,22.72],[115.2,22.82],[114.85,22.62],[114.65,22.76],[114.55,22.53],[114.34,22.59],[114.02,22.51],[113.62,22.86],[113.62,23.13],[113.52,23.1],[113.33,22.91],[113.55,22.59],[113.55,22.23],[113.15,22.07],[113.09,22.21],[112.95,21.91],[112.81,21.94],[112.59,21.78],[112.36,21.98],[112.39,21.8],[112.3,21.74],[111.94,21.85],[111.6,21.56],[111.02,21.51],[110.57,21.21],[110.41,21.34],[110.37,21.17],[110.15,20.94],[110.18,20.86],[110.37,20.84],[110.31,20.67],[110.51,20.52],[110.34,20.29],[110.12,20.26],[109.88,20.36],[109.97,20.45],[109.66,20.92],[109.68,21.13],[109.93,21.48],[109.69,21.52],[109.57,21.69],[109.54,21.54],[109.15,21.43],[109.08,21.44],[109.1,21.59],[108.77,21.63],[108.59,21.9],[108.48,21.9],[108.5,21.63],[108.32,21.69],[108.25,21.56],[107.97,21.51]],[[110.89,19.99],[111.01,19.66],[110.82,19.56],[110.64,19.29],[110.45,18.75],[110.07,18.45],[109.52,18.22],[108.7,18.54],[108.67,19.3],[109.28,19.76],[109.18,19.77],[109.26,19.88],[110.17,20.05],[110.59,19.98],[110.65,20.14],[110.89,19.99]]]},{"code":"KHM","name":"柬埔寨","name_en":"Cambodia","rings":[[[107.52,14.71],[107.33,14.13],[107.61,13.44],[107.48,13.03],[107.54,12.43],[107.39,12.26],[107.21,12.3],[106.93,12.08],[106.41,11.95],[106.4,11.69],[106.01,11.76],[105.85,11.64],[105.86,11.29],[106.16,11.04],[106.16,10.79],[105.85,10.86],[105.76,10.99],[105.41,10.95],[105.31,10.85],[105.05,10.91],[105.05,10.7],[104.85,10.53],[104.56,10.52],[104.43,10.41],[103.87,10.66],[103.66,10.51],[103.59,10.55],[103.54,10.67],[103.72,10.89],[103.53,11.15],[103.35,10.92],[103.15,10.91],[103.13,11.46],[102.74,12.09],[102.76,12.43],[102.5,12.67],[102.32,13.54],[102.55,13.59],[103.03,14.25],[103.55,14.42],[103.98,14.36],[104.78,14.43],[104.97,14.37],[105.03,14.23],[105.18,14.35],[105.35,14.11],[105.53,14.16],[105.9,13.92],[106.07,13.92],[106.12,14.05],[105.98,14.34],[106.17,14.37],[106.23,14.48],[106.35,14.45],[106.5,14.58],[106.78,14.34],[106.94,14.33],[107.29,14.59],[107.41,14.56],[107.52,14.71]]]},{"code":"MMR","name":"緬甸","name_en":"Myanmar","rings":[[[100.12,20.32],[99.89,20.42],[99.72,20.33],[99.46,20.36],[99.49,20.15],[99.07,20.1],[98.92,19.77],[98.37,19.69],[98.02,19.75],[97.82,19.46],[97.71,18.93],[97.75,18.59],[97.37,18.52],[97.45,18.36],[97.63,18.29],[97.71,17.8],[98.44,16.98],[98.66,16.33],[98.84,16.42],[98.89,16.35],[98.82,16.18],[98.59,16.05],[98.56,15.37],[98.19,15.2],[98.2,14.98],[98.57,14.36],[98.93,14.05],[99.14,13.72],[99.12,13.03],[99.22,12.74],[99.41,12.55],[99.61,11.78],[99.19,11.11],[98.76,10.66],[98.7,10.19],[98.56,10.03],[98.46,10.68],[98.68,10.99],[98.74,11.59],[98.88,11.72],[98.64,11.74],[98.7,12.23],[98.6,12.25],[98.68,12.35],[98.58,13.16],[98.25,13.73],[98.2,13.98],[98.11,13.71],[98.1,14.16],[97.91,14.65],[98.02,14.65],[97.81,14.86],[97.71,15.88],[97.58,16.02],[97.63,16.46],[97.73,16.57],[97.38,16.52],[97.2,17.1],[96.85,17.4],[96.91,17.03],[96.77,16.71],[96.43,16.5],[96.19,16.77],[96.32,16.44],[95.76,16.17],[95.39,15.72],[95.3,15.76],[95.35,16.1],[95.18,15.83],[94.94,15.82],[94.89,16.18],[94.8,15.97],[94.66,15.9],[94.7,16.51],[94.67,16.34],[94.44,16.09],[94.22,16.02],[94.27,16.52],[94.59,17.57],[94.43,18.2],[94.17,18.73],[94.25,18.74],[94.07,18.89],[94.04,19.29],[93.93,18.9],[93.71,19.03],[93.49,19.37],[93.58,19.4],[93.82,19.24],[94.0,19.44],[93.61,19.78],[93.71,19.91],[93.25,20.07],[93.16,20.04],[93.2,19.9],[93.13,19.86],[93.0,20.07],[93.1,20.18],[93.02,20.19],[93.07,20.38],[92.88,20.15],[92.79,20.21],[92.85,20.41],[92.71,20.56],[92.72,20.3],[92.38,20.72],[92.18,21.29],[92.33,21.44],[92.6,21.27],[92.57,21.98],[92.69,22.13],[92.96,22.0],[93.15,22.23],[93.08,22.72],[93.16,23.03],[93.35,23.08],[93.39,23.34],[93.33,24.06],[94.13,23.88],[94.71,25.05],[94.55,25.22],[94.58,25.32],[95.13,26.04],[95.05,26.35],[95.13,26.6],[96.19,27.26],[96.73,27.33],[97.1,27.12],[96.88,27.59],[97.34,27.94],[97.32,28.22],[97.6,28.52],[98.1,28.14],[98.3,27.55],[98.45,27.66],[98.65,27.57],[98.74,26.7],[98.69,26.19],[98.56,26.07],[98.66,25.86],[98.47,25.79],[98.33,25.59],[98.14,25.57],[98.01,25.29],[97.82,25.25],[97.74,24.87],[97.58,24.77],[97.53,24.49],[97.71,24.23],[97.56,23.91],[98.21,24.11],[98.84,24.12],[98.68,23.91],[98.83,23.62],[98.86,23.19],[99.42,23.07],[99.51,22.96],[99.39,22.83],[99.19,22.13],[99.92,22.03],[99.94,21.76],[100.21,21.46],[100.6,21.47],[100.84,21.66],[101.13,21.74],[101.08,21.47],[100.76,21.31],[100.54,20.99],[100.62,20.86],[100.25,20.73],[100.12,20.32]],[[98.21,10.95],[98.27,10.74],[98.08,10.89],[98.21,10.95]],[[98.52,11.91],[98.47,12.08],[98.61,11.96],[98.52,11.91]],[[98.55,11.74],[98.53,11.54],[98.43,11.57],[98.38,11.79],[98.55,11.74]],[[98.41,12.6],[98.46,12.47],[98.31,12.34],[98.31,12.68],[98.41,12.6]],[[94.48,15.95],[94.41,15.85],[94.39,15.99],[94.6,16.21],[94.48,15.95]],[[97.58,16.25],[97.48,16.31],[97.54,16.51],[97.58,16.25]],[[93.69,18.68],[93.49,18.87],[93.74,18.87],[93.69,18.68]],[[93.49,19.89],[93.51,19.75],[93.42,19.88],[93.41,19.95],[93.49,19.89]],[[93.71,19.56],[93.95,19.43],[93.9,19.33],[93.76,19.33],[93.64,19.5],[93.71,19.56]],[[98.54,10.96],[98.48,10.98],[98.53,11.09],[98.54,10.96]],[[98.07,12.39],[98.0,12.28],[97.94,12.35],[98.07,12.39]],[[98.32,13.1],[98.31,12.93],[98.25,13.1],[98.27,13.2],[98.32,13.1]],[[94.8,15.82],[94.73,15.82],[94.83,15.93],[94.8,15.82]]]},{"code":"BRN","name":"汶萊","name_en":"Brunei","rings":[[[115.14,4.9],[115.29,4.35],[115.11,4.39],[115.05,4.58],[115.03,4.9],[115.14,4.9]],[[115.03,4.9],[114.75,4.72],[114.84,4.39],[114.65,4.04],[114.32,4.26],[114.06,4.59],[114.42,4.66],[115.0,5.02],[115.03,4.9]]]},{"code":"BTN","name":"不丹","name_en":"Bhutan","rings":[[[91.63,27.76],[91.59,27.56],[91.74,27.44],[91.99,27.45],[92.08,27.29],[91.99,27.1],[92.07,26.91],[92.0,26.85],[90.74,26.77],[90.35,26.89],[90.12,26.75],[89.76,26.7],[89.04,26.87],[88.86,26.96],[88.74,27.18],[89.48,28.06],[89.98,28.31],[90.35,28.24],[90.35,28.08],[91.02,27.97],[91.27,28.08],[91.64,27.92],[91.63,27.76]]]},{"code":"BGD","name":"孟加拉","name_en":"Bangladesh","rings":[[[89.05,22.09],[88.85,23.04],[88.93,23.19],[88.72,23.25],[88.74,23.44],[88.57,23.67],[88.72,24.27],[88.15,24.49],[88.02,24.63],[88.15,24.91],[88.31,24.88],[88.46,25.19],[88.82,25.18],[88.95,25.26],[88.77,25.49],[88.5,25.54],[88.08,25.89],[88.15,26.09],[88.44,26.37],[88.35,26.5],[88.42,26.57],[88.83,26.25],[88.97,26.25],[88.92,26.38],[89.02,26.41],[89.19,26.11],[89.37,26.01],[89.55,26.01],[89.67,26.21],[89.82,25.94],[89.83,25.29],[90.44,25.16],[92.05,25.17],[92.49,24.9],[92.23,24.88],[92.1,24.41],[91.95,24.36],[91.88,24.2],[91.37,24.09],[91.16,23.66],[91.32,23.1],[91.44,23.2],[91.62,22.98],[91.75,23.05],[91.75,23.29],[91.94,23.5],[91.93,23.69],[92.25,23.68],[92.36,22.93],[92.49,22.69],[92.63,21.31],[92.57,21.26],[92.33,21.44],[92.21,21.36],[92.32,20.79],[92.06,21.17],[91.86,22.35],[91.8,22.3],[91.48,22.88],[91.22,22.64],[90.95,22.6],[90.66,23.03],[90.6,23.59],[90.56,23.42],[90.27,23.46],[90.59,23.27],[90.6,23.13],[90.47,23.05],[90.55,22.9],[90.44,22.75],[90.62,22.36],[90.23,21.83],[90.07,21.89],[90.21,22.16],[89.95,22.02],[89.92,22.12],[89.99,22.47],[89.88,22.39],[89.81,21.98],[89.57,21.77],[89.48,22.28],[89.5,21.91],[89.35,21.72],[89.09,21.87],[89.05,22.09]],[[91.15,22.18],[91.04,22.11],[91.08,22.52],[91.15,22.18]],[[91.56,22.38],[91.41,22.48],[91.46,22.62],[91.56,22.38]],[[90.78,22.09],[90.52,22.07],[90.68,22.33],[90.5,22.84],[90.6,22.86],[90.87,22.48],[90.78,22.09]],[[91.95,21.51],[91.86,21.53],[91.86,21.71],[91.93,21.72],[91.95,21.51]]]},{"code":"AFG","name":"阿富汗","name_en":"Afghanistan","rings":[[[66.52,37.35],[67.7,37.23],[68.07,36.95],[68.91,37.33],[69.3,37.12],[69.41,37.21],[69.49,37.55],[70.19,37.58],[70.21,37.92],[70.62,38.33],[70.88,38.46],[71.26,38.31],[71.33,38.17],[71.28,37.92],[71.58,37.91],[71.43,37.13],[71.67,36.7],[72.66,37.03],[72.9,37.27],[73.38,37.46],[73.72,37.42],[73.65,37.24],[74.35,37.42],[74.66,37.39],[74.89,37.23],[74.73,37.29],[74.37,37.16],[74.54,37.02],[74.04,36.83],[73.12,36.87],[72.25,36.73],[71.77,36.43],[71.62,36.44],[71.23,36.12],[71.19,36.04],[71.4,35.88],[71.57,35.55],[71.55,35.29],[71.62,35.18],[70.97,34.53],[71.1,34.37],[71.05,34.05],[70.65,33.95],[69.89,34.01],[69.87,33.9],[70.13,33.62],[70.26,33.29],[69.5,33.02],[69.24,32.43],[69.28,31.94],[68.87,31.63],[68.6,31.8],[68.16,31.8],[67.58,31.51],[67.74,31.34],[67.45,31.23],[66.83,31.26],[66.35,30.8],[66.24,30.11],[66.31,29.97],[66.18,29.84],[65.1,29.56],[64.39,29.54],[64.1,29.39],[63.57,29.5],[62.48,29.41],[60.84,29.86],[61.81,30.91],[61.76,31.29],[61.66,31.38],[60.82,31.5],[60.83,32.25],[60.56,33.06],[60.92,33.51],[60.51,33.64],[60.49,34.09],[60.64,34.31],[60.89,34.32],[60.73,34.52],[61.08,34.86],[61.1,35.27],[61.19,35.31],[61.26,35.62],[61.62,35.43],[61.98,35.44],[62.31,35.17],[62.69,35.26],[63.06,35.45],[63.17,35.68],[63.13,35.85],[64.01,36.01],[64.51,36.34],[64.82,37.13],[65.09,37.24],[65.55,37.25],[65.77,37.57],[66.52,37.35]]]}]}
+</canonical-source>
+
+<canonical-source path="exam_packs/會考/maps/taiwan-counties.json">
+{"name":"taiwan-counties","crs":"TWD97 經緯度（與 WGS84 差異可忽略）","source":{"title":"直轄市、縣(市)界線(TWD97經緯度)","publisher":"內政部國土測繪中心","url":"https://data.gov.tw/dataset/7442","version":"1140318","license":"政府資料開放授權條款－第1版（與 CC BY 4.0 相容；轉載須標示出處）","retrieved_at":"2026-11-14"},"note":"Douglas-Peucker 簡化（本島約 400 公尺、離島約 150 公尺），只供示意圖；座標四捨五入到 0.001 度","counties":[{"name":"連江縣","name_en":"Lienchiang County","rings":[[[119.985,25.971],[119.988,25.97],[119.989,25.968],[119.984,25.964],[119.985,25.963],[119.979,25.96],[119.979,25.956],[119.974,25.953],[119.971,25.957],[119.965,25.949],[119.96,25.95],[119.966,25.956],[119.962,25.958],[119.97,25.96],[119.972,25.967],[119.978,25.969],[119.982,25.966],[119.985,25.971]],[[119.945,25.982],[119.948,25.982],[119.948,25.978],[119.942,25.973],[119.938,25.973],[119.938,25.971],[119.934,25.967],[119.932,25.967],[119.933,25.97],[119.929,25.971],[119.924,25.979],[119.927,25.982],[119.933,25.98],[119.945,25.982]],[[119.917,26.175],[119.92,26.175],[119.922,26.172],[119.928,26.172],[119.924,26.162],[119.928,26.16],[119.93,26.162],[119.931,26.158],[119.935,26.16],[119.936,26.154],[119.942,26.159],[119.94,26.166],[119.944,26.165],[119.951,26.168],[119.954,26.164],[119.957,26.168],[119.965,26.166],[119.962,26.158],[119.955,26.151],[119.95,26.154],[119.949,26.149],[119.942,26.143],[119.938,26.143],[119.937,26.146],[119.934,26.146],[119.929,26.142],[119.93,26.14],[119.924,26.138],[119.923,26.142],[119.917,26.141],[119.913,26.143],[119.913,26.145],[119.909,26.145],[119.918,26.158],[119.913,26.16],[119.918,26.163],[119.919,26.167],[119.915,26.169],[119.917,26.175]],[[119.996,26.238],[120.0,26.238],[120.002,26.234],[120.006,26.234],[120.006,26.228],[120.004,26.224],[120.01,26.228],[120.015,26.228],[120.014,26.223],[120.01,26.22],[120.013,26.218],[120.012,26.214],[120.01,26.215],[120.007,26.222],[120.003,26.223],[120.0,26.219],[120.001,26.222],[119.998,26.223],[119.997,26.218],[119.993,26.219],[119.99,26.214],[119.987,26.219],[119.976,26.215],[119.973,26.212],[119.971,26.199],[119.974,26.198],[119.973,26.195],[119.976,26.193],[119.974,26.192],[119.971,26.195],[119.966,26.194],[119.966,26.205],[119.971,26.212],[119.967,26.221],[119.972,26.221],[119.979,26.226],[119.983,26.225],[119.996,26.238]],[[120.004,26.251],[120.006,26.25],[120.003,26.245],[119.996,26.242],[119.998,26.25],[120.001,26.248],[120.004,26.251]],[[119.99,26.282],[119.989,26.278],[119.991,26.279],[119.989,26.277],[119.992,26.276],[119.989,26.273],[119.99,26.27],[119.988,26.267],[119.981,26.267],[119.978,26.272],[119.984,26.275],[119.982,26.278],[119.983,26.28],[119.987,26.28],[119.987,26.283],[119.99,26.282]],[[120.229,26.345],[120.218,26.336],[120.22,26.342],[120.229,26.347],[120.229,26.345]],[[120.48,26.383],[120.483,26.377],[120.482,26.371],[120.492,26.371],[120.494,26.378],[120.5,26.378],[120.499,26.373],[120.504,26.371],[120.507,26.373],[120.511,26.365],[120.506,26.367],[120.504,26.366],[120.501,26.369],[120.501,26.364],[120.493,26.357],[120.493,26.359],[120.489,26.357],[120.486,26.36],[120.484,26.356],[120.482,26.358],[120.484,26.363],[120.482,26.365],[120.485,26.365],[120.485,26.369],[120.481,26.371],[120.478,26.368],[120.477,26.379],[120.469,26.371],[120.469,26.377],[120.475,26.38],[120.474,26.383],[120.48,26.383]]]},{"name":"宜蘭縣","name_en":"Yilan County","rings":[[[121.961,24.988],[121.966,24.983],[121.926,24.969],[121.905,24.94],[121.889,24.937],[121.885,24.918],[121.851,24.89],[121.827,24.842],[121.818,24.765],[121.826,24.733],[121.84,24.716],[121.841,24.66],[121.859,24.617],[121.886,24.6],[121.873,24.597],[121.879,24.591],[121.872,24.584],[121.88,24.58],[121.869,24.574],[121.873,24.531],[121.843,24.521],[121.839,24.512],[121.84,24.499],[121.851,24.495],[121.851,24.485],[121.862,24.48],[121.849,24.479],[121.821,24.462],[121.817,24.447],[121.802,24.434],[121.791,24.408],[121.787,24.372],[121.772,24.338],[121.773,24.314],[121.688,24.334],[121.686,24.341],[121.675,24.338],[121.651,24.36],[121.649,24.35],[121.631,24.371],[121.62,24.363],[121.627,24.35],[121.636,24.348],[121.633,24.335],[121.619,24.345],[121.618,24.334],[121.596,24.332],[121.606,24.309],[121.597,24.316],[121.566,24.319],[121.545,24.338],[121.522,24.343],[121.495,24.34],[121.452,24.365],[121.438,24.383],[121.401,24.38],[121.381,24.367],[121.369,24.372],[121.365,24.389],[121.339,24.39],[121.328,24.398],[121.328,24.433],[121.318,24.441],[121.324,24.457],[121.343,24.482],[121.358,24.487],[121.371,24.498],[121.373,24.51],[121.384,24.51],[121.402,24.529],[121.395,24.556],[121.412,24.573],[121.403,24.592],[121.413,24.604],[121.428,24.606],[121.451,24.651],[121.449,24.662],[121.459,24.673],[121.493,24.673],[121.512,24.684],[121.537,24.688],[121.543,24.706],[121.57,24.714],[121.575,24.71],[121.578,24.722],[121.587,24.72],[121.598,24.729],[121.592,24.745],[121.596,24.748],[121.589,24.755],[121.598,24.772],[121.592,24.788],[121.625,24.795],[121.626,24.809],[121.661,24.811],[121.669,24.818],[121.688,24.816],[121.688,24.825],[121.696,24.835],[121.73,24.855],[121.746,24.853],[121.775,24.865],[121.785,24.874],[121.782,24.889],[121.792,24.9],[121.812,24.907],[121.832,24.905],[121.854,24.925],[121.839,24.945],[121.847,24.96],[121.889,24.963],[121.915,24.979],[121.961,24.988]]]},{"name":"彰化縣","name_en":"Changhua County","rings":[[[120.457,24.207],[120.504,24.191],[120.525,24.15],[120.524,24.14],[120.545,24.116],[120.612,24.103],[120.617,24.079],[120.625,24.069],[120.624,24.031],[120.645,24.026],[120.646,24.034],[120.679,24.014],[120.67,24.01],[120.673,24.006],[120.638,24.007],[120.637,23.995],[120.65,23.984],[120.643,23.958],[120.635,23.952],[120.627,23.956],[120.634,23.953],[120.628,23.952],[120.638,23.936],[120.628,23.931],[120.637,23.924],[120.629,23.911],[120.635,23.899],[120.62,23.868],[120.628,23.857],[120.615,23.84],[120.626,23.842],[120.625,23.837],[120.634,23.834],[120.624,23.829],[120.637,23.833],[120.64,23.825],[120.634,23.826],[120.651,23.813],[120.676,23.819],[120.684,23.801],[120.642,23.786],[120.551,23.801],[120.509,23.8],[120.452,23.817],[120.433,23.83],[120.308,23.82],[120.255,23.834],[120.22,23.866],[120.235,23.885],[120.255,23.894],[120.261,23.92],[120.279,23.934],[120.283,23.955],[120.307,23.972],[120.316,23.999],[120.335,24.016],[120.34,24.06],[120.363,24.081],[120.384,24.088],[120.386,24.097],[120.38,24.094],[120.397,24.117],[120.401,24.137],[120.409,24.143],[120.413,24.152],[120.408,24.155],[120.415,24.158],[120.416,24.17],[120.425,24.183],[120.444,24.189],[120.457,24.207]]]},{"name":"南投縣","name_en":"Nantou County","rings":[[[121.271,24.237],[121.286,24.229],[121.301,24.237],[121.333,24.23],[121.343,24.224],[121.35,24.2],[121.326,24.196],[121.307,24.18],[121.287,24.178],[121.288,24.158],[121.28,24.158],[121.285,24.152],[121.281,24.136],[121.328,24.115],[121.319,24.095],[121.323,24.085],[121.283,24.054],[121.286,24.04],[121.26,23.991],[121.264,23.976],[121.274,23.975],[121.278,23.966],[121.272,23.949],[121.276,23.91],[121.261,23.903],[121.268,23.884],[121.239,23.84],[121.239,23.822],[121.226,23.802],[121.23,23.788],[121.205,23.772],[121.206,23.763],[121.233,23.749],[121.229,23.735],[121.239,23.724],[121.241,23.708],[121.239,23.687],[121.232,23.677],[121.236,23.662],[121.213,23.6],[121.206,23.596],[121.194,23.6],[121.178,23.583],[121.153,23.587],[121.152,23.573],[121.16,23.568],[121.146,23.554],[121.151,23.527],[121.135,23.515],[121.118,23.522],[121.097,23.522],[121.088,23.514],[121.068,23.518],[121.062,23.5],[121.039,23.474],[121.058,23.46],[121.052,23.451],[121.015,23.435],[121.01,23.445],[121.016,23.452],[121.008,23.462],[120.981,23.469],[120.948,23.467],[120.91,23.476],[120.887,23.476],[120.88,23.468],[120.833,23.475],[120.82,23.521],[120.809,23.536],[120.826,23.586],[120.818,23.6],[120.795,23.597],[120.754,23.615],[120.731,23.611],[120.718,23.63],[120.711,23.62],[120.691,23.62],[120.684,23.611],[120.669,23.609],[120.651,23.616],[120.653,23.63],[120.645,23.631],[120.631,23.622],[120.629,23.635],[120.648,23.683],[120.646,23.703],[120.639,23.711],[120.64,23.731],[120.645,23.737],[120.656,23.735],[120.656,23.755],[120.64,23.786],[120.684,23.802],[120.676,23.819],[120.651,23.813],[120.634,23.826],[120.64,23.825],[120.637,23.833],[120.624,23.829],[120.634,23.834],[120.625,23.837],[120.626,23.842],[120.615,23.84],[120.628,23.857],[120.62,23.868],[120.635,23.899],[120.629,23.911],[120.637,23.924],[120.628,23.931],[120.638,23.936],[120.628,23.952],[120.634,23.953],[120.627,23.956],[120.635,23.952],[120.643,23.958],[120.65,23.984],[120.637,23.995],[120.638,24.007],[120.673,24.006],[120.67,24.01],[120.679,24.014],[120.706,24.005],[120.732,24.009],[120.746,23.999],[120.771,24.009],[120.792,24.031],[120.808,24.065],[120.829,24.072],[120.83,24.103],[120.845,24.125],[120.854,24.125],[120.859,24.116],[120.872,24.117],[120.879,24.109],[120.878,24.085],[120.891,24.098],[120.892,24.116],[120.92,24.107],[120.95,24.128],[120.961,24.12],[120.989,24.119],[121.02,24.159],[121.028,24.16],[121.033,24.149],[121.038,24.158],[121.053,24.155],[121.085,24.176],[121.102,24.196],[121.136,24.196],[121.148,24.213],[121.161,24.215],[121.168,24.225],[121.182,24.212],[121.219,24.229],[121.238,24.22],[121.259,24.245],[121.265,24.246],[121.271,24.237]]]},{"name":"雲林縣","name_en":"Yunlin County","rings":[[[120.081,23.524],[120.096,23.511],[120.083,23.513],[120.078,23.502],[120.07,23.504],[120.067,23.5],[120.074,23.499],[120.066,23.499],[120.072,23.494],[120.068,23.49],[120.065,23.495],[120.054,23.492],[120.065,23.487],[120.063,23.48],[120.054,23.479],[120.058,23.483],[120.053,23.488],[120.049,23.477],[120.043,23.477],[120.051,23.493],[120.047,23.495],[120.041,23.479],[120.035,23.483],[120.036,23.478],[120.025,23.475],[120.024,23.46],[120.014,23.46],[120.018,23.47],[120.009,23.464],[120.019,23.436],[119.997,23.465],[120.0,23.473],[120.081,23.524]],[[120.307,23.821],[120.433,23.83],[120.452,23.817],[120.509,23.8],[120.551,23.801],[120.64,23.786],[120.656,23.755],[120.656,23.735],[120.645,23.737],[120.64,23.731],[120.639,23.711],[120.646,23.703],[120.648,23.683],[120.629,23.635],[120.631,23.622],[120.653,23.63],[120.651,23.616],[120.669,23.609],[120.684,23.611],[120.691,23.62],[120.71,23.619],[120.719,23.63],[120.731,23.618],[120.725,23.604],[120.733,23.597],[120.736,23.57],[120.694,23.577],[120.676,23.571],[120.67,23.579],[120.651,23.572],[120.643,23.576],[120.649,23.583],[120.646,23.594],[120.61,23.583],[120.58,23.582],[120.533,23.597],[120.51,23.619],[120.504,23.635],[120.454,23.626],[120.445,23.631],[120.425,23.618],[120.421,23.625],[120.407,23.625],[120.405,23.634],[120.38,23.61],[120.367,23.608],[120.359,23.595],[120.334,23.593],[120.327,23.574],[120.307,23.575],[120.311,23.564],[120.29,23.563],[120.291,23.551],[120.276,23.543],[120.272,23.531],[120.256,23.546],[120.243,23.544],[120.247,23.515],[120.239,23.508],[120.181,23.51],[120.146,23.521],[120.15,23.532],[120.138,23.562],[120.143,23.568],[120.145,23.597],[120.14,23.598],[120.14,23.614],[120.133,23.616],[120.138,23.635],[120.125,23.621],[120.114,23.634],[120.125,23.646],[120.166,23.742],[120.169,23.759],[120.157,23.785],[120.175,23.803],[120.17,23.807],[120.202,23.828],[120.208,23.84],[120.205,23.848],[120.214,23.851],[120.22,23.866],[120.252,23.836],[120.307,23.821]]]},{"name":"屏東縣","name_en":"Pingtung County","rings":[[[120.38,22.356],[120.388,22.351],[120.388,22.343],[120.355,22.323],[120.361,22.347],[120.38,22.356]],[[120.649,22.877],[120.657,22.881],[120.66,22.861],[120.672,22.856],[120.691,22.865],[120.705,22.881],[120.725,22.881],[120.755,22.865],[120.779,22.835],[120.793,22.841],[120.793,22.852],[120.833,22.866],[120.844,22.853],[120.853,22.858],[120.86,22.851],[120.865,22.836],[120.862,22.827],[120.869,22.817],[120.891,22.812],[120.903,22.799],[120.904,22.776],[120.892,22.764],[120.895,22.739],[120.884,22.717],[120.849,22.717],[120.837,22.697],[120.809,22.688],[120.787,22.693],[120.792,22.679],[120.786,22.663],[120.755,22.617],[120.755,22.601],[120.746,22.59],[120.749,22.572],[120.742,22.569],[120.739,22.554],[120.764,22.495],[120.751,22.479],[120.751,22.459],[120.776,22.45],[120.79,22.418],[120.773,22.407],[120.753,22.405],[120.756,22.388],[120.743,22.367],[120.763,22.359],[120.767,22.348],[120.785,22.346],[120.792,22.336],[120.797,22.317],[120.778,22.308],[120.778,22.298],[120.806,22.284],[120.807,22.277],[120.798,22.276],[120.796,22.27],[120.799,22.257],[120.815,22.263],[120.835,22.245],[120.859,22.241],[120.862,22.231],[120.881,22.235],[120.896,22.246],[120.899,22.234],[120.891,22.195],[120.897,22.143],[120.887,22.128],[120.892,22.11],[120.902,22.105],[120.893,22.068],[120.901,22.034],[120.878,22.011],[120.876,21.999],[120.847,21.987],[120.844,21.981],[120.843,21.948],[120.867,21.903],[120.859,21.896],[120.85,21.897],[120.846,21.914],[120.836,21.917],[120.822,21.934],[120.783,21.944],[120.766,21.959],[120.748,21.949],[120.74,21.919],[120.727,21.919],[120.719,21.933],[120.711,21.934],[120.714,21.979],[120.694,22.003],[120.685,22.026],[120.697,22.041],[120.698,22.055],[120.705,22.058],[120.699,22.083],[120.717,22.093],[120.716,22.105],[120.698,22.138],[120.685,22.21],[120.672,22.233],[120.65,22.252],[120.652,22.268],[120.642,22.303],[120.586,22.369],[120.518,22.411],[120.459,22.439],[120.433,22.468],[120.424,22.469],[120.423,22.518],[120.442,22.56],[120.447,22.587],[120.434,22.618],[120.436,22.661],[120.455,22.717],[120.454,22.77],[120.469,22.831],[120.476,22.838],[120.51,22.829],[120.531,22.833],[120.553,22.828],[120.606,22.873],[120.645,22.885],[120.649,22.877]]]},{"name":"基隆市","name_en":"Keelung City","rings":[[[121.71,25.176],[121.709,25.165],[121.725,25.166],[121.749,25.156],[121.763,25.164],[121.78,25.159],[121.773,25.156],[121.778,25.151],[121.808,25.148],[121.802,25.141],[121.803,25.122],[121.795,25.126],[121.798,25.114],[121.774,25.12],[121.767,25.113],[121.75,25.11],[121.76,25.101],[121.761,25.079],[121.776,25.07],[121.764,25.057],[121.732,25.053],[121.712,25.068],[121.688,25.072],[121.679,25.079],[121.681,25.088],[121.674,25.083],[121.651,25.098],[121.643,25.128],[121.628,25.136],[121.629,25.142],[121.678,25.156],[121.71,25.176]]]},{"name":"臺北市","name_en":"Taipei City","rings":[[[121.571,25.197],[121.584,25.195],[121.577,25.167],[121.59,25.164],[121.589,25.152],[121.608,25.13],[121.597,25.111],[121.626,25.096],[121.628,25.083],[121.616,25.064],[121.624,25.056],[121.616,25.051],[121.619,25.044],[121.647,25.028],[121.666,25.03],[121.663,25.023],[121.632,25.026],[121.623,25.017],[121.609,25.021],[121.597,25.015],[121.6,24.978],[121.62,24.969],[121.601,24.961],[121.561,24.965],[121.552,24.987],[121.545,24.984],[121.535,24.995],[121.532,24.991],[121.532,25.008],[121.518,25.02],[121.509,25.021],[121.493,25.01],[121.484,25.036],[121.505,25.05],[121.506,25.076],[121.489,25.097],[121.457,25.108],[121.459,25.123],[121.503,25.173],[121.52,25.169],[121.522,25.179],[121.541,25.187],[121.559,25.21],[121.571,25.197]]]},{"name":"新北市","name_en":"New Taipei City","rings":[[[121.538,25.3],[121.55,25.292],[121.578,25.299],[121.618,25.278],[121.634,25.26],[121.635,25.238],[121.643,25.231],[121.652,25.233],[121.653,25.216],[121.67,25.203],[121.689,25.205],[121.702,25.217],[121.686,25.19],[121.693,25.18],[121.709,25.175],[121.678,25.156],[121.627,25.14],[121.643,25.128],[121.651,25.098],[121.674,25.083],[121.681,25.088],[121.679,25.079],[121.688,25.072],[121.712,25.068],[121.732,25.053],[121.764,25.057],[121.776,25.07],[121.761,25.079],[121.76,25.101],[121.75,25.11],[121.767,25.113],[121.774,25.12],[121.795,25.113],[121.799,25.119],[121.795,25.126],[121.805,25.125],[121.804,25.136],[121.827,25.136],[121.819,25.129],[121.823,25.121],[121.842,25.129],[121.897,25.12],[121.924,25.13],[121.916,25.114],[121.927,25.108],[121.914,25.085],[121.916,25.077],[121.932,25.063],[121.932,25.036],[121.947,25.021],[121.978,25.027],[121.99,25.021],[121.991,25.013],[121.998,25.021],[122.008,25.012],[122.005,25.002],[121.967,24.982],[121.961,24.988],[121.945,24.988],[121.903,24.974],[121.889,24.963],[121.847,24.96],[121.839,24.945],[121.854,24.926],[121.836,24.908],[121.792,24.9],[121.782,24.889],[121.785,24.874],[121.775,24.865],[121.746,24.853],[121.73,24.855],[121.696,24.835],[121.688,24.825],[121.688,24.816],[121.669,24.818],[121.661,24.811],[121.626,24.809],[121.625,24.795],[121.592,24.788],[121.598,24.772],[121.589,24.755],[121.596,24.748],[121.592,24.745],[121.598,24.728],[121.587,24.72],[121.578,24.722],[121.575,24.71],[121.57,24.714],[121.543,24.706],[121.537,24.688],[121.48,24.674],[121.474,24.696],[121.45,24.706],[121.434,24.73],[121.423,24.762],[121.45,24.786],[121.45,24.791],[121.438,24.796],[121.437,24.812],[121.403,24.844],[121.374,24.833],[121.355,24.844],[121.336,24.844],[121.358,24.853],[121.345,24.867],[121.354,24.873],[121.342,24.893],[121.32,24.9],[121.326,24.909],[121.318,24.916],[121.34,24.929],[121.322,24.928],[121.316,24.938],[121.332,24.946],[121.329,24.972],[121.324,24.973],[121.343,24.982],[121.369,24.977],[121.385,24.986],[121.384,24.996],[121.403,24.999],[121.391,25.012],[121.412,25.019],[121.398,25.03],[121.401,25.038],[121.391,25.042],[121.401,25.043],[121.394,25.049],[121.401,25.051],[121.384,25.053],[121.388,25.063],[121.355,25.065],[121.346,25.07],[121.353,25.073],[121.35,25.077],[121.341,25.074],[121.349,25.082],[121.292,25.103],[121.283,25.11],[121.283,25.118],[121.297,25.126],[121.345,25.128],[121.39,25.148],[121.392,25.168],[121.403,25.159],[121.419,25.177],[121.404,25.183],[121.405,25.19],[121.419,25.192],[121.453,25.253],[121.472,25.256],[121.481,25.271],[121.509,25.283],[121.511,25.292],[121.517,25.285],[121.529,25.287],[121.538,25.3]],[[121.552,25.198],[121.525,25.183],[121.52,25.169],[121.503,25.173],[121.459,25.123],[121.457,25.108],[121.489,25.097],[121.506,25.076],[121.505,25.05],[121.484,25.036],[121.493,25.01],[121.509,25.021],[121.518,25.02],[121.532,25.008],[121.532,24.991],[121.535,24.995],[121.545,24.984],[121.552,24.987],[121.561,24.965],[121.601,24.961],[121.62,24.969],[121.6,24.978],[121.597,25.015],[121.609,25.021],[121.623,25.017],[121.632,25.026],[121.663,25.023],[121.666,25.03],[121.647,25.028],[121.619,25.044],[121.616,25.051],[121.624,25.056],[121.616,25.064],[121.629,25.086],[121.626,25.097],[121.595,25.113],[121.608,25.13],[121.589,25.152],[121.59,25.164],[121.577,25.167],[121.584,25.195],[121.572,25.195],[121.56,25.21],[121.552,25.198]]]},{"name":"臺南市","name_en":"Tainan City","rings":[[[120.44,23.413],[120.473,23.398],[120.479,23.388],[120.495,23.394],[120.499,23.387],[120.484,23.379],[120.484,23.37],[120.505,23.369],[120.512,23.356],[120.505,23.355],[120.505,23.345],[120.534,23.336],[120.54,23.328],[120.523,23.312],[120.526,23.295],[120.52,23.272],[120.532,23.255],[120.52,23.238],[120.555,23.217],[120.565,23.221],[120.578,23.215],[120.592,23.24],[120.597,23.229],[120.61,23.223],[120.628,23.229],[120.654,23.224],[120.656,23.218],[120.637,23.19],[120.641,23.183],[120.601,23.144],[120.574,23.091],[120.554,23.069],[120.484,23.017],[120.48,23.003],[120.46,23.004],[120.461,22.991],[120.455,22.991],[120.453,22.978],[120.443,22.977],[120.416,22.916],[120.409,22.912],[120.399,22.922],[120.382,22.921],[120.352,22.888],[120.332,22.889],[120.325,22.9],[120.32,22.895],[120.285,22.905],[120.278,22.904],[120.279,22.896],[120.259,22.902],[120.254,22.894],[120.233,22.906],[120.23,22.917],[120.218,22.91],[120.192,22.921],[120.175,22.912],[120.172,22.95],[120.163,22.965],[120.155,22.965],[120.16,22.973],[120.141,22.996],[120.094,23.029],[120.058,23.043],[120.039,23.068],[120.027,23.068],[120.038,23.108],[120.055,23.126],[120.06,23.163],[120.08,23.209],[120.081,23.238],[120.092,23.26],[120.094,23.295],[120.111,23.31],[120.111,23.332],[120.118,23.34],[120.147,23.321],[120.15,23.313],[120.168,23.307],[120.18,23.291],[120.189,23.29],[120.188,23.301],[120.212,23.292],[120.223,23.298],[120.238,23.327],[120.256,23.331],[120.267,23.341],[120.261,23.344],[120.266,23.353],[120.286,23.35],[120.286,23.367],[120.293,23.375],[120.311,23.375],[120.315,23.388],[120.333,23.386],[120.346,23.4],[120.384,23.404],[120.408,23.413],[120.42,23.403],[120.44,23.413]]]},{"name":"桃園市","name_en":"Taoyuan City","rings":[[[121.264,25.122],[121.283,25.118],[121.283,25.109],[121.299,25.104],[121.303,25.097],[121.349,25.082],[121.341,25.074],[121.35,25.077],[121.353,25.073],[121.346,25.07],[121.355,25.065],[121.391,25.062],[121.384,25.053],[121.401,25.051],[121.394,25.049],[121.401,25.043],[121.391,25.042],[121.401,25.038],[121.398,25.03],[121.412,25.019],[121.392,25.015],[121.403,24.999],[121.394,24.993],[121.384,24.996],[121.385,24.986],[121.37,24.977],[121.343,24.982],[121.327,24.978],[121.324,24.972],[121.329,24.972],[121.332,24.946],[121.316,24.938],[121.322,24.928],[121.34,24.929],[121.318,24.916],[121.326,24.909],[121.32,24.9],[121.342,24.893],[121.354,24.873],[121.345,24.867],[121.358,24.853],[121.336,24.844],[121.355,24.844],[121.374,24.833],[121.394,24.844],[121.407,24.842],[121.416,24.836],[121.417,24.826],[121.437,24.812],[121.438,24.795],[121.45,24.791],[121.423,24.762],[121.434,24.73],[121.45,24.706],[121.474,24.696],[121.48,24.674],[121.459,24.673],[121.449,24.662],[121.451,24.651],[121.428,24.606],[121.413,24.604],[121.392,24.587],[121.363,24.603],[121.359,24.617],[121.366,24.632],[121.358,24.634],[121.352,24.644],[121.354,24.668],[121.339,24.667],[121.339,24.68],[121.324,24.695],[121.299,24.696],[121.308,24.72],[121.298,24.732],[121.308,24.755],[121.302,24.763],[121.26,24.782],[121.26,24.793],[121.248,24.797],[121.243,24.809],[121.222,24.799],[121.22,24.812],[121.205,24.807],[121.203,24.817],[121.199,24.815],[121.15,24.844],[121.161,24.859],[121.156,24.881],[121.116,24.882],[121.108,24.886],[121.109,24.898],[121.091,24.893],[121.058,24.905],[121.058,24.937],[121.046,24.944],[121.019,24.94],[121.007,24.946],[120.992,24.935],[120.982,24.94],[121.01,24.975],[121.009,24.99],[121.029,25.021],[121.056,25.046],[121.213,25.111],[121.24,25.116],[121.24,25.123],[121.244,25.119],[121.264,25.122]]]},{"name":"嘉義市","name_en":"Chiayi City","rings":[[[120.448,23.518],[120.457,23.516],[120.464,23.499],[120.474,23.507],[120.483,23.505],[120.487,23.492],[120.501,23.49],[120.509,23.473],[120.495,23.453],[120.469,23.462],[120.44,23.44],[120.429,23.461],[120.394,23.463],[120.399,23.478],[120.39,23.499],[120.4,23.499],[120.409,23.507],[120.412,23.499],[120.433,23.509],[120.434,23.517],[120.441,23.512],[120.441,23.518],[120.448,23.518]]]},{"name":"嘉義縣","name_en":"Chiayi County","rings":[[[120.493,23.633],[120.506,23.634],[120.51,23.619],[120.537,23.595],[120.581,23.582],[120.61,23.583],[120.647,23.593],[120.643,23.576],[120.651,23.572],[120.67,23.579],[120.676,23.571],[120.694,23.577],[120.736,23.57],[120.733,23.597],[120.725,23.604],[120.73,23.611],[120.752,23.615],[120.795,23.597],[120.817,23.6],[120.826,23.586],[120.809,23.536],[120.82,23.521],[120.833,23.475],[120.88,23.468],[120.887,23.476],[120.91,23.476],[120.957,23.469],[120.937,23.464],[120.928,23.455],[120.916,23.459],[120.901,23.454],[120.887,23.435],[120.85,23.42],[120.825,23.372],[120.804,23.371],[120.783,23.342],[120.758,23.344],[120.753,23.327],[120.732,23.314],[120.731,23.306],[120.707,23.305],[120.7,23.284],[120.644,23.296],[120.638,23.269],[120.653,23.224],[120.628,23.229],[120.61,23.223],[120.597,23.229],[120.592,23.24],[120.578,23.215],[120.565,23.221],[120.555,23.217],[120.526,23.232],[120.519,23.239],[120.532,23.255],[120.52,23.272],[120.526,23.295],[120.523,23.312],[120.54,23.328],[120.534,23.336],[120.505,23.345],[120.505,23.355],[120.512,23.356],[120.505,23.369],[120.484,23.37],[120.484,23.379],[120.499,23.387],[120.495,23.394],[120.479,23.388],[120.473,23.398],[120.44,23.414],[120.42,23.403],[120.408,23.413],[120.384,23.404],[120.349,23.401],[120.324,23.384],[120.315,23.388],[120.311,23.375],[120.293,23.375],[120.286,23.367],[120.286,23.35],[120.267,23.353],[120.261,23.344],[120.267,23.341],[120.257,23.332],[120.238,23.327],[120.221,23.296],[120.206,23.291],[120.188,23.301],[120.189,23.29],[120.181,23.291],[120.168,23.307],[120.15,23.313],[120.147,23.321],[120.118,23.34],[120.132,23.385],[120.152,23.389],[120.158,23.38],[120.154,23.388],[120.159,23.388],[120.154,23.389],[120.164,23.393],[120.16,23.406],[120.152,23.399],[120.149,23.406],[120.15,23.423],[120.156,23.427],[120.146,23.429],[120.156,23.448],[120.152,23.455],[120.135,23.448],[120.133,23.452],[120.145,23.46],[120.145,23.473],[120.156,23.484],[120.155,23.491],[120.17,23.491],[120.158,23.495],[120.125,23.489],[120.119,23.495],[120.12,23.519],[120.146,23.521],[120.181,23.51],[120.199,23.513],[120.223,23.504],[120.237,23.507],[120.247,23.515],[120.243,23.544],[120.256,23.546],[120.272,23.531],[120.276,23.543],[120.291,23.551],[120.29,23.563],[120.311,23.564],[120.307,23.575],[120.327,23.574],[120.334,23.593],[120.359,23.595],[120.367,23.608],[120.38,23.61],[120.386,23.621],[120.403,23.627],[120.401,23.633],[120.425,23.618],[120.445,23.631],[120.454,23.626],[120.493,23.633]],[[120.447,23.518],[120.441,23.518],[120.441,23.512],[120.434,23.517],[120.433,23.509],[120.412,23.499],[120.409,23.507],[120.389,23.499],[120.399,23.478],[120.394,23.463],[120.429,23.461],[120.44,23.44],[120.469,23.462],[120.495,23.453],[120.509,23.473],[120.501,23.49],[120.487,23.492],[120.483,23.505],[120.474,23.507],[120.464,23.499],[120.457,23.516],[120.447,23.518]]]},{"name":"金門縣","name_en":"Kinmen County","rings":[[[118.16,24.379],[118.157,24.377],[118.151,24.382],[118.154,24.384],[118.163,24.381],[118.16,24.379]],[[118.163,24.395],[118.164,24.395],[118.165,24.39],[118.171,24.39],[118.173,24.386],[118.169,24.384],[118.162,24.387],[118.159,24.393],[118.163,24.395]],[[118.249,24.456],[118.258,24.454],[118.269,24.446],[118.268,24.44],[118.27,24.438],[118.266,24.435],[118.266,24.428],[118.263,24.423],[118.255,24.425],[118.25,24.422],[118.25,24.418],[118.245,24.414],[118.241,24.411],[118.241,24.415],[118.233,24.413],[118.226,24.405],[118.222,24.409],[118.214,24.41],[118.212,24.412],[118.216,24.413],[118.215,24.415],[118.217,24.421],[118.217,24.428],[118.224,24.437],[118.227,24.448],[118.233,24.454],[118.249,24.456]],[[118.278,24.454],[118.269,24.452],[118.272,24.458],[118.278,24.454]],[[118.411,24.532],[118.414,24.528],[118.419,24.53],[118.434,24.525],[118.432,24.522],[118.436,24.514],[118.45,24.511],[118.451,24.501],[118.455,24.498],[118.459,24.487],[118.462,24.484],[118.469,24.484],[118.469,24.48],[118.463,24.477],[118.464,24.468],[118.47,24.455],[118.478,24.45],[118.474,24.45],[118.471,24.44],[118.466,24.442],[118.461,24.438],[118.46,24.436],[118.463,24.436],[118.467,24.431],[118.461,24.424],[118.457,24.426],[118.455,24.416],[118.448,24.416],[118.447,24.412],[118.435,24.408],[118.426,24.407],[118.426,24.409],[118.432,24.41],[118.429,24.41],[118.43,24.412],[118.426,24.411],[118.431,24.413],[118.433,24.416],[118.427,24.424],[118.413,24.429],[118.409,24.428],[118.411,24.431],[118.409,24.429],[118.408,24.432],[118.403,24.435],[118.385,24.435],[118.37,24.431],[118.35,24.421],[118.339,24.405],[118.334,24.391],[118.322,24.386],[118.315,24.39],[118.309,24.39],[118.305,24.396],[118.296,24.396],[118.296,24.399],[118.291,24.402],[118.291,24.404],[118.278,24.413],[118.281,24.417],[118.291,24.419],[118.303,24.438],[118.302,24.446],[118.296,24.456],[118.295,24.462],[118.286,24.475],[118.293,24.49],[118.303,24.495],[118.313,24.496],[118.32,24.491],[118.336,24.476],[118.35,24.472],[118.363,24.472],[118.379,24.485],[118.381,24.491],[118.386,24.494],[118.384,24.508],[118.392,24.512],[118.401,24.522],[118.4,24.525],[118.397,24.526],[118.398,24.528],[118.406,24.527],[118.407,24.534],[118.411,24.532]],[[119.474,24.986],[119.479,24.986],[119.476,24.979],[119.473,24.978],[119.466,24.98],[119.468,24.984],[119.473,24.987],[119.474,24.986]],[[119.458,24.989],[119.457,24.985],[119.448,24.987],[119.443,24.999],[119.456,24.995],[119.458,24.989]]]},{"name":"高雄市","name_en":"Kaohsiung City","rings":[[[120.968,23.471],[121.008,23.462],[121.016,23.452],[121.01,23.446],[121.013,23.433],[121.029,23.422],[121.025,23.415],[121.028,23.404],[121.003,23.395],[121.008,23.385],[120.988,23.371],[120.987,23.359],[121.002,23.355],[121.01,23.346],[121.02,23.35],[121.027,23.338],[121.049,23.325],[121.048,23.314],[121.024,23.294],[120.987,23.28],[120.972,23.282],[120.938,23.245],[120.916,23.238],[120.906,23.2],[120.911,23.182],[120.899,23.177],[120.895,23.161],[120.876,23.151],[120.886,23.144],[120.889,23.11],[120.886,23.089],[120.869,23.06],[120.88,23.048],[120.88,23.036],[120.862,23.031],[120.861,23.008],[120.851,23.005],[120.849,22.995],[120.821,22.962],[120.822,22.935],[120.833,22.912],[120.829,22.904],[120.841,22.882],[120.865,22.873],[120.859,22.863],[120.87,22.858],[120.865,22.843],[120.853,22.858],[120.847,22.852],[120.837,22.864],[120.825,22.866],[120.801,22.851],[120.793,22.852],[120.793,22.841],[120.779,22.835],[120.755,22.865],[120.725,22.881],[120.705,22.881],[120.691,22.865],[120.672,22.856],[120.66,22.86],[120.658,22.88],[120.649,22.877],[120.645,22.885],[120.605,22.873],[120.553,22.828],[120.531,22.833],[120.51,22.829],[120.476,22.838],[120.469,22.831],[120.456,22.78],[120.456,22.718],[120.436,22.661],[120.434,22.618],[120.447,22.587],[120.442,22.56],[120.423,22.518],[120.424,22.469],[120.402,22.474],[120.359,22.501],[120.334,22.521],[120.333,22.529],[120.325,22.523],[120.33,22.534],[120.312,22.515],[120.286,22.544],[120.308,22.535],[120.317,22.524],[120.322,22.528],[120.307,22.545],[120.299,22.548],[120.303,22.558],[120.263,22.601],[120.266,22.611],[120.256,22.618],[120.263,22.627],[120.25,22.651],[120.253,22.665],[120.264,22.675],[120.263,22.689],[120.258,22.689],[120.262,22.701],[120.215,22.804],[120.198,22.805],[120.19,22.814],[120.207,22.823],[120.198,22.844],[120.19,22.842],[120.198,22.845],[120.175,22.912],[120.192,22.921],[120.218,22.91],[120.23,22.917],[120.233,22.906],[120.254,22.894],[120.259,22.902],[120.279,22.896],[120.278,22.904],[120.285,22.905],[120.32,22.895],[120.325,22.9],[120.332,22.889],[120.352,22.888],[120.382,22.921],[120.399,22.922],[120.409,22.912],[120.416,22.916],[120.443,22.977],[120.453,22.978],[120.455,22.991],[120.461,22.991],[120.46,23.004],[120.48,23.003],[120.484,23.017],[120.554,23.069],[120.574,23.091],[120.601,23.144],[120.641,23.183],[120.637,23.191],[120.656,23.218],[120.638,23.269],[120.644,23.296],[120.7,23.284],[120.707,23.305],[120.731,23.306],[120.732,23.314],[120.753,23.327],[120.758,23.344],[120.783,23.342],[120.804,23.371],[120.825,23.372],[120.85,23.42],[120.887,23.435],[120.901,23.454],[120.916,23.459],[120.928,23.455],[120.937,23.464],[120.968,23.471]]]},{"name":"臺東縣","name_en":"Taitung County","rings":[[[121.505,22.085],[121.529,22.08],[121.57,22.083],[121.568,22.073],[121.576,22.059],[121.567,22.058],[121.564,22.049],[121.567,22.04],[121.603,22.02],[121.593,22.002],[121.57,22.002],[121.558,22.021],[121.538,22.025],[121.517,22.046],[121.509,22.046],[121.51,22.068],[121.499,22.081],[121.505,22.085]],[[121.492,22.677],[121.51,22.677],[121.509,22.654],[121.5,22.646],[121.506,22.633],[121.495,22.632],[121.489,22.643],[121.474,22.646],[121.475,22.659],[121.465,22.671],[121.466,22.676],[121.492,22.677]],[[121.448,23.444],[121.473,23.441],[121.482,23.43],[121.496,23.435],[121.475,23.387],[121.462,23.313],[121.447,23.309],[121.433,23.288],[121.415,23.235],[121.42,23.226],[121.397,23.205],[121.408,23.167],[121.4,23.135],[121.406,23.126],[121.425,23.126],[121.395,23.113],[121.383,23.095],[121.363,23.094],[121.348,23.065],[121.337,23.02],[121.322,23.002],[121.323,22.993],[121.295,22.955],[121.283,22.948],[121.269,22.912],[121.247,22.881],[121.239,22.878],[121.233,22.864],[121.209,22.863],[121.19,22.847],[121.186,22.833],[121.198,22.815],[121.201,22.796],[121.181,22.783],[121.176,22.759],[121.124,22.716],[121.081,22.698],[121.026,22.656],[121.013,22.62],[121.009,22.589],[120.986,22.569],[120.977,22.554],[120.946,22.457],[120.895,22.336],[120.892,22.283],[120.896,22.246],[120.866,22.23],[120.859,22.241],[120.835,22.245],[120.815,22.263],[120.799,22.257],[120.796,22.27],[120.798,22.276],[120.807,22.277],[120.806,22.284],[120.793,22.286],[120.777,22.303],[120.797,22.317],[120.792,22.336],[120.785,22.346],[120.767,22.348],[120.763,22.359],[120.743,22.367],[120.756,22.388],[120.753,22.405],[120.773,22.407],[120.79,22.418],[120.776,22.45],[120.751,22.459],[120.751,22.479],[120.764,22.495],[120.754,22.511],[120.74,22.563],[120.749,22.572],[120.746,22.59],[120.755,22.601],[120.755,22.617],[120.786,22.661],[120.792,22.679],[120.787,22.693],[120.809,22.688],[120.837,22.697],[120.849,22.717],[120.884,22.717],[120.895,22.739],[120.892,22.764],[120.904,22.776],[120.903,22.8],[120.891,22.812],[120.872,22.815],[120.862,22.826],[120.87,22.858],[120.859,22.863],[120.866,22.87],[120.86,22.878],[120.841,22.882],[120.829,22.904],[120.833,22.912],[120.822,22.935],[120.821,22.962],[120.849,22.995],[120.851,23.005],[120.861,23.008],[120.862,23.031],[120.88,23.036],[120.88,23.048],[120.869,23.06],[120.886,23.089],[120.889,23.11],[120.886,23.144],[120.876,23.151],[120.895,23.161],[120.899,23.177],[120.911,23.182],[120.906,23.2],[120.915,23.238],[120.938,23.245],[120.973,23.282],[120.987,23.28],[121.039,23.301],[121.059,23.286],[121.062,23.266],[121.079,23.233],[121.129,23.223],[121.139,23.202],[121.147,23.199],[121.176,23.21],[121.19,23.203],[121.212,23.155],[121.212,23.144],[121.231,23.139],[121.238,23.129],[121.249,23.132],[121.258,23.126],[121.267,23.114],[121.264,23.104],[121.272,23.098],[121.291,23.109],[121.316,23.11],[121.322,23.117],[121.32,23.138],[121.327,23.152],[121.319,23.168],[121.323,23.179],[121.335,23.178],[121.346,23.217],[121.357,23.224],[121.353,23.231],[121.359,23.253],[121.378,23.27],[121.378,23.301],[121.423,23.356],[121.404,23.367],[121.4,23.387],[121.42,23.421],[121.448,23.444]]]},{"name":"花蓮縣","name_en":"Hualien County","rings":[[[121.632,24.369],[121.649,24.35],[121.651,24.36],[121.675,24.338],[121.686,24.341],[121.688,24.334],[121.745,24.323],[121.759,24.314],[121.774,24.315],[121.773,24.309],[121.751,24.284],[121.743,24.26],[121.663,24.194],[121.658,24.172],[121.664,24.135],[121.619,24.09],[121.619,24.052],[121.648,24.009],[121.628,23.969],[121.622,23.978],[121.608,23.96],[121.612,23.933],[121.598,23.857],[121.573,23.8],[121.572,23.757],[121.55,23.717],[121.553,23.698],[121.531,23.626],[121.526,23.576],[121.511,23.551],[121.503,23.52],[121.508,23.491],[121.514,23.487],[121.496,23.435],[121.482,23.43],[121.473,23.441],[121.447,23.444],[121.42,23.421],[121.4,23.386],[121.404,23.367],[121.423,23.356],[121.378,23.301],[121.378,23.27],[121.359,23.253],[121.353,23.231],[121.357,23.224],[121.346,23.217],[121.335,23.178],[121.323,23.179],[121.319,23.168],[121.327,23.152],[121.32,23.138],[121.322,23.117],[121.316,23.11],[121.291,23.109],[121.273,23.098],[121.264,23.104],[121.267,23.114],[121.258,23.126],[121.249,23.132],[121.238,23.129],[121.231,23.139],[121.212,23.144],[121.212,23.155],[121.19,23.204],[121.176,23.21],[121.147,23.199],[121.139,23.202],[121.129,23.223],[121.078,23.233],[121.056,23.29],[121.039,23.301],[121.028,23.297],[121.046,23.309],[121.049,23.325],[121.027,23.338],[121.02,23.35],[121.01,23.346],[121.002,23.355],[120.987,23.359],[120.988,23.37],[121.008,23.385],[121.003,23.395],[121.028,23.404],[121.025,23.415],[121.029,23.423],[121.013,23.433],[121.052,23.451],[121.058,23.46],[121.039,23.474],[121.062,23.5],[121.068,23.518],[121.088,23.514],[121.097,23.522],[121.118,23.522],[121.135,23.515],[121.151,23.527],[121.146,23.554],[121.16,23.568],[121.152,23.573],[121.153,23.587],[121.178,23.583],[121.194,23.601],[121.207,23.596],[121.224,23.624],[121.224,23.639],[121.236,23.663],[121.232,23.677],[121.241,23.698],[121.239,23.724],[121.23,23.73],[121.233,23.751],[121.206,23.763],[121.205,23.772],[121.23,23.788],[121.226,23.802],[121.239,23.822],[121.239,23.84],[121.253,23.868],[121.265,23.873],[121.267,23.898],[121.261,23.903],[121.276,23.91],[121.272,23.949],[121.278,23.966],[121.274,23.975],[121.264,23.976],[121.26,23.992],[121.286,24.04],[121.283,24.054],[121.323,24.085],[121.319,24.095],[121.328,24.114],[121.281,24.136],[121.285,24.152],[121.28,24.158],[121.288,24.158],[121.286,24.177],[121.307,24.18],[121.326,24.196],[121.349,24.2],[121.343,24.224],[121.353,24.244],[121.385,24.255],[121.381,24.28],[121.397,24.289],[121.405,24.308],[121.422,24.308],[121.435,24.322],[121.436,24.348],[121.45,24.363],[121.498,24.339],[121.522,24.343],[121.545,24.338],[121.566,24.319],[121.597,24.316],[121.606,24.309],[121.596,24.332],[121.618,24.334],[121.619,24.345],[121.633,24.335],[121.636,24.348],[121.627,24.35],[121.62,24.363],[121.632,24.369]]]},{"name":"澎湖縣","name_en":"Penghu County","rings":[[[119.44,23.221],[119.448,23.22],[119.444,23.214],[119.443,23.2],[119.436,23.202],[119.43,23.197],[119.43,23.187],[119.418,23.193],[119.422,23.193],[119.422,23.196],[119.416,23.194],[119.42,23.198],[119.421,23.203],[119.411,23.212],[119.41,23.216],[119.413,23.214],[119.415,23.217],[119.44,23.221]],[[119.616,23.254],[119.621,23.253],[119.62,23.249],[119.622,23.245],[119.615,23.244],[119.609,23.249],[119.609,23.251],[119.616,23.254]],[[119.677,23.264],[119.68,23.26],[119.673,23.251],[119.674,23.247],[119.671,23.244],[119.665,23.251],[119.668,23.255],[119.665,23.259],[119.667,23.262],[119.677,23.264]],[[119.52,23.265],[119.522,23.262],[119.516,23.255],[119.509,23.257],[119.511,23.256],[119.51,23.257],[119.513,23.257],[119.514,23.262],[119.52,23.265]],[[119.507,23.273],[119.51,23.273],[119.511,23.267],[119.505,23.268],[119.503,23.273],[119.507,23.273]],[[119.537,23.375],[119.541,23.373],[119.544,23.365],[119.532,23.367],[119.526,23.363],[119.525,23.357],[119.524,23.361],[119.52,23.36],[119.52,23.367],[119.525,23.367],[119.525,23.37],[119.528,23.369],[119.527,23.371],[119.525,23.37],[119.527,23.372],[119.533,23.372],[119.537,23.375]],[[119.494,23.397],[119.499,23.39],[119.502,23.389],[119.505,23.395],[119.508,23.392],[119.508,23.377],[119.513,23.377],[119.509,23.371],[119.514,23.371],[119.515,23.375],[119.517,23.373],[119.515,23.371],[119.516,23.368],[119.508,23.365],[119.51,23.361],[119.508,23.363],[119.508,23.358],[119.513,23.352],[119.506,23.353],[119.503,23.356],[119.491,23.353],[119.486,23.356],[119.495,23.366],[119.495,23.373],[119.492,23.375],[119.494,23.378],[119.492,23.38],[119.496,23.387],[119.489,23.395],[119.494,23.397]],[[119.32,23.412],[119.331,23.405],[119.327,23.4],[119.318,23.398],[119.317,23.399],[119.316,23.397],[119.314,23.403],[119.317,23.405],[119.32,23.412]],[[119.541,23.496],[119.544,23.494],[119.529,23.487],[119.512,23.483],[119.509,23.485],[119.51,23.491],[119.517,23.487],[119.516,23.488],[119.518,23.488],[119.521,23.492],[119.529,23.496],[119.538,23.498],[119.541,23.496]],[[119.521,23.515],[119.522,23.51],[119.514,23.509],[119.516,23.515],[119.52,23.512],[119.521,23.515]],[[119.634,23.651],[119.637,23.65],[119.634,23.643],[119.633,23.647],[119.631,23.645],[119.63,23.646],[119.632,23.648],[119.63,23.647],[119.634,23.651]],[[119.664,23.67],[119.667,23.669],[119.665,23.663],[119.666,23.66],[119.668,23.661],[119.657,23.66],[119.654,23.657],[119.659,23.659],[119.658,23.661],[119.655,23.661],[119.662,23.664],[119.664,23.67]],[[119.584,23.677],[119.591,23.672],[119.6,23.674],[119.6,23.671],[119.605,23.668],[119.604,23.669],[119.605,23.667],[119.603,23.668],[119.603,23.664],[119.605,23.666],[119.604,23.664],[119.61,23.664],[119.606,23.659],[119.609,23.655],[119.614,23.653],[119.611,23.647],[119.609,23.649],[119.61,23.648],[119.604,23.649],[119.601,23.648],[119.602,23.642],[119.597,23.64],[119.601,23.635],[119.603,23.637],[119.601,23.635],[119.603,23.634],[119.607,23.637],[119.61,23.636],[119.61,23.633],[119.604,23.632],[119.602,23.629],[119.606,23.621],[119.607,23.622],[119.613,23.62],[119.614,23.614],[119.61,23.611],[119.613,23.602],[119.614,23.604],[119.617,23.604],[119.617,23.601],[119.621,23.602],[119.62,23.607],[119.625,23.609],[119.626,23.607],[119.631,23.607],[119.632,23.604],[119.628,23.604],[119.625,23.6],[119.628,23.596],[119.625,23.593],[119.624,23.587],[119.627,23.584],[119.624,23.58],[119.629,23.58],[119.632,23.583],[119.634,23.591],[119.632,23.594],[119.637,23.599],[119.641,23.599],[119.638,23.592],[119.641,23.589],[119.64,23.587],[119.644,23.588],[119.643,23.593],[119.648,23.594],[119.644,23.595],[119.647,23.597],[119.648,23.603],[119.646,23.603],[119.651,23.606],[119.65,23.608],[119.647,23.607],[119.651,23.61],[119.655,23.609],[119.657,23.604],[119.654,23.6],[119.655,23.599],[119.663,23.595],[119.666,23.595],[119.66,23.595],[119.662,23.594],[119.66,23.594],[119.66,23.592],[119.668,23.591],[119.669,23.595],[119.667,23.596],[119.67,23.597],[119.668,23.597],[119.668,23.601],[119.672,23.601],[119.672,23.598],[119.683,23.584],[119.683,23.576],[119.681,23.578],[119.682,23.577],[119.68,23.575],[119.683,23.566],[119.687,23.562],[119.694,23.56],[119.693,23.559],[119.696,23.554],[119.688,23.555],[119.678,23.551],[119.675,23.552],[119.674,23.558],[119.672,23.558],[119.676,23.556],[119.676,23.56],[119.672,23.559],[119.669,23.562],[119.668,23.561],[119.67,23.561],[119.668,23.561],[119.67,23.556],[119.667,23.561],[119.644,23.56],[119.639,23.554],[119.641,23.552],[119.635,23.551],[119.635,23.547],[119.629,23.548],[119.625,23.542],[119.624,23.545],[119.625,23.543],[119.621,23.542],[119.621,23.538],[119.614,23.538],[119.612,23.533],[119.606,23.529],[119.607,23.525],[119.605,23.527],[119.604,23.525],[119.606,23.522],[119.612,23.522],[119.612,23.519],[119.606,23.517],[119.608,23.513],[119.606,23.508],[119.599,23.512],[119.598,23.51],[119.598,23.514],[119.597,23.511],[119.59,23.513],[119.584,23.509],[119.573,23.508],[119.571,23.512],[119.574,23.518],[119.572,23.522],[119.565,23.526],[119.557,23.523],[119.553,23.532],[119.548,23.534],[119.549,23.539],[119.544,23.537],[119.54,23.541],[119.542,23.548],[119.545,23.546],[119.549,23.554],[119.548,23.551],[119.552,23.548],[119.55,23.541],[119.551,23.543],[119.551,23.541],[119.557,23.538],[119.555,23.529],[119.561,23.527],[119.561,23.531],[119.565,23.53],[119.566,23.535],[119.568,23.531],[119.572,23.532],[119.572,23.527],[119.574,23.528],[119.571,23.525],[119.575,23.52],[119.58,23.524],[119.58,23.531],[119.583,23.533],[119.586,23.529],[119.591,23.532],[119.593,23.528],[119.596,23.527],[119.6,23.531],[119.596,23.533],[119.597,23.533],[119.595,23.538],[119.603,23.54],[119.6,23.545],[119.604,23.548],[119.6,23.55],[119.594,23.548],[119.595,23.55],[119.591,23.551],[119.592,23.553],[119.591,23.55],[119.591,23.552],[119.588,23.55],[119.587,23.552],[119.587,23.55],[119.581,23.55],[119.573,23.545],[119.572,23.549],[119.569,23.548],[119.569,23.551],[119.565,23.548],[119.562,23.549],[119.566,23.553],[119.562,23.553],[119.563,23.558],[119.568,23.553],[119.576,23.555],[119.572,23.558],[119.576,23.557],[119.577,23.559],[119.572,23.563],[119.577,23.561],[119.577,23.564],[119.58,23.563],[119.575,23.565],[119.574,23.568],[119.572,23.565],[119.569,23.566],[119.571,23.565],[119.568,23.562],[119.569,23.565],[119.558,23.561],[119.556,23.563],[119.56,23.564],[119.56,23.57],[119.567,23.575],[119.562,23.585],[119.575,23.585],[119.582,23.59],[119.583,23.594],[119.583,23.589],[119.586,23.588],[119.582,23.583],[119.586,23.58],[119.583,23.58],[119.587,23.578],[119.589,23.58],[119.586,23.574],[119.587,23.571],[119.594,23.575],[119.594,23.57],[119.597,23.569],[119.598,23.575],[119.602,23.577],[119.597,23.577],[119.599,23.577],[119.598,23.583],[119.607,23.586],[119.606,23.594],[119.608,23.594],[119.603,23.601],[119.606,23.606],[119.612,23.605],[119.61,23.61],[119.604,23.609],[119.597,23.616],[119.605,23.62],[119.605,23.625],[119.6,23.62],[119.596,23.625],[119.589,23.623],[119.591,23.63],[119.596,23.635],[119.594,23.641],[119.588,23.644],[119.589,23.647],[119.582,23.653],[119.583,23.655],[119.579,23.656],[119.583,23.658],[119.581,23.662],[119.571,23.662],[119.567,23.66],[119.563,23.651],[119.559,23.656],[119.556,23.654],[119.558,23.656],[119.554,23.658],[119.556,23.655],[119.554,23.657],[119.541,23.641],[119.544,23.641],[119.539,23.633],[119.537,23.634],[119.539,23.632],[119.536,23.634],[119.523,23.629],[119.525,23.631],[119.523,23.629],[119.522,23.631],[119.518,23.629],[119.522,23.615],[119.52,23.611],[119.523,23.602],[119.52,23.595],[119.515,23.595],[119.512,23.592],[119.516,23.585],[119.514,23.58],[119.515,23.582],[119.512,23.581],[119.513,23.576],[119.515,23.575],[119.513,23.571],[119.518,23.567],[119.516,23.565],[119.511,23.564],[119.501,23.567],[119.5,23.565],[119.499,23.566],[119.502,23.567],[119.496,23.568],[119.49,23.563],[119.481,23.563],[119.483,23.564],[119.481,23.564],[119.479,23.563],[119.481,23.562],[119.472,23.559],[119.467,23.561],[119.47,23.565],[119.478,23.569],[119.481,23.575],[119.492,23.57],[119.497,23.572],[119.499,23.576],[119.5,23.575],[119.499,23.577],[119.503,23.579],[119.504,23.587],[119.502,23.59],[119.49,23.594],[119.494,23.596],[119.491,23.599],[119.494,23.602],[119.498,23.601],[119.498,23.596],[119.504,23.597],[119.503,23.606],[119.509,23.613],[119.506,23.617],[119.504,23.615],[119.499,23.62],[119.504,23.624],[119.502,23.631],[119.504,23.636],[119.508,23.636],[119.512,23.648],[119.516,23.65],[119.52,23.648],[119.517,23.652],[119.514,23.652],[119.514,23.656],[119.524,23.656],[119.524,23.651],[119.52,23.648],[119.519,23.644],[119.523,23.642],[119.526,23.644],[119.528,23.641],[119.536,23.639],[119.54,23.64],[119.553,23.657],[119.551,23.658],[119.554,23.658],[119.552,23.659],[119.55,23.658],[119.555,23.669],[119.569,23.672],[119.57,23.67],[119.568,23.672],[119.571,23.672],[119.579,23.676],[119.584,23.677]],[[119.552,23.721],[119.559,23.72],[119.557,23.715],[119.559,23.711],[119.555,23.709],[119.553,23.712],[119.556,23.717],[119.551,23.719],[119.552,23.721]],[[119.612,23.756],[119.612,23.753],[119.622,23.749],[119.624,23.744],[119.62,23.743],[119.62,23.74],[119.616,23.742],[119.616,23.738],[119.615,23.741],[119.611,23.741],[119.612,23.74],[119.611,23.74],[119.615,23.737],[119.61,23.739],[119.607,23.738],[119.603,23.731],[119.603,23.725],[119.6,23.735],[119.596,23.739],[119.604,23.746],[119.606,23.752],[119.609,23.752],[119.606,23.753],[119.611,23.759],[119.612,23.756]],[[119.606,23.776],[119.607,23.771],[119.603,23.767],[119.598,23.758],[119.596,23.762],[119.599,23.769],[119.602,23.769],[119.606,23.776]]]},{"name":"新竹市","name_en":"Hsinchu City","rings":[[[120.93,24.853],[120.955,24.834],[120.983,24.831],[121.008,24.816],[121.026,24.799],[121.021,24.794],[121.034,24.764],[121.021,24.757],[121.01,24.774],[120.993,24.781],[120.986,24.777],[120.988,24.768],[120.97,24.765],[120.958,24.745],[120.944,24.744],[120.935,24.713],[120.914,24.717],[120.908,24.741],[120.891,24.732],[120.875,24.738],[120.898,24.765],[120.891,24.775],[120.892,24.793],[120.902,24.822],[120.916,24.841],[120.913,24.854],[120.93,24.853]]]},{"name":"臺中市","name_en":"Taichung City","rings":[[[121.328,24.433],[121.326,24.4],[121.339,24.39],[121.365,24.389],[121.374,24.368],[121.382,24.367],[121.401,24.38],[121.434,24.383],[121.443,24.373],[121.448,24.375],[121.452,24.365],[121.438,24.352],[121.435,24.322],[121.423,24.308],[121.405,24.308],[121.397,24.289],[121.381,24.28],[121.385,24.255],[121.353,24.244],[121.343,24.224],[121.301,24.237],[121.293,24.229],[121.28,24.23],[121.265,24.246],[121.255,24.243],[121.238,24.22],[121.219,24.229],[121.181,24.212],[121.168,24.225],[121.161,24.215],[121.148,24.213],[121.136,24.196],[121.102,24.196],[121.085,24.176],[121.053,24.155],[121.038,24.158],[121.033,24.149],[121.028,24.16],[121.02,24.159],[120.989,24.119],[120.961,24.12],[120.95,24.128],[120.92,24.107],[120.892,24.116],[120.891,24.098],[120.878,24.085],[120.879,24.109],[120.872,24.117],[120.859,24.116],[120.854,24.125],[120.845,24.125],[120.83,24.103],[120.829,24.072],[120.808,24.065],[120.792,24.031],[120.771,24.009],[120.746,23.999],[120.732,24.009],[120.692,24.008],[120.646,24.034],[120.645,24.026],[120.625,24.03],[120.625,24.069],[120.619,24.075],[120.612,24.103],[120.545,24.116],[120.524,24.14],[120.525,24.15],[120.504,24.191],[120.457,24.207],[120.465,24.214],[120.461,24.217],[120.469,24.214],[120.476,24.224],[120.49,24.255],[120.486,24.257],[120.493,24.266],[120.498,24.264],[120.519,24.313],[120.559,24.35],[120.573,24.377],[120.622,24.44],[120.64,24.428],[120.646,24.412],[120.664,24.402],[120.693,24.367],[120.73,24.352],[120.763,24.326],[120.807,24.316],[120.834,24.29],[120.85,24.289],[120.876,24.295],[120.912,24.294],[120.922,24.304],[120.917,24.335],[120.936,24.343],[120.966,24.333],[121.004,24.332],[121.034,24.298],[121.049,24.296],[121.055,24.31],[121.07,24.316],[121.073,24.323],[121.092,24.319],[121.108,24.331],[121.122,24.331],[121.141,24.36],[121.168,24.361],[121.197,24.397],[121.21,24.396],[121.216,24.379],[121.232,24.384],[121.25,24.425],[121.306,24.433],[121.318,24.441],[121.328,24.433]]]},{"name":"苗栗縣","name_en":"Miaoli County","rings":[[[120.912,24.732],[120.914,24.717],[120.93,24.717],[120.942,24.707],[120.95,24.711],[120.953,24.704],[120.963,24.711],[120.975,24.711],[120.974,24.697],[120.964,24.684],[120.976,24.685],[120.987,24.664],[120.997,24.655],[121.01,24.656],[121.008,24.644],[121.025,24.641],[121.052,24.615],[121.062,24.622],[121.075,24.612],[121.083,24.59],[121.071,24.563],[121.058,24.558],[121.081,24.541],[121.078,24.529],[121.067,24.523],[121.072,24.498],[121.098,24.496],[121.117,24.508],[121.137,24.507],[121.145,24.512],[121.169,24.503],[121.217,24.515],[121.224,24.506],[121.219,24.498],[121.263,24.455],[121.26,24.429],[121.244,24.42],[121.244,24.406],[121.232,24.384],[121.216,24.379],[121.21,24.396],[121.197,24.397],[121.168,24.361],[121.141,24.36],[121.122,24.331],[121.108,24.331],[121.092,24.319],[121.073,24.323],[121.07,24.316],[121.056,24.311],[121.049,24.296],[121.034,24.298],[121.004,24.332],[120.966,24.333],[120.936,24.343],[120.917,24.335],[120.922,24.304],[120.912,24.294],[120.847,24.289],[120.833,24.291],[120.807,24.316],[120.763,24.326],[120.73,24.352],[120.707,24.358],[120.664,24.402],[120.646,24.412],[120.64,24.428],[120.622,24.44],[120.665,24.484],[120.716,24.601],[120.752,24.627],[120.758,24.642],[120.779,24.663],[120.824,24.673],[120.856,24.703],[120.861,24.722],[120.875,24.738],[120.891,24.732],[120.908,24.741],[120.912,24.732]]]},{"name":"新竹縣","name_en":"Hsinchu County","rings":[[[121.04,24.944],[121.058,24.937],[121.058,24.905],[121.091,24.893],[121.109,24.898],[121.108,24.886],[121.116,24.882],[121.156,24.881],[121.161,24.859],[121.15,24.844],[121.199,24.815],[121.203,24.817],[121.205,24.807],[121.22,24.812],[121.222,24.799],[121.243,24.809],[121.248,24.797],[121.26,24.793],[121.26,24.782],[121.302,24.763],[121.308,24.755],[121.298,24.732],[121.308,24.72],[121.3,24.695],[121.324,24.695],[121.339,24.68],[121.339,24.667],[121.354,24.668],[121.352,24.644],[121.358,24.634],[121.366,24.632],[121.359,24.617],[121.363,24.603],[121.387,24.587],[121.403,24.592],[121.41,24.579],[121.412,24.573],[121.395,24.556],[121.401,24.529],[121.384,24.51],[121.373,24.51],[121.371,24.498],[121.358,24.487],[121.343,24.482],[121.317,24.441],[121.306,24.433],[121.26,24.429],[121.263,24.455],[121.219,24.498],[121.224,24.506],[121.216,24.516],[121.169,24.503],[121.145,24.512],[121.137,24.507],[121.117,24.508],[121.098,24.496],[121.072,24.498],[121.067,24.523],[121.078,24.529],[121.081,24.541],[121.058,24.558],[121.071,24.563],[121.083,24.59],[121.075,24.612],[121.062,24.622],[121.052,24.615],[121.025,24.641],[121.008,24.644],[121.01,24.656],[120.997,24.655],[120.987,24.664],[120.976,24.685],[120.964,24.684],[120.974,24.697],[120.975,24.711],[120.963,24.711],[120.953,24.704],[120.95,24.711],[120.942,24.707],[120.935,24.713],[120.944,24.744],[120.958,24.745],[120.97,24.765],[120.988,24.768],[120.986,24.777],[120.993,24.781],[121.01,24.774],[121.021,24.757],[121.033,24.763],[121.021,24.794],[121.026,24.799],[121.008,24.816],[120.983,24.831],[120.955,24.834],[120.94,24.85],[120.925,24.855],[120.943,24.872],[120.969,24.927],[120.981,24.939],[120.992,24.935],[121.007,24.946],[121.019,24.94],[121.04,24.944]]]}]}
+</canonical-source>
+
+<canonical-source path="exam_packs/會考/maps/world-countries.json">
+{"name":"world-countries","source":{"title":"Natural Earth 1:50m Admin 0 – Countries","publisher":"Natural Earth","url":"https://www.naturalearthdata.com/","license":"Public domain","retrieved_at":"2026-11-14"},"note":"簡化後的國界輪廓，只供示意圖；國界依 Natural Earth 的 de facto 劃法","countries":[{"code":"ZWE","name":"辛巴威","name_en":"Zimbabwe","rings":[[[31.29,-22.4],[28.01,-21.55],[27.7,-20.53],[26.17,-19.54],[25.26,-17.79],[27.02,-17.96],[29.73,-15.64],[32.95,-16.71],[32.99,-19.98],[31.29,-22.4]]]},{"code":"ZMB","name":"尚比亞","name_en":"Zambia","rings":[[[30.4,-15.64],[28.91,-15.99],[26.78,-18.04],[23.38,-17.64],[22.04,-16.26],[21.98,-13.0],[23.96,-12.99],[23.97,-10.87],[26.03,-11.89],[27.16,-11.58],[29.01,-13.37],[29.78,-13.44],[29.8,-12.16],[29.06,-12.35],[28.38,-11.57],[28.4,-9.22],[28.9,-8.49],[30.75,-8.19],[33.2,-9.63],[33.66,-10.55],[33.26,-10.89],[33.51,-12.35],[32.67,-13.59],[33.2,-14.01],[30.23,-14.99],[30.4,-15.64]]]},{"code":"YEM","name":"葉門","name_en":"Yemen","rings":[[[53.09,16.65],[51.6,15.34],[44.01,12.61],[43.49,12.7],[42.66,15.23],[43.35,17.49],[47.14,16.95],[49.19,18.62],[51.98,19.0],[53.09,16.65]]]},{"code":"VNM","name":"越南","name_en":"Vietnam","rings":[[[107.97,21.51],[106.68,21.0],[105.62,18.97],[108.82,15.38],[109.44,12.6],[108.99,11.34],[106.61,10.46],[106.6,9.86],[106.14,10.22],[106.57,9.64],[105.83,10.0],[106.17,9.4],[104.77,8.6],[105.09,9.95],[104.43,10.41],[105.05,10.91],[106.16,10.79],[105.85,11.64],[107.51,12.36],[107.65,15.26],[105.15,18.65],[103.89,19.3],[104.93,20.02],[104.58,20.65],[103.1,20.89],[102.13,22.38],[103.94,22.54],[105.28,23.35],[106.78,22.78],[106.66,21.98],[107.97,21.51]]]},{"code":"VEN","name":"委內瑞拉","name_en":"Venezuela","rings":[[[-60.02,8.55],[-60.72,7.54],[-60.35,7.0],[-61.15,6.69],[-61.39,5.94],[-60.63,4.89],[-62.86,3.59],[-64.79,4.28],[-64.05,2.5],[-63.39,2.22],[-65.56,0.69],[-66.88,1.22],[-67.86,2.79],[-67.31,3.42],[-67.86,4.51],[-67.48,6.18],[-69.43,6.12],[-70.13,6.95],[-72.01,7.03],[-72.8,9.11],[-73.37,9.19],[-72.69,10.84],[-71.32,11.86],[-71.96,11.57],[-71.59,10.66],[-72.11,9.82],[-71.24,9.16],[-71.47,10.96],[-69.8,11.47],[-70.29,11.89],[-70.0,12.18],[-68.14,10.49],[-66.25,10.63],[-65.13,10.07],[-63.73,10.5],[-64.3,10.64],[-61.88,10.74],[-62.91,10.53],[-62.32,9.78],[-60.79,9.36],[-61.62,8.6],[-60.02,8.55]]]},{"code":"UZB","name":"烏茲別克","name_en":"Uzbekistan","rings":[[[70.95,42.25],[70.2,41.51],[71.39,41.12],[71.66,41.54],[73.14,40.81],[71.69,40.15],[70.6,40.21],[70.4,41.04],[69.41,40.8],[68.51,39.56],[67.43,39.47],[68.35,38.21],[67.76,37.17],[66.52,37.35],[66.57,38.01],[63.76,39.16],[62.48,39.98],[61.9,41.09],[60.09,41.4],[59.99,42.21],[58.59,42.78],[58.15,42.63],[58.47,42.3],[56.96,41.86],[57.02,41.26],[55.98,41.32],[55.98,44.99],[58.56,45.56],[61.99,43.49],[64.91,43.71],[66.1,42.99],[66.01,42.0],[66.5,41.99],[66.71,41.18],[67.94,41.2],[68.42,40.62],[70.95,42.25]]]},{"code":"URY","name":"烏拉圭","name_en":"Uruguay","rings":[[[-53.37,-33.74],[-54.9,-34.93],[-57.87,-34.45],[-58.44,-33.72],[-57.65,-30.23],[-56.83,-30.11],[-56.0,-31.08],[-55.6,-30.85],[-53.76,-32.06],[-53.13,-32.74],[-53.37,-33.74]]]},{"code":"PRI","name":"波多黎各","name_en":"Puerto Rico","rings":[[[-66.13,18.44],[-65.63,18.38],[-65.97,17.97],[-67.2,17.99],[-67.16,18.5],[-66.13,18.44]]]},{"code":"USA","name":"美國","name_en":"United States of America","rings":[[[-171.46,63.64],[-168.72,63.31],[-169.68,62.96],[-171.46,63.64]],[[-166.14,60.38],[-165.59,59.91],[-166.15,59.76],[-167.44,60.21],[-166.14,60.38]],[[-152.9,57.82],[-152.22,57.58],[-153.97,56.77],[-154.71,57.34],[-152.9,57.82]],[[-130.03,55.89],[-130.58,54.77],[-131.03,56.09],[-132.12,55.57],[-131.55,56.21],[-133.47,57.17],[-133.19,57.88],[-134.03,58.07],[-133.88,58.52],[-134.78,58.45],[-135.36,59.42],[-135.09,58.25],[-135.9,58.4],[-136.15,59.05],[-137.0,59.02],[-136.06,58.45],[-136.61,58.24],[-139.77,59.53],[-138.99,59.84],[-139.43,60.01],[-144.15,60.02],[-144.9,60.34],[-144.69,60.67],[-146.57,60.73],[-146.38,61.14],[-148.34,61.06],[-148.64,60.49],[-147.96,60.48],[-148.43,59.99],[-151.74,59.19],[-151.05,59.77],[-151.85,59.78],[-151.36,60.72],[-149.08,60.88],[-150.05,61.17],[-149.43,61.5],[-153.03,60.3],[-152.66,60.0],[-154.18,59.16],[-153.44,58.75],[-158.48,56.08],[-163.34,54.84],[-161.7,55.91],[-160.29,55.81],[-160.3,56.31],[-157.46,57.51],[-157.52,58.42],[-156.81,59.13],[-158.19,58.61],[-158.5,58.85],[-158.08,58.98],[-158.81,58.97],[-158.95,58.4],[-160.36,59.05],[-162.14,58.64],[-161.64,59.11],[-162.42,60.28],[-161.95,60.68],[-162.57,59.99],[-163.91,59.81],[-165.35,60.54],[-163.59,60.9],[-165.11,60.93],[-166.17,61.65],[-164.41,63.22],[-160.93,63.66],[-161.49,64.43],[-160.89,64.8],[-166.14,64.58],[-166.93,65.16],[-166.16,65.29],[-168.09,65.66],[-164.46,66.59],[-163.64,66.57],[-164.03,66.22],[-163.7,66.08],[-161.03,66.19],[-162.36,66.95],[-160.23,66.42],[-166.79,68.36],[-166.21,68.89],[-163.54,69.17],[-161.88,70.33],[-159.87,70.28],[-159.39,70.52],[-160.08,70.63],[-159.68,70.79],[-156.47,71.41],[-155.58,71.12],[-155.97,70.84],[-141.0,69.65],[-141.0,60.3],[-139.08,60.34],[-137.44,58.9],[-135.48,59.79],[-131.82,56.59],[-130.03,55.89]],[[-163.48,54.98],[-163.08,54.67],[-164.9,54.54],[-163.48,54.98]],[[-130.98,55.49],[-131.81,55.22],[-131.27,55.96],[-130.98,55.49]],[[-133.37,57.0],[-132.96,56.68],[-133.48,56.45],[-133.98,57.01],[-133.37,57.0]],[[-134.97,57.35],[-134.68,56.22],[-135.45,57.25],[-135.81,57.01],[-134.97,57.35]],[[-134.68,58.16],[-133.82,57.63],[-134.31,58.03],[-133.91,57.37],[-134.44,57.06],[-134.68,58.16]],[[-135.73,58.24],[-134.95,58.02],[-135.34,57.77],[-134.93,57.48],[-136.57,57.97],[-135.73,58.24]],[[-133.57,56.34],[-132.17,55.48],[-132.63,55.47],[-132.02,54.73],[-133.68,55.79],[-133.24,55.92],[-133.74,55.96],[-133.57,56.34]],[[-133.99,56.84],[-134.19,56.08],[-134.37,56.84],[-133.99,56.84]],[[-155.58,19.01],[-155.83,20.28],[-154.8,19.52],[-155.58,19.01]],[[-74.71,45.0],[-70.87,45.27],[-69.24,47.46],[-67.81,47.08],[-67.8,45.73],[-66.99,44.83],[-70.27,43.67],[-71.05,42.33],[-69.95,41.68],[-71.39,41.8],[-73.99,40.75],[-73.97,41.25],[-74.08,39.79],[-74.79,39.0],[-75.52,39.49],[-75.07,39.98],[-75.59,39.64],[-75.04,38.43],[-75.93,37.15],[-75.66,37.95],[-76.34,38.71],[-75.87,39.51],[-76.57,39.27],[-76.34,38.09],[-77.23,38.41],[-77.03,38.89],[-77.26,38.6],[-76.25,37.43],[-76.76,37.51],[-76.4,36.99],[-77.25,37.33],[-76.0,36.91],[-75.53,35.82],[-75.95,36.66],[-75.82,36.11],[-76.73,36.23],[-75.76,35.84],[-76.17,35.35],[-77.04,35.53],[-76.44,34.84],[-77.41,34.73],[-77.93,33.94],[-80.8,32.45],[-81.46,31.13],[-80.05,26.81],[-80.48,25.23],[-81.11,25.14],[-81.72,25.98],[-82.71,27.5],[-82.41,27.86],[-82.84,27.85],[-82.65,28.89],[-83.69,29.93],[-85.32,29.68],[-85.6,30.29],[-88.01,30.23],[-88.01,30.69],[-90.33,30.28],[-89.4,30.05],[-89.72,29.62],[-89.02,29.2],[-89.38,28.98],[-91.89,29.84],[-95.02,29.7],[-95.27,28.96],[-96.64,28.71],[-97.77,27.46],[-97.36,25.87],[-99.11,26.45],[-101.38,29.74],[-102.34,29.86],[-103.26,29.0],[-106.45,31.77],[-111.04,31.32],[-114.72,32.72],[-117.13,32.53],[-118.51,34.02],[-120.64,34.58],[-122.5,37.54],[-121.53,38.06],[-123.0,37.99],[-124.32,40.25],[-124.07,41.46],[-124.54,42.81],[-123.99,46.22],[-123.22,46.15],[-124.07,46.28],[-123.84,46.96],[-124.71,48.38],[-122.78,48.14],[-123.14,47.39],[-122.53,47.92],[-122.7,47.11],[-122.24,48.01],[-122.79,48.99],[-95.16,48.99],[-95.16,49.37],[-94.62,48.74],[-91.52,48.06],[-88.38,48.3],[-82.55,45.35],[-82.14,43.57],[-83.15,42.14],[-82.69,41.68],[-79.04,42.8],[-78.85,43.58],[-76.82,43.63],[-74.71,45.0]]]},{"code":"SGS","name":"南喬治亞與南桑威奇","name_en":"S. Geo. and the Is.","rings":[[[-37.1,-54.07],[-35.8,-54.76],[-38.02,-54.01],[-37.1,-54.07]]]},{"code":"FLK","name":"福克蘭群島","name_en":"Falkland Is.","rings":[[[-58.85,-51.27],[-57.84,-51.71],[-59.53,-52.24],[-58.85,-51.27]],[[-60.29,-51.46],[-59.27,-51.43],[-60.51,-52.19],[-60.96,-52.06],[-60.29,-51.46]]]},{"code":"GBR","name":"英國","name_en":"United Kingdom","rings":[[[-2.67,51.62],[-5.26,51.88],[-4.15,52.33],[-4.1,52.92],[-4.68,52.81],[-4.27,53.14],[-2.75,53.31],[-2.87,54.18],[-3.59,54.56],[-3.04,54.95],[-5.14,54.86],[-4.8,56.16],[-5.77,55.36],[-5.19,56.76],[-6.13,56.72],[-5.02,58.57],[-3.05,58.63],[-4.13,57.58],[-1.87,57.61],[-3.31,56.36],[-2.67,56.25],[-3.79,56.1],[-2.15,55.9],[-0.08,54.12],[0.12,53.61],[-0.66,53.72],[0.27,53.34],[0.05,52.91],[1.72,52.68],[0.42,51.47],[1.41,51.36],[0.96,50.93],[-5.62,50.05],[-2.67,51.62]],[[-6.22,54.09],[-8.14,54.45],[-6.13,55.22],[-5.47,54.5],[-6.22,54.09]]]},{"code":"ARE","name":"阿拉伯聯合大公國","name_en":"United Arab Emirates","rings":[[[56.3,25.65],[55.12,22.62],[52.56,22.93],[51.57,24.13],[53.89,24.08],[56.08,26.06],[56.3,25.65]]]},{"code":"UKR","name":"烏克蘭","name_en":"Ukraine","rings":[[[38.21,47.09],[35.23,46.44],[34.95,45.73],[31.83,46.28],[31.55,46.55],[32.58,46.62],[31.76,47.21],[31.87,46.65],[30.8,46.55],[29.63,45.72],[29.71,45.26],[28.76,45.23],[28.21,45.45],[28.96,46.46],[30.13,46.42],[29.13,47.96],[27.55,48.48],[24.89,47.72],[22.88,47.95],[22.14,48.57],[24.09,50.53],[23.61,51.61],[24.36,51.87],[30.54,51.27],[30.98,52.05],[33.74,52.34],[34.4,51.78],[34.21,51.26],[35.31,51.04],[35.59,50.37],[37.42,50.41],[40.08,49.58],[39.78,47.89],[38.37,47.61],[38.21,47.09]]]},{"code":"UGA","name":"烏干達","name_en":"Uganda","rings":[[[33.9,-1.0],[29.58,-1.39],[29.94,0.82],[31.25,2.04],[30.73,2.46],[31.05,3.73],[32.14,3.52],[33.98,4.22],[34.44,3.65],[34.98,1.72],[33.94,0.17],[33.9,-1.0]]]},{"code":"TKM","name":"土庫曼","name_en":"Turkmenistan","rings":[[[55.98,41.32],[57.02,41.26],[56.96,41.86],[58.47,42.3],[58.15,42.63],[58.59,42.78],[59.99,42.21],[60.09,41.4],[61.9,41.09],[62.48,39.98],[63.76,39.16],[66.57,38.01],[66.52,37.35],[64.82,37.13],[64.51,36.34],[62.31,35.17],[61.26,35.62],[61.12,36.64],[57.19,38.22],[53.91,37.34],[53.87,38.95],[53.16,39.26],[53.49,39.91],[53.04,39.77],[52.73,40.4],[52.94,41.04],[53.87,40.65],[54.7,41.07],[53.8,42.12],[52.97,41.98],[52.85,41.2],[52.49,41.78],[54.12,42.34],[55.98,41.32]]]},{"code":"TUR","name":"土耳其","name_en":"Turkey","rings":[[[41.51,41.52],[42.79,41.56],[43.63,40.93],[43.67,40.13],[44.82,39.65],[44.02,39.38],[44.8,37.27],[44.28,36.98],[42.77,37.37],[39.36,36.68],[36.66,36.8],[36.13,35.83],[36.05,36.91],[32.79,36.04],[30.64,36.87],[30.45,36.27],[29.69,36.16],[28.97,36.72],[27.45,36.71],[28.24,37.03],[27.26,36.98],[27.23,37.98],[26.29,38.28],[27.14,38.45],[26.9,39.55],[26.11,39.47],[26.18,39.99],[29.01,40.39],[29.85,40.76],[29.15,41.22],[31.25,41.11],[33.28,42.0],[35.01,42.06],[38.38,40.92],[41.51,41.52]],[[28.01,41.97],[28.96,41.01],[27.5,40.97],[26.2,40.08],[26.79,40.63],[26.04,40.73],[26.62,41.4],[26.33,41.77],[28.01,41.97]]]},{"code":"TUN","name":"突尼西亞","name_en":"Tunisia","rings":[[[11.5,33.18],[11.5,32.41],[10.27,31.68],[10.22,30.78],[9.52,30.23],[9.04,32.07],[7.5,33.83],[8.25,34.73],[8.58,36.94],[11.05,37.07],[10.48,36.18],[11.12,35.24],[10.05,34.06],[11.5,33.18]]]},{"code":"TTO","name":"千里達及托巴哥","name_en":"Trinidad and Tobago","rings":[[[-61.01,10.13],[-61.91,10.07],[-61.08,10.83],[-61.01,10.13]]]},{"code":"TGO","name":"多哥","name_en":"Togo","rings":[[[0.9,10.99],[1.78,6.29],[1.19,6.09],[0.53,6.85],[0.53,9.4],[-0.09,10.72],[-0.07,11.12],[0.9,10.99]]]},{"code":"TLS","name":"東帝汶","name_en":"Timor-Leste","rings":[[[125.07,-9.51],[125.18,-8.65],[127.3,-8.42],[125.07,-9.51]]]},{"code":"THA","name":"泰國","name_en":"Thailand","rings":[[[100.12,20.32],[100.51,19.55],[101.21,19.55],[100.96,17.54],[102.1,18.21],[102.66,17.82],[103.95,18.32],[105.64,15.66],[105.07,14.23],[103.2,14.33],[102.32,13.54],[102.93,11.71],[101.84,12.64],[100.9,12.65],[100.96,13.43],[100.02,13.35],[99.16,9.73],[99.84,9.29],[100.42,7.19],[102.1,6.24],[101.11,5.64],[101.05,6.24],[100.12,6.44],[98.24,8.42],[98.76,10.66],[99.61,11.78],[98.2,14.98],[98.89,16.35],[97.37,18.52],[98.02,19.75],[100.12,20.32]]]},{"code":"TZA","name":"坦尚尼亞","name_en":"Tanzania","rings":[[[32.92,-9.41],[30.97,-8.55],[29.54,-6.31],[29.4,-4.45],[30.81,-3.2],[30.52,-1.06],[33.98,-1.0],[37.64,-3.05],[39.22,-4.69],[38.8,-6.07],[39.55,-7.02],[39.73,-10.0],[40.46,-10.46],[39.99,-10.82],[37.37,-11.71],[34.96,-11.58],[34.32,-9.73],[32.92,-9.41]]]},{"code":"TJK","name":"塔吉克","name_en":"Tajikistan","rings":[[[67.76,37.17],[68.35,38.21],[67.43,39.47],[68.46,39.54],[69.36,40.77],[70.4,41.04],[70.75,40.72],[70.37,40.38],[70.95,40.19],[69.53,40.1],[69.3,39.52],[73.63,39.45],[73.8,38.61],[74.81,38.46],[75.12,37.39],[73.38,37.46],[71.67,36.7],[71.58,37.91],[70.88,38.46],[69.3,37.12],[67.76,37.17]]]},{"code":"TWN","name":"中華民國","name_en":"Taiwan","rings":[[[121.01,22.62],[120.74,21.96],[120.13,23.65],[121.59,25.28],[121.93,24.97],[121.01,22.62]]]},{"code":"SYR","name":"敘利亞","name_en":"Syria","rings":[[[35.89,35.92],[36.64,36.23],[36.66,36.8],[42.36,37.11],[41.3,36.38],[40.99,34.43],[36.82,32.32],[35.79,32.73],[36.58,34.22],[35.98,34.63],[35.89,35.92]]]},{"code":"CHE","name":"瑞士","name_en":"Switzerland","rings":[[[9.52,47.52],[9.49,47.06],[10.45,46.9],[10.13,46.24],[9.3,46.5],[8.95,45.83],[8.42,46.45],[7.79,45.92],[6.76,46.42],[5.97,46.15],[7.05,47.49],[9.52,47.52]]]},{"code":"SWE","name":"瑞典","name_en":"Sweden","rings":[[[19.08,57.84],[18.15,56.92],[18.14,57.56],[19.08,57.84]],[[11.39,59.04],[12.88,61.35],[12.16,61.72],[12.0,63.29],[12.79,64],[14.14,64.17],[13.65,64.58],[14.48,65.3],[14.54,66.13],[16.4,67.05],[16.19,67.51],[17.92,67.96],[18.16,68.53],[19.97,68.36],[20.12,69.02],[23.64,67.95],[24.16,65.81],[22.4,65.86],[21.41,65.32],[21.52,64.46],[20.76,63.87],[17.38,62.46],[17.25,60.7],[18.99,59.83],[17.96,59.36],[18.56,59.39],[18.29,59.11],[16.21,58.64],[16.92,58.49],[16.0,56.22],[12.89,55.41],[12.47,56.29],[12.88,56.62],[11.25,58.37],[11.39,59.04]]]},{"code":"SWZ","name":"史瓦帝尼","name_en":"eSwatini","rings":[[[31.95,-25.96],[31.96,-27.31],[31.06,-27.11],[31.09,-25.98],[31.95,-25.96]]]},{"code":"SUR","name":"蘇利南","name_en":"Suriname","rings":[[[-54.16,5.36],[-54.4,2.46],[-56.7,2.04],[-58.03,4.0],[-57.88,4.88],[-56.97,5.99],[-54.36,5.91],[-54.16,5.36]]]},{"code":"SDS","name":"南蘇丹","name_en":"S. Sudan","rings":[[[33.98,4.22],[30.84,3.49],[29.55,4.64],[28.19,4.35],[24.16,8.7],[25.07,10.29],[25.8,10.42],[26.66,9.48],[28.84,9.33],[30.0,10.28],[31.15,9.77],[32.42,11.09],[32.07,12.01],[33.2,12.22],[33.13,10.75],[33.91,10.18],[34.1,8.68],[33.0,7.9],[34.71,6.66],[35.27,5.49],[33.98,4.22]]]},{"code":"SDN","name":"蘇丹","name_en":"Sudan","rings":[[[34.08,9.46],[33.13,10.75],[33.2,12.22],[32.72,12.22],[32.07,12.01],[32.42,11.09],[31.15,9.77],[30.0,10.28],[28.84,9.33],[26.66,9.48],[25.8,10.42],[25.07,10.29],[24.53,8.89],[23.54,8.82],[23.65,9.82],[22.35,12.66],[21.83,12.79],[22.93,15.53],[23.97,15.72],[23.98,20.0],[24.98,20.0],[24.98,22.0],[36.87,22.0],[37.47,18.82],[38.61,18.01],[37.01,17.06],[36.13,12.76],[34.34,10.66],[34.08,9.46]]]},{"code":"LKA","name":"斯里蘭卡","name_en":"Sri Lanka","rings":[[[79.98,9.81],[81.87,7.29],[81.64,6.43],[80.72,5.98],[79.86,6.83],[79.71,8.18],[80.43,9.48],[79.98,9.81]]]},{"code":"ESP","name":"西班牙","name_en":"Spain","rings":[[[3.15,39.79],[3.07,39.3],[2.37,39.57],[3.15,39.79]],[[-1.79,43.41],[-0.04,42.69],[3.21,42.43],[3.25,41.94],[0.71,40.82],[-0.33,39.52],[0.2,38.76],[-2.11,36.78],[-4.37,36.72],[-5.63,36.03],[-6.22,36.91],[-7.41,37.18],[-7.0,39.06],[-7.54,39.66],[-6.98,39.8],[-6.93,41.01],[-6.21,41.53],[-8.85,41.93],[-9.18,43.17],[-7.7,43.76],[-1.79,43.41]]]},{"code":"KOR","name":"大韓民國","name_en":"South Korea","rings":[[[126.63,37.78],[128.37,38.62],[129.42,37.06],[129.21,35.18],[126.53,34.31],[126.29,35.15],[126.75,35.87],[126.16,36.77],[126.98,36.94],[126.63,37.78]]]},{"code":"ZAF","name":"南非","name_en":"South Africa","rings":[[[29.36,-22.19],[31.29,-22.4],[31.97,-24.38],[31.95,-25.96],[31.21,-25.84],[30.81,-26.79],[31.74,-27.31],[31.99,-26.82],[32.89,-26.85],[32.38,-28.5],[30.29,-30.97],[27.86,-33.05],[25.57,-34.04],[22.55,-34.01],[20.02,-34.79],[18.46,-34.35],[17.85,-32.83],[18.21,-31.74],[16.45,-28.62],[16.88,-28.13],[17.45,-28.7],[19.25,-28.9],[19.98,-28.45],[19.98,-24.78],[20.79,-25.92],[20.69,-26.82],[21.69,-26.84],[23.06,-25.31],[25.44,-25.71],[27.09,-23.58],[29.36,-22.19]]]},{"code":"SOM","name":"索馬利亞","name_en":"Somalia","rings":[[[41.53,-1.7],[40.98,-0.87],[40.98,2.84],[42.02,4.14],[44.94,4.91],[47.98,8.0],[48.94,9.45],[48.94,11.26],[51.25,11.83],[51.38,10.39],[50.93,10.34],[47.98,4.5],[41.53,-1.7]]]},{"code":"SOL","name":"索馬利蘭","name_en":"Somaliland","rings":[[[48.94,11.26],[48.94,9.45],[47.98,8.0],[44.02,8.99],[42.66,10.6],[43.25,11.5],[44.39,10.43],[48.94,11.26]]]},{"code":"SLB","name":"索羅門群島","name_en":"Solomon Is.","rings":[[[159.75,-9.27],[160.82,-9.86],[159.8,-9.76],[159.75,-9.27]]]},{"code":"SVK","name":"斯洛伐克","name_en":"Slovakia","rings":[[[22.54,49.07],[22.11,48.39],[20.49,48.53],[18.72,47.79],[16.87,48.39],[19.44,49.6],[22.54,49.07]]]},{"code":"SVN","name":"斯洛維尼亞","name_en":"Slovenia","rings":[[[16.52,46.5],[15.24,45.44],[13.62,45.48],[13.38,46.26],[16.09,46.86],[16.52,46.5]]]},{"code":"SLE","name":"獅子山","name_en":"Sierra Leone","rings":[[[-10.28,8.49],[-11.51,6.91],[-12.85,7.82],[-13.29,9.05],[-12.43,9.9],[-11.27,10.0],[-10.71,8.34],[-10.28,8.49]]]},{"code":"SRB","name":"塞爾維亞","name_en":"Serbia","rings":[[[21.36,44.83],[22.72,44.61],[22.37,43.78],[22.98,43.19],[22.42,42.33],[21.56,42.25],[21.75,42.67],[20.8,43.26],[20.34,42.83],[19.22,43.45],[19.58,44.04],[19.0,44.9],[19.4,45.21],[18.84,45.84],[20.21,46.13],[21.36,44.83]]]},{"code":"SEN","name":"塞內加爾","name_en":"Senegal","rings":[[[-12.28,14.81],[-11.38,12.48],[-12.29,12.33],[-16.71,12.35],[-16.65,13.15],[-13.83,13.41],[-16.56,13.59],[-17.54,14.76],[-16.24,16.53],[-14.96,16.68],[-13.51,16.14],[-12.28,14.81]]]},{"code":"SAU","name":"沙烏地阿拉伯","name_en":"Saudi Arabia","rings":[[[51.98,19.0],[49.04,18.58],[47.14,16.95],[43.42,17.52],[42.8,16.37],[40.76,19.76],[39.28,20.97],[38.46,23.71],[37.54,24.29],[35.18,28.03],[34.62,28.06],[34.95,29.35],[36.07,29.2],[37.47,30.0],[37.98,30.5],[36.96,31.49],[39.15,32.12],[42.07,31.08],[44.69,29.2],[48.44,28.54],[52.56,22.93],[55.19,22.7],[55.64,22.0],[54.98,20.0],[51.98,19.0]]]},{"code":"RWA","name":"盧旺達","name_en":"Rwanda","rings":[[[29.58,-1.39],[30.51,-1.07],[30.83,-2.34],[28.92,-2.68],[29.58,-1.39]]]},{"code":"RUS","name":"俄羅斯","name_en":"Russia","rings":[[[-179.8,68.94],[-175.35,67.68],[-174.92,66.62],[-174.07,66.23],[-173.77,66.43],[-174.55,67.09],[-173.68,67.14],[-169.73,66.06],[-171.42,65.81],[-171.17,65.5],[-172.78,65.68],[-172.21,65.05],[-173.07,64.85],[-172.38,64.43],[-173.16,64.28],[-175.44,64.82],[-176.09,65.47],[-178.41,65.5],[-178.94,66.03],[-178.53,66.4],[-179.68,66.18],[-179.35,65.52],[-180,65.07],[-179.8,68.94]],[[130.69,42.3],[130.42,42.73],[131.26,43.38],[130.98,44.84],[131.85,45.33],[133.11,45.13],[134.67,48.25],[130.96,47.71],[130.55,48.86],[127.55,49.8],[126.05,52.74],[123.61,53.55],[120.09,52.79],[120.68,51.97],[119.26,50.07],[117.87,49.51],[114.3,50.27],[110.71,49.14],[108.61,49.32],[106.71,50.31],[103.3,50.2],[102.29,50.59],[102.11,51.35],[98.89,52.12],[97.84,51.05],[98.25,50.3],[97.36,49.74],[92.35,50.86],[87.42,49.08],[86.68,49.78],[85.23,49.62],[83.36,50.99],[81.47,50.74],[80.74,51.29],[79.99,50.77],[77.86,53.27],[76.48,54.02],[76.84,54.44],[73.41,53.45],[73.67,54.06],[71.09,54.21],[70.74,55.31],[68.98,55.39],[65.09,54.34],[61.23,54.02],[61.2,53.29],[62.08,53.01],[61.05,52.97],[60.99,52.34],[60.03,51.93],[61.55,51.32],[60.94,50.7],[59.52,50.49],[57.84,51.09],[55.69,50.58],[54.64,51.01],[54.56,50.54],[53.34,51.48],[50.79,51.73],[48.63,50.61],[48.76,49.93],[47.43,50.36],[46.66,48.41],[48.17,47.71],[48.96,46.77],[48.54,46.61],[49.25,46.29],[47.46,45.68],[46.72,44.56],[47.46,43.56],[47.65,43.88],[47.46,43.04],[48.57,41.84],[47.52,41.23],[45.66,42.52],[39.98,43.42],[36.65,45.13],[38.49,46.09],[37.77,46.64],[39.27,47.04],[38.2,47.32],[39.78,47.89],[40.08,49.58],[37.42,50.41],[35.59,50.37],[35.31,51.04],[34.21,51.26],[34.4,51.78],[33.74,52.34],[31.76,52.1],[31.26,53.02],[32.71,53.42],[30.8,54.78],[30.91,55.57],[28.28,56.06],[27.64,56.85],[27.43,58.79],[28.06,59.78],[30.17,59.96],[27.8,60.54],[31.54,62.92],[29.99,63.74],[30.53,64.08],[29.6,64.97],[30.09,65.79],[29.07,66.89],[29.99,67.67],[28.69,68.19],[28.41,68.9],[31.98,69.95],[33.45,69.43],[33.14,69.07],[35.86,69.19],[40.97,67.71],[41.19,66.83],[38.65,66.07],[31.9,67.16],[34.69,65.95],[34.41,65.4],[35.04,64.44],[37.44,63.81],[38.06,64.09],[36.58,64.79],[36.88,65.17],[39.76,64.58],[40.44,64.78],[39.82,65.6],[42.21,66.52],[44.1,66.01],[44.43,66.94],[43.78,67.25],[44.2,68.25],[43.33,68.67],[45.89,68.48],[46.69,67.85],[44.9,67.41],[46.49,66.8],[48.75,67.9],[53.8,69.0],[54.49,68.99],[53.26,68.27],[59.06,69.01],[59.1,68.44],[59.73,68.35],[60.93,68.99],[60.17,69.59],[60.91,69.85],[68.5,68.35],[69.14,68.95],[66.9,69.55],[67.28,70.74],[66.64,71.08],[68.27,71.68],[69.39,72.96],[71.5,72.91],[72.81,72.69],[71.87,71.46],[72.7,70.96],[72.58,68.97],[73.59,68.48],[71.54,66.68],[69.01,66.79],[72.07,66.25],[74.77,67.77],[74.39,68.42],[75.12,68.86],[76.46,68.98],[77.24,68.47],[77.17,67.78],[78.92,67.59],[77.59,67.75],[78.0,68.26],[77.65,68.9],[73.78,69.2],[73.58,69.8],[74.34,70.58],[73.09,71.44],[74.99,72.14],[74.79,72.81],[75.6,72.58],[75.28,71.43],[75.73,71.27],[79.02,70.95],[76.03,71.91],[78.19,71.91],[77.44,72.16],[78.48,72.39],[83.11,71.72],[82.16,70.6],[83.01,70.9],[82.68,70.22],[83.08,70.09],[83.74,70.55],[83.15,71.1],[83.53,71.68],[80.83,72.49],[80.58,73.57],[86.89,73.89],[85.79,73.44],[86.68,73.11],[85.94,73.46],[87.57,73.81],[86.0,74.32],[87.23,74.36],[85.79,74.65],[87.42,74.94],[87.01,75.17],[93.26,76.1],[98.66,76.24],[99.54,75.8],[99.83,76.14],[98.87,76.51],[101.6,76.44],[100.93,76.56],[100.99,76.99],[104.01,77.73],[106.06,77.39],[104.2,77.1],[107.43,76.93],[106.41,76.51],[111.11,76.72],[113.86,75.92],[112.47,75.84],[113.73,75.45],[112.92,75.02],[105.14,72.78],[110.77,73.69],[109.71,73.74],[110.26,74.02],[113.03,73.91],[113.49,73.35],[113.13,72.83],[113.66,72.63],[113.22,72.81],[114.06,73.58],[118.45,73.59],[119.75,72.98],[122.54,72.88],[124.54,73.75],[129.1,73.11],[128.6,72.9],[129.25,72.71],[128.42,72.54],[129.28,72.09],[127.73,72.41],[131.02,70.75],[132.65,71.93],[137.94,71.13],[138.23,71.6],[139.98,71.49],[139.36,71.95],[140.19,72.19],[139.14,72.33],[141.08,72.59],[140.81,72.89],[146.25,72.44],[144.47,72.17],[146.83,72.3],[145.19,71.7],[147.26,72.33],[149.5,72.16],[150.02,71.9],[148.97,71.69],[152.51,70.83],[158.7,70.94],[159.91,70.51],[159.83,69.78],[160.91,69.61],[161.34,68.91],[160.86,68.54],[161.54,69.38],[163.2,69.71],[167.86,69.73],[170.54,68.83],[171.0,69.13],[170.16,69.63],[170.49,70.11],[178.85,69.39],[180,68.98],[180,65.07],[178.52,64.6],[176.88,65.08],[174.55,64.68],[177.43,64.76],[179.57,62.69],[179.12,62.32],[177.02,62.78],[172.86,61.47],[170.35,59.97],[169.23,60.6],[166.27,59.86],[166.35,60.48],[164.95,59.84],[163.74,60.03],[161.96,58.08],[163.23,57.79],[162.76,57.24],[163.34,56.23],[162.08,56.09],[161.72,55.5],[162.11,54.75],[160.07,54.19],[160.03,53.13],[158.47,53.03],[158.1,51.81],[156.75,50.97],[155.56,55.2],[155.98,56.7],[156.83,57.78],[158.28,58.01],[162.07,60.47],[163.71,60.92],[164.21,62.29],[165.4,62.49],[163.33,62.55],[163.09,61.57],[160.17,60.64],[160.38,61.03],[159.79,60.96],[160.31,61.89],[157.08,61.68],[154.29,59.83],[155.16,59.19],[151.33,58.88],[152.17,59.28],[149.42,59.76],[148.73,59.26],[143.19,59.37],[140.99,58.42],[135.21,54.84],[136.8,54.62],[136.8,53.78],[137.67,54.28],[137.25,53.55],[138.53,53.96],[138.45,53.54],[138.66,54.3],[139.71,54.28],[141.37,53.29],[140.84,53.09],[141.49,52.18],[140.52,50.8],[140.11,48.42],[135.13,43.53],[133.16,42.7],[131.94,43.3],[130.69,42.3]],[[50.28,80.93],[51.7,80.69],[48.98,80.16],[46.64,80.3],[50.28,80.93]],[[67.77,76.24],[61.36,75.31],[58.53,74.5],[56.63,73.3],[53.76,73.77],[56.14,74.5],[55.58,74.63],[56.5,74.96],[55.92,75.17],[61.2,76.28],[67.65,77.01],[68.94,76.71],[67.77,76.24]],[[55.32,73.31],[56.43,73.2],[55.3,71.94],[57.63,70.73],[53.72,70.81],[54.16,71.13],[53.41,71.53],[51.44,71.78],[53.25,73.18],[55.32,73.31]],[[96.53,81.08],[97.87,80.76],[97.18,80.24],[91.52,80.36],[93.36,81.03],[96.53,81.08]],[[97.67,80.16],[98.02,80.02],[97.65,79.76],[100.06,79.78],[99.04,79.29],[99.9,79.01],[99.44,78.83],[93.07,79.5],[97.67,80.16]],[[102.88,79.25],[102.41,78.84],[103.8,79.15],[105.31,78.5],[99.29,78.04],[101.59,79.35],[102.88,79.25]],[[140.05,75.83],[140.82,75.63],[141.49,76.14],[145.36,75.53],[144.02,75.04],[142.31,75.69],[143.13,74.97],[139.1,74.66],[137.01,75.24],[137.27,75.75],[138.81,76.2],[140.05,75.83]],[[146.8,75.37],[150.82,75.16],[148.3,74.8],[146.15,75.2],[146.8,75.37]],[[178.86,70.83],[180,71.54],[180,70.99],[178.86,70.83]],[[142.76,54.39],[143.19,51.94],[144.71,48.64],[144.05,49.25],[143.1,49.2],[142.56,47.74],[143.58,46.36],[143.43,46.03],[142.58,46.7],[142.08,45.92],[142.21,51.22],[141.66,52.27],[142.76,54.39]],[[-178.88,71.58],[-177.5,71.22],[-180.0,70.99],[-180.0,71.54],[-178.88,71.58]],[[50.27,69.19],[48.28,69.04],[48.95,69.51],[50.27,69.19]],[[63.37,80.7],[62.52,80.82],[64.31,81.18],[65.44,80.93],[63.37,80.7]],[[57.96,80.12],[57.08,80.49],[59.26,80.34],[57.96,80.12]],[[57.81,81.55],[58.56,81.42],[57.45,81.14],[55.47,81.31],[57.81,81.55]],[[54.72,81.12],[57.69,80.79],[54.67,80.74],[54.05,80.87],[54.72,81.12]],[[92.68,79.69],[91.07,79.98],[93.8,79.9],[92.68,79.69]],[[142.18,73.9],[143.45,73.23],[139.69,73.43],[142.18,73.9]],[[148.6,45.32],[146.9,44.4],[147.92,45.38],[148.6,45.32]],[[70.67,73.1],[69.92,73.08],[70.35,73.48],[71.63,73.22],[70.67,73.1]],[[20.96,55.28],[20.89,54.91],[22.57,55.06],[22.77,54.36],[19.6,54.46],[20.96,55.28]],[[33.59,46.1],[36.58,45.39],[33.76,44.4],[33.56,45.1],[32.51,45.4],[33.59,46.1]]]},{"code":"ROU","name":"羅馬尼亞","name_en":"Romania","rings":[[[28.21,45.45],[29.71,45.26],[28.89,44.92],[28.59,43.74],[27.09,44.17],[25.5,43.67],[22.92,43.83],[22.72,44.61],[21.36,44.83],[20.24,46.11],[21.12,46.28],[23.14,48.09],[24.89,47.72],[26.71,48.26],[28.07,46.98],[28.21,45.45]]]},{"code":"QAT","name":"卡達","name_en":"Qatar","rings":[[[51.27,24.61],[50.75,25.4],[51.26,26.15],[51.27,24.61]]]},{"code":"PRT","name":"葡萄牙","name_en":"Portugal","rings":[[[-8.78,41.94],[-6.21,41.53],[-6.93,41.01],[-6.98,39.8],[-7.54,39.66],[-6.96,38.19],[-7.83,37.01],[-9.0,37.03],[-8.67,38.42],[-9.25,38.66],[-8.79,39.08],[-9.47,38.73],[-8.78,41.94]]]},{"code":"POL","name":"波蘭","name_en":"Poland","rings":[[[23.61,51.52],[24.09,50.53],[22.71,49.61],[22.81,49.02],[18.97,49.4],[17.7,50.31],[16.64,50.1],[16.28,50.66],[14.81,50.86],[14.2,53.92],[18.09,54.84],[18.98,54.35],[22.89,54.39],[23.89,53.03],[23.18,52.29],[23.61,51.52]]]},{"code":"PHL","name":"菲律賓","name_en":"Philippines","rings":[[[121.1,18.62],[122.27,18.46],[122.52,17.12],[121.39,15.32],[121.77,14.17],[123.82,13.84],[124.06,12.57],[122.6,13.91],[122.6,13.19],[121.78,13.94],[120.64,13.8],[120.94,14.65],[120.08,14.85],[119.77,16.26],[120.37,16.11],[120.6,18.51],[121.1,18.62]],[[117.31,8.44],[119.55,11.31],[119.69,10.5],[117.31,8.44]],[[122.5,11.62],[123.12,11.29],[121.95,10.44],[121.92,11.85],[122.5,11.62]],[[123.13,9.06],[122.4,9.82],[123.26,10.99],[123.13,9.06]],[[124.57,11.34],[125.03,11.21],[125.03,10.03],[124.57,11.34]],[[125.24,12.53],[125.74,11.05],[124.33,12.4],[125.24,12.53]],[[120.7,13.48],[121.52,13.13],[121.24,12.22],[120.34,13.41],[120.7,13.48]],[[126.01,9.32],[126.58,7.25],[126.19,6.31],[125.69,7.26],[125.35,5.6],[124.08,6.4],[124.21,7.4],[123.67,7.82],[123.39,7.41],[122.62,7.76],[121.96,6.97],[122.24,7.95],[123.43,8.7],[123.8,8.05],[125.5,9.01],[125.47,9.76],[126.01,9.32]]]},{"code":"PER","name":"秘魯","name_en":"Peru","rings":[[[-69.97,-4.24],[-72.89,-5.12],[-74.0,-7.56],[-72.97,-8.99],[-73.21,-9.41],[-72.18,-10.0],[-70.54,-9.44],[-70.64,-11.01],[-69.58,-10.95],[-68.69,-12.5],[-69.42,-15.64],[-68.84,-16.34],[-70.42,-18.35],[-75.93,-14.63],[-78.76,-8.62],[-79.99,-6.77],[-81.14,-6.06],[-81.34,-4.67],[-80.32,-3.39],[-80.48,-4.43],[-79.03,-4.97],[-78.35,-3.4],[-75.57,-1.53],[-75.63,-0.12],[-75.22,-0.04],[-72.94,-2.39],[-70.97,-2.21],[-70.1,-2.66],[-70.74,-3.78],[-69.97,-4.24]]]},{"code":"PRY","name":"巴拉圭","name_en":"Paraguay","rings":[[[-58.16,-20.16],[-57.96,-22.11],[-55.85,-22.31],[-55.42,-23.95],[-54.24,-24.05],[-54.76,-26.53],[-55.71,-27.41],[-58.6,-27.31],[-57.64,-25.33],[-61.03,-23.76],[-62.65,-22.23],[-61.76,-19.65],[-59.09,-19.29],[-58.16,-20.16]]]},{"code":"PNG","name":"巴布亞紐幾內亞","name_en":"Papua New Guinea","rings":[[[152.97,-4.76],[150.83,-2.57],[153.02,-4.11],[152.97,-4.76]],[[151.92,-4.3],[152.41,-4.34],[152.08,-5.46],[150.47,-6.26],[148.34,-5.67],[149.83,-5.52],[150.09,-5.01],[150.18,-5.52],[150.9,-5.45],[151.92,-4.3]],[[140.98,-9.12],[141.1,-2.61],[144.48,-3.83],[145.77,-4.82],[145.75,-5.4],[147.57,-6.06],[147.85,-6.66],[146.95,-6.83],[147.19,-7.38],[148.58,-9.05],[150.85,-10.24],[150.32,-10.65],[147.77,-10.07],[146.03,-8.08],[143.65,-7.46],[143.61,-8.2],[142.21,-8.2],[143.37,-8.96],[140.98,-9.12]],[[155.96,-6.69],[155.34,-6.72],[154.73,-5.44],[155.96,-6.69]]]},{"code":"PAN","name":"巴拿馬","name_en":"Panama","rings":[[[-77.37,8.66],[-77.2,7.97],[-77.9,7.23],[-78.42,8.06],[-77.76,8.13],[-79.09,9.0],[-80.46,8.21],[-80.01,7.5],[-80.67,7.23],[-81.06,7.9],[-83.03,8.34],[-82.8,9.59],[-81.35,8.78],[-79.11,9.54],[-77.37,8.66]]]},{"code":"PAK","name":"巴基斯坦","name_en":"Pakistan","rings":[[[76.77,35.66],[77.05,35.11],[76.59,34.74],[73.96,34.65],[74.0,33.19],[75.33,32.28],[74.56,31.82],[74.63,31.03],[71.87,27.96],[70.4,28.03],[69.54,27.12],[71.04,24.4],[68.78,24.31],[68.12,23.75],[66.32,25.6],[61.57,25.19],[61.84,26.23],[63.3,27.15],[60.84,29.86],[64.1,29.39],[66.23,29.87],[66.83,31.26],[69.28,31.94],[69.5,33.02],[70.26,33.29],[69.89,34.01],[71.05,34.05],[71.62,35.18],[71.19,36.04],[72.16,36.7],[75.15,36.97],[76.77,35.66]]]},{"code":"OMN","name":"阿曼","name_en":"Oman","rings":[[[53.09,16.65],[51.98,19.0],[54.98,20.0],[55.64,22.0],[55.2,23.03],[55.99,24.06],[55.8,24.87],[56.39,24.98],[57.12,23.98],[58.77,23.52],[59.8,22.22],[57.86,20.24],[57.81,19.02],[55.48,17.84],[55.06,17.04],[53.09,16.65]]]},{"code":"NOR","name":"挪威","name_en":"Norway","rings":[[[20.62,69.04],[20.12,69.02],[19.97,68.36],[18.3,68.56],[17.92,67.96],[16.78,67.9],[15.48,66.31],[14.54,66.13],[14.48,65.3],[13.65,64.58],[14.06,64.1],[12.18,63.6],[12.16,61.72],[12.88,61.35],[12.29,61.0],[12.49,60.11],[11.68,59.59],[11.64,58.93],[10.6,59.76],[10.18,59.01],[7.0,58.02],[5.52,58.73],[6.36,59.0],[5.89,59.1],[6.4,59.56],[5.13,59.23],[7.0,60.51],[5.15,59.64],[5.69,60.12],[5.14,60.45],[5.65,60.69],[5.01,61.04],[7.6,61.21],[5.11,61.19],[4.93,61.88],[6.73,61.87],[5.14,62.16],[8.1,62.73],[6.73,62.72],[7.57,63.1],[8.62,62.85],[8.16,63.16],[8.58,63.6],[10.76,63.46],[11.43,64.02],[9.61,63.79],[12.74,65.21],[12.12,65.36],[12.78,66.1],[14.03,66.3],[13.12,66.23],[13.21,66.64],[15.42,67.2],[14.44,67.27],[15.59,67.35],[14.8,67.81],[17.55,68.43],[16.51,68.53],[18.26,69.47],[19.69,69.8],[19.64,69.42],[20.32,69.95],[20.11,69.34],[20.74,69.52],[20.62,69.91],[21.97,69.83],[21.36,70.23],[22.68,70.37],[23.35,69.98],[24.66,71.0],[25.77,70.85],[25.21,70.14],[27.6,71.09],[28.39,70.98],[27.9,70.68],[28.19,70.25],[28.83,70.86],[30.93,70.4],[28.78,70.15],[30.86,69.54],[28.97,69.02],[29.14,69.67],[27.75,70.06],[26.07,69.69],[24.94,68.59],[20.62,69.04]],[[17.5,69.6],[17.95,69.2],[16.81,69.07],[17.5,69.6]],[[15.76,68.56],[14.26,68.19],[15.97,69.3],[15.76,68.56]],[[21.61,78.6],[24.9,77.76],[20.93,77.46],[21.65,77.92],[20.23,78.48],[21.61,78.6]],[[20.9,80.25],[27.2,79.91],[22.9,79.23],[18.32,79.86],[18.86,80.04],[17.92,80.14],[19.61,80.46],[20.9,80.25]],[[16.79,79.91],[21.39,78.74],[19.15,78.38],[16.7,76.58],[14.0,77.51],[16.91,77.9],[13.68,78.03],[16.78,78.66],[13.15,78.24],[10.68,79.76],[13.69,79.86],[12.56,79.57],[13.96,79.34],[14.83,79.77],[16.34,78.98],[15.83,79.71],[16.79,79.91]]]},{"code":"PRK","name":"朝鮮民主主義人民共和國","name_en":"North Korea","rings":[[[128.37,38.62],[125.36,37.72],[124.69,38.13],[125.55,38.69],[125.36,39.53],[124.39,40.1],[126.9,41.78],[128.15,41.39],[128.05,41.99],[130.08,42.97],[130.69,42.3],[129.76,41.71],[129.71,40.86],[127.53,39.7],[127.39,39.21],[128.37,38.62]]]},{"code":"NGA","name":"奈及利亞","name_en":"Nigeria","rings":[[[13.61,13.7],[14.58,11.53],[13.7,10.87],[11.4,6.53],[10.14,7.0],[8.29,4.56],[6.77,4.72],[6.17,4.28],[4.43,6.35],[2.71,6.37],[2.77,9.05],[3.78,10.44],[3.65,12.53],[4.42,13.65],[5.49,13.87],[6.94,13.01],[7.83,13.34],[9.62,12.81],[13.61,13.7]]]},{"code":"NER","name":"尼日","name_en":"Niger","rings":[[[13.61,13.7],[9.62,12.81],[4.66,13.73],[3.6,11.7],[2.81,12.38],[2.39,11.9],[0.16,14.5],[1.3,15.27],[3.5,15.36],[4.18,16.58],[4.23,19.14],[5.84,19.48],[11.97,23.52],[14.22,22.62],[14.98,23.0],[15.96,20.35],[15.47,16.91],[13.45,14.38],[13.61,13.7]]]},{"code":"NIC","name":"尼加拉瓜","name_en":"Nicaragua","rings":[[[-83.16,14.99],[-83.71,10.79],[-85.74,11.06],[-87.67,12.9],[-84.99,14.75],[-83.16,14.99]]]},{"code":"NZL","name":"新西蘭","name_en":"New Zealand","rings":[[[173.12,-41.28],[174.3,-41.02],[174.28,-41.74],[172.62,-43.27],[173.07,-43.87],[172.04,-43.7],[171.24,-44.26],[170.78,-45.87],[169.1,-46.63],[166.49,-45.96],[168.37,-44.08],[171.04,-42.86],[172.27,-40.76],[172.94,-40.52],[173.12,-41.28]],[[173.27,-34.93],[174.32,-35.25],[174.72,-36.84],[175.54,-37.2],[175.46,-36.48],[176.11,-37.65],[178.54,-37.69],[177.91,-39.24],[177.08,-39.22],[176.84,-40.16],[175.31,-41.61],[174.64,-41.29],[175.16,-40.11],[173.76,-39.32],[174.6,-38.79],[174.93,-37.08],[173.27,-34.93]]]},{"code":"NLD","name":"荷蘭","name_en":"Netherlands","rings":[[[5.99,50.75],[5.03,51.47],[3.45,51.54],[4.27,51.47],[3.95,51.81],[4.77,52.94],[6.82,53.44],[7.02,52.27],[5.95,51.8],[5.99,50.75]]]},{"code":"NPL","name":"尼泊爾","name_en":"Nepal","rings":[[[88.11,27.87],[88.05,26.43],[87.29,26.36],[82.73,27.52],[80.05,28.87],[80.61,29.96],[81.85,30.36],[85.99,27.91],[88.11,27.87]]]},{"code":"NAM","name":"納米比亞","name_en":"Namibia","rings":[[[23.38,-17.64],[25.26,-17.79],[23.65,-18.45],[23.22,-18.0],[20.97,-18.32],[20.97,-22.0],[19.98,-22.0],[19.98,-28.45],[18.1,-28.87],[17.06,-28.03],[16.45,-28.62],[15.29,-27.27],[14.46,-22.45],[11.74,-17.25],[18.4,-17.4],[20.75,-18.02],[23.38,-17.64]]]},{"code":"MOZ","name":"莫三比克","name_en":"Mozambique","rings":[[[31.29,-22.4],[32.99,-19.98],[32.95,-16.71],[30.41,-15.98],[30.23,-14.99],[33.2,-14.01],[33.64,-14.57],[34.38,-14.42],[34.25,-15.89],[35.27,-17.12],[35.89,-14.89],[34.56,-13.36],[34.62,-11.62],[37.37,-11.71],[40.46,-10.46],[40.56,-15.47],[39.84,-16.44],[34.65,-19.7],[35.54,-22.3],[35.25,-24.43],[32.96,-25.49],[32.89,-26.85],[32.11,-26.84],[31.29,-22.4]]]},{"code":"MAR","name":"摩洛哥","name_en":"Morocco","rings":[[[-2.22,35.1],[-1.23,32.11],[-3.77,31.69],[-3.67,30.96],[-8.27,28.98],[-8.79,27.12],[-11.39,26.88],[-12.43,24.83],[-13.89,23.69],[-14.75,21.5],[-17.0,21.42],[-14.41,26.25],[-12.95,27.91],[-10.2,29.38],[-9.25,32.57],[-6.9,33.97],[-5.92,35.79],[-2.22,35.1]]]},{"code":"SAH","name":"西撒哈拉","name_en":"W. Sahara","rings":[[[-8.82,27.66],[-8.68,26.0],[-12.02,26.0],[-12.02,23.47],[-13.15,22.82],[-13.02,21.33],[-16.96,21.33],[-17.1,20.86],[-17.0,21.42],[-14.75,21.5],[-13.89,23.69],[-12.43,24.83],[-11.39,26.88],[-8.79,27.12],[-8.82,27.66]]]},{"code":"MNE","name":"蒙特內哥羅","name_en":"Montenegro","rings":[[[19.19,43.53],[20.35,42.85],[19.34,41.87],[18.44,42.52],[19.19,43.53]]]},{"code":"MNG","name":"蒙古國","name_en":"Mongolia","rings":[[[87.81,49.16],[92.35,50.86],[97.36,49.74],[98.25,50.3],[97.84,51.05],[98.89,52.12],[102.11,51.35],[102.29,50.59],[103.3,50.2],[106.71,50.31],[108.61,49.32],[110.71,49.14],[114.3,50.27],[116.35,49.98],[116.68,49.82],[115.62,47.87],[118.5,47.98],[119.9,46.73],[117.44,46.59],[113.59,44.75],[111.9,45.06],[111.4,44.37],[111.93,43.71],[110.4,42.77],[104.98,41.6],[101.5,42.54],[96.39,42.72],[95.35,44.28],[90.88,45.2],[91.03,46.57],[90.33,47.66],[87.98,48.56],[87.81,49.16]]]},{"code":"MDA","name":"摩爾多瓦","name_en":"Moldova","rings":[[[26.62,48.26],[29.13,47.96],[30.13,46.42],[28.96,46.46],[28.21,45.45],[28.07,46.98],[26.62,48.26]]]},{"code":"MEX","name":"墨西哥","name_en":"Mexico","rings":[[[-117.13,32.53],[-114.72,32.72],[-111.04,31.32],[-106.45,31.77],[-103.26,29.0],[-102.61,29.75],[-101.44,29.78],[-99.11,26.45],[-97.15,25.96],[-97.84,22.51],[-95.92,18.82],[-94.46,18.17],[-91.53,18.46],[-90.35,21.01],[-87.13,21.62],[-86.77,21.15],[-87.8,18.36],[-88.07,18.83],[-89.16,17.81],[-90.99,17.82],[-91.41,17.26],[-90.45,16.07],[-91.74,16.07],[-92.24,14.55],[-94.37,16.28],[-94.0,16.02],[-94.9,16.42],[-96.51,15.65],[-103.44,18.33],[-105.48,19.98],[-105.21,21.49],[-105.79,22.63],[-108.05,25.07],[-109.38,25.73],[-109.28,26.53],[-112.16,29.02],[-113.05,31.18],[-114.93,31.9],[-114.63,30.16],[-111.57,26.71],[-110.66,24.34],[-109.42,23.48],[-110.01,22.89],[-112.07,24.84],[-112.38,26.21],[-114.99,27.74],[-114.07,27.68],[-114.05,28.43],[-115.67,29.76],[-117.13,32.53]]]},{"code":"MRT","name":"茅利塔尼亞","name_en":"Mauritania","rings":[[[-12.28,14.81],[-14.53,16.66],[-16.24,16.53],[-16.54,15.84],[-16.05,18.22],[-16.51,19.36],[-16.21,20.23],[-17.05,20.81],[-16.96,21.33],[-13.02,21.33],[-13.15,22.82],[-12.02,23.47],[-12.02,26.0],[-8.68,26.0],[-8.68,27.29],[-4.82,25.0],[-6.59,24.99],[-5.51,15.5],[-9.35,15.68],[-10.95,15.15],[-11.5,15.64],[-12.28,14.81]]]},{"code":"MLI","name":"馬利共和國","name_en":"Mali","rings":[[[-11.39,12.4],[-12.28,14.81],[-11.5,15.64],[-10.95,15.15],[-9.35,15.68],[-5.51,15.5],[-6.59,24.99],[-4.82,25.0],[3.13,19.85],[3.26,19.01],[4.23,19.14],[4.18,16.58],[3.5,15.36],[-0.67,15.07],[-2.59,14.23],[-3.3,13.28],[-4.33,13.12],[-6.03,10.19],[-6.26,10.72],[-7.99,10.16],[-9.12,12.45],[-10.71,11.9],[-11.39,12.4]]]},{"code":"MYS","name":"馬來西亞","name_en":"Malaysia","rings":[[[100.12,6.44],[101.05,6.24],[101.11,5.64],[102.27,6.2],[103.1,5.41],[103.44,2.93],[104.25,1.39],[103.48,1.33],[101.3,2.89],[100.12,6.44]],[[117.57,4.17],[115.68,4.19],[114.51,1.45],[112.48,1.56],[110.51,0.86],[109.55,1.85],[111.22,1.4],[111.24,2.44],[113.04,3.21],[114.01,4.58],[114.65,4.04],[115.03,4.9],[115.32,4.37],[115.42,5.41],[116.78,6.99],[117.65,6.47],[117.5,5.88],[119.26,5.37],[118.26,4.99],[118.55,4.38],[117.57,4.17]]]},{"code":"MWI","name":"馬拉威","name_en":"Malawi","rings":[[[33.2,-14.01],[32.67,-13.59],[33.51,-12.35],[33.26,-10.89],[33.66,-10.55],[32.97,-9.4],[34.52,-10.03],[34.96,-11.58],[34.36,-12.16],[34.56,-13.36],[35.89,-14.89],[35.12,-17.13],[34.25,-15.89],[34.51,-14.6],[33.2,-14.01]]]},{"code":"MDG","name":"馬達加斯加","name_en":"Madagascar","rings":[[[49.54,-12.43],[50.4,-15.63],[50.18,-15.96],[49.66,-15.52],[49.36,-18.34],[47.18,-24.79],[45.12,-25.54],[44.04,-25.0],[43.26,-22.38],[44.4,-19.92],[43.98,-17.39],[44.48,-16.22],[46.4,-15.92],[47.96,-14.67],[47.94,-13.66],[48.8,-13.27],[49.21,-12.08],[49.54,-12.43]]]},{"code":"MKD","name":"北馬其頓","name_en":"North Macedonia","rings":[[[21.56,42.25],[22.8,42.03],[22.93,41.36],[20.74,40.91],[20.55,41.86],[21.56,42.25]]]},{"code":"LUX","name":"盧森堡","name_en":"Luxembourg","rings":[[[6.12,50.12],[6.34,49.45],[5.79,49.54],[6.12,50.12]]]},{"code":"LTU","name":"立陶宛","name_en":"Lithuania","rings":[[[22.77,54.36],[22.57,55.06],[21.24,55.26],[21.05,56.07],[21.65,56.31],[24.84,56.41],[26.78,55.27],[25.86,54.92],[25.68,54.14],[23.56,53.92],[22.77,54.36]]]},{"code":"LBY","name":"利比亞","name_en":"Libya","rings":[[[9.52,30.23],[10.22,30.78],[10.27,31.68],[11.5,32.41],[11.5,33.18],[15.18,32.39],[15.71,31.43],[19.12,30.27],[20.11,30.96],[20.03,32.11],[21.06,32.78],[22.19,32.92],[24.95,31.95],[24.98,20.0],[23.98,20.0],[23.98,19.5],[15.98,23.45],[14.22,22.62],[10.33,24.53],[9.42,26.15],[9.89,26.85],[9.52,30.23]]]},{"code":"LBR","name":"賴比瑞亞","name_en":"Liberia","rings":[[[-11.51,6.91],[-10.28,8.49],[-9.66,8.47],[-9.46,7.42],[-8.58,7.68],[-8.6,6.51],[-7.45,5.84],[-7.54,4.35],[-11.51,6.91]]]},{"code":"LSO","name":"賴索托","name_en":"Lesotho","rings":[[[28.74,-30.1],[27.75,-30.6],[27.06,-29.63],[28.63,-28.58],[29.39,-29.27],[28.74,-30.1]]]},{"code":"LBN","name":"黎巴嫩","name_en":"Lebanon","rings":[[[35.98,34.63],[36.58,34.22],[35.11,33.08],[35.98,34.63]]]},{"code":"LVA","name":"拉脫維亞","name_en":"Latvia","rings":[[[26.59,55.67],[24.84,56.41],[21.05,56.07],[21.03,56.64],[21.73,57.57],[22.55,57.72],[23.65,56.97],[24.38,57.25],[24.32,57.87],[25.34,58.04],[27.83,57.29],[28.15,56.14],[26.59,55.67]]]},{"code":"LAO","name":"寮國","name_en":"Laos","rings":[[[102.13,22.38],[103.1,20.89],[104.58,20.65],[104.93,20.02],[103.89,19.3],[105.15,18.65],[107.4,16.04],[107.41,14.56],[106.23,14.48],[106.07,13.92],[105.25,14.2],[105.64,15.66],[103.95,18.32],[100.91,17.58],[101.21,19.55],[100.42,19.64],[100.18,20.59],[101.14,21.57],[101.8,21.21],[101.52,22.25],[102.13,22.38]]]},{"code":"KGZ","name":"吉爾吉斯","name_en":"Kyrgyzstan","rings":[[[70.96,40.24],[73.14,40.81],[71.66,41.54],[71.39,41.12],[70.18,41.54],[71.42,42.78],[73.49,42.41],[74.21,43.24],[79.13,42.78],[80.25,42.06],[76.91,41.02],[76.32,40.35],[74.84,40.48],[73.72,39.46],[69.3,39.52],[69.53,40.1],[70.96,40.24]]]},{"code":"KWT","name":"科威特","name_en":"Kuwait","rings":[[[48.44,28.54],[46.53,29.1],[47.75,30.08],[48.44,28.54]]]},{"code":"KOS","name":"科索沃","name_en":"Kosovo","rings":[[[20.34,42.83],[20.8,43.26],[21.75,42.65],[20.58,41.87],[20.34,42.83]]]},{"code":"KEN","name":"肯亞","name_en":"Kenya","rings":[[[33.9,-1.0],[33.94,0.17],[34.98,1.77],[33.98,4.22],[35.27,5.49],[36.02,4.47],[38.09,3.65],[39.49,3.46],[40.77,4.27],[41.88,3.98],[40.96,2.81],[40.98,-0.87],[41.53,-1.7],[40.22,-2.69],[39.38,-4.63],[37.8,-3.67],[37.64,-3.05],[33.9,-1.0]]]},{"code":"KAZ","name":"哈薩克","name_en":"Kazakhstan","rings":[[[70.95,42.25],[68.42,40.62],[67.94,41.2],[66.71,41.18],[66.5,41.99],[66.01,42.0],[66.1,42.99],[64.91,43.71],[61.99,43.49],[58.56,45.56],[55.98,44.99],[55.98,41.32],[54.12,42.34],[52.49,41.78],[52.6,42.76],[51.3,43.17],[50.25,44.46],[51.54,44.53],[51.01,44.92],[51.42,45.36],[53.2,45.33],[52.77,45.57],[53.07,46.86],[51.18,47.11],[49.23,46.34],[48.61,46.57],[48.96,46.77],[48.17,47.71],[46.66,48.41],[46.82,49.5],[47.5,50.4],[48.76,49.93],[48.63,50.61],[50.79,51.73],[53.34,51.48],[54.56,50.54],[54.64,51.01],[55.69,50.58],[57.84,51.09],[59.52,50.49],[60.94,50.7],[61.55,51.32],[60.03,51.93],[60.99,52.34],[61.05,52.97],[62.08,53.01],[61.2,53.29],[61.23,54.02],[65.09,54.34],[68.98,55.39],[70.74,55.31],[71.09,54.21],[73.67,54.06],[73.41,53.45],[76.84,54.44],[76.48,54.02],[77.86,53.27],[79.99,50.77],[80.74,51.29],[81.47,50.74],[83.36,50.99],[85.23,49.62],[86.68,49.78],[87.32,49.09],[85.75,48.39],[85.48,47.06],[83.03,47.19],[82.52,45.13],[79.87,44.88],[80.48,44.71],[80.79,43.16],[80.21,42.19],[79.13,42.78],[74.21,43.24],[73.49,42.41],[71.76,42.82],[70.95,42.25]]]},{"code":"JOR","name":"約旦","name_en":"Jordan","rings":[[[35.79,32.73],[36.82,32.32],[38.77,33.37],[39.29,32.24],[36.96,31.49],[37.98,30.5],[36.02,29.19],[34.95,29.35],[35.79,32.73]]]},{"code":"JPN","name":"日本","name_en":"Japan","rings":[[[143.82,44.12],[145.37,44.33],[145.14,43.66],[145.83,43.39],[143.97,42.88],[143.24,42.0],[140.48,42.56],[141.15,41.81],[140.04,41.47],[139.86,42.58],[140.39,43.3],[141.37,43.28],[141.67,45.4],[143.82,44.12]],[[131.17,33.6],[132.0,32.88],[130.69,31.02],[130.78,31.71],[130.59,31.18],[130.15,31.41],[130.55,32.83],[130.24,33.18],[130.34,32.7],[129.77,32.57],[129.58,33.24],[130.72,33.93],[131.17,33.6]],[[134.36,34.26],[134.74,33.82],[134.18,33.25],[133.63,33.51],[132.8,32.75],[132.03,33.34],[132.94,34.1],[134.36,34.26]],[[141.23,41.37],[141.98,39.43],[140.96,38.15],[140.87,35.72],[140.35,35.18],[139.84,34.91],[139.83,35.66],[138.84,34.62],[138.72,35.12],[138.19,34.6],[137.06,34.58],[136.8,35.05],[136.85,34.32],[135.7,33.49],[135.13,34.01],[135.42,34.62],[134.74,34.77],[132.31,34.32],[132.15,33.84],[130.92,33.98],[132.92,35.51],[135.9,35.61],[136.84,37.38],[137.32,37.52],[136.9,37.12],[137.25,36.75],[138.32,37.22],[139.8,38.88],[139.97,40.67],[140.39,41.23],[141.12,40.88],[140.8,41.25],[141.23,41.37]]]},{"code":"JAM","name":"牙買加","name_en":"Jamaica","rings":[[[-77.26,18.46],[-76.21,17.91],[-77.77,17.88],[-78.33,18.35],[-77.26,18.46]]]},{"code":"ITA","name":"義大利","name_en":"Italy","rings":[[[7.02,45.93],[8.42,46.45],[9.02,45.85],[9.3,46.5],[10.08,46.23],[10.45,46.86],[12.17,47.08],[13.7,46.52],[13.38,46.26],[13.87,45.61],[12.27,45.45],[12.4,44.22],[14.54,42.24],[16.16,41.9],[15.9,41.51],[17.95,40.66],[18.39,39.9],[16.93,40.46],[16.52,39.75],[17.17,39.0],[15.72,37.94],[16.21,38.94],[15.69,39.99],[11.1,42.42],[10.05,44.02],[8.77,44.42],[7.49,43.77],[6.63,45.07],[7.02,45.93]],[[15.58,38.22],[15.11,36.69],[12.44,37.82],[15.58,38.22]],[[9.63,40.88],[9.56,39.17],[8.65,38.93],[8.22,40.91],[9.23,41.26],[9.63,40.88]]]},{"code":"ISR","name":"以色列","name_en":"Israel","rings":[[[35.84,33.42],[35.55,32.4],[34.96,32.16],[34.88,31.37],[35.45,31.48],[34.9,29.48],[34.25,31.21],[35.11,33.08],[35.84,33.42]]]},{"code":"PSX","name":"巴勒斯坦地區","name_en":"Palestine","rings":[[[35.55,32.4],[35.45,31.48],[34.88,31.37],[35.07,32.46],[35.55,32.4]]]},{"code":"IRL","name":"愛爾蘭","name_en":"Ireland","rings":[[[-7.22,55.09],[-8.14,54.45],[-6.18,54.05],[-6.33,52.25],[-10.12,51.6],[-9.6,51.87],[-10.34,51.8],[-9.91,52.12],[-10.36,52.21],[-8.78,52.68],[-9.92,52.57],[-8.93,53.21],[-10.09,53.41],[-9.58,53.81],[-10.06,54.26],[-8.55,54.24],[-8.27,55.15],[-7.22,55.09]]]},{"code":"IRQ","name":"伊拉克","name_en":"Iraq","rings":[[[42.36,37.11],[44.73,37.17],[45.36,36.02],[46.27,35.77],[45.4,33.97],[46.11,32.96],[47.37,32.42],[48.55,29.96],[47.22,30.04],[46.53,29.1],[44.72,29.19],[42.07,31.08],[39.15,32.12],[38.77,33.37],[40.99,34.43],[41.3,36.38],[42.36,37.11]]]},{"code":"IRN","name":"伊朗","name_en":"Iran","rings":[[[53.91,37.34],[57.19,38.22],[61.17,36.57],[61.28,35.51],[60.49,33.71],[60.92,33.51],[60.82,31.5],[61.81,30.91],[60.84,29.86],[63.31,27.12],[61.84,26.23],[61.59,25.2],[57.33,25.79],[56.73,27.13],[54.64,26.51],[51.59,27.86],[50.07,30.2],[49.0,30.51],[48.43,30.04],[47.37,32.42],[46.11,32.96],[45.4,33.97],[46.27,35.77],[45.36,36.02],[44.22,37.88],[44.02,39.38],[44.59,39.77],[46.17,38.87],[48.0,39.68],[48.0,38.85],[48.87,38.44],[49.08,37.67],[51.12,36.74],[53.97,36.82],[53.91,37.34]]]},{"code":"IDN","name":"印度尼西亞","name_en":"Indonesia","rings":[[[97.48,1.47],[97.82,0.56],[97.08,1.43],[97.48,1.47]],[[116.64,-8.61],[115.86,-8.79],[116.4,-8.2],[116.64,-8.61]],[[115.45,-8.16],[115.14,-8.85],[114.47,-8.17],[115.45,-8.16]],[[106.05,-1.67],[106.67,-3.07],[105.13,-2.04],[106.05,-1.67]],[[108.21,-3.0],[107.61,-3.21],[107.67,-2.57],[108.21,-3.0]],[[96.49,5.23],[97.55,5.21],[100.52,2.19],[102.95,0.66],[102.55,0.22],[103.67,0.29],[103.44,-0.58],[104.36,-1.04],[104.65,-2.6],[105.4,-2.38],[106.04,-3.11],[105.75,-5.82],[104.64,-5.52],[104.6,-5.9],[101.58,-3.17],[98.6,1.86],[95.43,4.87],[95.28,5.59],[96.49,5.23]],[[122.78,-8.61],[119.81,-8.7],[120.61,-8.24],[122.32,-8.63],[122.85,-8.09],[122.78,-8.61]],[[120.01,-9.37],[120.8,-10.11],[119.04,-9.67],[120.01,-9.37]],[[118.24,-8.32],[119.08,-8.73],[116.79,-9.01],[117.16,-8.37],[117.97,-8.73],[117.76,-8.15],[118.24,-8.32]],[[124.89,1.0],[123.75,0.31],[120.19,0.27],[120.06,-0.56],[120.67,-1.37],[123.43,-0.78],[121.36,-1.88],[122.87,-4.39],[121.59,-4.76],[120.65,-2.67],[120.26,-2.95],[120.43,-5.59],[119.56,-5.61],[119.62,-4.03],[118.78,-2.72],[120.27,0.97],[121.08,1.33],[123.93,0.85],[124.99,1.7],[124.89,1.0]],[[107.37,-6.01],[108.68,-6.79],[110.43,-6.95],[110.83,-6.42],[112.54,-6.93],[113.01,-7.66],[114.41,-7.79],[114.58,-8.77],[106.46,-7.37],[105.27,-6.73],[106.08,-5.91],[107.37,-6.01]],[[109.63,2.03],[110.51,0.86],[112.48,1.56],[114.51,1.45],[115.68,4.19],[117.1,4.34],[117.78,3.69],[117.06,3.62],[118.07,2.32],[117.79,2.03],[118.98,0.98],[117.91,1.1],[117.56,-0.77],[116.28,-1.78],[116.26,-3.13],[114.69,-4.17],[114.34,-3.24],[113.71,-3.46],[113.03,-2.93],[111.86,-3.55],[111.69,-2.89],[110.26,-2.97],[109.98,-1.27],[109.26,-0.81],[108.94,0.36],[109.63,2.03]],[[127.73,0.85],[128.69,1.57],[128.26,0.73],[128.9,0.22],[127.89,0.3],[128.43,-0.89],[127.69,-0.24],[127.43,1.14],[128.04,2.2],[127.73,0.85]],[[129.75,-2.87],[130.57,-3.13],[130.81,-3.86],[129.84,-3.33],[127.9,-3.5],[128.2,-2.87],[129.75,-2.87]],[[126.86,-3.09],[126.94,-3.76],[126.06,-3.42],[126.86,-3.09]],[[124.92,-8.94],[124.96,-9.67],[123.64,-10.31],[123.71,-9.61],[124.92,-8.94]],[[134.75,-5.71],[134.44,-6.33],[134.21,-5.71],[134.75,-5.71]],[[138.54,-8.27],[137.65,-8.39],[138.77,-7.39],[138.54,-8.27]],[[140.97,-2.61],[140.98,-9.12],[140.12,-7.92],[138.89,-8.24],[138.75,-7.25],[139.18,-7.19],[137.28,-4.95],[133.97,-3.82],[133.84,-3.05],[132.91,-4.06],[131.97,-2.79],[133.7,-2.62],[133.92,-2.1],[132.31,-2.24],[131.93,-1.56],[131.0,-1.42],[132.39,-0.36],[133.97,-0.74],[134.19,-2.31],[135.25,-3.37],[137.81,-1.48],[140.97,-2.61]]]},{"code":"IND","name":"印度","name_en":"India","rings":[[[68.17,23.86],[71.04,24.4],[69.54,27.12],[70.4,28.03],[71.87,27.96],[75.32,32.22],[74.0,33.19],[73.96,34.65],[75.71,34.5],[77.8,35.5],[78.97,34.3],[79.22,32.5],[78.39,32.52],[78.74,31.32],[81.01,30.16],[80.07,28.83],[82.73,27.52],[88.0,26.38],[88.14,27.95],[88.8,28.01],[89.15,26.82],[92.0,26.85],[91.63,27.76],[94.62,29.31],[96.04,29.45],[96.58,28.76],[96.28,28.41],[97.32,28.22],[97.1,27.12],[96.19,27.26],[95.13,26.6],[94.13,23.88],[93.33,24.06],[92.91,21.99],[92.25,23.68],[91.62,22.98],[91.17,23.58],[92.47,24.94],[89.83,25.29],[89.67,26.21],[88.37,26.56],[88.08,25.89],[88.95,25.26],[88.02,24.63],[88.72,24.27],[89.05,21.65],[88.64,22.12],[88.12,21.64],[87.94,22.37],[87.95,21.83],[86.86,21.24],[86.75,20.31],[85.25,19.76],[82.26,16.56],[80.29,15.71],[79.84,10.32],[78.94,9.57],[79.41,9.19],[78.42,9.11],[77.52,8.08],[76.55,8.9],[73.34,16.46],[72.67,19.83],[72.61,21.46],[73.11,21.75],[72.18,22.27],[72.02,21.16],[70.49,20.84],[68.97,22.29],[70.49,23.09],[69.24,22.85],[68.42,23.57],[68.78,23.85],[68.17,23.86]]]},{"code":"ISL","name":"冰島","name_en":"Iceland","rings":[[[-15.54,66.23],[-14.6,66.38],[-15.12,66.1],[-13.62,65.52],[-13.6,65.04],[-18.65,63.41],[-22.65,63.83],[-21.59,64.63],[-24.03,64.86],[-21.89,65.05],[-22.51,65.2],[-21.84,65.45],[-24.48,65.53],[-23.29,65.75],[-23.83,65.85],[-23.45,66.18],[-22.44,65.91],[-22.89,66.44],[-21.41,66.03],[-21.13,65.27],[-20.21,66.1],[-18.14,65.73],[-18.3,66.16],[-15.54,66.23]]]},{"code":"HUN","name":"匈牙利","name_en":"Hungary","rings":[[[22.13,48.41],[22.88,47.95],[21.04,46.24],[17.96,45.77],[16.09,46.86],[17.15,48.01],[22.13,48.41]]]},{"code":"HND","name":"宏都拉斯","name_en":"Honduras","rings":[[[-83.16,14.99],[-84.99,14.75],[-85.73,13.86],[-86.76,13.75],[-87.06,12.99],[-87.8,13.89],[-89.36,14.42],[-87.7,15.91],[-84.97,15.99],[-83.16,14.99]]]},{"code":"HTI","name":"海地","name_en":"Haiti","rings":[[[-71.78,19.72],[-71.77,18.04],[-74.46,18.39],[-72.38,18.57],[-73.32,19.85],[-71.78,19.72]]]},{"code":"GUY","name":"圭亞那","name_en":"Guyana","rings":[[[-60.74,5.2],[-61.39,5.94],[-61.15,6.69],[-60.35,7.0],[-60.72,7.54],[-60.02,8.55],[-59.2,8.07],[-58.48,7.33],[-58.67,6.39],[-58.3,6.88],[-57.19,6.1],[-58.05,4.1],[-56.48,1.94],[-59.23,1.38],[-59.99,2.69],[-59.7,4.38],[-60.14,5.24],[-60.74,5.2]]]},{"code":"GNB","name":"幾內亞比索","name_en":"Guinea-Bissau","rings":[[[-16.71,12.35],[-13.73,12.67],[-13.73,11.74],[-15.04,10.94],[-15.5,11.72],[-15.08,11.97],[-15.94,11.79],[-16.71,12.35]]]},{"code":"GIN","name":"幾內亞","name_en":"Guinea","rings":[[[-10.28,8.49],[-10.71,8.34],[-11.21,9.98],[-12.43,9.9],[-13.29,9.05],[-15.05,10.83],[-13.73,11.74],[-13.73,12.67],[-10.71,11.9],[-9.04,12.4],[-7.68,8.41],[-8.21,8.48],[-8.21,7.59],[-9.12,7.22],[-9.52,8.35],[-10.28,8.49]]]},{"code":"GTM","name":"瓜地馬拉","name_en":"Guatemala","rings":[[[-92.24,14.55],[-91.74,16.07],[-90.45,16.07],[-91.41,17.26],[-90.99,17.82],[-89.16,17.81],[-89.24,15.89],[-88.23,15.73],[-89.17,14.61],[-90.1,13.74],[-92.24,14.55]]]},{"code":"GRC","name":"希臘","name_en":"Greece","rings":[[[23.42,38.96],[24.58,38.02],[22.88,38.85],[23.42,38.96]],[[23.85,35.54],[26.32,35.32],[24.8,34.93],[23.59,35.26],[23.85,35.54]],[[26.32,41.72],[26.62,41.4],[26.11,40.75],[23.76,40.75],[24.34,40.15],[23.73,40.33],[23.95,39.97],[22.63,40.5],[23.33,39.17],[22.57,38.87],[23.97,38.27],[24.06,37.71],[23.5,38.03],[23.04,37.88],[23.49,37.44],[22.73,37.54],[23.16,36.45],[21.74,36.86],[21.4,38.2],[23.18,38.13],[21.18,38.35],[20.77,38.87],[21.12,39.03],[20.3,39.33],[20.0,39.71],[20.96,40.85],[26.32,41.72]]]},{"code":"GHA","name":"迦納","name_en":"Ghana","rings":[[[-0.07,11.12],[0.69,8.35],[0.53,6.85],[1.19,6.09],[-2.0,4.76],[-3.11,5.09],[-2.75,5.43],[-3.24,6.81],[-2.51,8.21],[-2.83,11.0],[-0.07,11.12]]]},{"code":"DEU","name":"德國","name_en":"Germany","rings":[[[9.52,47.52],[7.57,47.61],[8.13,48.97],[6.34,49.45],[5.95,51.8],[7.02,52.27],[6.69,52.53],[7.21,53.65],[9.78,53.55],[8.64,54.29],[8.67,54.9],[11.01,54.38],[10.92,54.0],[12.58,54.47],[13.72,54.15],[14.96,51.1],[12.09,50.27],[13.79,48.59],[12.76,48.11],[13.01,47.48],[9.52,47.52]]]},{"code":"GEO","name":"喬治亞","name_en":"Georgia","rings":[[[43.44,41.11],[41.51,41.52],[41.49,42.66],[39.98,43.42],[45.71,42.5],[46.53,41.09],[45.28,41.45],[43.44,41.11]]]},{"code":"GMB","name":"甘比亞","name_en":"Gambia","rings":[[[-16.56,13.59],[-13.83,13.41],[-16.76,13.06],[-16.67,13.47],[-15.43,13.47],[-16.56,13.59]]]},{"code":"GAB","name":"加彭","name_en":"Gabon","rings":[[[13.29,2.16],[13.22,1.25],[14.18,1.37],[14.43,0.9],[13.86,-0.2],[14.47,-0.57],[14.38,-1.89],[13.99,-2.49],[12.59,-1.83],[12.45,-2.33],[11.61,-2.34],[11.88,-3.67],[11.13,-3.92],[8.7,-0.59],[9.35,0.34],[10.0,0.19],[9.32,0.55],[9.59,1.03],[11.34,1.0],[11.35,2.3],[13.29,2.16]]]},{"code":"FRA","name":"法國","name_en":"France","rings":[[[9.48,42.81],[9.19,41.38],[8.57,42.36],[9.48,42.81]],[[7.62,47.59],[5.97,46.21],[6.78,46.41],[7.15,45.4],[6.63,45.07],[7.49,43.77],[6.12,43.07],[3.91,43.56],[3.05,42.92],[3.21,42.43],[2.03,42.35],[-1.46,43.05],[-1.79,43.41],[-1.08,45.53],[-0.55,45.0],[-1.15,46.31],[-2.06,46.81],[-1.74,47.22],[-4.31,47.82],[-4.76,48.45],[-1.38,48.65],[-1.86,49.68],[0.42,49.45],[1.59,50.25],[1.67,50.89],[2.52,51.1],[4.18,49.96],[8.13,48.97],[7.62,47.59]],[[-54.62,2.33],[-53.99,3.59],[-54.47,4.91],[-53.92,5.77],[-51.83,4.64],[-51.65,4.06],[-52.7,2.36],[-54.62,2.33]]]},{"code":"NCL","name":"新喀里多尼亞","name_en":"New Caledonia","rings":[[[164.2,-20.25],[166.97,-22.32],[164.93,-21.29],[164.2,-20.25]]]},{"code":"ATF","name":"法屬南部和南極領地","name_en":"Fr. S. Antarctic Lands","rings":[[[69.18,-49.11],[70.56,-49.2],[69.76,-49.43],[70.12,-49.7],[68.87,-49.71],[68.83,-48.85],[69.18,-49.11]]]},{"code":"FIN","name":"芬蘭","name_en":"Finland","rings":[[[24.16,65.81],[23.64,67.95],[20.62,69.04],[24.94,68.59],[26.53,69.92],[29.14,69.67],[28.47,68.49],[29.99,67.67],[29.07,66.89],[30.09,65.79],[29.6,64.97],[30.53,64.08],[29.99,63.74],[31.53,62.89],[27.8,60.54],[22.96,59.83],[21.44,60.6],[21.1,62.62],[25.29,64.86],[25.35,65.48],[24.16,65.81]]]},{"code":"FJI","name":"斐濟","name_en":"Fiji","rings":[[[180.0,-16.17],[179.56,-16.64],[179.93,-16.74],[178.5,-16.79],[180.0,-16.17]],[[178.28,-17.37],[178.67,-18.08],[177.32,-18.08],[178.28,-17.37]]]},{"code":"ETH","name":"衣索比亞","name_en":"Ethiopia","rings":[[[35.27,5.49],[34.71,6.66],[33.01,7.95],[34.09,8.58],[34.28,10.53],[36.11,12.73],[36.52,14.26],[37.57,14.15],[37.88,14.85],[40.82,14.11],[42.38,12.47],[41.8,10.98],[42.92,11.0],[42.84,10.2],[43.98,9.01],[47.98,8.0],[44.94,4.91],[41.88,3.98],[40.77,4.27],[39.49,3.46],[36.02,4.47],[35.27,5.49]]]},{"code":"EST","name":"愛沙尼亞","name_en":"Estonia","rings":[[[27.35,57.53],[24.32,57.87],[24.53,58.35],[23.77,58.36],[23.49,59.2],[28.01,59.48],[27.35,57.53]],[[22.62,58.62],[23.32,58.45],[22.0,57.93],[21.86,58.5],[22.62,58.62]]]},{"code":"ERI","name":"厄利垂亞","name_en":"Eritrea","rings":[[[36.52,14.26],[37.01,17.06],[38.61,18.01],[39.79,15.12],[39.86,15.47],[41.18,14.62],[43.12,12.71],[42.38,12.47],[40.14,14.46],[37.88,14.85],[37.57,14.15],[36.52,14.26]]]},{"code":"GNQ","name":"赤道幾內亞","name_en":"Eq. Guinea","rings":[[[11.33,2.17],[11.34,1.0],[9.39,1.14],[9.8,2.3],[11.33,2.17]]]},{"code":"SLV","name":"薩爾瓦多","name_en":"El Salvador","rings":[[[-89.36,14.42],[-87.73,13.84],[-87.82,13.29],[-90.1,13.74],[-89.36,14.42]]]},{"code":"EGY","name":"埃及","name_en":"Egypt","rings":[[[36.87,22.0],[24.98,22.0],[24.85,31.33],[25.89,31.62],[29.07,30.83],[31.08,31.6],[32.1,31.09],[34.2,31.32],[34.9,29.48],[34.22,27.76],[32.57,29.97],[32.36,29.63],[35.78,23.94],[35.7,22.95],[36.87,22.0]]]},{"code":"ECU","name":"厄瓜多爾","name_en":"Ecuador","rings":[[[-75.28,-0.11],[-75.57,-1.53],[-78.35,-3.4],[-79.03,-4.97],[-80.48,-4.43],[-79.73,-2.58],[-79.84,-2.07],[-80.28,-2.71],[-80.93,-2.27],[-80.9,-1.08],[-80.28,-0.62],[-80.04,0.83],[-78.86,1.46],[-77.4,0.39],[-75.28,-0.11]],[[-91.27,0.03],[-90.8,-0.75],[-91.13,-1.02],[-91.27,0.03]]]},{"code":"DOM","name":"多明尼加","name_en":"Dominican Rep.","rings":[[[-71.77,18.04],[-71.56,19.9],[-69.96,19.67],[-68.34,18.61],[-68.69,18.21],[-71.03,18.27],[-71.44,17.64],[-71.77,18.04]]]},{"code":"DJI","name":"吉布地","name_en":"Djibouti","rings":[[[43.25,11.5],[42.92,11.0],[41.8,10.98],[42.45,12.52],[43.12,12.71],[43.38,12.09],[42.52,11.57],[43.25,11.5]]]},{"code":"GRL","name":"格陵蘭","name_en":"Greenland","rings":[[[-29.95,83.56],[-25.8,83.26],[-32.03,82.98],[-25.12,83.16],[-21.69,82.68],[-29.89,82.05],[-24.29,81.7],[-21.34,82.07],[-21.23,81.6],[-23.12,80.78],[-19.63,81.64],[-11.43,81.46],[-16.76,80.57],[-15.94,80.43],[-16.49,80.25],[-20.15,80.01],[-18.99,79.18],[-21.13,78.66],[-21.73,77.71],[-19.49,77.72],[-20.46,77.45],[-18.34,76.92],[-22.61,76.68],[-19.86,76.12],[-19.53,75.18],[-22.23,75.12],[-20.99,75.07],[-20.86,74.64],[-19.98,74.98],[-19.27,74.34],[-21.13,74.11],[-21.98,74.57],[-22.34,74.06],[-20.37,73.85],[-20.64,73.46],[-25.52,73.85],[-24.79,73.51],[-27.56,73.14],[-24.13,73.41],[-22.04,72.92],[-22.29,72.12],[-24.63,73.04],[-26.66,72.72],[-24.81,72.9],[-25.12,72.35],[-21.96,71.74],[-22.48,71.38],[-21.75,71.48],[-21.52,70.53],[-22.38,70.46],[-22.44,70.86],[-23.33,70.45],[-24.56,71.22],[-27.09,71.63],[-25.74,71.18],[-28.4,70.99],[-28.07,70.7],[-29.07,70.44],[-26.62,70.46],[-27.38,69.99],[-22.29,70.03],[-26.48,68.68],[-30.98,68.06],[-32.33,68.44],[-32.16,67.99],[-34.63,66.43],[-37.75,65.59],[-37.28,66.3],[-38.16,66.39],[-37.75,66.26],[-38.52,66.01],[-38.2,65.71],[-40.17,65.56],[-39.65,65.29],[-41.09,65.04],[-40.18,64.48],[-41.58,64.3],[-40.55,63.73],[-41.39,63.06],[-42.17,63.21],[-41.63,62.97],[-41.91,62.74],[-42.94,62.72],[-42.15,62.57],[-42.11,61.86],[-43.04,60.52],[-43.92,60.6],[-43.12,60.06],[-43.91,59.82],[-44.41,59.92],[-44.22,60.27],[-45.38,60.2],[-44.76,60.66],[-46.05,60.62],[-45.87,61.22],[-48.18,60.77],[-47.77,61.0],[-49.29,61.59],[-48.83,62.08],[-50.32,62.47],[-49.79,63.04],[-50.39,62.82],[-51.55,64.01],[-50.26,64.21],[-51.71,64.21],[-50.12,64.7],[-50.96,65.2],[-50.72,64.8],[-51.92,64.22],[-52.54,65.33],[-51.09,65.78],[-52.55,65.46],[-53.39,66.05],[-51.23,66.88],[-53.61,66.15],[-52.39,66.88],[-53.69,66.99],[-53.8,67.42],[-50.61,67.53],[-53.74,67.55],[-53.15,68.21],[-51.21,68.33],[-53.38,68.3],[-53.04,68.61],[-51.13,68.6],[-51.08,69.13],[-50.3,69.17],[-51.08,69.21],[-50.32,70.03],[-54.53,70.7],[-50.68,70.4],[-51.77,71.01],[-51.02,71.0],[-53.01,71.18],[-51.78,71.68],[-53.44,71.58],[-53.65,72.36],[-53.96,71.46],[-55.59,71.55],[-54.84,72.36],[-55.6,72.45],[-54.74,72.87],[-55.67,73.01],[-55.29,73.33],[-56.1,73.56],[-56.23,74.13],[-57.23,74.13],[-56.26,74.53],[-58.52,75.69],[-63.29,76.35],[-68.32,76.09],[-69.48,76.4],[-68.11,76.65],[-71.15,77.07],[-66.31,77.56],[-69.35,77.47],[-72.82,78.19],[-65.83,79.17],[-64.18,80.1],[-67.0,80.41],[-61.44,81.13],[-60.43,81.92],[-56.62,81.36],[-59.26,82.01],[-54.55,82.35],[-53.67,82.16],[-53.56,81.65],[-53.02,82.32],[-49.54,81.92],[-50.94,82.38],[-50.04,82.47],[-44.73,81.78],[-44.33,82.47],[-45.56,82.75],[-41.37,82.75],[-46.17,83.06],[-29.95,83.56]],[[-52.73,69.94],[-51.9,69.6],[-53.58,69.26],[-54.92,69.71],[-54.37,70.32],[-52.73,69.94]],[[-44.86,82.08],[-47.35,82.6],[-44.92,82.48],[-44.86,82.08]],[[-25.43,70.92],[-28.04,70.49],[-27.62,70.91],[-25.43,70.92]],[[-18.0,75.41],[-17.39,75.04],[-18.89,75.07],[-18.0,75.41]]]},{"code":"DNK","name":"丹麥","name_en":"Denmark","rings":[[[12.57,55.79],[11.86,54.77],[10.98,55.72],[12.57,55.79]],[[9.74,54.83],[8.67,54.9],[8.16,56.61],[10.61,57.74],[10.28,56.62],[10.93,56.44],[9.59,55.49],[9.74,54.83]],[[10.65,55.61],[10.62,55.05],[9.86,55.36],[10.65,55.61]]]},{"code":"CZE","name":"捷克共和國","name_en":"Czechia","rings":[[[18.83,49.51],[16.95,48.6],[14.99,49.0],[14.19,48.58],[12.09,50.3],[14.99,51.01],[18.83,49.51]]]},{"code":"CYN","name":"北賽普勒斯土耳其共和國","name_en":"N. Cyprus","rings":[[[34.0,35.07],[32.71,35.17],[34.56,35.66],[34.0,35.07]]]},{"code":"CYP","name":"賽普勒斯","name_en":"Cyprus","rings":[[[32.71,35.17],[34.05,34.99],[32.94,34.58],[32.32,34.95],[32.71,35.17]]]},{"code":"CUB","name":"古巴","name_en":"Cuba","rings":[[[-81.84,23.16],[-79.82,22.89],[-74.15,20.17],[-77.72,19.86],[-77.23,20.64],[-78.12,20.76],[-78.73,21.59],[-81.85,22.21],[-81.84,22.67],[-84.84,21.83],[-84.04,22.67],[-81.84,23.16]]]},{"code":"HRV","name":"克羅地亞","name_en":"Croatia","rings":[[[13.58,45.52],[15.34,45.47],[16.32,46.53],[17.81,45.79],[18.91,45.93],[19.4,45.19],[15.79,45.18],[17.59,42.94],[15.99,43.52],[14.55,45.3],[13.86,44.84],[13.58,45.52]]]},{"code":"CIV","name":"象牙海岸","name_en":"Côte d'Ivoire","rings":[[[-7.99,10.16],[-6.26,10.72],[-6.12,10.2],[-2.7,9.48],[-2.51,8.21],[-3.24,6.65],[-2.82,5.15],[-5.28,5.21],[-7.54,4.35],[-7.45,5.84],[-8.6,6.51],[-8.24,8.46],[-7.68,8.41],[-7.99,10.16]]]},{"code":"CRI","name":"哥斯大黎加","name_en":"Costa Rica","rings":[[[-82.56,9.58],[-82.88,8.07],[-85.03,10.12],[-85.11,9.58],[-85.62,9.9],[-85.91,10.9],[-83.64,10.92],[-82.56,9.58]]]},{"code":"COD","name":"剛果民主共和國","name_en":"Dem. Rep. Congo","rings":[[[30.75,-8.19],[28.9,-8.49],[28.4,-9.22],[28.48,-11.81],[29.06,-12.35],[29.8,-12.16],[29.78,-13.44],[29.11,-13.4],[27.16,-11.58],[26.03,-11.89],[23.97,-10.87],[22.28,-11.19],[21.78,-7.31],[19.88,-6.99],[19.34,-7.97],[17.58,-8.1],[16.43,-5.9],[12.21,-5.76],[12.83,-4.74],[14.36,-4.3],[14.71,-4.88],[15.99,-3.77],[16.22,-2.18],[17.75,-0.55],[19.07,4.89],[19.69,5.12],[22.42,4.13],[22.86,4.72],[27.11,5.2],[28.19,4.35],[29.68,4.59],[30.9,3.46],[30.73,2.46],[31.27,2.15],[29.94,0.82],[28.86,-2.45],[29.54,-6.31],[30.75,-8.19]]]},{"code":"COG","name":"剛果共和國","name_en":"Congo","rings":[[[11.13,-3.92],[11.88,-3.67],[11.61,-2.34],[12.45,-2.33],[12.59,-1.83],[13.99,-2.49],[14.38,-1.89],[14.47,-0.57],[13.86,-0.2],[14.43,0.9],[14.18,1.37],[13.22,1.25],[13.29,2.16],[16.06,1.68],[16.61,3.51],[18.5,3.6],[17.75,-0.55],[16.22,-2.18],[15.87,-3.93],[14.71,-4.88],[14.36,-4.3],[12.02,-5.0],[11.13,-3.92]]]},{"code":"COL","name":"哥倫比亞","name_en":"Colombia","rings":[[[-71.32,11.86],[-72.69,10.84],[-73.37,9.19],[-72.8,9.11],[-72.01,7.03],[-70.13,6.95],[-69.43,6.12],[-67.48,6.18],[-67.86,4.51],[-67.31,3.42],[-67.86,2.79],[-66.88,1.36],[-67.4,2.12],[-69.85,1.71],[-69.85,1.06],[-69.15,0.66],[-70.05,0.58],[-69.4,-1.19],[-69.97,-4.24],[-70.74,-3.78],[-70.1,-2.66],[-70.97,-2.21],[-72.94,-2.39],[-74.8,-0.2],[-77.4,0.39],[-79.03,1.62],[-77.08,3.91],[-77.52,4.21],[-77.37,6.58],[-77.9,7.23],[-77.2,7.97],[-77.39,8.64],[-76.79,7.93],[-76.92,8.57],[-75.64,9.45],[-75.71,10.14],[-74.84,11.11],[-74.4,10.77],[-71.71,12.42],[-71.32,11.86]]]},{"code":"CHN","name":"中華人民共和國","name_en":"China","rings":[[[107.97,21.51],[106.66,21.98],[106.78,22.78],[105.28,23.35],[103.94,22.54],[101.71,22.49],[101.73,21.16],[101.08,21.76],[100.15,21.48],[99.17,22.15],[99.51,22.96],[98.86,23.19],[98.84,24.12],[97.56,23.91],[97.82,25.25],[98.66,25.86],[98.65,27.57],[97.66,28.5],[96.28,28.41],[96.58,28.76],[96.04,29.45],[94.62,29.31],[91.98,27.73],[89.9,28.29],[88.89,27.32],[88.62,28.09],[85.99,27.91],[82.04,30.33],[81.11,30.04],[78.76,31.3],[78.39,32.52],[79.22,32.5],[78.97,34.3],[78.04,35.48],[76.18,35.81],[75.84,36.65],[74.38,37.14],[75.12,37.39],[74.84,38.4],[73.8,38.61],[73.63,39.45],[74.84,40.48],[76.32,40.35],[76.91,41.02],[80.24,42.04],[80.79,43.16],[80.48,44.71],[79.87,44.88],[82.52,45.13],[83.03,47.19],[85.48,47.06],[85.69,48.31],[87.05,49.11],[87.81,49.16],[87.98,48.56],[90.31,47.68],[91.03,46.57],[90.88,45.2],[95.35,44.28],[96.39,42.72],[101.5,42.54],[104.98,41.6],[109.44,42.46],[111.93,43.71],[111.4,44.37],[111.9,45.06],[113.59,44.75],[117.44,46.59],[119.87,46.67],[118.5,47.98],[115.9,47.69],[115.53,48.13],[116.68,49.82],[117.87,49.51],[119.26,50.07],[120.75,52.1],[120.09,52.79],[123.31,53.56],[125.65,53.04],[127.55,49.8],[130.55,48.86],[130.96,47.71],[134.29,48.37],[134.75,47.72],[133.11,45.13],[131.85,45.33],[130.98,44.84],[131.26,43.38],[130.53,42.54],[129.9,43.0],[129.7,42.45],[128.05,41.99],[128.15,41.39],[126.72,41.72],[124.27,39.92],[121.16,38.73],[122.26,40.5],[121.83,40.97],[118.98,39.18],[117.78,39.13],[117.66,38.42],[118.94,38.04],[119.29,37.14],[120.75,37.83],[122.67,37.4],[122.34,36.83],[120.18,36.2],[119.17,34.85],[120.27,34.27],[120.85,32.66],[121.83,31.9],[120.04,31.94],[121.83,31.06],[120.19,30.24],[122.08,29.87],[121.51,29.48],[121.97,29.49],[121.45,29.13],[121.61,28.29],[120.75,28.01],[120.04,26.63],[119.59,26.78],[119.88,26.33],[119.14,26.12],[119.62,25.39],[117.84,24.47],[116.47,22.95],[114.02,22.51],[113.52,23.1],[113.55,22.23],[110.41,21.34],[110.34,20.29],[109.88,20.36],[109.57,21.69],[107.97,21.51]],[[110.89,19.99],[110.07,18.45],[108.7,18.54],[109.26,19.88],[110.89,19.99]]]},{"code":"CHL","name":"智利","name_en":"Chile","rings":[[[-70.42,-18.35],[-69.51,-17.51],[-69.09,-18.05],[-67.88,-22.82],[-67.01,-23.0],[-67.36,-24.03],[-68.56,-24.75],[-68.32,-26.97],[-69.66,-28.41],[-69.84,-30.18],[-70.52,-31.15],[-69.85,-34.22],[-71.19,-36.84],[-70.85,-38.54],[-71.72,-39.64],[-72.14,-42.58],[-71.82,-44.38],[-71.16,-44.56],[-72.06,-44.77],[-71.35,-45.23],[-71.7,-46.65],[-72.61,-48.79],[-73.58,-49.58],[-73.15,-50.74],[-72.34,-50.68],[-71.97,-51.96],[-68.46,-52.29],[-70.8,-52.77],[-71.3,-53.88],[-72.41,-53.35],[-71.79,-53.48],[-71.23,-52.81],[-73.05,-53.24],[-71.51,-52.61],[-72.71,-52.54],[-73.12,-53.07],[-73.65,-52.84],[-73.12,-52.49],[-74.01,-52.64],[-74.26,-52.1],[-72.52,-52.26],[-72.54,-51.71],[-73.17,-51.45],[-72.6,-51.8],[-73.52,-52.04],[-75.09,-50.68],[-74.64,-50.36],[-73.81,-50.94],[-73.65,-50.49],[-73.98,-50.83],[-74.63,-50.19],[-73.84,-49.61],[-73.93,-49.02],[-74.37,-49.4],[-74.01,-48.48],[-74.58,-48.0],[-73.39,-48.15],[-73.72,-47.66],[-74.65,-47.7],[-74.13,-47.59],[-74.31,-46.79],[-75.71,-46.71],[-73.96,-45.4],[-74.39,-46.22],[-73.74,-45.81],[-73.85,-46.57],[-73.73,-45.48],[-72.93,-45.45],[-73.4,-45.1],[-72.68,-44.59],[-73.27,-44.17],[-72.32,-41.5],[-73.74,-41.74],[-73.98,-40.97],[-73.23,-39.22],[-73.66,-37.34],[-71.45,-32.66],[-71.52,-28.93],[-70.65,-26.33],[-70.09,-21.49],[-70.42,-18.35]],[[-68.63,-52.65],[-68.65,-54.85],[-71.9,-54.6],[-70.31,-54.53],[-70.86,-54.11],[-70.53,-53.63],[-70.54,-54.14],[-69.25,-54.56],[-70.15,-53.89],[-69.36,-53.42],[-70.33,-53.38],[-70.38,-52.75],[-68.63,-52.65]],[[-73.77,-43.35],[-74.39,-43.23],[-74.04,-41.8],[-73.42,-42.19],[-73.77,-43.35]],[[-74.48,-49.15],[-74.59,-50.01],[-74.72,-49.42],[-75.55,-49.79],[-74.9,-48.73],[-74.48,-49.15]],[[-74.57,-48.59],[-75.25,-48.03],[-74.83,-47.85],[-74.57,-48.59]],[[-72.92,-53.48],[-72.21,-53.81],[-72.84,-54.13],[-73.85,-53.55],[-72.92,-53.48]],[[-69.7,-54.92],[-68.46,-54.96],[-68.05,-55.64],[-69.41,-55.44],[-69.98,-55.15],[-69.7,-54.92]],[[-73.74,-44.39],[-74.1,-45.33],[-74.62,-44.65],[-73.74,-44.39]]]},{"code":"TCD","name":"查德","name_en":"Chad","rings":[[[23.98,19.5],[23.97,15.72],[22.93,15.53],[21.83,12.79],[22.35,12.66],[22.86,10.92],[21.77,10.64],[20.34,9.13],[18.96,8.94],[18.56,8.05],[15.48,7.52],[13.98,9.69],[15.65,10.01],[14.85,12.5],[13.45,14.38],[15.47,16.91],[15.96,20.35],[14.98,23.0],[15.98,23.45],[23.98,19.5]]]},{"code":"CAF","name":"中非共和國","name_en":"Central African Rep.","rings":[[[24.15,8.67],[27.4,5.11],[25.53,5.31],[22.86,4.72],[22.42,4.13],[19.5,5.13],[18.59,4.35],[18.61,3.48],[16.61,3.51],[16.18,2.27],[14.73,4.6],[14.44,6.09],[15.48,7.52],[18.56,8.05],[18.89,8.89],[20.63,9.3],[22.04,10.82],[22.86,10.92],[23.65,9.82],[23.54,8.82],[24.15,8.67]]]},{"code":"CAN","name":"加拿大","name_en":"Canada","rings":[[[-132.66,54.13],[-132.17,53.96],[-132.53,53.65],[-131.67,54.14],[-132.01,53.27],[-132.75,53.31],[-133.1,54.01],[-132.66,54.13]],[[-131.75,53.2],[-131.22,52.15],[-132.55,53.14],[-131.75,53.2]],[[-127.2,50.64],[-125.48,50.32],[-123.28,48.46],[-124.87,48.65],[-124.81,49.21],[-125.49,48.93],[-126.55,49.42],[-126.13,49.67],[-127.86,50.13],[-127.47,50.58],[-128.3,50.79],[-127.2,50.64]],[[-130.03,55.89],[-131.82,56.59],[-135.48,59.79],[-137.44,58.9],[-139.08,60.34],[-141.0,60.3],[-141.0,69.65],[-135.26,68.68],[-135.91,69.11],[-134.41,69.68],[-133.88,69.51],[-134.17,69.25],[-129.68,70.19],[-133.2,68.74],[-131.79,69.43],[-128.85,69.75],[-127.68,70.26],[-127.99,70.57],[-125.52,69.35],[-124.56,70.15],[-124.34,69.36],[-122.07,69.82],[-114.99,68.85],[-113.96,68.4],[-115.13,67.82],[-110.07,67.99],[-107.99,67.26],[-108.5,67.09],[-107.26,66.4],[-107.96,67.82],[-105.75,68.59],[-108.26,68.15],[-108.72,68.3],[-108.31,68.61],[-106.16,68.92],[-102.32,67.74],[-98.63,68.07],[-97.45,67.62],[-98.65,68.36],[-97.41,68.5],[-95.97,68.25],[-96.37,67.51],[-95.42,67.01],[-96.42,67.05],[-95.79,66.62],[-96.04,66.94],[-95.26,67.26],[-95.46,68.02],[-93.45,68.62],[-94.6,68.8],[-93.53,69.48],[-96.55,70.21],[-95.88,70.55],[-96.55,70.81],[-96.45,71.24],[-94.61,71.99],[-91.56,70.18],[-92.89,69.67],[-90.42,69.46],[-91.24,69.29],[-90.25,68.27],[-89.28,69.26],[-88.04,68.81],[-87.83,68.3],[-88.31,67.95],[-87.36,67.18],[-85.69,68.67],[-84.87,68.77],[-85.51,69.85],[-82.37,69.64],[-82.75,69.49],[-81.25,68.74],[-82.55,68.45],[-81.29,67.5],[-81.47,67.07],[-83.41,66.37],[-85.11,66.91],[-83.87,66.21],[-86.71,66.52],[-85.96,66.12],[-87.45,65.34],[-91.41,65.96],[-87.03,65.2],[-88.11,64.18],[-90.04,64.14],[-90.81,63.58],[-93.7,64.15],[-90.71,63.3],[-92.36,62.82],[-91.94,62.59],[-92.53,62.17],[-93.21,62.36],[-94.76,60.5],[-94.96,59.07],[-94.33,58.3],[-93.18,58.73],[-92.43,57.32],[-92.8,56.92],[-90.59,57.22],[-85.68,55.6],[-85.37,55.08],[-82.39,55.07],[-81.83,52.22],[-80.66,51.76],[-80.85,51.12],[-79.35,50.76],[-79.69,51.35],[-78.9,51.2],[-78.45,52.26],[-79.71,54.67],[-77.78,55.29],[-76.53,56.5],[-76.89,57.76],[-78.51,58.65],[-77.29,60.02],[-77.6,60.83],[-78.18,60.82],[-77.51,61.56],[-78.13,62.28],[-73.71,62.47],[-71.42,61.16],[-69.47,61.01],[-69.67,60.08],[-70.65,60.03],[-69.73,59.92],[-69.34,59.3],[-70.15,58.76],[-68.38,58.74],[-68.36,58.16],[-69.04,57.9],[-66.36,58.79],[-66.0,58.43],[-65.48,59.47],[-65.04,59.39],[-65.43,59.78],[-64.5,60.27],[-64.77,60.01],[-63.42,59.19],[-63.97,59.05],[-62.87,58.67],[-63.54,58.33],[-62.59,58.47],[-63.26,58.01],[-61.96,57.91],[-62.5,57.49],[-61.33,57.01],[-62.5,56.8],[-60.34,55.78],[-60.62,55.06],[-59.76,55.31],[-59.84,54.81],[-59.26,55.2],[-57.4,54.59],[-60.4,53.65],[-60.33,53.27],[-57.42,54.16],[-57.33,53.47],[-55.97,53.47],[-55.8,52.64],[-56.32,52.54],[-55.67,52.19],[-60.08,50.25],[-66.5,50.21],[-69.67,48.2],[-71.02,48.46],[-69.78,48.1],[-71.27,46.8],[-74.32,45.53],[-73.97,45.35],[-76.82,43.63],[-78.85,43.58],[-79.04,42.8],[-82.69,41.68],[-83.15,42.14],[-82.14,43.57],[-82.55,45.35],[-88.38,48.3],[-91.52,48.06],[-94.62,48.74],[-95.16,49.37],[-95.16,48.99],[-123.08,48.98],[-123.19,49.68],[-124.03,49.6],[-123.58,49.68],[-123.83,50.14],[-124.78,50.02],[-124.86,50.87],[-126.09,50.5],[-126.52,51.06],[-127.71,51.15],[-126.69,51.7],[-127.71,51.49],[-127.8,52.19],[-126.71,52.06],[-127.02,52.84],[-128.1,51.79],[-128.05,52.91],[-129.17,53.53],[-127.93,53.27],[-128.53,53.86],[-129.56,53.25],[-130.34,53.72],[-129.63,54.23],[-130.43,54.42],[-129.56,55.46],[-130.05,55.06],[-130.03,55.89]],[[-109.82,78.65],[-109.48,78.32],[-113.29,78.33],[-109.82,78.65]],[[-110.46,78.1],[-109.62,78.06],[-110.87,77.83],[-110.12,77.72],[-110.68,77.45],[-113.28,77.81],[-110.46,78.1]],[[-115.55,77.36],[-117.23,76.28],[-117.99,76.41],[-117.88,76.81],[-119.91,75.86],[-122.9,76.13],[-119.09,77.31],[-115.55,77.36]],[[-108.29,76.06],[-105.63,75.95],[-105.97,75.13],[-112.52,74.42],[-114.31,74.72],[-111.09,75.26],[-117.6,75.27],[-115.14,75.68],[-117.16,75.64],[-114.99,75.9],[-116.66,75.96],[-114.78,76.17],[-115.82,76.27],[-115.0,76.5],[-109.09,75.51],[-110.31,76.4],[-108.83,76.82],[-108.29,76.06]],[[-114.52,72.59],[-112.75,72.99],[-111.27,72.71],[-111.68,72.3],[-110.01,72.98],[-107.81,71.63],[-107.31,71.89],[-108.24,73.15],[-106.48,73.2],[-105.42,72.79],[-104.39,71.58],[-104.51,71.06],[-100.91,69.81],[-103.43,69.67],[-103.12,69.2],[-101.79,69.18],[-102.9,68.82],[-106.66,69.44],[-113.13,68.49],[-113.69,69.2],[-116.51,69.42],[-117.2,70.05],[-111.63,70.31],[-117.59,70.63],[-118.27,71.03],[-115.3,71.49],[-118.99,71.76],[-118.37,72.53],[-116.57,73.05],[-114.3,73.33],[-114.52,72.59]],[[-119.74,74.11],[-117.51,74.23],[-115.39,73.5],[-119.08,72.64],[-120.62,71.51],[-123.1,71.09],[-125.85,71.98],[-123.8,73.77],[-124.7,74.35],[-119.74,74.11]],[[-69.49,83.02],[-61.27,82.28],[-68.69,81.29],[-64.83,81.44],[-70.71,80.54],[-70.26,80.23],[-72.06,80.12],[-70.57,80.09],[-71.39,79.76],[-76.9,79.51],[-74.53,79.05],[-78.58,79.08],[-74.43,78.72],[-76.42,78.51],[-75.19,78.33],[-78.01,77.95],[-78.49,77.37],[-81.66,77.53],[-78.0,76.85],[-80.69,76.18],[-82.53,76.72],[-85.14,76.3],[-89.5,76.83],[-86.81,77.18],[-87.76,77.84],[-84.74,77.36],[-82.66,77.89],[-84.86,77.5],[-85.55,77.93],[-84.22,78.18],[-84.78,78.53],[-87.55,78.18],[-86.81,78.77],[-81.75,78.98],[-84.41,79.0],[-83.58,79.05],[-86.42,79.85],[-86.5,80.26],[-80.48,79.61],[-82.99,80.32],[-76.86,80.86],[-78.72,80.95],[-76.89,81.43],[-85.15,80.52],[-86.44,80.73],[-83.29,81.15],[-87.71,80.66],[-89.17,80.94],[-84.94,81.29],[-89.62,81.03],[-87.6,81.53],[-91.68,81.64],[-85.04,81.98],[-86.62,82.22],[-84.9,82.45],[-79.42,81.85],[-82.45,82.4],[-78.75,82.68],[-79.89,82.94],[-76.01,82.54],[-77.12,83.01],[-69.49,83.02]],[[-93.54,75.03],[-94.53,74.64],[-96.6,75.03],[-94.88,75.63],[-93.54,75.03]],[[-100.0,73.95],[-97.11,73.79],[-98.43,72.96],[-96.54,72.7],[-96.61,71.83],[-99.17,71.37],[-102.66,72.72],[-100.13,72.91],[-100.54,73.2],[-99.83,73.21],[-101.52,73.49],[-100.0,73.95]],[[-84.92,65.26],[-80.26,63.8],[-81.05,63.46],[-83.3,64.14],[-85.39,63.12],[-85.77,63.7],[-87.15,63.59],[-86.25,64.14],[-85.81,65.83],[-84.92,65.26]],[[-97.7,76.47],[-97.89,75.76],[-97.34,75.42],[-97.99,75.05],[-100.29,75.03],[-100.71,75.41],[-99.19,75.7],[-102.8,75.6],[-100.97,75.8],[-101.79,76.45],[-99.87,75.92],[-99.54,76.15],[-100.83,76.52],[-97.7,76.47]],[[-103.43,79.32],[-100.01,78.73],[-99.0,78.0],[-104.76,78.35],[-103.37,78.74],[-105.44,79.3],[-103.43,79.32]],[[-91.89,81.13],[-88.86,80.17],[-87.67,80.37],[-87.92,80.1],[-86.98,79.89],[-87.3,79.58],[-85.04,79.28],[-87.62,78.68],[-88.04,79.0],[-87.98,78.54],[-88.82,78.19],[-90.04,78.61],[-89.53,78.16],[-92.68,78.39],[-91.87,78.54],[-94.16,78.99],[-91.3,79.37],[-95.1,79.29],[-95.66,79.53],[-94.4,79.74],[-96.77,80.14],[-94.26,80.19],[-96.39,80.32],[-95.55,80.37],[-95.93,80.72],[-93.93,80.56],[-95.51,80.84],[-93.29,81.1],[-94.18,81.34],[-91.89,81.13]],[[-94.29,76.91],[-93.23,76.77],[-93.53,76.45],[-89.28,76.3],[-91.41,76.22],[-88.92,75.45],[-82.15,75.83],[-79.66,75.45],[-80.38,75.03],[-79.4,74.92],[-81.94,74.47],[-83.52,74.9],[-84.43,74.51],[-91.55,74.66],[-93.09,76.35],[-96.88,76.74],[-94.29,76.91]],[[-96.2,78.53],[-94.93,78.08],[-96.99,77.81],[-98.34,78.75],[-96.2,78.53]],[[-93.17,74.16],[-90.38,73.82],[-92.12,72.75],[-94.21,72.76],[-93.53,72.5],[-94.04,72.03],[-95.19,72.03],[-95.63,73.7],[-93.17,74.16]],[[-97.44,69.64],[-95.27,68.83],[-96.6,68.46],[-99.44,68.92],[-98.04,69.46],[-98.2,69.8],[-97.44,69.64]],[[-61.11,45.94],[-60.3,46.31],[-59.83,45.97],[-61.45,45.72],[-60.49,47.01],[-60.49,46.27],[-61.11,45.94]],[[-67.12,45.17],[-67.8,45.73],[-67.81,47.08],[-69.24,47.46],[-70.87,45.27],[-74.71,45.0],[-68.82,48.37],[-65.52,49.27],[-64.26,48.92],[-64.35,48.42],[-66.7,48.02],[-64.7,47.72],[-65.32,47.1],[-64.54,46.24],[-61.03,45.29],[-64.29,44.55],[-65.48,43.52],[-66.13,43.81],[-66.09,44.5],[-63.37,45.36],[-64.87,45.35],[-64.63,45.95],[-67.12,45.17]],[[-55.46,51.54],[-56.82,49.61],[-56.18,50.11],[-55.5,49.98],[-56.14,49.62],[-55.23,49.51],[-55.35,49.08],[-53.62,49.32],[-54.11,48.39],[-53.03,48.63],[-53.87,48.02],[-53.67,47.65],[-52.87,48.11],[-53.07,46.68],[-53.59,46.64],[-53.6,47.15],[-54.17,46.88],[-54.19,47.86],[-55.79,46.87],[-54.78,47.66],[-59.26,47.63],[-58.33,48.52],[-59.17,48.56],[-57.99,48.99],[-58.21,49.39],[-57.04,51.01],[-55.46,51.54]],[[-86.59,71.01],[-84.82,71.03],[-84.7,71.63],[-85.91,71.99],[-84.28,72.04],[-85.65,72.72],[-84.26,72.8],[-85.45,73.11],[-81.61,73.7],[-80.28,72.77],[-81.23,72.31],[-80.61,72.45],[-80.93,71.91],[-79.83,72.45],[-78.59,71.88],[-78.7,72.35],[-77.52,72.18],[-78.42,72.57],[-76.89,72.72],[-75.12,72.38],[-75.92,71.72],[-74.27,72.04],[-75.2,71.71],[-74.7,71.68],[-75.0,71.22],[-73.87,71.77],[-74.2,71.4],[-73.18,71.28],[-71.64,71.52],[-71.22,71.24],[-72.63,70.83],[-70.67,71.05],[-71.89,70.43],[-71.28,70.5],[-71.43,70.13],[-70.56,70.74],[-69.17,70.76],[-68.36,70.48],[-70.06,70.04],[-68.06,70.32],[-67.17,69.8],[-69.25,69.51],[-66.69,69.29],[-69.32,68.86],[-66.21,68.28],[-66.44,67.83],[-64.92,68.03],[-63.85,67.57],[-64.7,67.35],[-63.04,67.24],[-63.7,66.82],[-61.3,66.65],[-62.55,66.41],[-61.99,66.04],[-62.66,65.64],[-63.46,65.85],[-63.61,64.93],[-65.4,65.76],[-64.45,66.32],[-65.83,66.0],[-66.99,66.63],[-67.88,66.47],[-67.35,65.93],[-68.75,66.2],[-66.7,64.82],[-65.43,64.73],[-65.07,64.44],[-65.58,64.29],[-64.41,63.71],[-64.66,63.25],[-65.19,63.76],[-64.67,62.92],[-65.11,62.63],[-68.91,63.7],[-65.98,62.21],[-66.32,61.87],[-71.35,63.07],[-71.99,63.42],[-71.38,63.58],[-73.27,64.58],[-78.05,64.5],[-77.33,65.45],[-75.45,64.84],[-75.8,65.3],[-73.55,65.49],[-74.42,66.17],[-72.22,67.25],[-74.72,69.05],[-76.59,68.7],[-75.65,69.21],[-76.23,69.66],[-79.07,70.6],[-79.41,70.4],[-78.82,70.01],[-81.56,70.11],[-80.92,69.73],[-88.85,70.52],[-89.46,71.06],[-87.14,71.01],[-89.85,71.49],[-89.23,73.11],[-87.72,73.72],[-85.01,73.78],[-86.67,72.76],[-86.22,71.9],[-85.02,71.35],[-86.59,71.01]],[[-63.81,46.47],[-62.02,46.42],[-62.53,45.98],[-63.64,46.23],[-64.39,46.64],[-63.99,47.06],[-63.81,46.47]],[[-82.0,62.95],[-83.02,62.21],[-83.91,62.43],[-82.0,62.95]],[[-79.55,62.41],[-79.67,61.64],[-80.27,61.82],[-79.55,62.41]],[[-75.68,68.32],[-75.08,68.17],[-75.2,67.46],[-77.22,67.51],[-76.74,68.23],[-75.68,68.32]],[[-79.54,73.65],[-77.21,73.5],[-76.09,72.88],[-79.82,72.83],[-80.85,73.72],[-79.54,73.65]],[[-80.73,52.75],[-82.04,53.05],[-81.14,53.21],[-80.73,52.75]],[[-78.94,56.27],[-80.01,55.91],[-79.46,56.54],[-79.54,56.18],[-79.27,56.6],[-78.94,56.27]],[[-105.29,72.92],[-106.95,73.51],[-104.65,73.61],[-105.29,72.92]],[[-118.33,75.58],[-119.39,75.62],[-117.63,76.12],[-118.33,75.58]],[[-128.55,52.94],[-128.68,52.29],[-129.18,52.99],[-128.55,52.94]],[[-104.12,75.04],[-104.89,75.15],[-104.07,75.42],[-103.64,75.16],[-104.12,75.04]]]},{"code":"CMR","name":"喀麥隆","name_en":"Cameroon","rings":[[[8.56,4.76],[9.78,6.76],[10.61,7.06],[11.24,6.45],[11.86,7.12],[13.7,10.87],[14.56,11.49],[14.06,13.08],[14.46,13.02],[15.65,10.01],[13.98,9.69],[15.56,7.74],[14.43,6.04],[15.06,3.95],[16.06,2.91],[16.14,1.72],[14.58,2.2],[9.98,2.17],[9.69,4.06],[8.56,4.76]]]},{"code":"KHM","name":"柬埔寨","name_en":"Cambodia","rings":[[[107.52,14.71],[107.54,12.43],[105.85,11.64],[106.16,10.79],[105.05,10.91],[104.43,10.41],[103.59,10.55],[103.53,11.15],[103.15,10.91],[102.32,13.54],[103.03,14.25],[104.78,14.43],[106.07,13.92],[106.23,14.48],[107.52,14.71]]]},{"code":"MMR","name":"緬甸","name_en":"Myanmar","rings":[[[100.12,20.32],[98.02,19.75],[97.37,18.52],[98.89,16.35],[98.2,14.98],[99.61,11.78],[98.56,10.03],[98.88,11.72],[97.73,16.57],[96.85,17.4],[96.77,16.71],[96.19,16.77],[95.39,15.72],[95.35,16.1],[94.66,15.9],[94.7,16.51],[94.22,16.02],[94.59,17.57],[94.04,19.29],[93.93,18.9],[93.49,19.37],[94.0,19.44],[92.18,21.29],[93.15,22.23],[93.33,24.06],[94.13,23.88],[95.13,26.6],[96.19,27.26],[97.1,27.12],[96.88,27.59],[97.6,28.52],[98.65,27.57],[98.74,26.7],[97.56,23.91],[98.84,24.12],[98.86,23.19],[99.51,22.96],[99.19,22.13],[100.21,21.46],[101.13,21.74],[100.12,20.32]]]},{"code":"BDI","name":"蒲隆地","name_en":"Burundi","rings":[[[30.55,-2.4],[30.79,-3.27],[29.4,-4.45],[29.06,-2.6],[30.55,-2.4]]]},{"code":"BFA","name":"布基納法索","name_en":"Burkina Faso","rings":[[[0.9,10.99],[-2.83,11.0],[-2.77,9.42],[-3.22,9.9],[-4.63,9.71],[-5.52,10.43],[-5.29,11.83],[-4.43,12.34],[-4.15,13.31],[-3.3,13.28],[-2.59,14.23],[-0.67,15.07],[0.22,14.91],[0.99,13.04],[2.21,12.54],[2.29,11.69],[0.9,10.99]]]},{"code":"BGR","name":"保加利亞","name_en":"Bulgaria","rings":[[[28.01,41.97],[26.62,41.96],[25.92,41.31],[22.92,41.34],[22.34,42.31],[22.98,43.19],[22.4,43.97],[25.5,43.67],[27.09,44.17],[28.59,43.74],[27.48,42.47],[28.01,41.97]]]},{"code":"BRN","name":"汶萊","name_en":"Brunei","rings":[[[115.03,4.9],[114.65,4.04],[114.06,4.59],[115.03,4.9]]]},{"code":"BRA","name":"巴西","name_en":"Brazil","rings":[[[-66.88,1.22],[-65.47,0.69],[-63.43,2.16],[-64.79,4.28],[-62.86,3.59],[-60.65,5.22],[-59.99,5.08],[-59.55,3.93],[-59.99,2.69],[-58.86,1.2],[-57.12,2.01],[-55.96,1.86],[-55.96,2.52],[-52.96,2.18],[-51.46,4.31],[-49.9,1.16],[-52.66,-1.55],[-50.89,-0.94],[-50.4,-2.02],[-49.31,-1.73],[-49.64,-2.66],[-48.12,-0.74],[-47.27,-0.65],[-44.65,-1.75],[-44.72,-3.2],[-44.23,-2.47],[-43.38,-2.38],[-39.96,-2.86],[-37.17,-4.91],[-35.24,-5.57],[-34.97,-8.41],[-38.24,-12.84],[-38.85,-12.79],[-39.15,-17.7],[-41.0,-22.0],[-42.04,-22.95],[-44.64,-23.06],[-48.73,-25.37],[-48.8,-28.58],[-52.04,-32.11],[-50.58,-30.44],[-51.3,-30.03],[-51.28,-30.75],[-53.37,-33.74],[-53.13,-32.74],[-53.76,-32.06],[-55.6,-30.85],[-56.0,-31.08],[-56.83,-30.11],[-57.61,-30.19],[-55.73,-28.2],[-53.84,-27.12],[-53.67,-26.23],[-54.62,-25.58],[-54.24,-24.05],[-55.42,-23.95],[-55.8,-22.35],[-57.99,-22.05],[-58.13,-19.74],[-57.5,-18.21],[-58.4,-17.23],[-58.35,-16.28],[-60.18,-16.27],[-60.51,-13.79],[-64.99,-11.98],[-65.4,-9.71],[-68.62,-11.11],[-70.64,-11.01],[-70.54,-9.44],[-72.18,-10.0],[-73.21,-9.41],[-72.97,-8.99],[-74.0,-7.56],[-72.89,-5.12],[-69.97,-4.3],[-69.4,-1.19],[-70.05,0.58],[-69.15,0.66],[-69.85,1.06],[-69.85,1.71],[-67.4,2.12],[-66.88,1.22]],[[-49.63,-0.23],[-48.39,-0.3],[-48.83,-1.39],[-50.51,-1.79],[-50.65,-0.27],[-49.63,-0.23]]]},{"code":"BWA","name":"波札那","name_en":"Botswana","rings":[[[25.26,-17.79],[26.17,-19.54],[27.7,-20.53],[28.01,-21.55],[29.36,-22.19],[27.09,-23.58],[25.44,-25.71],[23.15,-25.29],[21.69,-26.84],[20.69,-26.82],[20.79,-25.92],[19.98,-24.78],[19.98,-22.0],[20.97,-22.0],[20.97,-18.32],[23.22,-18.0],[23.6,-18.46],[25.26,-17.79]]]},{"code":"BIH","name":"波士尼亞與赫塞哥維納","name_en":"Bosnia and Herz.","rings":[[[19.35,44.88],[19.48,43.6],[18.44,42.56],[15.74,44.77],[15.82,45.2],[16.92,45.28],[19.35,44.88]]]},{"code":"BOL","name":"玻利維亞","name_en":"Bolivia","rings":[[[-69.51,-17.51],[-68.84,-16.34],[-69.42,-15.64],[-68.69,-12.5],[-69.58,-10.95],[-68.62,-11.11],[-65.4,-9.71],[-64.99,-11.98],[-60.51,-13.79],[-60.18,-16.27],[-58.35,-16.28],[-58.4,-17.23],[-57.5,-18.21],[-58.09,-20.15],[-59.09,-19.29],[-61.76,-19.65],[-62.65,-22.23],[-63.92,-22.03],[-64.33,-22.83],[-64.61,-22.23],[-66.22,-21.8],[-67.71,-22.89],[-68.76,-20.42],[-68.47,-19.41],[-69.51,-17.51]]]},{"code":"BTN","name":"不丹","name_en":"Bhutan","rings":[[[91.63,27.76],[92.0,26.85],[89.76,26.7],[88.74,27.18],[89.98,28.31],[91.63,27.76]]]},{"code":"BEN","name":"貝南","name_en":"Benin","rings":[[[1.62,6.22],[1.6,9.05],[0.79,10.71],[2.81,12.38],[3.83,10.61],[2.77,9.05],[2.71,6.37],[1.62,6.22]]]},{"code":"BLZ","name":"貝里斯","name_en":"Belize","rings":[[[-89.16,17.81],[-88.46,18.48],[-88.09,18.23],[-88.89,15.89],[-89.16,17.81]]]},{"code":"BEL","name":"比利時","name_en":"Belgium","rings":[[[4.23,51.39],[5.83,51.13],[6.36,50.32],[5.82,49.55],[2.6,50.88],[4.23,51.39]]]},{"code":"BLR","name":"白俄羅斯","name_en":"Belarus","rings":[[[31.76,52.1],[30.76,51.9],[30.54,51.27],[25.79,51.92],[23.61,51.52],[23.18,52.29],[23.92,52.77],[23.48,53.94],[25.75,54.16],[25.86,54.92],[26.78,55.27],[26.59,55.67],[28.12,56.15],[30.91,55.57],[30.8,54.78],[32.71,53.42],[31.26,53.02],[31.76,52.1]]]},{"code":"BGD","name":"孟加拉","name_en":"Bangladesh","rings":[[[89.05,22.09],[88.72,24.27],[88.02,24.63],[88.95,25.26],[88.08,25.89],[88.42,26.57],[89.67,26.21],[89.83,25.29],[92.49,24.9],[91.16,23.66],[91.62,22.98],[92.25,23.68],[92.32,20.79],[91.86,22.35],[91.48,22.88],[90.95,22.6],[90.6,23.59],[90.23,21.83],[89.99,22.47],[89.57,21.77],[89.48,22.28],[89.35,21.72],[89.05,22.09]]]},{"code":"BHS","name":"巴哈馬","name_en":"Bahamas","rings":[[[-77.74,24.71],[-78.04,24.29],[-78.44,24.63],[-78.16,25.2],[-77.74,24.71]]]},{"code":"AZE","name":"亞塞拜然","name_en":"Azerbaijan","rings":[[[44.82,39.65],[45.78,39.55],[46.11,38.88],[44.82,39.65]],[[48.87,38.44],[48.0,38.85],[48.0,39.68],[46.49,38.91],[45.0,41.29],[46.53,41.09],[46.43,41.89],[47.79,41.2],[48.66,41.79],[50.37,40.28],[49.55,40.19],[48.87,38.44]]]},{"code":"AUT","name":"奧地利","name_en":"Austria","rings":[[[9.53,47.27],[13.01,47.48],[12.81,48.16],[14.99,49.0],[16.88,48.7],[17.15,48.01],[15.96,46.68],[14.55,46.4],[9.53,47.27]]]},{"code":"AUS","name":"澳大利亞","name_en":"Australia","rings":[[[143.18,-11.95],[143.76,-14.35],[144.47,-14.23],[145.29,-14.94],[146.38,-18.98],[148.76,-20.29],[149.7,-22.44],[150.62,-22.37],[150.84,-23.46],[153.16,-25.96],[153.62,-28.67],[152.94,-31.43],[151.29,-33.58],[149.93,-37.53],[147.88,-37.93],[146.22,-38.73],[146.4,-39.15],[145.48,-38.24],[144.72,-38.34],[144.89,-37.9],[143.54,-38.82],[141.42,-38.36],[139.78,-37.25],[138.97,-35.58],[139.28,-35.38],[138.18,-35.61],[138.51,-35.02],[138.09,-34.17],[137.69,-35.14],[136.88,-35.24],[137.93,-33.58],[137.78,-32.58],[135.65,-34.94],[134.23,-32.55],[131.14,-31.5],[125.92,-32.3],[123.51,-33.92],[119.85,-33.97],[117.86,-35.05],[115.01,-34.26],[114.99,-33.52],[115.68,-33.19],[115.7,-31.69],[113.18,-26.18],[113.84,-26.5],[113.45,-25.6],[114.22,-26.29],[113.42,-24.44],[114.02,-21.88],[114.14,-22.48],[116.71,-20.65],[121.0,-19.6],[122.35,-18.11],[122.26,-17.14],[122.97,-16.44],[123.56,-17.52],[123.61,-16.22],[124.77,-16.4],[124.44,-15.49],[125.06,-15.44],[126.05,-13.98],[127.46,-14.03],[128.2,-14.75],[128.07,-15.33],[128.58,-14.77],[129.63,-15.14],[129.38,-14.39],[130.62,-12.43],[132.71,-12.12],[131.96,-11.18],[135.03,-12.19],[135.92,-11.83],[136.08,-12.42],[136.54,-11.96],[136.95,-12.35],[135.93,-13.3],[135.45,-14.92],[140.51,-17.62],[141.41,-16.07],[142.17,-10.95],[142.61,-10.75],[143.18,-11.95]],[[130.62,-11.38],[131.54,-11.44],[130.95,-11.93],[130.62,-11.38]],[[145.04,-40.79],[148.22,-40.85],[147.98,-43.16],[147.3,-42.79],[146.87,-43.61],[146.04,-43.55],[144.77,-41.39],[145.04,-40.79]]]},{"code":"ARM","name":"亞美尼亞","name_en":"Armenia","rings":[[[44.77,39.7],[43.67,40.13],[43.44,41.11],[45.0,41.29],[45.59,40.85],[45.97,40.17],[45.58,39.98],[46.48,39.56],[46.49,38.91],[44.77,39.7]]]},{"code":"ARG","name":"阿根廷","name_en":"Argentina","rings":[[[-57.61,-30.19],[-58.53,-34.3],[-57.17,-35.36],[-56.73,-36.96],[-58.18,-38.44],[-62.33,-38.8],[-62.4,-40.89],[-65.07,-40.81],[-64.99,-42.1],[-63.8,-42.11],[-63.62,-42.7],[-64.97,-42.67],[-64.32,-42.97],[-65.25,-43.57],[-65.64,-45.01],[-66.94,-45.26],[-67.6,-46.05],[-66.78,-47.01],[-65.85,-47.16],[-66.23,-47.83],[-65.81,-47.94],[-67.47,-48.95],[-67.91,-49.98],[-68.98,-50.0],[-68.42,-50.16],[-69.47,-51.58],[-68.39,-52.31],[-71.97,-51.96],[-72.34,-50.68],[-73.15,-50.74],[-73.58,-49.58],[-72.61,-48.79],[-71.7,-46.65],[-71.35,-45.23],[-72.06,-44.77],[-71.16,-44.56],[-71.82,-44.38],[-72.15,-42.99],[-71.93,-40.69],[-70.86,-38.6],[-71.19,-36.84],[-69.85,-34.22],[-70.55,-31.32],[-69.66,-28.41],[-68.32,-26.97],[-68.51,-24.63],[-67.36,-24.03],[-67.19,-22.82],[-66.22,-21.8],[-64.61,-22.23],[-64.33,-22.83],[-63.92,-22.03],[-62.84,-22.0],[-61.03,-23.76],[-57.64,-25.33],[-58.6,-27.31],[-55.71,-27.41],[-54.83,-26.65],[-54.62,-25.58],[-54.01,-25.58],[-53.84,-27.12],[-55.73,-28.2],[-57.61,-30.19]],[[-68.65,-54.85],[-68.63,-52.65],[-67.29,-54.05],[-65.18,-54.68],[-68.65,-54.85]]]},{"code":"AGO","name":"安哥拉","name_en":"Angola","rings":[[[13.07,-4.63],[12.21,-5.76],[12.02,-5.0],[13.07,-4.63]],[[23.97,-10.87],[23.96,-12.99],[21.98,-13.0],[22.04,-16.26],[23.38,-17.64],[20.75,-18.02],[18.4,-17.4],[11.74,-17.25],[12.55,-13.44],[13.6,-12.29],[13.85,-11.05],[13.0,-9.05],[13.38,-8.37],[12.3,-6.09],[16.43,-5.9],[17.58,-8.1],[19.34,-7.97],[19.88,-6.99],[21.78,-7.31],[22.23,-11.12],[23.97,-10.87]]]},{"code":"DZA","name":"阿爾及利亞","name_en":"Algeria","rings":[[[8.58,36.94],[8.25,34.73],[7.5,33.83],[9.04,32.07],[9.81,29.18],[9.88,26.63],[9.42,26.15],[10.26,24.59],[11.51,24.31],[11.97,23.52],[5.84,19.48],[3.26,19.01],[3.13,19.85],[-8.68,27.29],[-8.27,28.98],[-3.67,30.96],[-3.77,31.69],[-1.23,32.11],[-2.22,35.1],[1.26,36.52],[8.58,36.94]]]},{"code":"ALB","name":"阿爾巴尼亞","name_en":"Albania","rings":[[[19.34,41.87],[19.7,42.65],[20.52,42.17],[21.03,40.62],[20.21,39.65],[19.32,40.41],[19.34,41.87]]]},{"code":"AFG","name":"阿富汗","name_en":"Afghanistan","rings":[[[66.52,37.35],[69.3,37.12],[70.88,38.46],[71.58,37.91],[71.67,36.7],[73.38,37.46],[74.89,37.23],[71.23,36.12],[71.62,35.18],[71.05,34.05],[69.89,34.01],[70.26,33.29],[69.5,33.02],[69.28,31.94],[66.83,31.26],[66.18,29.84],[64.1,29.39],[60.84,29.86],[61.81,30.91],[60.82,31.5],[60.56,33.06],[61.26,35.62],[62.69,35.26],[64.51,36.34],[64.82,37.13],[66.52,37.35]]]},{"code":"ATA","name":"南極洲","name_en":"Antarctica","rings":[[[-57.02,-63.37],[-59.01,-64.19],[-58.79,-64.52],[-61.7,-64.99],[-62.29,-65.92],[-60.62,-65.93],[-61.03,-66.34],[-62.68,-66.24],[-62.63,-66.71],[-63.75,-66.28],[-63.75,-66.87],[-65.5,-67.38],[-65.64,-68.13],[-64.83,-68.13],[-65.45,-68.34],[-65.16,-68.62],[-62.93,-68.44],[-63.75,-68.7],[-61.96,-70.12],[-62.38,-70.36],[-61.5,-70.49],[-61.96,-70.9],[-60.96,-71.24],[-61.96,-71.66],[-61.04,-71.82],[-62.26,-72.02],[-60.72,-72.07],[-61.29,-72.6],[-59.96,-73.03],[-62.01,-73.15],[-60.79,-73.71],[-61.84,-74.03],[-61.01,-74.48],[-63.18,-74.68],[-63.92,-75.0],[-63.23,-75.15],[-64.28,-75.29],[-63.36,-75.45],[-70.21,-76.67],[-77.19,-76.63],[-75.75,-77.4],[-72.88,-77.69],[-74.81,-78.18],[-81.58,-77.85],[-77.43,-78.43],[-77.87,-78.75],[-80.29,-78.82],[-83.78,-77.98],[-83.23,-78.4],[-83.6,-78.61],[-80.89,-79.5],[-76.22,-79.39],[-76.56,-79.9],[-79.66,-80.0],[-76.41,-80.09],[-75.08,-80.86],[-70.69,-80.63],[-62.35,-81.58],[-66.13,-81.95],[-64.92,-82.37],[-60.53,-82.2],[-62.74,-82.53],[-61.22,-82.99],[-61.43,-83.4],[-50.65,-81.98],[-46.26,-81.95],[-46.52,-82.45],[-45.04,-82.44],[-38.77,-80.88],[-23.57,-79.96],[-34.2,-79.11],[-36.18,-78.47],[-34.08,-77.43],[-28.93,-76.37],[-18.3,-75.43],[-18.75,-75.24],[-17.44,-74.38],[-14.57,-73.94],[-16.22,-73.92],[-16.44,-73.43],[-11.5,-72.41],[-11.01,-71.76],[-12.35,-71.39],[-10.83,-71.55],[-10.27,-70.94],[-8.65,-71.67],[-7.71,-71.55],[-7.75,-70.84],[-5.94,-70.71],[-5.59,-70.86],[-6.12,-71.33],[-1.07,-71.27],[-0.54,-71.71],[9.14,-70.18],[11.7,-70.77],[13.07,-70.05],[18.12,-70.54],[19.01,-70.21],[19.41,-70.92],[21.07,-70.84],[21.7,-70.26],[22.98,-70.81],[24.02,-70.41],[26.5,-71.02],[32.62,-70.0],[32.99,-69.62],[32.64,-68.87],[33.47,-68.67],[35.36,-69.68],[38.89,-70.17],[40.22,-68.8],[46.56,-67.27],[48.37,-67.99],[49.22,-67.23],[48.47,-67.04],[50.55,-67.19],[50.33,-66.44],[53.67,-65.86],[57.0,-66.47],[56.15,-66.63],[56.48,-66.86],[55.8,-67.2],[56.15,-67.26],[69.56,-67.76],[69.98,-68.46],[69.63,-69.23],[68.91,-69.37],[69.08,-69.87],[67.27,-70.27],[69.25,-70.43],[66.5,-73.13],[67.32,-73.3],[71.28,-71.62],[73.32,-69.85],[75.64,-69.85],[79.04,-68.18],[84.49,-67.11],[92.07,-66.51],[99.37,-66.65],[102.67,-65.87],[109.46,-66.91],[110.91,-66.08],[113.1,-65.8],[115.64,-66.77],[114.03,-67.44],[120.19,-66.97],[119.13,-67.37],[125.87,-66.36],[128.43,-67.12],[130.58,-66.21],[135.35,-66.13],[143.73,-66.88],[144.62,-67.14],[143.98,-67.86],[145.98,-67.62],[147.09,-68.37],[153.08,-68.86],[153.91,-68.32],[155.52,-69.02],[159.78,-69.52],[162.19,-71.04],[162.02,-70.44],[162.67,-70.3],[170.44,-71.42],[170.86,-71.87],[170.03,-72.12],[170.21,-72.57],[168.43,-72.38],[169.83,-72.73],[169.55,-73.05],[166.45,-72.94],[167.71,-73.39],[165.35,-73.88],[164.81,-73.4],[165.41,-74.56],[163.4,-74.38],[162.41,-75.24],[160.91,-75.33],[162.82,-75.85],[162.45,-76.96],[164.42,-77.88],[163.98,-78.22],[165.42,-78.04],[167.05,-78.69],[161.67,-78.54],[161.95,-79.03],[159.98,-79.59],[160.56,-80.01],[158.57,-80.42],[160.64,-80.45],[160.47,-81.34],[163.6,-82.12],[161.28,-82.49],[164.75,-82.35],[168.61,-83.07],[168.11,-83.36],[180,-84.35],[180,-90.0],[-180,-90.0],[-180,-84.35],[-156.46,-85.19],[-165.14,-84.41],[-163.77,-84.32],[-164.69,-84.15],[-164.08,-83.95],[-174.24,-82.79],[-159.44,-83.54],[-153.01,-82.45],[-154.72,-81.94],[-153.96,-81.7],[-156.53,-81.16],[-148.12,-80.9],[-150.58,-80.35],[-148.18,-79.78],[-156.11,-78.74],[-154.29,-78.26],[-158.29,-77.95],[-158.0,-77.09],[-149.72,-77.8],[-148.16,-77.46],[-148.78,-77.12],[-145.52,-77.2],[-146.78,-76.51],[-149.65,-76.37],[-145.44,-76.41],[-146.32,-76.02],[-143.57,-75.56],[-140.87,-75.75],[-135.36,-74.69],[-115.22,-74.49],[-114.62,-73.9],[-113.33,-74.45],[-114.11,-74.98],[-111.7,-74.79],[-111.81,-74.27],[-111.18,-74.19],[-110.23,-74.54],[-111.36,-75.22],[-98.75,-75.32],[-102.86,-73.78],[-98.9,-73.61],[-102.91,-73.29],[-103.11,-72.72],[-90.92,-73.32],[-88.78,-72.68],[-88.19,-72.79],[-88.42,-73.23],[-82.18,-73.86],[-81.31,-73.74],[-81.18,-73.25],[-80.34,-73.41],[-80.44,-72.94],[-76.85,-73.46],[-77.05,-73.84],[-69.28,-73.17],[-66.83,-72.09],[-68.71,-69.43],[-66.97,-69.16],[-67.39,-68.86],[-66.68,-67.56],[-67.54,-67.53],[-67.49,-67.11],[-66.5,-67.29],[-66.5,-66.69],[-64.51,-65.96],[-63.76,-65.03],[-57.02,-63.37]],[[-45.22,-78.81],[-43.54,-78.9],[-42.94,-79.58],[-43.53,-80.19],[-54.35,-80.76],[-50.4,-79.51],[-50.73,-79.28],[-50.22,-78.61],[-49.08,-78.05],[-44.59,-78.04],[-43.85,-78.53],[-45.22,-78.81]],[[-59.73,-80.34],[-60.58,-80.95],[-66.77,-80.29],[-61.63,-80.34],[-60.58,-79.74],[-59.71,-79.88],[-59.32,-80.2],[-59.73,-80.34]],[[-70.05,-69.19],[-68.31,-70.91],[-68.24,-71.82],[-69.21,-72.53],[-72.78,-72.58],[-70.21,-72.23],[-71.66,-72.25],[-70.82,-71.91],[-72.34,-71.63],[-74.0,-72.17],[-75.38,-71.83],[-72.21,-71.34],[-72.71,-71.07],[-69.87,-71.13],[-71.19,-70.66],[-69.62,-70.4],[-71.73,-70.05],[-72.14,-69.18],[-70.42,-68.79],[-70.05,-69.19]],[[-98.09,-71.91],[-96.12,-71.9],[-96.98,-72.22],[-95.61,-72.07],[-96.05,-72.58],[-102.31,-72.08],[-98.09,-71.91]],[[-120.56,-73.76],[-120.27,-73.99],[-121.0,-74.33],[-122.29,-74.4],[-123.35,-73.84],[-120.56,-73.76]],[[-126.33,-73.29],[-123.84,-74.23],[-127.21,-73.72],[-127.27,-73.3],[-126.33,-73.29]],[[-159.05,-79.81],[-164.28,-79.25],[-162.39,-78.76],[-159.05,-79.81]],[[167.08,-77.32],[169.35,-77.52],[166.73,-77.85],[166.22,-77.52],[167.08,-77.32]],[[-70.33,-79.68],[-71.69,-79.57],[-71.45,-79.13],[-66.73,-78.38],[-70.33,-79.68]],[[-57.85,-64.05],[-57.22,-64.22],[-58.21,-64.37],[-58.27,-63.92],[-57.85,-64.05]],[[-67.99,-67.47],[-69.14,-67.52],[-67.83,-66.62],[-67.99,-67.47]],[[-74.99,-69.73],[-74.67,-70.13],[-75.8,-70.04],[-74.99,-69.73]],[[-74.35,-73.1],[-74.57,-73.61],[-76.1,-73.15],[-74.35,-73.1]],[[-91.16,-73.18],[-91.67,-72.62],[-90.81,-72.61],[-91.16,-73.18]],[[-66.17,-80.08],[-67.81,-79.55],[-66.01,-79.62],[-65.5,-79.95],[-66.17,-80.08]],[[-2.53,-70.77],[-2.09,-70.82],[-2.78,-71.17],[-3.57,-70.7],[-2.53,-70.77]],[[-20.61,-73.89],[-20.49,-74.49],[-22.04,-74.11],[-20.61,-73.89]]]}]}
 </canonical-source>
 
 <canonical-source path="exam_packs/會考/metadata/hosted-page-metrics.json">
@@ -63678,6 +70606,51 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 - 單元範圍；情境題（生活情境、社會議題、跨領域）至少 30%，其餘是文學與文言閱讀（`context_type` 文本閱讀）。
 - 語文知識題不受「多步推理」限制；否定問法最多 5 題；選項中位數與長選項比例不超過官方。
 - 國文選項裡的「毫無」「從不」等字可以出現（官方也有），不算極端字眼。
+
+## 課綱代碼
+
+`exam_packs/會考/curriculum/國文.json`：35 條學習內容（Ab 字詞、Ac 句段、Ad 篇章、Ba–Be 文本表述、Ca–Cc 文化內涵）
+與學習表現；寫作測驗也用這份。
+</canonical-source>
+
+<canonical-source path="references/cap-data-sources.md">
+# 會考出題常用的官方資料入口（只列網址，不存數字）
+
+數據每年更新，所以這裡**不寫任何數字**，只列各主題的官方入口，出題時當場查最新一年的資料，並把
+網址與查詢日期記在 `item_spec.data_sources`（`web_image.py use` 與 `cap_plan.py save` 都接受這個欄位）。
+連得到與否依執行環境而定；連不到就換同主題的另一個入口，或改用「某國」「某地」的假設數字（數學、自然可以，
+社會的統計須查證）。
+
+| 主題 | 入口 |
+| :-- | :-- |
+| 總體統計、物價、薪資、家庭收支 | 行政院主計總處 統計資訊網 https://www.stat.gov.tw/ |
+| 人口推估、少子高齡 | 國家發展委員會 人口推估查詢系統 https://pop-proj.ndc.gov.tw/ |
+| 戶籍人口、內政統計 | 內政部 https://www.moi.gov.tw/ （統計專區） |
+| 勞動、薪資、外籍勞工 | 勞動部 勞動統計查詢網 https://statfy.mol.gov.tw/ |
+| 氣象、氣候觀測 | 交通部中央氣象署 https://www.cwa.gov.tw/ ；氣候觀測資料查詢 https://codis.cwa.gov.tw/ |
+| 地震 | 中央氣象署地震測報中心（同上）；美國地質調查所 https://earthquake.usgs.gov/ |
+| 水庫、河川、水資源 | 經濟部水利署 https://www.wra.gov.tw/ |
+| 空氣品質、廢棄物、環境資料 | 環境部 https://www.moenv.gov.tw/ ；環境資料開放平臺 https://data.moenv.gov.tw/ |
+| 能源供需、發電結構 | 經濟部能源署 https://www.moeaea.gov.tw/ |
+| 農業生產、農產品 | 農業部 https://www.moa.gov.tw/ ；農業統計資料查詢 https://agrstat.moa.gov.tw/ |
+| 交通運輸 | 交通部 統計查詢網 https://stat.motc.gov.tw/ |
+| 教育統計 | 教育部統計處 https://depart.moe.edu.tw/ED4500/ |
+| 衛生福利 | 衛生福利部統計處 https://dep.mohw.gov.tw/DOS/ |
+| 金融、匯率 | 中央銀行 https://www.cbc.gov.tw/ |
+| 財政、貿易 | 財政部 https://www.mof.gov.tw/ |
+| 法律條文 | 全國法規資料庫 https://law.moj.gov.tw/ ；憲法法庭 https://cons.judicial.gov.tw/ |
+| 選舉 | 中央選舉委員會 選舉資料庫 https://db.cec.gov.tw/ |
+| 政府開放資料（各機關） | 政府資料開放平臺 https://data.gov.tw/ |
+| 臺灣史料、老照片 | 國史館 https://www.drnh.gov.tw/ ；國家文化記憶庫 https://memory.culture.tw/ ；國立臺灣歷史博物館 https://www.nmth.gov.tw/ |
+| 古典與公有領域原文 | 維基文庫 https://zh.wikisource.org/ |
+| 公有領域與自由授權圖片 | Wikimedia Commons https://commons.wikimedia.org/ （`web_image.py search` 直接查） |
+| 衛星影像、地球觀測 | NASA Earth Observatory https://earthobservatory.nasa.gov/ |
+| 各國統計 | World Bank Open Data https://data.worldbank.org/ ；UNdata https://data.un.org/ ；FAOSTAT https://www.fao.org/faostat/ ；Our World in Data https://ourworldindata.org/ |
+
+本 Skill 內附的靜態資料：
+- 108 課綱國中第四學習階段代碼與條文（含高中階段條目作為超綱對照）：`exam_packs/會考/curriculum/<科>.json`
+- 簡化底圖：臺灣 22 縣市（內政部國土測繪中心，政府資料開放授權第 1 版）、東亞與世界國界（Natural Earth，
+  公有領域）：`exam_packs/會考/maps/`，用 `cap_draw.py render` 的 `"chart": "map"` 畫。
 </canonical-source>
 
 <canonical-source path="references/cap-english.md">
@@ -63723,6 +70696,11 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 - 單元範圍，最後一組是克漏字；單題至少一題附圖。
 - 題組（克漏字除外）的 `process` 至少：擷取訊息 3、推論 4、統整解釋 3、應用 1。
 - 情境題至少 50%；否定問法最多 3 題；字彙與文法題不受「多步推理」限制。
+
+## 課綱代碼
+
+`exam_packs/會考/curriculum/英語.json`：學習內容（Ac 詞彙、Ad 句構、Ae 篇章、B 溝通功能、C 文化與習俗、D 思考能力）
+與學習表現（1–9 開頭）。
 </canonical-source>
 
 <canonical-source path="references/cap-execution-card.md">
@@ -63735,47 +70713,39 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 
 ```text
 1  python scripts/prepare_hosted_run.py --subject 會考社會 --run-dir RUN --paper-id ID
-2  python scripts/cap_plan.py plan --subject 會考社會 --paper-id ID --level 會考 --output RUN/plan.json
+2  python scripts/cap_plan.py plan --subject 會考社會 --paper-id ID --level 會考 [--volumes 1-4] --output RUN/plan.json
+   --volumes 限定出題冊別（預設 1-6；第一冊＝七上 … 第六冊＝九下），藍圖只排範圍內教過的單元、標題加註冊別
    填 metadata.difficulty_balance_plan.target_counts → python scripts/cap_plan.py check RUN/plan.json
-3  每題：python scripts/cap_plan.py item --subject 會考社會 --number N --level 會考   （骨架＋field_guide 欄位格式）
-   更快：用 field_guide 的精簡欄位寫一批，python scripts/cap_plan.py expand --plan RUN/plan.json
-   --compact items.json --run-dir RUN --output BATCH.json 自動補齊 id、分節、標籤、雜湊與題組繼承
-   寫題時就填 est_p（預估通過率）：存檔會回報目前平均是否落在所選難度區間，偏了立刻調整
-   宣稱是真實資料的數據（寫出年份、調查、統計、公布者）一律上網查證並填 data_sources（url、retrieved_at）；
-   數學與自然可用「某國」「某商店」「某生實驗」這類假設數字，就不必附來源（官方也這樣寫）
-   純數值選項由小到大排：expand 會自動排序並同步改答案、誘答與詳解裡的 (A)～(D)；要保留原順序加 keep_order
-   畫圖：python scripts/cap_draw.py render 圖.json 圖.pdf --font RUN/fonts/TW-Sung-98_1.ttf
-   （座標格線、坐標軸、點、線段、多邊形、圓、弧、角與直角記號、等長記號、中文標籤；點名自動斜體、
-   標籤自動避開線條；四張圖當選項用 cap_draw.py options）
-   圖檔：python scripts/cap_figure.py subset 圖.pdf --output 圖-小.pdf（只留用到的字形）
-   每個題位已排好單元（slot.unit，自然是 domain）：照官方 113–115 的單元分布抽出，題位之間可互換，
-   但整卷要留在 plan 的 unit_coverage 範圍內；國文、英語的題組整組同一單元，英語最後一組是克漏字
-   數學題位另有 suggested_form（直接作答、判斷兩人看法、推理關係、選出算式、讀新資訊建模、判讀圖表）：
-   它只說學生要做什麼，情境與問法由你設計；第 1–3 題直接作答，不包情境
-   題材照藍圖的 suggested_focus 走：每次 plan 都抽新的 variety_seed，續做同一份卷時用 --seed 沿用
-   範例只示範手法：不要沿用說明文件或過去卷子的情境、地點、材料
-   照片：python scripts/web_image.py search "關鍵字"（中英文都試，--offset 換一批）→ web_image.py use
-   先找圖再出題、或先出題再找圖都可以；題目必須依圖中真的看得到的證據作答，對不上就改題目
-   網路可用時照片必須全部新找；內附圖片庫只在網路不通時備援，並告訴使用者
-4  每 2–4 題：python scripts/append_items.py --run-dir RUN --batch BATCH.json [--plan RUN/plan.json 第一批]
-   回報的 subject_gate_pending 先修完再寫下一批；--replace 修同一批
-   之後改了 plan.json（例如補 target_counts）就在下一批再加 --plan，metadata 會更新（回報 plan_updated）
+3  寫 2–4 題的精簡紀錄（欄位與合法值：templates/cap-item-templates.json），一個指令存檔：
+   python scripts/cap_plan.py save --plan RUN/plan.json --compact items.json --run-dir RUN [--replace]
+   它會先檢查（cap_plan.py lint 可以只檢查不存）、展開、存檔，並自動：大圖精簡字型、只檢查這批新圖、
+   在 RUN/figure-previews/ 輸出圖的預覽、更新 review-book.json、記 checkpoint 與時間
+   回報的 lint.errors、subject_gate_pending、figure_check 先修再寫下一批
+4  趁熱填這批題目在 RUN/review-book.json 的審查紀錄（answer_check、originality、visual、difficulty）
+   寫題期間不做 proof：只有第一批 proof 一次；圖看 figure-previews/ 就好
 5  每 2–3 批：python scripts/run_hosted_workflow.py status --state RUN/run-state.json
-   → 開新對話，只讀 RUN/NEXT.md、本卡與 current-cap-form.md 接著做
-6  全部存完後只要反覆執行：python scripts/run_hosted_workflow.py advance --state RUN/run-state.json
-   它依序自動跑完檢查圖表、兩份機械性審查、審查草稿、登錄、鎖定內容、specs、分頁、組成兩本 PDF，
-   只在需要你動手時停下並說明要做什麼（補審查、修圖、調版面）；做完再執行 advance
-7  組好後：看它列出的頁面與題目 → record-review → auto-review --gates template_composition answer_separation
-   → checkpoint → finalize（advance 的 todo 會給完整指令）
-   auto-review 另寫出 difficulty.draft.json：每題欄位、錨點鍵（選擇題 objective、非選擇題 constructed-response）、
-   官方同題位通過率與你的預估都已填好；逐題蓋答案重做、改預估、填 observations 與 answer_recheck、
-   status 改 pass、刪掉 draft_note，存成 difficulty.json
+   → 開新對話，只讀 RUN/NEXT.md、本卡與當科說明接著做
+6  全部存完：check-figures → specs → plan（一次定案 RUN/layout-hints.json）→ build → 看 review_queue → record-review
+   （advance --state RUN/run-state.json 會依序自動跑完能機械化的步驟）
+7  python scripts/run_hosted_workflow.py compile-reviews --state RUN/run-state.json（五份審查報告一次寫好並登錄）
+   → auto-review → checkpoint → finalize
 ```
+
+詳細流程與審查簿欄位見 `references/cap-workflow.md`。
+
+工具：
+- 課綱代碼與條文：`exam_packs/會考/curriculum/<科>.json`（國中第四學習階段；`senior_high` 是高中條目，出現就是超綱）
+- 畫圖：`python scripts/cap_draw.py render 圖.json 圖.pdf --font RUN/fonts/TW-Sung-98_1.ttf`
+  幾何圖（點線圓角、坐標軸）或 `"chart"`：bar、line、climate（雨溫圖）、pyramid（人口金字塔）、profile（地形剖面）、
+  table、card（史料圖卡）、map（臺灣縣市含金馬、東亞、世界；灰階分級填色、指北針）；每張圖附 PNG 預覽
+- 找照片：`web_image.py search` → `web_image.py use`（回傳可直接貼上的 compact_figure 與 compact_data_source）
+- 數據入口：`references/cap-data-sources.md`（只列官方網址，數字當場查）
 
 ## 每題必填（存檔就會檢查）
 
 - 選項標籤 `A`～`D`（不要寫括號）；`final_answer` 為其中之一
-- `item_spec.curriculum_codes`：國中第四學習階段代碼；`textbook_volumes`：如 `["第三冊"]`（數學可空）
+- `item_spec.curriculum_codes`：從 `exam_packs/會考/curriculum/<科>.json` 抄國中第四學習階段代碼（不在表裡會被擋）；
+  `textbook_volumes`：如 `["第三冊"]`（數學可空；限定冊別時每科都要填）
 - `item_spec.cap_competency`：`context_type`、`process`、`real_world_anchor`、`evidence_link`、
   `prerequisite_knowledge`、`hidden_concept`（學生要推出、題幹不可出現的概念）、社會 `domain`／`domains`、
   混合考點寫 `bridge`
@@ -63814,11 +70784,14 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 | 題組引導語印了兩三次 | 材料裡不要自己寫「閱讀下列選文，回答…」 |
 | finalize 要求六個時間階段 | 各階段開始時用 `clock --operation resume --phase <階段>` 記錄，不要事後補 |
 | 頁面留白超過 0.32 | 用 `plan` 看分頁，調整圖寬（`width_percent`）或選項排法，不要改題目內容湊頁 |
+| `not in the 108 課綱 table` | 代碼抄錯：到 `exam_packs/會考/curriculum/<科>.json` 找正確代碼 |
+| `outside the paper's range` | 限定冊別的卷子用到範圍外的冊別或年級代碼：換題或換範圍內的概念 |
+| `concepts hold … items`（社會） | 七、八、九年級各至少兩成（官方 114–115）：調整幾題的主題年級 |
 
 ## 省上下文
 
 - 工具輸出很長時導到檔案，只讀狀態與錯誤；不要把整份 JSON 印進對話。
-- 審查報告先用 `refresh-evidence` 產生草稿，只改被標記的題目，不要逐題重寫一遍 item_spec。
+- 審查寫在 review-book.json（每題一筆），最後 `compile-reviews` 產生五份報告；題目沒改，紀錄就一直有效。
 - 純文字頁由工具檢查；看圖只看有圖表的頁與被標記的題目。
 - 五份需人工判斷的審查報告格式見 `templates/cap-review-templates.json`（只有格式，內容自己寫）。
 </canonical-source>
@@ -63884,6 +70857,11 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 - 課本或參考書老題型每卷最多 2 題；同一組畢氏數最多 2 題（題組算一題）。
 - 情境題 30%–60%；前、中、後三段預估通過率與官方同題位平均差不超過 0.10；否定問法最多 1 題。
 - 圖用 `scripts/cap_draw.py` 畫（點名自動斜體、標籤避線）；以圖為選項用 `cap_draw.py options`。
+
+## 課綱代碼與冊別
+
+`exam_packs/會考/curriculum/數學.json`：73 條學習內容（N、S、G、A、F、D 加年級），代碼的年級就是可能冊別
+（7＝第一、二冊，8＝第三、四冊，9＝第五、六冊）；限定冊別時，範圍外年級的代碼會被擋下。
 </canonical-source>
 
 <canonical-source path="references/cap-science.md">
@@ -63939,6 +70917,11 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 - 至少 4 題實驗探究（科學探究）、至少 1 題判斷他人看法；否定問法最多 3 題。
 - 情境題至少 60%；組合題最多 5 題；以圖為選項至少 3 題；選項中位數不超過官方。
 - `cap_plan.py plan` 依官方比例給每個單題一個 `suggested_form`，題組另標閱讀題組；情境自己設計。
+
+## 圖表與課綱
+
+- 實驗數據、雨溫圖、地形剖面、長條與折線圖：`cap_draw.py render` 的 `"chart"` 預設樣式；示意圖用幾何元件。
+- 課綱代碼：`exam_packs/會考/curriculum/自然.json`（226 條學習內容，含跨科概念 IN 代碼；`senior_high` 為高中條目）。
 </canonical-source>
 
 <canonical-source path="references/cap-social.md">
@@ -63964,6 +70947,83 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 - **照片全部新找。** 網路可用時每張照片都用 `scripts/web_image.py` 這次新找；內附圖片庫只在網路不通時備援。
 - **數據附來源。** 印出的統計一律查證並記錄 `item_spec.data_sources`。
 - 情境題至少 70%；圖表至少 20 張（含 2 張以上照片或史料圖像、18 題以上引用圖表）。
+
+## 圖表、地圖與課綱
+
+- 統計圖（長條、折線）、人口金字塔、雨溫圖、地形剖面、表格、史料圖卡與臺灣縣市（含金馬插圖）、東亞、世界底圖：
+  `cap_draw.py render` 的 `"chart"` 預設樣式（見 `cap-execution-card.md`），灰階印刷可讀，每張附 PNG 預覽。
+- 課綱代碼：`exam_packs/會考/curriculum/社會.json`（歷、地、公 210 條學習內容；`senior_high` 為高中條目）。
+- 年級分布（114–115 逐題判斷）：七、八、九年級約 12–15、17–18、19–20 題；每個年級至少兩成（依 `textbook_volumes`）。
+- 時事數據入口見 `cap-data-sources.md`（只列網址）。
+</canonical-source>
+
+<canonical-source path="references/cap-workflow.md">
+# 會考出卷流程：存檔、排版、審查、交付
+
+會考的預設閱讀路線只有四份：`cap-execution-card.md`（指令順序）、`current-cap-form.md`（共用規則）、
+當科說明（`cap-<科>.md`）與本頁。學測的文件（`hosted-execution.md` 等）不用讀；工具訊息點名某份文件時再查。
+
+## 一、寫題：每批一個指令
+
+1. 把 2–4 題寫成精簡格式的陣列（欄位見 `templates/cap-item-templates.json`），存成 `items.json`。
+2. `python scripts/cap_plan.py save --plan RUN/plan.json --compact items.json --run-dir RUN`
+   它依序完成：檢查（選項字數、絕對化字眼、正解外洩、課綱代碼、選項會不會一行一個）→ 展開成完整欄位 →
+   存檔。存檔時同時：
+   - 大型圖檔自動精簡字型並更新雜湊（避免 30 MB 的圖拖慢每次組版）；
+   - 只檢查這批新加的圖，並在 `RUN/figure-previews/` 輸出每張圖的印刷尺寸預覽，看一眼就好；
+   - 在 `RUN/review-book.json` 加入這批題目的審查紀錄；
+   - 記錄 checkpoint 與寫題時間（寫題階段 20 分鐘內沒有存檔才算閒置）。
+3. 回報裡的 `lint.errors`、`subject_gate_pending`、`figure_check` 先修再寫下一批；修同一批加 `--replace`。
+4. **趁題目還熟，填這批題目在 `review-book.json` 的紀錄**（見「三、審查」）。
+5. **寫題期間不做 proof。** 只有第一批建議 proof 一次（確認字型與版面）；之後看 `figure-previews/` 的圖即可。
+   版面在全部寫完後決定一次，過程中看過的裁切圖會因為最後調版而作廢，等於白看。
+
+每 2–3 批執行 `python scripts/run_hosted_workflow.py status --state RUN/run-state.json`，在新對話只讀
+`RUN/NEXT.md`、執行卡與當科說明接著做。
+
+## 二、排版：全部寫完後，plan 一次、build 一次
+
+1. `python scripts/run_hosted_workflow.py check-figures --state RUN/run-state.json`
+   （已檢查過且沒改的圖直接沿用結果，只開新的或改過的圖）
+2. `python scripts/run_hosted_workflow.py specs --state RUN/run-state.json` → `plan`：看每頁留白與題目落點。
+3. 需要調整就寫 `RUN/layout-hints.json` 一次定案，再跑一次 `specs` 與 `plan`：
+   `{"items": {"q12": {"columns": 2}, "q31": {"figure_width_pt": 200, "figure_position": "right"}}}`
+   常用鍵：`columns`（選項欄數 1／2／4）、`figure_width_pt`、`figure_position`、`keep_with_next`、`split`。
+4. `build`：組成兩本 PDF，列出要看的頁面與裁切圖（`review_queue`）。逐張看，寫進 `record-review`。
+   數學非選擇題各自一頁，頁面留白是作答空間，不算排版缺陷。
+
+`advance --state RUN/run-state.json` 會自動依序跑完可以機械化的步驟，只在需要你動手時停下。
+
+## 三、審查：每題一筆紀錄，最後一次編譯
+
+`review-book.json` 每題一筆，四段都要填：
+
+| 段落 | 要做的事 | 必填 |
+| :-- | :-- | :-- |
+| `answer_check` | 蓋住答案重解一次，和存檔答案比對；說明每個誘答確定錯的理由 | `status`、`observations` |
+| `originality` | 和官方題目、課本與參考書常見題型、本卷其他題目比較：情境、問法、解法哪裡是新的 | 同上 |
+| `visual` | 圖上學生讀得到的證據、灰階可讀、和題幹一致（無圖的題目工具已填 `not_applicable`） | 同上 |
+| `difficulty` | 預估通過率與鑑別度（以 plan 的官方同題位範圍為錨）、最短解法、關鍵判斷、找過的捷徑、重解紀錄 | 加上 `estimated_p`、`estimated_d`、`shortest_route`、`decisive_steps`、`shortcut_search`、`answer_recheck` |
+
+`paper` 段寫一次：難度審查的 `review_reason`、`author_context`、`reviewer_context`（單一脈絡時兩者相同），
+以及 `source_grounding`（每份材料與數據的來源與核對方式）。
+
+- 題目改過，該題紀錄自動回到 pending，舊紀錄保留在 `previous`；沒改的題目不受排版調整影響，不必重審。
+- 全部填完後：`python scripts/run_hosted_workflow.py compile-reviews --state RUN/run-state.json`
+  寫出 `answers`、`originality`、`visuals`、`difficulty`、`source_grounding` 五份報告並登錄；
+  有缺漏就列出題號與欄位，什麼都不寫。不必再手寫這五份 JSON，也不必用 `refresh-evidence` 重建草稿。
+- `auto-review` 產生四份機械性報告（結構、難度分布、模板、答案分離）。
+
+## 四、交付
+
+`checkpoint` → `finalize --state RUN/review-state.json`（`advance` 的 todo 會給完整指令）。`finalize` 會再精簡
+兩本 PDF 的字型，交付 `會考_<科>_<paper_id>_題本.pdf` 與 `_詳解.pdf`。
+
+## 環境提醒
+
+- 網路下載的圖片常被擋或回傳 HTML 錯誤頁；用 `web_image.py`（會驗證檔案），或用 `cap_draw.py` 依資料畫圖。
+- 執行環境可能在兩次對話之間清掉暫存檔；從 `RUN/NEXT.md` 與存檔狀態重建，不要手改狀態檔。
+- 報告裡的 exam 雜湊比目前的舊，最終檢查會拒絕；題目改過就重新 `compile-reviews`。
 </canonical-source>
 
 <canonical-source path="references/cap-writing.md">
@@ -64168,11 +71228,20 @@ Use `templates/llm-originality-record.json` for every scored item and `templates
 | 極難 | −0.38 至 −0.25 | 0.21–0.34 | 3 |
 
 - **不論哪個等級都不得超綱**：每題的 `item_spec.curriculum_codes` 只能是 108 課綱國中
-  第四學習階段的代碼（如 `Ea-IV-1`、`歷Ha-IV-1`、`N-8-1`），高中代碼（`-V-`、`N-10-1`）一律退件。
+  第四學習階段的代碼（如 `Ea-IV-1`、`歷Ha-IV-1`、`N-8-1`），而且要在 `exam_packs/會考/curriculum/<科>.json`
+  的官方代碼表裡（課綱原文的「Ⅳ」也接受）；高中代碼（`-V-`、`N-10-1`）一律退件，表裡的 `senior_high` 列出
+  高中階段條目，題目需要用到就是超綱。
   變難只能靠更多環環相扣的推理步驟、更細的證據比較、更具誘答力的選項與跨概念整合，
   不得靠超綱知識、冷僻事實、計算量或文字陷阱。極難題也必須能用已學知識完整推出。
 - 數學非選擇題的詳解至少 3 步；高與極難的選擇題詳解也至少 3 步，寫出每一步依據的已學概念。
 - 不論等級，鑑別度門檻不變：題目變難不能變成只能猜。
+
+## 出題範圍（冊別，使用者選擇）
+
+預設第 1–6 冊（全範圍）。使用者可以限定，例如「範圍：第 1–4 冊」：`cap_plan.py plan --volumes 1-4`，記錄為
+`metadata.cap_volume_range`，標題加註「（第一～四冊）」。藍圖只排範圍內教過的單元（數學依單元、自然依三科、
+社會依年級主題）；每題的 `textbook_volumes` 必須在範圍內，數學代碼的年級也不能超出（N-9-1 不能出現在第 1–4 冊）。
+限定範圍時，官方的單元題數範圍不適用，改為範圍內每個單元至少出一題；難度等級照常適用。
 
 ## 版型
 
@@ -75625,6 +82694,12 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
         existing_state = {}
     supplied = read(batch)
     questions, answers = validate_batch(supplied)
+    cap = str(preflight.get('subject') or '').startswith('會考')
+    shrunk = []
+    if cap:
+        # A 35 MB figure (a whole embedded font) slowed every later proof and build; subset it now.
+        from cap_batch import shrink_figures
+        shrunk = shrink_figures(root, questions + answers)
     # A hosted run saved a choice item with its five options missing and learned it
     # from a render failure two phases later.
     for question in questions:
@@ -75735,6 +82810,24 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
         report['design_note'] = ('The final check requires these difficulty-design fields. They are not printed: '
                                  'complete them with --replace as the batch is solved and reviewed; page reviews stay valid.')
     report.update(proof_triage(questions, answers, first_batch=first_batch))
+    if cap:
+        # 會考: no crop proofs while writing (the final layout moves every crop and voids them); look at
+        # each new figure once in figure-previews/, plan the whole paper once, then build once.
+        from cap_batch import batch_figure_check, preview_figures
+        from cap_review_book import sync as sync_review_book
+        ids = {q['id'] for q in questions}
+        report['proof_recommended'] = ({k: v for k, v in report['proof_recommended'].items()} if first_batch else {})
+        report['proof_note'] = ('會考: proof only the first batch (renderer and fonts); after that, look at each new '
+                                'figure in figure-previews/ and leave layout to one plan and one build when every '
+                                'item is saved')
+        if shrunk:
+            report['figures_shrunk'] = shrunk
+        report['figure_check'] = batch_figure_check(root, exam, ids)
+        report['figure_previews'] = preview_figures(root, [q for q in exam['questions'] if q['id'] in ids])
+        book = sync_review_book(root, exam)
+        report['review_book'] = {'pending_in_this_batch': [i for i in book['pending'] if i in ids],
+                                 'reset_after_edit': book['reset_after_edit'],
+                                 'next': 'fill these rows of review-book.json now, while the items are fresh'}
     if inherited:
         report['audits_inherited'] = inherited
     gate = subject_gate_errors(exam, root=root, authoring=True)
@@ -76102,9 +83195,512 @@ if __name__ == "__main__":
     raise SystemExit(main())
 </canonical-source>
 
+<canonical-source path="scripts/cap_batch.py">
+#!/usr/bin/env python3
+"""What `append_items.py` does for a 會考 batch besides saving it.
+
+A 54-item 會考社會 run (2026-11) spent hours on loops the tools could have closed: a 35 MB figure
+PDF (a whole CJK font) slowed every proof, `check-figures` re-reported the whole paper's figures
+after every batch, and 22 crop proofs were redone after the final layout moved every crop. For
+each saved batch this module
+
+* subsets the fonts of large figure PDFs in place (pixels and text verified) and updates the hash;
+* checks only this batch's figures and writes a print-size PNG preview of each, so a figure is
+  looked at once, while it is fresh, without proofing the page around it;
+* keeps the per-item review book (`cap_review_book.py`) in step with the saved items.
+"""
+from __future__ import annotations
+
+import hashlib
+from pathlib import Path
+
+import pymupdf
+
+SHRINK_ABOVE_BYTES = 1_500_000
+PREVIEW_DIR = "figure-previews"
+BODY_WIDTH_PT = 460
+
+
+def _assets(record: dict):
+    """(owner, key, asset) for every file a question or answer references."""
+    visual = record.get("visual_asset")
+    if isinstance(visual, dict) and visual.get("path"):
+        yield "figure", None, visual
+    for key, asset in (record.get("inline_assets") or {}).items():
+        if isinstance(asset, dict) and asset.get("path"):
+            yield "inline", key, asset
+
+
+def _same_pages(before: bytes, after: bytes) -> bool:
+    with pymupdf.open(stream=before, filetype="pdf") as a, pymupdf.open(stream=after, filetype="pdf") as b:
+        if len(a) != len(b):
+            return False
+        for pa, pb in zip(a, b):
+            if pa.get_text() != pb.get_text():
+                return False
+            if pa.get_pixmap(alpha=False).samples != pb.get_pixmap(alpha=False).samples:
+                return False
+    return True
+
+
+def shrink_figures(root: Path, records: list[dict]) -> list[dict]:
+    """Subset the embedded fonts of large figure PDFs in place; update each referencing sha256."""
+    shrunk, done = [], {}
+    for record in records:
+        for _, _, asset in _assets(record):
+            path = (root / str(asset["path"])).resolve()
+            if path in done:
+                if done[path]:
+                    asset["sha256"] = done[path]
+                continue
+            done[path] = None
+            if path.suffix.lower() != ".pdf" or not path.is_file() or path.stat().st_size <= SHRINK_ABOVE_BYTES:
+                continue
+            before = path.read_bytes()
+            if asset.get("sha256") and hashlib.sha256(before).hexdigest() != asset["sha256"]:
+                continue   # the saved hash names other bytes; authoring checks report it
+            try:
+                with pymupdf.open(stream=before, filetype="pdf") as doc:
+                    doc.subset_fonts()
+                    after = doc.tobytes(garbage=4, deflate=True, no_new_id=True)
+                if len(after) >= len(before) or not _same_pages(before, after):
+                    continue
+            except Exception:  # noqa: BLE001 - keep the author's file whenever the subsetter fails
+                continue
+            path.write_bytes(after)
+            digest = hashlib.sha256(after).hexdigest()
+            done[path] = digest
+            asset["sha256"] = digest
+            shrunk.append({"path": str(asset["path"]), "bytes_before": len(before), "bytes_after": len(after)})
+    return shrunk
+
+
+def preview_figures(root: Path, records: list[dict]) -> list[str]:
+    """A PNG of each figure at its printed width (150 dpi), for looking at the art once, now."""
+    out_dir = root / PREVIEW_DIR
+    previews = []
+    for record in records:
+        for owner, key, asset in _assets(record):
+            path = (root / str(asset["path"])).resolve()
+            if not path.is_file():
+                continue
+            width = asset.get("width_pt") if owner == "inline" else BODY_WIDTH_PT * float(asset.get("width_percent", 62)) / 100
+            try:
+                with pymupdf.open(path) as doc:
+                    page = doc[0]
+                    scale = float(width) / page.rect.width * 150 / 72
+                    out_dir.mkdir(exist_ok=True)
+                    target = out_dir / f"{record.get('id') or record.get('question_id')}-{key or 'figure'}.png"
+                    page.get_pixmap(matrix=pymupdf.Matrix(scale, scale), alpha=False).save(target)
+                    previews.append(str(target.relative_to(root)))
+            except Exception:  # noqa: BLE001 - unreadable art is reported by the figure check
+                continue
+    return previews
+
+
+def batch_figure_check(root: Path, exam: dict, ids: set[str]) -> dict:
+    """The figure self-check on this batch's items only (the whole paper is checked once before plan)."""
+    from hosted_evidence_refresh import figure_selfcheck
+    from run_hosted_workflow import asset_issues
+    subset = {**exam, "questions": [q for q in exam.get("questions") or [] if q.get("id") in ids],
+              "answers": [a for a in exam.get("answers") or [] if a.get("question_id") in ids]}
+    result = figure_selfcheck(root, subset, asset_issues=asset_issues)
+    return {"errors": result.get("errors"), "warnings": result.get("warnings"),
+            "figures": [f for f in result.get("figures") or [] if f.get("errors") or f.get("warnings")]}
+</canonical-source>
+
+<canonical-source path="scripts/cap_charts.py">
+#!/usr/bin/env python3
+"""Ready-made 會考 charts and maps as one-page vector PDFs (with a PNG preview beside each).
+
+A 54-item 會考社會 run wrote 15 drawing scripts of its own (bar and line charts, a population
+pyramid, a climate graph, a county map from a downloaded TopoJSON) and saved a 35 MB figure.
+These presets take a small JSON spec, print in the booklet's faces (Times numerals, the run's
+明體 for Chinese), stay readable in grayscale (fills are gray levels or hatching, lines differ by
+dash and marker) and embed only the glyphs they use.
+
+  python scripts/cap_draw.py render spec.json fig.pdf --font RUN/fonts/TW-Sung-98_1.ttf
+
+Specs ("chart" picks the preset; sizes in pt; every label is the student's evidence, never the answer):
+  {"chart": "bar", "width_pt": 260, "height_pt": 170, "categories": ["甲", "乙"], "unit": "萬人",
+   "series": [{"name": "2015", "values": [3, 5]}, {"name": "2025", "values": [4, 6]}], "panels": false}
+  {"chart": "line", "categories": ["2019", "2020"], "series": [{"name": "甲", "values": [1, 2]}], "unit": "%"}
+  {"chart": "climate", "place": "某地", "temperature": [12 values ℃], "rainfall": [12 values mm]}
+  {"chart": "pyramid", "groups": ["0-4", "5-9", …], "male": [%…], "female": [%…], "unit": "%"}
+  {"chart": "profile", "points": [[0, 20], [5, 350], …], "labels": [{"at": 5, "text": "甲"}], "unit_x": "公里", "unit_y": "公尺"}
+  {"chart": "table", "header": ["項目", "甲", "乙"], "rows": [["人口", "3", "5"]]}
+  {"chart": "map", "region": "taiwan" | "east-asia" | "world", "fills": {"臺北市": 1, "高雄市": 3},
+   "legend": ["低", "中", "高"], "points": [{"lon": 121.5, "lat": 25.0, "label": "甲"}], "insets": true}
+  {"chart": "card", "title": "史料一", "lines": ["…原文…"], "source": "改寫自 …"}
+Map fills are classes 1-4 (four gray levels, light to dark, readable in grayscale); base maps come from
+exam_packs/會考/maps (內政部國土測繪中心 縣市界線, Natural Earth), simplified for illustration.
+"""
+from __future__ import annotations
+
+import json
+import math
+import re
+from pathlib import Path
+
+import pymupdf
+
+MAPS = Path(__file__).resolve().parents[1] / "exam_packs" / "會考" / "maps"
+GRAYS = {1: 0.88, 2: 0.70, 3: 0.48, 4: 0.30}
+SERIES_FILLS = (0.25, 0.65, 0.9, 0.45)
+DASHES = (None, "[4 2] 0", "[1 2] 0", "[6 2 1 2] 0")
+LABEL, NUMBER = 9.5, 8.5
+
+
+class Canvas:
+    def __init__(self, width: float, height: float, font: Path | None = None):
+        self.doc = pymupdf.open()
+        self.page = self.doc.new_page(width=width, height=height)
+        self.w, self.h = width, height
+        self.fonts = {"roman": pymupdf.Font("tiro"), "italic": pymupdf.Font("tiit"),
+                      "cjk": pymupdf.Font(fontfile=str(font)) if font else pymupdf.Font("cjk")}
+
+    def runs(self, text):
+        for match in re.finditer(r"[A-Za-z0-9.,%°℃′−+\-()/:~～ ]+|[^A-Za-z0-9.,%°℃′−+\-()/:~～ ]+", str(text)):
+            chunk = match.group(0)
+            face = "roman" if all(self.fonts["roman"].has_glyph(ord(c)) for c in chunk) else "cjk"
+            yield chunk, face
+
+    def width(self, text, size=LABEL):
+        return sum(self.fonts[f].text_length(t, fontsize=size) for t, f in self.runs(text))
+
+    def text(self, text, x, y, size=LABEL, anchor="left", color=(0, 0, 0)):
+        if anchor != "left":
+            x -= self.width(text, size) / (2 if anchor == "center" else 1)
+        for chunk, face in self.runs(text):
+            writer = pymupdf.TextWriter(self.page.rect)
+            writer.append((x, y), chunk, font=self.fonts[face], fontsize=size)
+            writer.write_text(self.page, color=color)
+            x += self.fonts[face].text_length(chunk, fontsize=size)
+
+    def line(self, a, b, width=0.8, dash=None, gray=0.0):
+        shape = self.page.new_shape()
+        shape.draw_line(a, b)
+        shape.finish(color=(gray,) * 3, width=width, dashes=dash)
+        shape.commit()
+
+    def rect(self, r, fill=None, width=0.6, hatch=False):
+        shape = self.page.new_shape()
+        shape.draw_rect(pymupdf.Rect(r))
+        shape.finish(color=(0, 0, 0), fill=(fill,) * 3 if fill is not None else None, width=width)
+        shape.commit()
+        if hatch:
+            self.hatch_rect(pymupdf.Rect(r))
+
+    def hatch_rect(self, r, step=3.0):
+        shape = self.page.new_shape()
+        k = -r.height
+        while k < r.width:
+            a = pymupdf.Point(r.x0 + max(k, 0), r.y1 - max(0, -k))
+            b = pymupdf.Point(r.x0 + min(k + r.height, r.width), r.y1 - min(r.height, r.width - k))
+            shape.draw_line(a, b)
+            k += step
+        shape.finish(color=(0, 0, 0), width=0.35)
+        shape.commit()
+
+    def polygon(self, points, fill=None, width=0.5, close=True):
+        shape = self.page.new_shape()
+        shape.draw_polyline(points + ([points[0]] if close else []))
+        shape.finish(color=(0, 0, 0), fill=(fill,) * 3 if fill is not None else None, width=width, closePath=close)
+        shape.commit()
+
+    def save(self, output: Path) -> dict:
+        self.doc.subset_fonts()
+        self.doc.save(output, garbage=4, deflate=True)
+        preview = Path(output).with_suffix(".png")
+        self.page.get_pixmap(dpi=150, alpha=False).save(preview)
+        self.doc.close()
+        return {"path": str(output), "preview": str(preview), "width_pt": round(self.w, 1), "height_pt": round(self.h, 1)}
+
+
+def nice_max(value: float) -> tuple[float, float]:
+    """(axis maximum, tick step) with 4-6 ticks."""
+    if value <= 0:
+        return 1, 0.2
+    raw = value / 5
+    power = 10 ** math.floor(math.log10(raw))
+    step = min((s * power for s in (1, 2, 2.5, 5, 10) if s * power >= raw), default=power * 10)
+    return math.ceil(value / step) * step, step
+
+
+def axes(c: Canvas, box, ymax, step, unit, categories, right=None):
+    x0, y0, x1, y1 = box
+    c.line((x0, y1), (x1, y1)); c.line((x0, y0), (x0, y1))
+    v = 0.0
+    while v <= ymax + 1e-9:
+        y = y1 - (y1 - y0) * v / ymax
+        c.line((x0 - 3, y), (x0, y))
+        c.line((x0, y), (x1, y), width=0.3, gray=0.75)
+        c.text(f"{v:g}", x0 - 5, y + 3, NUMBER, "right")
+        v += step
+    if unit:
+        c.text(f"（{unit}）", x0 - 4, y0 - 7, NUMBER, "center")
+    slot = (x1 - x0) / max(1, len(categories))
+    for i, name in enumerate(categories):
+        c.text(name, x0 + slot * (i + 0.5), y1 + 12, NUMBER, "center")
+    return slot
+
+
+def legend(c: Canvas, names, x, y, kind="fill"):
+    if x is None:   # right-aligned along the top edge, clear of the unit label at the left
+        x = c.w - 8 - sum(22 + c.width(n, NUMBER) + 8 for n in names) + 8
+    for i, name in enumerate(names):
+        if kind == "fill":
+            c.rect((x, y - 7, x + 10, y), fill=SERIES_FILLS[i % 4])
+        else:
+            c.line((x, y - 3), (x + 14, y - 3), width=1.0, dash=DASHES[i % 4])
+        c.text(name, x + 16, y, NUMBER)
+        x += 22 + c.width(name, NUMBER) + 8
+
+
+def bar(spec, c: Canvas):
+    series = spec["series"]
+    categories = spec["categories"]
+    top = max(max(s["values"]) for s in series)
+    ymax, step = nice_max(spec.get("ymax") or top)
+    panels = spec.get("panels") and len(series) > 1
+    groups = [[s] for s in series] if panels else [series]
+    width = (c.w - 50) / len(groups)
+    for g, group in enumerate(groups):
+        box = (40 + g * width, 28, 40 + (g + 1) * width - 12, c.h - 24)
+        slot = axes(c, box, ymax, step, spec.get("unit") if g == 0 else None, categories)
+        bar_w = slot * 0.7 / len(group)
+        for k, s in enumerate(group):
+            for i, value in enumerate(s["values"]):
+                x = box[0] + slot * i + slot * 0.15 + bar_w * k
+                y = box[3] - (box[3] - box[1]) * value / ymax
+                c.rect((x, y, x + bar_w, box[3]), fill=SERIES_FILLS[(g if panels else k) % 4])
+                if spec.get("value_labels"):
+                    c.text(f"{value:g}", x + bar_w / 2, y - 2, NUMBER - 1, "center")
+        if panels:
+            c.text(group[0]["name"], (box[0] + box[2]) / 2, 14, LABEL, "center")
+    if not panels and len(series) > 1:
+        legend(c, [s["name"] for s in series], None, 14)
+
+
+def line_chart(spec, c: Canvas):
+    series, categories = spec["series"], spec["categories"]
+    lo = min(min(s["values"]) for s in series)
+    top = max(max(s["values"]) for s in series)
+    ymax, step = nice_max(spec.get("ymax") or top)
+    box = (40, 28, c.w - 12, c.h - 24)
+    slot = axes(c, box, ymax, step, spec.get("unit"), categories)
+    markers = ("circle", "square", "triangle", "cross")
+    for k, s in enumerate(series):
+        pts = [pymupdf.Point(box[0] + slot * (i + 0.5), box[3] - (box[3] - box[1]) * v / ymax) for i, v in enumerate(s["values"])]
+        shape = c.page.new_shape(); shape.draw_polyline(pts)
+        shape.finish(color=(0, 0, 0), width=1.0, dashes=DASHES[k % 4], closePath=False); shape.commit()
+        for p in pts:
+            m = markers[k % 4]
+            shape = c.page.new_shape()
+            if m == "circle":
+                shape.draw_circle(p, 2.0)
+            elif m == "square":
+                shape.draw_rect(pymupdf.Rect(p.x - 2, p.y - 2, p.x + 2, p.y + 2))
+            elif m == "triangle":
+                shape.draw_polyline([p + (0, -2.6), p + (2.4, 1.8), p + (-2.4, 1.8), p + (0, -2.6)])
+            else:
+                shape.draw_line(p + (-2, -2), p + (2, 2)); shape.draw_line(p + (-2, 2), p + (2, -2))
+            shape.finish(color=(0, 0, 0), fill=(0, 0, 0) if m != "cross" else None, width=0.8); shape.commit()
+    if len(series) > 1:
+        legend(c, [s["name"] for s in series], None, 14, kind="line")
+    del lo
+
+
+def climate(spec, c: Canvas):
+    temps, rain = spec["temperature"], spec["rainfall"]
+    box = (40, 30, c.w - 40, c.h - 24)
+    rmax, rstep = nice_max(max(rain))
+    tmin = min(0, math.floor(min(temps) / 10) * 10)
+    tmax = math.ceil(max(temps) / 10) * 10
+    slot = (box[2] - box[0]) / 12
+    c.line((box[0], box[3]), (box[2], box[3])); c.line((box[0], box[1]), (box[0], box[3])); c.line((box[2], box[1]), (box[2], box[3]))
+    for i in range(6):
+        v = tmin + (tmax - tmin) * i / 5
+        y = box[3] - (box[3] - box[1]) * i / 5
+        c.text(f"{v:g}", box[0] - 4, y + 3, NUMBER, "right")
+        c.text(f"{rmax * i / 5:g}", box[2] + 4, y + 3, NUMBER)
+        c.line((box[0], y), (box[2], y), width=0.3, gray=0.8)
+    c.text("（℃）", box[0] - 4, box[1] - 8, NUMBER, "center"); c.text("（mm）", box[2] + 6, box[1] - 8, NUMBER, "center")
+    for i, value in enumerate(rain):
+        x = box[0] + slot * i + slot * 0.2
+        c.rect((x, box[3] - (box[3] - box[1]) * value / rmax, x + slot * 0.6, box[3]), fill=0.72)
+        c.text(str(i + 1), box[0] + slot * (i + 0.5), box[3] + 11, NUMBER, "center")
+    pts = [pymupdf.Point(box[0] + slot * (i + 0.5), box[3] - (box[3] - box[1]) * (t - tmin) / (tmax - tmin)) for i, t in enumerate(temps)]
+    shape = c.page.new_shape(); shape.draw_polyline(pts); shape.finish(color=(0, 0, 0), width=1.2, closePath=False); shape.commit()
+    for p in pts:
+        shape = c.page.new_shape(); shape.draw_circle(p, 1.8); shape.finish(color=(0, 0, 0), fill=(0, 0, 0)); shape.commit()
+    c.text("（月）", box[2] - 4, box[3] + 21, NUMBER, "right")
+    if spec.get("place"):
+        c.text(spec["place"], (box[0] + box[2]) / 2, 14, LABEL, "center")
+
+
+def pyramid(spec, c: Canvas):
+    groups, male, female = spec["groups"], spec["male"], spec["female"]
+    top, step = nice_max(max(max(male), max(female)))
+    mid = c.w / 2
+    half = (c.w - 70) / 2
+    row = (c.h - 44) / len(groups)
+    for i, name in enumerate(groups):
+        y = c.h - 26 - row * (i + 1)
+        c.rect((mid - 14 - half * male[i] / top, y + 1, mid - 14, y + row - 1), fill=0.35)
+        c.rect((mid + 14, y + 1, mid + 14 + half * female[i] / top, y + row - 1), fill=0.8)
+        c.text(name, mid, y + row / 2 + 3, NUMBER - 1, "center")
+    base = c.h - 26
+    c.line((mid - 14 - half, base), (mid - 14, base)); c.line((mid + 14, base), (mid + 14 + half, base))
+    v = 0.0
+    while v <= top + 1e-9:
+        for sign, origin in ((-1, mid - 14), (1, mid + 14)):
+            x = origin + sign * half * v / top
+            c.line((x, base), (x, base + 3))
+            c.text(f"{v:g}", x, base + 12, NUMBER - 1, "center")
+        v += step
+    c.text("男", mid - 14 - half / 2, 14, LABEL, "center"); c.text("女", mid + 14 + half / 2, 14, LABEL, "center")
+    if spec.get("unit"):
+        c.text(f"（{spec['unit']}）", c.w - 6, base + 22, NUMBER, "right")
+
+
+def profile(spec, c: Canvas):
+    pts = spec["points"]
+    xmax = max(p[0] for p in pts)
+    ymax, step = nice_max(max(p[1] for p in pts))
+    box = (44, 24, c.w - 14, c.h - 26)
+    sx = lambda x: box[0] + (box[2] - box[0]) * x / xmax
+    sy = lambda y: box[3] - (box[3] - box[1]) * y / ymax
+    shape = c.page.new_shape()
+    shape.draw_polyline([pymupdf.Point(sx(pts[0][0]), box[3])] + [pymupdf.Point(sx(x), sy(y)) for x, y in pts] +
+                        [pymupdf.Point(sx(pts[-1][0]), box[3])])
+    shape.finish(color=(0, 0, 0), fill=(0.8,) * 3, width=1.0, closePath=True); shape.commit()
+    c.line((box[0], box[3]), (box[2], box[3])); c.line((box[0], box[1]), (box[0], box[3]))
+    v = 0.0
+    while v <= ymax + 1e-9:
+        c.text(f"{v:g}", box[0] - 4, sy(v) + 3, NUMBER, "right"); c.line((box[0] - 3, sy(v)), (box[0], sy(v)))
+        v += step
+    xs, xstep = nice_max(xmax)
+    v = 0.0
+    while v <= xmax + 1e-9:
+        c.text(f"{v:g}", sx(v), box[3] + 11, NUMBER, "center")
+        v += xstep
+    c.text(f"（{spec.get('unit_y', '公尺')}）", box[0] - 6, box[1] - 8, NUMBER, "center")
+    c.text(f"（{spec.get('unit_x', '公里')}）", box[2], box[3] + 22, NUMBER, "right")
+    for label in spec.get("labels") or []:
+        y = next((py for px, py in pts if px >= label["at"]), pts[-1][1])
+        c.text(label["text"], sx(label["at"]), sy(y) - 6, LABEL, "center")
+
+
+def table(spec, c: Canvas):
+    rows = [spec["header"]] + spec["rows"]
+    cols = len(spec["header"])
+    widths = [max(c.width(str(r[k]), LABEL) for r in rows) + 14 for k in range(cols)]
+    scale = min(1.0, (c.w - 4) / sum(widths))
+    widths = [w * scale for w in widths]
+    height = 18
+    x0 = (c.w - sum(widths)) / 2
+    for i, row in enumerate(rows):
+        x = x0
+        for k, cell in enumerate(row):
+            c.rect((x, 2 + i * height, x + widths[k], 2 + (i + 1) * height), fill=0.9 if i == 0 else None, width=0.6)
+            c.text(str(cell), x + widths[k] / 2, 2 + i * height + 12.5, LABEL, "center")
+            x += widths[k]
+
+
+def card(spec, c: Canvas):
+    c.rect((2, 2, c.w - 2, c.h - 2), width=0.8)
+    y = 18
+    if spec.get("title"):
+        c.text(spec["title"], 12, y, LABEL + 0.5); y += 16
+    for line in spec.get("lines") or []:
+        c.text(line, 14, y, LABEL); y += 15
+    if spec.get("source"):
+        c.text(spec["source"], c.w - 10, c.h - 9, NUMBER, "right")
+
+
+def project(lon, lat, view):
+    """Equirectangular with cos(mid-latitude) scaling into view = (lon0, lat0, lon1, lat1, box)."""
+    lon0, lat0, lon1, lat1, (x0, y0, x1, y1) = view
+    k = math.cos(math.radians((lat0 + lat1) / 2))
+    sx = (x1 - x0) / ((lon1 - lon0) * k)
+    sy = (y1 - y0) / (lat1 - lat0)
+    s = min(sx, sy)
+    return pymupdf.Point(x0 + (lon - lon0) * k * s, y1 - (lat - lat0) * s)
+
+
+def draw_regions(c: Canvas, regions, view, fills, clip=None, width=0.4):
+    for region in regions:
+        cls = fills.get(region["name"]) or fills.get(region.get("name_en") or "") or fills.get(region.get("code") or "")
+        for ring in region["rings"]:
+            if clip and not any(clip[0] <= x <= clip[2] and clip[1] <= y <= clip[3] for x, y in ring):
+                continue
+            pts = [project(x, y, view) for x, y in ring]
+            c.polygon(pts, fill=GRAYS.get(cls) if cls else 1.0, width=width)
+
+
+def map_chart(spec, c: Canvas):
+    region = spec.get("region", "taiwan")
+    fills = spec.get("fills") or {}
+    if region == "taiwan":
+        data = json.loads((MAPS / "taiwan-counties.json").read_text(encoding="utf-8"))["counties"]
+        main = [r for r in data if r["name"] not in ("金門縣", "連江縣")]
+        insets = spec.get("insets", True)
+        view = (119.3, 21.85, 122.1, 25.35, (74 if insets else 10, 8, c.w - 10, c.h - 10))
+        draw_regions(c, main, view, fills)
+        if insets:
+            # 金門 and 馬祖 sit outside the main frame, as school maps print them; their islands are small,
+            # so the frames are generous and the outlines heavier.
+            frames = (("金門縣", (118.12, 24.36, 118.52, 24.56), (6, 8, 70, 50)),
+                      ("連江縣", (119.88, 25.93, 120.53, 26.40), (6, 64, 70, 128)))
+            for name, box, frame in frames:
+                c.rect(frame, width=0.5)
+                draw_regions(c, [r for r in data if r["name"] == name],
+                             (*box, (frame[0] + 3, frame[1] + 3, frame[2] - 3, frame[3] - 3)), fills, width=0.7)
+                c.text(name[:2], frame[0] + 2, frame[3] + 10, NUMBER - 1)
+    else:
+        data = json.loads((MAPS / f"{region}-countries.json").read_text(encoding="utf-8"))["countries"]
+        extent = spec.get("extent") or ((95, 0, 150, 50) if region == "east-asia" else (-170, -58, 180, 80))
+        view = (*extent, (8, 8, c.w - 8, c.h - 8))
+        draw_regions(c, data, view, fills, clip=extent)
+    for point in spec.get("points") or []:
+        p = project(point["lon"], point["lat"], view)
+        shape = c.page.new_shape(); shape.draw_circle(p, 2.2); shape.finish(color=(0, 0, 0), fill=(0, 0, 0)); shape.commit()
+        if point.get("label"):
+            c.text(point["label"], p.x + 4, p.y - 3, LABEL)
+    if spec.get("compass", True):
+        x, y = c.w - 20, 22
+        c.polygon([pymupdf.Point(x, y - 12), pymupdf.Point(x + 4, y), pymupdf.Point(x - 4, y)], fill=0.0)
+        c.text("N", x, y - 15, NUMBER, "center")
+    names = spec.get("legend") or []
+    left = 8 if region == "taiwan" else c.w - 70   # Taiwan: over the Strait, clear of the island
+    for i, name in enumerate(names):
+        y = c.h - 12 - (len(names) - 1 - i) * 13
+        c.rect((left, y - 8, left + 10, y), fill=GRAYS[min(4, i + 1)])
+        c.text(name, left + 14, y, NUMBER)
+
+
+PRESETS = {"bar": bar, "line": line_chart, "climate": climate, "pyramid": pyramid, "profile": profile,
+           "table": table, "card": card, "map": map_chart}
+DEFAULT_SIZE = {"map": (230, 280), "card": (300, 120), "table": (300, 80), "pyramid": (240, 200)}
+
+
+def render(spec: dict, output: Path, font: Path | None = None) -> dict:
+    chart = spec["chart"]
+    if chart not in PRESETS:
+        raise ValueError(f"chart must be one of {', '.join(PRESETS)}")
+    width, height = DEFAULT_SIZE.get(chart, (260, 170))
+    c = Canvas(spec.get("width_pt", width), spec.get("height_pt", height), font)
+    PRESETS[chart](spec, c)
+    return c.save(output)
+</canonical-source>
+
 <canonical-source path="scripts/cap_draw.py">
 #!/usr/bin/env python3
 """Vector figures for 會考 items: one-page PDFs with embedded fonts, drawn from a small JSON spec.
+
+Charts and maps (a spec with "chart": bar, line, climate, pyramid, profile, table, card, map) are drawn by
+scripts/cap_charts.py through the same `render` command; every output gets a PNG preview beside it.
 
 A math author (M1111, 2026-11) wrote a drawing library of their own and lost time to it: the SVG
 renderer's Times had no 「−」「…」「′」, white boxes behind labels showed as frames on the grid, and
@@ -76358,6 +83954,10 @@ def _distance(p, a, b):
 
 
 def draw(spec: dict, output: Path, font: Path | None = None) -> dict:
+    if spec.get("chart"):
+        # Charts and maps (bar, line, climate, pyramid, profile, table, card, map): scripts/cap_charts.py
+        from cap_charts import render as render_chart
+        return render_chart(spec, Path(output), font)
     fig = Figure(spec.get("width_pt", 220), spec["view"], font=font)
     for item in spec.get("items") or []:
         if "grid" in item:
@@ -76386,7 +83986,10 @@ def draw(spec: dict, output: Path, font: Path | None = None) -> dict:
             raise ValueError(f"unknown figure item {sorted(item)}")
     width, height = fig.page.rect.width, fig.height
     fig.save(output)
-    return {"path": str(output), "width_pt": round(width, 1), "height_pt": round(height, 1)}
+    preview = Path(output).with_suffix(".png")   # look at the figure once, at print size, without a proof
+    with pymupdf.open(output) as doc:
+        doc[0].get_pixmap(dpi=150, alpha=False).save(preview)
+    return {"path": str(output), "preview": str(preview), "width_pt": round(width, 1), "height_pt": round(height, 1)}
 
 
 def main() -> int:
@@ -76474,6 +84077,8 @@ if __name__ == "__main__":
   item   --subject 會考社會 --number 12 [--level 高]                          → one pending item and answer
   check  plan.json                                                           → plan problems before authoring
   expand --plan plan.json --compact items.json --run-dir RUN --output batch.json → full batch for append_items.py
+  lint   --plan plan.json --compact items.json [--run-dir RUN]                → the batch's problems in seconds
+  save   --plan plan.json --compact items.json --run-dir RUN [--replace]      → lint + expand + append in one step
 
 Targets come from exam_packs/會考 (official 通過率 and 鑑別度 by position, 115 sections and 題組).
 A level above 會考 lowers the target pass rate; it never widens the curriculum.
@@ -76727,7 +84332,8 @@ def constructed_labels(n: int) -> dict:
     return {"number_display": f"{n}.", "answer_label": f"非選擇題第{n}題"}
 
 
-def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", seed: str | None = None) -> dict:
+def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", seed: str | None = None,
+         volumes=None) -> dict:
     """A fresh random seed per plan unless one is given: two papers never share a topic draw,
     even with the same paper_id; the seed is saved so the same paper resumes with the same draw."""
     seed = seed or secrets.token_hex(8)
@@ -76735,7 +84341,11 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
         raise ValueError(f"subject must be one of {SUBJECTS}; level one of {LEVELS}")
     current = form(subject)["current_form"]
     name = TITLES.get(subject, subject[2:] + "科")
-    metadata = {"paper_id": paper_id, "title": f"{year}年國中教育會考模擬試題 {name}", "exam": "會考",
+    from cap_units import FULL_RANGE, parse_volumes, volume_label
+    volume_range = parse_volumes(volumes)
+    scope = "" if volume_range == FULL_RANGE or subject == "會考寫作測驗" else f"（{volume_label(volume_range)}）"
+    metadata = {"paper_id": paper_id, "title": f"{year}年國中教育會考模擬試題 {name}{scope}", "exam": "會考",
+                "cap_volume_range": list(volume_range),
                 "subject": subject, "curriculum": "108", "generation_mode": "full-paper",
                 "calibration_level": "official-113-115-structure-and-item-pass-rates",
                 "cap_difficulty_level": level, "duration_minutes": current["duration_minutes"],
@@ -76768,7 +84378,7 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
             for slot, suggested in math_forms(slots, seed):
                 slot["suggested_form"] = suggested
         # Official unit coverage (cap_units.py): every paper starts inside the 113-115 ranges.
-        units = unit_schedule(subject, slots, seed)
+        units = unit_schedule(subject, slots, seed, volume_range)
         for slot in slots:
             unit = units.get(slot["number"])
             if subject == "會考自然" and unit:
@@ -76776,6 +84386,11 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
             elif unit:
                 slot["unit"] = unit
             pool = FOCUS.get(slot.get("domain") or subject)
+            if pool and subject == "會考社會" and volume_range != FULL_RANGE:
+                grades = {"七年級": {1, 2}, "八年級": {3, 4}, "九年級": {5, 6}}
+                span = set(range(volume_range[0], volume_range[1] + 1))
+                pool = tuple(f for f in pool if not any(f.startswith(g) for g in grades)
+                             or any(f.startswith(g) and v & span for g, v in grades.items())) or pool
             if subject == "會考自然":
                 pool = tuple(f for f in FOCUS["會考自然"] if f.startswith(slot.get("domain", "")) or f.startswith("跨科"))
             if pool and subject != "會考數學":
@@ -76784,7 +84399,7 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
         subject_forms(subject, slots, seed)
         if subject == "會考自然":
             from cap_units import science_volumes
-            science_volumes(slots)   # every 國中 volume appears, as 113-115 cover all six
+            science_volumes(slots, volume_range)   # every volume in range appears, as 113-115 cover all six
         for n in range(1, current.get("constructed_items", 0) + 1):
             slots.append({"number": count + n, **constructed_labels(n), "type": "constructed_response",
                           "section_id": constructed_section(subject), "rubric": "0-3 級分"})
@@ -76890,19 +84505,22 @@ def expand(plan_data: dict, compact: list[dict], run_dir: Path) -> dict:
     sha = lambda p: hashlib.sha256((run_dir / p).read_bytes()).hexdigest()
     questions, answers, leaders, reordered = [], [], {}, {}
     for row in compact:
-        kind = "constructed_response" if row.get("constructed") else "single_choice"
+        kind = ("guided_writing" if subject == "會考寫作測驗" else
+                "constructed_response" if row.get("constructed") else "single_choice")
         number = row["number"]
         if kind == "constructed_response" and number <= choice_count:
             number = choice_count + number   # 非選擇題 1 → saved as 26 (printed 「1.」)
         slot = slots.get((number, kind), {})
         printed = number - choice_count if kind == "constructed_response" else number
-        qid = row.get("id") or (f"q{number}" if kind == "single_choice" else f"c{printed}")
+        qid = row.get("id") or (f"q{number}" if kind == "single_choice" else "w1" if kind == "guided_writing" else f"c{printed}")
         q = {"id": qid, "number": number, "type": kind,
              "section_id": row.get("section") or slot.get("section_id") or "s1", "prompt": row["stem"]}
         if row.get("material"):
             q["group_stimulus"] = row["material"]
         if kind == "constructed_response":
             q.update(constructed_labels(printed))
+        elif kind == "guided_writing":
+            q["number_display"] = ""
         elif row.get("images"):
             q["inline_assets"] = {f"{qid}{c}": {"path": p, "width_pt": row.get("image_width_pt", 120), "sha256": sha(p)}
                                   for c, p in zip("ABCD", row["images"])}
@@ -76951,7 +84569,7 @@ def expand(plan_data: dict, compact: list[dict], run_dir: Path) -> dict:
             reordered[qid] = row["sorted_options"]
         answer = {"question_id": qid, "final_answer": row.get("key") or row.get("answer"), "difficulty_label": band,
                   "reasoning": row.get("steps") or []}
-        if kind == "constructed_response":
+        if kind in ("constructed_response", "guided_writing") and row.get("rubric"):
             answer["rubric"] = row.get("rubric")
         answers.append(answer)
     batch = {"questions": questions, "answers": answers}
@@ -76983,6 +84601,63 @@ def sort_numeric_options(row: dict, question: dict) -> dict:
     row["steps"] = [relabel(step) for step in row.get("steps") or []]
     row["sorted_options"] = mapping
     return row
+
+
+def lint(plan_data: dict, compact: list[dict], run_dir: Path | None = None) -> dict:
+    """Seconds-fast checks of a compact batch before anything is saved or printed.
+
+    A 54-item 會考社會 run fixed option lengths, absolute words and option columns for the whole
+    paper after it was written; the same validators run here on the batch alone."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from validate_cap_form import validate_exam
+    from validate_cap_quality import validate_items
+    from run_hosted_workflow import option_columns
+    root = Path(run_dir).resolve() if run_dir else Path.cwd()
+    try:
+        batch = expand(plan_data, compact, root)
+    except (OSError, KeyError, TypeError, ValueError) as exc:
+        return {"status": "fix", "errors": [f"cannot expand: {exc}"]}
+    batch.pop("options_reordered", None)
+    exam = {"metadata": dict(plan_data.get("metadata") or {}), "sections": plan_data.get("sections") or [],
+            "questions": batch["questions"], "answers": batch["answers"]}
+    errors = [e for e in validate_exam(exam, full=False) + validate_items(exam, full=False, asset_root=root)
+              if not e.startswith("running mean")]
+    subject = exam["metadata"].get("subject")
+    layout = {}
+    for q in batch["questions"]:
+        if q.get("options"):
+            columns = option_columns(q, subject)
+            if columns == 1:
+                layout[q["id"]] = "options print one per line (long options); shorten them or set option_layout"
+    return {"status": "fix" if errors else "ok", "items": [q["id"] for q in batch["questions"]],
+            "errors": errors, **({"layout_notes": layout} if layout else {})}
+
+
+def save(plan_path: Path, compact: list[dict], run_dir: Path, *, replace: bool = False) -> dict:
+    """One step per batch: lint, expand, then append_items (which shrinks figures, checks this batch's
+    figures, writes previews, syncs the review book and checkpoints the run and its clock)."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from append_items import append
+    plan_data = json.loads(Path(plan_path).read_text(encoding="utf-8"))
+    run_dir = Path(run_dir).resolve()
+    checked = lint(plan_data, compact, run_dir)
+    if checked["status"] != "ok" and any(e.startswith("cannot expand") for e in checked["errors"]):
+        return {"status": "pending", "lint": checked}
+    batch = expand(plan_data, compact, run_dir)
+    reordered = batch.pop("options_reordered", None)
+    batches = run_dir / "batches"
+    batches.mkdir(exist_ok=True)
+    target = batches / f"batch-{len(list(batches.glob('batch-*.json'))) + 1:02d}.json"
+    target.write_text(json.dumps(batch, ensure_ascii=False, indent=2), encoding="utf-8")
+    try:
+        saved = append(run_dir, target, plan=plan_path, replace=replace)
+    except (OSError, ValueError, KeyError, TypeError, RuntimeError) as exc:
+        return {"status": "pending", "batch": str(target), "lint": checked, "errors": [str(exc)]}
+    keep = ("status", "question_count", "changed_item_ids", "subject_gate_pending", "design_fields_pending",
+            "figures_shrunk", "figure_check", "figure_previews", "review_book", "proof_recommended", "next_action",
+            "plan_updated")
+    return {"batch": str(target), "lint": checked, **({"options_reordered": reordered} if reordered else {}),
+            **{k: saved[k] for k in keep if k in saved}}
 
 
 def check(plan_data: dict) -> list[str]:
@@ -77017,20 +84692,32 @@ def main() -> int:
     p = sub.add_parser("plan"); p.add_argument("--subject", required=True, choices=SUBJECTS)
     p.add_argument("--paper-id", required=True); p.add_argument("--year", default="116")
     p.add_argument("--level", default="會考", choices=LEVELS); p.add_argument("--output", type=Path)
+    p.add_argument("--volumes", default="1-6", help="出題範圍（冊別），例如 1-4；預設 1-6（第一冊＝七上 … 第六冊＝九下）")
     p.add_argument("--seed", help="reuse a saved variety_seed (resuming the same paper); omit for a new draw")
     i = sub.add_parser("item"); i.add_argument("--subject", required=True, choices=SUBJECTS)
     i.add_argument("--number", type=int, required=True); i.add_argument("--level", default="會考", choices=LEVELS)
     i.add_argument("--constructed", action="store_true", help="數學 非選擇題 slot")
     c = sub.add_parser("check"); c.add_argument("plan", type=Path)
+    li = sub.add_parser("lint", help="check a compact batch in seconds, before saving")
+    li.add_argument("--plan", type=Path, required=True); li.add_argument("--compact", type=Path, required=True)
+    li.add_argument("--run-dir", type=Path)
+    sv = sub.add_parser("save", help="lint + expand + append_items in one step (the usual way to save a batch)")
+    sv.add_argument("--plan", type=Path, required=True); sv.add_argument("--compact", type=Path, required=True)
+    sv.add_argument("--run-dir", type=Path, required=True); sv.add_argument("--replace", action="store_true")
     e = sub.add_parser("expand", help="compact authoring records → full append_items batch")
     e.add_argument("--plan", type=Path, required=True); e.add_argument("--compact", type=Path, required=True)
     e.add_argument("--run-dir", type=Path, required=True); e.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "plan":
-        result = plan(args.subject, args.paper_id, args.year, args.level, args.seed)
+        result = plan(args.subject, args.paper_id, args.year, args.level, args.seed, args.volumes)
         if args.output:
             args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
             result = {"status": "plan-written", "output": str(args.output), "check": check(result)}
+    elif args.command == "lint":
+        result = lint(json.loads(args.plan.read_text(encoding="utf-8")),
+                      json.loads(args.compact.read_text(encoding="utf-8")), args.run_dir)
+    elif args.command == "save":
+        result = save(args.plan, json.loads(args.compact.read_text(encoding="utf-8")), args.run_dir, replace=args.replace)
     elif args.command == "item":
         result = item(args.subject, args.number, args.level, "constructed_response" if args.constructed else "single_choice")
     elif args.command == "expand":
@@ -77052,6 +84739,193 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+</canonical-source>
+
+<canonical-source path="scripts/cap_review_book.py">
+#!/usr/bin/env python3
+"""One review record per item, written batch by batch, compiled into the five 會考 review reports.
+
+A 54-item 會考社會 run wrote answers.json, difficulty.json, originality.json, visuals.json and
+source_grounding.json (270 KB) after the whole paper, then regenerated drafts and blind packets
+four times as items changed. Here the reviewer fills `review-book.json` while each batch is fresh:
+
+  python scripts/run_hosted_workflow.py review-book --state RUN/run-state.json      sync rows with saved items
+  python scripts/run_hosted_workflow.py compile-reviews --state RUN/run-state.json  write the five reports
+
+`append_items.py` syncs the book after every 會考 batch. A row is keyed by the item's content hash:
+an unchanged item keeps its review through any layout change; an edited item's row returns to
+pending with the earlier review kept under `previous`. Compiling writes nothing until every row
+is reviewed, and it never writes a pass the reviewer did not record.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+
+BOOK = "review-book.json"
+BANDS = (("very_hard", 0.30), ("hard", 0.50), ("medium", 0.70), ("easy", 0.85), ("very_easy", 1.01))
+SECTIONS = ("answer_check", "originality", "visual", "difficulty")
+
+
+def _sha(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def item_hash(question: dict, answer: dict) -> str:
+    """The printed item and its key and solution: what a review vouches for."""
+    printed = {k: question.get(k) for k in ("prompt", "group_stimulus", "options", "visual_asset", "inline_assets", "type")}
+    solved = {k: answer.get(k) for k in ("final_answer", "reasoning", "rubric")}
+    return hashlib.sha256(json.dumps([printed, solved], ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+
+
+def _row(question: dict, answer: dict, target: dict | None) -> dict:
+    design = (question.get("item_spec") or {}).get("difficulty_design") or {}
+    constructed = question.get("type") != "single_choice"
+    p = design.get("estimated_p")
+    has_figure = bool(question.get("visual_asset") or question.get("inline_assets"))
+    anchor = {"kind": "embedded-calibration", "key": "constructed-response" if constructed else "objective"}
+    return {
+        "id": question.get("id"), "content_sha256": item_hash(question, answer),
+        "answer_check": {"status": "pending", "observations": "",
+                         "how": "cover the key, solve again, compare; say why each distractor is definitely wrong"},
+        "originality": {"status": "pending", "observations": "",
+                        "how": "differs from official items, textbook exercises and this paper's other items"},
+        "visual": ({"status": "pending", "observations": "", "how": "the evidence a student reads on the figure"}
+                   if has_figure else {"status": "not_applicable", "observations": "此題無圖"}),
+        "difficulty": {
+            "status": "pending", "observations": "",
+            "estimated_p": p, "estimated_d": design.get("estimated_d"),
+            "difficulty_band": next((b for b, edge in BANDS if type(p) in (int, float) and p < edge), None),
+            "expected_minutes": design.get("expected_minutes"),
+            "shortest_route": design.get("short_route") or "",
+            "decisive_steps": [d for d in design.get("linked_decisions") or [] if d],
+            "shortcut_search": "", "answer_recheck": "",
+            "anchor_comparison": {**anchor, "note": (f"official 113-115 position {question.get('number')}: 通過率 "
+                                                     f"{target['official_p_113_115']}, 鑑別度 {target.get('official_d_113_115')}"
+                                                     if target else "")},
+            "anchor": anchor, "unresolved": []},
+        "sources": [s.get("url") for s in (question.get("item_spec") or {}).get("data_sources") or [] if isinstance(s, dict)],
+    }
+
+
+def sync(root: Path, exam: dict) -> dict:
+    """Add rows for new items, reset rows of edited items, keep reviewed unchanged ones."""
+    root = Path(root)
+    path = root / BOOK
+    book = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {
+        "purpose": "per-item review records; compile-reviews writes the five reports from them",
+        "paper": {"difficulty_review": {"review_mode": "single-context", "independent_review": False,
+                                        "review_reason": "", "author_context": "", "reviewer_context": ""},
+                  "originality_scope": "no-history-available",
+                  "source_grounding": {"status": "pending", "observations": "",
+                                       "how": "where each material and number comes from and how it was checked"}},
+        "items": []}
+    metadata = exam.get("metadata") or {}
+    try:
+        from cap_plan import position_targets
+        targets = position_targets(metadata.get("subject"), metadata.get("cap_difficulty_level", "會考"))
+    except Exception:  # noqa: BLE001 - writing subjects and unknown keys have no position targets
+        targets = {}
+    answers = {a.get("question_id"): a for a in exam.get("answers") or []}
+    rows = {r.get("id"): r for r in book.get("items") or []}
+    out, added, reset = [], [], []
+    for q in exam.get("questions") or []:
+        answer = answers.get(q.get("id")) or {}
+        fresh = _row(q, answer, targets.get(q.get("number")) if q.get("type") == "single_choice" else None)
+        old = rows.get(q.get("id"))
+        if old is None:
+            out.append(fresh)
+            added.append(q.get("id"))
+        elif old.get("content_sha256") != fresh["content_sha256"]:
+            fresh["previous"] = {k: old.get(k) for k in SECTIONS}
+            out.append(fresh)
+            reset.append(q.get("id"))
+        else:
+            old.setdefault("sources", fresh["sources"])
+            out.append(old)
+    book["items"] = out
+    path.write_text(json.dumps(book, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    pending = [r["id"] for r in out if any((r.get(s) or {}).get("status") not in ("pass", "not_applicable") for s in SECTIONS)]
+    return {"book": BOOK, "added": added, "reset_after_edit": reset, "pending": pending}
+
+
+def _missing(section: dict, name: str, rid: str) -> list[str]:
+    allowed = ("pass", "not_applicable") if name == "visual" else ("pass",)
+    problems = []
+    if section.get("status") not in allowed:
+        problems.append(f"{rid}.{name}.status")
+    if not str(section.get("observations") or "").strip():
+        problems.append(f"{rid}.{name}.observations")
+    if name == "difficulty":
+        for field in ("estimated_p", "estimated_d", "shortest_route", "decisive_steps", "shortcut_search", "answer_recheck"):
+            if section.get(field) in (None, "", []):
+                problems.append(f"{rid}.difficulty.{field}")
+    return problems
+
+
+def compile_reports(root: Path, exam: dict, exam_path: Path) -> dict:
+    """Write answers / originality / visuals / difficulty / source_grounding from a complete book."""
+    root = Path(root)
+    book_path = root / BOOK
+    if not book_path.is_file():
+        return {"status": "pending", "errors": ["no review-book.json yet: run review-book first"]}
+    book = json.loads(book_path.read_text(encoding="utf-8"))
+    answers = {a.get("question_id"): a for a in exam.get("answers") or []}
+    rows = {r.get("id"): r for r in book.get("items") or []}
+    problems = []
+    for q in exam.get("questions") or []:
+        row = rows.get(q.get("id"))
+        if row is None:
+            problems.append(f"{q.get('id')}: no row (run review-book)")
+            continue
+        if row.get("content_sha256") != item_hash(q, answers.get(q.get("id")) or {}):
+            problems.append(f"{q.get('id')}: edited since its review (run review-book, then review it again)")
+            continue
+        for name in SECTIONS:
+            problems += _missing(row.get(name) or {}, name, q.get("id"))
+    paper = book.get("paper") or {}
+    review = paper.get("difficulty_review") or {}
+    for field in ("review_reason", "author_context", "reviewer_context"):
+        if review.get("review_mode", "single-context") == "single-context" and not str(review.get(field) or "").strip():
+            problems.append(f"paper.difficulty_review.{field}")
+    grounding = paper.get("source_grounding") or {}
+    if grounding.get("status") != "pass" or not str(grounding.get("observations") or "").strip():
+        problems.append("paper.source_grounding (status pass and observations)")
+    if problems:
+        return {"status": "pending", "errors": problems[:40], "error_count": len(problems)}
+    exam_sha = _sha(exam_path)
+    order = [rows[q.get("id")] for q in exam.get("questions") or []]
+    count = len(order)
+    def report(name, items, **extra):
+        body = {"exam_sha256": exam_sha, "status": "pass",
+                "observations": f"compiled from {BOOK}: {count} items reviewed one by one, each record bound to the "
+                                f"item's content hash", **extra, "items": items}
+        (root / f"{name}.json").write_text(json.dumps(body, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    report("answers", [{"id": r["id"], "status": r["answer_check"]["status"], "observations": r["answer_check"]["observations"]}
+                       for r in order])
+    report("originality", [{"id": r["id"], "status": r["originality"]["status"], "observations": r["originality"]["observations"]}
+                           for r in order], comparison_scope=paper.get("originality_scope", "no-history-available"), history=[])
+    report("visuals", [{"id": r["id"], "status": r["visual"]["status"], "observations": r["visual"]["observations"]}
+                       for r in order])
+    from hosted_blind_review import packet
+    mode = review.get("review_mode", "single-context")
+    blind = root / f"blind-packet-{exam_sha[:12]}.json"
+    blind.write_text(json.dumps(packet(exam, mode), ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
+    difficulty_rows = []
+    for r in order:
+        d = {k: v for k, v in r["difficulty"].items() if k not in ("how",)}
+        difficulty_rows.append({"id": r["id"], **d})
+    report("difficulty", difficulty_rows, review_mode=mode, independent_review=review.get("independent_review", False),
+           review_reason=review.get("review_reason"), author_context=review.get("author_context"),
+           reviewer_context=review.get("reviewer_context"), blind_packet={"path": blind.name, "sha256": _sha(blind)})
+    sources = (root / "source_grounding.json")
+    sources.write_text(json.dumps({"exam_sha256": exam_sha, "status": "pass", "observations": grounding["observations"],
+                                   "sources": sorted({u for r in order for u in r.get("sources") or [] if u})},
+                                  ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return {"status": "compiled", "reports": ["answers.json", "originality.json", "visuals.json", "difficulty.json",
+                                              "source_grounding.json"],
+            "next": "run checkpoint to register them, then auto-review for the mechanical reports"}
 </canonical-source>
 
 <canonical-source path="scripts/cap_units.py">
@@ -77129,10 +85003,14 @@ def unit_of(question: dict, subject: str) -> str | None:
     return spec.get("cap_unit")
 
 
-def unit_errors(subject: str, questions: list[dict], *, full: bool = True, volumes: bool = True) -> list[str]:
+def unit_errors(subject: str, questions: list[dict], *, full: bool = True, volumes: bool = True,
+                volume_range=None) -> list[str]:
     """Missing or unknown units per item, and (full papers) counts outside the official ranges."""
     choice = [q for q in questions if q.get("type") == "single_choice"]
     errors: list[str] = []
+    limited = parse_volumes(volume_range) != FULL_RANGE
+    if limited:
+        return _limited_unit_errors(subject, choice, volume_range, full)
     if subject == "會考自然":
         domains = [unit_of(q, subject) for q in choice]
         if full and choice and all(d in SCIENCE_SHARES for d in domains):
@@ -77177,15 +85055,38 @@ def unit_errors(subject: str, questions: list[dict], *, full: bool = True, volum
     return errors
 
 
+def _limited_unit_errors(subject: str, choice: list[dict], volume_range, full: bool) -> list[str]:
+    """A paper limited to some volumes: units (自然: domains) must be taught in range; each taught unit appears."""
+    allowed = allowed_units(subject, volume_range)
+    names = SCIENCE_SHARES if subject == "會考自然" else UNIT_RANGES.get(subject)
+    if not names:
+        return []
+    units = [unit_of(q, subject) for q in choice]
+    errors = []
+    unknown = [q.get("number") for q, u in zip(choice, units) if u not in names]
+    if unknown:
+        errors.append(f"items {unknown[:12]}: record the unit (item_spec.cap_unit; 自然 cap_competency.domain)")
+    if allowed is not None:
+        outside = [q.get("number") for q, u in zip(choice, units) if u in names and u not in allowed]
+        if outside:
+            errors.append(f"items {outside[:12]} use units not taught in {volume_label(volume_range)} "
+                          f"(taught: {'、'.join(sorted(allowed))})")
+        if full and not unknown:
+            missing = sorted(u for u in allowed if u not in units)
+            if missing and len(choice) >= len(allowed):
+                errors.append(f"{volume_label(volume_range)} teaches {'、'.join(missing)} but no item uses it")
+    return errors
+
+
 def _official_mean(subject: str, unit: str) -> float:
     table = {"會考數學": MATH_OFFICIAL, "會考國文": CHINESE_OFFICIAL, "會考英語": ENGLISH_OFFICIAL}[subject]
     values = [v for v in table.get(unit, ()) if v is not None]
     return sum(values) / len(values) if values else 1.0
 
 
-def _counts(subject: str, total: int, rng: random.Random, units=None) -> dict[str, int]:
+def _counts(subject: str, total: int, rng: random.Random, units=None, ranges=None) -> dict[str, int]:
     """Counts within the ranges that add up to `total`, leaning on the official means."""
-    ranges = {u: r for u, r in UNIT_RANGES[subject].items() if units is None or u in units}
+    ranges = {u: r for u, r in (ranges or UNIT_RANGES[subject]).items() if units is None or u in units}
     counts = {u: low for u, (low, high) in ranges.items()}
     while sum(counts.values()) < total:
         open_ = [u for u in ranges if counts[u] < ranges[u][1]]
@@ -77196,7 +85097,7 @@ def _counts(subject: str, total: int, rng: random.Random, units=None) -> dict[st
     return counts
 
 
-def schedule(subject: str, slots: list[dict], seed: str) -> dict[int, str]:
+def schedule(subject: str, slots: list[dict], seed: str, volume_range=None) -> dict[int, str]:
     """{slot number: unit} for the choice slots of a plan; 題組 members share one unit (國文、英語)."""
     if subject not in UNIT_RANGES and subject != "會考自然":
         return {}
@@ -77210,8 +85111,11 @@ def schedule(subject: str, slots: list[dict], seed: str) -> dict[int, str]:
         rng = random.Random(hashlib.sha256(f"{seed}:units:{attempt}".encode()).digest())
         out: dict[int, str] = {}
         if subject == "會考自然":
-            target = {d: round(len(choice) * (low + high) / 2) for d, (low, high) in SCIENCE_SHARES.items()}
-            target["理化"] += len(choice) - sum(target.values())
+            allowed = allowed_units(subject, volume_range) or set(SCIENCE_SHARES)
+            weight = {d: sum(SCIENCE_OFFICIAL[d]) for d in SCIENCE_SHARES if d in allowed}
+            target = {d: round(len(choice) * w / sum(weight.values())) for d, w in weight.items()}
+            main = max(target, key=target.get)
+            target[main] += len(choice) - sum(target.values())
             left = dict(target)
             for members in groups.values():
                 domain = rng.choices(list(left), [max(0, left[d] - len(members) + 1) + 0.01 for d in left])[0]
@@ -77220,10 +85124,10 @@ def schedule(subject: str, slots: list[dict], seed: str) -> dict[int, str]:
                 left[domain] -= len(members)
             pool = [d for d, k in left.items() for _ in range(max(0, k))]
             rng.shuffle(pool)
-            pool += ["理化"] * (len(singles) - len(pool))
+            pool += [main] * (len(singles) - len(pool))
             out.update(zip(singles, pool))
         elif subject in GROUP_UNITS:
-            counts = _counts(subject, len(choice), rng)
+            counts = _counts(subject, len(choice), rng, ranges=restricted_ranges(subject, volume_range))
             ordered = sorted(groups.values())
             if subject == "會考英語" and ordered:
                 cloze = ordered.pop()          # the last group is the 克漏字 passage every year
@@ -77243,14 +85147,14 @@ def schedule(subject: str, slots: list[dict], seed: str) -> dict[int, str]:
             rng.shuffle(pool)
             out.update(zip(singles, pool))
         else:
-            counts = _counts(subject, len(choice), rng)
+            counts = _counts(subject, len(choice), rng, ranges=restricted_ranges(subject, volume_range))
             pool = [u for u, k in counts.items() for _ in range(k)]
             rng.shuffle(pool)
             pool.sort(key=lambda u: MATH_MEAN_POSITION.get(u, 12) + rng.uniform(-POSITION_JITTER, POSITION_JITTER))
             out.update(zip(sorted(s["number"] for s in choice), pool))
         trial = [{"type": "single_choice", "number": n,
                   "item_spec": {"cap_unit": u, "cap_competency": {"domain": u}}} for n, u in out.items()]
-        if len(out) == len(choice) and not unit_errors(subject, trial, volumes=False):
+        if len(out) == len(choice) and not unit_errors(subject, trial, volumes=False, volume_range=volume_range):
             return out
     return out
 
@@ -77260,13 +85164,117 @@ SCIENCE_VOLUME_CYCLE = {"生物": ("第一冊", "第二冊"), "地球科學": ("
                         "理化": ("第三冊", "第四冊", "第四冊", "第五冊", "第六冊")}
 
 
-def science_volumes(slots: list[dict]) -> None:
+def science_volumes(slots: list[dict], volume_range=None) -> None:
+    lo, hi = parse_volumes(volume_range)
+    inside = set(VOLUME_NAMES[lo - 1:hi])
     seen: dict[str, int] = {}
     for slot in sorted(slots, key=lambda s: s["number"]):
-        cycle = SCIENCE_VOLUME_CYCLE.get(slot.get("domain"))
+        cycle = tuple(v for v in SCIENCE_VOLUME_CYCLE.get(slot.get("domain"), ()) if v in inside)
         if cycle and slot.get("type") == "single_choice":
             slot["suggested_volume"] = cycle[seen.get(slot["domain"], 0) % len(cycle)]
             seen[slot["domain"]] = seen.get(slot["domain"], 0) + 1
+
+
+# ---- 出題範圍（冊別）: the user may limit a paper to volumes lo-hi (default 1-6) ----
+# Likely volumes of each unit in the common 國中 textbook editions (各版本常見編排; 第一冊 = 七上).
+UNIT_VOLUMES = {
+    "會考數學": {"數與運算": {1, 2}, "二次方根": {3}, "數列": {4}, "方程式與不等式": {1, 2},
+                 "多項式與一元二次方程式": {3, 4}, "坐標與函數": {2, 4, 6}, "平面幾何": {2, 4},
+                 "相似形與三角形三心": {5}, "圓": {5}, "立體與空間": {2, 6}, "統計": {2, 6}, "機率": {6}},
+    "會考自然": {"生物": {1, 2}, "理化": {3, 4, 5, 6}, "地球科學": {5, 6}},
+}
+FULL_RANGE = (1, 6)
+CHINESE_NUMERALS = "一二三四五六"
+
+
+def parse_volumes(text) -> tuple[int, int]:
+    """'1-4', '第1～4冊', '3' or (1, 4) → (1, 4); default 1-6."""
+    if text in (None, "", "all"):
+        return FULL_RANGE
+    if isinstance(text, (list, tuple)):
+        lo, hi = int(text[0]), int(text[-1])
+    else:
+        import re
+        numbers = [int(n) for n in re.findall(r"\d", str(text))] or \
+            [CHINESE_NUMERALS.index(c) + 1 for c in str(text) if c in CHINESE_NUMERALS]
+        if not numbers:
+            raise ValueError(f"volume range {text!r}: write it as 1-4")
+        lo, hi = min(numbers), max(numbers)
+    if not 1 <= lo <= hi <= 6:
+        raise ValueError("volumes run from 1 (七上) to 6 (九下)")
+    return lo, hi
+
+
+def volume_label(volumes) -> str:
+    lo, hi = parse_volumes(volumes)
+    return f"第{CHINESE_NUMERALS[lo - 1]}冊" if lo == hi else f"第{CHINESE_NUMERALS[lo - 1]}～{CHINESE_NUMERALS[hi - 1]}冊"
+
+
+def allowed_units(subject: str, volumes) -> set[str] | None:
+    """Units (自然: domains) taught within the range; None when every unit is (full range or 國文、英語、社會)."""
+    lo, hi = parse_volumes(volumes)
+    table = UNIT_VOLUMES.get(subject)
+    if (lo, hi) == FULL_RANGE or not table:
+        return None
+    return {u for u, vols in table.items() if vols & set(range(lo, hi + 1))}
+
+
+def restricted_ranges(subject: str, volumes) -> dict | None:
+    """Unit ranges for a limited paper: units outside the range at 0, each taught unit at least once."""
+    allowed = allowed_units(subject, volumes)
+    if allowed is None or subject not in UNIT_RANGES:
+        return None
+    return {u: ((1, 99) if u in allowed else (0, 0)) for u in UNIT_RANGES[subject]}
+
+
+def volume_errors(subject: str, questions: list[dict], volumes) -> list[str]:
+    """Every item's recorded volume (數學: its code's grade) lies inside a limited range."""
+    import re
+    lo, hi = parse_volumes(volumes)
+    if (lo, hi) == FULL_RANGE:
+        return []
+    inside = set(VOLUME_NAMES[lo - 1:hi])
+    errors = []
+    for q in questions:
+        spec = q.get("item_spec") or {}
+        recorded = [str(v)[:3] for v in spec.get("textbook_volumes") or [] if str(v)[:3] in VOLUME_NAMES]
+        n = q.get("number_display") or q.get("number")
+        for code in spec.get("curriculum_codes") or []:
+            grade = re.match(r"^[NSGARFD]-([789])-\d+$", str(code))
+            if grade and not {2 * int(grade.group(1)) - 13, 2 * int(grade.group(1)) - 12} & set(range(lo, hi + 1)):
+                errors.append(f"Q{n}: code {code} is a grade {grade.group(1)} concept, outside {volume_label((lo, hi))}")
+        if not recorded:
+            errors.append(f"Q{n}: a paper limited to {volume_label((lo, hi))} records item_spec.textbook_volumes on "
+                          "every item (數學 too)")
+            continue
+        outside = [v for v in recorded if v not in inside]
+        if outside:
+            errors.append(f"Q{n}: teaches from {'、'.join(outside)}, outside the paper's range {volume_label((lo, hi))}")
+    return errors
+
+
+# 社會: 114/115 by hand give 七年級 12-15, 八年級 17-18, 九年級 19-20 of 54 (a few undetermined), so each
+# grade holds at least a fifth of a full-range paper (item_spec.textbook_volumes, main concept first).
+SOCIAL_GRADE_MIN = 0.20
+GRADE_OF_VOLUME = {"第一冊": "七年級", "第二冊": "七年級", "第三冊": "八年級", "第四冊": "八年級",
+                   "第五冊": "九年級", "第六冊": "九年級"}
+
+
+def social_grade_errors(questions: list[dict], volume_range=None) -> list[str]:
+    if parse_volumes(volume_range) != FULL_RANGE:
+        return []
+    choice = [q for q in questions if q.get("type") == "single_choice"]
+    grades = [GRADE_OF_VOLUME.get(next((str(v)[:3] for v in (q.get("item_spec") or {}).get("textbook_volumes") or []), ""))
+              for q in choice]
+    if not choice or None in grades:
+        return []
+    errors = []
+    for grade in ("七年級", "八年級", "九年級"):
+        share = grades.count(grade) / len(grades)
+        if share < SOCIAL_GRADE_MIN:
+            errors.append(f"{grade} concepts hold {grades.count(grade)} of {len(grades)} items ({share:.0%}); official 114-115 "
+                          f"give each grade at least a fifth (textbook_volumes, main concept first)")
+    return errors
 </canonical-source>
 
 <canonical-source path="scripts/check_hosted_run.py">
@@ -80355,6 +88363,26 @@ def _chunk(block,key,units,head,tail):
     return chunk
 
 
+SUBSET_ABOVE_BYTES = 3_000_000
+
+
+def subset_body_fonts(raw):
+    """Embed only the glyphs a body prints. Every proof, plan and build body carried the whole CJK font
+    (18-19 MB for two pages) until finalize; keep the subset only if every page's text and pixels match."""
+    if len(raw)<=SUBSET_ABOVE_BYTES:
+        return raw
+    try:
+        with pymupdf.open(stream=raw,filetype='pdf') as doc:
+            before=[(page.get_text(),page.get_pixmap(alpha=False).samples) for page in doc]
+            doc.subset_fonts()
+            compact=doc.tobytes(garbage=4,deflate=True,no_new_id=True)
+        with pymupdf.open(stream=compact,filetype='pdf') as check:
+            same=[(page.get_text(),page.get_pixmap(alpha=False).samples) for page in check]==before
+        return compact if same and len(compact)<len(raw) else raw
+    except Exception:  # noqa: BLE001 - any subsetter failure keeps the rendered bytes
+        return raw
+
+
 def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_font=None,
            balance_last_page=True, progress_path=None, kai_font=None):
     started=time.monotonic()
@@ -80665,6 +88693,7 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
                     raw,parts,pages,count,fill=attempt;best=candidate;pagination=f'balanced-{slack:g}'
                     best_voids=voids(pages,count)
         output.parent.mkdir(parents=True,exist_ok=True)
+        raw=subset_body_fonts(raw)
         output.write_bytes(raw)
     finally:
         for measured in measurements:measured.close()
@@ -82455,8 +90484,14 @@ def timing_errors(report, paper_id):
     return errors
 
 
+# Writing a batch of 2-4 items takes longer than five minutes of silence between saves; a 54-item
+# 會考社會 run logged 13.4 hours as unobserved. Authoring gets a longer threshold; tools still log
+# every save as activity.
+PHASE_IDLE_SECONDS = {'authoring': 1200}
+
+
 def transition(path, paper_id, phase=None, *, action=None, question_ids=None,
-               page_numbers=None, revision_id=None, idle_seconds=IDLE_SECONDS):
+               page_numbers=None, revision_id=None, idle_seconds=None):
     path = Path(path)
     now = time.time()
     action = action or ('phase' if phase else 'finish')
@@ -82464,6 +90499,10 @@ def transition(path, paper_id, phase=None, *, action=None, question_ids=None,
         raise ValueError('Unknown clock action')
     if (action == 'phase' and phase not in PHASES) or (phase is not None and phase not in PHASES):
         raise ValueError('Unknown phase')
+    if idle_seconds is None:
+        known = json.loads(path.read_text(encoding='utf-8-sig')) if path.exists() else {}
+        upcoming = phase or ((known.get('active') or known.get('paused') or {}).get('phase')) or known.get('last_phase')
+        idle_seconds = PHASE_IDLE_SECONDS.get(upcoming, IDLE_SECONDS)
     if not finite(idle_seconds) or idle_seconds <= 0:
         raise ValueError('Idle threshold must be positive and finite')
     report = json.loads(path.read_text(encoding='utf-8-sig')) if path.exists() else {
@@ -85034,6 +93073,20 @@ READING_PHASES = {
                'references/difficulty-calibration.md', 'references/evidence-backed-editorial-audit.md'),
 }
 
+# 會考 reads four short documents instead of the 學測-oriented execution chapters (a 會考社會 run
+# paged through about 300 KB of references, most of it about 學測 subjects).
+CAP_READING_PHASES = {
+    'preflight': ('references/cap-execution-card.md',),
+    'authoring': ('references/current-cap-form.md', 'templates/cap-item-templates.json', 'schemas/exam.schema.json',
+                  'schemas/answer.schema.json'),
+    'layout': ('references/cap-workflow.md',),
+    'review': ('templates/cap-review-templates.json',),
+}
+
+
+def reading_phases(subject):
+    return CAP_READING_PHASES if str(subject).startswith('會考') else READING_PHASES
+
 
 def pointer_value(document, pointer: str):
     """Resolve a JSON pointer so reading projections contain exact source values."""
@@ -85282,7 +93335,7 @@ def reading_plan_from_directory(source_dir: Path, subject: str, output_dir: Path
                           embedded_sha256=hashlib.sha256(payload).hexdigest())
             entries[path] = (record, payload)
         verified.append((path, raw))
-    required = {path for paths in READING_PHASES.values() for path in paths}
+    required = {path for paths in reading_phases(subject).values() for path in paths}
     missing = required - entries.keys()
     if missing:
         raise ValueError('Native package is missing reading sources: ' + ', '.join(sorted(missing)))
@@ -85344,7 +93397,7 @@ def _write_reading_plan(entries: dict, result: dict, subject: str, output_dir: P
     selected={row['path'] for row in result['files']}
     planned=set();views={};phase_records={};embedded={};reference_records=[]
     projections=phase_projections(entries,subject,selected)
-    for phase,paths in READING_PHASES.items():
+    for phase,paths in reading_phases(subject).items():
         route=list(paths)
         if phase=='authoring':
             route+=['references/'+name for name in sorted(SUBJECT_REFERENCES[subject])]
@@ -85691,9 +93744,40 @@ def check_figures(state_path):
     if not state.get('exam'):
         raise ValueError('Checkpoint the exam before checking figures')
     exam = read(inside(root, root / state['exam']['path']))
-    result = figure_selfcheck(root, exam, asset_issues=asset_issues)
-    result['state'] = str(state_path)
-    event(root, 'check-figures', started, errors=result['errors'], warnings=result['warnings'])
+    # Each figure is opened once per content: a 會考社會 run re-scanned all its figures after every batch
+    # and read the same findings 23 times. Findings of unchanged figures come from figure-check-cache.json.
+    cache_path = root / 'figure-check-cache.json'
+    cache = read(cache_path) if cache_path.is_file() else {}
+    def key(question):
+        assets = [question.get('visual_asset')] + list((question.get('inline_assets') or {}).values())
+        return '|'.join(sorted(f"{a.get('path')}#{a.get('sha256')}" for a in assets if isinstance(a, dict) and a.get('path')))
+    answers = {a.get('question_id'): a for a in exam.get('answers') or []}
+    fresh = [q for q in exam.get('questions') or []
+             if key(q) and cache.get(q.get('id'), {}).get('key') != key(q) + '|' + key(answers.get(q.get('id')) or {})]
+    subset = {**exam, 'questions': fresh, 'answers': [answers[q['id']] for q in fresh if q.get('id') in answers]}
+    checked = figure_selfcheck(root, subset, asset_issues=asset_issues)
+    for q in fresh:
+        cache[q['id']] = {'key': key(q) + '|' + key(answers.get(q.get('id')) or {}),
+                          'figures': [f for f in checked['figures']
+                                      if f['referenced_by'].startswith((f"item {q['id']}.", f"item {q['id']} "))]}
+    current = {q.get('id') for q in exam.get('questions') or [] if key(q)}
+    cache = {qid: row for qid, row in cache.items() if qid in current}
+    save(cache_path, cache)
+    figures = [f for row in cache.values() for f in row['figures']]
+    paths = {}
+    for q in exam.get('questions') or []:
+        for a in [q.get('visual_asset')] + list((q.get('inline_assets') or {}).values()):
+            if isinstance(a, dict) and a.get('sha256'):
+                paths.setdefault(a['sha256'], set()).add(a.get('path'))
+    duplicates = sorted(', '.join(sorted(v)) for v in paths.values() if len(v) > 1)
+    errors = sum(len(f['errors']) for f in figures)
+    result = {'status': 'pass' if not errors else 'pending', 'figures': [f for f in figures if f['errors'] or f['warnings']],
+              'figure_count': len(figures), 'errors': errors, 'warnings': sum(len(f['warnings']) for f in figures),
+              'checked_now': [q['id'] for q in fresh], 'reused_from_cache': sorted(current - {q['id'] for q in fresh}),
+              **({'duplicate_bytes': duplicates} if duplicates else {}), 'note': checked.get('note'),
+              'state': str(state_path)}
+    event(root, 'check-figures', started, errors=result['errors'], warnings=result['warnings'],
+          checked_now=len(fresh))
     return result
 
 
@@ -87538,6 +95622,37 @@ def advance(state_path, year=None):
             'build': {k: built.get(k) for k in ('status', 'review_batches', 'iteration_budget') if k in built}}
 
 
+def review_book(state_path):
+    """Sync review-book.json (one review record per item) with the saved exam."""
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    if not state.get('exam'):
+        raise ValueError('Save items first (append_items.py) before syncing the review book')
+    from cap_review_book import sync
+    result = sync(root, read(inside(root, root / state['exam']['path'])))
+    event(root, 'review-book', started, pending=len(result['pending']))
+    return {'status': 'synced', **result}
+
+
+def compile_reviews(state_path):
+    """Write the five item and source reports from a complete review book, then register them."""
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    exam_path = inside(root, root / state['exam']['path'])
+    if record(root, exam_path) != state['exam']:
+        raise ValueError('Checkpoint the current exam before compiling reviews')
+    from cap_review_book import compile_reports
+    result = compile_reports(root, read(exam_path), exam_path)
+    event(root, 'compile-reviews', started, status=result['status'])
+    if result['status'] == 'compiled':
+        checkpoint(root, state=state_path)
+    return result
+
+
 def run_auto_review(state_path, gates=None):
     from hosted_auto_review import GATES, auto_review
     return auto_review(state_path, tuple(gates) if gates else GATES)
@@ -87610,6 +95725,11 @@ def main():
     advance_parser = commands.add_parser('advance', help='Preset workflow: run the next mechanical steps, stop where an author must act')
     advance_parser.add_argument('--state', type=Path, required=True)
     advance_parser.add_argument('--year')
+    book_parser = commands.add_parser('review-book', help='Sync review-book.json: one review record per saved item')
+    book_parser.add_argument('--state', type=Path, required=True)
+    compile_parser = commands.add_parser('compile-reviews', help='Write answers/originality/visuals/difficulty/'
+                                         'source_grounding from a complete review book')
+    compile_parser.add_argument('--state', type=Path, required=True)
     status_parser = commands.add_parser('status', help='Short resume summary; writes NEXT.md')
     status_parser.add_argument('--state', type=Path, required=True)
     args = vars(parser.parse_args())
@@ -87626,6 +95746,7 @@ def main():
             result = {'build': build, 'specs': specs, 'proof': proof, 'plan': plan, 'finalize': finalize,
                       'clock': clock, 'lock-content': content_lock, 'refresh-evidence': refresh_evidence,
                       'check-figures': check_figures, 'status': status, 'auto-review': run_auto_review,
+                      'review-book': review_book, 'compile-reviews': compile_reviews,
                       'advance': advance}[action](**args)
     except (OSError, ValueError, KeyError, RuntimeError) as exc:
         print(json.dumps({'status': 'pending', 'errors': [str(exc)]}, ensure_ascii=False))
@@ -87864,6 +95985,24 @@ def writing_task_errors(task: dict, answer: dict) -> list[str]:
     return errors
 
 
+CURRICULUM = ROOT / "exam_packs" / "會考" / "curriculum"
+_CODE_TABLES: dict[str, set] = {}
+
+
+def code_table(subject: str) -> set[str]:
+    """The subject's 108 課綱 第四學習階段 codes (學習內容 and 學習表現), from exam_packs/會考/curriculum/."""
+    name = {"寫作測驗": "國文"}.get(subject[2:], subject[2:])
+    if name not in _CODE_TABLES:
+        path = CURRICULUM / f"{name}.json"
+        data = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+        _CODE_TABLES[name] = {row["code"] for key in ("content", "performance") for row in data.get(key) or []}
+    return _CODE_TABLES[name]
+
+
+def normal_code(code) -> str:
+    return str(code).strip().replace("Ⅳ", "IV").replace("－", "-").replace("–", "-")
+
+
 def full_paper_minimum(subject: str) -> int:
     if subject == "會考寫作測驗":
         return 1
@@ -87944,11 +96083,17 @@ def validate_exam(exam: dict, *, full: bool = True, asset_root: Path | None = No
         level = "會考"
     for q in [*choice, *constructed]:
         n = q.get("number")
-        codes = (q.get("item_spec") or {}).get("curriculum_codes") or []
-        outside = [c for c in codes if not STAGE_IV_CODE.match(str(c).strip())]
+        codes = [normal_code(c) for c in (q.get("item_spec") or {}).get("curriculum_codes") or []]
+        outside = [c for c in codes if not STAGE_IV_CODE.match(c)]
+        table = code_table(subject)
+        unknown = [c for c in codes if c not in outside and table and c not in table]
         if outside:
             errors.append(f"Q{n}: curriculum codes {outside} are not 國中 第四學習階段 codes; no level may go beyond the "
                           "國中 curriculum")
+        elif unknown:
+            errors.append(f"Q{n}: curriculum codes {unknown} are not in the 108 課綱 table for {subject[2:]} "
+                          f"(exam_packs/會考/curriculum/{ {'寫作測驗': '國文'}.get(subject[2:], subject[2:]) }.json): "
+                          "copy the code from it")
         elif full and not codes:
             errors.append(f"Q{n}: item_spec.curriculum_codes must name the 108 課綱 國中 codes the item assesses")
         answer = answers.get(q.get("id")) or {}
@@ -88355,7 +96500,13 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             else:
                 sequence.append(domain)
     errors += running_mean_errors(exam, subject, numbered_estimates)
-    errors += unit_errors(subject, choice, full=full)
+    volume_range = (exam.get("metadata") or {}).get("cap_volume_range")
+    errors += unit_errors(subject, choice, full=full, volume_range=volume_range)
+    from cap_units import volume_errors
+    errors += volume_errors(subject, [q for q in exam.get("questions") or [] if isinstance(q, dict)], volume_range)
+    if full and subject == "會考社會":
+        from cap_units import social_grade_errors
+        errors += social_grade_errors(choice, volume_range)
     if not full or not choice:
         return errors
     if combos > COMBO_MAX.get(subject, 1):
@@ -96109,9 +104260,7 @@ def use(title: str, run_dir: Path, output: str, crop: str | None = None, kind: s
     log = json.loads(used.read_text(encoding="utf-8")) if used.is_file() else []
     log.append({"title": row["title"], "page": row["page"], "output": relative(target)})
     used.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
-    return {
-        "visual_asset": {"path": relative(target), "sha256": hashlib.sha256(target.read_bytes()).hexdigest(), "grayscale": True},
-        "visual_spec": {
+    spec = {
             "kind": kind, "generation_mode": "web_source",
             "source_rights": "public_domain" if public else "web_sourced",
             "source_url": row["page"], "source_creator": row["creator"] or "unknown", "source_site": "Wikimedia Commons",
@@ -96121,10 +104270,20 @@ def use(title: str, run_dir: Path, output: str, crop: str | None = None, kind: s
             "crop_description": "full frame" if not crop else f"crop x {box[0]:g}-{box[2]:g}, y {box[1]:g}-{box[3]:g}",
             "processing_steps": [f"downloaded {THUMB_WIDTH} px rendition", *(["cropped"] if crop else []), "grayscale", "JPEG quality 85"],
             "tonal_transform": "grayscale", "min_raster_dpi": dpi,
-        },
+    }
+    width_percent = 60
+    return {
+        "visual_asset": {"path": relative(target), "sha256": hashlib.sha256(target.read_bytes()).hexdigest(), "grayscale": True},
+        "visual_spec": spec,
+        # Paste-ready for a compact record (cap_plan.py save): the figure and its source in one step.
+        "compact_figure": {"path": relative(target), "width_percent": width_percent, "visual_spec": spec},
+        "compact_data_source": {"url": row["page"], "retrieved_at": dt.date.today().isoformat(),
+                                "license": row["license"] or "see source page", "creator": row["creator"] or "unknown",
+                                "pixels": [gray.width, gray.height]},
         "notes": [f"Printed {print_width_cm:g} cm wide it gives {dpi} dpi" + ("" if dpi >= 200 else "; print it narrower"),
                   *(["This image is also in the bundled photo library; a fresher one avoids repeating other papers."]
                     if row["in_bundled_library"] else []),
+                  "Paste compact_figure as the record's \"figure\" and add compact_data_source to its \"data_sources\".",
                   "Fill answer_bearing_features, role, grayscale_review and validation_checks after looking at it.",
                   "Do not print the credit in the booklet; the record above is the attribution."],
     }
@@ -96152,6 +104311,94 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+</canonical-source>
+
+<canonical-source path="templates/cap-item-templates.json">
+{
+  "purpose": "format-only",
+  "notice": "會考精簡寫法（compact record）的完整欄位範本：每個值都是佔位文字或合法值清單，不是題目。把一批 2–4 題寫成這種物件的陣列，存成 items.json，執行 python scripts/cap_plan.py save --plan RUN/plan.json --compact items.json --run-dir RUN（先 lint、再展開、再存檔）。情境、材料與問法每份卷自己設計。",
+  "allowed_values": {
+    "context_type": ["生活情境", "社會議題", "科學探究", "跨領域", "學科知識", "文本閱讀"],
+    "process": ["擷取訊息", "統整解釋", "推論", "應用", "評鑑"],
+    "band": ["簡單", "中", "中偏難", "難"],
+    "unit": {
+      "會考國文": ["語文知識", "詩歌", "文言文本", "白話文學", "資訊與圖表"],
+      "會考英語": ["字彙", "文法", "實用文本", "圖文對話", "記敘文本", "說明文本", "克漏字"],
+      "會考數學": ["數與運算", "二次方根", "數列", "方程式與不等式", "多項式與一元二次方程式", "坐標與函數", "平面幾何",
+                   "相似形與三角形三心", "圓", "立體與空間", "統計", "機率"]
+    },
+    "domain": {"會考社會": ["歷史", "地理", "公民"], "會考自然": ["生物", "理化", "地球科學"]},
+    "volumes": ["第一冊", "第二冊", "第三冊", "第四冊", "第五冊", "第六冊"],
+    "curriculum_codes": "exam_packs/會考/curriculum/<科>.json 裡的國中第四學習階段代碼；數學用 N-7-1 這類年級代碼",
+    "key": ["A", "B", "C", "D"]
+  },
+  "single_choice": {
+    "number": 0,
+    "stem": "<題幹>",
+    "options": ["<選項A>", "<選項B>", "<選項C>", "<選項D>"],
+    "key": "A",
+    "steps": ["<第一步：從材料或已學概念推出什麼>", "<第二步>", "<為什麼選 (A)；(B)(C)(D) 各錯在哪個概念>"],
+    "codes": ["<課綱代碼>"],
+    "volumes": ["第三冊"],
+    "unit": "<數學、國文、英語：plan 給這個題位的單元>",
+    "domain": "<社會、自然：plan 給這個題位的科別>",
+    "context_type": "生活情境",
+    "process": "推論",
+    "anchor": "<這題的真實情境來自哪裡>",
+    "evidence": "<答案怎麼依賴材料的證據>",
+    "prerequisites": ["<推導用到的已學概念>"],
+    "hidden_concept": "<學生要推出、題幹不能出現的概念（社會必填六成以上）>",
+    "bridge": "<混合考點才寫：為什麼答案同時需要兩個概念>",
+    "distractors": {
+      "B": {"misconception": "<這個誘答抓的迷思>", "peer_concept": "<借用的相鄰概念>", "pick": 0.15, "ruled_out_by": "<使它確定錯的定義或證據>"},
+      "C": {"misconception": "<…>", "peer_concept": "<…>", "pick": 0.12, "ruled_out_by": "<…>"},
+      "D": {"misconception": "<…>", "peer_concept": "<…>", "pick": 0.08, "ruled_out_by": "<…>"}
+    },
+    "band": "中",
+    "est_p": 0.6,
+    "est_d": 0.45,
+    "decisions": ["<關鍵判斷一>", "<關鍵判斷二>"],
+    "short_route": "<最短解法>",
+    "misconception": "<主要陷阱>",
+    "bottleneck": ["<難點>"],
+    "minutes": 1.5,
+    "data_sources": [{"url": "https://<宣稱真實資料時才需要>", "retrieved_at": "2026-11-14"}],
+    "figure": {"path": "figures/<檔名>.pdf", "width_percent": 60, "visual_spec": {"kind": "diagram", "semantic_data": {}}}
+  },
+  "figure_options": {
+    "number": 0,
+    "stem": "<題幹>",
+    "images": ["figures/option-A.pdf", "figures/option-B.pdf", "figures/option-C.pdf", "figures/option-D.pdf"],
+    "image_width_pt": 110,
+    "key": "B",
+    "note": "其餘欄位同 single_choice；四張圖用 cap_draw.py options 以同一個框畫"
+  },
+  "group_item": {
+    "number": 0,
+    "material": "<題組共用材料：同一組每題一字不差>",
+    "stem": "<本題題幹>",
+    "options": ["<A>", "<B>", "<C>", "<D>"],
+    "key": "C",
+    "note": "其餘欄位同 single_choice；題組引導語不要寫進 material，排版程式會印"
+  },
+  "math_constructed": {
+    "number": 1,
+    "constructed": true,
+    "stem": "<情境與（1）（2）兩小題>",
+    "answer": "<最後答案摘要>",
+    "steps": ["<步驟一>", "<步驟二>", "<步驟三>"],
+    "rubric": {"3": "<完整正確>", "2": "<主要步驟正確>", "1": "<部分概念正確>", "0": "<空白或錯誤>"},
+    "codes": ["<N-8-4 這類代碼>"],
+    "note": "number 寫 1 或 2，存成第 26、27 題並印「1.」「2.」"
+  },
+  "writing_task": {
+    "number": 1,
+    "stem": "請先閱讀以下資訊，並依據題意要求完成一篇文章。\n<材料>\n<兩三個思考問題>，請結合你的經驗或見聞，寫下對此的<感受、想法或觀察>。\n※不必訂題\n※不可在文中洩漏私人身分\n※不可使用詩歌體",
+    "answer": "依六級分規準評閱",
+    "steps": ["<審題與取材引導>", "立意取材：<各級分表現>", "結構組織：<…>", "遣詞造句：<…>", "錯別字、格式與標點符號：<…>"],
+    "codes": ["<國語文寫作相關代碼>"]
+  }
+}
 </canonical-source>
 
 <canonical-source path="templates/cap-review-templates.json">

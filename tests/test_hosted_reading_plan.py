@@ -73,7 +73,14 @@ def test_reading_plan_is_scoped_lossless_and_references_json_only(subject,tmp_pa
     manifest,full=read_chunks(tmp_path,result)
     assert result['selected_record_bytes']==0
     assert 'SKILL.md' not in manifest['embedded_sources']
-    assert 'references/hosted-execution.md' in manifest['embedded_sources']
+    cap = subject.startswith('會考')
+    # 會考 reads its own short route (card, shared form, subject guide, workflow), not the 學測 chapters.
+    if cap:
+        assert {'references/cap-execution-card.md', 'references/current-cap-form.md',
+                'references/cap-workflow.md'} <= set(manifest['embedded_sources'])
+        assert 'references/hosted-execution.md' not in manifest['embedded_sources']
+    else:
+        assert 'references/hosted-execution.md' in manifest['embedded_sources']
     assert 'references/pack-and-release-verification.md' not in manifest['embedded_sources']
     assert all(not path.endswith('.json') for path in manifest['embedded_sources'])
     for reference in manifest['json_references']:
@@ -88,7 +95,7 @@ def test_reading_plan_is_scoped_lossless_and_references_json_only(subject,tmp_pa
     authoring=''.join(full['authoring'])
     assert 'schemas/exam.schema.json' in authoring and 'schemas/answer.schema.json' in authoring
     assert 'schemas/question.schema.json' not in authoring
-    assert 'references/difficulty-field-contract.md' in authoring
+    assert cap or 'references/difficulty-field-contract.md' in authoring
     assert '/curricula/99' not in authoring
     assert f'templates/hosted-{LAYOUT_SLUGS[subject]}-questions.json' in full['layout']
     assert (tmp_path/'scripts/check_hosted_run.py').read_bytes()==entries['scripts/check_hosted_run.py'][1]

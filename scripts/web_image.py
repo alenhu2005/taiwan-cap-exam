@@ -129,9 +129,7 @@ def use(title: str, run_dir: Path, output: str, crop: str | None = None, kind: s
     log = json.loads(used.read_text(encoding="utf-8")) if used.is_file() else []
     log.append({"title": row["title"], "page": row["page"], "output": relative(target)})
     used.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
-    return {
-        "visual_asset": {"path": relative(target), "sha256": hashlib.sha256(target.read_bytes()).hexdigest(), "grayscale": True},
-        "visual_spec": {
+    spec = {
             "kind": kind, "generation_mode": "web_source",
             "source_rights": "public_domain" if public else "web_sourced",
             "source_url": row["page"], "source_creator": row["creator"] or "unknown", "source_site": "Wikimedia Commons",
@@ -141,10 +139,20 @@ def use(title: str, run_dir: Path, output: str, crop: str | None = None, kind: s
             "crop_description": "full frame" if not crop else f"crop x {box[0]:g}-{box[2]:g}, y {box[1]:g}-{box[3]:g}",
             "processing_steps": [f"downloaded {THUMB_WIDTH} px rendition", *(["cropped"] if crop else []), "grayscale", "JPEG quality 85"],
             "tonal_transform": "grayscale", "min_raster_dpi": dpi,
-        },
+    }
+    width_percent = 60
+    return {
+        "visual_asset": {"path": relative(target), "sha256": hashlib.sha256(target.read_bytes()).hexdigest(), "grayscale": True},
+        "visual_spec": spec,
+        # Paste-ready for a compact record (cap_plan.py save): the figure and its source in one step.
+        "compact_figure": {"path": relative(target), "width_percent": width_percent, "visual_spec": spec},
+        "compact_data_source": {"url": row["page"], "retrieved_at": dt.date.today().isoformat(),
+                                "license": row["license"] or "see source page", "creator": row["creator"] or "unknown",
+                                "pixels": [gray.width, gray.height]},
         "notes": [f"Printed {print_width_cm:g} cm wide it gives {dpi} dpi" + ("" if dpi >= 200 else "; print it narrower"),
                   *(["This image is also in the bundled photo library; a fresher one avoids repeating other papers."]
                     if row["in_bundled_library"] else []),
+                  "Paste compact_figure as the record's \"figure\" and add compact_data_source to its \"data_sources\".",
                   "Fill answer_bearing_features, role, grayscale_review and validation_checks after looking at it.",
                   "Do not print the credit in the booklet; the record above is the attribution."],
     }

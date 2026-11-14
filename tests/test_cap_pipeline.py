@@ -28,6 +28,9 @@ from verify_fixed_template_pdf import verify_pdf
 CAP_MAP_DATA = json.loads(CAP_MAP.read_text(encoding='utf-8'))
 RECORDS = {r['subject']: r for r in CAP_MAP_DATA['subjects']}
 PLACEHOLDER = '合成題幹，用於測試會考版面。'
+# Real 108 課綱 codes per subject (exam_packs/會考/curriculum/), two strands each for 混合考點.
+FIXTURE_CODES = {'會考國文': ['Ad-IV-1', 'Ab-IV-1'], '會考英語': ['Ae-IV-1', 'Ad-IV-1'], '會考數學': ['N-7-1', 'S-7-1'],
+                 '會考社會': ['歷Ba-IV-1', '地Aa-IV-1'], '會考自然': ['Ea-IV-1', 'Mb-IV-2'], '會考寫作測驗': ['Ad-IV-1']}
 COMPETENCY = {'context_type': '生活情境', 'process': '推論', 'real_world_anchor': '合成情境錨點',
               'evidence_link': '合成：答案取決於材料中的證據', 'prerequisite_knowledge': ['合成先備概念']}
 
@@ -164,9 +167,9 @@ def cap_paper(key, root):
              'prompt': f'{stem}（{n}）', 'options': [{'label': c, 'text': f'合成選項{c}{n}'} for c in 'ABCD'],
              'item_spec': {'cap_competency': competency,
                            **({'cap_unit': units[n]} if key in ('會考數學', '會考國文', '會考英語') else {}),
-                           'curriculum_codes': ['Ea-IV-1', 'Mb-IV-2'] if n % 4 == 0 else ['Ea-IV-1'],
+                           'curriculum_codes': FIXTURE_CODES[key][:2] if n % 4 == 0 else FIXTURE_CODES[key][:1],
                            'textbook_volumes': [('第一冊', '第二冊', '第三冊', '第四冊', '第五冊', '第六冊')[n % 6]]
-                                                if key == '會考自然' else ['第三冊'],
+                                                if key in ('會考自然', '會考社會') else ['第三冊'],
                            'cap_distractors': {c: {'misconception': '合成迷思', 'peer_concept': '合成相鄰概念',
                                                    'expected_pick_rate': 0.12, 'ruled_out_by': '合成：課本定義排除'}
                                                for c in 'ABCD' if c != key_label},
@@ -424,6 +427,7 @@ def test_cap_solutions_print_codes_and_likely_volume(tmp_path):
     from cap_plan import textbook_volumes
     exam = cap_paper('會考社會', tmp_path)
     exam['questions'][0]['item_spec']['curriculum_codes'] = ['歷Ha-IV-1', '地Ab-IV-2']
+    exam['questions'][0]['item_spec']['textbook_volumes'] = ['第三冊']
     _, solutions = workflow.project_specs(exam, {}, 459.7)
     first = next(b for b in solutions['blocks'] if b.get('kind') == 'solution')
     assert first['steps'][0] == '課綱：歷Ha-IV-1、地Ab-IV-2；可能出處：第三冊（八上）'

@@ -26,3 +26,14 @@ remains niansia's; this distribution is not the official upstream release.
 國中教育會考 booklets and statistics belong to their publisher (國立臺灣師範大學心理與教育
 測驗研究發展中心); this project ships only aggregate measurements and document hashes, not
 the booklets themselves.
+
+Third-party data bundled for 會考 papers
+----------------------------------------
+- exam_packs/會考/maps/taiwan-counties.json: simplified from 內政部國土測繪中心
+  「直轄市、縣(市)界線(TWD97經緯度)」(version 1140318, https://data.gov.tw/dataset/7442),
+  used under 政府資料開放授權條款－第1版 (compatible with CC BY 4.0). Source: 內政部國土測繪中心.
+- exam_packs/會考/maps/world-countries.json and east-asia-countries.json: simplified from
+  Natural Earth 1:50m Admin 0 – Countries (public domain), https://www.naturalearthdata.com/.
+- exam_packs/會考/curriculum/*.json: codes and learning-content statements extracted from
+  十二年國民基本教育課程綱要 (教育部發布；國家教育研究院 https://www.naer.edu.tw/), each file
+  records its source document, download date and SHA-256.

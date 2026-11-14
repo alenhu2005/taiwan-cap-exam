@@ -333,7 +333,13 @@ def validate_items(exam: dict, *, full: bool = True, asset_root: Path | None = N
             else:
                 sequence.append(domain)
     errors += running_mean_errors(exam, subject, numbered_estimates)
-    errors += unit_errors(subject, choice, full=full)
+    volume_range = (exam.get("metadata") or {}).get("cap_volume_range")
+    errors += unit_errors(subject, choice, full=full, volume_range=volume_range)
+    from cap_units import volume_errors
+    errors += volume_errors(subject, [q for q in exam.get("questions") or [] if isinstance(q, dict)], volume_range)
+    if full and subject == "會考社會":
+        from cap_units import social_grade_errors
+        errors += social_grade_errors(choice, volume_range)
     if not full or not choice:
         return errors
     if combos > COMBO_MAX.get(subject, 1):

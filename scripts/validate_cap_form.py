@@ -86,6 +86,24 @@ def writing_task_errors(task: dict, answer: dict) -> list[str]:
     return errors
 
 
+CURRICULUM = ROOT / "exam_packs" / "會考" / "curriculum"
+_CODE_TABLES: dict[str, set] = {}
+
+
+def code_table(subject: str) -> set[str]:
+    """The subject's 108 課綱 第四學習階段 codes (學習內容 and 學習表現), from exam_packs/會考/curriculum/."""
+    name = {"寫作測驗": "國文"}.get(subject[2:], subject[2:])
+    if name not in _CODE_TABLES:
+        path = CURRICULUM / f"{name}.json"
+        data = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+        _CODE_TABLES[name] = {row["code"] for key in ("content", "performance") for row in data.get(key) or []}
+    return _CODE_TABLES[name]
+
+
+def normal_code(code) -> str:
+    return str(code).strip().replace("Ⅳ", "IV").replace("－", "-").replace("–", "-")
+
+
 def full_paper_minimum(subject: str) -> int:
     if subject == "會考寫作測驗":
         return 1
@@ -166,11 +184,17 @@ def validate_exam(exam: dict, *, full: bool = True, asset_root: Path | None = No
         level = "會考"
     for q in [*choice, *constructed]:
         n = q.get("number")
-        codes = (q.get("item_spec") or {}).get("curriculum_codes") or []
-        outside = [c for c in codes if not STAGE_IV_CODE.match(str(c).strip())]
+        codes = [normal_code(c) for c in (q.get("item_spec") or {}).get("curriculum_codes") or []]
+        outside = [c for c in codes if not STAGE_IV_CODE.match(c)]
+        table = code_table(subject)
+        unknown = [c for c in codes if c not in outside and table and c not in table]
         if outside:
             errors.append(f"Q{n}: curriculum codes {outside} are not 國中 第四學習階段 codes; no level may go beyond the "
                           "國中 curriculum")
+        elif unknown:
+            errors.append(f"Q{n}: curriculum codes {unknown} are not in the 108 課綱 table for {subject[2:]} "
+                          f"(exam_packs/會考/curriculum/{ {'寫作測驗': '國文'}.get(subject[2:], subject[2:]) }.json): "
+                          "copy the code from it")
         elif full and not codes:
             errors.append(f"Q{n}: item_spec.curriculum_codes must name the 108 課綱 國中 codes the item assesses")
         answer = answers.get(q.get("id")) or {}

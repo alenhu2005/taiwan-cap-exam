@@ -52,8 +52,14 @@ def timing_errors(report, paper_id):
     return errors
 
 
+# Writing a batch of 2-4 items takes longer than five minutes of silence between saves; a 54-item
+# 會考社會 run logged 13.4 hours as unobserved. Authoring gets a longer threshold; tools still log
+# every save as activity.
+PHASE_IDLE_SECONDS = {'authoring': 1200}
+
+
 def transition(path, paper_id, phase=None, *, action=None, question_ids=None,
-               page_numbers=None, revision_id=None, idle_seconds=IDLE_SECONDS):
+               page_numbers=None, revision_id=None, idle_seconds=None):
     path = Path(path)
     now = time.time()
     action = action or ('phase' if phase else 'finish')
@@ -61,6 +67,10 @@ def transition(path, paper_id, phase=None, *, action=None, question_ids=None,
         raise ValueError('Unknown clock action')
     if (action == 'phase' and phase not in PHASES) or (phase is not None and phase not in PHASES):
         raise ValueError('Unknown phase')
+    if idle_seconds is None:
+        known = json.loads(path.read_text(encoding='utf-8-sig')) if path.exists() else {}
+        upcoming = phase or ((known.get('active') or known.get('paused') or {}).get('phase')) or known.get('last_phase')
+        idle_seconds = PHASE_IDLE_SECONDS.get(upcoming, IDLE_SECONDS)
     if not finite(idle_seconds) or idle_seconds <= 0:
         raise ValueError('Idle threshold must be positive and finite')
     report = json.loads(path.read_text(encoding='utf-8-sig')) if path.exists() else {

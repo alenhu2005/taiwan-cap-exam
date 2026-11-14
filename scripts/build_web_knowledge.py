@@ -17,6 +17,7 @@ AUTHORING_REFERENCES = {
     "cap-execution-card.md",
     "current-cap-form.md",
     "cap-chinese.md", "cap-english.md", "cap-math.md", "cap-social.md", "cap-science.md", "cap-writing.md",
+    "cap-workflow.md", "cap-data-sources.md",
     "current-form-literacy-load.md",
     "current-form-topicality.md",
     "current-gsat-chinese-natural-form.md",
@@ -124,6 +125,9 @@ def source_paths(root: Path = ROOT) -> list[Path]:
     paths.append(root / "scripts" / "cap_plan.py")
     paths.append(root / "scripts" / "cap_units.py")
     paths.append(root / "scripts" / "cap_draw.py")
+    paths.append(root / "scripts" / "cap_batch.py")
+    paths.append(root / "scripts" / "cap_charts.py")
+    paths.append(root / "scripts" / "cap_review_book.py")
     paths.append(root / "scripts" / "hosted_auto_review.py")
     paths.append(root / "scripts" / "web_image.py")
     paths.append(root / "scripts" / "cap_figure.py")
@@ -141,6 +145,8 @@ def source_paths(root: Path = ROOT) -> list[Path]:
             paths.append(pack_root / "metadata" / "hosted-page-metrics.json")
             paths.append(pack_root / "metadata" / "official-item-fingerprints.json")
         paths.extend(sorted((pack_root / "shared-data").glob("*.json")))
+        paths.extend(sorted((pack_root / "curriculum").glob("*.json")))   # 會考: 108 課綱 國中 code tables
+        paths.extend(sorted((pack_root / "maps").glob("*.json")))         # 會考: simplified base maps
         paths.extend(sorted((pack_root / "templates").rglob("*.json")))
         paths.extend(sorted((pack_root / "subjects").glob("*/subject.json")))
         paths.extend(sorted((pack_root / "subjects").glob("*/blueprints/writer-blueprint.json")))

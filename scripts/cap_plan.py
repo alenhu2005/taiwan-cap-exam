@@ -5,6 +5,8 @@
   item   --subject 會考社會 --number 12 [--level 高]                          → one pending item and answer
   check  plan.json                                                           → plan problems before authoring
   expand --plan plan.json --compact items.json --run-dir RUN --output batch.json → full batch for append_items.py
+  lint   --plan plan.json --compact items.json [--run-dir RUN]                → the batch's problems in seconds
+  save   --plan plan.json --compact items.json --run-dir RUN [--replace]      → lint + expand + append in one step
 
 Targets come from exam_packs/會考 (official 通過率 and 鑑別度 by position, 115 sections and 題組).
 A level above 會考 lowers the target pass rate; it never widens the curriculum.
@@ -258,7 +260,8 @@ def constructed_labels(n: int) -> dict:
     return {"number_display": f"{n}.", "answer_label": f"非選擇題第{n}題"}
 
 
-def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", seed: str | None = None) -> dict:
+def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", seed: str | None = None,
+         volumes=None) -> dict:
     """A fresh random seed per plan unless one is given: two papers never share a topic draw,
     even with the same paper_id; the seed is saved so the same paper resumes with the same draw."""
     seed = seed or secrets.token_hex(8)
@@ -266,7 +269,11 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
         raise ValueError(f"subject must be one of {SUBJECTS}; level one of {LEVELS}")
     current = form(subject)["current_form"]
     name = TITLES.get(subject, subject[2:] + "科")
-    metadata = {"paper_id": paper_id, "title": f"{year}年國中教育會考模擬試題 {name}", "exam": "會考",
+    from cap_units import FULL_RANGE, parse_volumes, volume_label
+    volume_range = parse_volumes(volumes)
+    scope = "" if volume_range == FULL_RANGE or subject == "會考寫作測驗" else f"（{volume_label(volume_range)}）"
+    metadata = {"paper_id": paper_id, "title": f"{year}年國中教育會考模擬試題 {name}{scope}", "exam": "會考",
+                "cap_volume_range": list(volume_range),
                 "subject": subject, "curriculum": "108", "generation_mode": "full-paper",
                 "calibration_level": "official-113-115-structure-and-item-pass-rates",
                 "cap_difficulty_level": level, "duration_minutes": current["duration_minutes"],
@@ -299,7 +306,7 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
             for slot, suggested in math_forms(slots, seed):
                 slot["suggested_form"] = suggested
         # Official unit coverage (cap_units.py): every paper starts inside the 113-115 ranges.
-        units = unit_schedule(subject, slots, seed)
+        units = unit_schedule(subject, slots, seed, volume_range)
         for slot in slots:
             unit = units.get(slot["number"])
             if subject == "會考自然" and unit:
@@ -307,6 +314,11 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
             elif unit:
                 slot["unit"] = unit
             pool = FOCUS.get(slot.get("domain") or subject)
+            if pool and subject == "會考社會" and volume_range != FULL_RANGE:
+                grades = {"七年級": {1, 2}, "八年級": {3, 4}, "九年級": {5, 6}}
+                span = set(range(volume_range[0], volume_range[1] + 1))
+                pool = tuple(f for f in pool if not any(f.startswith(g) for g in grades)
+                             or any(f.startswith(g) and v & span for g, v in grades.items())) or pool
             if subject == "會考自然":
                 pool = tuple(f for f in FOCUS["會考自然"] if f.startswith(slot.get("domain", "")) or f.startswith("跨科"))
             if pool and subject != "會考數學":
@@ -315,7 +327,7 @@ def plan(subject: str, paper_id: str, year: str = "116", level: str = "會考", 
         subject_forms(subject, slots, seed)
         if subject == "會考自然":
             from cap_units import science_volumes
-            science_volumes(slots)   # every 國中 volume appears, as 113-115 cover all six
+            science_volumes(slots, volume_range)   # every volume in range appears, as 113-115 cover all six
         for n in range(1, current.get("constructed_items", 0) + 1):
             slots.append({"number": count + n, **constructed_labels(n), "type": "constructed_response",
                           "section_id": constructed_section(subject), "rubric": "0-3 級分"})
@@ -421,19 +433,22 @@ def expand(plan_data: dict, compact: list[dict], run_dir: Path) -> dict:
     sha = lambda p: hashlib.sha256((run_dir / p).read_bytes()).hexdigest()
     questions, answers, leaders, reordered = [], [], {}, {}
     for row in compact:
-        kind = "constructed_response" if row.get("constructed") else "single_choice"
+        kind = ("guided_writing" if subject == "會考寫作測驗" else
+                "constructed_response" if row.get("constructed") else "single_choice")
         number = row["number"]
         if kind == "constructed_response" and number <= choice_count:
             number = choice_count + number   # 非選擇題 1 → saved as 26 (printed 「1.」)
         slot = slots.get((number, kind), {})
         printed = number - choice_count if kind == "constructed_response" else number
-        qid = row.get("id") or (f"q{number}" if kind == "single_choice" else f"c{printed}")
+        qid = row.get("id") or (f"q{number}" if kind == "single_choice" else "w1" if kind == "guided_writing" else f"c{printed}")
         q = {"id": qid, "number": number, "type": kind,
              "section_id": row.get("section") or slot.get("section_id") or "s1", "prompt": row["stem"]}
         if row.get("material"):
             q["group_stimulus"] = row["material"]
         if kind == "constructed_response":
             q.update(constructed_labels(printed))
+        elif kind == "guided_writing":
+            q["number_display"] = ""
         elif row.get("images"):
             q["inline_assets"] = {f"{qid}{c}": {"path": p, "width_pt": row.get("image_width_pt", 120), "sha256": sha(p)}
                                   for c, p in zip("ABCD", row["images"])}
@@ -482,7 +497,7 @@ def expand(plan_data: dict, compact: list[dict], run_dir: Path) -> dict:
             reordered[qid] = row["sorted_options"]
         answer = {"question_id": qid, "final_answer": row.get("key") or row.get("answer"), "difficulty_label": band,
                   "reasoning": row.get("steps") or []}
-        if kind == "constructed_response":
+        if kind in ("constructed_response", "guided_writing") and row.get("rubric"):
             answer["rubric"] = row.get("rubric")
         answers.append(answer)
     batch = {"questions": questions, "answers": answers}
@@ -514,6 +529,63 @@ def sort_numeric_options(row: dict, question: dict) -> dict:
     row["steps"] = [relabel(step) for step in row.get("steps") or []]
     row["sorted_options"] = mapping
     return row
+
+
+def lint(plan_data: dict, compact: list[dict], run_dir: Path | None = None) -> dict:
+    """Seconds-fast checks of a compact batch before anything is saved or printed.
+
+    A 54-item 會考社會 run fixed option lengths, absolute words and option columns for the whole
+    paper after it was written; the same validators run here on the batch alone."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from validate_cap_form import validate_exam
+    from validate_cap_quality import validate_items
+    from run_hosted_workflow import option_columns
+    root = Path(run_dir).resolve() if run_dir else Path.cwd()
+    try:
+        batch = expand(plan_data, compact, root)
+    except (OSError, KeyError, TypeError, ValueError) as exc:
+        return {"status": "fix", "errors": [f"cannot expand: {exc}"]}
+    batch.pop("options_reordered", None)
+    exam = {"metadata": dict(plan_data.get("metadata") or {}), "sections": plan_data.get("sections") or [],
+            "questions": batch["questions"], "answers": batch["answers"]}
+    errors = [e for e in validate_exam(exam, full=False) + validate_items(exam, full=False, asset_root=root)
+              if not e.startswith("running mean")]
+    subject = exam["metadata"].get("subject")
+    layout = {}
+    for q in batch["questions"]:
+        if q.get("options"):
+            columns = option_columns(q, subject)
+            if columns == 1:
+                layout[q["id"]] = "options print one per line (long options); shorten them or set option_layout"
+    return {"status": "fix" if errors else "ok", "items": [q["id"] for q in batch["questions"]],
+            "errors": errors, **({"layout_notes": layout} if layout else {})}
+
+
+def save(plan_path: Path, compact: list[dict], run_dir: Path, *, replace: bool = False) -> dict:
+    """One step per batch: lint, expand, then append_items (which shrinks figures, checks this batch's
+    figures, writes previews, syncs the review book and checkpoints the run and its clock)."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from append_items import append
+    plan_data = json.loads(Path(plan_path).read_text(encoding="utf-8"))
+    run_dir = Path(run_dir).resolve()
+    checked = lint(plan_data, compact, run_dir)
+    if checked["status"] != "ok" and any(e.startswith("cannot expand") for e in checked["errors"]):
+        return {"status": "pending", "lint": checked}
+    batch = expand(plan_data, compact, run_dir)
+    reordered = batch.pop("options_reordered", None)
+    batches = run_dir / "batches"
+    batches.mkdir(exist_ok=True)
+    target = batches / f"batch-{len(list(batches.glob('batch-*.json'))) + 1:02d}.json"
+    target.write_text(json.dumps(batch, ensure_ascii=False, indent=2), encoding="utf-8")
+    try:
+        saved = append(run_dir, target, plan=plan_path, replace=replace)
+    except (OSError, ValueError, KeyError, TypeError, RuntimeError) as exc:
+        return {"status": "pending", "batch": str(target), "lint": checked, "errors": [str(exc)]}
+    keep = ("status", "question_count", "changed_item_ids", "subject_gate_pending", "design_fields_pending",
+            "figures_shrunk", "figure_check", "figure_previews", "review_book", "proof_recommended", "next_action",
+            "plan_updated")
+    return {"batch": str(target), "lint": checked, **({"options_reordered": reordered} if reordered else {}),
+            **{k: saved[k] for k in keep if k in saved}}
 
 
 def check(plan_data: dict) -> list[str]:
@@ -548,20 +620,32 @@ def main() -> int:
     p = sub.add_parser("plan"); p.add_argument("--subject", required=True, choices=SUBJECTS)
     p.add_argument("--paper-id", required=True); p.add_argument("--year", default="116")
     p.add_argument("--level", default="會考", choices=LEVELS); p.add_argument("--output", type=Path)
+    p.add_argument("--volumes", default="1-6", help="出題範圍（冊別），例如 1-4；預設 1-6（第一冊＝七上 … 第六冊＝九下）")
     p.add_argument("--seed", help="reuse a saved variety_seed (resuming the same paper); omit for a new draw")
     i = sub.add_parser("item"); i.add_argument("--subject", required=True, choices=SUBJECTS)
     i.add_argument("--number", type=int, required=True); i.add_argument("--level", default="會考", choices=LEVELS)
     i.add_argument("--constructed", action="store_true", help="數學 非選擇題 slot")
     c = sub.add_parser("check"); c.add_argument("plan", type=Path)
+    li = sub.add_parser("lint", help="check a compact batch in seconds, before saving")
+    li.add_argument("--plan", type=Path, required=True); li.add_argument("--compact", type=Path, required=True)
+    li.add_argument("--run-dir", type=Path)
+    sv = sub.add_parser("save", help="lint + expand + append_items in one step (the usual way to save a batch)")
+    sv.add_argument("--plan", type=Path, required=True); sv.add_argument("--compact", type=Path, required=True)
+    sv.add_argument("--run-dir", type=Path, required=True); sv.add_argument("--replace", action="store_true")
     e = sub.add_parser("expand", help="compact authoring records → full append_items batch")
     e.add_argument("--plan", type=Path, required=True); e.add_argument("--compact", type=Path, required=True)
     e.add_argument("--run-dir", type=Path, required=True); e.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "plan":
-        result = plan(args.subject, args.paper_id, args.year, args.level, args.seed)
+        result = plan(args.subject, args.paper_id, args.year, args.level, args.seed, args.volumes)
         if args.output:
             args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
             result = {"status": "plan-written", "output": str(args.output), "check": check(result)}
+    elif args.command == "lint":
+        result = lint(json.loads(args.plan.read_text(encoding="utf-8")),
+                      json.loads(args.compact.read_text(encoding="utf-8")), args.run_dir)
+    elif args.command == "save":
+        result = save(args.plan, json.loads(args.compact.read_text(encoding="utf-8")), args.run_dir, replace=args.replace)
     elif args.command == "item":
         result = item(args.subject, args.number, args.level, "constructed_response" if args.constructed else "single_choice")
     elif args.command == "expand":

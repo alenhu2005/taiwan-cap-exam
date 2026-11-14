@@ -215,9 +215,40 @@ def check_figures(state_path):
     if not state.get('exam'):
         raise ValueError('Checkpoint the exam before checking figures')
     exam = read(inside(root, root / state['exam']['path']))
-    result = figure_selfcheck(root, exam, asset_issues=asset_issues)
-    result['state'] = str(state_path)
-    event(root, 'check-figures', started, errors=result['errors'], warnings=result['warnings'])
+    # Each figure is opened once per content: a 會考社會 run re-scanned all its figures after every batch
+    # and read the same findings 23 times. Findings of unchanged figures come from figure-check-cache.json.
+    cache_path = root / 'figure-check-cache.json'
+    cache = read(cache_path) if cache_path.is_file() else {}
+    def key(question):
+        assets = [question.get('visual_asset')] + list((question.get('inline_assets') or {}).values())
+        return '|'.join(sorted(f"{a.get('path')}#{a.get('sha256')}" for a in assets if isinstance(a, dict) and a.get('path')))
+    answers = {a.get('question_id'): a for a in exam.get('answers') or []}
+    fresh = [q for q in exam.get('questions') or []
+             if key(q) and cache.get(q.get('id'), {}).get('key') != key(q) + '|' + key(answers.get(q.get('id')) or {})]
+    subset = {**exam, 'questions': fresh, 'answers': [answers[q['id']] for q in fresh if q.get('id') in answers]}
+    checked = figure_selfcheck(root, subset, asset_issues=asset_issues)
+    for q in fresh:
+        cache[q['id']] = {'key': key(q) + '|' + key(answers.get(q.get('id')) or {}),
+                          'figures': [f for f in checked['figures']
+                                      if f['referenced_by'].startswith((f"item {q['id']}.", f"item {q['id']} "))]}
+    current = {q.get('id') for q in exam.get('questions') or [] if key(q)}
+    cache = {qid: row for qid, row in cache.items() if qid in current}
+    save(cache_path, cache)
+    figures = [f for row in cache.values() for f in row['figures']]
+    paths = {}
+    for q in exam.get('questions') or []:
+        for a in [q.get('visual_asset')] + list((q.get('inline_assets') or {}).values()):
+            if isinstance(a, dict) and a.get('sha256'):
+                paths.setdefault(a['sha256'], set()).add(a.get('path'))
+    duplicates = sorted(', '.join(sorted(v)) for v in paths.values() if len(v) > 1)
+    errors = sum(len(f['errors']) for f in figures)
+    result = {'status': 'pass' if not errors else 'pending', 'figures': [f for f in figures if f['errors'] or f['warnings']],
+              'figure_count': len(figures), 'errors': errors, 'warnings': sum(len(f['warnings']) for f in figures),
+              'checked_now': [q['id'] for q in fresh], 'reused_from_cache': sorted(current - {q['id'] for q in fresh}),
+              **({'duplicate_bytes': duplicates} if duplicates else {}), 'note': checked.get('note'),
+              'state': str(state_path)}
+    event(root, 'check-figures', started, errors=result['errors'], warnings=result['warnings'],
+          checked_now=len(fresh))
     return result
 
 
@@ -2062,6 +2093,37 @@ def advance(state_path, year=None):
             'build': {k: built.get(k) for k in ('status', 'review_batches', 'iteration_budget') if k in built}}
 
 
+def review_book(state_path):
+    """Sync review-book.json (one review record per item) with the saved exam."""
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    if not state.get('exam'):
+        raise ValueError('Save items first (append_items.py) before syncing the review book')
+    from cap_review_book import sync
+    result = sync(root, read(inside(root, root / state['exam']['path'])))
+    event(root, 'review-book', started, pending=len(result['pending']))
+    return {'status': 'synced', **result}
+
+
+def compile_reviews(state_path):
+    """Write the five item and source reports from a complete review book, then register them."""
+    started = time.time()
+    state_path = Path(state_path).resolve()
+    root = state_path.parent
+    state = read(state_path)
+    exam_path = inside(root, root / state['exam']['path'])
+    if record(root, exam_path) != state['exam']:
+        raise ValueError('Checkpoint the current exam before compiling reviews')
+    from cap_review_book import compile_reports
+    result = compile_reports(root, read(exam_path), exam_path)
+    event(root, 'compile-reviews', started, status=result['status'])
+    if result['status'] == 'compiled':
+        checkpoint(root, state=state_path)
+    return result
+
+
 def run_auto_review(state_path, gates=None):
     from hosted_auto_review import GATES, auto_review
     return auto_review(state_path, tuple(gates) if gates else GATES)
@@ -2134,6 +2196,11 @@ def main():
     advance_parser = commands.add_parser('advance', help='Preset workflow: run the next mechanical steps, stop where an author must act')
     advance_parser.add_argument('--state', type=Path, required=True)
     advance_parser.add_argument('--year')
+    book_parser = commands.add_parser('review-book', help='Sync review-book.json: one review record per saved item')
+    book_parser.add_argument('--state', type=Path, required=True)
+    compile_parser = commands.add_parser('compile-reviews', help='Write answers/originality/visuals/difficulty/'
+                                         'source_grounding from a complete review book')
+    compile_parser.add_argument('--state', type=Path, required=True)
     status_parser = commands.add_parser('status', help='Short resume summary; writes NEXT.md')
     status_parser.add_argument('--state', type=Path, required=True)
     args = vars(parser.parse_args())
@@ -2150,6 +2217,7 @@ def main():
             result = {'build': build, 'specs': specs, 'proof': proof, 'plan': plan, 'finalize': finalize,
                       'clock': clock, 'lock-content': content_lock, 'refresh-evidence': refresh_evidence,
                       'check-figures': check_figures, 'status': status, 'auto-review': run_auto_review,
+                      'review-book': review_book, 'compile-reviews': compile_reviews,
                       'advance': advance}[action](**args)
     except (OSError, ValueError, KeyError, RuntimeError) as exc:
         print(json.dumps({'status': 'pending', 'errors': [str(exc)]}, ensure_ascii=False))

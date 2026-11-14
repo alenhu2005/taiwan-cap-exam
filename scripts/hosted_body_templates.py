@@ -943,6 +943,26 @@ def _chunk(block,key,units,head,tail):
     return chunk
 
 
+SUBSET_ABOVE_BYTES = 3_000_000
+
+
+def subset_body_fonts(raw):
+    """Embed only the glyphs a body prints. Every proof, plan and build body carried the whole CJK font
+    (18-19 MB for two pages) until finalize; keep the subset only if every page's text and pixels match."""
+    if len(raw)<=SUBSET_ABOVE_BYTES:
+        return raw
+    try:
+        with pymupdf.open(stream=raw,filetype='pdf') as doc:
+            before=[(page.get_text(),page.get_pixmap(alpha=False).samples) for page in doc]
+            doc.subset_fonts()
+            compact=doc.tobytes(garbage=4,deflate=True,no_new_id=True)
+        with pymupdf.open(stream=compact,filetype='pdf') as check:
+            same=[(page.get_text(),page.get_pixmap(alpha=False).samples) for page in check]==before
+        return compact if same and len(compact)<len(raw) else raw
+    except Exception:  # noqa: BLE001 - any subsetter failure keeps the rendered bytes
+        return raw
+
+
 def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_font=None,
            balance_last_page=True, progress_path=None, kai_font=None):
     started=time.monotonic()
@@ -1253,6 +1273,7 @@ def render(spec, output, layout_path, font, *, asset_root, proof=False, reading_
                     raw,parts,pages,count,fill=attempt;best=candidate;pagination=f'balanced-{slack:g}'
                     best_voids=voids(pages,count)
         output.parent.mkdir(parents=True,exist_ok=True)
+        raw=subset_body_fonts(raw)
         output.write_bytes(raw)
     finally:
         for measured in measurements:measured.close()

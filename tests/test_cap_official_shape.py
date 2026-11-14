@@ -263,3 +263,97 @@ def test_each_subject_reads_only_its_own_guide():
         assert guide in SUBJECT_REFERENCES[subject]
         assert not (set(guides.values()) - {guide}) & SUBJECT_REFERENCES[subject]
         assert (ROOT / 'references' / guide).is_file()
+
+
+def test_a_paper_can_be_limited_to_some_volumes(tmp_path):
+    plan = cap_plan.plan('會考數學', 'p', seed='v', volumes='1-2')
+    assert plan['metadata']['cap_volume_range'] == [1, 2] and plan['metadata']['title'].endswith('（第一～二冊）')
+    units = {s['unit'] for s in plan['planning_slots'] if s['type'] == 'single_choice'}
+    assert units <= cap_units.allowed_units('會考數學', (1, 2)) and '圓' not in units
+    assert cap_plan.plan('會考數學', 'p', seed='v')['metadata']['cap_volume_range'] == [1, 6]
+    assert cap_units.parse_volumes('第1～4冊') == (1, 4) and cap_units.parse_volumes(None) == (1, 6)
+    science = cap_plan.plan('會考自然', 'p', seed='v', volumes='1-2')['planning_slots']
+    assert {s['domain'] for s in science if s['type'] == 'single_choice'} == {'生物'}
+    exam = cap_paper('會考數學', tmp_path)
+    exam['metadata']['cap_volume_range'] = [1, 2]
+    errors = ' '.join(cap_units.volume_errors('會考數學', exam['questions'], (1, 2)))
+    assert 'outside the paper' in errors and 'grade 8' in errors
+    assert cap_units.volume_errors('會考數學', exam['questions'], (1, 6)) == []
+
+
+def test_the_review_book_compiles_the_five_reports(tmp_path):
+    import cap_review_book as book
+    exam = cap_paper('會考數學', tmp_path)
+    exam_path = tmp_path / 'exam.json'
+    exam_path.write_text(json.dumps(exam, ensure_ascii=False), encoding='utf-8')
+    first = book.sync(tmp_path, exam)
+    assert len(first['added']) == len(exam['questions']) and first['pending']
+    assert book.compile_reports(tmp_path, exam, exam_path)['status'] == 'pending'
+    data = json.loads((tmp_path / book.BOOK).read_text(encoding='utf-8'))
+    for row in data['items']:
+        for name in book.SECTIONS:
+            if row[name]['status'] != 'not_applicable':
+                row[name].update(status='pass', observations=f'合成審查 {row["id"]} {name}')
+        row['difficulty'].update(estimated_p=0.6, estimated_d=0.4, shortest_route='合成', decisive_steps=['一'],
+                                 shortcut_search='合成', answer_recheck='合成')
+    data['paper']['difficulty_review'].update(review_reason='合成', author_context='a', reviewer_context='a')
+    data['paper']['source_grounding'].update(status='pass', observations='合成來源')
+    (tmp_path / book.BOOK).write_text(json.dumps(data, ensure_ascii=False), encoding='utf-8')
+    result = book.compile_reports(tmp_path, exam, exam_path)
+    assert result['status'] == 'compiled'
+    for name in ('answers', 'originality', 'visuals', 'difficulty', 'source_grounding'):
+        report = json.loads((tmp_path / f'{name}.json').read_text(encoding='utf-8'))
+        assert report['status'] == 'pass' and report['observations']
+    # An edited item goes back to pending; the others keep their review.
+    exam['questions'][0]['prompt'] += '（改）'
+    again = book.sync(tmp_path, exam)
+    assert again['reset_after_edit'] == ['q1'] and again['pending'] == ['q1']
+
+
+def test_lint_and_save_take_one_batch_in_one_step(tmp_path):
+    plan = cap_plan.plan('會考社會', 'p', seed='s')
+    row = {'number': 1, 'stem': '合成題幹', 'options': ['甲', '乙', '丙', '永久禁止的做法'], 'key': 'A',
+           'steps': ['一。', '二：(A)對；(B)(C)(D)錯。'], 'codes': ['歷Ha-IV-1'], 'volumes': ['第一冊'],
+           'context_type': '生活情境', 'process': '推論', 'anchor': '合成', 'evidence': '合成', 'prerequisites': ['合成'],
+           'distractors': {c: {'misconception': 'm', 'peer_concept': 'p', 'pick': 0.1, 'ruled_out_by': 'r'} for c in 'BCD'},
+           'est_p': 0.7, 'decisions': ['一', '二']}
+    result = cap_plan.lint(plan, [row], tmp_path)
+    assert result['items'] == ['q1'] and any('extreme wording' in e for e in result['errors'])
+
+
+def test_codes_come_from_the_official_108_tables(tmp_path):
+    from validate_cap_form import code_table, validate_exam
+    assert {'Ab-IV-1', 'Ad-IV-4'} <= code_table('會考國文') and 'N-9-1' in code_table('會考數學')
+    assert '歷Ba-IV-1' in code_table('會考社會') and 'Ba-IV-1' in code_table('會考自然')
+    assert 'Ac-IV-4' in code_table('會考英語') and code_table('會考寫作測驗') == code_table('會考國文')
+    exam = cap_paper('會考社會', tmp_path)
+    exam['questions'][0]['item_spec']['curriculum_codes'] = ['歷Zz-IV-9']
+    exam['questions'][1]['item_spec']['curriculum_codes'] = ['歷Ba-Ⅳ-1']   # the curriculum's own numeral
+    errors = ' '.join(validate_exam(exam))
+    assert 'not in the 108 課綱 table' in errors and 'Q2:' not in errors
+
+
+def test_chart_presets_and_maps_render_with_previews(tmp_path):
+    from cap_charts import PRESETS, render
+    specs = {
+        'bar': {'categories': ['甲', '乙'], 'series': [{'name': 'A', 'values': [3, 5]}, {'name': 'B', 'values': [4, 2]}], 'unit': '萬人'},
+        'line': {'categories': ['1', '2', '3'], 'series': [{'name': 'A', 'values': [1, 3, 2]}]},
+        'climate': {'temperature': list(range(10, 22)), 'rainfall': [50 * (i % 5 + 1) for i in range(12)]},
+        'pyramid': {'groups': ['0-14', '15-64', '65+'], 'male': [7, 30, 8], 'female': [6, 31, 10], 'unit': '%'},
+        'profile': {'points': [[0, 0], [5, 800], [9, 100]]},
+        'table': {'header': ['項目', '甲'], 'rows': [['人口', '3']]},
+        'card': {'title': '資料一', 'lines': ['合成文字'], 'source': '改寫自 合成'},
+        'map': {'region': 'taiwan', 'fills': {'臺北市': 4, '連江縣': 2}, 'legend': ['低', '高']},
+    }
+    assert set(specs) == set(PRESETS)
+    for name, spec in specs.items():
+        result = render({'chart': name, **spec}, tmp_path / f'{name}.pdf')
+        assert Path(result['preview']).is_file()
+        with pymupdf.open(result['path']) as doc:
+            assert doc[0].get_text().strip()
+    world = render({'chart': 'map', 'region': 'world', 'fills': {'JPN': 3}}, tmp_path / 'world.pdf')
+    assert Path(world['path']).stat().st_size < 400_000
+    import json as _json
+    taiwan = _json.loads((ROOT / 'exam_packs/會考/maps/taiwan-counties.json').read_text(encoding='utf-8'))
+    assert len(taiwan['counties']) == 22 and '連江縣' in {c['name'] for c in taiwan['counties']}
+    assert '政府資料開放授權' in taiwan['source']['license']

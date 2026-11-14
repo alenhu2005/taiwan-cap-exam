@@ -7,47 +7,39 @@
 
 ```text
 1  python scripts/prepare_hosted_run.py --subject 會考社會 --run-dir RUN --paper-id ID
-2  python scripts/cap_plan.py plan --subject 會考社會 --paper-id ID --level 會考 --output RUN/plan.json
+2  python scripts/cap_plan.py plan --subject 會考社會 --paper-id ID --level 會考 [--volumes 1-4] --output RUN/plan.json
+   --volumes 限定出題冊別（預設 1-6；第一冊＝七上 … 第六冊＝九下），藍圖只排範圍內教過的單元、標題加註冊別
    填 metadata.difficulty_balance_plan.target_counts → python scripts/cap_plan.py check RUN/plan.json
-3  每題：python scripts/cap_plan.py item --subject 會考社會 --number N --level 會考   （骨架＋field_guide 欄位格式）
-   更快：用 field_guide 的精簡欄位寫一批，python scripts/cap_plan.py expand --plan RUN/plan.json
-   --compact items.json --run-dir RUN --output BATCH.json 自動補齊 id、分節、標籤、雜湊與題組繼承
-   寫題時就填 est_p（預估通過率）：存檔會回報目前平均是否落在所選難度區間，偏了立刻調整
-   宣稱是真實資料的數據（寫出年份、調查、統計、公布者）一律上網查證並填 data_sources（url、retrieved_at）；
-   數學與自然可用「某國」「某商店」「某生實驗」這類假設數字，就不必附來源（官方也這樣寫）
-   純數值選項由小到大排：expand 會自動排序並同步改答案、誘答與詳解裡的 (A)～(D)；要保留原順序加 keep_order
-   畫圖：python scripts/cap_draw.py render 圖.json 圖.pdf --font RUN/fonts/TW-Sung-98_1.ttf
-   （座標格線、坐標軸、點、線段、多邊形、圓、弧、角與直角記號、等長記號、中文標籤；點名自動斜體、
-   標籤自動避開線條；四張圖當選項用 cap_draw.py options）
-   圖檔：python scripts/cap_figure.py subset 圖.pdf --output 圖-小.pdf（只留用到的字形）
-   每個題位已排好單元（slot.unit，自然是 domain）：照官方 113–115 的單元分布抽出，題位之間可互換，
-   但整卷要留在 plan 的 unit_coverage 範圍內；國文、英語的題組整組同一單元，英語最後一組是克漏字
-   數學題位另有 suggested_form（直接作答、判斷兩人看法、推理關係、選出算式、讀新資訊建模、判讀圖表）：
-   它只說學生要做什麼，情境與問法由你設計；第 1–3 題直接作答，不包情境
-   題材照藍圖的 suggested_focus 走：每次 plan 都抽新的 variety_seed，續做同一份卷時用 --seed 沿用
-   範例只示範手法：不要沿用說明文件或過去卷子的情境、地點、材料
-   照片：python scripts/web_image.py search "關鍵字"（中英文都試，--offset 換一批）→ web_image.py use
-   先找圖再出題、或先出題再找圖都可以；題目必須依圖中真的看得到的證據作答，對不上就改題目
-   網路可用時照片必須全部新找；內附圖片庫只在網路不通時備援，並告訴使用者
-4  每 2–4 題：python scripts/append_items.py --run-dir RUN --batch BATCH.json [--plan RUN/plan.json 第一批]
-   回報的 subject_gate_pending 先修完再寫下一批；--replace 修同一批
-   之後改了 plan.json（例如補 target_counts）就在下一批再加 --plan，metadata 會更新（回報 plan_updated）
+3  寫 2–4 題的精簡紀錄（欄位與合法值：templates/cap-item-templates.json），一個指令存檔：
+   python scripts/cap_plan.py save --plan RUN/plan.json --compact items.json --run-dir RUN [--replace]
+   它會先檢查（cap_plan.py lint 可以只檢查不存）、展開、存檔，並自動：大圖精簡字型、只檢查這批新圖、
+   在 RUN/figure-previews/ 輸出圖的預覽、更新 review-book.json、記 checkpoint 與時間
+   回報的 lint.errors、subject_gate_pending、figure_check 先修再寫下一批
+4  趁熱填這批題目在 RUN/review-book.json 的審查紀錄（answer_check、originality、visual、difficulty）
+   寫題期間不做 proof：只有第一批 proof 一次；圖看 figure-previews/ 就好
 5  每 2–3 批：python scripts/run_hosted_workflow.py status --state RUN/run-state.json
-   → 開新對話，只讀 RUN/NEXT.md、本卡與 current-cap-form.md 接著做
-6  全部存完後只要反覆執行：python scripts/run_hosted_workflow.py advance --state RUN/run-state.json
-   它依序自動跑完檢查圖表、兩份機械性審查、審查草稿、登錄、鎖定內容、specs、分頁、組成兩本 PDF，
-   只在需要你動手時停下並說明要做什麼（補審查、修圖、調版面）；做完再執行 advance
-7  組好後：看它列出的頁面與題目 → record-review → auto-review --gates template_composition answer_separation
-   → checkpoint → finalize（advance 的 todo 會給完整指令）
-   auto-review 另寫出 difficulty.draft.json：每題欄位、錨點鍵（選擇題 objective、非選擇題 constructed-response）、
-   官方同題位通過率與你的預估都已填好；逐題蓋答案重做、改預估、填 observations 與 answer_recheck、
-   status 改 pass、刪掉 draft_note，存成 difficulty.json
+   → 開新對話，只讀 RUN/NEXT.md、本卡與當科說明接著做
+6  全部存完：check-figures → specs → plan（一次定案 RUN/layout-hints.json）→ build → 看 review_queue → record-review
+   （advance --state RUN/run-state.json 會依序自動跑完能機械化的步驟）
+7  python scripts/run_hosted_workflow.py compile-reviews --state RUN/run-state.json（五份審查報告一次寫好並登錄）
+   → auto-review → checkpoint → finalize
 ```
+
+詳細流程與審查簿欄位見 `references/cap-workflow.md`。
+
+工具：
+- 課綱代碼與條文：`exam_packs/會考/curriculum/<科>.json`（國中第四學習階段；`senior_high` 是高中條目，出現就是超綱）
+- 畫圖：`python scripts/cap_draw.py render 圖.json 圖.pdf --font RUN/fonts/TW-Sung-98_1.ttf`
+  幾何圖（點線圓角、坐標軸）或 `"chart"`：bar、line、climate（雨溫圖）、pyramid（人口金字塔）、profile（地形剖面）、
+  table、card（史料圖卡）、map（臺灣縣市含金馬、東亞、世界；灰階分級填色、指北針）；每張圖附 PNG 預覽
+- 找照片：`web_image.py search` → `web_image.py use`（回傳可直接貼上的 compact_figure 與 compact_data_source）
+- 數據入口：`references/cap-data-sources.md`（只列官方網址，數字當場查）
 
 ## 每題必填（存檔就會檢查）
 
 - 選項標籤 `A`～`D`（不要寫括號）；`final_answer` 為其中之一
-- `item_spec.curriculum_codes`：國中第四學習階段代碼；`textbook_volumes`：如 `["第三冊"]`（數學可空）
+- `item_spec.curriculum_codes`：從 `exam_packs/會考/curriculum/<科>.json` 抄國中第四學習階段代碼（不在表裡會被擋）；
+  `textbook_volumes`：如 `["第三冊"]`（數學可空；限定冊別時每科都要填）
 - `item_spec.cap_competency`：`context_type`、`process`、`real_world_anchor`、`evidence_link`、
   `prerequisite_knowledge`、`hidden_concept`（學生要推出、題幹不可出現的概念）、社會 `domain`／`domains`、
   混合考點寫 `bridge`
@@ -86,10 +78,13 @@
 | 題組引導語印了兩三次 | 材料裡不要自己寫「閱讀下列選文，回答…」 |
 | finalize 要求六個時間階段 | 各階段開始時用 `clock --operation resume --phase <階段>` 記錄，不要事後補 |
 | 頁面留白超過 0.32 | 用 `plan` 看分頁，調整圖寬（`width_percent`）或選項排法，不要改題目內容湊頁 |
+| `not in the 108 課綱 table` | 代碼抄錯：到 `exam_packs/會考/curriculum/<科>.json` 找正確代碼 |
+| `outside the paper's range` | 限定冊別的卷子用到範圍外的冊別或年級代碼：換題或換範圍內的概念 |
+| `concepts hold … items`（社會） | 七、八、九年級各至少兩成（官方 114–115）：調整幾題的主題年級 |
 
 ## 省上下文
 
 - 工具輸出很長時導到檔案，只讀狀態與錯誤；不要把整份 JSON 印進對話。
-- 審查報告先用 `refresh-evidence` 產生草稿，只改被標記的題目，不要逐題重寫一遍 item_spec。
+- 審查寫在 review-book.json（每題一筆），最後 `compile-reviews` 產生五份報告；題目沒改，紀錄就一直有效。
 - 純文字頁由工具檢查；看圖只看有圖表的頁與被標記的題目。
 - 五份需人工判斷的審查報告格式見 `templates/cap-review-templates.json`（只有格式，內容自己寫）。

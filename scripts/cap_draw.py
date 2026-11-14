@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Vector figures for 會考 items: one-page PDFs with embedded fonts, drawn from a small JSON spec.
 
+Charts and maps (a spec with "chart": bar, line, climate, pyramid, profile, table, card, map) are drawn by
+scripts/cap_charts.py through the same `render` command; every output gets a PNG preview beside it.
+
 A math author (M1111, 2026-11) wrote a drawing library of their own and lost time to it: the SVG
 renderer's Times had no 「−」「…」「′」, white boxes behind labels showed as frames on the grid, and
 labels sat on lines. This draws what 會考 figures use, in the booklet's faces (Times italic point
@@ -253,6 +256,10 @@ def _distance(p, a, b):
 
 
 def draw(spec: dict, output: Path, font: Path | None = None) -> dict:
+    if spec.get("chart"):
+        # Charts and maps (bar, line, climate, pyramid, profile, table, card, map): scripts/cap_charts.py
+        from cap_charts import render as render_chart
+        return render_chart(spec, Path(output), font)
     fig = Figure(spec.get("width_pt", 220), spec["view"], font=font)
     for item in spec.get("items") or []:
         if "grid" in item:
@@ -281,7 +288,10 @@ def draw(spec: dict, output: Path, font: Path | None = None) -> dict:
             raise ValueError(f"unknown figure item {sorted(item)}")
     width, height = fig.page.rect.width, fig.height
     fig.save(output)
-    return {"path": str(output), "width_pt": round(width, 1), "height_pt": round(height, 1)}
+    preview = Path(output).with_suffix(".png")   # look at the figure once, at print size, without a proof
+    with pymupdf.open(output) as doc:
+        doc[0].get_pixmap(dpi=150, alpha=False).save(preview)
+    return {"path": str(output), "preview": str(preview), "width_pt": round(width, 1), "height_pt": round(height, 1)}
 
 
 def main() -> int:

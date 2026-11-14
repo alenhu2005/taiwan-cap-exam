@@ -281,6 +281,12 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
         existing_state = {}
     supplied = read(batch)
     questions, answers = validate_batch(supplied)
+    cap = str(preflight.get('subject') or '').startswith('會考')
+    shrunk = []
+    if cap:
+        # A 35 MB figure (a whole embedded font) slowed every later proof and build; subset it now.
+        from cap_batch import shrink_figures
+        shrunk = shrink_figures(root, questions + answers)
     # A hosted run saved a choice item with its five options missing and learned it
     # from a render failure two phases later.
     for question in questions:
@@ -391,6 +397,24 @@ def append(run_dir, batch, *, state=None, plan=None, replace=False):
         report['design_note'] = ('The final check requires these difficulty-design fields. They are not printed: '
                                  'complete them with --replace as the batch is solved and reviewed; page reviews stay valid.')
     report.update(proof_triage(questions, answers, first_batch=first_batch))
+    if cap:
+        # 會考: no crop proofs while writing (the final layout moves every crop and voids them); look at
+        # each new figure once in figure-previews/, plan the whole paper once, then build once.
+        from cap_batch import batch_figure_check, preview_figures
+        from cap_review_book import sync as sync_review_book
+        ids = {q['id'] for q in questions}
+        report['proof_recommended'] = ({k: v for k, v in report['proof_recommended'].items()} if first_batch else {})
+        report['proof_note'] = ('會考: proof only the first batch (renderer and fonts); after that, look at each new '
+                                'figure in figure-previews/ and leave layout to one plan and one build when every '
+                                'item is saved')
+        if shrunk:
+            report['figures_shrunk'] = shrunk
+        report['figure_check'] = batch_figure_check(root, exam, ids)
+        report['figure_previews'] = preview_figures(root, [q for q in exam['questions'] if q['id'] in ids])
+        book = sync_review_book(root, exam)
+        report['review_book'] = {'pending_in_this_batch': [i for i in book['pending'] if i in ids],
+                                 'reset_after_edit': book['reset_after_edit'],
+                                 'next': 'fill these rows of review-book.json now, while the items are fresh'}
     if inherited:
         report['audits_inherited'] = inherited
     gate = subject_gate_errors(exam, root=root, authoring=True)

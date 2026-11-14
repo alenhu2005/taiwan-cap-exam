@@ -66,6 +66,20 @@ READING_PHASES = {
                'references/difficulty-calibration.md', 'references/evidence-backed-editorial-audit.md'),
 }
 
+# 會考 reads four short documents instead of the 學測-oriented execution chapters (a 會考社會 run
+# paged through about 300 KB of references, most of it about 學測 subjects).
+CAP_READING_PHASES = {
+    'preflight': ('references/cap-execution-card.md',),
+    'authoring': ('references/current-cap-form.md', 'templates/cap-item-templates.json', 'schemas/exam.schema.json',
+                  'schemas/answer.schema.json'),
+    'layout': ('references/cap-workflow.md',),
+    'review': ('templates/cap-review-templates.json',),
+}
+
+
+def reading_phases(subject):
+    return CAP_READING_PHASES if str(subject).startswith('會考') else READING_PHASES
+
 
 def pointer_value(document, pointer: str):
     """Resolve a JSON pointer so reading projections contain exact source values."""
@@ -314,7 +328,7 @@ def reading_plan_from_directory(source_dir: Path, subject: str, output_dir: Path
                           embedded_sha256=hashlib.sha256(payload).hexdigest())
             entries[path] = (record, payload)
         verified.append((path, raw))
-    required = {path for paths in READING_PHASES.values() for path in paths}
+    required = {path for paths in reading_phases(subject).values() for path in paths}
     missing = required - entries.keys()
     if missing:
         raise ValueError('Native package is missing reading sources: ' + ', '.join(sorted(missing)))
@@ -376,7 +390,7 @@ def _write_reading_plan(entries: dict, result: dict, subject: str, output_dir: P
     selected={row['path'] for row in result['files']}
     planned=set();views={};phase_records={};embedded={};reference_records=[]
     projections=phase_projections(entries,subject,selected)
-    for phase,paths in READING_PHASES.items():
+    for phase,paths in reading_phases(subject).items():
         route=list(paths)
         if phase=='authoring':
             route+=['references/'+name for name in sorted(SUBJECT_REFERENCES[subject])]
